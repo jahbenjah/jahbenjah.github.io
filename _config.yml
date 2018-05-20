@@ -1,1 +1,16 @@
-theme: jekyll-theme-architect
+title: Blog de Benjamin Camacho
+email: jahbenjah@hotmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  El blog de Benjamin Camacho esta dedica a temas de desarrollo de software.
+  C#,Pruebas Unitarias, Test Driven Development,.NET ,.NET CORE, docker , Linux,
+  
+baseurl: "/blog" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: jbenjamincamacho
+github_username:  jahbenjah
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed

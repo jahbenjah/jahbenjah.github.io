@@ -1,4 +1,61 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.1">Jekyll</generator><link href="http://0.0.0.0:8080/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:8080/" rel="alternate" type="text/html" /><updated>2018-06-22T22:55:53+00:00</updated><id>http://0.0.0.0:8080/</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://0.0.0.0:8080/jekyll/update/2018/05/20/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2018-05-20T15:30:55+00:00</published><updated>2018-05-20T15:30:55+00:00</updated><id>http://0.0.0.0:8080/jekyll/update/2018/05/20/welcome-to-jekyll</id><content type="html" xml:base="http://0.0.0.0:8080/jekyll/update/2018/05/20/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.1">Jekyll</generator><link href="https://jahbenjah.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jahbenjah.github.io/blog/" rel="alternate" type="text/html" /><updated>2018-07-22T18:29:17+00:00</updated><id>https://jahbenjah.github.io/blog/</id><title type="html">Benjamín Camacho</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Enviar un correo con C# y Gmail.</title><link href="https://jahbenjah.github.io/blog/.net/smtp/smptclient/dotnet/2018/07/22/enviar-un-correo-con-csharp-gmail.html" rel="alternate" type="text/html" title="Enviar un correo con C# y Gmail." /><published>2018-07-22T12:30:55+00:00</published><updated>2018-07-22T12:30:55+00:00</updated><id>https://jahbenjah.github.io/blog/.net/smtp/smptclient/dotnet/2018/07/22/enviar-un-correo-con-csharp-gmail</id><content type="html" xml:base="https://jahbenjah.github.io/blog/.net/smtp/smptclient/dotnet/2018/07/22/enviar-un-correo-con-csharp-gmail.html">&lt;h1 id=&quot;cómo-enviar-un-correo-usando-c&quot;&gt;Cómo enviar un correo usando C#&lt;/h1&gt;
+&lt;p&gt;Tener la capacidad de enviar correos en una aplicación es un requerimiento muy frecuete.
+Sistema de facturacion
+Sistema de nomina
+Registro al sitio.&lt;/p&gt;
+
+&lt;p&gt;Este articulo representa una guia paso a paso para enviar un correo electrónico usando C# y una cuenta de Gmail.
+Se usa .Net Core para poder ejecurarlo en Linux , Mac y Windows.&lt;/p&gt;
+
+&lt;p&gt;Puedes revisar la documentación en &lt;a href=&quot;https://docs.microsoft.com/en-us/dotnet/api/system.net.mail.smtpclient?view=netframework-4.7.2&quot;&gt;SmtpClient&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;configuración-de-gmail&quot;&gt;Configuración de Gmail&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;Imagenes/AccesoAplicacionesMenosSeguras.PNG&quot; alt=&quot;alt text&quot; title=&quot;Logo Title Text 1&quot; /&gt;
+ Permitir el acceso a aplicciones no seguras para GMAIL. tal como se descrbe aqui
+[https://support.google.com/accounts/answer/6010255?hl=es-41]&lt;/p&gt;
+
+&lt;h2 id=&quot;preparando-el-proyecto-en-visual-studio-code&quot;&gt;Preparando el proyecto en Visual Studio Code&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Solución
+    &lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; dotnet new sln -n EnviarCorrreoElectronico
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Crear un proyecto biblioteca de clases.
+    &lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;EnviarCorreo
+ dotnet new classlib -n EnviarCorreoElectronico
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Agregar los proyectos a la solución
+    &lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; dotnet sln add EnviarCorreo/EnviarCorreo.csproj
+ dotnet sln add EnviarCorreo/EnviarCorreoCliente.csproj
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Agregar la referencia al paquete de Nugget «Microsoft.Configuration.Extensions»
+    &lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; dotnet add package Microsoft.Configuration.Extensions
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Se utilizan las clases de los espacios de nombres
+    &lt;div class=&quot;language-cs highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+ &lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System.IO&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+ &lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System.Net&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+ &lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System.Net.Mail&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+ &lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Microsoft.Extensions.Configuration&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;5.Agregar un nuevo archvio xml  que contendrá los datos para ingresar a la cueta de correo.&lt;/p&gt;
+
+&lt;h2 id=&quot;clientes&quot;&gt;Clientes&lt;/h2&gt;
+&lt;h3 id=&quot;aplicación-de-consola&quot;&gt;Aplicación de consola&lt;/h3&gt;
+&lt;h3 id=&quot;aplicación-web&quot;&gt;Aplicación Web&lt;/h3&gt;</content><author><name></name></author><summary type="html">Cómo enviar un correo usando C# Tener la capacidad de enviar correos en una aplicación es un requerimiento muy frecuete. Sistema de facturacion Sistema de nomina Registro al sitio.</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="https://jahbenjah.github.io/blog/jekyll/update/2018/05/20/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2018-05-20T15:30:55+00:00</published><updated>2018-05-20T15:30:55+00:00</updated><id>https://jahbenjah.github.io/blog/jekyll/update/2018/05/20/welcome-to-jekyll</id><content type="html" xml:base="https://jahbenjah.github.io/blog/jekyll/update/2018/05/20/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
 
 &lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
 
@@ -10,4 +67,61 @@
 &lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry></feed>
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry><entry><title type="html">Introducción a C#!</title><link href="https://jahbenjah.github.io/blog/jekyll/update/2018/05/20/introducion-csharp.html" rel="alternate" type="text/html" title="Introducción a C#!" /><published>2018-05-20T15:30:55+00:00</published><updated>2018-05-20T15:30:55+00:00</updated><id>https://jahbenjah.github.io/blog/jekyll/update/2018/05/20/introducion-csharp</id><content type="html" xml:base="https://jahbenjah.github.io/blog/jekyll/update/2018/05/20/introducion-csharp.html">&lt;h1 id=&quot;cómo-enviar-un-correo-usando-c&quot;&gt;Cómo enviar un correo usando C#&lt;/h1&gt;
+&lt;p&gt;Tener la capacidad de enviar correos en una aplicación es un requerimiento muy frecuete.
+Sistema de facturacion
+Sistema de nomina
+Registro al sitio.&lt;/p&gt;
+
+&lt;p&gt;Este articulo representa una guia paso a paso para enviar un correo electrónico usando C# y una cuenta de Gmail.
+Se usa .Net Core para poder ejecurarlo en Linux , Mac y Windows.&lt;/p&gt;
+
+&lt;p&gt;Puedes revisar la documentación en &lt;a href=&quot;https://docs.microsoft.com/en-us/dotnet/api/system.net.mail.smtpclient?view=netframework-4.7.2&quot;&gt;SmtpClient&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;configuración-de-gmail&quot;&gt;Configuración de Gmail&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;Imagenes/AccesoAplicacionesMenosSeguras.PNG&quot; alt=&quot;alt text&quot; title=&quot;Logo Title Text 1&quot; /&gt;
+ Permitir el acceso a aplicciones no seguras para GMAIL. tal como se descrbe aqui
+[https://support.google.com/accounts/answer/6010255?hl=es-41]&lt;/p&gt;
+
+&lt;h2 id=&quot;preparando-el-proyecto-en-visual-studio-code&quot;&gt;Preparando el proyecto en Visual Studio Code&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Solución
+    &lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; dotnet new sln -n EnviarCorrreoElectronico
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Crear un proyecto biblioteca de clases.
+    &lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;EnviarCorreo
+ dotnet new classlib -n EnviarCorreoElectronico
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Agregar los proyectos a la solución
+    &lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; dotnet sln add EnviarCorreo/EnviarCorreo.csproj
+ dotnet sln add EnviarCorreo/EnviarCorreoCliente.csproj
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Agregar la referencia al paquete de Nugget «Microsoft.Configuration.Extensions»
+    &lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; dotnet add package Microsoft.Configuration.Extensions
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Se utilizan las clases de los espacios de nombres
+    &lt;div class=&quot;language-cs highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+ &lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System.IO&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+ &lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System.Net&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+ &lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System.Net.Mail&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+ &lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Microsoft.Extensions.Configuration&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;5.Agregar un nuevo archvio xml  que contendrá los datos para ingresar a la cueta de correo.&lt;/p&gt;
+
+&lt;h2 id=&quot;clientes&quot;&gt;Clientes&lt;/h2&gt;
+&lt;h3 id=&quot;aplicación-de-consola&quot;&gt;Aplicación de consola&lt;/h3&gt;
+&lt;h3 id=&quot;aplicación-web&quot;&gt;Aplicación Web&lt;/h3&gt;</content><author><name></name></author><summary type="html">Cómo enviar un correo usando C# Tener la capacidad de enviar correos en una aplicación es un requerimiento muy frecuete. Sistema de facturacion Sistema de nomina Registro al sitio.</summary></entry></feed>

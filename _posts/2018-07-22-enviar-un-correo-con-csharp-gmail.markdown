@@ -18,7 +18,7 @@ Puedes revisar la documentación en [SmtpClient](https://docs.microsoft.com/en-u
 ## Configuración de Gmail ##
 
 
-![alt text](Imagenes/AccesoAplicacionesMenosSeguras.PNG "Logo Title Text 1")
+![alt text](/img/AccesoAplicacionesMenosSeguras.PNG "Logo Title Text 1")
  Permitir el acceso a aplicciones no seguras para GMAIL. tal como se descrbe aqui
 [https://support.google.com/accounts/answer/6010255?hl=es-41]
 

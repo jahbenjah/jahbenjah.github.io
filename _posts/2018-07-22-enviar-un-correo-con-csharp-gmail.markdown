@@ -4,6 +4,9 @@ title:  "Enviar un correo con C# y Gmail."
 date:   2018-07-22 12:30:55 +0000
 categories: .net smtp SmptClient dotnet 
 ---
+
+
+
 # Cómo enviar un correo usando C# #
 Tener la capacidad de enviar correos en una aplicación es un requerimiento muy frecuete.
 Sistema de facturacion
@@ -18,7 +21,7 @@ Puedes revisar la documentación en [SmtpClient](https://docs.microsoft.com/en-u
 ## Configuración de Gmail ##
 
 
-![alt text](/img/AccesoAplicacionesMenosSeguras.PNG "Logo Title Text 1")
+![alt text]({{"/img/AccesoAplicacionesMenosSeguras.PNG"|absolute_url}} "Pantalla de gmail")
  Permitir el acceso a aplicciones no seguras para GMAIL. tal como se descrbe aqui
 [https://support.google.com/accounts/answer/6010255?hl=es-41]
 

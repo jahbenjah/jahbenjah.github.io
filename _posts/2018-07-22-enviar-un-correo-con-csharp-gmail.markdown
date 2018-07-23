@@ -5,8 +5,6 @@ date:   2018-07-22 12:30:55 +0000
 categories: .net smtp SmptClient dotnet 
 ---
 
-
-
 # Cómo enviar un correo usando C# #
 Tener la capacidad de enviar correos en una aplicación es un requerimiento muy frecuete.
 Sistema de facturacion

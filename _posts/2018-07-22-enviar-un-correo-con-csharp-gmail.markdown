@@ -6,10 +6,11 @@ categories: .net smtp SmptClient dotnet
 ---
 
 # Cómo enviar un correo usando C# #
-Tener la capacidad de enviar correos en una aplicación es un requerimiento muy frecuete.
-Sistema de facturacion
-Sistema de nomina
-Registro al sitio.
+
+En el desarrollo de software empresarial enviar correos electronicos es un requerimiento muy frecuente  y en este post te mostramos como hacerlo usando C# y Visual Studio Code.
+
+
+![Revisando el correo electrónico]({{"/img/adult-business-businessman-1061588.jpg" | absolute_url }} "Email en negocios")
 
 Este articulo representa una guia paso a paso para enviar un correo electrónico usando C# y una cuenta de Gmail.
 Se usa .Net Core para poder ejecurarlo en Linux , Mac y Windows.

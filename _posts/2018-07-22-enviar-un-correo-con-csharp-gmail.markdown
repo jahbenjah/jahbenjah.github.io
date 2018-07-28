@@ -4,7 +4,7 @@ title:  "Enviar un correo con C# y Gmail."
 date:   2018-07-22 12:30:55 +0000
 categories: .net smtp SmptClient dotnet 
 ---
-# Cómo enviar un correo usando C# #
+
 En el desarrollo de software empresarial enviar correos electrónicos es un requerimiento muy frecuente y en este tutorial te mostramos como hacerlo usando C#, .Net Core 2.0  y Visual Studio Code.
 Actualmente existen varias biblioteca para enviar correos como SendGrid o MailKit, sin embargo en este tutorial se utiliza la clase [SmtpClient](https://docs.microsoft.com/en-us/dotnet/api/system.net.mail.smtpclient?view=netframework-4.7.2) 
 parte  de .NET Standard 2.0.

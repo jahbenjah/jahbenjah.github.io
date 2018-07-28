@@ -1,25 +1,37 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.1">Jekyll</generator><link href="http://0.0.0.0:8080/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:8080/blog/" rel="alternate" type="text/html" /><updated>2018-07-25T05:07:04+00:00</updated><id>http://0.0.0.0:8080/blog/</id><title type="html">Programación con C#</title><subtitle>En este sitio encontraras articiulos sobre programación usando C# .</subtitle><entry><title type="html">Enviar un correo con C# y Gmail.</title><link href="http://0.0.0.0:8080/blog/.net/smtp/smptclient/dotnet/2018/07/22/enviar-un-correo-con-csharp-gmail.html" rel="alternate" type="text/html" title="Enviar un correo con C# y Gmail." /><published>2018-07-22T12:30:55+00:00</published><updated>2018-07-22T12:30:55+00:00</updated><id>http://0.0.0.0:8080/blog/.net/smtp/smptclient/dotnet/2018/07/22/enviar-un-correo-con-csharp-gmail</id><content type="html" xml:base="http://0.0.0.0:8080/blog/.net/smtp/smptclient/dotnet/2018/07/22/enviar-un-correo-con-csharp-gmail.html">&lt;h1 id=&quot;cómo-enviar-un-correo-usando-c&quot;&gt;Cómo enviar un correo usando C#&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.1">Jekyll</generator><link href="http://0.0.0.0:8080/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:8080/" rel="alternate" type="text/html" /><updated>2018-07-28T04:39:25+00:00</updated><id>http://0.0.0.0:8080/</id><title type="html">Programación con C#</title><subtitle>En este sitio encontraras articiulos sobre programación usando C# .</subtitle><entry><title type="html">Enviar un correo con C# y Gmail.</title><link href="http://0.0.0.0:8080/.net/smtp/smptclient/dotnet/2018/07/22/enviar-un-correo-con-csharp-gmail.html" rel="alternate" type="text/html" title="Enviar un correo con C# y Gmail." /><published>2018-07-22T12:30:55+00:00</published><updated>2018-07-22T12:30:55+00:00</updated><id>http://0.0.0.0:8080/.net/smtp/smptclient/dotnet/2018/07/22/enviar-un-correo-con-csharp-gmail</id><content type="html" xml:base="http://0.0.0.0:8080/.net/smtp/smptclient/dotnet/2018/07/22/enviar-un-correo-con-csharp-gmail.html">&lt;p&gt;En el desarrollo de software empresarial enviar correos electronicos es un requerimiento muy frecuente y en este post te mostramos como hacerlo usando C#, .Net Core 2.0  y Visual Studio Code.
+Actualemente existen varias librerias para enviar correos sin embargo en este post se utiliza la clase &lt;a href=&quot;https://docs.microsoft.com/en-us/dotnet/api/system.net.mail.smtpclient?view=netframework-4.7.2&quot;&gt;SmtpClient&lt;/a&gt; 
+parte  de .NET Standard 2.0.&lt;/p&gt;
 
-&lt;p&gt;En el desarrollo de software empresarial enviar correos electronicos es un requerimiento muy frecuente y en este post te mostramos como hacerlo usando C# , .Net Core 2.0  y Visual Studio Code.
-Se utiliza la clase SmtpClient parte  de net standard.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://0.0.0.0:8080/blog/img/adult-business-businessman-1061588.jpg&quot; alt=&quot;Revisando el correo electrónico&quot; title=&quot;Email en negocios&quot; /&gt;&lt;/p&gt;
+&lt;h1 id=&quot;cómo-enviar-un-correo-usando-c&quot;&gt;Cómo enviar un correo usando C#&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;http://0.0.0.0:8080/img/adult-business-businessman-1061588.jpg&quot; alt=&quot;Revisando el correo electrónico&quot; title=&quot;Email en negocios&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Este articulo representa una guia paso a paso para enviar un correo electrónico usando C# y una cuenta de Gmail.
-Se usa .Net Core para poder ejecurarlo en Linux , Mac y Windows.&lt;/p&gt;
+Se asume que esta instadoa el SDK de &lt;a href=&quot;https://www.microsoft.com/net/download&quot;&gt;.NET Core&lt;/a&gt; y &lt;a href=&quot;https://code.visualstudio.com/&quot;&gt;Visual Studio Code&lt;/a&gt;. Adicionalmente se creara una solucion para poder abrir el proyecto con Visual Studio.&lt;/p&gt;
 
-&lt;p&gt;Puedes revisar la documentación en &lt;a href=&quot;https://docs.microsoft.com/en-us/dotnet/api/system.net.mail.smtpclient?view=netframework-4.7.2&quot;&gt;SmtpClient&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Se creara una blblioteca de clases que tiene como unica funcion enviar correos. Despues se  esta clase en un proyecto de consola. Esta clase se puede usar en cualquier otrp tipo de proyectos que soporte .NET Standard.
+El caso de uso que abarca esta clase es : Una aplicacion tiene asignada una  de correo con el cual envia todos los correos a las cuentas necesarias.&lt;/p&gt;
 
-&lt;p&gt;Se crear aun blblioteca de clases que despues se utilizara en un proyecto de consola 
-Puede ser reutilizadas por otro tipos de proyectos como web&lt;/p&gt;
 &lt;h2 id=&quot;configuración-de-gmail&quot;&gt;Configuración de Gmail&lt;/h2&gt;
 
-&lt;p&gt;Es necesario permitir el  permitir el acceso a aplicaciones no seguran dese la configuracion de gmail.
-Permitir el acceso a aplicciones no seguras para GMAIL. tal como se descrbe aqui
-El caso de uso : una aplicacion tiene asignada una  de correo con el cual envia los co&lt;/p&gt;
+&lt;p&gt;Es necesario permitir el  permitir el acceso a aplicaciones no seguran desde la configuración de Gmail tal como se describe aqui &lt;img src=&quot;http://0.0.0.0:8080/img/AccesoAplicacionesMenosSeguras.PNG&quot; alt=&quot;alt text&quot; title=&quot;Pantalla de gmail&quot; /&gt;
+&lt;a href=&quot;https://support.google.com/accounts/answer/6010255?hl=es-41&quot;&gt;&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://0.0.0.0:8080/blog/img/AccesoAplicacionesMenosSeguras.PNG&quot; alt=&quot;alt text&quot; title=&quot;Pantalla de gmail&quot; /&gt;
-&lt;a href=&quot;https://support.google.com/accounts/answer/6010255?hl=es-41&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;La configuracion para el cliente de SMTP de acuredo  a la (documentación de Gmail)[https://support.google.com/mail/answer/7126229?visit_id=1-636683482170517029-2536242402&amp;amp;hl=es&amp;amp;rd=1] es la siguiesnte&lt;/p&gt;
+
+&lt;p&gt;Parametro | Valor
+———— | ————-
+Servidor de correo saliente (SMTP) | smtp.gmail.com
+Requiere SSL| Sí
+Requiere SSL: Sí
+Requiere TLS| Sí (si está disponible)
+Requiere autenticación| Sí
+Puerto para TLS/STARTTLS| 587
+Nombre completo o nombre mostrado|	Tu nombre
+Nombre de la cuenta, nombre de usuario o dirección de correo electrónico|	Tu dirección de correo electrónico completa
+Contraseña|Tu contraseña de Gmail&lt;/p&gt;
+
+&lt;p&gt;Con esta configuraicon se creara un archivo xml que la aplicacion leera al momento que se crea una instancia de e la clase. 
+Este tiene el proposito que si se cambia la contraseña o la cuenta no sea necesario recompilar la aplicacion nuevamente.&lt;/p&gt;
 
 &lt;h2 id=&quot;preparando-el-proyecto-en-visual-studio-code&quot;&gt;Preparando el proyecto en Visual Studio Code&lt;/h2&gt;
 
@@ -69,4 +81,4 @@ dotnet add EmailServiceCliente/EmailServiceCliente.csproj reference EmailService
 
 &lt;h2 id=&quot;clientes&quot;&gt;Clientes&lt;/h2&gt;
 &lt;h3 id=&quot;aplicación-de-consola&quot;&gt;Aplicación de consola&lt;/h3&gt;
-&lt;h3 id=&quot;aplicación-web&quot;&gt;Aplicación Web&lt;/h3&gt;</content><author><name></name></author><summary type="html">Cómo enviar un correo usando C#</summary></entry></feed>
+&lt;h3 id=&quot;aplicación-web&quot;&gt;Aplicación Web&lt;/h3&gt;</content><author><name></name></author><summary type="html">En el desarrollo de software empresarial enviar correos electronicos es un requerimiento muy frecuente y en este post te mostramos como hacerlo usando C#, .Net Core 2.0 y Visual Studio Code. Actualemente existen varias librerias para enviar correos sin embargo en este post se utiliza la clase SmtpClient parte de .NET Standard 2.0.</summary></entry></feed>

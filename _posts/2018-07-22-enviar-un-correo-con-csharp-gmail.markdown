@@ -4,32 +4,40 @@ title:  "Enviar un correo con C# y Gmail."
 date:   2018-07-22 12:30:55 +0000
 categories: .net smtp SmptClient dotnet 
 ---
+En el desarrollo de software empresarial enviar correos electronicos es un requerimiento muy frecuente y en este post te mostramos como hacerlo usando C#, .Net Core 2.0  y Visual Studio Code.
+Actualemente existen varias librerias para enviar correos sin embargo en este post se utiliza la clase [SmtpClient](https://docs.microsoft.com/en-us/dotnet/api/system.net.mail.smtpclient?view=netframework-4.7.2) 
+parte  de .NET Standard 2.0.
 
 # Cómo enviar un correo usando C# #
 ![Revisando el correo electrónico]({{"/img/adult-business-businessman-1061588.jpg" | absolute_url }} "Email en negocios")
 
-En el desarrollo de software empresarial enviar correos electronicos es un requerimiento muy frecuente y en este post te mostramos como hacerlo usando C# , .Net Core 2.0  y Visual Studio Code.
-Se utiliza la clase SmtpClient parte  de net standard.
-
-
-
-
-
 Este articulo representa una guia paso a paso para enviar un correo electrónico usando C# y una cuenta de Gmail.
-Se usa .Net Core para poder ejecurarlo en Linux , Mac y Windows.
+Se asume que esta instadoa el SDK de [.NET Core](https://www.microsoft.com/net/download) y [Visual Studio Code](https://code.visualstudio.com/). Adicionalmente se creara una solucion para poder abrir el proyecto con Visual Studio.
 
-Puedes revisar la documentación en [SmtpClient](https://docs.microsoft.com/en-us/dotnet/api/system.net.mail.smtpclient?view=netframework-4.7.2)
+Se creara una blblioteca de clases que tiene como unica funcion enviar correos. Despues se  esta clase en un proyecto de consola. Esta clase se puede usar en cualquier otrp tipo de proyectos que soporte .NET Standard.
+El caso de uso que abarca esta clase es : Una aplicacion tiene asignada una  de correo con el cual envia todos los correos a las cuentas necesarias.
 
-Se crear aun blblioteca de clases que despues se utilizara en un proyecto de consola 
-Puede ser reutilizadas por otro tipos de proyectos como web 
 ## Configuración de Gmail ##
 
-Es necesario permitir el  permitir el acceso a aplicaciones no seguran dese la configuracion de gmail.
-Permitir el acceso a aplicciones no seguras para GMAIL. tal como se descrbe aqui
-El caso de uso : una aplicacion tiene asignada una  de correo con el cual envia los co
+Es necesario permitir el  permitir el acceso a aplicaciones no seguran desde la configuración de Gmail tal como se describe aqui ![alt text]({{"/img/AccesoAplicacionesMenosSeguras.PNG"|absolute_url}} "Pantalla de gmail")
+[](https://support.google.com/accounts/answer/6010255?hl=es-41).
 
-![alt text]({{"/img/AccesoAplicacionesMenosSeguras.PNG"|absolute_url}} "Pantalla de gmail")
-[](https://support.google.com/accounts/answer/6010255?hl=es-41)
+La configuracion para el cliente de SMTP de acuredo  a la (documentación de Gmail)[https://support.google.com/mail/answer/7126229?visit_id=1-636683482170517029-2536242402&hl=es&rd=1] es la siguiesnte
+
+Parametro | Valor
+------------ | -------------
+Servidor de correo saliente (SMTP) | smtp.gmail.com
+Requiere SSL| Sí
+Requiere SSL: Sí
+Requiere TLS| Sí (si está disponible)
+Requiere autenticación| Sí
+Puerto para TLS/STARTTLS| 587
+Nombre completo o nombre mostrado|	Tu nombre
+Nombre de la cuenta, nombre de usuario o dirección de correo electrónico|	Tu dirección de correo electrónico completa
+Contraseña|Tu contraseña de Gmail
+
+Con esta configuraicon se creara un archivo xml que la aplicacion leera al momento que se crea una instancia de e la clase. 
+Este tiene el proposito que si se cambia la contraseña o la cuenta no sea necesario recompilar la aplicacion nuevamente.
 
 
 ## Preparando el proyecto en Visual Studio Code ##

@@ -7,15 +7,15 @@
 <meta name="generator" content="Jekyll v3.5.1" />
 <meta property="og:title" content="Enviar un correo con C# y Gmail." />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="En el desarrollo de software empresarial enviar correos electronicos es un requerimiento muy frecuente y en este post te mostramos como hacerlo usando C#, .Net Core 2.0 y Visual Studio Code. Actualemente existen varias librerias para enviar correos sin embargo en este post se utiliza la clase SmtpClient parte de .NET Standard 2.0." />
-<meta property="og:description" content="En el desarrollo de software empresarial enviar correos electronicos es un requerimiento muy frecuente y en este post te mostramos como hacerlo usando C#, .Net Core 2.0 y Visual Studio Code. Actualemente existen varias librerias para enviar correos sin embargo en este post se utiliza la clase SmtpClient parte de .NET Standard 2.0." />
+<meta name="description" content="Cómo enviar un correo usando C# En el desarrollo de software empresarial enviar correos electrónicos es un requerimiento muy frecuente y en este tutorial te mostramos como hacerlo usando C#, .Net Core 2.0 y Visual Studio Code. Actualmente existen varias biblioteca para enviar correos como SendGrid o MailKit, sin embargo en este tutorial se utiliza la clase SmtpClient parte de .NET Standard 2.0." />
+<meta property="og:description" content="Cómo enviar un correo usando C# En el desarrollo de software empresarial enviar correos electrónicos es un requerimiento muy frecuente y en este tutorial te mostramos como hacerlo usando C#, .Net Core 2.0 y Visual Studio Code. Actualmente existen varias biblioteca para enviar correos como SendGrid o MailKit, sin embargo en este tutorial se utiliza la clase SmtpClient parte de .NET Standard 2.0." />
 <link rel="canonical" href="http://0.0.0.0:8080/.net/smtp/smptclient/dotnet/2018/07/22/enviar-un-correo-con-csharp-gmail.html" />
 <meta property="og:url" content="http://0.0.0.0:8080/.net/smtp/smptclient/dotnet/2018/07/22/enviar-un-correo-con-csharp-gmail.html" />
 <meta property="og:site_name" content="Programación con C#" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-07-22T12:30:55+00:00" />
 <script type="application/ld+json">
-{"description":"En el desarrollo de software empresarial enviar correos electronicos es un requerimiento muy frecuente y en este post te mostramos como hacerlo usando C#, .Net Core 2.0 y Visual Studio Code. Actualemente existen varias librerias para enviar correos sin embargo en este post se utiliza la clase SmtpClient parte de .NET Standard 2.0.","@type":"BlogPosting","url":"http://0.0.0.0:8080/.net/smtp/smptclient/dotnet/2018/07/22/enviar-un-correo-con-csharp-gmail.html","headline":"Enviar un correo con C# y Gmail.","dateModified":"2018-07-22T12:30:55+00:00","datePublished":"2018-07-22T12:30:55+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:8080/.net/smtp/smptclient/dotnet/2018/07/22/enviar-un-correo-con-csharp-gmail.html"},"@context":"http://schema.org"}</script>
+{"description":"Cómo enviar un correo usando C# En el desarrollo de software empresarial enviar correos electrónicos es un requerimiento muy frecuente y en este tutorial te mostramos como hacerlo usando C#, .Net Core 2.0 y Visual Studio Code. Actualmente existen varias biblioteca para enviar correos como SendGrid o MailKit, sin embargo en este tutorial se utiliza la clase SmtpClient parte de .NET Standard 2.0.","@type":"BlogPosting","url":"http://0.0.0.0:8080/.net/smtp/smptclient/dotnet/2018/07/22/enviar-un-correo-con-csharp-gmail.html","headline":"Enviar un correo con C# y Gmail.","dateModified":"2018-07-22T12:30:55+00:00","datePublished":"2018-07-22T12:30:55+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:8080/.net/smtp/smptclient/dotnet/2018/07/22/enviar-un-correo-con-csharp-gmail.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:8080/feed.xml" title="Programación con C#" /></head>
 <body><header class="site-header" role="banner">
@@ -45,90 +45,228 @@
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <p>En el desarrollo de software empresarial enviar correos electronicos es un requerimiento muy frecuente y en este post te mostramos como hacerlo usando C#, .Net Core 2.0  y Visual Studio Code.
-Actualemente existen varias librerias para enviar correos sin embargo en este post se utiliza la clase <a href="https://docs.microsoft.com/en-us/dotnet/api/system.net.mail.smtpclient?view=netframework-4.7.2">SmtpClient</a> 
+    <h1 id="cómo-enviar-un-correo-usando-c">Cómo enviar un correo usando C#</h1>
+<p>En el desarrollo de software empresarial enviar correos electrónicos es un requerimiento muy frecuente y en este tutorial te mostramos como hacerlo usando C#, .Net Core 2.0  y Visual Studio Code.
+Actualmente existen varias biblioteca para enviar correos como SendGrid o MailKit, sin embargo en este tutorial se utiliza la clase <a href="https://docs.microsoft.com/en-us/dotnet/api/system.net.mail.smtpclient?view=netframework-4.7.2">SmtpClient</a> 
 parte  de .NET Standard 2.0.</p>
 
-<h1 id="cómo-enviar-un-correo-usando-c">Cómo enviar un correo usando C#</h1>
 <p><img src="http://0.0.0.0:8080/img/adult-business-businessman-1061588.jpg" alt="Revisando el correo electrónico" title="Email en negocios" /></p>
 
-<p>Este articulo representa una guia paso a paso para enviar un correo electrónico usando C# y una cuenta de Gmail.
-Se asume que esta instadoa el SDK de <a href="https://www.microsoft.com/net/download">.NET Core</a> y <a href="https://code.visualstudio.com/">Visual Studio Code</a>. Adicionalmente se creara una solucion para poder abrir el proyecto con Visual Studio.</p>
+<p>Este artículo representa una guía paso a paso para enviar un correo electrónico usando C# y una cuenta de Gmail.
+Se asume que tienes instalado el SDK de <a href="https://www.microsoft.com/net/download">.NET Core</a> y el editor de código <a href="https://code.visualstudio.com/">Visual Studio Code</a>. Adicionalmente se creará una solución para poder abrir el proyecto con Visual Studio.</p>
 
-<p>Se creara una blblioteca de clases que tiene como unica funcion enviar correos. Despues se  esta clase en un proyecto de consola. Esta clase se puede usar en cualquier otrp tipo de proyectos que soporte .NET Standard.
-El caso de uso que abarca esta clase es : Una aplicacion tiene asignada una  de correo con el cual envia todos los correos a las cuentas necesarias.</p>
+<p>Se creará una biblioteca de clases que tiene como única función enviar correos. Después se usa esta clase en un proyecto de consola. Esta clase se puede usar en cualquier otrp tipo de proyectos que soporte .NET Standard.
+El caso de uso cubre está clase es : Una aplicación tiene asignada una cuenta de correo con la cuál envía todos los correos al destinatario especificado.</p>
 
 <h2 id="configuración-de-gmail">Configuración de Gmail</h2>
 
-<p>Es necesario permitir el  permitir el acceso a aplicaciones no seguran desde la configuración de Gmail tal como se describe aqui <img src="http://0.0.0.0:8080/img/AccesoAplicacionesMenosSeguras.PNG" alt="alt text" title="Pantalla de gmail" />
-<a href="https://support.google.com/accounts/answer/6010255?hl=es-41"></a>.</p>
+<p>Es necesario permitir el  permitir el acceso a aplicaciones no seguran desde la configuración de Gmail tal como se describe en la 
+<a href="https://support.google.com/accounts/answer/6010255?hl=es-41">documentación de Gmail</a>.</p>
 
-<p>La configuracion para el cliente de SMTP de acuredo  a la (documentación de Gmail)[https://support.google.com/mail/answer/7126229?visit_id=1-636683482170517029-2536242402&amp;hl=es&amp;rd=1] es la siguiesnte</p>
+<p><img src="http://0.0.0.0:8080/img/AccesoAplicacionesMenosSeguras.PNG" alt="alt text" title="Pantalla de gmail" /></p>
 
-<p>Parametro | Valor
-———— | ————-
-Servidor de correo saliente (SMTP) | smtp.gmail.com
-Requiere SSL| Sí
-Requiere SSL: Sí
-Requiere TLS| Sí (si está disponible)
-Requiere autenticación| Sí
-Puerto para TLS/STARTTLS| 587
-Nombre completo o nombre mostrado|	Tu nombre
-Nombre de la cuenta, nombre de usuario o dirección de correo electrónico|	Tu dirección de correo electrónico completa
-Contraseña|Tu contraseña de Gmail</p>
+<p>La configuracion necesaria para el cliente de SMTP de acuerdo a la <a href="https://support.google.com/mail/answer/7126229?visit_id=1-636683482170517029-2536242402&amp;hl=es&amp;rd=1">documentación de Gmail</a> 
+es la siguiente:</p>
 
-<p>Con esta configuraicon se creara un archivo xml que la aplicacion leera al momento que se crea una instancia de e la clase. 
-Este tiene el proposito que si se cambia la contraseña o la cuenta no sea necesario recompilar la aplicacion nuevamente.</p>
+<table>
+  <thead>
+    <tr>
+      <th>Parametro</th>
+      <th>Valor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Servidor de correo saliente (SMTP)</td>
+      <td>smtp.gmail.com</td>
+    </tr>
+    <tr>
+      <td>Requiere TLS</td>
+      <td>Sí (si está disponible)</td>
+    </tr>
+    <tr>
+      <td>Requiere autenticación</td>
+      <td>Sí</td>
+    </tr>
+    <tr>
+      <td>Puerto para TLS/STARTTLS</td>
+      <td>587</td>
+    </tr>
+    <tr>
+      <td>Nombre completo o nombre mostrado</td>
+      <td>Tu nombre</td>
+    </tr>
+    <tr>
+      <td>Nombre de la cuenta, nombre de usuario o dirección de correo electrónico</td>
+      <td>Tu dirección de correo electrónico completa</td>
+    </tr>
+    <tr>
+      <td>Contraseña</td>
+      <td>Tu contraseña de Gmail</td>
+    </tr>
+  </tbody>
+</table>
 
+<p>Con esta configuración se creara un archivo XML que la aplicación leerá al momento que se crear una instancia de la clase. 
+Esto tiene como proposito hacer la aplicación no dependa de la configuración y en caso de ser necesario actualizar  la contraseña o cambiar la  cuenta no sea necesario recompilar la aplicación nuevamente.</p>
+<div class="language-xml highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="utf-8" ?&gt;</span>
+<span class="nt">&lt;configuration&gt;</span>
+  <span class="nt">&lt;host&gt;</span>smtp.gmail.com<span class="nt">&lt;/host&gt;</span>
+  <span class="nt">&lt;port&gt;</span>587<span class="nt">&lt;/port&gt;</span>
+  <span class="nt">&lt;user&gt;</span>tucuenta@gmail.com<span class="nt">&lt;/user&gt;</span>
+  <span class="nt">&lt;password&gt;</span>contraseñagmail<span class="nt">&lt;/password&gt;</span>
+  <span class="nt">&lt;enableSsl&gt;</span>true<span class="nt">&lt;/enableSsl&gt;</span>
+<span class="nt">&lt;/configuration&gt;</span>
+</code></pre>
+</div>
 <h2 id="preparando-el-proyecto-en-visual-studio-code">Preparando el proyecto en Visual Studio Code</h2>
+
+<p>Para realizarlo ejecuta en la terminal o consola los siguientes comandos. Ejecuta línea por línea ya que se colocarón más de un comando por descripción.</p>
 
 <ol>
   <li>
-    <p>Solución</p>
+    <p>Se creará una solución llamada <em>EnviarCorreo</em> y dos proyectos, el primero una biblioteca de clases llamada <em>EmailService</em> y el segundo proyecto es una aplicacion de consola llamada <em>EmailServiceCliente</em>.</p>
 
-    <p>dotnet new sln -o EnviarCorreo
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>dotnet new sln -o EnviarCorreo
 dotnet new classlib -o EnviarCorreo/EmailService
 dotnet new console -o EnviarCorreo/EmailServiceCliente
+</code></pre>
+    </div>
+  </li>
+  <li>Agregar los proyectos a la solución,
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>dotnet sln EnviarCorreo/EnviarCorreo.sln add EnviarCorreo/EmailServiceCliente/EmailServiceCliente.csproj
 dotnet sln EnviarCorreo/EnviarCorreo.sln add EnviarCorreo/EmailServiceCliente/EmailServiceCliente.csproj
-dotnet sln EnviarCorreo/EnviarCorreo.sln add EnviarCorreo/EmailServiceCliente/EmailServiceCliente.csproj
-dotnet add EmailServiceCliente/EmailServiceCliente.csproj reference EmailService/EmailService.csproj</p>
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code> dotnet new sln -n EnviarCorrreoElectronico
 </code></pre>
     </div>
   </li>
-  <li>Crear un proyecto biblioteca de clases.
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code> <span class="nb">cd </span>EnviarCorreo
- dotnet new classlib -n EnviarCorreoElectronico
+  <li>El proyecto EmailServiceCliente tendra una referencia al proyecto EmailService para poder utilizarlo.
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code> dotnet add EnviarCorreo/EmailServiceCliente/EmailServiceCliente.csproj reference EnviarCorreo/EmailService/EmailService.csproj
 </code></pre>
     </div>
   </li>
-  <li>Agregar los proyectos a la solución
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code> dotnet sln add EnviarCorreo/EnviarCorreo.csproj
- dotnet sln add EnviarCorreo/EnviarCorreoCliente.csproj
+  <li>Abir la carpeta <em>EnviarCorreo\EmailService</em> (<code class="highlighter-rouge">cd EnviarCorreo\EmailService</code>) y agregar la referencia al paquete de Nuget <code class="highlighter-rouge">Microsoft.Extensions.Configuration.Xml</code> esta es necesaria para poder leer el archivo <em>XML</em>.
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code> dotnet add package Microsoft.Extensions.Configuration.Xml
 </code></pre>
     </div>
   </li>
-  <li>Agregar la referencia al paquete de Nugget «Microsoft.Configuration.Extensions»
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code> dotnet add package Microsoft.Configuration.Extensions
+  <li>
+    <p>Crear un nuevo archvio llamado <em>Configuracion.xml</em> xml (Windows <code class="highlighter-rouge">type NUL &gt; Configuration.xml</code> , Linux <code class="highlighter-rouge">touch Configuracion.xml</code>).</p>
+  </li>
+  <li>Abrir la carpeta <em>EnviarCorreo</em> con Visual Studio Code.
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code> code ..
 </code></pre>
     </div>
   </li>
-  <li>Se utilizan las clases de los espacios de nombres
-    <div class="language-cs highlighter-rouge"><pre class="highlight"><code> <span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
- <span class="k">using</span> <span class="nn">System.IO</span><span class="p">;</span>
- <span class="k">using</span> <span class="nn">System.Net</span><span class="p">;</span>
- <span class="k">using</span> <span class="nn">System.Net.Mail</span><span class="p">;</span>
- <span class="k">using</span> <span class="nn">Microsoft.Extensions.Configuration</span><span class="p">;</span>
+  <li>Editar el archivo del proyecto <em>EnviarCorreo\EmailService</em> para que siempre coloque a la salida el archivo de configurcion.
+    <div class="language-xml highlighter-rouge"><pre class="highlight"><code> <span class="nt">&lt;ItemGroup&gt;</span>
+     <span class="nt">&lt;None</span> <span class="na">Update=</span><span class="s">"Configuracion.xml"</span><span class="nt">&gt;</span>
+       <span class="nt">&lt;CopyToOutputDirectory&gt;</span>Always<span class="nt">&lt;/CopyToOutputDirectory&gt;</span>
+     <span class="nt">&lt;/None&gt;</span>
+   <span class="nt">&lt;/ItemGroup&gt;</span>
 </code></pre>
     </div>
+    <h3 id="código-biblioteca-de-clases">Código biblioteca de clases.</h3>
   </li>
 </ol>
 
-<p>5.Agregar un nuevo archvio xml  que contendrá los datos para ingresar a la cueta de correo.</p>
+<p>Esta clase esta compuesta por 2 campos y una propiedad. En el constructor se inicializa la propiedad <code class="highlighter-rouge">Configuration</code> responsable de leer los archivos de XML y se
+inicializa el cliente SMTP con los parámetros de configuración.</p>
 
-<h2 id="clientes">Clientes</h2>
-<h3 id="aplicación-de-consola">Aplicación de consola</h3>
-<h3 id="aplicación-web">Aplicación Web</h3>
+<p>El método <code class="highlighter-rouge">EnviarCorreo(string , string , string ,bool esHtlm = false)</code> utiliza un paámetro opcional que define si el mensaje es HTML. Por default envia texto.
+El método  <code class="highlighter-rouge">EnviarCorreo(MailMessage)</code> esta pensado para poder construir un objecto MailMessage y poder aprovechar todas las capacidades este objecto como adjuntar archivos</p>
+
+<div class="language-cs highlighter-rouge"><pre class="highlight"><code><span class="k">using</span> <span class="nn">Microsoft.Extensions.Configuration</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.IO</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Net</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Net.Mail</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Threading.Tasks</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">EnviarCorreoElectronico</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">class</span> <span class="nc">GestorCorreo</span>
+    <span class="p">{</span>
+        <span class="k">private</span> <span class="n">SmtpClient</span> <span class="n">cliente</span><span class="p">;</span>
+        <span class="k">private</span> <span class="k">static</span> <span class="n">IConfiguration</span> <span class="n">Configuration</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+        <span class="k">private</span> <span class="n">MailMessage</span> <span class="n">email</span><span class="p">;</span>
+        <span class="k">public</span> <span class="nf">GestorCorreo</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="nf">InicializaConfiguracion</span><span class="p">();</span>
+            <span class="n">cliente</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">SmtpClient</span><span class="p">(</span><span class="n">Configuration</span><span class="p">[</span><span class="s">"host"</span><span class="p">],</span> <span class="n">Int32</span><span class="p">.</span><span class="nf">Parse</span><span class="p">(</span><span class="n">Configuration</span><span class="p">[</span><span class="s">"port"</span><span class="p">]))</span>
+            <span class="p">{</span>
+                <span class="n">EnableSsl</span> <span class="p">=</span> <span class="n">Boolean</span><span class="p">.</span><span class="nf">Parse</span><span class="p">(</span><span class="n">Configuration</span><span class="p">[</span><span class="s">"enableSsl"</span><span class="p">]),</span>
+                <span class="n">DeliveryMethod</span> <span class="p">=</span> <span class="n">SmtpDeliveryMethod</span><span class="p">.</span><span class="n">Network</span><span class="p">,</span>
+                <span class="n">UseDefaultCredentials</span> <span class="p">=</span> <span class="k">false</span><span class="p">,</span>
+                <span class="n">Credentials</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">NetworkCredential</span><span class="p">(</span><span class="n">Configuration</span><span class="p">[</span><span class="s">"user"</span><span class="p">],</span> <span class="n">Configuration</span><span class="p">[</span><span class="s">"password"</span><span class="p">])</span>
+            <span class="p">};</span>
+        <span class="p">}</span>
+        <span class="k">private</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">InicializaConfiguracion</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="kt">var</span> <span class="n">builder</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">ConfigurationBuilder</span><span class="p">()</span>
+                                    <span class="p">.</span><span class="nf">SetBasePath</span><span class="p">(</span><span class="n">Directory</span><span class="p">.</span><span class="nf">GetCurrentDirectory</span><span class="p">())</span>
+                                    <span class="p">.</span><span class="nf">AddXmlFile</span><span class="p">(</span><span class="s">"Configuracion.xml"</span><span class="p">);</span>
+            <span class="n">Configuration</span> <span class="p">=</span> <span class="n">builder</span><span class="p">.</span><span class="nf">Build</span><span class="p">();</span>
+        <span class="p">}</span>
+        <span class="k">public</span> <span class="k">void</span> <span class="nf">EnviarCorreo</span><span class="p">(</span><span class="kt">string</span> <span class="n">destinatario</span><span class="p">,</span> <span class="kt">string</span> <span class="n">asunto</span><span class="p">,</span> <span class="kt">string</span> <span class="n">mensaje</span><span class="p">,</span><span class="kt">bool</span> <span class="n">esHtlm</span> <span class="p">=</span> <span class="k">false</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">email</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">MailMessage</span><span class="p">(</span><span class="n">Configuration</span><span class="p">[</span><span class="s">"user"</span><span class="p">],</span> <span class="n">destinatario</span><span class="p">,</span> <span class="n">asunto</span><span class="p">,</span> <span class="n">mensaje</span><span class="p">);</span>
+            <span class="n">email</span><span class="p">.</span><span class="n">IsBodyHtml</span> <span class="p">=</span> <span class="n">esHtlm</span><span class="p">;</span>
+            <span class="n">cliente</span><span class="p">.</span><span class="nf">Send</span><span class="p">(</span><span class="n">email</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">public</span> <span class="k">void</span> <span class="nf">EnviarCorreo</span><span class="p">(</span><span class="n">MailMessage</span> <span class="n">message</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">cliente</span><span class="p">.</span><span class="nf">Send</span><span class="p">(</span><span class="n">message</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">public</span> <span class="k">async</span> <span class="n">Task</span> <span class="nf">EnviarCorreoAsync</span><span class="p">(</span><span class="n">MailMessage</span> <span class="n">message</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">await</span> <span class="n">cliente</span><span class="p">.</span><span class="nf">SendMailAsync</span><span class="p">(</span><span class="n">message</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<h3 id="código-aplicación-de-consola">Código Aplicación de consola.</h3>
+<p>Muestra como usar la clase GestorCorreo.</p>
+
+<div class="language-cs highlighter-rouge"><pre class="highlight"><code>
+<span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">EmailService</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Net.Mail</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">EmailServiceCliente</span>
+<span class="p">{</span>
+    <span class="k">class</span> <span class="nc">Program</span>
+    <span class="p">{</span>
+        <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">try</span>
+            <span class="p">{</span>
+                <span class="n">GestorCorreo</span> <span class="n">gestor</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">GestorCorreo</span><span class="p">();</span>
+                <span class="c1">//Aqui se puede definir agregar adjuntos
+</span>                <span class="n">MailMessage</span> <span class="n">correo</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">MailMessage</span><span class="p">(</span><span class="s">"tucuenta@gmail.com"</span><span class="p">,</span> <span class="s">"tucuenta@gmail.com"</span><span class="p">,</span> <span class="s">"Reporte Mensual."</span><span class="p">,</span> <span class="s">"Por favor ve el reporte adjunto."</span><span class="p">);</span>  
+                <span class="n">gestor</span><span class="p">.</span><span class="nf">EnviarCorreo</span><span class="p">(</span><span class="n">correo</span><span class="p">);</span>
+                <span class="n">gestor</span><span class="p">.</span><span class="nf">EnviarCorreo</span><span class="p">(</span><span class="s">"tucuenta@gmail.com"</span><span class="p">,</span> <span class="s">"Prueba"</span><span class="p">,</span> <span class="s">"Mensaje en texto plano"</span><span class="p">);</span>
+                <span class="c1">// Se tiene la idea de utilizar un archivo HTML como plantilla personalizare e invocar este metodo. 
+</span>                <span class="n">gestor</span><span class="p">.</span><span class="nf">EnviarCorreo</span><span class="p">(</span><span class="s">"tucuenta@gmail.com"</span><span class="p">,</span> <span class="s">"Prueba"</span><span class="p">,</span> <span class="s">"&lt;h1&gt;Mensaje en HTML&lt;h1&gt;&lt;p&gt;&lt;s&gt;Super Awesome html Message.&lt;/s&gt;&lt;/p&gt;"</span><span class="p">,</span><span class="k">true</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="k">catch</span> <span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="n">Exception</span> <span class="n">ex</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">ex</span><span class="p">.</span><span class="n">Message</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre>
+</div>
+<h1 id="ejecutar">Ejecutar</h1>
+
+<p>Abrir la terminal en la carpeta <em>EmailServiceCliente</em> y ejecutar <code class="highlighter-rouge">dotnet run</code></p>
+
+<h1 id="para-llevar">Para llevar</h1>
+
+<p>Puedes encontrar el código fuente el el repositorio de <a href="https://github.com/jahbenjah/CodigoBlog">Github</a>.</p>
 
   </div><a class="u-url" href="/.net/smtp/smptclient/dotnet/2018/07/22/enviar-un-correo-con-csharp-gmail.html" hidden></a>
 </article>

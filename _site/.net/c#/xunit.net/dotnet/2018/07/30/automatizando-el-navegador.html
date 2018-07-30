@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Automatizando el Navegador con C# y Selenium. | Programación con C#</title>
+<meta name="generator" content="Jekyll v3.5.1" />
+<meta property="og:title" content="Automatizando el Navegador con C# y Selenium." />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="En este sitio encontraras articiulos sobre programación usando C# ." />
+<meta property="og:description" content="En este sitio encontraras articiulos sobre programación usando C# ." />
+<link rel="canonical" href="http://0.0.0.0:8080/.net/c%23/xunit.net/dotnet/2018/07/30/automatizando-el-navegador.html" />
+<meta property="og:url" content="http://0.0.0.0:8080/.net/c%23/xunit.net/dotnet/2018/07/30/automatizando-el-navegador.html" />
+<meta property="og:site_name" content="Programación con C#" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-07-30T22:30:55+00:00" />
+<script type="application/ld+json">
+{"description":"En este sitio encontraras articiulos sobre programación usando C# .","@type":"BlogPosting","url":"http://0.0.0.0:8080/.net/c%23/xunit.net/dotnet/2018/07/30/automatizando-el-navegador.html","headline":"Automatizando el Navegador con C# y Selenium.","dateModified":"2018-07-30T22:30:55+00:00","datePublished":"2018-07-30T22:30:55+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:8080/.net/c%23/xunit.net/dotnet/2018/07/30/automatizando-el-navegador.html"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:8080/feed.xml" title="Programación con C#" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper">
+<a class="site-title" rel="author" href="/">Programación con C#</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger">
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewbox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"></path>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+<a class="page-link" href="/category/blog.html">Blog</a><a class="page-link" href="/category/smtp.html">SMTP</a>
+</div>
+      </nav>
+</div>
+
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Automatizando el Navegador con C# y Selenium.</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2018-07-30T22:30:55+00:00" itemprop="datePublished">Jul 30, 2018
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p><img src="http://0.0.0.0:8080/img/blurred-background-dolls-fashion-935019" alt="Controlando un titere." title="Metofora de automatizacón"></p>
+
+<blockquote>
+  <p>“Selenium es un conjunto de herramientas para automatizar navegadores web  a &gt;trves de multiples plataformas.”<br>
+<cite><a href="">SeleniumHQ</a></cite></p>
+</blockquote>
+
+<p>Todas la tareas repetitivas se tien
+## 
+Este artículo representa una guía paso a paso para automatizar el inicio de sesion de Facebok usando Selenuim , xunit.net . 
+Se asume que tienes instalado el SDK de .NET Core y el editor de código Visual Studio Code.
+Adicionalmente se creará una solución para poder abrir el proyecto con Visual Studio.</p>
+
+<p>Se creará dos proyecto de consola para .NET Core. 
+El primero con clases que tienes como única función proporcionar la funcinalidad para 
+manipular los controles del la pagina de inciio de sesion de Facebook. Esta clase intenta seguir el patrón de diseño 
+<a href="https://martinfowler.com/bliki/PageObject.html">Page Object</a> descrito por <a href="https://github.com/martinfowler" class="user-mention">@martinfowler</a> y popularizado por <a href="https://github.com/selenium" class="user-mention">@selenium</a>.</p>
+
+<p>El segundo projecto ejectua pruebas unitarias sobre el primer proyecto. Para ello se utiliza el framework <a href="https://xunit.github.io/">xunit.net</a> 
+esta clase en un proyecto de consola. Esta clase se puede usar en cualquier otrp tipo de proyectos que soporte 
+.NET Standard. El caso de uso cubre está clase es : 
+Una aplicación tiene asignada una cuenta de correo con la cuál envía todos los correos al destinatario especificado.</p>
+
+<h2 id="preparando-el-proyecto-en-visual-studio-code">Preparando el proyecto en Visual Studio Code</h2>
+<p>Para realizarlo ejecuta en la terminal o consola los siguientes comandos. Ejecuta línea por línea ya que se colocarón más de 
+un comando por descripción.</p>
+<ol>
+  <li>Se creará una solución llamada AutomatizarNavegador y dos proyectos de consola, el primero llamado Facebook y el 
+segundo proyecto  FacebookTest.</li>
+</ol>
+
+<div class="language-bash highlighter-rouge">
+<pre class="highlight"><code>dotnet new sln -o AutomatizarNavegador
+dotnet new classlib -o AutomatizarNavegador/Facebook
+dotnet new console -o AutomatizarNavegador/FacebookTest
+</code></pre>
+</div>
+<p>2 .Agregar los proyectos a la solución,</p>
+<div class="language-bash highlighter-rouge">
+<pre class="highlight"><code>dotnet sln AutomatizarNavegador/AutomatizarNavegador.sln add AutomatizarNavegador/Facebook/Facebook.csproj
+dotnet sln AutomatizarNavegador/AutomatizarNavegador.sln add AutomatizarNavegador/FacebookTest/FacebookTest.csproj
+</code></pre>
+</div>
+<ol>
+  <li>El proyecto FacebookTest tendra una referencia al proyecto Facebook para poder utilizarlo.
+    <pre><code class="language-dos"> dotnet add EnviarCorreo/EmailServiceCliente/EmailServiceCliente.csproj reference EnviarCorreo/EmailService/EmailService.csproj
+</code></pre>
+  </li>
+  <li>Abir la carpeta EnviarCorreo\EmailService (cd EnviarCorreo\EmailService) y agregar la referencia al paquete de Nuget Microsoft.Extensions.Configuration.Xml esta es necesaria para poder leer el archivo XML.
+    <pre><code class="language-dos">dotnet add package Microsoft.Extensions.Configuration.Xml
+</code></pre>
+    <p>Crear un nuevo archvio llamado Configuracion.xml xml (Windows type NUL &gt; Configuration.xml , Linux touch Configuracion.xml).</p>
+  </li>
+</ol>
+
+<p>Abrir la carpeta EnviarCorreo con Visual Studio Code.
+ code ..
+Editar el archivo del proyecto EnviarCorreo\EmailService para que siempre coloque a la salida el archivo de configurcion.</p>
+<div class="highlighter-rouge">
+<pre class="highlight"><code> &lt;ItemGroup&gt;
+     &lt;None Update="Configuracion.xml"&gt;
+       &lt;CopyToOutputDirectory&gt;Always&lt;/CopyToOutputDirectory&gt;
+     &lt;/None&gt;
+   &lt;/ItemGroup&gt;
+</code></pre>
+</div>
+
+  </div>
+<a class="u-url" href="/.net/c%23/xunit.net/dotnet/2018/07/30/automatizando-el-navegador.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Programación con C#</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Programación con C#</li>
+<li><a class="u-email" href="mailto:j.benjamin.camacho@gmail.com">j.benjamin.camacho@gmail.com</a></li>
+</ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+<ul class="social-media-list">
+<li><a href="https://github.com/jahbenjah"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">jahbenjah</span></a></li>
+<li><a href="https://www.twitter.com/jbenjamincmcho"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">jbenjamincmcho</span></a></li>
+</ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>En este sitio encontraras articiulos sobre programación usando C# .</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

@@ -7,8 +7,7 @@ categories: C# selenium testing xunit dotnet
 ---
 
 
-![Visual Studio 2017.]({{"/img/vs2017.PNG" | absolute_url }} "Ejecucion de pruebas unitarias.")
-
+![Controlando un titere.]({{"/img/blurred-background-dolls-fashion-935019.jpg" | absolute_url }} "Metofora de automatizacón")
 > "Selenium es un conjunto de herramientas para automatizar navegadores web  atraves de multiples plataformas.
   ...Selenium puede ser controlado por multiples lenguajes de progrmacion y frameworks de pruebas."  
 <cite>[SeleniumHQ]()</cite>

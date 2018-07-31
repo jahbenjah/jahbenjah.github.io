@@ -3,13 +3,14 @@ layout: post
 title:  "Automatizando el Navegador con C# y Selenium."
 date:   2018-07-30 22:30:55 +0000
 comments: true
-categories: .net C# xunit.net dotnet 
+categories: C# selenium testing xunit dotnet 
 ---
 
 
+![Visual Studio 2017.]({{"/img/v2107.PNG" | absolute_url }} "Ejecucion de pruebas unitarias.")
 ![Controlando un titere.]({{"/img/blurred-background-dolls-fashion-935019" | absolute_url }} "Metofora de automatizacón")
-
->"Selenium es un conjunto de herramientas para automatizar navegadores web  a >trves de multiples plataformas."  
+> "Selenium es un conjunto de herramientas para automatizar navegadores web  atraves de multiples plataformas.
+  ...Selenium puede ser controlado por multiples lenguajes de progrmacion y frameworks de pruebas."  
 <cite>[SeleniumHQ]()</cite>
 
 Todas la tareas repetitivas se tien
@@ -34,34 +35,35 @@ Para realizarlo ejecuta en la terminal o consola los siguientes comandos. Ejecut
 un comando por descripción.
 1. Se creará una solución llamada AutomatizarNavegador y dos proyectos de consola, el primero llamado Facebook y el 
 segundo proyecto  FacebookTest.
-
 ```bash
-dotnet new sln -o AutomatizarNavegador
-dotnet new classlib -o AutomatizarNavegador/Facebook
-dotnet new console -o AutomatizarNavegador/FacebookTest
+  dotnet new sln -o AutomatizarNavegador
+  dotnet new console -o AutomatizarNavegador/Facebook
+  dotnet new xunit -o AutomatizarNavegador/FacebookTest
 ```
 2 .Agregar los proyectos a la solución,
 ```bash
-dotnet sln AutomatizarNavegador/AutomatizarNavegador.sln add AutomatizarNavegador/Facebook/Facebook.csproj
-dotnet sln AutomatizarNavegador/AutomatizarNavegador.sln add AutomatizarNavegador/FacebookTest/FacebookTest.csproj
+  dotnet sln AutomatizarNavegador/AutomatizarNavegador.sln add AutomatizarNavegador/Facebook/Facebook.csproj
+  dotnet sln AutomatizarNavegador/AutomatizarNavegador.sln add AutomatizarNavegador/FacebookTest/FacebookTest.csproj
 ```
-3. El proyecto FacebookTest tendra una referencia al proyecto Facebook para poder utilizarlo.
-```dos
- dotnet add EnviarCorreo/EmailServiceCliente/EmailServiceCliente.csproj reference EnviarCorreo/EmailService/EmailService.csproj
- ```
-4. Abir la carpeta EnviarCorreo\EmailService (cd EnviarCorreo\EmailService) y agregar la referencia al paquete de Nuget Microsoft.Extensions.Configuration.Xml esta es necesaria para poder leer el archivo XML.
-```dos
-dotnet add package Microsoft.Extensions.Configuration.Xml
+3. Agregar los paquetes de nuget al proyecto Facebook.
+```bash
+   dotnet add AutomatizarNavegador\Facebook\Facebook.csproj package Selenium.WebDriver
 ```
-Crear un nuevo archvio llamado Configuracion.xml xml (Windows type NUL > Configuration.xml , Linux touch Configuracion.xml).
+4. El proyecto FacebookTest tendra una referencia al proyecto Facebook para poder utilizarlo.
+```bash
+  dotnet add AutomatizarNavegador\FacebookTest\FacebookTest.csproj reference AutomatizarNavegador\Facebook\Facebook.csproj
+  dotnet add AutomatizarNavegador\FacebookTest\FacebookTest.csproj package Selenium.Firefox.WebDriver
+  dotnet add AutomatizarNavegador\FacebookTest\FacebookTest.csproj package Selenium.Chrome.WebDriver
+```
 
-Abrir la carpeta EnviarCorreo con Visual Studio Code.
- code ..
-Editar el archivo del proyecto EnviarCorreo\EmailService para que siempre coloque a la salida el archivo de configurcion.
-``` 
- <ItemGroup>
-     <None Update="Configuracion.xml">
-       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-     </None>
-   </ItemGroup>
-```
+## El codigo. 
+
+### Page Object
+
+### Las pruebas 
+
+## Ejecucion 
+
+## Para llevar.
+
+Puedes encontrar el código fuentes en el repositorio ()[]

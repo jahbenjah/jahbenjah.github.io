@@ -7,15 +7,15 @@
 <meta name="generator" content="Jekyll v3.5.1" />
 <meta property="og:title" content="Automatizando el Navegador con C# y Selenium." />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="En este sitio encontraras articiulos sobre programación usando C# ." />
-<meta property="og:description" content="En este sitio encontraras articiulos sobre programación usando C# ." />
-<link rel="canonical" href="http://0.0.0.0:8080/.net/c%23/xunit.net/dotnet/2018/07/30/automatizando-el-navegador.html" />
-<meta property="og:url" content="http://0.0.0.0:8080/.net/c%23/xunit.net/dotnet/2018/07/30/automatizando-el-navegador.html" />
+<meta name="description" content="“Selenium es un conjunto de herramientas para automatizar navegadores web atraves de multiples plataformas. …Selenium puede ser controlado por multiples lenguajes de progrmacion y frameworks de pruebas.” SeleniumHQ" />
+<meta property="og:description" content="“Selenium es un conjunto de herramientas para automatizar navegadores web atraves de multiples plataformas. …Selenium puede ser controlado por multiples lenguajes de progrmacion y frameworks de pruebas.” SeleniumHQ" />
+<link rel="canonical" href="http://0.0.0.0:8080/c%23/selenium/testing/xunit/dotnet/2018/07/30/automatizando-el-navegador.html" />
+<meta property="og:url" content="http://0.0.0.0:8080/c%23/selenium/testing/xunit/dotnet/2018/07/30/automatizando-el-navegador.html" />
 <meta property="og:site_name" content="Programación con C#" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-07-30T22:30:55+00:00" />
 <script type="application/ld+json">
-{"description":"En este sitio encontraras articiulos sobre programación usando C# .","@type":"BlogPosting","url":"http://0.0.0.0:8080/.net/c%23/xunit.net/dotnet/2018/07/30/automatizando-el-navegador.html","headline":"Automatizando el Navegador con C# y Selenium.","dateModified":"2018-07-30T22:30:55+00:00","datePublished":"2018-07-30T22:30:55+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:8080/.net/c%23/xunit.net/dotnet/2018/07/30/automatizando-el-navegador.html"},"@context":"http://schema.org"}</script>
+{"description":"“Selenium es un conjunto de herramientas para automatizar navegadores web atraves de multiples plataformas. …Selenium puede ser controlado por multiples lenguajes de progrmacion y frameworks de pruebas.” SeleniumHQ","@type":"BlogPosting","url":"http://0.0.0.0:8080/c%23/selenium/testing/xunit/dotnet/2018/07/30/automatizando-el-navegador.html","headline":"Automatizando el Navegador con C# y Selenium.","dateModified":"2018-07-30T22:30:55+00:00","datePublished":"2018-07-30T22:30:55+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:8080/c%23/selenium/testing/xunit/dotnet/2018/07/30/automatizando-el-navegador.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:8080/feed.xml" title="Programación con C#" /></head>
 <body><header class="site-header" role="banner">
@@ -49,10 +49,11 @@
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <p><img src="http://0.0.0.0:8080/img/blurred-background-dolls-fashion-935019" alt="Controlando un titere." title="Metofora de automatizacón"></p>
-
+    <p><img src="http://0.0.0.0:8080/img/v2107.PNG" alt="Visual Studio 2017." title="Ejecucion de pruebas unitarias.">
+<img src="http://0.0.0.0:8080/img/blurred-background-dolls-fashion-935019" alt="Controlando un titere." title="Metofora de automatizacón"></p>
 <blockquote>
-  <p>“Selenium es un conjunto de herramientas para automatizar navegadores web  a &gt;trves de multiples plataformas.”<br>
+  <p>“Selenium es un conjunto de herramientas para automatizar navegadores web  atraves de multiples plataformas.
+  …Selenium puede ser controlado por multiples lenguajes de progrmacion y frameworks de pruebas.”<br>
 <cite><a href="">SeleniumHQ</a></cite></p>
 </blockquote>
 
@@ -77,47 +78,50 @@ Una aplicación tiene asignada una cuenta de correo con la cuál envía todos lo
 un comando por descripción.</p>
 <ol>
   <li>Se creará una solución llamada AutomatizarNavegador y dos proyectos de consola, el primero llamado Facebook y el 
-segundo proyecto  FacebookTest.</li>
-</ol>
-
-<div class="language-bash highlighter-rouge">
-<pre class="highlight"><code>dotnet new sln -o AutomatizarNavegador
-dotnet new classlib -o AutomatizarNavegador/Facebook
-dotnet new console -o AutomatizarNavegador/FacebookTest
+segundo proyecto  FacebookTest.
+    <div class="language-bash highlighter-rouge">
+<pre class="highlight"><code>  dotnet new sln -o AutomatizarNavegador
+  dotnet new console -o AutomatizarNavegador/Facebook
+  dotnet new xunit -o AutomatizarNavegador/FacebookTest
 </code></pre>
-</div>
-<p>2 .Agregar los proyectos a la solución,</p>
-<div class="language-bash highlighter-rouge">
-<pre class="highlight"><code>dotnet sln AutomatizarNavegador/AutomatizarNavegador.sln add AutomatizarNavegador/Facebook/Facebook.csproj
-dotnet sln AutomatizarNavegador/AutomatizarNavegador.sln add AutomatizarNavegador/FacebookTest/FacebookTest.csproj
+    </div>
+    <p>2 .Agregar los proyectos a la solución,</p>
+    <div class="language-bash highlighter-rouge">
+<pre class="highlight"><code>  dotnet sln AutomatizarNavegador/AutomatizarNavegador.sln add AutomatizarNavegador/Facebook/Facebook.csproj
+  dotnet sln AutomatizarNavegador/AutomatizarNavegador.sln add AutomatizarNavegador/FacebookTest/FacebookTest.csproj
 </code></pre>
-</div>
-<ol>
+    </div>
+  </li>
+  <li>Agregar los paquetes de nuget al proyecto Facebook.
+    <div class="language-bash highlighter-rouge">
+<pre class="highlight"><code>dotnet add AutomatizarNavegador<span class="se">\F</span>acebook<span class="se">\F</span>acebook.csproj package Selenium.WebDriver
+</code></pre>
+    </div>
+  </li>
   <li>El proyecto FacebookTest tendra una referencia al proyecto Facebook para poder utilizarlo.
-    <pre><code class="language-dos"> dotnet add EnviarCorreo/EmailServiceCliente/EmailServiceCliente.csproj reference EnviarCorreo/EmailService/EmailService.csproj
+    <div class="language-bash highlighter-rouge">
+<pre class="highlight"><code>  dotnet add AutomatizarNavegador<span class="se">\F</span>acebookTest<span class="se">\F</span>acebookTest.csproj reference AutomatizarNavegador<span class="se">\F</span>acebook<span class="se">\F</span>acebook.csproj
+  dotnet add AutomatizarNavegador<span class="se">\F</span>acebookTest<span class="se">\F</span>acebookTest.csproj package Selenium.Firefox.WebDriver
+  dotnet add AutomatizarNavegador<span class="se">\F</span>acebookTest<span class="se">\F</span>acebookTest.csproj package Selenium.Chrome.WebDriver
 </code></pre>
-  </li>
-  <li>Abir la carpeta EnviarCorreo\EmailService (cd EnviarCorreo\EmailService) y agregar la referencia al paquete de Nuget Microsoft.Extensions.Configuration.Xml esta es necesaria para poder leer el archivo XML.
-    <pre><code class="language-dos">dotnet add package Microsoft.Extensions.Configuration.Xml
-</code></pre>
-    <p>Crear un nuevo archvio llamado Configuracion.xml xml (Windows type NUL &gt; Configuration.xml , Linux touch Configuracion.xml).</p>
+    </div>
   </li>
 </ol>
 
-<p>Abrir la carpeta EnviarCorreo con Visual Studio Code.
- code ..
-Editar el archivo del proyecto EnviarCorreo\EmailService para que siempre coloque a la salida el archivo de configurcion.</p>
-<div class="highlighter-rouge">
-<pre class="highlight"><code> &lt;ItemGroup&gt;
-     &lt;None Update="Configuracion.xml"&gt;
-       &lt;CopyToOutputDirectory&gt;Always&lt;/CopyToOutputDirectory&gt;
-     &lt;/None&gt;
-   &lt;/ItemGroup&gt;
-</code></pre>
-</div>
+<h2 id="el-codigo">El codigo.</h2>
+
+<h3 id="page-object">Page Object</h3>
+
+<h3 id="las-pruebas">Las pruebas</h3>
+
+<h2 id="ejecucion">Ejecucion</h2>
+
+<h2 id="para-llevar">Para llevar.</h2>
+
+<p>Puedes encontrar el código fuentes en el repositorio ()[]</p>
 
   </div>
-<a class="u-url" href="/.net/c%23/xunit.net/dotnet/2018/07/30/automatizando-el-navegador.html" hidden></a>
+<a class="u-url" href="/c%23/selenium/testing/xunit/dotnet/2018/07/30/automatizando-el-navegador.html" hidden></a>
 </article>
 
       </div>

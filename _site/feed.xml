@@ -1,4 +1,69 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.1">Jekyll</generator><link href="http://0.0.0.0:8080/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:8080/" rel="alternate" type="text/html" /><updated>2018-07-30T23:00:17+00:00</updated><id>http://0.0.0.0:8080/</id><title type="html">Programación con C#</title><subtitle>En este sitio encontraras articiulos sobre programación usando C# .</subtitle><entry><title type="html">Enviar un correo con C# y Gmail.</title><link href="http://0.0.0.0:8080/.net/smtp/smptclient/dotnet/2018/07/22/enviar-un-correo-con-csharp-gmail.html" rel="alternate" type="text/html" title="Enviar un correo con C# y Gmail." /><published>2018-07-22T12:30:55+00:00</published><updated>2018-07-22T12:30:55+00:00</updated><id>http://0.0.0.0:8080/.net/smtp/smptclient/dotnet/2018/07/22/enviar-un-correo-con-csharp-gmail</id><content type="html" xml:base="http://0.0.0.0:8080/.net/smtp/smptclient/dotnet/2018/07/22/enviar-un-correo-con-csharp-gmail.html">&lt;p&gt;En el desarrollo de software empresarial enviar correos electrónicos es un requerimiento muy frecuente y en este tutorial te mostramos como hacerlo usando C#, .Net Core 2.0  y Visual Studio Code.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.1">Jekyll</generator><link href="http://0.0.0.0:8080/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:8080/" rel="alternate" type="text/html" /><updated>2018-07-31T22:08:45+00:00</updated><id>http://0.0.0.0:8080/</id><title type="html">Programación con C#</title><subtitle>En este sitio encontraras articiulos sobre programación usando C# .</subtitle><entry><title type="html">Automatizando el Navegador con C# y Selenium.</title><link href="http://0.0.0.0:8080/c%23/selenium/testing/xunit/dotnet/2018/07/30/automatizando-el-navegador.html" rel="alternate" type="text/html" title="Automatizando el Navegador con C# y Selenium." /><published>2018-07-30T22:30:55+00:00</published><updated>2018-07-30T22:30:55+00:00</updated><id>http://0.0.0.0:8080/c%23/selenium/testing/xunit/dotnet/2018/07/30/automatizando-el-navegador</id><content type="html" xml:base="http://0.0.0.0:8080/c%23/selenium/testing/xunit/dotnet/2018/07/30/automatizando-el-navegador.html">&lt;p&gt;&lt;img src=&quot;http://0.0.0.0:8080/img/v2107.PNG&quot; alt=&quot;Visual Studio 2017.&quot; title=&quot;Ejecucion de pruebas unitarias.&quot; /&gt;
+&lt;img src=&quot;http://0.0.0.0:8080/img/blurred-background-dolls-fashion-935019&quot; alt=&quot;Controlando un titere.&quot; title=&quot;Metofora de automatizacón&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;“Selenium es un conjunto de herramientas para automatizar navegadores web  atraves de multiples plataformas.
+  …Selenium puede ser controlado por multiples lenguajes de progrmacion y frameworks de pruebas.”&lt;br /&gt;
+&lt;cite&gt;&lt;a href=&quot;&quot;&gt;SeleniumHQ&lt;/a&gt;&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Todas la tareas repetitivas se tien
+## 
+Este artículo representa una guía paso a paso para automatizar el inicio de sesion de Facebok usando Selenuim , xunit.net . 
+Se asume que tienes instalado el SDK de .NET Core y el editor de código Visual Studio Code.
+Adicionalmente se creará una solución para poder abrir el proyecto con Visual Studio.&lt;/p&gt;
+
+&lt;p&gt;Se creará dos proyecto de consola para .NET Core. 
+El primero con clases que tienes como única función proporcionar la funcinalidad para 
+manipular los controles del la pagina de inciio de sesion de Facebook. Esta clase intenta seguir el patrón de diseño 
+&lt;a href=&quot;https://martinfowler.com/bliki/PageObject.html&quot;&gt;Page Object&lt;/a&gt; descrito por @martinfowler y popularizado por @selenium.&lt;/p&gt;
+
+&lt;p&gt;El segundo projecto ejectua pruebas unitarias sobre el primer proyecto. Para ello se utiliza el framework &lt;a href=&quot;https://xunit.github.io/&quot;&gt;xunit.net&lt;/a&gt; 
+esta clase en un proyecto de consola. Esta clase se puede usar en cualquier otrp tipo de proyectos que soporte 
+.NET Standard. El caso de uso cubre está clase es : 
+Una aplicación tiene asignada una cuenta de correo con la cuál envía todos los correos al destinatario especificado.&lt;/p&gt;
+
+&lt;h2 id=&quot;preparando-el-proyecto-en-visual-studio-code&quot;&gt;Preparando el proyecto en Visual Studio Code&lt;/h2&gt;
+&lt;p&gt;Para realizarlo ejecuta en la terminal o consola los siguientes comandos. Ejecuta línea por línea ya que se colocarón más de 
+un comando por descripción.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Se creará una solución llamada AutomatizarNavegador y dos proyectos de consola, el primero llamado Facebook y el 
+segundo proyecto  FacebookTest.
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  dotnet new sln -o AutomatizarNavegador
+  dotnet new console -o AutomatizarNavegador/Facebook
+  dotnet new xunit -o AutomatizarNavegador/FacebookTest
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+    &lt;p&gt;2 .Agregar los proyectos a la solución,&lt;/p&gt;
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  dotnet sln AutomatizarNavegador/AutomatizarNavegador.sln add AutomatizarNavegador/Facebook/Facebook.csproj
+  dotnet sln AutomatizarNavegador/AutomatizarNavegador.sln add AutomatizarNavegador/FacebookTest/FacebookTest.csproj
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Agregar los paquetes de nuget al proyecto Facebook.
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;dotnet add AutomatizarNavegador&lt;span class=&quot;se&quot;&gt;\F&lt;/span&gt;acebook&lt;span class=&quot;se&quot;&gt;\F&lt;/span&gt;acebook.csproj package Selenium.WebDriver
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;El proyecto FacebookTest tendra una referencia al proyecto Facebook para poder utilizarlo.
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  dotnet add AutomatizarNavegador&lt;span class=&quot;se&quot;&gt;\F&lt;/span&gt;acebookTest&lt;span class=&quot;se&quot;&gt;\F&lt;/span&gt;acebookTest.csproj reference AutomatizarNavegador&lt;span class=&quot;se&quot;&gt;\F&lt;/span&gt;acebook&lt;span class=&quot;se&quot;&gt;\F&lt;/span&gt;acebook.csproj
+  dotnet add AutomatizarNavegador&lt;span class=&quot;se&quot;&gt;\F&lt;/span&gt;acebookTest&lt;span class=&quot;se&quot;&gt;\F&lt;/span&gt;acebookTest.csproj package Selenium.Firefox.WebDriver
+  dotnet add AutomatizarNavegador&lt;span class=&quot;se&quot;&gt;\F&lt;/span&gt;acebookTest&lt;span class=&quot;se&quot;&gt;\F&lt;/span&gt;acebookTest.csproj package Selenium.Chrome.WebDriver
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;el-codigo&quot;&gt;El codigo.&lt;/h2&gt;
+
+&lt;h3 id=&quot;page-object&quot;&gt;Page Object&lt;/h3&gt;
+
+&lt;h3 id=&quot;las-pruebas&quot;&gt;Las pruebas&lt;/h3&gt;
+
+&lt;h2 id=&quot;ejecucion&quot;&gt;Ejecucion&lt;/h2&gt;
+
+&lt;h2 id=&quot;para-llevar&quot;&gt;Para llevar.&lt;/h2&gt;
+
+&lt;p&gt;Puedes encontrar el código fuentes en el repositorio ()[]&lt;/p&gt;</content><author><name></name></author><summary type="html">“Selenium es un conjunto de herramientas para automatizar navegadores web atraves de multiples plataformas. …Selenium puede ser controlado por multiples lenguajes de progrmacion y frameworks de pruebas.” SeleniumHQ</summary></entry><entry><title type="html">Enviar un correo con C# y Gmail.</title><link href="http://0.0.0.0:8080/.net/smtp/smptclient/dotnet/2018/07/22/enviar-un-correo-con-csharp-gmail.html" rel="alternate" type="text/html" title="Enviar un correo con C# y Gmail." /><published>2018-07-22T12:30:55+00:00</published><updated>2018-07-22T12:30:55+00:00</updated><id>http://0.0.0.0:8080/.net/smtp/smptclient/dotnet/2018/07/22/enviar-un-correo-con-csharp-gmail</id><content type="html" xml:base="http://0.0.0.0:8080/.net/smtp/smptclient/dotnet/2018/07/22/enviar-un-correo-con-csharp-gmail.html">&lt;p&gt;En el desarrollo de software empresarial enviar correos electrónicos es un requerimiento muy frecuente y en este tutorial te mostramos como hacerlo usando C#, .Net Core 2.0  y Visual Studio Code.
 Actualmente existen varias biblioteca para enviar correos como SendGrid o MailKit, sin embargo en este tutorial se utiliza la clase &lt;a href=&quot;https://docs.microsoft.com/en-us/dotnet/api/system.net.mail.smtpclient?view=netframework-4.7.2&quot;&gt;SmtpClient&lt;/a&gt; 
 parte  de .NET Standard 2.0.&lt;/p&gt;
 

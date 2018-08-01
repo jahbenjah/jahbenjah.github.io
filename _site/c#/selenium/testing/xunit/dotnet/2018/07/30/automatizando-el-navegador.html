@@ -49,8 +49,7 @@
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <p><img src="http://0.0.0.0:8080/img/v2107.PNG" alt="Visual Studio 2017." title="Ejecucion de pruebas unitarias.">
-<img src="http://0.0.0.0:8080/img/blurred-background-dolls-fashion-935019" alt="Controlando un titere." title="Metofora de automatizacón"></p>
+    <p><img src="http://0.0.0.0:8080/img/blurred-background-dolls-fashion-935019.jpg" alt="Controlando un titere." title="Metofora de automatizacón"></p>
 <blockquote>
   <p>“Selenium es un conjunto de herramientas para automatizar navegadores web  atraves de multiples plataformas.
   …Selenium puede ser controlado por multiples lenguajes de progrmacion y frameworks de pruebas.”<br>
@@ -59,50 +58,71 @@
 
 <p>Todas la tareas repetitivas se tien
 ## 
-Este artículo representa una guía paso a paso para automatizar el inicio de sesion de Facebok usando Selenuim , xunit.net . 
-Se asume que tienes instalado el SDK de .NET Core y el editor de código Visual Studio Code.
-Adicionalmente se creará una solución para poder abrir el proyecto con Visual Studio.</p>
+Este artículo representa una guía paso a paso para automatizar el inicio de sesion de Facebok usando C#, Selenuim , xunit.net . 
+Se asume que tienes instalado el SDK de .NET Core y el editor de código Visual Studio Code o Visual Studio 2017.</p>
 
-<p>Se creará dos proyecto de consola para .NET Core. 
-El primero con clases que tienes como única función proporcionar la funcinalidad para 
-manipular los controles del la pagina de inciio de sesion de Facebook. Esta clase intenta seguir el patrón de diseño 
-<a href="https://martinfowler.com/bliki/PageObject.html">Page Object</a> descrito por <a href="https://github.com/martinfowler" class="user-mention">@martinfowler</a> y popularizado por <a href="https://github.com/selenium" class="user-mention">@selenium</a>.</p>
+<p>Se creará el proyecto usando la linea de comandos para .NET Core. El proyecto puede ejecutarse en Visual Studio 2017.</p>
 
-<p>El segundo projecto ejectua pruebas unitarias sobre el primer proyecto. Para ello se utiliza el framework <a href="https://xunit.github.io/">xunit.net</a> 
-esta clase en un proyecto de consola. Esta clase se puede usar en cualquier otrp tipo de proyectos que soporte 
-.NET Standard. El caso de uso cubre está clase es : 
-Una aplicación tiene asignada una cuenta de correo con la cuál envía todos los correos al destinatario especificado.</p>
-
-<h2 id="preparando-el-proyecto-en-visual-studio-code">Preparando el proyecto en Visual Studio Code</h2>
+<h2 id="preparando-el-proyecto-net-core-con-dotnet-cli">Preparando el proyecto .NET Core con <em>dotnet</em> CLI.</h2>
 <p>Para realizarlo ejecuta en la terminal o consola los siguientes comandos. Ejecuta línea por línea ya que se colocarón más de 
 un comando por descripción.</p>
 <ol>
   <li>Se creará una solución llamada AutomatizarNavegador y dos proyectos de consola, el primero llamado Facebook y el 
-segundo proyecto  FacebookTest.
-    <div class="language-bash highlighter-rouge">
-<pre class="highlight"><code>  dotnet new sln -o AutomatizarNavegador
-  dotnet new console -o AutomatizarNavegador/Facebook
-  dotnet new xunit -o AutomatizarNavegador/FacebookTest
+el nombre del segundo proyecto es FacebookTest.
+    <div class="language-sh highlighter-rouge">
+<pre class="highlight"><code>dotnet new sln -o AutomatizarNavegador
+dotnet new console -o AutomatizarNavegador/Facebook
+dotnet new xunit -o AutomatizarNavegador/FacebookTest
 </code></pre>
     </div>
-    <p>2 .Agregar los proyectos a la solución,</p>
-    <div class="language-bash highlighter-rouge">
-<pre class="highlight"><code>  dotnet sln AutomatizarNavegador/AutomatizarNavegador.sln add AutomatizarNavegador/Facebook/Facebook.csproj
-  dotnet sln AutomatizarNavegador/AutomatizarNavegador.sln add AutomatizarNavegador/FacebookTest/FacebookTest.csproj
-</code></pre>
-    </div>
-  </li>
-  <li>Agregar los paquetes de nuget al proyecto Facebook.
-    <div class="language-bash highlighter-rouge">
-<pre class="highlight"><code>dotnet add AutomatizarNavegador<span class="se">\F</span>acebook<span class="se">\F</span>acebook.csproj package Selenium.WebDriver
+    <p>2 .EJecutar el comando <code class="highlighter-rouge">cd AutomatizarNavegador</code> para abrir la carpeta  del proyecto. Agregar los proyectos a la solución mediante los siguientes comandos.</p>
+    <div class="language-sh highlighter-rouge">
+<pre class="highlight"><code>dotnet sln add Facebook/Facebook.csproj
+dotnet sln add FacebookTest/FacebookTest.csproj
 </code></pre>
     </div>
   </li>
-  <li>El proyecto FacebookTest tendra una referencia al proyecto Facebook para poder utilizarlo.
-    <div class="language-bash highlighter-rouge">
-<pre class="highlight"><code>  dotnet add AutomatizarNavegador<span class="se">\F</span>acebookTest<span class="se">\F</span>acebookTest.csproj reference AutomatizarNavegador<span class="se">\F</span>acebook<span class="se">\F</span>acebook.csproj
-  dotnet add AutomatizarNavegador<span class="se">\F</span>acebookTest<span class="se">\F</span>acebookTest.csproj package Selenium.Firefox.WebDriver
-  dotnet add AutomatizarNavegador<span class="se">\F</span>acebookTest<span class="se">\F</span>acebookTest.csproj package Selenium.Chrome.WebDriver
+  <li>Abrir la carpeta el proyecto Facebook y agregar el paquete <code class="highlighter-rouge">Selenium.WebDriver</code> al proyecto Facebook. Este paquete define un conjunto de interfaces que permiten controlar el Navegador.
+Existen diferentes que han proveedores que han implementado el WenDrive de Selenium como son: Chrome, Firefox, Internet Explorer, Safari Opera entre otros.
+    <div class="language-sh highlighter-rouge">
+<pre class="highlight"><code><span class="nb">cd </span>Facebok
+dotnet add package Selenium.WebDriver
+</code></pre>
+    </div>
+  </li>
+  <li>Abrir el proyecto FacebookTest para agregar referencias. Este proyecto necesita una referencia al proyecto Facebook y referencias a las diferentes implementacion del WebDrive.
+El web driver es un ejecutable. En nuestro caso solo agregamos soporte para Firefox y Chrome.
+    <div class="language-sh highlighter-rouge">
+<pre class="highlight"><code><span class="nb">cd</span> ..<span class="se">\F</span>acebookTest
+dotnet add reference ..<span class="se">\F</span>acebook<span class="se">\F</span>acebook.csproj
+dotnet add package Selenium.Firefox.WebDriver
+dotnet add package Selenium.Chrome.WebDriver
+</code></pre>
+    </div>
+  </li>
+  <li>Con esto el proyecto esta listo para escribir el codigo. Puedes utilizar Visual Studio Code o Visual Studio 2017. Abajo se muestra la estructura de las carpetas.
+    <div class="language-sh highlighter-rouge">
+<pre class="highlight"><code>|   AutomatizarNavegador.sln
+|   
+----Facebook
+|   |   Facebook.csproj
+|   |   Program.cs
+|   |   
+|   ----obj
+|           Facebook.csproj.nuget.cache
+|           Facebook.csproj.nuget.g.props
+|           Facebook.csproj.nuget.g.targets
+|           project.assets.json
+|           
+---FacebookTest
+ |   FacebookTest.csproj
+ |   UnitTest1.cs
+ |   
+ ----obj
+         FacebookTest.csproj.nuget.cache
+         FacebookTest.csproj.nuget.g.props
+         FacebookTest.csproj.nuget.g.targets
+         project.assets.json
 </code></pre>
     </div>
   </li>
@@ -110,15 +130,146 @@ segundo proyecto  FacebookTest.
 
 <h2 id="el-codigo">El codigo.</h2>
 
-<h3 id="page-object">Page Object</h3>
+<h3 id="page-object-del-inicio-de-sesion-de-facebok">
+<em>Page Object</em> del inicio de sesion de Facebok</h3>
+<p>El primero proyecto tiene como única función proporcionar la funcinalidad para manipular los controles del la página de incio de sesión de Facebook.Es decir permite ingresar el usuario,
+contraseña y presionar el boton iniciar sesión. Contiene 3 constantes de solo lectura que permiten identificar</p>
+
+<p>Esta clase intenta seguir el patrón de diseño 
+<a href="https://martinfowler.com/bliki/PageObject.html">Page Object</a> descrito por <a href="https://github.com/martinfowler" class="user-mention">@martinfowler</a> y popularizado por <a href="https://github.com/selenium" class="user-mention">@selenium</a>.</p>
+
+<div class="language-cs highlighter-rouge">
+<pre class="highlight"><code><span class="k">using</span> <span class="nn">OpenQA.Selenium</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">Facebook</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">class</span> <span class="nc">IniciaSesion</span>
+    <span class="p">{</span>
+        <span class="k">private</span> <span class="k">readonly</span> <span class="kt">string</span> <span class="n">Email</span> <span class="p">=</span> <span class="s">"email"</span><span class="p">;</span>
+        <span class="k">private</span> <span class="k">readonly</span> <span class="kt">string</span> <span class="n">Password</span> <span class="p">=</span> <span class="s">"pass"</span><span class="p">;</span>
+        <span class="k">private</span> <span class="k">readonly</span> <span class="kt">string</span> <span class="n">Inicia</span> <span class="p">=</span> <span class="s">"u_0_2"</span><span class="p">;</span>
+
+        <span class="k">private</span> <span class="n">IWebDriver</span> <span class="n">_driver</span><span class="p">;</span>
+        <span class="k">public</span> <span class="nf">IniciaSesion</span><span class="p">(</span><span class="n">IWebDriver</span> <span class="n">driver</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">_driver</span> <span class="p">=</span> <span class="n">driver</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="k">public</span> <span class="k">void</span> <span class="nf">IngresarCorreoElectronico</span><span class="p">(</span><span class="kt">string</span> <span class="n">correo</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kt">var</span> <span class="n">emailElement</span> <span class="p">=</span> <span class="n">_driver</span><span class="p">.</span><span class="nf">FindElement</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="nf">Id</span><span class="p">(</span><span class="n">Email</span><span class="p">));</span>
+            <span class="n">emailElement</span><span class="p">.</span><span class="nf">SendKeys</span><span class="p">(</span><span class="n">correo</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">public</span> <span class="k">void</span> <span class="nf">IngresarPassword</span><span class="p">(</span><span class="kt">string</span> <span class="n">password</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kt">var</span> <span class="n">passwordElement</span> <span class="p">=</span> <span class="n">_driver</span><span class="p">.</span><span class="nf">FindElement</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="nf">Id</span><span class="p">(</span><span class="n">Password</span><span class="p">));</span>
+            <span class="n">passwordElement</span><span class="p">.</span><span class="nf">SendKeys</span><span class="p">(</span><span class="n">password</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">public</span> <span class="k">void</span> <span class="nf">IniciarSesion</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="kt">var</span> <span class="n">iniciarSesionElement</span> <span class="p">=</span> <span class="n">_driver</span><span class="p">.</span><span class="nf">FindElement</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="nf">Id</span><span class="p">(</span><span class="n">Inicia</span><span class="p">));</span>
+            <span class="n">iniciarSesionElement</span><span class="p">.</span><span class="nf">Click</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre>
+</div>
+
+<div class="language-cs highlighter-rouge">
+<pre class="highlight"><code><span class="k">using</span> <span class="nn">OpenQA.Selenium</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Text</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">Facebook</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">class</span> <span class="nc">Muro</span>
+    <span class="p">{</span>
+        <span class="k">private</span> <span class="k">readonly</span> <span class="kt">string</span> <span class="n">Nombre</span> <span class="p">=</span> <span class="s">"div.linkWrap.noCount"</span><span class="p">;</span>
+        <span class="k">private</span> <span class="n">IWebDriver</span> <span class="n">_driver</span><span class="p">;</span>
+        <span class="k">public</span> <span class="nf">Muro</span><span class="p">(</span><span class="n">IWebDriver</span> <span class="n">driver</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">_driver</span> <span class="p">=</span> <span class="n">driver</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">public</span> <span class="kt">string</span> <span class="nf">GetNombre</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="kt">var</span> <span class="n">NombreElement</span> <span class="p">=</span> <span class="n">_driver</span><span class="p">.</span><span class="nf">FindElement</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="nf">CssSelector</span><span class="p">(</span><span class="n">Nombre</span><span class="p">));</span>
+            <span class="k">return</span> <span class="n">NombreElement</span><span class="p">.</span><span class="n">Text</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+</div>
 
 <h3 id="las-pruebas">Las pruebas</h3>
+<p>El segundo projecto ejectua pruebas unitarias sobre el primer proyecto. Para ello se utiliza el framework <a href="https://xunit.github.io/">xunit.net</a> 
+esta clase en un proyecto .</p>
+
+<div class="language-cs highlighter-rouge">
+<pre class="highlight"><code><span class="k">using</span> <span class="nn">Facebook</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">OpenQA.Selenium</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">OpenQA.Selenium.Chrome</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">OpenQA.Selenium.Firefox</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Xunit</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.IO</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">FacebookTest</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">class</span> <span class="nc">IniciaSesionTest</span> <span class="p">:</span> <span class="n">IDisposable</span>
+    <span class="p">{</span>
+        <span class="k">private</span> <span class="n">IWebDriver</span> <span class="n">_driver</span><span class="p">;</span>
+        <span class="k">public</span> <span class="nf">IniciaSesionTest</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="n">_driver</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">ChromeDriver</span><span class="p">(</span><span class="n">Directory</span><span class="p">.</span><span class="nf">GetCurrentDirectory</span><span class="p">());</span>
+            <span class="c1">//_driver = new FirefoxDriver(Directory.GetCurrentDirectory());
+</span>            <span class="n">_driver</span><span class="p">.</span><span class="nf">Navigate</span><span class="p">().</span><span class="nf">GoToUrl</span><span class="p">(</span><span class="s">"https://www.facebook.com/"</span><span class="p">);</span>
+            <span class="n">_driver</span><span class="p">.</span><span class="nf">Manage</span><span class="p">().</span><span class="n">Window</span><span class="p">.</span><span class="nf">Maximize</span><span class="p">();</span>
+        <span class="p">}</span>
+        <span class="k">public</span> <span class="k">void</span> <span class="nf">Dispose</span><span class="p">()</span>
+        <span class="p">{</span>
+          <span class="c1">// _driver.Close();
+</span>        <span class="p">}</span>
+        <span class="p">[</span><span class="n">Fact</span><span class="p">]</span>
+        <span class="k">public</span> <span class="k">void</span> <span class="nf">Login</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="n">IniciaSesion</span> <span class="n">login</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">IniciaSesion</span><span class="p">(</span><span class="n">_driver</span><span class="p">);</span>
+            <span class="n">login</span><span class="p">.</span><span class="nf">IngresarCorreoElectronico</span><span class="p">(</span><span class="s">""</span><span class="p">);</span>
+            <span class="n">login</span><span class="p">.</span><span class="nf">IngresarPassword</span><span class="p">(</span><span class="s">""</span><span class="p">);</span>
+            <span class="n">login</span><span class="p">.</span><span class="nf">IniciarSesion</span><span class="p">();</span>
+            <span class="kt">var</span> <span class="n">muro</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Muro</span><span class="p">(</span><span class="n">_driver</span><span class="p">);</span>
+            <span class="n">Assert</span><span class="p">.</span><span class="nf">Equal</span><span class="p">(</span><span class="s">"Benjamin Camacho"</span><span class="p">,</span><span class="n">muro</span><span class="p">.</span><span class="nf">GetNombre</span><span class="p">());</span>
+        <span class="p">}</span>
+        <span class="p">[</span><span class="n">Theory</span><span class="p">]</span>
+        <span class="p">[</span><span class="nf">InlineData</span><span class="p">(</span><span class="s">"usuario"</span><span class="p">,</span> <span class="s">"password1"</span><span class="p">)]</span>
+        <span class="p">[</span><span class="nf">InlineData</span><span class="p">(</span><span class="s">"usuario2"</span><span class="p">,</span> <span class="s">"password2"</span><span class="p">)]</span>
+        <span class="k">public</span> <span class="k">void</span> <span class="nf">FailedLogin</span><span class="p">(</span><span class="kt">string</span> <span class="n">usuario</span><span class="p">,</span> <span class="kt">string</span> <span class="n">contrase</span><span class="err">ñ</span><span class="n">a</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">IniciaSesion</span> <span class="n">login</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">IniciaSesion</span><span class="p">(</span><span class="n">_driver</span><span class="p">);</span>
+            <span class="n">login</span><span class="p">.</span><span class="nf">IngresarCorreoElectronico</span><span class="p">(</span><span class="n">usuario</span><span class="p">);</span>
+            <span class="n">login</span><span class="p">.</span><span class="nf">IngresarPassword</span><span class="p">(</span><span class="n">contrase</span><span class="err">ñ</span><span class="n">a</span><span class="p">);</span>
+            <span class="n">login</span><span class="p">.</span><span class="nf">IniciarSesion</span><span class="p">();</span>
+            <span class="kt">var</span> <span class="n">error</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">ErrorLogin</span><span class="p">(</span><span class="n">_driver</span><span class="p">);</span>
+            <span class="n">Assert</span><span class="p">.</span><span class="nf">Equal</span><span class="p">(</span><span class="s">"Iniciar sesión en Facebook | Facebook"</span><span class="p">,</span> <span class="n">error</span><span class="p">.</span><span class="nf">GetMensajeError</span><span class="p">());</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+</code></pre>
+</div>
 
 <h2 id="ejecucion">Ejecucion</h2>
 
+<p>Para ejecutar desde la linea de comandos puedes usar <code class="highlighter-rouge">dotnet test</code> o <code class="highlighter-rouge">dotnet xunit</code></p>
+
+<p>Para ejecutar con Visual Studio abre el abre  <em>Menu Pruebas  &gt; Ventanas  &gt; Explorador De Pruebas</em></p>
+
+<p><img src="http://0.0.0.0:8080/img/vs2017.PNG" alt="Visual Studio 2017." title="Ejecucion de pruebas unitarias."></p>
+
 <h2 id="para-llevar">Para llevar.</h2>
 
-<p>Puedes encontrar el código fuentes en el repositorio ()[]</p>
+<p>Puedes encontrar el código fuentes en el (repositorio del blog)[https://github.com/jahbenjah/CodigoBlog].</p>
 
   </div>
 <a class="u-url" href="/c%23/selenium/testing/xunit/dotnet/2018/07/30/automatizando-el-navegador.html" hidden></a>

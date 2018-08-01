@@ -7,6 +7,7 @@ categories: C# selenium testing xunit dotnet
 ---
 
 
+
 ![Controlando un titere.]({{"/img/blurred-background-dolls-fashion-935019.jpg" | absolute_url }} "Metofora de automatizacón")
 > "Selenium es un conjunto de herramientas para automatizar navegadores web  atraves de multiples plataformas.
   ...Selenium puede ser controlado por multiples lenguajes de progrmacion y frameworks de pruebas."  
@@ -14,43 +15,73 @@ categories: C# selenium testing xunit dotnet
 
 Todas la tareas repetitivas se tien
 ## 
-Este artículo representa una guía paso a paso para automatizar el inicio de sesion de Facebok usando Selenuim , xunit.net . 
-Se asume que tienes instalado el SDK de .NET Core y el editor de código Visual Studio Code.
+Este artículo representa una guía paso a paso para automatizar el inicio de sesion de Facebok usando C#, Selenuim , xunit.net . 
+Se asume que tienes instalado el SDK de .NET Core y el editor de código Visual Studio Code o Visual Studio 2017.
 
-Se creará el proyecto usando la linea de comandos para .NET Core. El proyecto puede ejecutarse en Visual Studio.
+Se creará el proyecto usando la linea de comandos para .NET Core. El proyecto puede ejecutarse en Visual Studio 2017.
 
-## Preparando el proyecto en Visual Studio Code
+## Preparando el proyecto .NET Core con _dotnet_ CLI.
 Para realizarlo ejecuta en la terminal o consola los siguientes comandos. Ejecuta línea por línea ya que se colocarón más de 
 un comando por descripción.
 1. Se creará una solución llamada AutomatizarNavegador y dos proyectos de consola, el primero llamado Facebook y el 
-segundo proyecto  FacebookTest.
+el nombre del segundo proyecto es FacebookTest.
 ```sh
-  dotnet new sln -o AutomatizarNavegador
-  dotnet new console -o AutomatizarNavegador/Facebook
-  dotnet new xunit -o AutomatizarNavegador/FacebookTest
+dotnet new sln -o AutomatizarNavegador
+dotnet new console -o AutomatizarNavegador/Facebook
+dotnet new xunit -o AutomatizarNavegador/FacebookTest
 ```
-2 .Agregar los proyectos a la solución,
+2 .EJecutar el comando `cd AutomatizarNavegador` para abrir la carpeta  del proyecto. Agregar los proyectos a la solución mediante los siguientes comandos.
 ```sh
-  dotnet sln AutomatizarNavegador/AutomatizarNavegador.sln add AutomatizarNavegador/Facebook/Facebook.csproj
-  dotnet sln AutomatizarNavegador/AutomatizarNavegador.sln add AutomatizarNavegador/FacebookTest/FacebookTest.csproj
+dotnet sln add Facebook/Facebook.csproj
+dotnet sln add FacebookTest/FacebookTest.csproj
 ```
-3. Agregar los paquetes de nuget al proyecto Facebook.
+3. Abrir la carpeta el proyecto Facebook y agregar el paquete `Selenium.WebDriver` al proyecto Facebook. Este paquete define un conjunto de interfaces que permiten controlar el Navegador.
+Existen diferentes que han proveedores que han implementado el WenDrive de Selenium como son: Chrome, Firefox, Internet Explorer, Safari Opera entre otros. 
 ```sh
-   dotnet add AutomatizarNavegador\Facebook\Facebook.csproj package Selenium.WebDriver
+cd Facebok
+dotnet add package Selenium.WebDriver
 ```
-4. El proyecto FacebookTest tendra una referencia al proyecto Facebook para poder utilizarlo.
+4. Abrir el proyecto FacebookTest para agregar referencias. Este proyecto necesita una referencia al proyecto Facebook y referencias a las diferentes implementacion del WebDrive.
+El web driver es un ejecutable. En nuestro caso solo agregamos soporte para Firefox y Chrome.
 ```sh
-  dotnet add AutomatizarNavegador\FacebookTest\FacebookTest.csproj reference AutomatizarNavegador\Facebook\Facebook.csproj
-  dotnet add AutomatizarNavegador\FacebookTest\FacebookTest.csproj package Selenium.Firefox.WebDriver
-  dotnet add AutomatizarNavegador\FacebookTest\FacebookTest.csproj package Selenium.Chrome.WebDriver
+cd ..\FacebookTest
+dotnet add reference ..\Facebook\Facebook.csproj
+dotnet add package Selenium.Firefox.WebDriver
+dotnet add package Selenium.Chrome.WebDriver
 ```
+5. Con esto el proyecto esta listo para escribir el codigo. Puedes utilizar Visual Studio Code o Visual Studio 2017. Abajo se muestra la estructura de las carpetas.
+```sh
+|   AutomatizarNavegador.sln
+|   
+----Facebook
+|   |   Facebook.csproj
+|   |   Program.cs
+|   |   
+|   ----obj
+|           Facebook.csproj.nuget.cache
+|           Facebook.csproj.nuget.g.props
+|           Facebook.csproj.nuget.g.targets
+|           project.assets.json
+|           
+---FacebookTest
+    |   FacebookTest.csproj
+    |   UnitTest1.cs
+    |   
+    ----obj
+            FacebookTest.csproj.nuget.cache
+            FacebookTest.csproj.nuget.g.props
+            FacebookTest.csproj.nuget.g.targets
+            project.assets.json
+```           
 
 ## El codigo. 
 
 
-### Page Object
-El primero con clases que tienes como única función proporcionar la funcinalidad para 
-manipular los controles del la pagina de inciio de sesion de Facebook. Esta clase intenta seguir el patrón de diseño 
+### _Page Object_ del inicio de sesion de Facebok
+El primero proyecto tiene como única función proporcionar la funcinalidad para manipular los controles del la página de incio de sesión de Facebook.Es decir permite ingresar el usuario,
+contraseña y presionar el boton iniciar sesión. Contiene 3 constantes de solo lectura que permiten identificar 
+
+Esta clase intenta seguir el patrón de diseño 
 [Page Object](https://martinfowler.com/bliki/PageObject.html) descrito por @martinfowler y popularizado por @selenium.
 
 ```cs
@@ -181,4 +212,4 @@ Para ejecutar con Visual Studio abre el abre  _Menu Pruebas  > Ventanas  > Explo
 
 ## Para llevar.
 
-Puedes encontrar el código fuentes en el repositorio ()[]
+Puedes encontrar el código fuentes en el (repositorio del blog)[https://github.com/jahbenjah/CodigoBlog].

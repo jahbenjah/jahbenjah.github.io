@@ -6,31 +6,30 @@ comments: true
 categories: C# selenium testing xunit dotnet 
 ---
 
+Automatiza todas las tares repetitivas que realizas en el navegador usando C# y Selenium; 
+Aquí te mostramos como automatizar el inicio de sesión de Facebook.
 
-
-![Controlando un titere.]({{"/img/blurred-background-dolls-fashion-935019.jpg" | absolute_url }} "Metofora de automatizacón")
-> "Selenium es un conjunto de herramientas para automatizar navegadores web  atraves de multiples plataformas.
-  ...Selenium puede ser controlado por multiples lenguajes de progrmacion y frameworks de pruebas."  
+![Controlando un títere.]({{"/img/blurred-background-dolls-fashion-935019.jpg" | absolute_url }} "Metofora de automatizacón")
+> "Selenium es un conjunto de herramientas para automatizar navegadores web  a tráves de múltiples plataformas.
+  ...Selenium puede ser controlado por múltiples lenguajes de programación y frameworks de pruebas."  
 <cite>[SeleniumHQ]()</cite>
 
-Todas la tareas repetitivas se tien
-## 
-Este artículo representa una guía paso a paso para automatizar el inicio de sesion de Facebok usando C#, Selenuim , xunit.net . 
-Se asume que tienes instalado el SDK de .NET Core y el editor de código Visual Studio Code o Visual Studio 2017.
 
-Se creará el proyecto usando la linea de comandos para .NET Core. El proyecto puede ejecutarse en Visual Studio 2017.
+ 
+Este artículo representa una guía paso a paso para automatizar el inicio de sesión de Facebok usando C#, Selenuim, xunit.net. 
+Se asume que tienes instalado el SDK de .NET Core y el editor de código Visual Studio Code o Visual Studio 2017.
+Se creará el proyecto usando la línea de comandos para .NET Core. El proyecto puede ejecutarse en Visual Studio 2017.
 
 ## Preparando el proyecto .NET Core con _dotnet_ CLI.
-Para realizarlo ejecuta en la terminal o consola los siguientes comandos. Ejecuta línea por línea ya que se colocarón más de 
+Para realizarlo ejecuta en la terminal o consola los siguientes comandos. Ejecuta línea por línea ya que se colocaron más de 
 un comando por descripción.
-1. Se creará una solución llamada AutomatizarNavegador y dos proyectos de consola, el primero llamado Facebook y el 
-el nombre del segundo proyecto es FacebookTest.
+1. Se creará una solución llamada AutomatizarNavegador y dos proyectos de consola, el primero llamado Facebook y el nombre del segundo proyecto es FacebookTest.
 ```sh
 dotnet new sln -o AutomatizarNavegador
 dotnet new console -o AutomatizarNavegador/Facebook
 dotnet new xunit -o AutomatizarNavegador/FacebookTest
 ```
-2 .EJecutar el comando `cd AutomatizarNavegador` para abrir la carpeta  del proyecto. Agregar los proyectos a la solución mediante los siguientes comandos.
+2 .Ejecutar el comando `cd AutomatizarNavegador` para abrir la carpeta  del proyecto. Agregar los proyectos a la solución mediante los siguientes comandos.
 ```sh
 dotnet sln add Facebook/Facebook.csproj
 dotnet sln add FacebookTest/FacebookTest.csproj
@@ -74,15 +73,23 @@ dotnet add package Selenium.Chrome.WebDriver
             project.assets.json
 ```           
 
-## El codigo. 
+## El código. 
+Se compone de dos proyectos uno de consola y otro de pruebas unitarias con xunit. Aunque aquí utilizamos .NET Core y xunit.net 
+es posible utilizar el .NET Framework y cualquier otro framework de pruebas (NUnit , MS Test).
 
-
-### _Page Object_ del inicio de sesion de Facebok
-El primero proyecto tiene como única función proporcionar la funcinalidad para manipular los controles del la página de incio de sesión de Facebook.Es decir permite ingresar el usuario,
-contraseña y presionar el boton iniciar sesión. Contiene 3 constantes de solo lectura que permiten identificar 
+### _Page Object_ del inicio de sesión de Facebok
+El primero proyecto tiene como única función que es proporcionar la funcionalidad para manipular los controles de la página de incio de sesión de Facebook.
+Es decir permite ingresar el usuario, contraseña y presionar el botón iniciar sesión. 
 
 Esta clase intenta seguir el patrón de diseño 
 [Page Object](https://martinfowler.com/bliki/PageObject.html) descrito por @martinfowler y popularizado por @selenium.
+
+La clase _IniciaSesion_ contiene 3 constantes de solo lectura que permiten identificar los elementos _HTML_ de la página.. 
+Puedes obtenerlos mediante las herramientas para desarrollador del navegdor.
+
+![Herramientas de desarrollador.]({{"/img/InspecionarFacebook.PNG" | absolute_url }} "Herramientas de desarrador Firefox")
+
+El constructor requiere un objeto del tipo `IWebDriver` lo que permite ejecutar las pruebas en diferentes Navegadores
 
 ```cs
 using OpenQA.Selenium;
@@ -150,6 +157,11 @@ namespace Facebook
 ### Las pruebas 
 El segundo projecto ejectua pruebas unitarias sobre el primer proyecto. Para ello se utiliza el framework [xunit.net](https://xunit.github.io/) 
 esta clase en un proyecto . 
+El contructor de la clase se ejecuta al inicio de cada prueb e inicializa  una instancia particula del IWebDriver (FirefoxDriver o ChromeDriver)
+La clase IniciaSesionTest implementa la interfaz IDisposable para ejecutar el método Dispose al final de cada prueba.
+
+El metodo login tiene el atributo Fact que lo identifica como una prueba. 
+Requiere que edites y coloques tuusuario, contraseña y Nombre de Facebook para que la pueba pase de forma satisfactoria
 
 ```cs
 using Facebook;
@@ -204,12 +216,15 @@ namespace FacebookTest
 
 ## Ejecucion 
 
-Para ejecutar desde la linea de comandos puedes usar `dotnet test` o `dotnet xunit`
+Para ejecutar desde la linea de comandos puedes usar `dotnet test` o `dotnet xunit` desde la carpeta de _FacebookTest_.
 
-Para ejecutar con Visual Studio abre el abre  _Menu Pruebas  > Ventanas  > Explorador De Pruebas_
+Para ejecutar con Visual Studio abre la solución  AutomatizarNavegador.sln.
+Posteriorment el abre  _Menu Pruebas  > Ventanas  > Explorador De Pruebas_ y selecciona ejecutar todas las pruebas.
 
 ![Visual Studio 2017.]({{"/img/vs2017.PNG" | absolute_url }} "Ejecucion de pruebas unitarias.")
 
 ## Para llevar.
 
-Puedes encontrar el código fuentes en el (repositorio del blog)[https://github.com/jahbenjah/CodigoBlog].
+* Puedes encontrar el código fuente en el [repositorio del blog](https://github.com/jahbenjah/CodigoBlog).
+* Revisa la documentación de la funcionalidad de [Headless Chrome](https://developers.google.com/web/updates/2017/04/headless-chrome)
+* Revisa el para que sirve [Katalon Recorder](https://chrome.google.com/webstore/detail/katalon-recorder-selenium/ljdobmomdgdljniojadhoplhkpialdid)

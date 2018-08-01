@@ -1,29 +1,28 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.1">Jekyll</generator><link href="http://0.0.0.0:8080/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:8080/" rel="alternate" type="text/html" /><updated>2018-08-01T04:11:31+00:00</updated><id>http://0.0.0.0:8080/</id><title type="html">Programación con C#</title><subtitle>En este sitio encontraras articiulos sobre programación usando C# .</subtitle><entry><title type="html">Automatizando el Navegador con C# y Selenium.</title><link href="http://0.0.0.0:8080/c%23/selenium/testing/xunit/dotnet/2018/07/30/automatizando-el-navegador.html" rel="alternate" type="text/html" title="Automatizando el Navegador con C# y Selenium." /><published>2018-07-30T22:30:55+00:00</published><updated>2018-07-30T22:30:55+00:00</updated><id>http://0.0.0.0:8080/c%23/selenium/testing/xunit/dotnet/2018/07/30/automatizando-el-navegador</id><content type="html" xml:base="http://0.0.0.0:8080/c%23/selenium/testing/xunit/dotnet/2018/07/30/automatizando-el-navegador.html">&lt;p&gt;&lt;img src=&quot;http://0.0.0.0:8080/img/blurred-background-dolls-fashion-935019.jpg&quot; alt=&quot;Controlando un titere.&quot; title=&quot;Metofora de automatizacón&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.1">Jekyll</generator><link href="http://0.0.0.0:8080/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:8080/" rel="alternate" type="text/html" /><updated>2018-08-01T20:04:10+00:00</updated><id>http://0.0.0.0:8080/</id><title type="html">Programación con C#</title><subtitle>En este sitio encontraras articiulos sobre programación usando C# .</subtitle><entry><title type="html">Automatizando el Navegador con C# y Selenium.</title><link href="http://0.0.0.0:8080/c%23/selenium/testing/xunit/dotnet/2018/07/30/automatizando-el-navegador.html" rel="alternate" type="text/html" title="Automatizando el Navegador con C# y Selenium." /><published>2018-07-30T22:30:55+00:00</published><updated>2018-07-30T22:30:55+00:00</updated><id>http://0.0.0.0:8080/c%23/selenium/testing/xunit/dotnet/2018/07/30/automatizando-el-navegador</id><content type="html" xml:base="http://0.0.0.0:8080/c%23/selenium/testing/xunit/dotnet/2018/07/30/automatizando-el-navegador.html">&lt;p&gt;Automatiza todas las tares repetitivas que realizas en el navegador usando C# y Selenium; 
+Aquí te mostramos como automatizar el inicio de sesión de Facebook.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://0.0.0.0:8080/img/blurred-background-dolls-fashion-935019.jpg&quot; alt=&quot;Controlando un títere.&quot; title=&quot;Metofora de automatizacón&quot; /&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-  &lt;p&gt;“Selenium es un conjunto de herramientas para automatizar navegadores web  atraves de multiples plataformas.
-  …Selenium puede ser controlado por multiples lenguajes de progrmacion y frameworks de pruebas.”&lt;br /&gt;
+  &lt;p&gt;“Selenium es un conjunto de herramientas para automatizar navegadores web  a tráves de múltiples plataformas.
+  …Selenium puede ser controlado por múltiples lenguajes de programación y frameworks de pruebas.”&lt;br /&gt;
 &lt;cite&gt;&lt;a href=&quot;&quot;&gt;SeleniumHQ&lt;/a&gt;&lt;/cite&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Todas la tareas repetitivas se tien
-## 
-Este artículo representa una guía paso a paso para automatizar el inicio de sesion de Facebok usando C#, Selenuim , xunit.net . 
-Se asume que tienes instalado el SDK de .NET Core y el editor de código Visual Studio Code o Visual Studio 2017.&lt;/p&gt;
-
-&lt;p&gt;Se creará el proyecto usando la linea de comandos para .NET Core. El proyecto puede ejecutarse en Visual Studio 2017.&lt;/p&gt;
+&lt;p&gt;Este artículo representa una guía paso a paso para automatizar el inicio de sesión de Facebok usando C#, Selenuim, xunit.net. 
+Se asume que tienes instalado el SDK de .NET Core y el editor de código Visual Studio Code o Visual Studio 2017.
+Se creará el proyecto usando la línea de comandos para .NET Core. El proyecto puede ejecutarse en Visual Studio 2017.&lt;/p&gt;
 
 &lt;h2 id=&quot;preparando-el-proyecto-net-core-con-dotnet-cli&quot;&gt;Preparando el proyecto .NET Core con &lt;em&gt;dotnet&lt;/em&gt; CLI.&lt;/h2&gt;
-&lt;p&gt;Para realizarlo ejecuta en la terminal o consola los siguientes comandos. Ejecuta línea por línea ya que se colocarón más de 
+&lt;p&gt;Para realizarlo ejecuta en la terminal o consola los siguientes comandos. Ejecuta línea por línea ya que se colocaron más de 
 un comando por descripción.&lt;/p&gt;
 &lt;ol&gt;
-  &lt;li&gt;Se creará una solución llamada AutomatizarNavegador y dos proyectos de consola, el primero llamado Facebook y el 
-el nombre del segundo proyecto es FacebookTest.
+  &lt;li&gt;Se creará una solución llamada AutomatizarNavegador y dos proyectos de consola, el primero llamado Facebook y el nombre del segundo proyecto es FacebookTest.
     &lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;dotnet new sln -o AutomatizarNavegador
 dotnet new console -o AutomatizarNavegador/Facebook
 dotnet new xunit -o AutomatizarNavegador/FacebookTest
 &lt;/code&gt;&lt;/pre&gt;
     &lt;/div&gt;
-    &lt;p&gt;2 .EJecutar el comando &lt;code class=&quot;highlighter-rouge&quot;&gt;cd AutomatizarNavegador&lt;/code&gt; para abrir la carpeta  del proyecto. Agregar los proyectos a la solución mediante los siguientes comandos.&lt;/p&gt;
+    &lt;p&gt;2 .Ejecutar el comando &lt;code class=&quot;highlighter-rouge&quot;&gt;cd AutomatizarNavegador&lt;/code&gt; para abrir la carpeta  del proyecto. Agregar los proyectos a la solución mediante los siguientes comandos.&lt;/p&gt;
     &lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;dotnet sln add Facebook/Facebook.csproj
 dotnet sln add FacebookTest/FacebookTest.csproj
 &lt;/code&gt;&lt;/pre&gt;
@@ -72,14 +71,23 @@ dotnet add package Selenium.Chrome.WebDriver
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&quot;el-codigo&quot;&gt;El codigo.&lt;/h2&gt;
+&lt;h2 id=&quot;el-código&quot;&gt;El código.&lt;/h2&gt;
+&lt;p&gt;Se compone de dos proyectos uno de consola y otro de pruebas unitarias con xunit. Aunque aquí utilizamos .NET Core y xunit.net 
+es posible utilizar el .NET Framework y cualquier otro framework de pruebas (NUnit , MS Test).&lt;/p&gt;
 
-&lt;h3 id=&quot;page-object-del-inicio-de-sesion-de-facebok&quot;&gt;&lt;em&gt;Page Object&lt;/em&gt; del inicio de sesion de Facebok&lt;/h3&gt;
-&lt;p&gt;El primero proyecto tiene como única función proporcionar la funcinalidad para manipular los controles del la página de incio de sesión de Facebook.Es decir permite ingresar el usuario,
-contraseña y presionar el boton iniciar sesión. Contiene 3 constantes de solo lectura que permiten identificar&lt;/p&gt;
+&lt;h3 id=&quot;page-object-del-inicio-de-sesión-de-facebok&quot;&gt;&lt;em&gt;Page Object&lt;/em&gt; del inicio de sesión de Facebok&lt;/h3&gt;
+&lt;p&gt;El primero proyecto tiene como única función que es proporcionar la funcionalidad para manipular los controles de la página de incio de sesión de Facebook.
+Es decir permite ingresar el usuario, contraseña y presionar el botón iniciar sesión.&lt;/p&gt;
 
 &lt;p&gt;Esta clase intenta seguir el patrón de diseño 
 &lt;a href=&quot;https://martinfowler.com/bliki/PageObject.html&quot;&gt;Page Object&lt;/a&gt; descrito por @martinfowler y popularizado por @selenium.&lt;/p&gt;
+
+&lt;p&gt;La clase &lt;em&gt;IniciaSesion&lt;/em&gt; contiene 3 constantes de solo lectura que permiten identificar los elementos &lt;em&gt;HTML&lt;/em&gt; de la página.. 
+Puedes obtenerlos mediante las herramientas para desarrollador del navegdor.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://0.0.0.0:8080/img/InspecionarFacebook.PNG&quot; alt=&quot;Herramientas de desarrollador.&quot; title=&quot;Herramientas de desarrador Firefox&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;El constructor requiere un objeto del tipo &lt;code class=&quot;highlighter-rouge&quot;&gt;IWebDriver&lt;/code&gt; lo que permite ejecutar las pruebas en diferentes Navegadores&lt;/p&gt;
 
 &lt;div class=&quot;language-cs highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;OpenQA.Selenium&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -146,7 +154,12 @@ contraseña y presionar el boton iniciar sesión. Contiene 3 constantes de solo 
 
 &lt;h3 id=&quot;las-pruebas&quot;&gt;Las pruebas&lt;/h3&gt;
 &lt;p&gt;El segundo projecto ejectua pruebas unitarias sobre el primer proyecto. Para ello se utiliza el framework &lt;a href=&quot;https://xunit.github.io/&quot;&gt;xunit.net&lt;/a&gt; 
-esta clase en un proyecto .&lt;/p&gt;
+esta clase en un proyecto . 
+El contructor de la clase se ejecuta al inicio de cada prueb e inicializa  una instancia particula del IWebDriver (FirefoxDriver o ChromeDriver)
+La clase IniciaSesionTest implementa la interfaz IDisposable para ejecutar el método Dispose al final de cada prueba.&lt;/p&gt;
+
+&lt;p&gt;El metodo login tiene el atributo Fact que lo identifica como una prueba. 
+Requiere que edites y coloques tuusuario, contraseña y Nombre de Facebook para que la pueba pase de forma satisfactoria&lt;/p&gt;
 
 &lt;div class=&quot;language-cs highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Facebook&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;OpenQA.Selenium&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -201,15 +214,20 @@ esta clase en un proyecto .&lt;/p&gt;
 
 &lt;h2 id=&quot;ejecucion&quot;&gt;Ejecucion&lt;/h2&gt;
 
-&lt;p&gt;Para ejecutar desde la linea de comandos puedes usar &lt;code class=&quot;highlighter-rouge&quot;&gt;dotnet test&lt;/code&gt; o &lt;code class=&quot;highlighter-rouge&quot;&gt;dotnet xunit&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Para ejecutar desde la linea de comandos puedes usar &lt;code class=&quot;highlighter-rouge&quot;&gt;dotnet test&lt;/code&gt; o &lt;code class=&quot;highlighter-rouge&quot;&gt;dotnet xunit&lt;/code&gt; desde la carpeta de &lt;em&gt;FacebookTest&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;Para ejecutar con Visual Studio abre el abre  &lt;em&gt;Menu Pruebas  &amp;gt; Ventanas  &amp;gt; Explorador De Pruebas&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Para ejecutar con Visual Studio abre la solución  AutomatizarNavegador.sln.
+Posteriorment el abre  &lt;em&gt;Menu Pruebas  &amp;gt; Ventanas  &amp;gt; Explorador De Pruebas&lt;/em&gt; y selecciona ejecutar todas las pruebas.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://0.0.0.0:8080/img/vs2017.PNG&quot; alt=&quot;Visual Studio 2017.&quot; title=&quot;Ejecucion de pruebas unitarias.&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;para-llevar&quot;&gt;Para llevar.&lt;/h2&gt;
 
-&lt;p&gt;Puedes encontrar el código fuentes en el (repositorio del blog)[https://github.com/jahbenjah/CodigoBlog].&lt;/p&gt;</content><author><name></name></author><summary type="html">“Selenium es un conjunto de herramientas para automatizar navegadores web atraves de multiples plataformas. …Selenium puede ser controlado por multiples lenguajes de progrmacion y frameworks de pruebas.” SeleniumHQ</summary></entry><entry><title type="html">Enviar un correo con C# y Gmail.</title><link href="http://0.0.0.0:8080/.net/smtp/smptclient/dotnet/2018/07/22/enviar-un-correo-con-csharp-gmail.html" rel="alternate" type="text/html" title="Enviar un correo con C# y Gmail." /><published>2018-07-22T12:30:55+00:00</published><updated>2018-07-22T12:30:55+00:00</updated><id>http://0.0.0.0:8080/.net/smtp/smptclient/dotnet/2018/07/22/enviar-un-correo-con-csharp-gmail</id><content type="html" xml:base="http://0.0.0.0:8080/.net/smtp/smptclient/dotnet/2018/07/22/enviar-un-correo-con-csharp-gmail.html">&lt;p&gt;En el desarrollo de software empresarial enviar correos electrónicos es un requerimiento muy frecuente y en este tutorial te mostramos como hacerlo usando C#, .Net Core 2.0  y Visual Studio Code.
+&lt;ul&gt;
+  &lt;li&gt;Puedes encontrar el código fuente en el &lt;a href=&quot;https://github.com/jahbenjah/CodigoBlog&quot;&gt;repositorio del blog&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Revisa la documentación de la funcionalidad de &lt;a href=&quot;https://developers.google.com/web/updates/2017/04/headless-chrome&quot;&gt;Headless Chrome&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Revisa el para que sirve &lt;a href=&quot;https://chrome.google.com/webstore/detail/katalon-recorder-selenium/ljdobmomdgdljniojadhoplhkpialdid&quot;&gt;Katalon Recorder&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">Automatiza todas las tares repetitivas que realizas en el navegador usando C# y Selenium; Aquí te mostramos como automatizar el inicio de sesión de Facebook.</summary></entry><entry><title type="html">Enviar un correo con C# y Gmail.</title><link href="http://0.0.0.0:8080/.net/smtp/smptclient/dotnet/2018/07/22/enviar-un-correo-con-csharp-gmail.html" rel="alternate" type="text/html" title="Enviar un correo con C# y Gmail." /><published>2018-07-22T12:30:55+00:00</published><updated>2018-07-22T12:30:55+00:00</updated><id>http://0.0.0.0:8080/.net/smtp/smptclient/dotnet/2018/07/22/enviar-un-correo-con-csharp-gmail</id><content type="html" xml:base="http://0.0.0.0:8080/.net/smtp/smptclient/dotnet/2018/07/22/enviar-un-correo-con-csharp-gmail.html">&lt;p&gt;En el desarrollo de software empresarial enviar correos electrónicos es un requerimiento muy frecuente y en este tutorial te mostramos como hacerlo usando C#, .Net Core 2.0  y Visual Studio Code.
 Actualmente existen varias biblioteca para enviar correos como SendGrid o MailKit, sin embargo en este tutorial se utiliza la clase &lt;a href=&quot;https://docs.microsoft.com/en-us/dotnet/api/system.net.mail.smtpclient?view=netframework-4.7.2&quot;&gt;SmtpClient&lt;/a&gt; 
 parte  de .NET Standard 2.0.&lt;/p&gt;
 

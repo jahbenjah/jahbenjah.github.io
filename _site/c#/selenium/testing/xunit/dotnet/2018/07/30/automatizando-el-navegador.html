@@ -7,15 +7,15 @@
 <meta name="generator" content="Jekyll v3.5.1" />
 <meta property="og:title" content="Automatizando el Navegador con C# y Selenium." />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="“Selenium es un conjunto de herramientas para automatizar navegadores web atraves de multiples plataformas. …Selenium puede ser controlado por multiples lenguajes de progrmacion y frameworks de pruebas.” SeleniumHQ" />
-<meta property="og:description" content="“Selenium es un conjunto de herramientas para automatizar navegadores web atraves de multiples plataformas. …Selenium puede ser controlado por multiples lenguajes de progrmacion y frameworks de pruebas.” SeleniumHQ" />
+<meta name="description" content="Automatiza todas las tares repetitivas que realizas en el navegador usando C# y Selenium; Aquí te mostramos como automatizar el inicio de sesión de Facebook." />
+<meta property="og:description" content="Automatiza todas las tares repetitivas que realizas en el navegador usando C# y Selenium; Aquí te mostramos como automatizar el inicio de sesión de Facebook." />
 <link rel="canonical" href="http://0.0.0.0:8080/c%23/selenium/testing/xunit/dotnet/2018/07/30/automatizando-el-navegador.html" />
 <meta property="og:url" content="http://0.0.0.0:8080/c%23/selenium/testing/xunit/dotnet/2018/07/30/automatizando-el-navegador.html" />
 <meta property="og:site_name" content="Programación con C#" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-07-30T22:30:55+00:00" />
 <script type="application/ld+json">
-{"description":"“Selenium es un conjunto de herramientas para automatizar navegadores web atraves de multiples plataformas. …Selenium puede ser controlado por multiples lenguajes de progrmacion y frameworks de pruebas.” SeleniumHQ","@type":"BlogPosting","url":"http://0.0.0.0:8080/c%23/selenium/testing/xunit/dotnet/2018/07/30/automatizando-el-navegador.html","headline":"Automatizando el Navegador con C# y Selenium.","dateModified":"2018-07-30T22:30:55+00:00","datePublished":"2018-07-30T22:30:55+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:8080/c%23/selenium/testing/xunit/dotnet/2018/07/30/automatizando-el-navegador.html"},"@context":"http://schema.org"}</script>
+{"description":"Automatiza todas las tares repetitivas que realizas en el navegador usando C# y Selenium; Aquí te mostramos como automatizar el inicio de sesión de Facebook.","@type":"BlogPosting","url":"http://0.0.0.0:8080/c%23/selenium/testing/xunit/dotnet/2018/07/30/automatizando-el-navegador.html","headline":"Automatizando el Navegador con C# y Selenium.","dateModified":"2018-07-30T22:30:55+00:00","datePublished":"2018-07-30T22:30:55+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:8080/c%23/selenium/testing/xunit/dotnet/2018/07/30/automatizando-el-navegador.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:8080/feed.xml" title="Programación con C#" /></head>
 <body><header class="site-header" role="banner">
@@ -49,33 +49,32 @@
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <p><img src="http://0.0.0.0:8080/img/blurred-background-dolls-fashion-935019.jpg" alt="Controlando un titere." title="Metofora de automatizacón"></p>
+    <p>Automatiza todas las tares repetitivas que realizas en el navegador usando C# y Selenium; 
+Aquí te mostramos como automatizar el inicio de sesión de Facebook.</p>
+
+<p><img src="http://0.0.0.0:8080/img/blurred-background-dolls-fashion-935019.jpg" alt="Controlando un títere." title="Metofora de automatizacón"></p>
 <blockquote>
-  <p>“Selenium es un conjunto de herramientas para automatizar navegadores web  atraves de multiples plataformas.
-  …Selenium puede ser controlado por multiples lenguajes de progrmacion y frameworks de pruebas.”<br>
+  <p>“Selenium es un conjunto de herramientas para automatizar navegadores web  a tráves de múltiples plataformas.
+  …Selenium puede ser controlado por múltiples lenguajes de programación y frameworks de pruebas.”<br>
 <cite><a href="">SeleniumHQ</a></cite></p>
 </blockquote>
 
-<p>Todas la tareas repetitivas se tien
-## 
-Este artículo representa una guía paso a paso para automatizar el inicio de sesion de Facebok usando C#, Selenuim , xunit.net . 
-Se asume que tienes instalado el SDK de .NET Core y el editor de código Visual Studio Code o Visual Studio 2017.</p>
-
-<p>Se creará el proyecto usando la linea de comandos para .NET Core. El proyecto puede ejecutarse en Visual Studio 2017.</p>
+<p>Este artículo representa una guía paso a paso para automatizar el inicio de sesión de Facebok usando C#, Selenuim, xunit.net. 
+Se asume que tienes instalado el SDK de .NET Core y el editor de código Visual Studio Code o Visual Studio 2017.
+Se creará el proyecto usando la línea de comandos para .NET Core. El proyecto puede ejecutarse en Visual Studio 2017.</p>
 
 <h2 id="preparando-el-proyecto-net-core-con-dotnet-cli">Preparando el proyecto .NET Core con <em>dotnet</em> CLI.</h2>
-<p>Para realizarlo ejecuta en la terminal o consola los siguientes comandos. Ejecuta línea por línea ya que se colocarón más de 
+<p>Para realizarlo ejecuta en la terminal o consola los siguientes comandos. Ejecuta línea por línea ya que se colocaron más de 
 un comando por descripción.</p>
 <ol>
-  <li>Se creará una solución llamada AutomatizarNavegador y dos proyectos de consola, el primero llamado Facebook y el 
-el nombre del segundo proyecto es FacebookTest.
+  <li>Se creará una solución llamada AutomatizarNavegador y dos proyectos de consola, el primero llamado Facebook y el nombre del segundo proyecto es FacebookTest.
     <div class="language-sh highlighter-rouge">
 <pre class="highlight"><code>dotnet new sln -o AutomatizarNavegador
 dotnet new console -o AutomatizarNavegador/Facebook
 dotnet new xunit -o AutomatizarNavegador/FacebookTest
 </code></pre>
     </div>
-    <p>2 .EJecutar el comando <code class="highlighter-rouge">cd AutomatizarNavegador</code> para abrir la carpeta  del proyecto. Agregar los proyectos a la solución mediante los siguientes comandos.</p>
+    <p>2 .Ejecutar el comando <code class="highlighter-rouge">cd AutomatizarNavegador</code> para abrir la carpeta  del proyecto. Agregar los proyectos a la solución mediante los siguientes comandos.</p>
     <div class="language-sh highlighter-rouge">
 <pre class="highlight"><code>dotnet sln add Facebook/Facebook.csproj
 dotnet sln add FacebookTest/FacebookTest.csproj
@@ -128,15 +127,24 @@ dotnet add package Selenium.Chrome.WebDriver
   </li>
 </ol>
 
-<h2 id="el-codigo">El codigo.</h2>
+<h2 id="el-código">El código.</h2>
+<p>Se compone de dos proyectos uno de consola y otro de pruebas unitarias con xunit. Aunque aquí utilizamos .NET Core y xunit.net 
+es posible utilizar el .NET Framework y cualquier otro framework de pruebas (NUnit , MS Test).</p>
 
-<h3 id="page-object-del-inicio-de-sesion-de-facebok">
-<em>Page Object</em> del inicio de sesion de Facebok</h3>
-<p>El primero proyecto tiene como única función proporcionar la funcinalidad para manipular los controles del la página de incio de sesión de Facebook.Es decir permite ingresar el usuario,
-contraseña y presionar el boton iniciar sesión. Contiene 3 constantes de solo lectura que permiten identificar</p>
+<h3 id="page-object-del-inicio-de-sesión-de-facebok">
+<em>Page Object</em> del inicio de sesión de Facebok</h3>
+<p>El primero proyecto tiene como única función que es proporcionar la funcionalidad para manipular los controles de la página de incio de sesión de Facebook.
+Es decir permite ingresar el usuario, contraseña y presionar el botón iniciar sesión.</p>
 
 <p>Esta clase intenta seguir el patrón de diseño 
 <a href="https://martinfowler.com/bliki/PageObject.html">Page Object</a> descrito por <a href="https://github.com/martinfowler" class="user-mention">@martinfowler</a> y popularizado por <a href="https://github.com/selenium" class="user-mention">@selenium</a>.</p>
+
+<p>La clase <em>IniciaSesion</em> contiene 3 constantes de solo lectura que permiten identificar los elementos <em>HTML</em> de la página.. 
+Puedes obtenerlos mediante las herramientas para desarrollador del navegdor.</p>
+
+<p><img src="http://0.0.0.0:8080/img/InspecionarFacebook.PNG" alt="Herramientas de desarrollador." title="Herramientas de desarrador Firefox"></p>
+
+<p>El constructor requiere un objeto del tipo <code class="highlighter-rouge">IWebDriver</code> lo que permite ejecutar las pruebas en diferentes Navegadores</p>
 
 <div class="language-cs highlighter-rouge">
 <pre class="highlight"><code><span class="k">using</span> <span class="nn">OpenQA.Selenium</span><span class="p">;</span>
@@ -205,7 +213,12 @@ contraseña y presionar el boton iniciar sesión. Contiene 3 constantes de solo 
 
 <h3 id="las-pruebas">Las pruebas</h3>
 <p>El segundo projecto ejectua pruebas unitarias sobre el primer proyecto. Para ello se utiliza el framework <a href="https://xunit.github.io/">xunit.net</a> 
-esta clase en un proyecto .</p>
+esta clase en un proyecto . 
+El contructor de la clase se ejecuta al inicio de cada prueb e inicializa  una instancia particula del IWebDriver (FirefoxDriver o ChromeDriver)
+La clase IniciaSesionTest implementa la interfaz IDisposable para ejecutar el método Dispose al final de cada prueba.</p>
+
+<p>El metodo login tiene el atributo Fact que lo identifica como una prueba. 
+Requiere que edites y coloques tuusuario, contraseña y Nombre de Facebook para que la pueba pase de forma satisfactoria</p>
 
 <div class="language-cs highlighter-rouge">
 <pre class="highlight"><code><span class="k">using</span> <span class="nn">Facebook</span><span class="p">;</span>
@@ -261,15 +274,22 @@ esta clase en un proyecto .</p>
 
 <h2 id="ejecucion">Ejecucion</h2>
 
-<p>Para ejecutar desde la linea de comandos puedes usar <code class="highlighter-rouge">dotnet test</code> o <code class="highlighter-rouge">dotnet xunit</code></p>
+<p>Para ejecutar desde la linea de comandos puedes usar <code class="highlighter-rouge">dotnet test</code> o <code class="highlighter-rouge">dotnet xunit</code> desde la carpeta de <em>FacebookTest</em>.</p>
 
-<p>Para ejecutar con Visual Studio abre el abre  <em>Menu Pruebas  &gt; Ventanas  &gt; Explorador De Pruebas</em></p>
+<p>Para ejecutar con Visual Studio abre la solución  AutomatizarNavegador.sln.
+Posteriorment el abre  <em>Menu Pruebas  &gt; Ventanas  &gt; Explorador De Pruebas</em> y selecciona ejecutar todas las pruebas.</p>
 
 <p><img src="http://0.0.0.0:8080/img/vs2017.PNG" alt="Visual Studio 2017." title="Ejecucion de pruebas unitarias."></p>
 
 <h2 id="para-llevar">Para llevar.</h2>
 
-<p>Puedes encontrar el código fuentes en el (repositorio del blog)[https://github.com/jahbenjah/CodigoBlog].</p>
+<ul>
+  <li>Puedes encontrar el código fuente en el <a href="https://github.com/jahbenjah/CodigoBlog">repositorio del blog</a>.</li>
+  <li>Revisa la documentación de la funcionalidad de <a href="https://developers.google.com/web/updates/2017/04/headless-chrome">Headless Chrome</a>
+</li>
+  <li>Revisa el para que sirve <a href="https://chrome.google.com/webstore/detail/katalon-recorder-selenium/ljdobmomdgdljniojadhoplhkpialdid">Katalon Recorder</a>
+</li>
+</ul>
 
   </div>
 <a class="u-url" href="/c%23/selenium/testing/xunit/dotnet/2018/07/30/automatizando-el-navegador.html" hidden></a>

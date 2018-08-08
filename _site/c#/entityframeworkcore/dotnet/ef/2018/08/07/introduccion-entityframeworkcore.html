@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Introdución a Entity Framework Core 2.0. | Programación con C#</title>
+<meta name="generator" content="Jekyll v3.5.1" />
+<meta property="og:title" content="Introdución a Entity Framework Core 2.0." />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Entity Framework Core es un ORM multiplataforma de código abierto desarrolado por Microsoft." />
+<meta property="og:description" content="Entity Framework Core es un ORM multiplataforma de código abierto desarrolado por Microsoft." />
+<link rel="canonical" href="http://0.0.0.0:8080/c%23/entityframeworkcore/dotnet/ef/2018/08/07/introduccion-entityframeworkcore.html" />
+<meta property="og:url" content="http://0.0.0.0:8080/c%23/entityframeworkcore/dotnet/ef/2018/08/07/introduccion-entityframeworkcore.html" />
+<meta property="og:site_name" content="Programación con C#" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-08-07T22:30:55+00:00" />
+<script type="application/ld+json">
+{"description":"Entity Framework Core es un ORM multiplataforma de código abierto desarrolado por Microsoft.","@type":"BlogPosting","url":"http://0.0.0.0:8080/c%23/entityframeworkcore/dotnet/ef/2018/08/07/introduccion-entityframeworkcore.html","headline":"Introdución a Entity Framework Core 2.0.","dateModified":"2018-08-07T22:30:55+00:00","datePublished":"2018-08-07T22:30:55+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:8080/c%23/entityframeworkcore/dotnet/ef/2018/08/07/introduccion-entityframeworkcore.html"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:8080/feed.xml" title="Programación con C#" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper">
+<a class="site-title" rel="author" href="/">Programación con C#</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger">
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewbox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"></path>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+<a class="page-link" href="/category/blog.html">Blog</a><a class="page-link" href="/category/smtp.html">SMTP</a>
+</div>
+      </nav>
+</div>
+
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Introdución a Entity Framework Core 2.0.</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2018-08-07T22:30:55+00:00" itemprop="datePublished">Aug 7, 2018
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Entity Framework Core es un ORM multiplataforma de código abierto desarrolado por Microsoft.</p>
+
+<p>El repositorio esta aqui. <a href="https://github.com/aspnet/EntityFrameworkCore"></a></p>
+
+<p>La ultima version es 2.1.1 al momento de escribir este articulo.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Versión</th>
+      <th>Fecha de lanzamiento</th>
+      <th>Anuncia</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2.1</td>
+      <td><a href="https://blogs.msdn.microsoft.com/dotnet/2018/05/30/announcing-entity-framework-core-2-1/">Mayo 2018</a></td>
+      <td><a href="https://github.com/ricklander" class="user-mention">@ricklander</a></td>
+    </tr>
+    <tr>
+      <td>2.0</td>
+      <td><a href="https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-entity-framework-core-2-0/">Agosto 2017</a></td>
+      <td><a href="https://github.com/diegovega" class="user-mention">@diegovega</a></td>
+    </tr>
+    <tr>
+      <td>1.1</td>
+      <td><a href="https://blogs.msdn.microsoft.com/dotnet/2016/11/16/announcing-entity-framework-core-1-1/">Noviembre 2016</a></td>
+      <td><a href="https://github.com/diegovega" class="user-mention">@diegovega</a></td>
+    </tr>
+    <tr>
+      <td>1.0</td>
+      <td><a href="https://blogs.msdn.microsoft.com/dotnet/2016/06/27/entity-framework-core-1-0-0-available/">Junio 2016</a></td>
+      <td><a href="https://github.com/rowanmiiller" class="user-mention">@rowanmiiller</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="principales-componentes">Principales componentes</h1>
+
+<p>DbContext
+DbSet</p>
+
+<h1 id="super-simple-ejemplo">Super Simple Ejemplo</h1>
+
+<p>Descripcion del proyecto</p>
+
+<h2 id="proyecto">Proyecto</h2>
+
+<p>Desc</p>
+
+<ol>
+  <li>Se creara un proyecto de consola.</li>
+</ol>
+
+<div class="language-bash highlighter-rouge">
+<pre class="highlight"><code>dotnet new sln -o IntroEfCore  
+</code></pre>
+</div>
+
+<ol>
+  <li>Abrir la carpeta IntroEFCore cd IntroEFCore y crear un proeycto de consola</li>
+</ol>
+
+<div class="language-bash highlighter-rouge">
+<pre class="highlight"><code>dotnet new console -o EFCoreSimpe
+</code></pre>
+</div>
+
+<ol>
+  <li>Agregar el proyecto a la solución</li>
+</ol>
+
+<div class="language-bash highlighter-rouge">
+<pre class="highlight"><code>dotnet sln add  EFCoreSimpe/EFCoreSimple.csproj
+</code></pre>
+</div>
+
+<ol>
+  <li>Agregar los paquetes de Nuget de entoty framework.</li>
+</ol>
+
+<div class="language-bash highlighter-rouge">
+<pre class="highlight"><code>dotnet add package Microsoft.EntityFrameworkCore
+dotnet add package Microsoft.EntityFrameworkCore.Design
+dotnet add package Microsoft.EntityFrameworkCore.Relational
+</code></pre>
+</div>
+
+<ol>
+  <li>(opcional) Si deseas probar con distintasn bases de datps debes instala Instalar provedores adicionales.</li>
+</ol>
+
+<div class="language-bash highlighter-rouge">
+<pre class="highlight"><code>dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+dotnet add package Pomelo.EntityFrameworkCore.MySql
+dotnet add package Microsoft.EntityFrameworkCore.Sqlite
+dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL
+dotnet add package Microsoft.EntityFrameworkCore.Relational
+</code></pre>
+</div>
+
+<ol>
+  <li>Abrir visual estudio code</li>
+</ol>
+
+<div class="language-bash highlighter-rouge">
+<pre class="highlight"><code> code .
+</code></pre>
+</div>
+
+<ol>
+  <li>Editar el archivo. clase POCO</li>
+</ol>
+
+<div class="language-cs highlighter-rouge">
+<pre class="highlight"><code>    <span class="k">public</span> <span class="k">class</span> <span class="nc">Producto</span>
+    <span class="p">{</span>
+        <span class="c1">//public int PId { get; set; }
+</span>        <span class="k">public</span> <span class="kt">string</span> <span class="n">Nombre</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+        <span class="k">public</span> <span class="kt">bool</span> <span class="n">Disponible</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+        <span class="k">public</span> <span class="kt">int</span> <span class="n">CategoriaId</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+        <span class="k">public</span> <span class="kt">decimal</span> <span class="n">Price</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre>
+</div>
+
+<ol>
+  <li>Agregar DbContext</li>
+</ol>
+
+<div class="language-cs highlighter-rouge">
+<pre class="highlight"><code>   <span class="k">public</span> <span class="k">class</span> <span class="nc">ProductContext</span> <span class="p">:</span> <span class="n">DbContext</span>
+
+    <span class="p">{</span>
+        <span class="k">public</span> <span class="n">DbSet</span><span class="p">&lt;</span><span class="n">Producto</span><span class="p">&gt;</span> <span class="n">Productos</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+        <span class="k">protected</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">OnConfiguring</span><span class="p">(</span><span class="n">DbContextOptionsBuilder</span> <span class="n">optionsBuilder</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">optionsBuilder</span><span class="p">.</span><span class="nf">UseSqlServer</span><span class="p">(</span><span class="s">"Data Source=.;Initial Catalog=EfCoreDb;Integrated Security=True"</span><span class="p">);</span>
+            <span class="k">base</span><span class="p">.</span><span class="nf">OnConfiguring</span><span class="p">(</span><span class="n">optionsBuilder</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre>
+</div>
+
+  </div>
+<a class="u-url" href="/c%23/entityframeworkcore/dotnet/ef/2018/08/07/introduccion-entityframeworkcore.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Programación con C#</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Programación con C#</li>
+<li><a class="u-email" href="mailto:j.benjamin.camacho@gmail.com">j.benjamin.camacho@gmail.com</a></li>
+</ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+<ul class="social-media-list">
+<li><a href="https://github.com/jahbenjah"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">jahbenjah</span></a></li>
+<li><a href="https://www.twitter.com/jbenjamincmcho"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">jbenjamincmcho</span></a></li>
+</ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>En este sitio encontraras articiulos sobre programación usando C# .</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

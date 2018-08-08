@@ -1,4 +1,139 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.1">Jekyll</generator><link href="http://0.0.0.0:8080/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:8080/" rel="alternate" type="text/html" /><updated>2018-08-01T20:04:10+00:00</updated><id>http://0.0.0.0:8080/</id><title type="html">Programación con C#</title><subtitle>En este sitio encontraras articiulos sobre programación usando C# .</subtitle><entry><title type="html">Automatizando el Navegador con C# y Selenium.</title><link href="http://0.0.0.0:8080/c%23/selenium/testing/xunit/dotnet/2018/07/30/automatizando-el-navegador.html" rel="alternate" type="text/html" title="Automatizando el Navegador con C# y Selenium." /><published>2018-07-30T22:30:55+00:00</published><updated>2018-07-30T22:30:55+00:00</updated><id>http://0.0.0.0:8080/c%23/selenium/testing/xunit/dotnet/2018/07/30/automatizando-el-navegador</id><content type="html" xml:base="http://0.0.0.0:8080/c%23/selenium/testing/xunit/dotnet/2018/07/30/automatizando-el-navegador.html">&lt;p&gt;Automatiza todas las tares repetitivas que realizas en el navegador usando C# y Selenium; 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.1">Jekyll</generator><link href="http://0.0.0.0:8080/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:8080/" rel="alternate" type="text/html" /><updated>2018-08-08T04:32:06+00:00</updated><id>http://0.0.0.0:8080/</id><title type="html">Programación con C#</title><subtitle>En este sitio encontraras articiulos sobre programación usando C# .</subtitle><entry><title type="html">Introdución a Entity Framework Core 2.0.</title><link href="http://0.0.0.0:8080/c%23/entityframeworkcore/dotnet/ef/2018/08/07/introduccion-entityframeworkcore.html" rel="alternate" type="text/html" title="Introdución a Entity Framework Core 2.0." /><published>2018-08-07T22:30:55+00:00</published><updated>2018-08-07T22:30:55+00:00</updated><id>http://0.0.0.0:8080/c%23/entityframeworkcore/dotnet/ef/2018/08/07/introduccion-entityframeworkcore</id><content type="html" xml:base="http://0.0.0.0:8080/c%23/entityframeworkcore/dotnet/ef/2018/08/07/introduccion-entityframeworkcore.html">&lt;p&gt;Entity Framework Core es un ORM multiplataforma de código abierto desarrolado por Microsoft.&lt;/p&gt;
+
+&lt;p&gt;El repositorio esta aqui. &lt;a href=&quot;https://github.com/aspnet/EntityFrameworkCore&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;La ultima version es 2.1.1 al momento de escribir este articulo.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Versión&lt;/th&gt;
+      &lt;th&gt;Fecha de lanzamiento&lt;/th&gt;
+      &lt;th&gt;Anuncia&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2.1&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://blogs.msdn.microsoft.com/dotnet/2018/05/30/announcing-entity-framework-core-2-1/&quot;&gt;Mayo 2018&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;@ricklander&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2.0&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-entity-framework-core-2-0/&quot;&gt;Agosto 2017&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;@diegovega&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1.1&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://blogs.msdn.microsoft.com/dotnet/2016/11/16/announcing-entity-framework-core-1-1/&quot;&gt;Noviembre 2016&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;@diegovega&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1.0&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://blogs.msdn.microsoft.com/dotnet/2016/06/27/entity-framework-core-1-0-0-available/&quot;&gt;Junio 2016&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;@rowanmiiller&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h1 id=&quot;principales-componentes&quot;&gt;Principales componentes&lt;/h1&gt;
+
+&lt;p&gt;DbContext
+DbSet&lt;/p&gt;
+
+&lt;h1 id=&quot;super-simple-ejemplo&quot;&gt;Super Simple Ejemplo&lt;/h1&gt;
+
+&lt;p&gt;Descripcion del proyecto&lt;/p&gt;
+
+&lt;h2 id=&quot;proyecto&quot;&gt;Proyecto&lt;/h2&gt;
+
+&lt;p&gt;Desc&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Se creara un proyecto de consola.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;dotnet new sln -o IntroEfCore  
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Abrir la carpeta IntroEFCore cd IntroEFCore y crear un proeycto de consola&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;dotnet new console -o EFCoreSimpe
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Agregar el proyecto a la solución&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;dotnet sln add  EFCoreSimpe/EFCoreSimple.csproj
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Agregar los paquetes de Nuget de entoty framework.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;dotnet add package Microsoft.EntityFrameworkCore
+dotnet add package Microsoft.EntityFrameworkCore.Design
+dotnet add package Microsoft.EntityFrameworkCore.Relational
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;(opcional) Si deseas probar con distintasn bases de datps debes instala Instalar provedores adicionales.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+dotnet add package Pomelo.EntityFrameworkCore.MySql
+dotnet add package Microsoft.EntityFrameworkCore.Sqlite
+dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL
+dotnet add package Microsoft.EntityFrameworkCore.Relational
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Abrir visual estudio code&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; code .
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Editar el archivo. clase POCO&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-cs highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Producto&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;//public int PId { get; set; }
+&lt;/span&gt;        &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Nombre&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Disponible&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CategoriaId&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;decimal&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Price&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Agregar DbContext&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-cs highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ProductContext&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DbContext&lt;/span&gt;
+
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DbSet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Producto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Productos&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;OnConfiguring&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DbContextOptionsBuilder&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;optionsBuilder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;optionsBuilder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;UseSqlServer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Data Source=.;Initial Catalog=EfCoreDb;Integrated Security=True&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;OnConfiguring&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;optionsBuilder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><author><name></name></author><summary type="html">Entity Framework Core es un ORM multiplataforma de código abierto desarrolado por Microsoft.</summary></entry><entry><title type="html">Automatizando el Navegador con C# y Selenium.</title><link href="http://0.0.0.0:8080/c%23/selenium/testing/xunit/dotnet/2018/07/30/automatizando-el-navegador.html" rel="alternate" type="text/html" title="Automatizando el Navegador con C# y Selenium." /><published>2018-07-30T22:30:55+00:00</published><updated>2018-07-30T22:30:55+00:00</updated><id>http://0.0.0.0:8080/c%23/selenium/testing/xunit/dotnet/2018/07/30/automatizando-el-navegador</id><content type="html" xml:base="http://0.0.0.0:8080/c%23/selenium/testing/xunit/dotnet/2018/07/30/automatizando-el-navegador.html">&lt;p&gt;Automatiza todas las tares repetitivas que realizas en el navegador usando C# y Selenium; 
 Aquí te mostramos como automatizar el inicio de sesión de Facebook.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://0.0.0.0:8080/img/blurred-background-dolls-fashion-935019.jpg&quot; alt=&quot;Controlando un títere.&quot; title=&quot;Metofora de automatizacón&quot; /&gt;&lt;/p&gt;

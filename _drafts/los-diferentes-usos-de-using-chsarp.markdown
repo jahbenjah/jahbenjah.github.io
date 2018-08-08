@@ -1,8 +1,4 @@
----
-layout:_post
-title:
-date:
----
+
 
 ## using para importar espacios de nombres
 ## Using para import miembros estaticos

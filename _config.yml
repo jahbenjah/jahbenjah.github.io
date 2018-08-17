@@ -24,9 +24,8 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://jahbenjah.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jbenjamincmcho
 github_username:  jahbenjah
-facebook_username: jahbenjah
-linkedin_username: jahbenjah
-youtube_username: jahbenjah
+linkedin_username: jbenjamin-camacho-castro
+# youtube_username: jahbenjah
 
 # Build settings
 markdown: kramdown
@@ -55,5 +54,6 @@ disqus:
     
 
 header_pages:
+ acerca.md
+ portafolio.md
  contacto.md
- 

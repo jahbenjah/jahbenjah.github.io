@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 # Site Settings
-locale                   : "es_MX"
+locale: "es_MX"
 # End Site Settings
 title: Programación con C#
 email: j.benjamin.camacho@gmail.com
@@ -24,7 +24,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://jahbenjah.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jbenjamincmcho
 github_username:  jahbenjah
-linkedin_username: jbenjamin-camacho-castro
+# linkedin_username: jbenjamin-camacho-castro
 # youtube_username: jahbenjah
 
 # Build settings
@@ -32,7 +32,7 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
-  - jekyll-mentions
+  - jekyll-mentions 
   - jekyll-seo-tag
 
 show_excerpts: true
@@ -50,10 +50,9 @@ show_excerpts: true
 #   - vendor/ruby/
 
 disqus:
- shortname: benjamincamachoblog
-    
+ shortname: https-jahbenjah-github-io
 
 header_pages:
- acerca.md
- portafolio.md
- contacto.md
+ - acerca.md
+ - portafolio.md
+ - contacto.md

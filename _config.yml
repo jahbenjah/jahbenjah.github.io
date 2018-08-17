@@ -50,7 +50,7 @@ show_excerpts: true
 #   - vendor/ruby/
 
 disqus:
-    shortname: benjamincamachoblog
+ shortname: benjamincamachoblog
     
 
 header_pages:

@@ -22,6 +22,11 @@ Este articulo se centra en los dosprimeros pasos de la imagen.
 # Requisitos
 
 # Proyecto
+
+Abrir el explorador de Objectos de SQL server   **Ver** > **explorador de Objectos de SQL server **
+Abrir coneccion 
+crear nuevo proyecto
+
 1. Ejecuta Visual Studio 2017. Select **Archivo** > **Nuevo** > **Proyecto** desde la barra de menú. 
 2. El el cuadro de dialogo *Nuevo Proyecto** , Selecionar el nodo **Otros lenguajes**  y posteriromente el nodo **Sql Server**. 
 3. Despues seleccionar la plantilla **Proyecto de base de datos de SQL Server** . 

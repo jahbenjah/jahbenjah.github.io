@@ -1,17 +1,53 @@
 ---
 layout: post
-title:  "Introdución a Entity Framework Core 2.0."
+title:  "Introdución a Entity Framework Core 2.1."
 date:   2018-08-07 22:30:55 +0000
 categories: C# EntityFrameworkCore dotnet ef
 ---
 
-Entity Framework Core 2.0 es una tecnologia de acceso a datos para .NET Core y Net Framework multiplataforma y de código abierto desarrollado por Microsoft con aportes de la comunidad. 
-Propiamente dicho es un asignador objeto relacional  o _ORM_ (Object Relational Mapper) por sus  siglas en inglés. Su función principal es  servir como interprete entre dos tecnologias fundamentadas 
-en distintos principios por un lado  las bases de datos relacionales y la programación orientada a objetos por el otro.
+Entity Framework Core 2.1 es una tecnologia de acceso a datos para .NET Core y .NET Framework. Es multiplataforma y de código abierto desarrollado por Microsoft con aportes de la comunidad. 
+Propiamente dicho es un asignador objeto relacional o _ORM_ (Object Relational Mapper) por sus siglas en inglés. Su función principal es servir como interprete entre dos tecnologias fundamentadas 
+en distintos principios por un lado la programación orientada a objetos y por el otro las bases de datos relacionales y no relacionales.
 
-El código fuente de Entity Framework Core esta alojado en en [Github](https://github.com/aspnet/EntityFrameworkCore) puedes clonar el código a tu computadora y explorar los detalles de softwaere.
+Permite al programador controlar una base de datos relacional usando un lenguaje de programación en lugar de SQL estandar o una de sus dialectos. 
+Libera al programador de escribr gran cantidad de codigo repetitivo.
 
-Se puede utilizar con los lenguajes C# y Visual Basic
+Está basado en convenciones muy a la _Ruby On Rails_ 
+Esperen un post sobre todas las convenciones de para EntityFramework Core El este artículo solo se hace mención del la convención para las llaves primarias.
+
+La configuración se puede hacer mediante Fluent API, Atributos
+
+## ¿ Con que bases de datos puedo usar EntityFrameworkCore ?
+
+Tiene un modelo de Provedores lo que permite usarlo con multiples bases de datos.
+
+*SqlServer
+*SQLite
+*Oracle
+*MySql
+*PostgreSQL
+
+
+## ¿Dónde esta el repositorio de Entity Framework Core?
+
+El código fuente de Entity Framework Core esta alojado en [Github](https://github.com/aspnet/EntityFrameworkCore).
+Puedes clonar el código a tu computadora y explorar los detalles del código fuente.
+
+```bash
+git clone https://github.com/aspnet/EntityFrameworkCore.git 
+```
+Adicionalmente se puden ver los "issues" y realizar contribuciones al código. 
+
+## ¿Con que lenguajes de programacion puedo usar Entity Framework Core?
+
+Se puede utilizar con los lenguajes C# y Visual Basic.
+
+## ¿ Con que tipos de proyectos puedo usar EntityFrameworkCore ?
+
+Cualquier tipo de proyecto de .NET Core 
+Para cualtquier tipo de proyecto .NET Framework que use la version 4.6.1 o superior.
+
+##
 
 
 SQL             | Programación orientada a objetos|  Detalles
@@ -28,21 +64,20 @@ Funciones  ||
 
 
 
-# Que deberias saber
+# ¿ Que deberias saber para usar Entity Framework Core ?
+Metodos de extension.
+Expresiones Lamda
 LINQ
-SQL
-Lambda
+SQL Básico
+
+
+## ¿Como se instala EntityFrameworkCore ?
 
 Se instala mediante paquetes de Nuget lo que lo hacen muy ligero.
 
 Utiliza un modelo llamado _Code Firts_ en donde se escriben las clases del dominio y a partir de ellas se crea la base de datos.
 También es posible crear un modelo a partir de una base de datos existente.
 
-
-Está basado en convenciones muy a la _Ruby On Rails_ 
-Esperen un post sobre todas las convenciones de para EntityFramework Core El este artículo solo se hace mención del la convención para las llaves primarias.
-
-La configuración se puede hacer mediante Fluent API, Atributos
 
 Cuenta con una interfaz de linea de comandos  ```dotnet ef```que permite : 
 1. Crear y modificar la base de datos
@@ -51,9 +86,6 @@ Cuenta con una interfaz de linea de comandos  ```dotnet ef```que permite :
 
 ![Entity Framework Core.]({{"/img/efcoretools.PNG" | absolute_url }} "Imagen de linea de comando Entity Framework Core")
 
-# Provedores
-
-Tiene un modelo de Provedores lo que permite usarlo con multiples bases de datos.
 
 # Versiones 
 
@@ -84,9 +116,12 @@ DbSet<>
 ```
 
 
-# Ejemplo simple 
 
-El siguiente ejemplo se crea una clase llamada ```Producto``` a partir de aqui se muestra la tablas creada en en SQL Server .
+
+
+# Ejemplo Simple: Crear una tabla en un gestor de bases de datos. 
+
+El siguiente ejemplo se crea una clase llamada ```Producto``` a partir de aqui se muestra la tabla creada en en SQL Server ,SQLite , MySql  , PostgreSQL y Firebird.
 
 ## Proyecto
 
@@ -165,7 +200,11 @@ dotnet add package Microsoft.EntityFrameworkCore.Relational
 ```
 
 # Para llevar
+
 Modelo Anemico
+
 Repository 
+
 Unit of Work
+
 Lazy Loading

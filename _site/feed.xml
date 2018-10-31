@@ -1,23 +1,128 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="es"><generator uri="https://jekyllrb.com/" version="3.5.1">Jekyll</generator><link href="http://0.0.0.0:8080/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:8080/" rel="alternate" type="text/html" hreflang="es" /><updated>2018-08-21T22:11:29+00:00</updated><id>http://0.0.0.0:8080/</id><title type="html">Programación con C#</title><subtitle>En este sitio encontraras articiulos sobre programación usando C# .</subtitle><entry xml:lang="es"><title type="html">Introdución a Entity Framework Core 2.0.</title><link href="http://0.0.0.0:8080/c%23/entityframeworkcore/dotnet/ef/2018/08/07/introduccion-entityframeworkcore.html" rel="alternate" type="text/html" title="Introdución a Entity Framework Core 2.0." /><published>2018-08-07T22:30:55+00:00</published><updated>2018-08-07T22:30:55+00:00</updated><id>http://0.0.0.0:8080/c%23/entityframeworkcore/dotnet/ef/2018/08/07/introduccion-entityframeworkcore</id><content type="html" xml:base="http://0.0.0.0:8080/c%23/entityframeworkcore/dotnet/ef/2018/08/07/introduccion-entityframeworkcore.html">&lt;p&gt;Entity Framework Core 2.0 es un ORM multiplataforma de código abierto desarrolado por Microsoft. 
-Su principal funcion es el acceso a datos .&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="es"><generator uri="https://jekyllrb.com/" version="3.5.1">Jekyll</generator><link href="http://0.0.0.0:8080/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:8080/" rel="alternate" type="text/html" hreflang="es" /><updated>2018-10-31T19:48:10+00:00</updated><id>http://0.0.0.0:8080/feed.xml</id><title type="html">ASP.NET Core Master</title><subtitle>En este sitio encontraras articiulos sobre programación usando C# .</subtitle><entry xml:lang="es"><title type="html">Introdución a Entity Framework Core 2.1.</title><link href="http://0.0.0.0:8080/c%23/entityframeworkcore/dotnet/ef/2018/08/07/introduccion-entityframeworkcore.html" rel="alternate" type="text/html" title="Introdución a Entity Framework Core 2.1." /><published>2018-08-07T22:30:55+00:00</published><updated>2018-08-07T22:30:55+00:00</updated><id>http://0.0.0.0:8080/c%23/entityframeworkcore/dotnet/ef/2018/08/07/introduccion-entityframeworkcore</id><content type="html" xml:base="http://0.0.0.0:8080/c%23/entityframeworkcore/dotnet/ef/2018/08/07/introduccion-entityframeworkcore.html">&lt;p&gt;Entity Framework Core 2.1 es una tecnologia de acceso a datos para .NET Core y .NET Framework. Es multiplataforma y de código abierto desarrollado por Microsoft con aportes de la comunidad. 
+Propiamente dicho es un asignador objeto relacional o &lt;em&gt;ORM&lt;/em&gt; (Object Relational Mapper) por sus siglas en inglés. Su función principal es servir como interprete entre dos tecnologias fundamentadas 
+en distintos principios por un lado la programación orientada a objetos y por el otro las bases de datos relacionales y no relacionales.&lt;/p&gt;
+
+&lt;p&gt;Permite al programador controlar una base de datos relacional usando un lenguaje de programación en lugar de SQL estandar o una de sus dialectos. 
+Libera al programador de escribr gran cantidad de codigo repetitivo.&lt;/p&gt;
+
+&lt;p&gt;Está basado en convenciones muy a la &lt;em&gt;Ruby On Rails&lt;/em&gt; 
+Esperen un post sobre todas las convenciones de para EntityFramework Core El este artículo solo se hace mención del la convención para las llaves primarias.&lt;/p&gt;
+
+&lt;p&gt;La configuración se puede hacer mediante Fluent API, Atributos&lt;/p&gt;
+
+&lt;h2 id=&quot;-con-que-bases-de-datos-puedo-usar-entityframeworkcore-&quot;&gt;¿ Con que bases de datos puedo usar EntityFrameworkCore ?&lt;/h2&gt;
+
+&lt;p&gt;Tiene un modelo de Provedores lo que permite usarlo con multiples bases de datos.&lt;/p&gt;
+
+&lt;p&gt;*SqlServer
+*SQLite
+*Oracle
+*MySql
+*PostgreSQL&lt;/p&gt;
+
+&lt;h2 id=&quot;dónde-esta-el-repositorio-de-entity-framework-core&quot;&gt;¿Dónde esta el repositorio de Entity Framework Core?&lt;/h2&gt;
+
+&lt;p&gt;El código fuente de Entity Framework Core esta alojado en &lt;a href=&quot;https://github.com/aspnet/EntityFrameworkCore&quot;&gt;Github&lt;/a&gt;.
+Puedes clonar el código a tu computadora y explorar los detalles del código fuente.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone https://github.com/aspnet/EntityFrameworkCore.git 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Adicionalmente se puden ver los “issues” y realizar contribuciones al código.&lt;/p&gt;
+
+&lt;h2 id=&quot;con-que-lenguajes-de-programacion-puedo-usar-entity-framework-core&quot;&gt;¿Con que lenguajes de programacion puedo usar Entity Framework Core?&lt;/h2&gt;
+
+&lt;p&gt;Se puede utilizar con los lenguajes C# y Visual Basic.&lt;/p&gt;
+
+&lt;h2 id=&quot;-con-que-tipos-de-proyectos-puedo-usar-entityframeworkcore-&quot;&gt;¿ Con que tipos de proyectos puedo usar EntityFrameworkCore ?&lt;/h2&gt;
+
+&lt;p&gt;Cualquier tipo de proyecto de .NET Core 
+Para cualtquier tipo de proyecto .NET Framework que use la version 4.6.1 o superior.&lt;/p&gt;
+
+&lt;p&gt;##&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;SQL&lt;/th&gt;
+      &lt;th&gt;Programación orientada a objetos&lt;/th&gt;
+      &lt;th&gt;Detalles&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Base de datos&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Tabla&lt;/td&gt;
+      &lt;td&gt;Clase&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Columnas&lt;/td&gt;
+      &lt;td&gt;Propiedades o campos&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Llaves primarias&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Llaves foráneas&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Restricciones&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Columnas calculadas&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Store Procedures&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Funciones&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h1 id=&quot;-que-deberias-saber-para-usar-entity-framework-core-&quot;&gt;¿ Que deberias saber para usar Entity Framework Core ?&lt;/h1&gt;
+&lt;p&gt;Metodos de extension.
+Expresiones Lamda
+LINQ
+SQL Básico&lt;/p&gt;
+
+&lt;h2 id=&quot;como-se-instala-entityframeworkcore-&quot;&gt;¿Como se instala EntityFrameworkCore ?&lt;/h2&gt;
 
 &lt;p&gt;Se instala mediante paquetes de Nuget lo que lo hacen muy ligero.&lt;/p&gt;
 
-&lt;p&gt;Utiliza un modelo llamado &lt;em&gt;Code Firts&lt;/em&gt; en donde se escriben las clases del dominio y desoues se va a la base de datos.
-Esta basado en convensioones muy a la &lt;em&gt;Ruby On Rails&lt;/em&gt;
-La configuracion se puede hacer mediante Fluent API, Atributos&lt;/p&gt;
+&lt;p&gt;Utiliza un modelo llamado &lt;em&gt;Code Firts&lt;/em&gt; en donde se escriben las clases del dominio y a partir de ellas se crea la base de datos.
+También es posible crear un modelo a partir de una base de datos existente.&lt;/p&gt;
 
 &lt;p&gt;Cuenta con una interfaz de linea de comandos  &lt;code class=&quot;highlighter-rouge&quot;&gt;dotnet ef&lt;/code&gt;que permite :&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;Crear y modificar la base de datos&lt;/li&gt;
   &lt;li&gt;Generar clases a partir de una base de datos existentes.&lt;/li&gt;
-  &lt;li&gt;Gestionar los cambios&lt;/li&gt;
+  &lt;li&gt;Gestionar los cambios a la base de datos.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Tiene un modelo de Provedores lo que permite usarlo con multiples bases de datos.
-El código fuente de Entity Framework Core esta alojado en en &lt;a href=&quot;https://github.com/aspnet/EntityFrameworkCore&quot;&gt;Github&lt;/a&gt;
-puedes clonar el codigo a tu computadora y explorar los detalles de softwaere.
-La ultima version es 2.1 al momento de escribir este articulo.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://0.0.0.0:8080/img/efcoretools.PNG&quot; alt=&quot;Entity Framework Core.&quot; title=&quot;Imagen de linea de comando Entity Framework Core&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;versiones&quot;&gt;Versiones&lt;/h1&gt;
+
+&lt;p&gt;La ultima version es 2.1 al momento de escribir este artículo.&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -52,28 +157,38 @@ La ultima version es 2.1 al momento de escribir este articulo.&lt;/p&gt;
 &lt;/table&gt;
 
 &lt;h1 id=&quot;principales-componentes&quot;&gt;Principales componentes&lt;/h1&gt;
-&lt;p&gt;Entity framework Cors usar los espaciones de nombres&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-Microsoft.EntityFrameworkCore```&quot;&gt;```System.ComponentModel.DataAnnotations.Schema```
+
+&lt;p&gt;Entity framework Core utiliza los siguientes  espaciones de nombres&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Microsoft.EntityFrameworkCore
+System.ComponentModel.DataAnnotations.Schema
 System.ComponentModel.DataAnnotations
-
-
-DbContext
-DbSet
-
-# Ejemplo simple . 1 C
-
-El siguiente ejemplo se crea una clase llamada producto y se crea la base de datos en diferentes RDBMS.
-
-## Proyecto
-
-Se crea un proyecto de consola con 2 clases. 
-Se crea la base de datos MySql, SqlServer , Sqlite 
-
-1. Se creara un proyecto de consola.
-
-```bash
-dotnet new sln -o IntroEfCore  
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Las clases principales son :&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;DbContext&amp;lt;&amp;gt;
+DbSet&amp;lt;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;ejemplo-simple-crear-una-tabla-en-un-gestor-de-bases-de-datos&quot;&gt;Ejemplo Simple: Crear una tabla en un gestor de bases de datos.&lt;/h1&gt;
+
+&lt;p&gt;El siguiente ejemplo se crea una clase llamada &lt;code class=&quot;highlighter-rouge&quot;&gt;Producto&lt;/code&gt; a partir de aqui se muestra la tabla creada en en SQL Server ,SQLite , MySql  , PostgreSQL y Firebird.&lt;/p&gt;
+
+&lt;h2 id=&quot;proyecto&quot;&gt;Proyecto&lt;/h2&gt;
+
+&lt;p&gt;Se crea un proyecto de consola con 2 clases. 
+Se crea la base de datos MySql, SqlServer , Sqlite&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Se creara un proyecto de consola.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;dotnet new sln -o IntroEfCore  
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Abrir la carpeta IntroEFCore cd IntroEFCore y crear un proeycto de consola&lt;/li&gt;
@@ -102,7 +217,7 @@ dotnet add package Microsoft.EntityFrameworkCore.Relational
 &lt;/div&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;(opcional) Si deseas probar con distintasn bases de datps debes instala Instalar provedores adicionales.&lt;/li&gt;
+  &lt;li&gt;(opcional) Si deseas probar con distintas bases de datos debes instala Instalar provedores adicionales.&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;dotnet add package Microsoft.EntityFrameworkCore.SqlServer
@@ -114,7 +229,7 @@ dotnet add package Microsoft.EntityFrameworkCore.Relational
 &lt;/div&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;Abrir visual estudio code. Si asi lo deseas puedes continuar con Visual Studio 2017 solo debes abrir la solouciin&lt;/li&gt;
+  &lt;li&gt;Abrir Visual Studio Code. Si así lo deseas puedes continuar con Visual Studio 2017 solo debes abrir la soloución&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; code .
@@ -128,8 +243,8 @@ dotnet add package Microsoft.EntityFrameworkCore.Relational
 
 &lt;div class=&quot;language-cs highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Producto&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;//public int PId { get; set; }
-&lt;/span&gt;        &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Nombre&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ProductId&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Nombre&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
         &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Disponible&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
         &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CategoriaId&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
         &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;decimal&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Price&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
@@ -152,7 +267,17 @@ dotnet add package Microsoft.EntityFrameworkCore.Relational
         &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;</content><author><name></name></author><summary type="html">Entity Framework Core 2.0 es un ORM multiplataforma de código abierto desarrolado por Microsoft. Su principal funcion es el acceso a datos .</summary></entry><entry xml:lang="es"><title type="html">Automatizando el Navegador con C# y Selenium.</title><link href="http://0.0.0.0:8080/c%23/selenium/testing/xunit/dotnet/2018/07/30/automatizando-el-navegador.html" rel="alternate" type="text/html" title="Automatizando el Navegador con C# y Selenium." /><published>2018-07-30T22:30:55+00:00</published><updated>2018-07-30T22:30:55+00:00</updated><id>http://0.0.0.0:8080/c%23/selenium/testing/xunit/dotnet/2018/07/30/automatizando-el-navegador</id><content type="html" xml:base="http://0.0.0.0:8080/c%23/selenium/testing/xunit/dotnet/2018/07/30/automatizando-el-navegador.html">&lt;p&gt;Automatiza todas las tares repetitivas que realizas en el navegador usando C# y Selenium; 
+&lt;/div&gt;
+
+&lt;h1 id=&quot;para-llevar&quot;&gt;Para llevar&lt;/h1&gt;
+
+&lt;p&gt;Modelo Anemico&lt;/p&gt;
+
+&lt;p&gt;Repository&lt;/p&gt;
+
+&lt;p&gt;Unit of Work&lt;/p&gt;
+
+&lt;p&gt;Lazy Loading&lt;/p&gt;</content><author><name></name></author><summary type="html">Entity Framework Core 2.1 es una tecnologia de acceso a datos para .NET Core y .NET Framework. Es multiplataforma y de código abierto desarrollado por Microsoft con aportes de la comunidad. Propiamente dicho es un asignador objeto relacional o ORM (Object Relational Mapper) por sus siglas en inglés. Su función principal es servir como interprete entre dos tecnologias fundamentadas en distintos principios por un lado la programación orientada a objetos y por el otro las bases de datos relacionales y no relacionales.</summary></entry><entry xml:lang="es"><title type="html">Automatizando el Navegador con C# y Selenium.</title><link href="http://0.0.0.0:8080/c%23/selenium/testing/xunit/dotnet/2018/07/30/automatizando-el-navegador.html" rel="alternate" type="text/html" title="Automatizando el Navegador con C# y Selenium." /><published>2018-07-30T22:30:55+00:00</published><updated>2018-07-30T22:30:55+00:00</updated><id>http://0.0.0.0:8080/c%23/selenium/testing/xunit/dotnet/2018/07/30/automatizando-el-navegador</id><content type="html" xml:base="http://0.0.0.0:8080/c%23/selenium/testing/xunit/dotnet/2018/07/30/automatizando-el-navegador.html">&lt;p&gt;Automatiza todas las tares repetitivas que realizas en el navegador usando C# y Selenium; 
 Aquí te mostramos como automatizar el inicio de sesión de Facebook.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://0.0.0.0:8080/img/blurred-background-dolls-fashion-935019.jpg&quot; alt=&quot;Controlando un títere.&quot; title=&quot;Metofora de automatizacón&quot; /&gt;&lt;/p&gt;

@@ -16,9 +16,9 @@ Considerando la fecha que publicamos esto y debido a la que es la primera ocasi�
 
 Las reglas son muy simples
 
-1. Elige un tema relacionado con C# y fecha de deseada contácteme para actualizarlo la tabla.
+1. Elige un tema relacionado con C# y fecha de deseada para publicar tú artículo. Contácteme para actualizarlo el calendario.
 2. Prepara tu artículo de blog en español.
-3. Publica tu artículo el día establecido y comparte la liga para actualizar la tabla.
+3. Publica tu artículo el día establecido y comparte la liga para actualizar el calendario.
 4. Opcionalmente puedes twitter con el hastag #advientocsharp
 
 Los el tema de los artículos es decisión de los autores solo que esté relacionado con **C#**,puedes compartir el título de tu entrada o dejarlo hasta el día de publicación.

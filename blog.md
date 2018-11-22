@@ -32,3 +32,5 @@ layout: default
   {%- endif -%}
 
 </div>
+
+<script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us19.list-manage.com","uuid":"42b2f6f2e572d8c8e80741a46","lid":"382d884b15","uniqueMethods":true}) })</script>

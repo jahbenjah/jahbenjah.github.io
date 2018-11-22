@@ -29,7 +29,7 @@ Los el tema de los artículos es decisión de los autores solo que esté relacio
 | ------------- | ------------- | -------------   |----------------|----------|
 | 16-12-2018    | [Luis Beltran](https://twitter.com/darkicebeam) | [Charlin Agramonte](https://twitter.com/Chard003)|Integrando Google Sheets en una app móvil de Xamarin.Forms a través de Azure Functions |          |
 | 17-12-2018    |[Humberto Jaimes](https://twitter.com/HJaimesDev)   |                 |                |          |
-| 18-12-2018    |               |                 |                |          |
+| 18-12-2018    |[Luis Matos](https://twitter.com/luismatosluna)     |                 |                |          |
 | 19-12-2018    |               |                 |                |          |
 | 20-12-2018    |               |                 |                |          |
 | 21-12-2018    |               |                 |                |          |

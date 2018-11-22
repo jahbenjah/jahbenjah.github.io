@@ -55,8 +55,8 @@ disqus:
  shortname: https-jahbenjah-github-io
 
 header_pages:
- - acerca.md
- - portafolio.md
+# - acerca.md
+# - portafolio.md
  - contacto.md
  
  

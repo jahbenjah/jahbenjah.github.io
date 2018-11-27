@@ -33,7 +33,7 @@ Los el tema de los artículos es decisión de los autores solo que esté relacio
 | 18-12-2018    |[Luis Matos](https://twitter.com/luismatosluna)|   |"Creando aplicaciones inteligentes con Cognitive Services"|          |
 | 19-12-2018    |[Ivo](https://twitter.com/shirivo)|                 |                |          |
 | 20-12-2018    |[apis3445](https://twitter.com/apis3445)|                | Sobre de .NET Core  |          |
-| 21-12-2018    |               |                 |                |          |
+| 21-12-2018    |[Israel Perez Saucedo](https://twitter.com/pesimx87)|                 |"Creando una SPA básica con ReacJS y ASP.NET Core" |          |
 | 22-12-2018    |               |                 |                |          |
 | 24-12-2018    |               |                 |                |          |
 | 25-12-2018    |               |                 |                |          |

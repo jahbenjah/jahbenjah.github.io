@@ -28,11 +28,11 @@ Los el tema de los artículos es decisión de los autores solo que esté relacio
 
 | Fecha         | Solicitado por| Solicitador por |   Blog 1       |  Blog 2 |
 | ------------- | ------------- | -------------   |----------------|----------|
-| 16-12-2018    | [Luis Beltran](https://twitter.com/darkicebeam) | [Charlin Agramonte](https://twitter.com/Chard003)|Integrando Google Sheets en una app móvil de Xamarin.Forms a través de Azure Functions |          |
-| 17-12-2018    |[Humberto Jaimes](https://twitter.com/HJaimesDev)   |                 |                |          |
-| 18-12-2018    |[Luis Matos](https://twitter.com/luismatosluna)     |                 |                |          |
-| 19-12-2018    |               |                 |                |          |
-| 20-12-2018    |               |                 |                |          |
+| 16-12-2018    | [Luis Beltran](https://twitter.com/darkicebeam) | [Charlin Agramonte](https://twitter.com/Chard003)|"Integrando Google Sheets en una app móvil de Xamarin.Forms a través de Azure Functions"|          |
+| 17-12-2018    |[Humberto Jaimes](https://twitter.com/HJaimesDev)|                 |                |          |
+| 18-12-2018    |[Luis Matos](https://twitter.com/luismatosluna)|   |"Creando aplicaciones inteligentes con Cognitive Services"|          |
+| 19-12-2018    |[Ivo](https://twitter.com/shirivo)|                 |                |          |
+| 20-12-2018    |[apis3445](https://twitter.com/apis3445)|                | Sobre de .NET Core  |          |
 | 21-12-2018    |               |                 |                |          |
 | 22-12-2018    |               |                 |                |          |
 | 24-12-2018    |               |                 |                |          |

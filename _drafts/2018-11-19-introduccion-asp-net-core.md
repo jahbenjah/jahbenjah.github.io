@@ -9,11 +9,11 @@ categories: asp.net core mvc dotnet
 
 El código y documentación de ASP.NET Core esta alojado en la más reciente adquisición de Microsoft: **Github**. Puedes explorar los detalles de cada línea de código, revisar y reportar incidencias \(*issues*\), ver el plano de ruta ,aportar con tu propio código y/o documentación.
 
-Aquí la lista de repositorios:
+Aquí la lista de repositorios relevantes para ASP.NET Core:
 
 1. Código de ASP\.NET Core https://github.com/aspnet/AspNetCore
 2. Repositorio de anuncios de ASP\.NET Core: https://github.com/aspnet/Announcements
 3. Repositorio de la documentación https://github.com/aspnet/Docs
 
-ASP\.NET Core puede correr en los sistemas operativos Windows , Mac OS y Linux. Para los dos primeros hay versiones del entorno de desarrollo integrado estrella de Microsoft Visual Studio para el último puedes usar el editor de código Visual Studio Code.
+ASP\.NET Core puede correr en los sistemas operativos Windows, Mac OS y Linux. Para los dos primeros hay versiones del entorno de desarrollo integrado estrella de Microsoft Visual Studio para el último puedes usar el editor de código Visual Studio Code.
 

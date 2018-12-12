@@ -12,7 +12,7 @@ Revisemos cada una de estas características:
 **Framework de código abierto** Es algo que para muchos todavía parece increíble: 
 > [Microsoft](https://octoverse.github.com/projects) esta ente los principales contribuidores a proyectos de Código Abierto.
 
-Es posible que camino de .NET y Microsoft comenzó en el software libre (es un larga historia que vale se contada pero quizás en otra ocasión) hay iniciado con la liberación de la [**Especificación del Lenguaje C#**](https://www.ecma-international.org/publications/standards/Ecma-334.htm) en el 2003. Por ahora solo basta mencionar que todo código y documentación de ASP\.NET Core esta alojado en la más reciente adquisición de Microsoft: **Github**. Puedes explorar los detalles de cada línea de código, revisar y reportar incidencias \(*issues*\), ver el plano de ruta ,aportar con tu propio código y/o documentación.
+Es posible que camino de .NET y Microsoft en el software libre haya iniciado con la liberación de la [**Especificación del Lenguaje C#**](https://www.ecma-international.org/publications/standards/Ecma-334.htm) en el 2003. Pero por ahora solo basta mencionar que todo código y documentación de ASP\.NET Core esta alojado en la más reciente adquisición de Microsoft: **Github**. Puedes explorar los detalles de cada línea de código, revisar y reportar incidencias \(*issues*\), ver el plano de ruta ,aportar con tu propio código y/o documentación.
 
 Aquí la lista de repositorios relevantes para ASP.NET Core:
 
@@ -28,7 +28,7 @@ Aquí la lista de repositorios relevantes para ASP.NET Core:
 
 La última versión al momento de escribir este artículo es la 2.2.
 
-Actualmente hay 2 versiones principales con varias versiones menores y estimo que a mediados del 2019 este disponible la versión 3.0.
+Actualmente hay 2 versiones principales con varias versiones menores y estimo que a mediados del 2019 este disponible la versión 3.0.Puedes revisar los detalles y características nuevas de cada version en el anuncio de la liberación realizado por algún miembro el equipo de desarrollo de ASP\.NET Core.
 
 Versión | Fecha de lanzamiento|  Detalles
 --------| --------------------|-----------
@@ -44,6 +44,7 @@ Espera más detalles de como preparar tu entorno de desarrollo para ASP.NET Core
 
 * Para llevar
 
-Dos artículos que te pueden ayudar a entender el como Microsoft comenzó a apoyar el código abierto 
-1.Mads Torgersen, [How Microsoft rewrote its C# compiler in C# and made it open source](https://medium.com/microsoft-open-source-stories/how-microsoft-rewrote-its-c-compiler-in-c-and-made-it-open-source-4ebed5646f98)
+Dos artículos que te pueden ayudar a entender el como Microsoft comenzó a apoyar el código abierto:
+
+1. Mads Torgersen, [How Microsoft rewrote its C# compiler in C# and made it open source](https://medium.com/microsoft-open-source-stories/how-microsoft-rewrote-its-c-compiler-in-c-and-made-it-open-source-4ebed5646f98)
 2. Beth Massi, [Building an Open Source .NET Foundation](https://medium.com/microsoft-open-source-stories/building-an-open-source-net-foundation-2fa0fb117584)

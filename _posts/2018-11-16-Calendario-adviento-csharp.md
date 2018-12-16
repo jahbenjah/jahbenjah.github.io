@@ -34,9 +34,9 @@ Los el tema de los artículos es decisión de los autores solo que esté relacio
 | 19-12-2018    |[Ivo](https://twitter.com/shirivo)|                 |                |          |
 | 20-12-2018    |[apis3445](https://twitter.com/apis3445)|      | "Seguridad en tus servicios REST .NET Core" |          |
 | 21-12-2018    |[Israel Perez Saucedo](https://twitter.com/pesimx87)|                 |"Creando una SPA básica con ReacJS y ASP.NET Core" |          |
-| 22-12-2018    |[Manuel Zapata](https://twitter.com/ManuelZapata) |                |             |          |
+| 22-12-2018    |[Manuel Zapata](https://twitter.com/ManuelZapata) |[Leonardo Vargas](https://twitter.com/lvbernal)|            |          |
 | 23-12-2018    |[Gustavo Barrientos](https://twitter.com/tavobarrientos)|[Cristian González](https://twitter.com/darrystonem)| "ASP.NET Core con Docker"|       |
-| 24-12-2018    |[Fredy Guibert](https://twitter.com/fredyfx) |        |         |     |
+| 24-12-2018    |[Fredy Guibert](https://twitter.com/fredyfx) | [Benjamin Camacho](https://twitter.com/jbenjamincmcho)       |         |  Web Scrapping con C#   |
 | 25-12-2018    |[Erick Marcia](https://twitter.com/EMarcia14) |[Ricardo](https://disqus.com/by/disqus_frXF1mSMLg/)                | "Sobre C# y DevExpress" |"Patrones de diseño esenciales para .Net Core WebApi"|
 
 ## Algunas ideas para postear

@@ -29,7 +29,7 @@ Los el tema de los artículos es decisión de los autores solo que esté relacio
 | Fecha         | Solicitado por| Solicitador por |   Blog 1       |  Blog 2 |
 | ------------- | ------------- | -------------   |----------------|----------|
 | 16-12-2018    | [Luis Beltran](https://twitter.com/darkicebeam) | [Charlin Agramonte](https://twitter.com/Chard003)|["Integrando Google Sheets en una app móvil de Xamarin.Forms a través de Azure Functions"](https://luisbeltran.mx/2018/12/16/integrando-google-sheets-en-una-app-movil-de-xamarin-forms-a-traves-de-azure-functions/)|["Aprendiendo Xamarin Forms — Mi receta personal"](https://medium.com/@Chard003/aprendiendo-xamarin-forms-mi-receta-personal-b23b95288e2a)|
-| 17-12-2018    |[Humberto Jaimes](https://twitter.com/HJaimesDev)|[Eduard Tomàs](https://twitter.com/eiximenis)                 |                |"sobre cosas que ocurren cuando sobre sobrecargas los operadores de comparación."|
+| 17-12-2018    |[Humberto Jaimes](https://twitter.com/HJaimesDev)|[Eduard Tomàs](https://twitter.com/eiximenis)                 |                |["Comparaciones en C#"](https://geeks.ms/etomas/2018/12/17/comparaciones-en-c/)|
 | 18-12-2018    |[Luis Matos](https://twitter.com/luismatosluna)|[Yhorby Matias](https://twitter.com/yhorbymatias)|"Creando aplicaciones inteligentes con Cognitive Services"| "C# en el browser .NET WebAssembley Blazor"|
 | 19-12-2018    |[Ivo](https://twitter.com/shirivo)|                 |                |          |
 | 20-12-2018    |[apis3445](https://twitter.com/apis3445)|      | "Seguridad en tus servicios REST .NET Core" |          |

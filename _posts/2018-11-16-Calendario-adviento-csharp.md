@@ -28,16 +28,16 @@ Los el tema de los artículos es decisión de los autores solo que esté relacio
 
 | Fecha         | Solicitado por| Solicitador por |   Blog 1       |  Blog 2 |
 | ------------- | ------------- | -------------   |----------------|----------|
-| 16-12-2018    | [Luis Beltran](https://twitter.com/darkicebeam) | [Charlin Agramonte](https://twitter.com/Chard003)|["Integrando Google Sheets en una app móvil de Xamarin.Forms a través de Azure Functions"](https://luisbeltran.mx/2018/12/16/integrando-google-sheets-en-una-app-movil-de-xamarin-forms-a-traves-de-azure-functions/)|["Aprendiendo Xamarin Forms — Mi receta personal"](https://medium.com/@Chard003/aprendiendo-xamarin-forms-mi-receta-personal-b23b95288e2a)|
+| 16-12-2018    |[Luis Beltran](https://twitter.com/darkicebeam)| [Charlin Agramonte](https://twitter.com/Chard003)|["Integrando Google Sheets en una app móvil de Xamarin.Forms a través de Azure Functions"](https://luisbeltran.mx/2018/12/16/integrando-google-sheets-en-una-app-movil-de-xamarin-forms-a-traves-de-azure-functions/)|["Aprendiendo Xamarin Forms — Mi receta personal"](https://medium.com/@Chard003/aprendiendo-xamarin-forms-mi-receta-personal-b23b95288e2a)|
 | 17-12-2018    |[Humberto Jaimes](https://twitter.com/HJaimesDev)|[Eduard Tomàs](https://twitter.com/eiximenis)|["Trabajando con archivos locales en Xamarin.Forms"](http://www.humbertojaimes.net/trabajando-con-archivos-locales-en-xamarin-forms/)               |["Comparaciones en C#"](https://geeks.ms/etomas/2018/12/17/comparaciones-en-c/)|
 | 18-12-2018    |[Luis Matos](https://twitter.com/luismatosluna)|[Yhorby Matias](https://twitter.com/yhorbymatias)|["Cognitive Services y Xamarin.Forms: Creando aplicaciones inteligentes"](https://luismts.com/es/blog/xamarin/cognitive-services-xamarin-forms/)| "C# en el browser .NET WebAssembley Blazor"|
 | 19-12-2018    |[Ivo](https://twitter.com/shirivo)|[Israel Perez Saucedo](https://twitter.com/pesimx87)                 |                | ["Creando una “SPA” básica con ReactJS y ASP.NET Core"](https://neomatrixisra25.wixsite.com/ihouseblog/blog/creando-una-spa-b%C3%A1sica-con-reactjs-y-asp-net-core)|
 | 20-12-2018    |[apis3445](https://twitter.com/apis3445)|      | "Seguridad en tus servicios REST .NET Core" |          |
 | 21-12-2018    |[Leomaris Reyes](https://twitter.com/LeomarisReyes11)|[Luis Pujols](https://twitter.com/pujolsluis1)|"Aplicando el patrón de diseño MVVM"|"Aprendiendo a crear Plugins en Xamarin"|
-| 22-12-2018    |[Manuel Zapata](https://twitter.com/ManuelZapata) |[Leonardo Vargas](https://twitter.com/lvbernal)|            |          |
+| 22-12-2018    |[Manuel Zapata](https://twitter.com/ManuelZapata)|[Leonardo Vargas](https://twitter.com/lvbernal)|            |          |
 | 23-12-2018    |[Gustavo Barrientos](https://twitter.com/tavobarrientos)|[Cristian González](https://twitter.com/darrystonem)| "ASP.NET Core con Docker"|       |
-| 24-12-2018    |[Fredy Guibert](https://twitter.com/fredyfx) | [Benjamin Camacho](https://twitter.com/jbenjamincmcho)| "Elevando el cosmos con ASPnet Core 2, VueJs, Entity Framework Core 2 y PostgreSQL"| Web Scrapping con C#   |
-| 25-12-2018    |[Erick Marcia](https://twitter.com/EMarcia14) |[Ricardo](https://disqus.com/by/disqus_frXF1mSMLg/)                | "Sobre C# y DevExpress" |"Patrones de diseño esenciales para .Net Core WebApi"|
+| 24-12-2018    |[Fredy Guibert](https://twitter.com/fredyfx)|[Benjamin Camacho](https://twitter.com/jbenjamincmcho)| "Elevando el cosmos con ASPnet Core 2, VueJs, Entity Framework Core 2 y PostgreSQL"| "Web Scrapping con C# "  |
+| 25-12-2018    |[Erick Marcia](https://twitter.com/EMarcia14)|[Ricardo](https://disqus.com/by/disqus_frXF1mSMLg/)  | "Sobre C# y DevExpress" |"Patrones de diseño esenciales para .Net Core WebApi"|
 
 ## Algunas ideas para postear
 

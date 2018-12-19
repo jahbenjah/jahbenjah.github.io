@@ -13,9 +13,20 @@ EFCore
 Page Object Model
 xunit
 
-> Con un gran poder implica una gran resposabilidad.
+> Un gran poder implica una gran resposabilidad. tío Ben
 
-1. Crear una solucion en blanco asegurate de seleccionas el control de cofigo fuente.
-1. Se crearan dos carpetas de solucione suna para las pruebas y otra para el codigo `src` y `test`
-3. Crear un proyuecto de biblioteca de clases de .NET Core dentro de la carpera src Core
-3. 
+1. Crear una solución en blanco en Visual Studio mediante  _Archivo > Nuevo Proyecto > Otro tipo de proyectos > Soluciones de Visual Studio > Solucion en blanco_ y asegutrate de seleccionear la opcion de _Crear un nuevo repositori Git_.
+2. Crear dos carpetas de soluciones una llamada `src`  para guardar el código de la aplicacion y otro llamada `test` pruebas para las pruebas.
+3. Seleccionando la carpeta de soluciones src dar clic derecho para agreggar un Nuevo proyecto
+llamado AppCore. Asegurarte que este ubicado en el directorio /src.
+Repetir el paso para el proyecto AppData.
+4. Seleccionando la carpeta de soluciones test dar clic derecho para agreggar un Nuevo proyecto tipo Pruebas Ubitarias con Xunot.net llamado AppTest. Asegurarte que este ubicado en el directorio /test.
+5. Agregar las referencias al proyecto AppTest
+6 Instalar los siguienetes paquetes de Nuget para caa tipo de proyecto
+AppCore : Selinum
+AppData : EntityFrameworkCore
+AppTest : ChromeDirver FireforxmDriver 
+
+Aqui puedes  revisar tus cambios en el Team Explorer. Y ejecutar tu primer commit para guardar
+
+5. 

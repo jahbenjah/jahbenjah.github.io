@@ -34,8 +34,8 @@ Los el tema de los artículos es decisión de los autores solo que esté relacio
 | 19-12-2018    |[Ivo](https://twitter.com/shirivo)|[Israel Perez Saucedo](https://twitter.com/pesimx87)                 |                | ["Creando una “SPA” básica con ReactJS y ASP.NET Core"](https://neomatrixisra25.wixsite.com/ihouseblog/blog/creando-una-spa-b%C3%A1sica-con-reactjs-y-asp-net-core)|
 | 20-12-2018    |[apis3445](https://twitter.com/apis3445)|[Leslie Gordian](https://twitter.com/LeslieGordian17)| "Seguridad en tus servicios REST .NET Core" |"Dale alas a tu código con las nuevas características de C# 7.0 X"|
 | 21-12-2018    |[Leomaris Reyes](https://twitter.com/LeomarisReyes11)|[Luis Pujols](https://twitter.com/pujolsluis1)|"Aplicando el patrón de diseño MVVM"|"Aprendiendo a crear Plugins en Xamarin"|
-| 22-12-2018    |[Manuel Zapata](https://twitter.com/ManuelZapata)|[Leonardo Vargas](https://twitter.com/lvbernal)|            |          |
-| 23-12-2018    |[Gustavo Barrientos](https://twitter.com/tavobarrientos)|[Cristian González](https://twitter.com/darrystonem)| "ASP.NET Core con Docker"|       |
+| 22-12-2018    |[Manuel Zapata](https://twitter.com/ManuelZapata)|[Leonardo Vargas](https://twitter.com/lvbernal)|            |".NET Core en reinos lejanos: hardware,radios y señales"|
+| 23-12-2018    |[Gustavo Barrientos](https://twitter.com/tavobarrientos)|[Cristian González](https://twitter.com/darrystonem)| "ASP .NET Core con Docker"|       |
 | 24-12-2018    |[Fredy Guibert](https://twitter.com/fredyfx)|[Benjamin Camacho](https://twitter.com/jbenjamincmcho)| "Elevando el cosmos con ASPnet Core 2, VueJs, Entity Framework Core 2 y PostgreSQL"| "Web Scrapping con C# "  |
 | 25-12-2018    |[Erick Marcia](https://twitter.com/EMarcia14)|[Ricardo](https://disqus.com/by/disqus_frXF1mSMLg/)  | "Sobre C# y DevExpress" |"Patrones de diseño esenciales para .Net Core WebApi"|
 

@@ -8,8 +8,8 @@ categories: C# advientocsharp
 
 ![Adviento]({{"/img/adviento.jpg" | absolute_url }} "Corona de adviento")
 
-El año pasado fui un seguidor de [The firts C# Advent Calendar](https://crosscuttingconcerns.com/The-First-C-Advent-Calendar) liderado por [Matthew D. Groves](https://crosscuttingconcerns.com/) y creo que es una gran idea tener algo similar en la lengua de Cervantes.
-El calendario de adviento de C# en ingles fue inspirado por el [calendario de adviento de F# de Sergey Tihon](https://sergeytihon.com/2018/10/22/f-advent-calendar-in-english-2018/) que ya es una tradición desde el 2014.
+El año pasado fui un seguidor de [The firts C# Advent Calendar](https://crosscuttingconcerns.com/The-First-C-Advent-Calendar){:target="_blank"} liderado por [Matthew D. Groves](https://crosscuttingconcerns.com/){:target="_blank"} y creo que es una gran idea tener algo similar en la lengua de Cervantes.
+El calendario de adviento de C# en ingles fue inspirado por el [calendario de adviento de F# de Sergey Tihon](https://sergeytihon.com/2018/10/22/f-advent-calendar-in-english-2018/){:target="_blank"} que ya es una tradición desde el 2014.
 
 Considerando la fecha que publicamos esto y debido a la que es la primera ocasión de este calendario en español la propuesta es hacerlo para los últimos 8 días antes de navidad con hasta dos entradas por día. Con posibilidad de extenderlo dependiendo la respuesta obtenida.
 

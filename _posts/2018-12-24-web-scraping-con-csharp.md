@@ -70,13 +70,6 @@ Las categorías se encuentran en la barra lateral de las paginas del catalogo po
 
 ## Extracción categorías
 
-
-
-
-
-
-
-
 Necesitamos una forma de generar las url del catalogo.
 Una forma de solucionar esta parte del problema es creando un método que lo realice por nosotros:
 
@@ -218,7 +211,97 @@ public static void GuardarCategorias()
 
 Si abrimos la base de datos SQLite veremos las categorias.
 ![Categorias]({{"/img/categoriasbd.PNG" | absolute_url }} "Resultado de la extracción de categorias")
-## Extracción detalle libros
+
+## Extración detalle libros
+
+Para extraer los datos del detalle de cada libro utilizamos la clase ``DetalleLibro`` que intenta implementar el patron PageObject.
+
+```cs
+
+    public class DetalleLibro
+    {
+        private IWebDriver _driver;
+        public DetalleLibro(IWebDriver driver)
+        {
+            if (!driver.Title.Contains("| Books to Scrape - Sandbox"))
+            {
+                throw new ArgumentException("El titulo no corresponde a una pagina del catalogo");
+            }
+            _driver = driver;
+        }
+
+        public string GetTitulo()
+        {
+            return _driver.FindElement(By.CssSelector("#content_inner > article > div.row > div.col-sm-6.product_main > h1")).Text;
+        }
+
+        public string GetPrecio()
+        {
+            return _driver.FindElement(By.ClassName("price_color")).Text;
+        }
+
+        public string GetUrlImagen()
+        {
+            return _driver.FindElement(By.CssSelector("#product_gallery > div > div > div > img")).GetAttribute("src");
+        }
+
+        public string GetCategory()
+        {
+
+            return _driver.FindElement(By.CssSelector("#default > div > div > ul > li:nth-child(3) > a")).Text;
+        }
+
+        public int GetCategoryId()
+        {
+            var categorylink = _driver.FindElement(By.CssSelector("#default > div > div > ul > li:nth-child(3) > a")).GetAttribute("href");
+            var inicio = categorylink.LastIndexOf('_') + 1;
+            var largo = categorylink.LastIndexOf('/') - inicio;
+            return Convert.ToInt32(categorylink.Substring(inicio, largo));
+        }
+        public Libro GetDetallesLibro()
+        {
+            Libro libro = new Libro()
+            {
+
+                CategoriaId = GetCategoryId(),
+                Precio = GetPrecio(),
+                Titulo = GetTitulo(),
+                UrlImage = GetUrlImagen(),
+                Url = _driver.Url
+            };
+            return libro;
+        }
+
+```
+Para guardar en la base de datos usamos el siguiente código
+
+```
+static void Main(string[] args)
+{
+    var driver = GetDriver();
+    driver.Manage().Window.Maximize();
+
+    foreach (var url in GetCatalogoUrls().Skip(1))
+    {
+        driver.Navigate().GoToUrl(url);
+        Catalogo catalogo = new Catalogo(driver);
+        var links = catalogo.ObtenerUrlLibros();
+        foreach (var link in links)
+        {
+            driver.Navigate().GoToUrl(link);
+            DetalleLibro detalleLibro = new DetalleLibro(driver);
+            using (var db = new AppData.AppContext())
+            {
+                db.Libros.Add(detalleLibro.GetDetallesLibro());
+                db.SaveChanges();
+            }
+        }
+    }
+    ReadLine();
+}
+```
+Aqui es recomendable usar el modo headless de Chrome ```` para que no se veas el navegador
+![Liros]({{"/img/ExtraccionFinal.PNG" | absolute_url }} "base de libros y categorias")
 
 # Para llevar 
 

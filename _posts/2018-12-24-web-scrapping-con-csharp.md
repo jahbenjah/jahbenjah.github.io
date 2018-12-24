@@ -9,7 +9,7 @@ Actualmente hay datos a montones y día con dia la información disponible en in
 
 ![Web Scraping]({{"/img/webscraping.jpeg" | absolute_url }} "Inspección de página web")
 
-La definición de Wikipedia:
+De acuerdo con la definición de Wikipedia:
 
 > Web scraping es una técnica utilizada mediante programas de software para extraer información de sitios web. Usualmente, estos programas simulan la navegación de un humano en la World Wide Web ya sea utilizando el protocolo HTTP manualmente, o incrustando un navegador en una aplicación. (_Wikipedia_)
 
@@ -27,7 +27,50 @@ El proceso utilizado para realizar la extracción es:
 
 Nuestro proposito es generar una copia local del catálogo de libros y categorías de http://books.toscrape.com esta es una pagina especifica para hacer Web scraping. Contiene un catalogo de 1000 libros con información ficticia . El catalogo esta compuesto de 50 paginas en cada pagina se muestran 20 libros. Cada uno de estos libros tiene una pagina donde se muestran los detalles del mismo.
 
-La paginas del catalogo tiene la siguiente estructura http://books.toscrape.com/catalogue/page-n.html donde n es 1 ....50
+La paginas del catalogo tiene la siguiente estructura http://books.toscrape.com/catalogue/page-n.html donde _n_ es 1 ....50. Para extraer los 1000 libros es necesario acceder a cada una de las 50 paginas del catalogo por lo que necesitamos una forma de generar estas url.
+
+Una forma de solucionar parte del problema (la generación de las url) es creando un método que lo realice por nosotros:
+```cs
+
+    public static List<string> GetCatalogoUrls()
+    {
+        List<string> urls = new List<string>();
+        for (int i = 1; i <= 50; i++)
+        {
+                urls.Add($@"http://books.toscrape.com/catalogue/page-{i}.html");
+        }
+        return urls;
+    }
+```
+
+La otra parte del problema es ordenar a Chrome para que navegue por estas urls. Para esto no ayudara **Selenium WebDriver** y ChromeDriver. El método GetDriver configura las opciones que nos permiten ejecutar Chrome y controlarlo desde C#.
+```cs
+    public static IWebDriver GetDriver()
+    {
+        var user_agent = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.50 Safari/537.36";
+        ChromeOptions options = new ChromeOptions(); 
+        options.AddArgument("--disable-gpu");
+        options.AddArgument($"user_agent={user_agent}"); 
+        options.AddArgument("--ignore-certificate-errors");
+        IWebDriver driver = new ChromeDriver(Directory.GetCurrentDirectory(), options);
+        return driver;
+    }
+```
+
+Con esto es posible controlar una instancia de Chrome hacerlo navegar por las 50 urls. Esto es lo que realiza el método NavagarPorElCatalogo
+
+```cs
+public static void NavagarPorElCatalogo()
+{
+    var driver = GetDriver();
+    driver.Manage().Window.Maximize();
+
+    foreach (var url in GetCatalogoUrls())
+    {
+       driver.Navigate().GoToUrl(url);
+    }
+}
+```
 
 La pagina de detalles tiene la siguiente estructura http://books.toscrape.com/catalogue/chronicles-vol-1_462/index.html
 
@@ -56,4 +99,5 @@ http://books.toscrape.com/catalogue/page-50.html
 # Para llevar 
 
 > Un gran poder conlleva una gran responsabilidad. tío Ben
-Codigo de etica
+
+* Siempre es bueno apegarse a un Código de ética por ejemplo el de la ACM [Código de Ética y Conducta Profesional de ACM](https://www.acm.org/about-acm/code-of-ethics-in-spanish)

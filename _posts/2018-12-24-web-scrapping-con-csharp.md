@@ -7,7 +7,7 @@ categories: Web scraping C# advientocsharp dotnet selenium
 
 Actualmente hay datos a montones y día con dia la información disponible en internet aumenta de forma considerable por ello cuando se requiere extraer gran cantidad de información de un sitio web es preciso ayudarse de técnicas automatizadas como el: _Web Scraping_. 
 
-![Web Scraping]({{"/img/webscraping.jpg" | absolute_url }} "Inspección de página web")
+![Web Scraping]({{"/img/webscraping.jpeg" | absolute_url }} "Inspección de página web")
 
 La definición de Wikipedia:
 
@@ -33,7 +33,7 @@ La pagina de detalles tiene la siguiente estructura http://books.toscrape.com/ca
 
 # El código
 
-El cdigo de para este articulo esta disponible en el siguiente repositorio https://github.com/jahbenjah/WebScrappingCSharp esta compuesto por 4 proyectos.
+El código de para este articulo esta disponible en el siguiente repositorio https://github.com/jahbenjah/WebScrappingCSharp esta compuesto por 4 proyectos.
 
 |Proyecto  |Tipo|Descripción|
 -----------|----|-----------|
@@ -41,45 +41,19 @@ El cdigo de para este articulo esta disponible en el siguiente repositorio https
 |AppData   |Biblioteca de clases .NET Core|Proyecto que contiene el código e acceso a a datos usa Entity Framework Core|
 |AppConsole|Proyecto de Consola .NET Core|Usa los dos proyectos anteriores para realizar la extracción de datos. |
 |AppTest   |Proyecto de pruebas xunit.NET|Utiliza pruebas unitarias para realizar la extracción|
- 
+
+## Extraccion categorias
+
+![Categorias]({{"/img/categoriasbd.PNG" | absolute_url }} "Resultado de la extracción de categorias")
 
 Debemos navegar desde las paginas desde 
 http://books.toscrape.com/catalogue/page-1.html
 ...
 http://books.toscrape.com/catalogue/page-50.html
  y extrer los 
-URL 
-Marcas
-HTML
-Parsear
-Navegar por el arbol
+
+
+# Para llevar 
+
+> Un gran poder conlleva una gran responsabilidad. tío Ben
 Codigo de etica
-Constante refactorizacion
-selectores css
-
-https://docs.microsoft.com/en-us/ef/core/modeling/relationships
-
-
-Chrome Driver
-EFCore
-.NET Core
-Page Object Model
-xunit
-
-> Un gran poder implica una gran resposabilidad. tío Ben
-
-1. Crear una solución en blanco en Visual Studio mediante  _Archivo > Nuevo Proyecto > Otro tipo de proyectos > Soluciones de Visual Studio > Solucion en blanco_ y asegutrate de seleccionear la opcion de _Crear un nuevo repositori Git_.
-2. Crear dos carpetas de soluciones una llamada `src`  para guardar el código de la aplicacion y otro llamada `test` pruebas para las pruebas.
-3. Seleccionando la carpeta de soluciones src dar clic derecho para agreggar un Nuevo proyecto
-llamado AppCore. Asegurarte que este ubicado en el directorio /src.
-Repetir el paso para el proyecto AppData.
-4. Seleccionando la carpeta de soluciones test dar clic derecho para agreggar un Nuevo proyecto tipo Pruebas Ubitarias con Xunot.net llamado AppTest. Asegurarte que este ubicado en el directorio /test.
-5. Agregar las referencias al proyecto AppTest
-6 Instalar los siguienetes paquetes de Nuget para caa tipo de proyecto
-AppCore : Selinum
-AppData : EntityFrameworkCore
-AppTest : ChromeDirver FireforxmDriver 
-
-Aquí puedes  revisar tus cambios en el Team Explorer. Y ejecutar tu primer commit para guardar
-
-5. 

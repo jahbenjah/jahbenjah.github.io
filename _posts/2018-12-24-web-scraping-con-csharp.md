@@ -21,7 +21,9 @@ El proceso utilizado para realizar la extracción es:
 
 2. Inspeccionar la pagina Web objetivo para determinar donde se encuentran los datos para extraer. Para ello puedes utilizar las herramientas de desarrollador de Chrome. Es necesario saber un poco de HTML,CSS y Javascript. En cuanto se posible puedes identificar los elementos HTML por ID , etiqueta , clase, selector css o ruta XPATH. En ocasiones la información puede estar dentro de los atributos.
 
-3. Determinar el formato de salida requerido.Este puede ser desde la impresión en consola hasta una base de datos relacional. 
+3. Generar una estrategia para conseguir los datos y programarla.
+
+4. Determinar el formato de salida requerido.Este puede ser desde la impresión en consola hasta una base de datos relacional.
 
 # Descripción de la página
 
@@ -77,6 +79,9 @@ La pagina de detalles tiene la siguiente estructura http://books.toscrape.com/ca
 # El código
 
 El código de para este articulo esta disponible en el siguiente repositorio https://github.com/jahbenjah/WebScrappingCSharp esta compuesto por 4 proyectos.
+
+Anteriormente ya había escrito como configurar un proyecto para usar [Selenium](../2018-07-30-automatizando-el-navegador.md)
+
 
 |Proyecto  |Tipo|Descripción|
 -----------|----|-----------|

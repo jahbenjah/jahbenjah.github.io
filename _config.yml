@@ -30,6 +30,7 @@ github_username:  jahbenjah
 markdown: kramdown
 theme: minima
 plugins:
+  - jekyll-sitemap
   - jekyll-feed
   - jekyll-mentions 
   - jekyll-seo-tag

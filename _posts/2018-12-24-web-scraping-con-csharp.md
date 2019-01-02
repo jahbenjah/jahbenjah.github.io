@@ -300,14 +300,14 @@ static void Main(string[] args)
     ReadLine();
 }
 ```
-Aqui es recomendable usar el modo headless de Chrome ```` para que no se veas el navegador
+Aqui es recomendable usar el [modo headless de Chrome](https://developers.google.com/web/updates/2017/04/headless-chrome) . Puedes descomentar la línea ``options.AddArgument("--headless");``  ``GetDriver`` del método para que no se veas el navegador.
 ![Liros]({{"/img/ExtraccionFinal.PNG" | absolute_url }} "base de libros y categorias")
 
 # Para llevar 
 
 > Un gran poder conlleva una gran responsabilidad. tío Ben
 
-* La mayoría de las páginas tienen un archivo llamados robots.txt que controlan el accesos a los robots que es importante que conozcas y respetes.
+* La mayoría de las páginas tienen un archivo llamados robots.txt que controlan el accesos a los robots que es importante que conozcas y respetes. Mira el de este [aspnetcoremaster.com](https://aspnetcoremaster.com/robots.txt).
 
 * Siempre es bueno apegarse a un Código de ética por ejemplo el de la ACM [Código de Ética y Conducta Profesional de ACM](https://www.acm.org/about-acm/code-of-ethics-in-spanish).
 

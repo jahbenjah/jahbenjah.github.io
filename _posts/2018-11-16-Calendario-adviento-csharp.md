@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "El primer calendario de adviento de C# en español"
-date:   2018-11-16 14:30:55 +0000
 categories: C# advientocsharp 
 ---
 >La idea de este calendario es muy simple: 4 semanas antes de navidad se publican diariamente 1 entrado de blog de un tema relacionado con C# por distintos autores voluntarios.

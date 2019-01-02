@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "Web scraping con C#"
-date:   2018-12-24 00:00:01 +0000
 categories: Web scraping C# advientocsharp dotnet selenium
 ---
 

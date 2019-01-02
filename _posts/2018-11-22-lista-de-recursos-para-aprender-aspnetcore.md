@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "Recursos de la comunidad de ASP.NET Core"
-date:   2018-11-22 14:30:55 +0000
 comments: true
 categories: asp.net core mvc dotnet 
 ---

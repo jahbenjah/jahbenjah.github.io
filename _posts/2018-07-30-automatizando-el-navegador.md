@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "Automatizando el Navegador con C# y Selenium."
-date:   2018-07-30 22:30:55 +0000
 comments: true
 categories: C# selenium testing xunit dotnet 
 ---

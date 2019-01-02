@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "Introdución a Entity Framework Core 2.1."
-date:   2018-08-07 22:30:55 +0000
 categories: C# EntityFrameworkCore dotnet ef
 ---
 

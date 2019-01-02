@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "Introducción a ASP.NET Core"
-date:   2018-12-11 12:30:55 +0000
 comments: true
 categories: asp.net core mvc dotnet aspnetcore
 ---

@@ -24,7 +24,7 @@ namespace Using
 }
 ```
 
-Básicamente se observa que es necesario escribir el nombre calificado (incluyeno el espacio de nombre) de tipos que utiliza el programa en este caso ``System.Console.WriteLine``. Esto no es un problema para programas simples y sin sentido como este pero en un programa más complejo se utilizan varias clases lo que dificulta su escritura. Adicionalmente hay un rumor de que _los programadores somos flojos por naturaleza_ por lo que no nos gusta escribir tanto para ello esta el primer caso de uso:
+Básicamente se observa que es necesario escribir el nombre calificado (incluyendo el espacio de nombre) de tipos que utiliza el programa en este caso ``System.Console.WriteLine``. Esto no es un problema para programas simples y sin sentido como este pero en un programa más complejo se utilizan varias clases lo que dificulta su escritura. Adicionalmente hay un rumor de que _los programadores somos flojos por naturaleza_ por lo que no nos gusta escribir tanto, para ello esta el primer caso de uso:
 
 # using para importar espacios de nombres
 
@@ -117,7 +117,7 @@ namespace Using
 }
 ```
 
-> Para ver si una clase o su clase padre implementa implementa el puedes usar la característica del _Visual Studio_  -Ir a definición F12-.
+> Para ver si una clase o su clase padre implementa implementa la interfaz ``IDisposable`` puedes usar la característica del _Visual Studio_  **Ir a definición F12**.
 
 # Para llevar
 

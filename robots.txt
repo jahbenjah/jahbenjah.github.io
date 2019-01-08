@@ -1,4 +1,4 @@
-User-agent:*
- Disallow:
-
- Sitemap: https://aspnetcoremaster.com/sitemap.xml
+# Permitir "crawling" todo el contenido
+User-agent: *
+Disallow:
+Sitemap: https://aspnetcoremaster.com/sitemap.xml

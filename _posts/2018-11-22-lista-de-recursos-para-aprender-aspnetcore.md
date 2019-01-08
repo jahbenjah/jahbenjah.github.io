@@ -23,6 +23,8 @@ Lo más valioso de un framework es su comunidad y ASP.NET Core tiene una comunid
 
 # Cursos
 
+Los cursos aqui mencionados son gratuitpos o que puedes tomar el el perido de evalacion.
+
 * MVA
 * Pluralsigh
 * Linkeding 

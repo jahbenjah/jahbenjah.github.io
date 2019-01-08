@@ -92,7 +92,7 @@ Para realizarlo ejecuta en la terminal o consola los siguientes comandos. Ejecut
 Esta clase esta compuesta por 2 campos y una propiedad. En el constructor se inicializa la propiedad ```Configuration``` responsable de leer los archivos de XML y se
 inicializa el cliente SMTP con los parámetros de configuración.
 
-El método ```EnviarCorreo(string , string , string ,bool esHtlm = false)``` utiliza un paámetro opcional que define si el mensaje es HTML. Por default envia texto.
+El método ```EnviarCorreo(string , string , string ,bool esHtlm = false)``` utiliza un parámetro opcional que define si el mensaje es HTML. Por default envia texto.
 El método  ```EnviarCorreo(MailMessage)``` esta pensado para poder construir un objecto MailMessage y poder aprovechar todas las capacidades este objecto como adjuntar archivos
 
 

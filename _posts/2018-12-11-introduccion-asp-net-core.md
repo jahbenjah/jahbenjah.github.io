@@ -6,12 +6,14 @@ categories: asp.net core mvc dotnet aspnetcore
 ---
 **ASP\.NET Core** es un *framework* para desarrollo web de código abierto, ligero, modular y multiplataforma creado por Microsoft con aportes de la comunidad.
 
-Revisemos cada una de estas características:
+Como es un framework de desarrollo web ASP\.NET Core el proposito principal es generar HTML de forma dinámica. Esto lo hace mediante **Razor** que permite incluir código C# en las páginas.
+
+Revisemos cada una de las características mencionadas:
 
 **Framework de código abierto** Es algo que para muchos todavía parece increíble: 
 > [Microsoft](https://octoverse.github.com/projects) esta ente los principales contribuidores a proyectos de Código Abierto.
 
-Es posible que camino de .NET y Microsoft en el software libre haya iniciado con la liberación de la [**Especificación del Lenguaje C#**](https://www.ecma-international.org/publications/standards/Ecma-334.htm) en el 2003. Pero por ahora solo basta mencionar que todo código y documentación de ASP\.NET Core esta alojado en la más reciente adquisición de Microsoft: **Github**. Puedes explorar los detalles de cada línea de código, revisar y reportar incidencias \(*issues*\), ver el plano de ruta ,aportar con tu propio código y/o documentación.
+Es posible que camino de .NET y Microsoft en el software libre haya iniciado con la liberación de la [**Especificación del Lenguaje C#**](https://www.ecma-international.org/publications/standards/Ecma-334.htm) en el 2003. Pero por ahora solo basta mencionar que todo código y documentación de ASP\.NET Core esta alojado en la más reciente adquisición de Microsoft: **Github**. Puedes explorar los detalles de cada línea de código, revisar y reportar incidencias (**issues**), ver el plano de ruta ,aportar con tu propio código y/o documentación.
 
 Aquí la lista de repositorios relevantes para ASP.NET Core:
 
@@ -27,7 +29,7 @@ Aquí la lista de repositorios relevantes para ASP.NET Core:
 
 La última versión al momento de escribir este artículo es la 2.2.
 
-Actualmente hay 2 versiones principales con varias versiones menores y estimo que a mediados del 2019 este disponible la versión 3.0.Puedes revisar los detalles y características nuevas de cada version en el anuncio de la liberación realizado por algún miembro el equipo de desarrollo de ASP\.NET Core.
+Actualmente hay 2 versiones principales con varias versiones menores y estimo que a mediados del 2019 este disponible la versión 3.0. Puedes revisar los detalles y características nuevas de cada version en el anuncio de la liberación realizado por algún miembro el equipo de desarrollo de ASP\.NET Core.
 
 Versión | Fecha de lanzamiento|  Detalles
 --------| --------------------|-----------
@@ -37,11 +39,17 @@ Versión | Fecha de lanzamiento|  Detalles
 1.1|16 Noviembre 2016|[Announcing the Fastest ASP.NET Yet, ASP.NET Core 1.1 RTM](https://blogs.msdn.microsoft.com/webdev/2016/11/16/announcing-asp-net-core-1-1/)
 1.0|27 Junio 2016|[Announcing ASP.NET Core 1.0](https://blogs.msdn.microsoft.com/webdev/2016/06/27/announcing-asp-net-core-1-0/)
 
- Aunque es posible  crear aplicaciones con un editor de textos sencillo y la linea de comandos es probable que prefieras usar el entorno de desarrollo integrado estrella de Microsoft Visual Studio o el editor de código Visual Studio Code.
+# Entornos de desarrollo 
 
-Espera más detalles de como preparar tu entorno de desarrollo para ASP.NET Core en la siguiente entrega.
+ Aunque es posible  crear aplicaciones con la linea de comandos y un editor de textos sencillos como NotePad++, Vim  es probable que prefieras usar el entorno de desarrollo integrado. Puedes usar las siguientes opciones:
 
-* Para llevar
+1. El IDE estrella de Microsoft : [Visual Studio 2017](https://visualstudio.microsoft.com/es/) disponible para Windows y Mac La ultima versión de Visual Studio es la 2017 y esta en previo la version 2019. Este IDE es de paga en las ediciones Profesional y Enterprise pero la edición Community es gratuita para desarrolladores de software libre y estudiantes.
+
+1. El editor de código multiplataforma  [Visual Studio Code](https://code.visualstudio.com/). Es gratuito de código abierto y con soporte para muchos lenguajes mediante extensiones.
+
+3. [Rider de JetBrains](https://www.jetbrains.com/rider/): Es un IDE de paga multiplataforma de los creadores de  ReSharper, DataGrip e IntelliJ. Tienen una edición gratuita para estudiantes, profesores y proyectos de software libre.
+
+# Para llevar
 
 Dos artículos que te pueden ayudar a entender el como Microsoft comenzó a apoyar el código abierto:
 

@@ -6,7 +6,7 @@ categories: asp.net core mvc dotnet aspnetcore
 ---
 **ASP\.NET Core** es un *framework* para desarrollo web de código abierto, ligero, modular y multiplataforma creado por Microsoft con aportes de la comunidad.
 
-Como es un framework de desarrollo web ASP\.NET Core el proposito principal es generar HTML de forma dinámica. Esto lo hace mediante **Razor** que permite incluir código C# en las páginas.
+Como es un framework de desarrollo web ASP\.NET Core el proposito principal es generar HTML de forma dinámica. Esto lo hace mediante **Razor** que permite combinar el marcado en HTML con código C#.
 
 Revisemos cada una de las características mencionadas:
 
@@ -39,9 +39,11 @@ Versión | Fecha de lanzamiento|  Detalles
 1.1|16 Noviembre 2016|[Announcing the Fastest ASP.NET Yet, ASP.NET Core 1.1 RTM](https://blogs.msdn.microsoft.com/webdev/2016/11/16/announcing-asp-net-core-1-1/)
 1.0|27 Junio 2016|[Announcing ASP.NET Core 1.0](https://blogs.msdn.microsoft.com/webdev/2016/06/27/announcing-asp-net-core-1-0/)
 
-# Entornos de desarrollo 
+# Entornos de desarrollo
 
- Aunque es posible  crear aplicaciones con la linea de comandos y un editor de textos sencillos como NotePad++, Vim  es probable que prefieras usar el entorno de desarrollo integrado. Puedes usar las siguientes opciones:
+Para desarrollar aplicaciones con ASP.NET Core necesitas el [SDK de .NET Core](https://dotnet.microsoft.com/download) que puedes descargar gratuitamente ya se para Linux, Mac o Windows.Para comprobar que tienes instalado puedes ejecutar el comando `dotnet --version` en una terminal o consola.
+
+Aunque es posible  crear aplicaciones con la linea de comandos y un editor de textos sencillos como NotePad++, Vim  es probable que prefieras usar el entorno de desarrollo integrado. Puedes usar las siguientes opciones:
 
 1. El IDE estrella de Microsoft : [Visual Studio 2017](https://visualstudio.microsoft.com/es/) disponible para Windows y Mac La ultima versión de Visual Studio es la 2017 y esta en previo la version 2019. Este IDE es de paga en las ediciones Profesional y Enterprise pero la edición Community es gratuita para desarrolladores de software libre y estudiantes.
 
@@ -51,7 +53,8 @@ Versión | Fecha de lanzamiento|  Detalles
 
 # Para llevar
 
-Dos artículos que te pueden ayudar a entender el como Microsoft comenzó a apoyar el código abierto:
+Unos artículos que te pueden ayudar a entender el como Microsoft comenzó a apoyar el código abierto:
 
 1. Mads Torgersen, [How Microsoft rewrote its C# compiler in C# and made it open source](https://medium.com/microsoft-open-source-stories/how-microsoft-rewrote-its-c-compiler-in-c-and-made-it-open-source-4ebed5646f98)
 2. Beth Massi, [Building an Open Source .NET Foundation](https://medium.com/microsoft-open-source-stories/building-an-open-source-net-foundation-2fa0fb117584)
+3. Scott Hunter ,[Starting the .NET Open Source Revolution](https://medium.com/microsoft-open-source-stories/starting-the-net-open-source-revolution-e0268b02ac8a)

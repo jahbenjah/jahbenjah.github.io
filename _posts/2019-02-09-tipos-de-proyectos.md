@@ -50,4 +50,4 @@ _Aplicaciones una sola página (SPA Single Page Application)_
 
 Si usas Visual Studio puedes crear  nuevo proyecto mediante _Archivo> Nuevo Proyecto > Web > Aplicación Web ASP.NET Core_
 
-![Nuevo Proyecto ASP.NET Core]({{"/img/NuevoProyecto.PNG" | absolute_url }} "Nuevo proyecto Visual Studio")
+![Nuevo Proyecto ASP.NET Core]({{"/img/ProyectoNuevo.PNG" | absolute_url }} "Nuevo proyecto Visual Studio")

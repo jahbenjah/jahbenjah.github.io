@@ -3,6 +3,7 @@ layout: post
 title:  "Agregar iconos a un proyecto de ASP.NET Core "
 date:   2019-02-16 12:00:01 +0000
 categories: asp.net core
+image: iconos
 ---
 
 Los elementos gráficos de las aplicaciones web le dan un atractivo adicional a nuestra interfaz gráfica. Un elemento que puede mejorar significativamente la apariencia de tu sitio web son los iconos. En este tutorial te mostramos como usar agregar los iconos [Feather](https://feathericons.com/) a un proyecto de ASP.NET Core. Feather es un conjunto de 274 iconos en [SVG](https://svgontheweb.com/#svg).

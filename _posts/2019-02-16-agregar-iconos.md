@@ -56,4 +56,4 @@ Con esto ya tenemos listo todo para poder usar los iconos de Feather en nuestro 
 
 El ejemplo [Dashboard de Bootstrap 4](https://getbootstrap.com/docs/4.0/examples/dashboard/)  usar estos iconos.
 
-Puedes revisar todos los cambios realizados en el Team Explorer y veras que se han hecho: 5 archivos agregado y tres archivos modificados.
+Puedes revisar todos los cambios realizados en el Team Explorer y veras que se han hecho: 5 archivos agregados y 3 archivos modificados.

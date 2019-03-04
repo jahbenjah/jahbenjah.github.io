@@ -135,7 +135,8 @@ Connection :"database=Sakila;server=localhost;port=3306;user id=root;password=Pa
 Proveedor: MySql.Data.EntityFrameworkCore
 ```
 
-Como vemos existen gran cantidad de opciones disponibles. A continuacion enlistamos las que opciones que usaremos
+Como vemos existen gran cantidad de opciones disponibles. A continuacion enlistamos las que opciones que usaremos:
+
 |Parametro|Valor| Descripcion|
 |-------------|-----------|------------|
 |-s           | src/Sakila.ConsoleApp/Sakila.ConsoleApp.csproj|Define el proyecto de inicio |
@@ -170,8 +171,8 @@ static void Main(string[] args)
 
 ## Para llevar
 
-* Revisar el metodo `OnModelCreating` de la clase  `SakilaDbContext` aqui es donde se configura el modelo usano la API Fluida. Comparala con un modelo creado con la opción -d.
+* Revisar el método `OnModelCreating` de la clase  `SakilaDbContext` aqui es donde se configura el modelo usando la API Fluida. Comparala con un modelo creado con la opción *-d*.
 
-* Considera eliminar la cadena de conexion del método `OnModelCreating`. Es preferible usar un manejador de secretos o un archivo configuración.
+* Considera eliminar la cadena de conexión del método `OnModelCreating`. Es preferible usar un manejador de secretos o un archivo configuración.
 
 * Aprende como usar el constructor `SakilaContext(DbContextOptions<SakilaContext> options)` junto con la inyección de dependecias.

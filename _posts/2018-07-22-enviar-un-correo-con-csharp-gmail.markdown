@@ -9,7 +9,7 @@ En el desarrollo de software empresarial enviar correos electrónicos es un requ
 Actualmente existen varias biblioteca para enviar correos como SendGrid o MailKit, sin embargo en este tutorial se utiliza la clase [SmtpClient](https://docs.microsoft.com/en-us/dotnet/api/system.net.mail.smtpclient?view=netframework-4.7.2) 
 parte  de .NET Standard 2.0.
 
-![Revisando el correo electrónico]({{"/img/adult-business-businessman-1061588.jpg" | absolute_url }} "Email en negocios")
+![Revisando el correo electrónico](/img/adult-business-businessman-1061588.jpg)
 
 Este artículo representa una guía paso a paso para enviar un correo electrónico usando C# y una cuenta de Gmail.
 Se asume que tienes instalado el SDK de [.NET Core](https://www.microsoft.com/net/download) y el editor de código [Visual Studio Code](https://code.visualstudio.com/). Adicionalmente se creará una solución para poder abrir el proyecto con Visual Studio.
@@ -22,7 +22,7 @@ El caso de uso cubre está clase es : Una aplicación tiene asignada una cuenta 
 Es necesario permitir el  permitir el acceso a aplicaciones no seguras desde la configuración de Gmail tal como se describe en la 
 [documentación de Gmail](https://support.google.com/accounts/answer/6010255?hl=es-41).
 
-![alt text]({{"/img/AccesoAplicacionesMenosSeguras.PNG"|absolute_url}} "Pantalla de gmail")
+![Script Tag Helper](/img/AccesoAplicacionesMenosSeguras.PNG)
 
 La configuración necesaria para el cliente de SMTP de acuerdo a la [documentación de Gmail](https://support.google.com/mail/answer/7126229?visit_id=1-636683482170517029-2536242402&hl=es&rd=1) 
 es la siguiente:

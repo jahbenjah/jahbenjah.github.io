@@ -6,7 +6,7 @@ categories: Web scraping C# advientocsharp dotnet selenium
 
 Actualmente hay datos a montones y día con dia la información disponible en internet aumenta de forma considerable por ello cuando se requiere extraer gran cantidad de información de un sitio web es preciso ayudarse de técnicas automatizadas como el: _Web Scraping_. 
 
-![Web Scraping]({{"/img/webscraping.jpeg" | absolute_url }} "Inspección de página web")
+![Inspección de página web](/img/webscraping.jpeg)
 
 De acuerdo con la definición de Wikipedia:
 

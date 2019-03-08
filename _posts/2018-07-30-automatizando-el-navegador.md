@@ -8,7 +8,7 @@ categories: C# selenium testing xunit dotnet
 Automatiza todas las tares repetitivas que realizas en el navegador usando C# y Selenium; 
 Aquí te mostramos como automatizar el inicio de sesión de Facebook.
 
-![Controlando un títere.]({{"/img/blurred-background-dolls-fashion-935019.jpg" | absolute_url }} "Metofora de automatizacón")
+![Controlando un títere. Metáfora de automatización](/img/blurred-background-dolls-fashion-935019.jpg)
 > "Selenium es un conjunto de herramientas para automatizar navegadores web  a tráves de múltiples plataformas.
   ...Selenium puede ser controlado por múltiples lenguajes de programación y frameworks de pruebas."  
 <cite>[SeleniumHQ]()</cite>
@@ -86,7 +86,7 @@ Esta clase intenta seguir el patrón de diseño
 La clase _IniciaSesion_ contiene 3 constantes de solo lectura que permiten identificar los elementos _HTML_ de la página.. 
 Puedes obtenerlos mediante las herramientas para desarrollador del navegdor.
 
-![Herramientas de desarrollador.]({{"/img/InspecionarFacebook.PNG" | absolute_url }} "Herramientas de desarrador Firefox")
+![Herramientas de desarrador Firefox](/img/InspecionarFacebook.PNG)
 
 El constructor requiere un objeto del tipo `IWebDriver` lo que permite ejecutar las pruebas en diferentes Navegadores
 

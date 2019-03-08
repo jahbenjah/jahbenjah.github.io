@@ -8,7 +8,7 @@ image: iconos
 
 Los elementos gráficos de las aplicaciones web le dan un atractivo adicional a nuestra interfaz gráfica. Un elemento que puede mejorar significativamente la apariencia de tu sitio web son los iconos. En este tutorial te mostramos como usar agregar los iconos [Feather](https://feathericons.com/) a un proyecto de ASP.NET Core. Feather es un conjunto de 274 iconos en [SVG](https://svgontheweb.com/#svg).
 
-![Iconos de muestra]({{"/img/feather-sample.png" | absolute_url }} "Muestra de los iconos de Feather")
+![Muestra de los iconos de Feather](/img/feather-sample.png)
 
 La plantilla para crear una aplicación ASP.NET Core viene integrada con Bootstrap 4 que  precisamente desde esta versión [dejo de incluir los iconos](https://getbootstrap.com/docs/4.0/extend/icons/) y los iconos de Feather están dentro de una de las opciones recomendadas para sustituir a los que estaban incluidos en versiones anteriores de Bootstrap.
 

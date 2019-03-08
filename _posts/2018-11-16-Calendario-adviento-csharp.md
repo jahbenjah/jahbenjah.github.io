@@ -5,7 +5,7 @@ categories: C# advientocsharp
 ---
 >La idea de este calendario es muy simple: 4 semanas antes de navidad se publican diariamente 1 entrado de blog de un tema relacionado con C# por distintos autores voluntarios.
 
-![Adviento]({{"/img/adviento.jpg" | absolute_url }} "Corona de adviento")
+![Corona de adviento](/img/adviento.jpg)
 
 El año pasado fui un seguidor de [The firts C# Advent Calendar](https://crosscuttingconcerns.com/The-First-C-Advent-Calendar){:target="_blank"} liderado por [Matthew D. Groves](https://crosscuttingconcerns.com/){:target="_blank"} y creo que es una gran idea tener algo similar en la lengua de Cervantes.
 El calendario de adviento de C# en ingles fue inspirado por el [calendario de adviento de F# de Sergey Tihon](https://sergeytihon.com/2018/10/22/f-advent-calendar-in-english-2018/){:target="_blank"} que ya es una tradición desde el 2014.

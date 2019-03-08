@@ -79,7 +79,7 @@ Cuenta con una interfaz de linea de comandos  ```dotnet ef```que permite :
 2. Generar clases a partir de una base de datos existentes.
 3. Gestionar los cambios a la base de datos. 
 
-![Entity Framework Core.]({{"/img/efcoretools.PNG" | absolute_url }} "Imagen de linea de comando Entity Framework Core")
+![Imagen de linea de comando Entity Framework Core.](/img/efcoretools.PNG)
 
 
 # Versiones 

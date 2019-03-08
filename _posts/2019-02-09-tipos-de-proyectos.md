@@ -9,7 +9,7 @@ Una aplicación de ASP\.NET Core no es más que una aplicación de consola que e
 
 Todo comienza con el comando `dotnet new` por lo que es importante saber cuales son las opciones disponibles para el mismo . Invocaremos la ayuda sobre mediante la instrucción `dotnet new --help` en la consola o terminal. La salida se muestra en lo siguiente 
 
-![dotnet new --help]({{"/img/dotnetnewhelp.PNG" | absolute_url }} "Captura de pantalla del comando dotnet new --help")
+![Captura de pantalla del comando dotnet new --help](/img/dotnetnewhelp.PNG)
 
 Hay varias observaciones para esta salida:
 

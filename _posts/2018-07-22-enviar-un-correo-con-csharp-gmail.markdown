@@ -197,7 +197,8 @@ namespace EmailServiceCliente
 
 # Ejecutar
 
-Abrir la terminal en la carpeta _EmailServiceCliente_ y ejecutar ```sh
+Abrir la terminal en la carpeta _EmailServiceCliente_ y ejecutar 
+```sh
 dotnet run
 ```
 

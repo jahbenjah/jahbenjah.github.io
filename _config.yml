@@ -21,7 +21,7 @@ email: j.benjamin.camacho@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   En este sitio encontrarás artículos sobre programación usando C# ,ASP.NET Core y Entity Framework Core .
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://www.aspnetcoremaster.com/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.aspnetcoremaster.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jbenjamincmcho
 github_username:  jahbenjah
 linkedin_username: benjamin-camacho-castro
@@ -35,6 +35,7 @@ plugins:
   - jekyll-feed
   - jekyll-mentions 
   - jekyll-seo-tag
+  - jekyll-toc
 
 # Site Settings
 lang: es
@@ -73,3 +74,10 @@ defaults:
       path: ""
     values:
       lang: "es"
+
+toc:
+  min_level:        2
+  max_level:        4
+  no_toc_section_class:
+    - "bd-callout"
+    - "bd-example"

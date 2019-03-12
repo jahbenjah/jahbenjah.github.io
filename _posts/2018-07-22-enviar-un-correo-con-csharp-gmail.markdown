@@ -19,7 +19,7 @@ El caso de uso cubre está clase es : Una aplicación tiene asignada una cuenta 
 
 ## Configuración de Gmail ##
 
-Es necesario permitir el  permitir el acceso a aplicaciones no seguras desde la configuración de Gmail tal como se describe en la 
+Es necesario permitir el acceso a aplicaciones no seguras desde la configuración de Gmail tal como se describe en la 
 [documentación de Gmail](https://support.google.com/accounts/answer/6010255?hl=es-41).
 
 ![Script Tag Helper](/img/AccesoAplicacionesMenosSeguras.PNG)

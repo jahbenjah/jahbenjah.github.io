@@ -2,6 +2,7 @@
 layout: post
 title:  "Introdución a Entity Framework Core 2.1."
 categories: C# EntityFrameworkCore dotnet ef
+last_modified_at: 2019-03-11 11:30:55 +0000
 ---
 
 Entity Framework Core 2.1 es una tecnología de acceso a datos para .NET Core y .NET Framework. Es multiplataforma y de código abierto desarrollado por Microsoft con aportes de la comunidad. 
@@ -13,11 +14,11 @@ Libera al programador de escribir gran cantidad de código repetitivo.
 Está basado en convenciones muy a la _Ruby On Rails_ 
 Esperen un post sobre todas las convenciones de para EntityFramework Core El este artículo solo se hace mención del la convención para las llaves primarias.
 
-La configuración se puede hacer mediante Fluent API, Atributos
+La configuración se puede hacer mediante Fluent API o Anotaciones de Datos.
 
 ## ¿ Con que bases de datos puedo usar EntityFrameworkCore ?
 
-Tiene un modelo de Provedores lo que permite usarlo con multiples bases de datos.
+Entity Framework Core tiene un modelo de Provedores lo que permite usarlo con multiples bases de datos. Solamente es necesario instalar el paquete de Nuget correspondiente.
 
 *SqlServer
 *SQLite
@@ -42,14 +43,13 @@ Se puede utilizar con los lenguajes C# y Visual Basic.
 
 ## ¿ Con que tipos de proyectos puedo usar EntityFrameworkCore ?
 
-Cualquier tipo de proyecto de .NET Core.
-Para cualquier tipo de proyecto .NET Framework que use la version 4.6.1 o superior.
+Con cualquier tipo de proyecto de .NET Core y para cualquier tipo de proyecto .NET Framework que use la version 4.6.1 o superior.
 
-##
+## ¿Cuál es la relación entre los caracteristicas de SQL y los de C# ?
 
 SQL             | Programación orientada a objetos|  Detalles
 ----------------| ---------------------------------|-----------
-Base de datos   ||
+Base de datos   |DbContext|
 Tabla           | Clase                            |
 Columnas        | Propiedades o campos             |
 Llaves primarias||
@@ -58,6 +58,8 @@ Restricciones   ||
 Columnas calculadas   ||
 Store Procedures  ||
 Funciones  ||
+Funciones  ||
+
 
 # ¿ Que debería saber para usar Entity Framework Core ?
 
@@ -73,7 +75,7 @@ Se instala mediante paquetes de NuGet lo que lo hacen muy ligero.
 Utiliza un modelo llamado _Code Firts_ en donde se escriben las clases del dominio y a partir de ellas se crea la base de datos.
 También es posible crear un modelo a partir de una base de datos existente.
 
-Cuenta con una interfaz de linea de comandos  ```dotnet ef```que permite :
+Cuenta con una interfaz de linea de comandos  `dotnet ef` que permite :
 
 1. Crear y modificar la base de datos
 2. Generar clases a partir de una base de datos existentes.
@@ -84,10 +86,11 @@ Cuenta con una interfaz de linea de comandos  ```dotnet ef```que permite :
 
 # Versiones 
 
-La ultima version es 2.1 al momento de escribir este artículo.
+La ultima version es 2.2 al momento de actualizar este artículo. Cada liberación de una nueva versión de EF Core va acompañada de un post donde mencionan las nuevas caracteristicas de la misma.
 
 Versión | Fecha de lanzamiento|  Detalles
 --------| --------------------|-----------
+2.2     | 04 Diciembre 2018   |[Announcing Entity Framework Core 2.2](https://devblogs.microsoft.com/dotnet/announcing-entity-framework-core-2-2/)
 2.1     | 30 Mayo 2018        |[Announcing Entity Framework Core 2.1](https://blogs.msdn.microsoft.com/dotnet/2018/05/30/announcing-entity-framework-core-2-1/)
 2.0     | 14 Agosto 2017      |[Announcing Entity Framework Core 2.0](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-entity-framework-core-2-0/)
 1.1     | 16 Noviembre 2016   |[Announcing Entity Framework Core 1.1](https://blogs.msdn.microsoft.com/dotnet/2016/11/16/announcing-entity-framework-core-1-1/)
@@ -95,7 +98,7 @@ Versión | Fecha de lanzamiento|  Detalles
 
 # Principales componentes
 
-Entity framework Core utiliza los siguientes  espaciones de nombres 
+Entity framework Core utiliza los siguientes espacios de nombres 
 
 ```
 Microsoft.EntityFrameworkCore
@@ -106,26 +109,25 @@ System.ComponentModel.DataAnnotations
 Las clases principales son :
 
 ```
-DbContext<>
-DbSet<>
+DbContext
+DbSet
 ```
 
 # Ejemplo Simple: Crear una tabla en un gestor de bases de datos. 
 
-El siguiente ejemplo se crea una clase llamada ```Producto``` a partir de aquí se muestra la tabla creada en en SQL Server ,SQLite , MySql  , PostgreSQL y Firebird.
+El siguiente ejemplo se crea una clase llamada `Producto` a partir de aquí se muestra la tabla creada en en SQL Server, SQLite, MySql, PostgreSQL y Firebird.
 
 ## Proyecto
 
-Se crea un proyecto de consola con 2 clases. 
-Se crea la base de datos MySql, SqlServer , Sqlite 
+Se utilizara un proyecto de consola para mostrar el funcionamiento basico de Entity Framework Core. Se especifican los pasos para crearlo mediante la linea de comandos
 
-1. Se creara un proyecto de consola.
+1. Crear una solución dentro de la carpeta IntroEfCore
 
 ```bash
 dotnet new sln -o IntroEfCore  
 ```
 
-2. Abrir la carpeta IntroEFCore cd IntroEFCore y crear un proyecto de consola
+2. Abrir la carpeta IntroEFCore `cd IntroEFCore` y crear un proyecto de consola especificando la opcion -o para definir el directorio del proyecto.
 
  ```bash
 dotnet new console -o EFCoreSimple
@@ -140,29 +142,40 @@ dotnet sln add  EFCoreSimple/EFCoreSimple.csproj
 4. Agregar los paquetes de Nuget de Entity Framework.
 
 ```bash
-dotnet add package Microsoft.EntityFrameworkCore
-dotnet add package Microsoft.EntityFrameworkCore.Design
-dotnet add package Microsoft.EntityFrameworkCore.Relational
+dotnet add EFCoreSimple/EFCoreSimple.csproj package Microsoft.EntityFrameworkCore
+dotnet add EFCoreSimple/EFCoreSimple.csproj package Microsoft.EntityFrameworkCore.Design
+dotnet add EFCoreSimple/EFCoreSimple.csproj package Microsoft.EntityFrameworkCore.Relational
 ```
 
-5. (opcional) Si deseas probar con distintas bases de datos debes instala Instalar proveedores adicionales.
+5. (Opcional) Si deseas probar con distintas bases de datos debes instalar el paquete de nuget del proveedores correspondiente.
 
+* Para Sql Server
 ```bash
 dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+```
+* Para MySQL
+```bash
 dotnet add package Pomelo.EntityFrameworkCore.MySql
+```
+* Para SQLite
+
+```bash
 dotnet add package Microsoft.EntityFrameworkCore.Sqlite
+```
+* Para PostgresSqL
+```bash
 dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL
-dotnet add package Microsoft.EntityFrameworkCore.Relational
 ```
 
-6. Abrir Visual Studio Code. Si así lo deseas puedes continuar con Visual Studio 2017 solo debes abrir la solución 
+7. Abrir Visual Studio Code. Si así lo deseas puedes continuar con Visual Studio 2017 solo debes abrir la solución creada en  el punto 1.
 
 ```bash
  code .
 ```
+
 ## El código 
 
-1. Editar el archivo. clase POCO
+1. Agregar un archivo llamado *Producto.cs* y colocar el siguiente código.
 
 ```cs
     public class Producto
@@ -175,7 +188,7 @@ dotnet add package Microsoft.EntityFrameworkCore.Relational
     }
 ```
 
-7. Agregar DbContext
+7. Agregar un archivo llamado *ProductoContext.cs* y crear una clase que herede de `DbContext` con el siguiete código.
 
 ```cs
    public class ProductContext : DbContext
@@ -189,6 +202,11 @@ dotnet add package Microsoft.EntityFrameworkCore.Relational
         }
     }
 ```
+
+8.  Ejecutar el comando dotnet para aplicar una migrcion
+
+
+dotnet add migration
 
 # Para llevar
 

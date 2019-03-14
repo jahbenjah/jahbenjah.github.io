@@ -4,7 +4,7 @@ title:  "Enviar un correo con C# y Gmail: Windows Forms"
 comments: true
 categories: .net smtp SmptClient 
 ---
-En este tutorial te mostramos como enviar un correo desde una aplicación Windows Forms usando C# y una cuenta de Gmail con el control de acceso de aplicaciones no seguras habilitado. Si requieres más detalle de como hacerlo checa la sección *Configuración de Gmail* [Enviar un correo con C# y Gmail](2018-07-22-enviar-un-correo-con-csharp-gmail.markdown).
+En este tutorial te mostramos como enviar un correo desde una aplicación Windows Forms usando C# y una cuenta de Gmail con el control de acceso de aplicaciones no seguras habilitado. Si requieres más detalle de como hacerlo checa la sección *Configuración de Gmail* [Enviar un correo con C# y Gmail]({% post_url 2018-07-22-enviar-un-correo-con-csharp-gmail %}).
 
 Para el tutorial hacemos uso de [Visual Studio 2017](https://visualstudio.microsoft.com/es/) y asumo que cuentas con conocimientos básicos en su manejo. Si tienes alguna duda dejame un comentario.
 

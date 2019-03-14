@@ -10,7 +10,7 @@ En este tutorial te mostramos como crear la cadena de conexión para SQL Server 
 
 ![Script Tag Helper](/img/connectionstring.PNG)
 
-Para ello utilizamos la clase `ConnectionStringBuilder` que implementan los proveedores de ADO.NET. Para cada proveedor de ADO.NET es necesario instalar el paquete de Nuget correspondiente e importar el espacio de nombres con la instrucción [using](2019-01-03-cuatro-formas-de-usar-la-palabra-clave-using-de-csharp.md).
+Para ello utilizamos la clase `ConnectionStringBuilder` que implementan los proveedores de ADO.NET. Para cada proveedor de ADO.NET es necesario instalar el paquete de Nuget correspondiente e importar el espacio de nombres con la instrucción [using]({% post_url 2019-01-03-cuatro-formas-de-usar-la-palabra-clave-using-de-csharp %}).
 
 Es importante mencionar que para cada base de datos hay una gran cantidad de parámetros que se pueden agregar muchos de ellos tienes un nombre que permite aclarar su función pero de otros es necesario que veas la documentación del proveedor . En Visual Studio o Visual Studio Code puedes ver los parámetros que contiene cada base de datos usando Intellisense o Presionando F12 para ir a la definición del tipo.
 

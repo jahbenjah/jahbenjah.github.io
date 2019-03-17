@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Lista de correo
+title: Subscribete
 description: Subscibete a nuestra lista de correo para notificarte cuando tengamos un nuevo artículo. 
 ---
 <!-- Begin Mailchimp Signup Form -->

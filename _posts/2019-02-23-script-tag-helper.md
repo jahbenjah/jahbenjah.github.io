@@ -3,7 +3,10 @@ layout: post
 title:  "Script Tag Helper"
 date:   2019-02-23 12:00:01 +0000
 categories: asp.net core
-image: scripttaghelper
+image:
+  path: /img/og-scripttaghelper.jpg
+  height: 331
+  width: 632
 ---
 
 El Script Tag Helper tiene 3 casos de uso: el primero ayuda generar dinámicamente el atributo **src** del elemento [script](https://www.w3.org/TR/html5/semantics-scripting.html), el segundo permite usar un ubicación alternativa en caso de que la del script principal no éste disponible y el tercero para impedir que los scripts sean tomados de la memoria cache del navegador (Cache busting).

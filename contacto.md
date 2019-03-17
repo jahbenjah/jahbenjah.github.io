@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Contacto
+title: Lista de correo
+description: Subscibete a nuestra lista de correo para notificarte cuando tengamos un nuevo artículo. 
 ---
 <!-- Begin Mailchimp Signup Form -->
 <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">

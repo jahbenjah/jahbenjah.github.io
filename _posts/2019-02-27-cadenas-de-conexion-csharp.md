@@ -3,7 +3,10 @@ layout: post
 title:  "Crear cadenas de conexión con C#"
 date:   2019-02-27 12:00:01 +0000
 categories: connectionstring
-image: connectionstring
+image:
+  path: /img/og-connectionstring.jpg
+  height: 358
+  width: 683
 ---
 
 En este tutorial te mostramos como crear la cadena de conexión para SQL Server , MYSQL, Oracle, Firebird y Sqlite usando C# y un proyecto de consola de .NET Core.

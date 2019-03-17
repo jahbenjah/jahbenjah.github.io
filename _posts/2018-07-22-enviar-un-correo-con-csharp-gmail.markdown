@@ -17,6 +17,11 @@ Se asume que tienes instalado el SDK de [.NET Core](https://www.microsoft.com/ne
 Se creará una biblioteca de clases que tiene como única función enviar correos. Después se usa esta clase en un proyecto de consola. Esta clase se puede usar en cualquier otro tipo de proyectos que soporte .NET Standard.
 El caso de uso cubre está clase es : Una aplicación tiene asignada una cuenta de correo con la cuál envía todos los correos al destinatario especificado.
 
+# Actualización
+
+Si requieres enviar un correo en usando el .NET Framework en lugar de .NET Core puedes ver mi articulo [Enviar un correo con C# y Gmail: Windows Forms]({% post_url 2019-03-11-enviar-un-correo-con-csharp-gmail-winforms %}). Aquí se utiliza el archivo de configuración *App.config* para guardar los datos de la cuenta de gmail
+Si usas un proyecto web puedes usarlo mismo en el *Web.config*.
+
 ## Configuración de Gmail ##
 
 Es necesario permitir el acceso a aplicaciones no seguras desde la configuración de Gmail tal como se describe en la 

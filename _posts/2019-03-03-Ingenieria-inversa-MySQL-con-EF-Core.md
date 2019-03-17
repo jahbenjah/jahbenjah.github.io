@@ -1,16 +1,20 @@
 ---
 layout: post
-title:  "Ingeniería inversa MySQL con EF Core"
+title:  "Entity Framework Core con MySql"
 date:   2019-03-03 12:00:01 +0000
 categories: entity framework core
-image: sakila
+image:
+  path: /img/og-sakila.jpg
+  height: 532
+  width: 1016
+author: Benjamin Camacho
 ---
 
 En este tutorial usamos la Interfaz de Linea de Comandos `dotnet ef dbcontext scaffold` para generar una modelo de _Entity Framework Core_ para base de datos *sakila* de MySQL con un proyecto que sigue la arquitectura limpia. Usamos la version de 5.7 MySQL y la version 2.2 de .NET Core.
 
 ## Cadena de conexión para MySQL
 
-Lo primero que necesitamos es la cadena de conexión para MySQL. Si tienes duda como crearla puedes ver mi post [sobre cadenas de conexión con C#](2019-02-27-cadenas-de-conexion-csharp.md) para mas detalles.
+Lo primero que necesitamos es la cadena de conexión para MySQL. Si tienes duda como crearla puedes ver mi post [sobre cadenas de conexión con C#]({% post_url 2019-02-27-cadenas-de-conexion-csharp %}) para más detalles.
 
 ```
 server=localhost;database=Sakila;port=3306;user id=root;password=TuContraseña." 
@@ -95,7 +99,7 @@ dotnet add src\Sakila.ConsoleApp\Sakila.ConsoleApp.csproj reference src\Sakila.I
 
 Hasta aquí tenemos liso la estructura del proyecto. Si usas Visual Studio puedes usar la interfaz gráfica para crear estos proyectos.
 
-## Ejecutar la ingeniería inversa
+## Generando el modelo de clases en C#
 
 Para generar el modelo de clases de C# de la base de sakila usaremos el comando `dotnet ef dbcontext scaffold` por lo que es importante conocer las opciones disponibles  para ello ejecutamos `dotnet ef dbcontext scaffold --help` para obtener la siguiente salida:
 

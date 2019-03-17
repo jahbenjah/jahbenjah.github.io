@@ -27,6 +27,17 @@ github_username:  jahbenjah
 linkedin_username: benjamin-camacho-castro
 # youtube_username: jahbenjah
 
+twitter:
+  username: jbenjamincmcho
+  card: summary
+
+logo: /og-image.jpg
+
+social:
+  name: csharpmx
+  links:
+    - https://www.facebook.com/csharpmx/
+
 # Build settings
 markdown: kramdown
 theme: minima
@@ -35,7 +46,6 @@ plugins:
   - jekyll-feed
   - jekyll-mentions 
   - jekyll-seo-tag
-  - jekyll-toc
 
 # Site Settings
 lang: es
@@ -74,6 +84,10 @@ defaults:
       path: ""
     values:
       lang: "es"
+      image:
+        path: /og-image.jpg
+        height: 347
+        width: 663
 
 toc:
   min_level:        2

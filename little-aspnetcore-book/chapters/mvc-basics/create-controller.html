@@ -74,7 +74,15 @@
     
     <link rel="prev" href="./" />
     
-
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130293099-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-130293099-1');
+    </script>
     </head>
     <body>
         
@@ -669,7 +677,7 @@ localhost:5000/Home/Contact -&gt; Contact()
 <p>Los m&#xE9;todos de acci&#xF3;n pueden regresar vistas, datos JSON, o c&#xF3;digos de estatus HTTP como <code>200 OK</code> y <code>404 Not Found</code>.</p>
 <p>El tipo de retorno <code>IActionResult</code> te da la flexibilidad de regresar cualquiera de estos desde una acci&#xF3;n. Es una buena pr&#xE1;ctica mantener los controladores tan ligeros como sea posible. En este caso, el controlador ser&#xE1; responsable de obtener la lista de tareas desde la base de datos, poniendo estas tareas en un modelo que la vista pueda entender, y enviara la vista de regreso al navegador del usuario.</p>
 <p>Antes de que puedas escribir el resto del c&#xF3;digo del controlador, necesitas crear un modelo y una vista.</p>
-<script src="_gitbook_plugin_analytics.js"></script>
+ 
                                 
                                 </section>
                             

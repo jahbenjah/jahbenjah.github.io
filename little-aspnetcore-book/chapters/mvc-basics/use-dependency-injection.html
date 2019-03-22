@@ -74,7 +74,16 @@
     
     <link rel="prev" href="add-service-class.html" />
     
-
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130293099-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-130293099-1');
+    </script>
     </head>
     <body>
         
@@ -701,7 +710,7 @@ El &#xFA;nico no tiene que actualizar la firma del m&#xE9;todo <code>Index</code
 <p>Esta linea le especifica a ASP.NET Core que cada que se solicite <code>ITodoItemService</code> en un constructor deber&#xE1; usar la clase <code>FakeTodoItemService</code>.</p>
 <p><code>AddSingleton</code> agrega un servicio al contenedor de servicios como un <strong>singleton</strong>. Esto significa que se crear&#xE1; una sola instancia del <code>FakeTodoItemService</code> y se reutilizara dondequiera que el servicio es solicitado. Despu&#xE9;s, cuando escribas una clase de servicio diferente, una que interactu&#xE1; con la base de datos usaras una aproximaci&#xF3;n diferente llamada (<strong>scoped</strong>), Te explicar&#xE9; porque en el cap&#xED;tulo <em>Usando una base de datos</em>.</p>
 <p>!Esto es todo! Cuando una petici&#xF3;n llega y es dirigida al <code>TodoController</code>, ASP.NET Core buscar&#xE1; en los servicios disponibles y autom&#xE1;ticamente regresara el <code>FakeTodoItemService</code> cuando el controlador requiere por un <code>ITodoItemService</code>. Debido a que los servicios son &quot;inyectados&quot; desde el contenedor de servicios, este patr&#xF3;n es llamado <strong>inyecci&#xF3;n de dependencias</strong>.</p>
-<script src="_gitbook_plugin_analytics.js"></script>
+ 
                                 
                                 </section>
                             

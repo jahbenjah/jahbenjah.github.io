@@ -74,7 +74,16 @@
     
     <link rel="prev" href="./" />
     
-
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130293099-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-130293099-1');
+    </script>
     </head>
     <body>
         
@@ -649,7 +658,7 @@
 </code></pre>
 <p>Este c&#xF3;digo agrega el <code>ApplicationDbContext</code> al contenedor de servicio, y le dice a Entity Framework Core que use el proveedor de base de datos SQLite, con la cadena de conexi&#xF3;n de la configuraci&#xF3;n (<code>appsettings.json</code>).</p>
 <p>Como puedes ver, <code>dotnet new</code> &#xA1;crea muchas cosas por ti! La base de datos est&#xE1; configurada y lista para ser utilizada. Sin embargo, no tiene tablas para almacenar elementos de tareas pendientes. Para almacenar sus entidades <code>TodoItem</code>, necesitar&#xE1; actualizar el contexto y migrar la base de datos.</p>
-<script src="_gitbook_plugin_analytics.js"></script>
+ 
                                 
                                 </section>
                             

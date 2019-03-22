@@ -74,7 +74,15 @@
     
     <link rel="prev" href="create-view.html" />
     
-
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130293099-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-130293099-1');
+    </script>
     </head>
     <body>
         
@@ -701,7 +709,7 @@
 }
 </code></pre>
 <p>La clase <code>FakeTodoItemService</code> implementa la interfaz <code>ITodoItemService</code> pero siempre regresa el mismo arreglo de dos <code>TodoItem</code>. Usaras esta para poblar el controlador y la vista y despu&#xE9;s agregaras c&#xF3;digo de bases de datos real en <em>Usando una base de datos</em>.</p>
-<script src="_gitbook_plugin_analytics.js"></script>
+ 
                                 
                                 </section>
                             

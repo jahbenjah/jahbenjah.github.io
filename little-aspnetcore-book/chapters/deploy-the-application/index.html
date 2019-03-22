@@ -74,7 +74,15 @@
     
     <link rel="prev" href="../automated-testing/integration-testing.html" />
     
-
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130293099-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-130293099-1');
+    </script>
     </head>
     <body>
         
@@ -653,7 +661,7 @@
 <p>ASP.NET Core incluye un servidor web r&#xE1;pido y ligero llamado Kestrel. Es el servidor que ha estado usando cada vez que ejecut&#xF3; <code>dotnet run</code> y naveg&#xF3; a <code>http://localhost:5000</code>. Cuando implementas tu aplicaci&#xF3;n en un entorno de producci&#xF3;n, a&#xFA;n utilizar&#xE1; Kestrel detr&#xE1;s de escena. Sin embargo, se recomienda que coloque un proxy inverso delante de Kestrel, porque Kestrel a&#xFA;n no tiene equilibrio de carga y otras caracter&#xED;sticas que tienen los servidores web m&#xE1;s maduros.</p>
 <p>En Linux (y en los contenedores Docker), puede usar Nginx o el servidor web Apache para recibir solicitudes entrantes de Internet y enrutarlas a su aplicaci&#xF3;n alojada con Kestrel. Si est&#xE1;s en Windows, IIS hace lo mismo.</p>
 <p>Si est&#xE1; utilizando Azure para alojar su aplicaci&#xF3;n, todo esto se hace autom&#xE1;ticamente. Cubrir&#xE9; la configuraci&#xF3;n de Nginx como un proxy inverso en la secci&#xF3;n de Docker.</p>
-<script src="_gitbook_plugin_analytics.js"></script>
+ 
                                 
                                 </section>
                             

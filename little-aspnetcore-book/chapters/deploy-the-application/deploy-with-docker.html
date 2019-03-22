@@ -1,0 +1,831 @@
+
+<!DOCTYPE HTML>
+<html lang="es" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Desplegando con Docker · El pequeño libro de ASP.NET Core</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Nate Barbettini">
+        <meta name="identifier" content="978-1-387-75615-5" scheme="ISBN">
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-forkmegithub/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../conclusion/" />
+    
+    
+    <link rel="prev" href="deploy-to-azure.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Escribe para buscar" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../your-first-application/">
+            
+                <a href="../your-first-application/">
+            
+                    
+                    Tú primera aplicación
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../your-first-application/get-the-sdk.html">
+            
+                <a href="../your-first-application/get-the-sdk.html">
+            
+                    
+                    Consigue el SDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../your-first-application/hello-world-in-csharp.html">
+            
+                <a href="../your-first-application/hello-world-in-csharp.html">
+            
+                    
+                    Hola Mundo en C#
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../your-first-application/create-aspnetcore-project.html">
+            
+                <a href="../your-first-application/create-aspnetcore-project.html">
+            
+                    
+                    Crear un proyecto de ASP.NET Core
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../mvc-basics/">
+            
+                <a href="../mvc-basics/">
+            
+                    
+                    Fundamentos de MVC
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../mvc-basics/create-controller.html">
+            
+                <a href="../mvc-basics/create-controller.html">
+            
+                    
+                    Crear un controlador
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../mvc-basics/create-models.html">
+            
+                <a href="../mvc-basics/create-models.html">
+            
+                    
+                    Crear modelos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../mvc-basics/create-view.html">
+            
+                <a href="../mvc-basics/create-view.html">
+            
+                    
+                    Crear una vista
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../mvc-basics/add-service-class.html">
+            
+                <a href="../mvc-basics/add-service-class.html">
+            
+                    
+                    Agregar una clase de servicio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../mvc-basics/use-dependency-injection.html">
+            
+                <a href="../mvc-basics/use-dependency-injection.html">
+            
+                    
+                    Usar inyección de dependencias
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../mvc-basics/finish-controller.html">
+            
+                <a href="../mvc-basics/finish-controller.html">
+            
+                    
+                    Terminando el controlador
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../mvc-basics/update-the-layout.html">
+            
+                <a href="../mvc-basics/update-the-layout.html">
+            
+                    
+                    Actualizar la plantilla
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../add-external-packages/">
+            
+                <a href="../add-external-packages/">
+            
+                    
+                    Agregando paquetes externos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../use-a-database/">
+            
+                <a href="../use-a-database/">
+            
+                    
+                    Usando una base de datos
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../use-a-database/connect-to-a-database.html">
+            
+                <a href="../use-a-database/connect-to-a-database.html">
+            
+                    
+                    Conectarse a una base de datos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../use-a-database/update-context.html">
+            
+                <a href="../use-a-database/update-context.html">
+            
+                    
+                    Actualizando el contexto
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../use-a-database/create-migration.html">
+            
+                <a href="../use-a-database/create-migration.html">
+            
+                    
+                    Crear una migración
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../use-a-database/create-service-class.html">
+            
+                <a href="../use-a-database/create-service-class.html">
+            
+                    
+                    Crear una nueva clase de servicio
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../add-more-features/">
+            
+                <a href="../add-more-features/">
+            
+                    
+                    Agregando más características
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../add-more-features/add-todo-items.html">
+            
+                <a href="../add-more-features/add-todo-items.html">
+            
+                    
+                    Agregar nuevas tareas
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../add-more-features/complete-with-checkbox.html">
+            
+                <a href="../add-more-features/complete-with-checkbox.html">
+            
+                    
+                    Completar las tareas con una casilla de verificación
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../security-and-identity/">
+            
+                <a href="../security-and-identity/">
+            
+                    
+                    Seguridad e Identidad
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../security-and-identity/require-authentication.html">
+            
+                <a href="../security-and-identity/require-authentication.html">
+            
+                    
+                    Requerir autenticación
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../security-and-identity/using-identity-in-the-application.html">
+            
+                <a href="../security-and-identity/using-identity-in-the-application.html">
+            
+                    
+                    Usando identidad en la aplicación
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../security-and-identity/authorization-with-roles.html">
+            
+                <a href="../security-and-identity/authorization-with-roles.html">
+            
+                    
+                    Autorización con roles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../security-and-identity/more-resources.html">
+            
+                <a href="../security-and-identity/more-resources.html">
+            
+                    
+                    Más recursos
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../automated-testing/">
+            
+                <a href="../automated-testing/">
+            
+                    
+                    Pruebas automáticas
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../automated-testing/unit-testing.html">
+            
+                <a href="../automated-testing/unit-testing.html">
+            
+                    
+                    Pruebas unitarias
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../automated-testing/integration-testing.html">
+            
+                <a href="../automated-testing/integration-testing.html">
+            
+                    
+                    Pruebas de integración
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Desplegando la aplicación
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="deploy-to-azure.html">
+            
+                <a href="deploy-to-azure.html">
+            
+                    
+                    Desplegando en Azure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9.2" data-path="deploy-with-docker.html">
+            
+                <a href="deploy-with-docker.html">
+            
+                    
+                    Desplegando con Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../conclusion/">
+            
+                <a href="../conclusion/">
+            
+                    
+                    Conclusión
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Publicado con GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Desplegando con Docker</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="desplegando-con-docker"><a name="desplegando-con-docker" class="plugin-anchor" href="#desplegando-con-docker"><i class="fa fa-link" aria-hidden="true"></i></a>Desplegando con Docker</h2>
+<p>Si no est&#xE1; utilizando una plataforma como Azure, las tecnolog&#xED;as de contenedorizaci&#xF3;n como Docker pueden facilitar la implementaci&#xF3;n de aplicaciones web en sus propios servidores. En lugar de dedicar tiempo a configurar un servidor con las dependencias que necesita para ejecutar su aplicaci&#xF3;n, copiar archivos y reiniciar procesos, simplemente puede crear una imagen de Docker que describa todo lo que su aplicaci&#xF3;n necesita para ejecutar y girarla como un contenedor en cualquier Docker. anfitri&#xF3;n.</p>
+<p>Docker tambi&#xE9;n puede hacer que escalar su aplicaci&#xF3;n en m&#xFA;ltiples servidores sea m&#xE1;s f&#xE1;cil. Una vez que tenga una imagen, usarla para crear 1 contenedor es el mismo proceso que crear 100 contenedores.</p>
+<p>Antes de comenzar, necesita tener instalada la CLI de Docker en su m&#xE1;quina de desarrollo. Busque &quot;get docker for (mac / windows / linux)&quot; y siga las instrucciones en el sitio web oficial de Docker. Puedes verificar que est&#xE1; instalado correctamente con</p>
+<pre><code>docker version
+</code></pre><h3 id="a&#xF1;adir-un-archivo-docker"><a name="a&#xF1;adir-un-archivo-docker" class="plugin-anchor" href="#a&#xF1;adir-un-archivo-docker"><i class="fa fa-link" aria-hidden="true"></i></a>A&#xF1;adir un archivo docker</h3>
+<p>Lo primero que necesitar&#xE1; es un Dockerfile, que es como una receta que le dice a Docker lo que su aplicaci&#xF3;n necesita para construir y ejecutar.</p>
+<p>Cree un archivo llamado <code>Dockerfile</code> (sin extensi&#xF3;n) en la carpeta ra&#xED;z, nivel superior <code>AspNetCoreTodo</code>. &#xC1;brelo en tu editor favorito. Escribe la siguiente l&#xED;nea:</p>
+<pre><code class="lang-dockerfile"><span class="hljs-keyword">FROM</span> microsoft/dotnet:<span class="hljs-number">2.0</span>-sdk AS build
+</code></pre>
+<p>Esto le dice a Docker que use la imagen <code>microsoft/dotnet:2.0-sdk</code> como punto de partida. Esta imagen es publicada por Microsoft y contiene las herramientas y dependencias que necesita para ejecutar <code>dotnet build</code> y compilar su aplicaci&#xF3;n. Al utilizar esta imagen preconstruida como punto de partida, Docker puede optimizar la imagen producida para su aplicaci&#xF3;n y mantenerla peque&#xF1;a.</p>
+<p>A continuaci&#xF3;n, agregue esta l&#xED;nea:</p>
+<pre><code class="lang-dockerfile"><span class="hljs-keyword">COPY</span> <span class="bash">AspNetCoreTodo/*.csproj ./app/AspNetCoreTodo/
+</span></code></pre>
+<p>El comando <code>COPY</code> copia el archivo de proyecto <code>.csproj</code> en la imagen en la ruta <code>/app/AspNetCoreTodo/</code>. Tenga en cuenta que todav&#xED;a no se ha copiado en la imagen ninguno del c&#xF3;digo real (archivos <code>.cs</code>). Ver&#xE1;s por qu&#xE9; en un minuto.</p>
+<pre><code class="lang-dockerfile"><span class="hljs-keyword">WORKDIR</span> <span class="bash">/app/AspNetCoreTodo
+</span><span class="hljs-keyword">RUN</span> <span class="bash">dotnet restore
+</span></code></pre>
+<p><code>WORKDIR</code> es el equivalente de Docker de<code>cd</code>. Esto significa que cualquier comando ejecutado a continuaci&#xF3;n se ejecutar&#xE1; desde el directorio <code>/ app / AspNetCoreTodo</code> que el comando<code>COPY</code> cre&#xF3; en el &#xFA;ltimo paso.</p>
+<p>Ejecutar el comando <code>dotnet restore</code> restaura los paquetes NuGet que necesita la aplicaci&#xF3;n, definidos en el archivo <code>.csproj</code>. Al restaurar los paquetes dentro de la imagen <strong>antes</strong> agregando el resto del c&#xF3;digo, Docker puede almacenar en cach&#xE9; los paquetes restaurados. Luego, si realiza cambios de c&#xF3;digo (pero no cambia los paquetes definidos en el archivo de proyecto), la reconstrucci&#xF3;n de la imagen de Docker ser&#xE1; s&#xFA;per r&#xE1;pida.</p>
+<p>Ahora es el momento de copiar el resto del c&#xF3;digo y compilar la aplicaci&#xF3;n:</p>
+<pre><code class="lang-dockerfile"><span class="hljs-keyword">COPY</span> <span class="bash">AspNetCoreTodo/. ./AspNetCoreTodo/
+</span><span class="hljs-keyword">RUN</span> <span class="bash">dotnet publish -o out /p:PublishWithAspNetCoreTargetManifest=<span class="hljs-string">&quot;false&quot;</span>
+</span></code></pre>
+<p>El comando <code>dotnet publish</code> compila el proyecto, y el indicador<code>-o out</code> coloca los archivos compilados en un directorio llamado <code>out</code>.</p>
+<p>Estos archivos compilados se utilizar&#xE1;n para ejecutar la aplicaci&#xF3;n con los &#xFA;ltimos comandos:</p>
+<pre><code class="lang-dockerfile"><span class="hljs-keyword">FROM</span> microsoft/dotnet:<span class="hljs-number">2.0</span>-runtime AS runtime
+<span class="hljs-keyword">ENV</span> ASPNETCORE_URLS http://+:<span class="hljs-number">80</span>
+WORKDIR /app
+<span class="hljs-keyword">COPY</span> <span class="bash">--from=build /app/AspNetCoreTodo/out ./
+</span><span class="hljs-keyword">ENTRYPOINT</span> <span class="bash">[<span class="hljs-string">&quot;dotnet&quot;</span>, <span class="hljs-string">&quot;AspNetCoreTodo.dll&quot;</span>]
+</span></code></pre>
+<p>El comando <code>FROM</code> se usa nuevamente para seleccionar una imagen m&#xE1;s peque&#xF1;a que solo tiene las dependencias necesarias para ejecutar la aplicaci&#xF3;n. El comando <code>ENV</code> se usa para establecer variables de entorno en el contenedor, y la variable de entorno<code>ASPNETCORE_URLS</code> le dice a ASP.NET Core a qu&#xE9; interfaz de red y puerto debe enlazarse (en este caso, el puerto 80).</p>
+<p>El comando <code>ENTRYPOINT</code> permite a Docker saber que el contenedor debe iniciarse como un ejecutable ejecutando<code>dotnet AspNetCoreTodo.dll</code>. Esto le dice a <code>dotnet</code> que inicie su aplicaci&#xF3;n desde el archivo compilado creado por<code>dotnet publish</code> anteriormente. (Cuando haces <code>dotnet run</code> durante el desarrollo, est&#xE1;s logrando lo mismo en un solo paso).</p>
+<p>El Dockerfile completo se ve as&#xED;:</p>
+<p><strong>Dockerfile</strong></p>
+<pre><code class="lang-dockerfile"><span class="hljs-keyword">FROM</span> microsoft/dotnet:<span class="hljs-number">2.0</span>-sdk AS build
+<span class="hljs-keyword">COPY</span> <span class="bash">AspNetCoreTodo/*.csproj ./app/AspNetCoreTodo/
+</span><span class="hljs-keyword">WORKDIR</span> <span class="bash">/app/AspNetCoreTodo
+</span><span class="hljs-keyword">RUN</span> <span class="bash">dotnet restore
+</span>
+<span class="hljs-keyword">COPY</span> <span class="bash">AspNetCoreTodo/. ./
+</span><span class="hljs-keyword">RUN</span> <span class="bash">dotnet publish -o out /p:PublishWithAspNetCoreTargetManifest=<span class="hljs-string">&quot;false&quot;</span>
+</span>
+<span class="hljs-keyword">FROM</span> microsoft/dotnet:<span class="hljs-number">2.0</span>-runtime AS runtime
+<span class="hljs-keyword">ENV</span> ASPNETCORE_URLS http://+:<span class="hljs-number">80</span>
+WORKDIR /app
+<span class="hljs-keyword">COPY</span> <span class="bash">--from=build /app/AspNetCoreTodo/out ./
+</span><span class="hljs-keyword">ENTRYPOINT</span> <span class="bash">[<span class="hljs-string">&quot;dotnet&quot;</span>, <span class="hljs-string">&quot;AspNetCoreTodo.dll&quot;</span>]
+</span></code></pre>
+<h3 id="crear-una-imagen"><a name="crear-una-imagen" class="plugin-anchor" href="#crear-una-imagen"><i class="fa fa-link" aria-hidden="true"></i></a>Crear una imagen</h3>
+<p>Aseg&#xFA;rese de que Dockerfile est&#xE9; guardado y luego use <code>docker build</code> para crear una imagen:</p>
+<pre><code>docker build -t aspnetcoretodo .
+</code></pre><p>&#xA1;No te pierdas el per&#xED;odo final! Eso le dice a Docker que busque un Dockerfile en el directorio actual.</p>
+<p>Una vez creada la imagen, puede ejecutar <code>docker images</code> para listar todas las im&#xE1;genes disponibles en su m&#xE1;quina local. Para probarlo en un contenedor, ejecute</p>
+<pre><code>docker run --name aspnetcoretodo_sample --rm -it -p 8080:80 aspnetcoretodo
+</code></pre><p>El indicador <code>-it</code> le dice a Docker que ejecute el contenedor en modo interactivo (dando salida al terminal, en lugar de ejecutarse en segundo plano). Cuando quieras detener el contenedor, presiona Control-C.</p>
+<p>&#xBF;Recuerda la variable <code>ASPNETCORE_URLS</code> que le dijo a ASP.NET Core que escuche en el puerto 80? La opci&#xF3;n <code>-p 8080: 80</code> le dice a Docker que asigne el puerto 8080 en <em>su</em> m&#xE1;quina al <em>puerto</em> del contenedor 80. Abra su navegador y navegue a <a href="http://localhost:8080" target="_blank">http://localhost:8080</a> para ver la aplicaci&#xF3;n que se ejecuta en el contenedor !</p>
+<h3 id="configurar-nginx"><a name="configurar-nginx" class="plugin-anchor" href="#configurar-nginx"><i class="fa fa-link" aria-hidden="true"></i></a>Configurar Nginx</h3>
+<p>Al principio de este cap&#xED;tulo, mencion&#xE9; que deber&#xED;a usar un proxy inverso como Nginx para enviar las solicitudes a Kestrel. Tambi&#xE9;n puedes usar Docker para esto.</p>
+<p>La arquitectura general constar&#xE1; de dos contenedores: un contenedor Nginx que escucha en el puerto 80 y reenv&#xED;a las solicitudes al contenedor que acaba de construir y aloja su aplicaci&#xF3;n con Kestrel.</p>
+<p>El contenedor Nginx necesita su propio archivo Docker. Para evitar que entre en conflicto con el Dockerfile que acaba de crear, cree un nuevo directorio en la ra&#xED;z de la aplicaci&#xF3;n web:</p>
+<pre><code>mkdir nginx
+</code></pre><p>Crea un nuevo Dockerfile y agrega estas l&#xED;neas</p>
+<p><strong>nginx/Dockerfile</strong></p>
+<pre><code class="lang-dockerfile"><span class="hljs-keyword">FROM</span> nginx
+<span class="hljs-keyword">COPY</span> <span class="bash">nginx.conf /etc/nginx/nginx.conf
+</span></code></pre>
+<p>Next, create an <code>nginx.conf</code> file:</p>
+<p><strong>nginx/nginx.conf</strong></p>
+<pre><code>events { worker_connections 1024; }
+
+http {
+    server {
+        listen 80;
+        location / {
+          proxy_pass http://kestrel:80;
+          proxy_http_version 1.1;
+          proxy_set_header Upgrade $http_upgrade;
+          proxy_set_header Connection &apos;keep-alive&apos;;
+          proxy_set_header Host $host;
+          proxy_cache_bypass $http_upgrade;
+        }
+    }
+}
+</code></pre><p>Este archivo de configuraci&#xF3;n le dice a Nginx que haga proxy de las solicitudes entrantes a <code>http://kestrel:80</code>. (Ver&#xE1;s por qu&#xE9; <code>kestrel</code> funciona como nombre de host en un momento).</p>
+<blockquote>
+<p>Cuando implementa su aplicaci&#xF3;n en un entorno de producci&#xF3;n, debe agregar la directiva <code>server_name</code> y validar y restringir el encabezado del host a valores buenos conocidos. Para m&#xE1;s informaci&#xF3;n, ver:</p>
+<p><a href="https://github.com/aspnet/Announcements/issues/295" target="_blank">https://github.com/aspnet/Announcements/issues/295</a></p>
+</blockquote>
+<h3 id="set-up-docker-compose"><a name="set-up-docker-compose" class="plugin-anchor" href="#set-up-docker-compose"><i class="fa fa-link" aria-hidden="true"></i></a>Set up Docker Compose</h3>
+<p>Aqu&#xED; hay un archivo m&#xE1;s para crear. Arriba en el directorio ra&#xED;z, crea <code>docker-compose.yml</code>:</p>
+<p><strong>docker-compose.yml</strong></p>
+<pre><code class="lang-yaml"><span class="hljs-attr">nginx:</span>
+<span class="hljs-attr">    build:</span> ./nginx
+<span class="hljs-attr">    links:</span>
+<span class="hljs-attr">        - kestrel:</span>kestrel
+<span class="hljs-attr">    ports:</span>
+<span class="hljs-bullet">        -</span> <span class="hljs-string">&quot;80:80&quot;</span>
+<span class="hljs-attr">kestrel:</span>
+<span class="hljs-attr">    build:</span> .
+<span class="hljs-attr">    ports:</span>
+<span class="hljs-bullet">        -</span> <span class="hljs-string">&quot;80&quot;</span>
+</code></pre>
+<p>Docker Compose es una herramienta que te ayuda a crear y ejecutar aplicaciones de m&#xFA;ltiples contenedores. Este archivo de configuraci&#xF3;n define dos contenedores: <code>nginx</code> de la receta <code>./Nginx/Dockerfile</code>, y <code>kestrel</code> de la receta <code>./Dockerfile</code>. Los contenedores est&#xE1;n expl&#xED;citamente vinculados entre s&#xED; para que puedan comunicarse.</p>
+<p>Puede intentar girar toda la aplicaci&#xF3;n multi-contenedor ejecutando:</p>
+<pre><code>docker-compose up
+</code></pre><p>Intente abrir un navegador y navegue a <a href="http://localhost" target="_blank">http://localhost</a> (puerto 80, no 8080). Nginx escucha en el puerto 80 (el puerto HTTP predeterminado) y env&#xED;a solicitudes a su aplicaci&#xF3;n ASP.NET Core alojada por Kestrel.</p>
+<h3 id="configurar-un-servidor-docker"><a name="configurar-un-servidor-docker" class="plugin-anchor" href="#configurar-un-servidor-docker"><i class="fa fa-link" aria-hidden="true"></i></a>Configurar un servidor Docker</h3>
+<p>Las instrucciones de configuraci&#xF3;n espec&#xED;ficas est&#xE1;n fuera del alcance de este libro, pero se puede usar cualquier versi&#xF3;n moderna de Linux (como Ubuntu) para configurar un host Docker. Por ejemplo, podr&#xED;a crear una m&#xE1;quina virtual con Amazon EC2 e instalar el servicio Docker. Puede buscar &quot;amazon ec2 setup up docker&quot; (por ejemplo) para obtener instrucciones.</p>
+<p>Me gusta usar DigitalOcean porque han hecho que sea muy f&#xE1;cil comenzar. DigitalOcean tiene una m&#xE1;quina virtual Docker pre-construida y tutoriales detallados para que Docker est&#xE9; en funcionamiento (busque &quot;docker digitalocean&quot;).</p>
+<script src="_gitbook_plugin_analytics.js"></script>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="deploy-to-azure.html" class="navigation navigation-prev " aria-label="Previous page: Desplegando en Azure">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../conclusion/" class="navigation navigation-next " aria-label="Next page: Conclusión">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Desplegando con Docker","level":"1.9.2","depth":2,"next":{"title":"Conclusión","level":"1.10","depth":1,"path":"chapters/conclusion/README.md","ref":"chapters/conclusion/README.md","articles":[]},"previous":{"title":"Desplegando en Azure","level":"1.9.1","depth":2,"path":"chapters/deploy-the-application/deploy-to-azure.md","ref":"chapters/deploy-the-application/deploy-to-azure.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters-small","anchors","forkmegithub","analytics"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"analytics":{"google":"UA-130293099-1"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"forkmegithub":{"color":"green","url":"https://github.com/jahbenjah/little-aspnetcore-book"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Nate Barbettini","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Lato","paperSize":"a5","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"978-1-387-75615-5","variables":{},"title":"El pequeño libro de ASP.NET Core","language":"es","gitbook":"*","description":"Una introducción amigable para construir aplicaciones web con el framework ASP.NET Core."},"file":{"path":"chapters/deploy-the-application/deploy-with-docker.md","mtime":"2019-03-18T02:21:27.364Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-22T16:25:31.396Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-forkmegithub/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

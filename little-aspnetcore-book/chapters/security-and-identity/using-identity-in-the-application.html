@@ -1,0 +1,882 @@
+
+<!DOCTYPE HTML>
+<html lang="es" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Usando identidad en la aplicación · El pequeño libro de ASP.NET Core</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Nate Barbettini">
+        <meta name="identifier" content="978-1-387-75615-5" scheme="ISBN">
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-forkmegithub/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="authorization-with-roles.html" />
+    
+    
+    <link rel="prev" href="require-authentication.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Escribe para buscar" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../your-first-application/">
+            
+                <a href="../your-first-application/">
+            
+                    
+                    Tú primera aplicación
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../your-first-application/get-the-sdk.html">
+            
+                <a href="../your-first-application/get-the-sdk.html">
+            
+                    
+                    Consigue el SDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../your-first-application/hello-world-in-csharp.html">
+            
+                <a href="../your-first-application/hello-world-in-csharp.html">
+            
+                    
+                    Hola Mundo en C#
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../your-first-application/create-aspnetcore-project.html">
+            
+                <a href="../your-first-application/create-aspnetcore-project.html">
+            
+                    
+                    Crear un proyecto de ASP.NET Core
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../mvc-basics/">
+            
+                <a href="../mvc-basics/">
+            
+                    
+                    Fundamentos de MVC
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../mvc-basics/create-controller.html">
+            
+                <a href="../mvc-basics/create-controller.html">
+            
+                    
+                    Crear un controlador
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../mvc-basics/create-models.html">
+            
+                <a href="../mvc-basics/create-models.html">
+            
+                    
+                    Crear modelos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../mvc-basics/create-view.html">
+            
+                <a href="../mvc-basics/create-view.html">
+            
+                    
+                    Crear una vista
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../mvc-basics/add-service-class.html">
+            
+                <a href="../mvc-basics/add-service-class.html">
+            
+                    
+                    Agregar una clase de servicio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../mvc-basics/use-dependency-injection.html">
+            
+                <a href="../mvc-basics/use-dependency-injection.html">
+            
+                    
+                    Usar inyección de dependencias
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../mvc-basics/finish-controller.html">
+            
+                <a href="../mvc-basics/finish-controller.html">
+            
+                    
+                    Terminando el controlador
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../mvc-basics/update-the-layout.html">
+            
+                <a href="../mvc-basics/update-the-layout.html">
+            
+                    
+                    Actualizar la plantilla
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../add-external-packages/">
+            
+                <a href="../add-external-packages/">
+            
+                    
+                    Agregando paquetes externos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../use-a-database/">
+            
+                <a href="../use-a-database/">
+            
+                    
+                    Usando una base de datos
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../use-a-database/connect-to-a-database.html">
+            
+                <a href="../use-a-database/connect-to-a-database.html">
+            
+                    
+                    Conectarse a una base de datos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../use-a-database/update-context.html">
+            
+                <a href="../use-a-database/update-context.html">
+            
+                    
+                    Actualizando el contexto
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../use-a-database/create-migration.html">
+            
+                <a href="../use-a-database/create-migration.html">
+            
+                    
+                    Crear una migración
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../use-a-database/create-service-class.html">
+            
+                <a href="../use-a-database/create-service-class.html">
+            
+                    
+                    Crear una nueva clase de servicio
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../add-more-features/">
+            
+                <a href="../add-more-features/">
+            
+                    
+                    Agregando más características
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../add-more-features/add-todo-items.html">
+            
+                <a href="../add-more-features/add-todo-items.html">
+            
+                    
+                    Agregar nuevas tareas
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../add-more-features/complete-with-checkbox.html">
+            
+                <a href="../add-more-features/complete-with-checkbox.html">
+            
+                    
+                    Completar las tareas con una casilla de verificación
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Seguridad e Identidad
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="require-authentication.html">
+            
+                <a href="require-authentication.html">
+            
+                    
+                    Requerir autenticación
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7.2" data-path="using-identity-in-the-application.html">
+            
+                <a href="using-identity-in-the-application.html">
+            
+                    
+                    Usando identidad en la aplicación
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="authorization-with-roles.html">
+            
+                <a href="authorization-with-roles.html">
+            
+                    
+                    Autorización con roles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="more-resources.html">
+            
+                <a href="more-resources.html">
+            
+                    
+                    Más recursos
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../automated-testing/">
+            
+                <a href="../automated-testing/">
+            
+                    
+                    Pruebas automáticas
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../automated-testing/unit-testing.html">
+            
+                <a href="../automated-testing/unit-testing.html">
+            
+                    
+                    Pruebas unitarias
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../automated-testing/integration-testing.html">
+            
+                <a href="../automated-testing/integration-testing.html">
+            
+                    
+                    Pruebas de integración
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../deploy-the-application/">
+            
+                <a href="../deploy-the-application/">
+            
+                    
+                    Desplegando la aplicación
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../deploy-the-application/deploy-to-azure.html">
+            
+                <a href="../deploy-the-application/deploy-to-azure.html">
+            
+                    
+                    Desplegando en Azure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../deploy-the-application/deploy-with-docker.html">
+            
+                <a href="../deploy-the-application/deploy-with-docker.html">
+            
+                    
+                    Desplegando con Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../conclusion/">
+            
+                <a href="../conclusion/">
+            
+                    
+                    Conclusión
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Publicado con GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Usando identidad en la aplicación</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="usando-la-identidad-en-la-aplicaci&#xF3;n"><a name="usando-la-identidad-en-la-aplicaci&#xF3;n" class="plugin-anchor" href="#usando-la-identidad-en-la-aplicaci&#xF3;n"><i class="fa fa-link" aria-hidden="true"></i></a>Usando la identidad en la aplicaci&#xF3;n</h2>
+<p>Los elementos de la lista de tareas pendientes todav&#xED;a se comparten entre todos los usuarios, porque las entidades de tareas pendientes almacenadas no est&#xE1;n vinculadas a un usuario en particular. Ahora que el atributo <code>[Authorize]</code> asegura que debe iniciar sesi&#xF3;n para ver la vista de tareas, puede filtrar la consulta de la base de datos seg&#xFA;n qui&#xE9;n haya iniciado sesi&#xF3;n.</p>
+<p>Primero, inyecte un <code>UserManager&lt;ApplicationUser&gt;</code> en el <code>TodoController</code>:</p>
+<p><strong>Controllers/TodoController.cs</strong></p>
+<pre><code class="lang-csharp">[Authorize]
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">TodoController</span> : <span class="hljs-title">Controller</span>
+{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">readonly</span> ITodoItemService _todoItemService;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">readonly</span> UserManager&lt;ApplicationUser&gt; _userManager;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">TodoController</span>(<span class="hljs-params">ITodoItemService todoItemService,
+        UserManager&lt;ApplicationUser&gt; userManager</span>)
+    </span>{
+        _todoItemService = todoItemService;
+        _userManager = userManager;
+    }
+
+    <span class="hljs-comment">// ...</span>
+}
+</code></pre>
+<p>Deber&#xE1; agregar una nueva declaraci&#xF3;n <code>using</code> en la parte superior:</p>
+<pre><code class="lang-csharp"><span class="hljs-keyword">using</span> Microsoft.AspNetCore.Identity;
+</code></pre>
+<p>La clase <code>UserManager</code> es parte de ASP.NET Core Identity. Puedes usarlo para obtener al usuario actual en la acci&#xF3;n <code>Index</code>:</p>
+<pre><code class="lang-csharp"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">async</span> Task&lt;IActionResult&gt; <span class="hljs-title">Index</span>(<span class="hljs-params"></span>)
+</span>{
+    <span class="hljs-keyword">var</span> currentUser = <span class="hljs-keyword">await</span> _userManager.GetUserAsync(User);
+    <span class="hljs-keyword">if</span> (currentUser == <span class="hljs-keyword">null</span>) <span class="hljs-keyword">return</span> Challenge();
+
+    <span class="hljs-keyword">var</span> items = <span class="hljs-keyword">await</span> _todoItemService
+        .GetIncompleteItemsAsync(currentUser);
+
+    <span class="hljs-keyword">var</span> model = <span class="hljs-keyword">new</span> TodoViewModel()
+    {
+        Items = items
+    };
+
+    <span class="hljs-keyword">return</span> View(model);
+}
+</code></pre>
+<p>El nuevo c&#xF3;digo en la parte superior del m&#xE9;todo de acci&#xF3;n utiliza el <code>UserManager</code> para buscar al usuario actual en la propiedad<code>Usuario</code> disponible en la acci&#xF3;n:</p>
+<pre><code class="lang-csharp"><span class="hljs-keyword">var</span> currentUser = <span class="hljs-keyword">await</span> _userManager.GetUserAsync(User);
+</code></pre>
+<p>Si hay un usuario que ha iniciado sesi&#xF3;n, la propiedad <code>User</code> contiene un objeto ligero con algo (pero no toda) la informaci&#xF3;n del usuario. El <code>UserManager</code> usa esto para buscar los detalles completos del usuario en la base de datos a trav&#xE9;s del m&#xE9;todo <code>GetUserAsync()</code>.</p>
+<p>El valor de <code>currentUser</code> nunca debe ser nulo, porque el atributo <code>[Authorize]</code> est&#xE1; presente en el controlador. Sin embargo, es una buena idea hacer un control de cordura, por si acaso. Puede usar el m&#xE9;todo <code>Challenge()</code> para forzar al usuario a iniciar sesi&#xF3;n nuevamente si falta su informaci&#xF3;n:</p>
+<pre><code class="lang-csharp"><span class="hljs-keyword">if</span> (currentUser == <span class="hljs-keyword">null</span>) <span class="hljs-keyword">return</span> Challenge();
+</code></pre>
+<p>Como ahora est&#xE1;s pasando un par&#xE1;metro <code>ApplicationUser</code> a <code>GetIncompleteItemsAsync()</code>, deber&#xE1;s actualizar la interfaz <code>ITodoItemService</code>:</p>
+<p><strong>Services/ITodoItemService.cs</strong></p>
+<pre><code class="lang-csharp"><span class="hljs-keyword">public</span> <span class="hljs-keyword">interface</span> <span class="hljs-title">ITodoItemService</span>
+{
+    Task&lt;TodoItem[]&gt; GetIncompleteItemsAsync(
+        ApplicationUser user);
+
+    <span class="hljs-comment">// ...</span>
+}
+</code></pre>
+<p>Ya que cambi&#xF3; la interfaz <code>ITodoItemService</code>, tambi&#xE9;n necesita actualizar la firma del m&#xE9;todo <code>GetIncompleteItemsAsync()</code> en el <code>TodoItemService</code>:</p>
+<p><strong>Services/TodoItemService</strong></p>
+<pre><code class="lang-csharp"><span class="hljs-keyword">public</span> <span class="hljs-keyword">async</span> Task&lt;TodoItem[]&gt; GetIncompleteItemsAsync(
+    ApplicationUser user)
+</code></pre>
+<p>El siguiente paso es actualizar la consulta de la base de datos y agregar un filtro para mostrar solo los elementos creados por el usuario actual. Antes de que pueda hacer eso, debe agregar una nueva propiedad a la base de datos.</p>
+<h3 id="actualizar-la-base-de-datos"><a name="actualizar-la-base-de-datos" class="plugin-anchor" href="#actualizar-la-base-de-datos"><i class="fa fa-link" aria-hidden="true"></i></a>Actualizar la base de datos</h3>
+<p>Deber&#xE1; agregar una nueva propiedad al modelo de entidad <code>TodoItem</code> para que cada elemento pueda &quot;recordar&quot; al usuario que lo posee:</p>
+<p><strong>Models/TodoItem.cs</strong></p>
+<pre><code class="lang-csharp"><span class="hljs-keyword">public</span> <span class="hljs-keyword">string</span> UserId { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; }
+</code></pre>
+<p>Dado que ha actualizado el modelo de entidad utilizado por el contexto de la base de datos, tambi&#xE9;n debe migrar la base de datos. Crea una nueva migraci&#xF3;n usando <code>dotnet ef</code> en el terminal:</p>
+<pre><code>dotnet ef migrations add AddItemUserId
+</code></pre><p>Esto crea una nueva migraci&#xF3;n llamada <code>AddItemUserId</code> que agregar&#xE1; una nueva columna a la tabla <code>Items</code>, reflejando el cambio realizado en el modelo <code>TodoItem</code>.</p>
+<p>Utilice <code>dotnet ef</code> de nuevo para aplicarlo a la base de datos:</p>
+<pre><code>dotnet ef database update
+</code></pre><h3 id="actualizar-la-clase-de-servicio"><a name="actualizar-la-clase-de-servicio" class="plugin-anchor" href="#actualizar-la-clase-de-servicio"><i class="fa fa-link" aria-hidden="true"></i></a>Actualizar la clase de servicio</h3>
+<p>Con la base de datos y el contexto de la base de datos actualizados, ahora puede actualizar el m&#xE9;todo <code>GetIncompleteItemsAsync()</code> en el <code>TodoItemService</code> y agregar otra cl&#xE1;usula a la declaraci&#xF3;n <code>Where</code>:</p>
+<p><strong>Services/TodoItemService.cs</strong></p>
+<pre><code class="lang-csharp"><span class="hljs-keyword">public</span> <span class="hljs-keyword">async</span> Task&lt;TodoItem[]&gt; GetIncompleteItemsAsync(
+    ApplicationUser user)
+{
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">await</span> _context.Items
+        .Where(x =&gt; x.IsDone == <span class="hljs-keyword">false</span> &amp;&amp; x.UserId == user.Id)
+        .ToArrayAsync();
+}
+</code></pre>
+<p>Si ejecuta la aplicaci&#xF3;n y se registra o inicia sesi&#xF3;n, ver&#xE1; una lista de tareas vac&#xED;a una vez m&#xE1;s. Desafortunadamente, cualquier tarea que intentes agregar desaparece en el &#xE9;ter, porque a&#xFA;n no has actualizado la acci&#xF3;n <code>AddItem</code> para que el usuario la tenga en cuenta.</p>
+<h3 id="actualizar-las-acciones-additem-y-markdone"><a name="actualizar-las-acciones-additem-y-markdone" class="plugin-anchor" href="#actualizar-las-acciones-additem-y-markdone"><i class="fa fa-link" aria-hidden="true"></i></a>Actualizar las acciones AddItem y MarkDone</h3>
+<p>Deber&#xE1; usar el <code>UserManager</code> para obtener el usuario actual en los m&#xE9;todos de acci&#xF3;n <code>AddItem</code> y <code>MarkDone</code>, tal como lo hizo en <code>Index</code>.</p>
+<p>Aqu&#xED; est&#xE1;n los dos m&#xE9;todos actualizados:</p>
+<p><strong>Controllers/TodoController.cs</strong></p>
+<pre><code class="lang-csharp">[ValidateAntiForgeryToken]
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">async</span> Task&lt;IActionResult&gt; <span class="hljs-title">AddItem</span>(<span class="hljs-params">TodoItem newItem</span>)
+</span>{
+    <span class="hljs-keyword">if</span> (!ModelState.IsValid)
+    {
+        <span class="hljs-keyword">return</span> RedirectToAction(<span class="hljs-string">&quot;Index&quot;</span>);
+    }
+
+    <span class="hljs-keyword">var</span> currentUser = <span class="hljs-keyword">await</span> _userManager.GetUserAsync(User);
+    <span class="hljs-keyword">if</span> (currentUser == <span class="hljs-keyword">null</span>) <span class="hljs-keyword">return</span> Challenge();
+
+    <span class="hljs-keyword">var</span> successful = <span class="hljs-keyword">await</span> _todoItemService
+        .AddItemAsync(newItem, currentUser);
+
+    <span class="hljs-keyword">if</span> (!successful)
+    {
+        <span class="hljs-keyword">return</span> BadRequest(<span class="hljs-string">&quot;Could not add item.&quot;</span>);
+    }
+
+    <span class="hljs-keyword">return</span> RedirectToAction(<span class="hljs-string">&quot;Index&quot;</span>);
+}
+
+[ValidateAntiForgeryToken]
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">async</span> Task&lt;IActionResult&gt; <span class="hljs-title">MarkDone</span>(<span class="hljs-params">Guid id</span>)
+</span>{
+    <span class="hljs-keyword">if</span> (id == Guid.Empty)
+    {
+        <span class="hljs-keyword">return</span> RedirectToAction(<span class="hljs-string">&quot;Index&quot;</span>);
+    }
+
+    <span class="hljs-keyword">var</span> currentUser = <span class="hljs-keyword">await</span> _userManager.GetUserAsync(User);
+    <span class="hljs-keyword">if</span> (currentUser == <span class="hljs-keyword">null</span>) <span class="hljs-keyword">return</span> Challenge();
+
+    <span class="hljs-keyword">var</span> successful = <span class="hljs-keyword">await</span> _todoItemService
+        .MarkDoneAsync(id, currentUser);
+
+    <span class="hljs-keyword">if</span> (!successful)
+    {
+        <span class="hljs-keyword">return</span> BadRequest(<span class="hljs-string">&quot;Could not mark item as done.&quot;</span>);
+    }
+
+    <span class="hljs-keyword">return</span> RedirectToAction(<span class="hljs-string">&quot;Index&quot;</span>);
+}
+</code></pre>
+<p>Ambos m&#xE9;todos de servicio ahora deben aceptar un par&#xE1;metro <code>ApplicationUser</code>. Actualice la definici&#xF3;n de la interfaz en <code>ITodoItemService</code>:</p>
+<pre><code class="lang-csharp"><span class="hljs-function">Task&lt;<span class="hljs-keyword">bool</span>&gt; <span class="hljs-title">AddItemAsync</span>(<span class="hljs-params">TodoItem newItem, ApplicationUser user</span>)</span>;
+
+<span class="hljs-function">Task&lt;<span class="hljs-keyword">bool</span>&gt; <span class="hljs-title">MarkDoneAsync</span>(<span class="hljs-params">Guid id, ApplicationUser user</span>)</span>;
+</code></pre>
+<p>Y por &#xFA;ltimo, actualice la implementaci&#xF3;n del m&#xE9;todo del servicio en <code>TodoItemService</code>. En el m&#xE9;todo <code>AddItemAsync</code>, establece la propiedad <code>UserId</code> cuando construyas un <code>nuevo TodoItem</code>:</p>
+<pre><code class="lang-csharp"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">async</span> Task&lt;<span class="hljs-keyword">bool</span>&gt; <span class="hljs-title">AddItemAsync</span>(<span class="hljs-params">
+    TodoItem newItem, ApplicationUser user</span>)
+</span>{
+    newItem.Id = Guid.NewGuid();
+    newItem.IsDone = <span class="hljs-keyword">false</span>;
+    newItem.DueAt = DateTimeOffset.Now.AddDays(<span class="hljs-number">3</span>);
+    newItem.UserId = user.Id;
+
+    <span class="hljs-comment">// ...</span>
+}
+</code></pre>
+<p>La cl&#xE1;usula <code>Where</code> en el m&#xE9;todo <code>MarkDoneAsync</code> tambi&#xE9;n debe verificar la ID del usuario, por lo que un usuario deshonesto no puede completar las tareas de otra persona adivinando sus ID:</p>
+<pre><code class="lang-csharp"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">async</span> Task&lt;<span class="hljs-keyword">bool</span>&gt; <span class="hljs-title">MarkDoneAsync</span>(<span class="hljs-params">
+    Guid id, ApplicationUser user</span>)
+</span>{
+    <span class="hljs-keyword">var</span> item = <span class="hljs-keyword">await</span> _context.Items
+        .Where(x =&gt; x.Id == id &amp;&amp; x.UserId == user.Id)
+        .SingleOrDefaultAsync();
+
+    <span class="hljs-comment">// ...</span>
+}
+</code></pre>
+<p>&#xA1;Todo listo! Intenta usar la aplicaci&#xF3;n con dos cuentas de usuario diferentes. Las tareas pendientes se mantienen privadas para cada cuenta.</p>
+<script src="_gitbook_plugin_analytics.js"></script>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="require-authentication.html" class="navigation navigation-prev " aria-label="Previous page: Requerir autenticación">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="authorization-with-roles.html" class="navigation navigation-next " aria-label="Next page: Autorización con roles">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Usando identidad en la aplicación","level":"1.7.2","depth":2,"next":{"title":"Autorización con roles","level":"1.7.3","depth":2,"path":"chapters/security-and-identity/authorization-with-roles.md","ref":"chapters/security-and-identity/authorization-with-roles.md","articles":[]},"previous":{"title":"Requerir autenticación","level":"1.7.1","depth":2,"path":"chapters/security-and-identity/require-authentication.md","ref":"chapters/security-and-identity/require-authentication.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters-small","anchors","forkmegithub","analytics"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"analytics":{"google":"UA-130293099-1"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"forkmegithub":{"color":"green","url":"https://github.com/jahbenjah/little-aspnetcore-book"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Nate Barbettini","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Lato","paperSize":"a5","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"978-1-387-75615-5","variables":{},"title":"El pequeño libro de ASP.NET Core","language":"es","gitbook":"*","description":"Una introducción amigable para construir aplicaciones web con el framework ASP.NET Core."},"file":{"path":"chapters/security-and-identity/using-identity-in-the-application.md","mtime":"2019-03-18T02:21:27.400Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-22T16:25:31.396Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-forkmegithub/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

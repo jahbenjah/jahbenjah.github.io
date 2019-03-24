@@ -5,6 +5,10 @@ date:   2019-03-17 12:00:01 +0000
 categories: asp.net core
 image:
   path: https://aspnetcoremaster.com/little-aspnetcore-book/cover.jpg
+seo:
+  date_modified: 2019-03-24 12:00:01 +0000
+author:
+  twitter: jbenjamincmcho
 ---
 
 Los mayoría de los recursos para aprender "ASP.NET! Core están en inglés. Esta traducción del libro "The Little ASP.NET Core Book" de [Nate Barbettini](https://twitter.com/nbarbettini) es un intento de tener más materiales en nuestro propio idioma.

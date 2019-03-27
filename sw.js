@@ -1,7 +1,8 @@
-var CACHE_NAME = 'aspnetcormaster-cache-v3';
+var CACHE_NAME = 'aspnetcormaster-cache-v4';
 var urlsToCache = [
   '/assets/css/style.css',
-  '/js/site.js'
+  '/js/site.js',
+  '/assets/gitbook/style.css'
 ];
 
 self.addEventListener('install', function(event) {
@@ -58,7 +59,7 @@ self.addEventListener('install', function(event) {
 
   self.addEventListener('activate', function(event) {
 
-    var cacheWhitelist = ['aspnetcormaster-cache-v3'];
+    var cacheWhitelist = ['aspnetcormaster-cache-v4'];
   
     event.waitUntil(
       caches.keys().then(function(cacheNames) {

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Vistas paraciales ASP.NET Core"
+title:  "Vistas parciales ASP.NET Core"
 date:   2019-03-25 12:00:01 +0000
 categories: asp.net core
 image:

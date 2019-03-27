@@ -261,7 +261,7 @@
     <div class="search-noresults">
                                 <section class="normal markdown-section">
                                 <h1 id="crear-una-vista"><a name="crear-una-vista" class="plugin-anchor" href="#crear-una-vista"><i class="fa fa-link" aria-hidden="true"></i></a>Crear una vista</h1>
-<p>Las vistas en ASP.NET Core se construyen usando el lenguaje de plantillas Razor, el cual combina HTML y c&#xF3;digo C#. Si haz escrito p&#xE1;ginas usan Handlebar mustaches, ERM en Ruby On Rail or Thumeleaf en Java, ya tienes la idea b&#xE1;sica)</p>
+<p>Las vistas en ASP.NET Core se construyen usando el lenguaje de plantillas Razor, el cual combina HTML y c&#xF3;digo C#. Si haz escrito p&#xE1;ginas usan Handlebars Mustache, ERM en Ruby On Rails o Thymeleaf en Java, ya tienes la idea b&#xE1;sica)</p>
 <p>La mayor&#xED;a del c&#xF3;digo de las vistas es solo HTML, con ocasionales enunciados de C# necesarios para extraer datos del modelo de la vista y convertirlos a texto o a HTML. Los enunciados C# tienen como prefijo el s&#xED;mbolo <code>@</code></p>
 <p>La vista generada por la acci&#xF3;n <code>Index</code> del controlador <code>TodoController</code> necesita obtener los datos de la vista modelo, (una colecci&#xF3;n de tareas pendientes) y mostrarlas en un tabla atractiva para el usuario. Por convenci&#xF3;n, las vistas van colocadas en la carpeta <em>Views</em> en una subcarpeta correspondiente al nombre del controlador. El nombre del archivo es el nombre de la acci&#xF3;n con un una extensi&#xF3;n <code>.cshtml</code>.</p>
 <p>Crea una carpeta llamada <code>Todo</code> dentro la carpeta <code>Views</code>, y agrega este archivo:
@@ -296,7 +296,7 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 </code></pre>
-<p>En la parte superior del archivo, la directiva <code>@ model</code> le dice a Razor a qu&#xE9; modelo espera que se vincule esta vista. Se accede al modelo a trav&#xE9;s de la propiedad <code>Model</code>.</p>
+<p>En la parte superior del archivo, la directiva <code>@model</code> le dice a Razor a qu&#xE9; modelo espera que se vincule esta vista. Se accede al modelo a trav&#xE9;s de la propiedad <code>Model</code>.</p>
 <p>Suponiendo que hay elementos de tareas pendientes en <code>Model.Items</code>, la instrucci&#xF3;n<code>foreach</code> se desplazar&#xE1; sobre cada tarea pendiente y mostrar&#xE1; una fila de la tabla (elemento <code>&lt;tr&gt;</code> ) que contiene el nombre y la fecha de vencimiento de la tarea . Tambi&#xE9;n se representa una casilla de verificaci&#xF3;n que permitir&#xE1; al usuario marcar la tarea como completa.</p>
 <h2 id="el-archivo-de-dise&#xF1;o"><a name="el-archivo-de-dise&#xF1;o" class="plugin-anchor" href="#el-archivo-de-dise&#xF1;o"><i class="fa fa-link" aria-hidden="true"></i></a>El archivo de dise&#xF1;o</h2>
 <p>Quiz&#xE1;s se pregunte d&#xF3;nde est&#xE1; el resto del HTML: &#xBF;qu&#xE9; pasa con la etiqueta <code>&lt;body&gt;</code> o el encabezado y pie de p&#xE1;gina de la p&#xE1;gina? ASP.NET Core utiliza una vista de dise&#xF1;o que define la estructura base en la que se procesan todas las dem&#xE1;s vistas. Esta almacenado en <code>Views/Shared/_Layout.cshtml</code>.</p>

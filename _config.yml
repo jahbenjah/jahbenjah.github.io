@@ -1,68 +1,25 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-# Site Settings
-locale: "es-MX"
+lang: es
 title: ASP.NET Core Master
 author: Benjamin Camacho
 email: j.benjamin.camacho@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
+description: >-
   En este sitio encontrarás artículos sobre programación usando C# ,ASP.NET Core y Entity Framework Core .
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://www.aspnetcoremaster.com" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: ""
+url: "https://www.aspnetcoremaster.com"
 twitter_username: jbenjamincmcho
 github_username:  jahbenjah
 linkedin_username: benjamin-camacho-castro
-# youtube_username: jahbenjah
-
 twitter:
   username: jbenjamincmcho
   card: summary
-
 logo: /og-image.jpg
-
 social:
   name: csharpmx
   links:
     - https://www.facebook.com/csharpmx/
-
-# Build settings
 markdown: kramdown
 theme: minima
-plugins:
-  - jekyll-sitemap
-  - jekyll-feed
-  - jekyll-mentions 
-  - jekyll-seo-tag
-
-# Site Settings
-lang: es
-# End Site Settings
 show_excerpts: true
-
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
 
 disqus:
  shortname: https-jahbenjah-github-io
@@ -70,13 +27,7 @@ disqus:
 google_analytics: UA-130293099-1
 
 header_pages:
-# - acerca.md
-# - portafolio.md
  - contacto.md
- 
- 
- # Custom site configuration
-lang: es
 
 defaults:
   -

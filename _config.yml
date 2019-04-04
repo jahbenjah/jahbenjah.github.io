@@ -3,7 +3,7 @@ title: ASP.NET Core Master
 author: Benjamin Camacho
 email: j.benjamin.camacho@gmail.com
 description: >-
-  En este sitio encontrarás artículos sobre programación usando C# ,ASP.NET Core y Entity Framework Core .
+  Sitio dedicado a temas de programación usando C# ,ASP.NET Core, Entity Framework Core y Sql Server.
 baseurl: ""
 url: "https://www.aspnetcoremaster.com"
 twitter_username: jbenjamincmcho
@@ -12,7 +12,6 @@ linkedin_username: benjamin-camacho-castro
 twitter:
   username: jbenjamincmcho
   card: summary
-logo: /og-image.jpg
 social:
   name: csharpmx
   links:
@@ -29,6 +28,11 @@ google_analytics: UA-130293099-1
 header_pages:
  - contacto.md
 
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+
 defaults:
   -
     scope:
@@ -39,10 +43,4 @@ defaults:
         path: /og-image.jpg
         height: 347
         width: 663
-
-toc:
-  min_level:        2
-  max_level:        4
-  no_toc_section_class:
-    - "bd-callout"
-    - "bd-example"
+        

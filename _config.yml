@@ -40,7 +40,7 @@ defaults:
     values:
       lang: "es"
       image:
-        path: /og-image.jpg
+        path: /img/og-image.jpg
         height: 347
         width: 663
         

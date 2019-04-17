@@ -1,7 +1,6 @@
 var CACHE_NAME = 'aspnetcormaster-cache-v4';
 var urlsToCache = [
   '/assets/css/style.css',
-  '/js/site.js',
   '/assets/gitbook/style.css'
 ];
 

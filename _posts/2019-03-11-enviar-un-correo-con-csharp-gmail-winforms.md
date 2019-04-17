@@ -149,7 +149,7 @@ Ya puedes probar la aplicación. El mensaje enviado puede incluir `html`. por ej
     <li><a href="https://aspnetcoremaster.com/.net/smtp/smptclient/dotnet/2018/07/22/enviar-un-correo-con-csharp-gmail.html">Enviar un correo con C# y Gmail.</a></li>
 <li><a href="https://aspnetcoremaster.com/c%23/entityframeworkcore/dotnet/ef/2018/08/07/introduccion-entityframeworkcore.html">Introducción a Entity Framework Core 2.1.</a></li>
 
-<img src="https://aspnetcoremaster.com/og-image.jpg" alt="logo de C#" />
+<img src="https://aspnetcoremaster.com/img/og-image.jpg" alt="logo de C#" />
 </ul>
 ```
 ![Muestra de correo recibido](/img/CorreoRecibido.PNG)

@@ -2,7 +2,8 @@
 layout: post
 title:  "Control de versiones: Sql Server y git"
 date:   2018-08-20 22:30:55 +0000
-categories: git SqlServer DataTools t-.sql
+categories: slqserver
+permalink: /:categories/:title:output_ext
 ---
 
 En este articulo te mostramos como agregar el control de código fuente a una base de datos de SQL Server con git.

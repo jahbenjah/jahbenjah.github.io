@@ -33,6 +33,10 @@ plugins:
   - jekyll-seo-tag
   - jekyll-feed
 
+collections:
+  authors:
+    output: true
+
 defaults:
   -
     scope:
@@ -43,4 +47,10 @@ defaults:
         path: /img/og-image.jpg
         height: 347
         width: 663
+      author: benjamin
+  - scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"
         

@@ -11,7 +11,12 @@ layout: default
         {{ page.date | date: date_format }}
       </time>
       {%- if page.author -%}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author | escape }}</span></span>
+        {% assign post_authors = site.authors | where: 'short_name', page.author %}
+        {% for author in post_authors %}
+          <a href="{{ author.url }}">
+          • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ author.name | escape }}</span></span>
+          </a>
+        {% endfor %}
       {%- endif -%}</p>
   </header>
 

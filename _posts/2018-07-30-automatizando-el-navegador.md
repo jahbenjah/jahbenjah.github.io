@@ -8,8 +8,9 @@ categories: C# selenium testing xunit dotnet
 Automatiza todas las tares repetitivas que realizas en el navegador usando C# y Selenium; 
 Aquí te mostramos como automatizar el inicio de sesión de Facebook.
 
-![Controlando un títere. Metáfora de automatización](/img/blurred-background-dolls-fashion-935019.jpg)
-> "Selenium es un conjunto de herramientas para automatizar navegadores web  a tráves de múltiples plataformas.
+<img data-src="/img/blurred-background-dolls-fashion-935019.jpg" class="lazyload"  alt="Controlando un títere. Metáfora de automatización">
+
+> "Selenium es un conjunto de herramientas para automatizar navegadores web a tráves de múltiples plataformas.
   ...Selenium puede ser controlado por múltiples lenguajes de programación y frameworks de pruebas."  
 <cite>[SeleniumHQ]()</cite>
 
@@ -83,10 +84,11 @@ Es decir permite ingresar el usuario, contraseña y presionar el botón iniciar 
 Esta clase intenta seguir el patrón de diseño 
 [Page Object](https://martinfowler.com/bliki/PageObject.html) descrito por @martinfowler y popularizado por @selenium.
 
-La clase _IniciaSesion_ contiene 3 constantes de solo lectura que permiten identificar los elementos _HTML_ de la página.. 
-Puedes obtenerlos mediante las herramientas para desarrollador del navegdor.
+La clase _IniciaSesion_ contiene 3 constantes de solo lectura que permiten identificar los elementos _HTML_ de la página..
+Puedes obtenerlos mediante las herramientas para desarrollador del navegador.
 
-![Herramientas de desarrador Firefox](/img/InspecionarFacebook.PNG)
+
+<img data-src="/img/InspecionarFacebook.PNG" class="lazyload"  alt="Herramientas de desarrador Firefox">
 
 El constructor requiere un objeto del tipo `IWebDriver` lo que permite ejecutar las pruebas en diferentes Navegadores
 
@@ -154,9 +156,9 @@ namespace Facebook
 ```
 
 ### Las pruebas 
-El segundo projecto ejectua pruebas unitarias sobre el primer proyecto. Para ello se utiliza el framework [xunit.net](https://xunit.github.io/) 
-esta clase en un proyecto . 
-El contructor de la clase se ejecuta al inicio de cada prueb e inicializa  una instancia particula del IWebDriver (FirefoxDriver o ChromeDriver)
+
+El segundo projecto ejectua pruebas unitarias sobre el primer proyecto. Para ello se utiliza el framework [xunit.net](https://xunit.github.io/) esta clase en un proyecto .
+El constructor de la clase se ejecuta al inicio de cada prueb e inicializa  una instancia particula del IWebDriver (FirefoxDriver o ChromeDriver)
 La clase IniciaSesionTest implementa la interfaz IDisposable para ejecutar el método Dispose al final de cada prueba.
 
 El metodo login tiene el atributo Fact que lo identifica como una prueba. 
@@ -220,9 +222,9 @@ Para ejecutar desde la linea de comandos puedes usar `dotnet test` o `dotnet xun
 Para ejecutar con Visual Studio abre la solución  AutomatizarNavegador.sln.
 Posteriorment el abre  _Menu Pruebas  > Ventanas  > Explorador De Pruebas_ y selecciona ejecutar todas las pruebas.
 
-![Visual Studio 2017.]({{"/img/vs2017.PNG" | absolute_url }} "Ejecucion de pruebas unitarias.")
+<img data-src="/img/vs2017.PNG" class="lazyload"  alt="Visual Studio 2017.">
 
-## Para llevar.
+## Para llevar
 
 * Puedes encontrar el código fuente en el [repositorio del blog](https://github.com/jahbenjah/CodigoBlog).
 * Revisa la documentación de la funcionalidad de [Headless Chrome](https://developers.google.com/web/updates/2017/04/headless-chrome)

@@ -129,4 +129,4 @@ Finalmente regresaremos la vista debe tener el siguiente codigo para mostrar est
 
 ```
 
-![Vista que muestra los valores del archivo appssetting.json](/img/LeerAppsettings.PNG)
+<img data-src="/img/LeerAppsettings.PNG" class="lazyload"  alt="Vista que muestra los valores del archivo appssetting.json">

@@ -5,13 +5,13 @@ categories: C# EntityFrameworkCore dotnet ef
 last_modified_at: 2019-03-11 11:30:55 +0000
 ---
 
-Entity Framework Core 2.1 es una tecnología de acceso a datos para .NET Core y .NET Framework. Es multiplataforma y de código abierto desarrollado por Microsoft con aportes de la comunidad. 
+Entity Framework Core 2.1 es una tecnología de acceso a datos para .NET Core y .NET Framework. Es multiplataforma y de código abierto desarrollado por Microsoft con aportes de la comunidad.
 Propiamente dicho es un asignador objeto relacional o _ORM_ (Object Relational Mapper) por sus siglas en inglés. Su función principal es servir como interprete entre dos tecnologías fundamentadas en distintos principios por un lado la programación orientada a objetos y por el otro las bases de datos relacionales y no relacionales.
 
-Permite al programador controlar una base de datos relacional usando un lenguaje de programación en lugar de SQL estándar o una de sus dialectos. 
+Permite al programador controlar una base de datos relacional usando un lenguaje de programación en lugar de SQL estándar o una de sus dialectos.
 Libera al programador de escribir gran cantidad de código repetitivo.
 
-Está basado en convenciones muy a la _Ruby On Rails_ 
+Está basado en convenciones muy a la _Ruby On Rails_
 Esperen un post sobre todas las convenciones de para EntityFramework Core El este artículo solo se hace mención del la convención para las llaves primarias.
 
 La configuración se puede hacer mediante Fluent API o Anotaciones de Datos.
@@ -81,8 +81,7 @@ Cuenta con una interfaz de linea de comandos  `dotnet ef` que permite :
 2. Generar clases a partir de una base de datos existentes.
 3. Gestionar los cambios a la base de datos.
 
-![Imagen de linea de comando Entity Framework Core.](/img/efcoretools.PNG)
-
+<img data-src="/img/efcoretools.PNG" class="lazyload"  alt="Imagen de linea de comando Entity Framework Core">
 
 # Versiones 
 
@@ -210,7 +209,7 @@ dotnet add migration
 
 # Para llevar
 
-Modelo Anemico
+Modelo Anémico
 
 Repository 
 

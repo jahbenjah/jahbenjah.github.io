@@ -6,7 +6,7 @@ categories: Web scraping C# advientocsharp dotnet selenium
 
 Actualmente hay datos a montones y día con dia la información disponible en internet aumenta de forma considerable por ello cuando se requiere extraer gran cantidad de información de un sitio web es preciso ayudarse de técnicas automatizadas como el: _Web Scraping_. 
 
-![Inspección de página web](/img/webscraping.jpeg)
+<img data-src="/img/webscraping.jpeg" class="lazyload"  alt="Inspección de página web">
 
 De acuerdo con la definición de Wikipedia:
 
@@ -65,7 +65,7 @@ El catalogo esta compuesto de 50 paginas en cada pagina se muestran 20 libros. C
 
 Las categorías se encuentran en la barra lateral de las paginas del catalogo por lo que solo es necesario navegar por la primera pagina y extraer los datos de las categorías (Id, Nombre , Url).
 
-![Categorias]({{"/img/Categorias.PNG" | absolute_url }} "Muestra de categorias")
+<img data-src="/img/Categorias.PNG" class="lazyload"  alt="Muestra de categorias">
 
 ## Extracción categorías
 
@@ -209,7 +209,8 @@ public static void GuardarCategorias()
 ```
 
 Si abrimos la base de datos SQLite veremos las categorias.
-![Categorias]({{"/img/categoriasbd.PNG" | absolute_url }} "Resultado de la extracción de categorias")
+
+<img data-src="/img/categoriasbd.PNG" class="lazyload"  alt="Resultado de la extracción de categorias">
 
 ## Extración detalle libros
 
@@ -299,8 +300,10 @@ static void Main(string[] args)
     ReadLine();
 }
 ```
+
 Aqui es recomendable usar el [modo headless de Chrome](https://developers.google.com/web/updates/2017/04/headless-chrome) . Puedes descomentar la línea ``options.AddArgument("--headless");``  ``GetDriver`` del método para que no se veas el navegador.
-![Liros]({{"/img/ExtraccionFinal.PNG" | absolute_url }} "base de libros y categorias")
+
+<img data-src="/img/ExtraccionFinal.PNG" class="lazyload"  alt="base de libros y categorias">
 
 # Para llevar 
 

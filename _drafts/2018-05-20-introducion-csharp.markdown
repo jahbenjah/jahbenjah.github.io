@@ -10,16 +10,16 @@ Sistema de facturacion
 Sistema de nomina
 Registro al sitio.
 
-Este articulo representa una guia paso a paso para enviar un correo electrónico usando C# y una cuenta de Gmail.
-Se usa .Net Core para poder ejecurarlo en Linux , Mac y Windows.
+Este articulo representa una guiá paso a paso para enviar un correo electrónico usando C# y una cuenta de Gmail.
+Se usa .Net Core para poder ejecutarlo en Linux , Mac y Windows.
 
 Puedes revisar la documentación en [SmtpClient](https://docs.microsoft.com/en-us/dotnet/api/system.net.mail.smtpclient?view=netframework-4.7.2)
 
 ## Configuración de Gmail ##
 
+<img data-src="Imagenes/AccesoAplicacionesMenosSeguras.PNG" class="lazyload"  alt="Gmail acceso a aplicaciones menos seguras">
 
-![alt text](Imagenes/AccesoAplicacionesMenosSeguras.PNG "Logo Title Text 1")
- Permitir el acceso a aplicciones no seguras para GMAIL. tal como se descrbe aqui
+ Permitir el acceso a aplicaciones no seguras para GMAIL. tal como se describe aqui
 [https://support.google.com/accounts/answer/6010255?hl=es-41]
 
 ## Preparando el proyecto en Visual Studio Code ##

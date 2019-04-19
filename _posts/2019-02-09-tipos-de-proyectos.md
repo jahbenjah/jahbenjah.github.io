@@ -9,7 +9,7 @@ Una aplicación de ASP\.NET Core no es más que una aplicación de consola que e
 
 Todo comienza con el comando `dotnet new` por lo que es importante saber cuales son las opciones disponibles para el mismo . Invocaremos la ayuda sobre mediante la instrucción `dotnet new --help` en la consola o terminal. La salida se muestra en lo siguiente 
 
-![Captura de pantalla del comando dotnet new --help](/img/dotnetnewhelp.PNG)
+<img data-src="/img/dotnetnewhelp.PNG" class="lazyload"  alt="Captura de pantalla del comando dotnet new --help">
 
 Hay varias observaciones para esta salida:
 
@@ -50,4 +50,4 @@ _Aplicaciones una sola página (SPA Single Page Application)_
 
 Si usas Visual Studio puedes crear  nuevo proyecto mediante _Archivo> Nuevo Proyecto > Web > Aplicación Web ASP.NET Core_
 
-![Nuevo Proyecto ASP.NET Core]({{"/img/ProyectoNuevo.PNG" | absolute_url }} "Nuevo proyecto Visual Studio")
+<img data-src="/img/ProyectoNuevo.PNG" class="lazyload"  alt="Nuevo Proyecto ASP.NET Core">

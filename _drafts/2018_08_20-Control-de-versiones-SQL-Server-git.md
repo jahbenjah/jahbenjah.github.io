@@ -15,9 +15,9 @@ se tiene una base de datos en un servidor de produccion a la cual se realizan ca
 
 El escenario ideal seria como el siguiente:
 
-![Proceso de despliegue de una base de datos.]({{"/img/DevopsDeployment.png" | absolute_url }} "Devops para la base de datos")
+<img data-src="/img/DevopsDeployment.png" class="lazyload"  alt="Proceso de despliegue de una base de datos">
 
-Este articulo se centra en los dosprimeros pasos de la imagen.
+Este articulo se centra en los dos primeros pasos de la imagen.
 
 
 # Requisitos
@@ -33,7 +33,8 @@ crear nuevo proyecto
 3. Despues seleccionar la plantilla **Proyecto de base de datos de SQL Server** . 
 4. En el campo  **Nombre** , ingresar "Northwind". Prsionar el botón **OK**.
 5. Asegurarse que el __chechbox__ este seleccionado
-![Nuevo Proyecto de base de datos SQL Server.]({{"/img/NuevoProyectoBD.PNG" | absolute_url }} "Visual Studio 2017")
+
+<img data-src="/img/NuevoProyectoBD.PNG" class="lazyload"  alt="Nuevo Proyecto de base de datos SQL Server">
 
 Dar clic en el nombre del proyecto y seleccionar importar de base de datos
 

@@ -11,7 +11,7 @@ seo:
 
 Los mayoría de los recursos para aprender "ASP.NET! Core están en inglés. Esta traducción del libro "The Little ASP.NET Core Book" de [Nate Barbettini](https://twitter.com/nbarbettini) es un intento de tener más materiales en nuestro propio idioma.
 
-![Portada de El pequeño libro de ASP.NET Cote](https://aspnetcoremaster.com/little-aspnetcore-book/cover.jpg)
+<img data-src="/little-aspnetcore-book/cover.jpg" class="lazyload"  alt="Portada de El pequeño libro de ASP.NET Core">
 
 La traducción sin duda puede contener errores así que te animamos a reportar cualquier error que encuentres en el libro. Puedes abrir una incidencia en el [repositorio Github](https://github.com/jahbenjah/little-aspnetcore-book/issues).
 

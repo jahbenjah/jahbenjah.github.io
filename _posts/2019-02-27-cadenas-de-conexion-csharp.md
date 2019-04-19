@@ -11,7 +11,7 @@ image:
 
 En este tutorial te mostramos como crear la cadena de conexión para SQL Server , MYSQL, Oracle, Firebird y Sqlite usando C# y un proyecto de consola de .NET Core.
 
-![Script Tag Helper](/img/connectionstring.PNG)
+<img data-src="/img/connectionstring.PNG" class="lazyload"  alt="Script Tag Helper">
 
 Para ello utilizamos la clase `ConnectionStringBuilder` que implementan los proveedores de ADO.NET. Para cada proveedor de ADO.NET es necesario instalar el paquete de Nuget correspondiente e importar el espacio de nombres con la instrucción [using]({% post_url 2019-01-03-cuatro-formas-de-usar-la-palabra-clave-using-de-csharp %}).
 

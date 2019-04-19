@@ -6,7 +6,7 @@ categories: slqserver
 permalink: /:categories/:title:output_ext
 ---
 
-En este articulo te mostramos como agregar el control de código fuente a una base de datos de SQL Server con git.
+En este articulo te mostramos como agregar el control de código fuente a una base de datos en SQL Server con git.
 Para ello utilizamos SQL Server Data Tools 2017 (https://docs.microsoft.com/es-es/sql/ssdt/download-sql-server-data-tools-ssdt?view=sql-server-2017)
 aplica de la misma forma para la 2015 aunque  es un instalación independiente.
 

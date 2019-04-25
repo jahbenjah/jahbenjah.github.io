@@ -1,0 +1,72 @@
+---
+layout: post
+title:  "Convenciones de código para T-SQL"
+date:   2019-04-24 21:18:55 +0000
+categories: slqserver
+permalink: /:categories/:title:output_ext
+---
+
+Programar es una acto de comunicación entre humanos y computadoras. Si bien las maquinas solo requieren que el código fuente cumpla con las reglas de sintaxis del lenguaje nosotros , los programadores requerimos un poco más para poder entender el código , el código debe estar formateado de forma que permita se legible, el estilo de código debe ser consistente , los identificadores deben se entendibles y pronunciables.
+
+En este post esbozo lo que considero pueden ser unas buenas practicas de codificación para el lenguaje T-SQL esto solo es basado en mi experiencia personal y lo he visto en bases de datos de otras personas.
+Seria bueno que cada equipo de trabajo defina las practicas y convenciones de código a a seguir por todos los miembros.
+
+Actualmente no conozco un programa que formatee el código  o algún analizador de código estático para T-SQL  por lo que si conoces alguno por favor házmelo saber en un comentario.
+
+* La palabras claves de T-SQL las colocare en mayúsculas. Esto puede cambiar si se cambia el _collation_ del servidor.
+
+```sql
+SELECT Nombre , 
+       Telefono 
+FROM Ventas.Clientes
+WHERE Pais = 'México'
+ORDER BY Nombre ASC;
+```
+
+* Siempre terminare las sentencias con punto y coma `,`. Aunque para SQL Server son opcionales.
+
+* Usare _Pascal Case_ para los nombres de los objetos soportados por SQL Server. Esto incluye tablas, vistas , procedimientos almacenados, disparadores, indices, restricciones, esquemas y funciones.
+
+* Usare preferentemente identificadores regulares.
+
+```sql
+--Evitrar el uso de identificadores irregulares
+CREATE VIEW 'Ventas Mensuales'
+AS
+...
+```
+
+* Preferiré las funciones de sql estándar en lugar de una función particular de T-SQL. Lo importante de esto es identificar el caso de uso especifico para las funcionalidades brindadas por SQL Server. 
+
+* Incluiré preferentemente el nombre del esquema al que pertenece las tablas o vistas.
+
+* No usare el **snake case** o prefijos en los nombres de los objetos.
+
+```sql
+-- evitar el uso de prefijos
+CREATE TABLE t_Ventas 
+...
+CREATE PROCEDURE sp_Reporte
+...
+CREATE VIEW v_Vista
+...
+```
+
+* Usare como delimitadores la comillas simpless `'`. Evitare el uso de los corchetes cuadrados.
+
+* Especificare las fechas en el formaTO 'YYYYMMDD HHMMSS'  
+
+```sql
+SELECT SUM(Total) AS Total 
+FROM Ventas.Pedidos
+WHERE Fecha  =  '20192404'
+```
+
+* Siempre usare los alias usando la palabra clave `AS`.
+
+* Tener una especificación de abreviaturas usadas con el significado. A pesar de que estoy en contra de usar abreviaturas parece que hay caso donde el uso de abreviaturas el legitimo como es el caso de las restricciones ya que hay una tabla del sistema donde se especifican los tipos como `PK` ,`FK`
+
+|Abreviatura|Significado|Comentario|
+|-|-|-|
+|PK|PRIMARY KEY|Clave primaria|
+|FK|FOREIGN KEY|Clave Foránea |

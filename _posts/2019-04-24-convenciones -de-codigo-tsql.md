@@ -4,6 +4,7 @@ title:  "Convenciones de código para T-SQL"
 date:   2019-04-24 21:18:55 +0000
 categories: slqserver
 permalink: /:categories/:title:output_ext
+last_modified_at: 2019-04-26 10:20:55 +0000
 ---
 
 Programar es una acto de comunicación entre humanos y computadoras. Si bien las maquinas solo requieren que el código fuente cumpla con las reglas de sintaxis del lenguaje nosotros , los programadores requerimos un poco más para poder entender el código , el código debe estar formateado de forma que permita se legible, el estilo de código debe ser consistente , los identificadores deben se entendibles y pronunciables.
@@ -54,7 +55,7 @@ CREATE VIEW v_Vista
 
 * Usare como delimitadores la comillas simpless `'`. Evitare el uso de los corchetes cuadrados.
 
-* Especificare las fechas en el formaTO 'YYYYMMDD HHMMSS'  
+* Especificaré las fechas en el formato 'YYYYMMDD HHMMSS'  
 
 ```sql
 SELECT SUM(Total) AS Total 
@@ -64,9 +65,31 @@ WHERE Fecha  =  '20192404'
 
 * Siempre usare los alias usando la palabra clave `AS`.
 
-* Tener una especificación de abreviaturas usadas con el significado. A pesar de que estoy en contra de usar abreviaturas parece que hay caso donde el uso de abreviaturas el legitimo como es el caso de las restricciones ya que hay una tabla del sistema donde se especifican los tipos como `PK` ,`FK`
+* Tener una especificación de abreviaturas usadas con el significado. A pesar de que estoy en contra de usar abreviaturas parece que hay casos donde el uso de abreviaturas parace legitimo , como es el caso de las restricciones ya que hay una tabla del sistema donde se especifican los tipos como `PK` ,`FK`
 
 |Abreviatura|Significado|Comentario|
 |-|-|-|
 |PK|PRIMARY KEY|Clave primaria|
 |FK|FOREIGN KEY|Clave Foránea |
+
+* Evitar el uso del `JOIN` con la sintaxis de *SQL-92* es decir el que especifica las tablas en el `FROM`.
+
+```sql
+-- Evitar
+SELECT ProductName,
+	   CategoryName 
+FROM Products , Categories
+WHERE Products.CategoryID = Categories.CategoryID ;
+```
+
+* Evitar el uso del `GO TO` y `GO`. Por extraño que parezca el `GO` no es parte de **T-SQL* y es un separador de lotes de código.
+
+* Definir una plantilla para comentarios del código. Como ejemplo el que viene con el _Management Studio_ Puedes personalizar en el menu _Tools > Code Snnipets Manage_
+
+```sql
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date,,>
+-- Description:	<Description,,>
+-- =============================================
+```

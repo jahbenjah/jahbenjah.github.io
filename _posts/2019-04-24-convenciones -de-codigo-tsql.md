@@ -4,15 +4,19 @@ title:  "Convenciones de código para T-SQL"
 date:   2019-04-24 21:18:55 +0000
 categories: slqserver
 permalink: /:categories/:title:output_ext
-last_modified_at: 2019-04-26 10:20:55 +0000
+last_modified_at: 2019-04-26 11:04:25 +0000
 ---
 
-Programar es una acto de comunicación entre humanos y computadoras. Si bien las maquinas solo requieren que el código fuente cumpla con las reglas de sintaxis del lenguaje nosotros , los programadores requerimos un poco más para poder entender el código , el código debe estar formateado de forma que permita se legible, el estilo de código debe ser consistente , los identificadores deben se entendibles y pronunciables.
+Programar es una acto de comunicación entre humanos y computadoras. Si bien las maquinas solo requieren que el código fuente cumpla con las reglas de sintaxis del lenguaje, nosotros los programadores requerimos un poco más para poder entender el código, este debe estar formateado de forma que permita ser legible a primera vista, el estilo de código debe ser consistente, los identificadores deben ser entendibles y pronunciables.
 
-En este post esbozo lo que considero pueden ser unas buenas practicas de codificación para el lenguaje T-SQL esto solo es basado en mi experiencia personal y lo he visto en bases de datos de otras personas.
-Seria bueno que cada equipo de trabajo defina las practicas y convenciones de código a a seguir por todos los miembros.
+En este post esbozo lo que considero pueden ser unas buenas practicas de codificación para el lenguaje **T-SQL** esto solo es basado en mi experiencia personal y lo he visto en bases de datos de otras personas.Seria bueno que cada equipo de trabajo defina las practicas y convenciones de código a seguir por todos los miembros y ayudarse de alguna herramienta de análisis estático de código para hacer cumplir estas reglas.
 
-Actualmente no conozco un programa que formatee el código  o algún analizador de código estático para T-SQL  por lo que si conoces alguno por favor házmelo saber en un comentario.
+~~Actualmente no conozco un programa que formate el código  o algún analizador de código estático para **T-SQL**~~ por lo que si conoces alguno por favor házmelo saber en un comentario.
+
+Por comentarios recibidos en Facebook
+
+1. Los proveedores RedGate o ApexSQL pueden tener herramientas para ello. (Por revisar)
+2. [Poor SQL](http://poorsql.com/) Se ve muy bueno lo estoy probando con SQL Server Data Tools 2015 ya que para Visual Studio 2019 la instalación dio error.
 
 * La palabras claves de T-SQL las colocare en mayúsculas. Esto puede cambiar si se cambia el _collation_ del servidor.
 

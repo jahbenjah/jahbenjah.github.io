@@ -22,7 +22,7 @@ El Global Azure Bootcamp CMDX evento totalmente gratuito incluido el desayuno y 
 
 Los temas incluyeron [Bots](https://dev.botframework.com/), [SQL Server y SQL Database](https://azure.microsoft.com/services/sql-database/), [Cognitive Services](https://azure.microsoft.com/services/cognitive-services/), [Azure Devops](https://azure.microsoft.com/services/devops/), [Azure Functions](https://azure.microsoft.com/services/functions/), [Cosmos DB](https://azure.microsoft.com/services/cosmos-db/) y otros
 
-La parte que considero la mejor fue la experiencias y disposición de los expositores y personal de Microsoft México. es genial cuando comparten las experiencias que han tenido en sus proyecto en los que han participado. Compartieron tips, costos estimados de sus proyectos en Azure (lo que ayuda a reducir el miedo a la nube), ideas a implementar en Azure, Muestras de lo que han hecho.La apertura con que los MVPs contestaban las preguntas de los asistentes es muy valiosa. Asi que si tienes una duda o consulta para ellos no dudes en hablarles o escribirles.s
+La parte que considero la mejor fue la experiencias y disposición de los expositores y personal de Microsoft México. es genial cuando comparten las experiencias que han tenido en sus proyecto en los que han participado. Compartieron tips, costos estimados de sus proyectos en Azure (lo que ayuda a reducir el miedo a la nube), ideas a implementar en Azure, Muestras de lo que han hecho.La apertura con que los MVPs contestaban las preguntas de los asistentes es muy valiosa. Asi que si tienes una duda o consulta para ellos no dudes en hablarles o escribirles.
 
 > El miedo a la nube esta fomentado principalmente por la ambigüedad en el precio de los servicios.
 
@@ -37,3 +37,5 @@ La platica con el [Alejandro Reyes](https://www.facebook.com/alejandro.reyes.750
 
 El _Product Manager_ de Microsoft fue con quien puede conversar fue [Rolando Cedillo](https://twitter.com/Rolman) mejor conocido com **Rolman**. No me quedo muy cuál sera su rol pero me dijo que viene a trabajar con las comunidades de código abierto ya que cuenta con gran experiencia en el mismo. Trabajo en (Red Hat)[https://www.redhat.com/] que no necesita presentación en el mundo de Linux. Hablamos sobre el cambio de timo que dio Microsoft en los últimos años para pasar de **"Linux is a Cancer"** a **"Microsoft Loves Linux"**.
 Me explico lo que implica la liberación de 60,000 patentes de Microsoft a la (Open Invention Network)[https://www.openinventionnetwork.com/] y el caso precursor de [Elon Musk que libero sus patentes en 2014](https://www.tesla.com/es_MX/blog/all-our-patent-are-belong-you). Fue una agradable conversación y estoy ansioso de más actividad de *@Rolman* en la comunidad .NET y con la .NET Foundation.
+
+> En 2026 entre el 50% y el 80% del computo mundial sera en la nube. <cite>@Rolman</cite>

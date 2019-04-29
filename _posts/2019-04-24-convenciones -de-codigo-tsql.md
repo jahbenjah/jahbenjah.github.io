@@ -57,19 +57,19 @@ CREATE VIEW v_Vista
 ...
 ```
 
-* Usare como delimitadores la comillas simpless `'`. Evitare el uso de los corchetes cuadrados.
+* Usare como delimitadores la comillas simples `'`. Evitare el uso de los corchetes cuadrados.
 
 * Especificaré las fechas en el formato 'YYYYMMDD HHMMSS'  
 
 ```sql
 SELECT SUM(Total) AS Total 
 FROM Ventas.Pedidos
-WHERE Fecha  =  '20192404'
+WHERE Fecha  =  '20192404';
 ```
 
 * Siempre usare los alias usando la palabra clave `AS`.
 
-* Tener una especificación de abreviaturas usadas con el significado. A pesar de que estoy en contra de usar abreviaturas parece que hay casos donde el uso de abreviaturas parace legitimo , como es el caso de las restricciones ya que hay una tabla del sistema donde se especifican los tipos como `PK` ,`FK`
+* Tener una especificación de abreviaturas usadas con el significado. A pesar de que estoy en contra de usar abreviaturas parece que hay casos donde el uso de abreviaturas parace legitimo, como es el caso de las restricciones ya que hay una tabla del sistema donde se especifican los tipos como `PK` ,`FK`
 
 |Abreviatura|Significado|Comentario|
 |-|-|-|

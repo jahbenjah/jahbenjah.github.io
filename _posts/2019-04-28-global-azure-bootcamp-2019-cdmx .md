@@ -26,7 +26,11 @@ La parte que considero la mejor fue la experiencias y disposición de los exposi
 
 > El miedo a la nube esta fomentado principalmente por la ambigüedad en el precio de los servicios.
 
-Desde mi perspectiva las sesiones estuvieron inclinadas a usar el portal de Azure y dejar de lado las otras [herramientas](https://azure.microsoft.com/es-mx/downloads/) como la linea de comandos y el SDK. Siempre me es grato cuando un presentador realiza sus demos en la línea de comandos y comparte un repositorio donde uno puede replicar los demos después.
-Una sesiones pueden parecer repetitivas si eres un seguidor de los presentadores o de las redes sociales de los equipos de desarrollo Microsoft pero debemos ser pacientes y ver lo que aporta cada presentador.
+Desde mi perspectiva las sesiones estuvieron inclinadas a usar el portal de Azure y dejar de lado las otras [herramientas](https://azure.microsoft.com/es-mx/downloads/) como la linea de comandos, el SDK o el Azure Cloud Shell. Siempre me es grato cuando un presentador realiza sus demos en la línea de comandos y comparte un repositorio donde uno puede replicar los demos después.
+Unas sesiones pueden parecer repetitivas si eres un seguidor de los presentadores o de las redes sociales de los equipos de desarrollo Microsoft pero debemos ser pacientes y ver lo que aporta cada presentador.
 
 <img data-src="/img/AzureFunctions.PNG" class="lazyload"  alt="Linea de comandos de Azure Functions">
+
+La comunidad esta integrada por personas con diferentes perfiles desde administradores, vendedores, administradores, estudiantes, desarrolladores y más. He tenido la oportunidad de platicar con un Product Manager de Microsoft, un MVP  y un administrador de Azure.
+
+La platica con el Alejandro Reyes, administrador de Azure con 7 años de experiencia verso sobre la velocidad con que ha evolucionado Azure y las formas que su empresa se ha adaptado al cambio de tal manera que el caso de uso de su empresa fue revisada en la visita a México del CEO de [Satya Nadella](https://twitter.com/satyanadella) el CEO el pasado 14 de febrero del 2019 en el **Microsoft Innovation Summit** lo que me hizo arrepentirme de ignorar la invitación a este evento.

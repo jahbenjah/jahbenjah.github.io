@@ -109,6 +109,8 @@ MyVirtualMachine   MIGRUPDERECURSOSCETNOS   southcentralus
 
 <img data-src="/img/MaquinasVistualesAzure.PNG" class="lazyload"  alt="Máquinas virtuales creadas con C# en Azure">
 
+> Nota: En el portal de Azure hay una sección para descargar la **plantilla** que contiene la definición de un recurso en Azure en distintos lenguajes como C#, Ruby o  json, la CLI de Azure o PowerShell.
+
 Donde aprender más
 
 * [Azure for .NET and .NET Core developers](https://docs.microsoft.com/dotnet/azure/index?view=azure-dotnet)

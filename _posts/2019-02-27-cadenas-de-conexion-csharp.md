@@ -7,21 +7,22 @@ image:
   path: /img/og-connectionstring.jpg
   height: 358
   width: 683
+last_modified_at: 2019-05-05 21:24:25 +0000
 ---
 
-En este tutorial te mostramos como crear la cadena de conexión para SQL Server , MYSQL, Oracle, Firebird y Sqlite usando C# y un proyecto de consola de .NET Core.
+En este tutorial te mostramos como crear, manipular y validar la cadena de conexión para SQL Server, MYSQL, Oracle, Firebird y Sqlite usando C# y un proyecto de consola de .NET Core.
 
 <img data-src="/img/connectionstring.PNG" class="lazyload"  alt="Script Tag Helper">
 
 Para ello utilizamos la clase `ConnectionStringBuilder` que implementan los proveedores de ADO.NET. Para cada proveedor de ADO.NET es necesario instalar el paquete de Nuget correspondiente e importar el espacio de nombres con la instrucción [using]({% post_url 2019-01-03-cuatro-formas-de-usar-la-palabra-clave-using-de-csharp %}).
 
-Es importante mencionar que para cada base de datos hay una gran cantidad de parámetros que se pueden agregar muchos de ellos tienes un nombre que permite aclarar su función pero de otros es necesario que veas la documentación del proveedor . En Visual Studio o Visual Studio Code puedes ver los parámetros que contiene cada base de datos usando Intellisense o Presionando F12 para ir a la definición del tipo.
+Es importante mencionar que para cada base de datos hay una gran cantidad de parámetros que se pueden agregar muchos de ellos tienes un nombre que permite aclarar su función pero de otros es necesario que veas la documentación del proveedor. En Visual Studio o Visual Studio Code puedes ver los parámetros que contiene cada base de datos usando Intellisense o Presionando F12 para ir a la definición del tipo.
 
 ## Cadena de conexión para SQL Server
 
-1. Ejemplo de cadena de conexión para SQL Server
+1. Ejemplo de cadena de conexión para SQL Server. Es importante notar la presencia del parámetro **Application Name** este campo se puede utilizar para identificar una aplicación diagnostico de problemas de desempeño en (SQL Server Profiler)[https://docs.microsoft.com/sql/tools/sql-server-profiler/sql-server-profiler?view=sql-server-2017]. Es recomendable siempre incluirlo.
 
-```
+```bash
 Data Source=192.168.0.1;Initial Catalog=master;User ID=sa;Password=TuContraseña;Application Name=MyApp
 ```
 
@@ -29,7 +30,7 @@ Data Source=192.168.0.1;Initial Catalog=master;User ID=sa;Password=TuContraseña
 
 3. Para poder crear esta cadena de conexión se uso el código
 
-```
+```cs
 SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder()
     {
         DataSource = "192.168.0.1",
@@ -39,6 +40,23 @@ SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder()
     };
 builder.ApplicationName = "MyApp";
 Console.WriteLine(builder.ConnectionString);
+```
+
+4. Una forma de validar que una cadena de conexión es valida es abriendo la comunicación con con la base de datos. Aquí solo mostramos la forma de hacerlo con SQL Server pero es muy similar para los de mas proveedores de ADO.NET.
+
+```cs
+using (SqlConnection connection = new SqlConnection("Data Source=192.168.0.1;Initial Catalog=master;User ID=sa;Password=TuContraseña;Application Name=MyApp"))
+{
+    try
+    {
+        connection.Open();
+        Console.WriteLine("Conexión válida");
+    }
+    catch (Exception exception)
+    {
+        Console.WriteLine(exception.Message);
+    }
+}
 ```
 
 ## Cadena de conexión para MySQL
@@ -108,7 +126,6 @@ builder.Password = "Admin";
 builder.Charset = "utf8";
 Console.WriteLine(builder.ConnectionString);
 ```
-
 
 ## Cadena de conexión para SQLite
 

@@ -12,7 +12,7 @@ description: Subscibete a nuestra lista de correo para notificarte cuando tengam
 </style>
 <div id="mc_embed_signup">
 
-<form action="https://aspnetcoremaster.us19.list-manage.com/subscribe/post?u=42b2f6f2e572d8c8e80741a46&amp;id=382d884b15" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+<form action="https://aspnetcoremaster.us19.list-manage.com/subscribe/post?u=42b2f6f2e572d8c8e80741a46&amp;id=382d884b15" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" rel="noopener" novalidate>
     <div id="mc_embed_signup_scroll">
 	<h2>Subscribete a nuestra lista de correo</h2>
 <div class="mc-field-group">

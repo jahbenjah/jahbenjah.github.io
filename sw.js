@@ -1,7 +1,15 @@
 var CACHE_NAME = 'aspnetcormaster-cache-v4';
 var urlsToCache = [
-  '/assets/css/style.css',
-  '/assets/gitbook/style.css'
+   '/',
+   '/little-aspnetcore-book/',
+   '/assets/css/style.css',
+   '/assets/gitbook/style.css',
+   '/assets/gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css',
+   '/assets/gitbook/gitbook-plugin-anchors/plugin.css',
+   '/assets/gitbook/gitbook-plugin-forkmegithub/plugin.css',
+   '/assets/gitbook/gitbook-plugin-highlight/website.css',
+   '/assets/gitbook/gitbook-plugin-search/search.css',
+   '/assets/gitbook/gitbook-plugin-fontsettings/website.css'
 ];
 
 self.addEventListener('install', function (event) {

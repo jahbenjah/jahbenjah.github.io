@@ -317,7 +317,7 @@ WORKDIR /app
 <p>Una vez creada la imagen, puede ejecutar <code>docker images</code> para listar todas las im&#xE1;genes disponibles en su m&#xE1;quina local. Para probarlo en un contenedor, ejecute</p>
 <pre><code>docker run --name aspnetcoretodo_sample --rm -it -p 8080:80 aspnetcoretodo
 </code></pre><p>El indicador <code>-it</code> le dice a Docker que ejecute el contenedor en modo interactivo (dando salida al terminal, en lugar de ejecutarse en segundo plano). Cuando quieras detener el contenedor, presiona Control-C.</p>
-<p>&#xBF;Recuerda la variable <code>ASPNETCORE_URLS</code> que le dijo a ASP.NET Core que escuche en el puerto 80? La opci&#xF3;n <code>-p 8080: 80</code> le dice a Docker que asigne el puerto 8080 en <em>su</em> m&#xE1;quina al <em>puerto</em> del contenedor 80. Abra su navegador y navegue a <a href="http://localhost:8080" target="_blank">http://localhost:8080</a> para ver la aplicaci&#xF3;n que se ejecuta en el contenedor !</p>
+<p>&#xBF;Recuerda la variable <code>ASPNETCORE_URLS</code> que le dijo a ASP.NET Core que escuche en el puerto 80? La opci&#xF3;n <code>-p 8080: 80</code> le dice a Docker que asigne el puerto 8080 en <em>su</em> m&#xE1;quina al <em>puerto</em> del contenedor 80. Abra su navegador y navegue a <a href="http://localhost:8080" target="_blank" rel="noopener">http://localhost:8080</a> para ver la aplicaci&#xF3;n que se ejecuta en el contenedor !</p>
 <h3 id="configurar-nginx"><a name="configurar-nginx" class="plugin-anchor" href="#configurar-nginx"><i class="fa fa-link" aria-hidden="true"></i></a>Configurar Nginx</h3>
 <p>Al principio de este cap&#xED;tulo, mencion&#xE9; que deber&#xED;a usar un proxy inverso como Nginx para enviar las solicitudes a Kestrel. Tambi&#xE9;n puedes usar Docker para esto.</p>
 <p>La arquitectura general constar&#xE1; de dos contenedores: un contenedor Nginx que escucha en el puerto 80 y reenv&#xED;a las solicitudes al contenedor que acaba de construir y aloja su aplicaci&#xF3;n con Kestrel.</p>
@@ -347,7 +347,7 @@ http {
 </code></pre><p>Este archivo de configuraci&#xF3;n le dice a Nginx que haga proxy de las solicitudes entrantes a <code>http://kestrel:80</code>. (Ver&#xE1;s por qu&#xE9; <code>kestrel</code> funciona como nombre de host en un momento).</p>
 <blockquote>
 <p>Cuando implementa su aplicaci&#xF3;n en un entorno de producci&#xF3;n, debe agregar la directiva <code>server_name</code> y validar y restringir el encabezado del host a valores buenos conocidos. Para m&#xE1;s informaci&#xF3;n, ver:</p>
-<p><a href="https://github.com/aspnet/Announcements/issues/295" target="_blank">https://github.com/aspnet/Announcements/issues/295</a></p>
+<p><a href="https://github.com/aspnet/Announcements/issues/295" target="_blank" rel="noopener">https://github.com/aspnet/Announcements/issues/295</a></p>
 </blockquote>
 <h3 id="set-up-docker-compose"><a name="set-up-docker-compose" class="plugin-anchor" href="#set-up-docker-compose"><i class="fa fa-link" aria-hidden="true"></i></a>Set up Docker Compose</h3>
 <p>Aqu&#xED; hay un archivo m&#xE1;s para crear. Arriba en el directorio ra&#xED;z, crea <code>docker-compose.yml</code>:</p>
@@ -366,7 +366,7 @@ http {
 <p>Docker Compose es una herramienta que te ayuda a crear y ejecutar aplicaciones de m&#xFA;ltiples contenedores. Este archivo de configuraci&#xF3;n define dos contenedores: <code>nginx</code> de la receta <code>./Nginx/Dockerfile</code>, y <code>kestrel</code> de la receta <code>./Dockerfile</code>. Los contenedores est&#xE1;n expl&#xED;citamente vinculados entre s&#xED; para que puedan comunicarse.</p>
 <p>Puede intentar girar toda la aplicaci&#xF3;n multi-contenedor ejecutando:</p>
 <pre><code>docker-compose up
-</code></pre><p>Intente abrir un navegador y navegue a <a href="http://localhost" target="_blank">http://localhost</a> (puerto 80, no 8080). Nginx escucha en el puerto 80 (el puerto HTTP predeterminado) y env&#xED;a solicitudes a su aplicaci&#xF3;n ASP.NET Core alojada por Kestrel.</p>
+</code></pre><p>Intente abrir un navegador y navegue a <a href="http://localhost" target="_blank" rel="noopener">http://localhost</a> (puerto 80, no 8080). Nginx escucha en el puerto 80 (el puerto HTTP predeterminado) y env&#xED;a solicitudes a su aplicaci&#xF3;n ASP.NET Core alojada por Kestrel.</p>
 <h3 id="configurar-un-servidor-docker"><a name="configurar-un-servidor-docker" class="plugin-anchor" href="#configurar-un-servidor-docker"><i class="fa fa-link" aria-hidden="true"></i></a>Configurar un servidor Docker</h3>
 <p>Las instrucciones de configuraci&#xF3;n espec&#xED;ficas est&#xE1;n fuera del alcance de este libro, pero se puede usar cualquier versi&#xF3;n moderna de Linux (como Ubuntu) para configurar un host Docker. Por ejemplo, podr&#xED;a crear una m&#xE1;quina virtual con Amazon EC2 e instalar el servicio Docker. Puede buscar &quot;amazon ec2 setup up docker&quot; (por ejemplo) para obtener instrucciones.</p>
 <p>Me gusta usar DigitalOcean porque han hecho que sea muy f&#xE1;cil comenzar. DigitalOcean tiene una m&#xE1;quina virtual Docker pre-construida y tutoriales detallados para que Docker est&#xE9; en funcionamiento (busque &quot;docker digitalocean&quot;).</p>

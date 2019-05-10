@@ -264,7 +264,7 @@
 <p>En comparaci&#xF3;n con las pruebas unitarias, las pruebas de integraci&#xF3;n tienen un alcance mucho mayor. Prueba toda la pila de aplicaciones. En lugar de aislar una clase o m&#xE9;todo, las pruebas de integraci&#xF3;n aseguran que todos los componentes de su aplicaci&#xF3;n est&#xE9;n funcionando juntos correctamente: enrutamiento, controladores, servicios, c&#xF3;digo de base de datos, etc.</p>
 <p>Las pruebas de integraci&#xF3;n son m&#xE1;s lentas y m&#xE1;s complejas que las pruebas de unitarias, por lo que es com&#xFA;n que un proyecto tenga muchas pruebas de unitarias peque&#xF1;as pero solo un pu&#xF1;ado de pruebas de integraci&#xF3;n.</p>
 <p>Para probar toda la pila (incluido el enrutamiento del controlador), las pruebas de integraci&#xF3;n normalmente hacen llamadas HTTP a su aplicaci&#xF3;n como lo har&#xED;a un navegador web.</p>
-<p>Para realizar una prueba de integraci&#xF3;n, puede iniciar su aplicaci&#xF3;n y realizar solicitudes manualmente a <a href="http://localhost:5000" target="_blank">http://localhost:5000</a>. Sin embargo, ASP.NET Core ofrece una mejor alternativa: la clase <code>TestServer</code>. Esta clase puede alojar su aplicaci&#xF3;n durante la duraci&#xF3;n de la prueba, y luego detenerla autom&#xE1;ticamente cuando se completa la prueba.</p>
+<p>Para realizar una prueba de integraci&#xF3;n, puede iniciar su aplicaci&#xF3;n y realizar solicitudes manualmente a <a href="http://localhost:5000" target="_blank" rel="noopener">http://localhost:5000</a>. Sin embargo, ASP.NET Core ofrece una mejor alternativa: la clase <code>TestServer</code>. Esta clase puede alojar su aplicaci&#xF3;n durante la duraci&#xF3;n de la prueba, y luego detenerla autom&#xE1;ticamente cuando se completa la prueba.</p>
 <h3 id="crear-un-proyecto-de-prueba"><a name="crear-un-proyecto-de-prueba" class="plugin-anchor" href="#crear-un-proyecto-de-prueba"><i class="fa fa-link" aria-hidden="true"></i></a>Crear un proyecto de prueba</h3>
 <p>Si actualmente se encuentra en el directorio de su proyecto, <code>cd</code> sube un nivel al directorio ra&#xED;z <code>AspNetCoreTodo</code>. Use este comando para crear un nuevo proyecto de prueba:</p>
 <pre><code>dotnet new xunit -o AspNetCoreTodo.IntegrationTests
@@ -375,7 +375,7 @@ Test Run Successful.
 Test execution time: 2.0588 Seconds
 </code></pre><h2 id="resumiendo"><a name="resumiendo" class="plugin-anchor" href="#resumiendo"><i class="fa fa-link" aria-hidden="true"></i></a>Resumiendo</h2>
 <p>Las pruebas son un tema amplio y hay mucho m&#xE1;s que aprender. Este cap&#xED;tulo no toca el c&#xF3;digo de prueba de interfaz de usuario (UI) ni el c&#xF3;digo de prueba (JavaScript), que probablemente merecen libros completos por su cuenta. Sin embargo, debe tener las habilidades y el conocimiento b&#xE1;sico que necesita para aprender m&#xE1;s sobre las pruebas y practicar la escritura de pruebas para sus propias aplicaciones.</p>
-<p>La documentaci&#xF3;n de ASP.NET Core (<a href="https://docs.asp.net" target="_blank">https://docs.asp.net</a>) y Stack Overflow son excelentes recursos para aprender m&#xE1;s y encontrar respuestas cuando te quedas atascado.</p>
+<p>La documentaci&#xF3;n de ASP.NET Core (<a href="https://docs.asp.net" target="_blank" rel="noopener">https://docs.asp.net</a>) y Stack Overflow son excelentes recursos para aprender m&#xE1;s y encontrar respuestas cuando te quedas atascado.</p>
                                 </section>
     </div>
     <div class="search-results">

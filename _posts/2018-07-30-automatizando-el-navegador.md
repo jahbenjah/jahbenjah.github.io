@@ -14,41 +14,49 @@ Aquí te mostramos como automatizar el inicio de sesión de Facebook.
   ...Selenium puede ser controlado por múltiples lenguajes de programación y frameworks de pruebas."  
 <cite>[SeleniumHQ]()</cite>
 
-
- 
-Este artículo representa una guía paso a paso para automatizar el inicio de sesión de Facebok usando C#, Selenuim, xunit.net. 
+Este artículo representa una guía paso a paso para automatizar el inicio de sesión de Facebok usando C#, Selenuim, xunit.net.
 Se asume que tienes instalado el SDK de .NET Core y el editor de código Visual Studio Code o Visual Studio 2017.
 Se creará el proyecto usando la línea de comandos para .NET Core. El proyecto puede ejecutarse en Visual Studio 2017.
 
-## Preparando el proyecto .NET Core con _dotnet_ CLI.
-Para realizarlo ejecuta en la terminal o consola los siguientes comandos. Ejecuta línea por línea ya que se colocaron más de 
-un comando por descripción.
+## Preparando el proyecto .NET Core con _dotnet_ CLI
+
+Para realizarlo ejecuta en la terminal o consola los siguientes comandos. Ejecuta línea por línea ya que se colocaron más de un comando por descripción.
+
 1. Se creará una solución llamada AutomatizarNavegador y dos proyectos de consola, el primero llamado Facebook y el nombre del segundo proyecto es FacebookTest.
+
 ```sh
 dotnet new sln -o AutomatizarNavegador
 dotnet new console -o AutomatizarNavegador/Facebook
 dotnet new xunit -o AutomatizarNavegador/FacebookTest
 ```
+
 2 .Ejecutar el comando `cd AutomatizarNavegador` para abrir la carpeta  del proyecto. Agregar los proyectos a la solución mediante los siguientes comandos.
+
 ```sh
 dotnet sln add Facebook/Facebook.csproj
 dotnet sln add FacebookTest/FacebookTest.csproj
 ```
+
 3. Abrir la carpeta el proyecto Facebook y agregar el paquete `Selenium.WebDriver` al proyecto Facebook. Este paquete define un conjunto de interfaces que permiten controlar el Navegador.
-Existen diferentes que han proveedores que han implementado el WenDrive de Selenium como son: Chrome, Firefox, Internet Explorer, Safari Opera entre otros. 
+Existen diferentes que han proveedores que han implementado el WenDrive de Selenium como son: Chrome, Firefox, Internet Explorer, Safari Opera entre otros.
+
 ```sh
 cd Facebok
 dotnet add package Selenium.WebDriver
 ```
+
 4. Abrir el proyecto FacebookTest para agregar referencias. Este proyecto necesita una referencia al proyecto Facebook y referencias a las diferentes implementacion del WebDrive.
 El web driver es un ejecutable. En nuestro caso solo agregamos soporte para Firefox y Chrome.
+
 ```sh
 cd ..\FacebookTest
 dotnet add reference ..\Facebook\Facebook.csproj
 dotnet add package Selenium.Firefox.WebDriver
 dotnet add package Selenium.Chrome.WebDriver
 ```
+
 5. Con esto el proyecto esta listo para escribir el codigo. Puedes utilizar Visual Studio Code o Visual Studio 2017. Abajo se muestra la estructura de las carpetas.
+
 ```sh
 |   AutomatizarNavegador.sln
 |   
@@ -74,10 +82,12 @@ dotnet add package Selenium.Chrome.WebDriver
 ```           
 
 ## El código. 
+
 Se compone de dos proyectos uno de consola y otro de pruebas unitarias con xunit. Aunque aquí utilizamos .NET Core y xunit.net 
 es posible utilizar el .NET Framework y cualquier otro framework de pruebas (NUnit , MS Test).
 
 ### _Page Object_ del inicio de sesión de Facebok
+
 El primero proyecto tiene como única función que es proporcionar la funcionalidad para manipular los controles de la página de incio de sesión de Facebook.
 Es decir permite ingresar el usuario, contraseña y presionar el botón iniciar sesión. 
 
@@ -86,7 +96,6 @@ Esta clase intenta seguir el patrón de diseño
 
 La clase _IniciaSesion_ contiene 3 constantes de solo lectura que permiten identificar los elementos _HTML_ de la página..
 Puedes obtenerlos mediante las herramientas para desarrollador del navegador.
-
 
 <img data-src="/img/InspecionarFacebook.PNG" class="lazyload"  alt="Herramientas de desarrador Firefox">
 
@@ -127,7 +136,6 @@ namespace Facebook
         }
     }
 }
-
 ```
 
 ```cs
@@ -155,7 +163,7 @@ namespace Facebook
 }
 ```
 
-### Las pruebas 
+### Las pruebas
 
 El segundo projecto ejectua pruebas unitarias sobre el primer proyecto. Para ello se utiliza el framework [xunit.net](https://xunit.github.io/) esta clase en un proyecto .
 El constructor de la clase se ejecuta al inicio de cada prueb e inicializa  una instancia particula del IWebDriver (FirefoxDriver o ChromeDriver)
@@ -215,7 +223,7 @@ namespace FacebookTest
 
 ```
 
-## Ejecucion 
+## Ejecucion
 
 Para ejecutar desde la linea de comandos puedes usar `dotnet test` o `dotnet xunit` desde la carpeta de _FacebookTest_.
 

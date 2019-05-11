@@ -11,7 +11,7 @@ Programar es una acto de comunicación entre humanos y computadoras. Si bien las
 
 En este post esbozo lo que considero pueden ser unas buenas practicas de codificación para el lenguaje **T-SQL** esto solo es basado en mi experiencia personal y lo he visto en bases de datos de otras personas.Seria bueno que cada equipo de trabajo defina las practicas y convenciones de código a seguir por todos los miembros y ayudarse de alguna herramienta de análisis estático de código para hacer cumplir estas reglas.
 
-~~Actualmente no conozco un programa que formate el código  o algún analizador de código estático para **T-SQL**~~ por lo que si conoces alguno por favor házmelo saber en un comentario.
+~~Actualmente no conozco un programa que formatee el código  o algún analizador de código estático para **T-SQL**~~ por lo que si conoces alguno por favor házmelo saber en un comentario.
 
 Por comentarios recibidos en Facebook
 

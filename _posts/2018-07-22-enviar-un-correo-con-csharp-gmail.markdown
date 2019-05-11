@@ -24,12 +24,12 @@ Si usas un proyecto web puedes usarlo mismo en el *Web.config*.
 
 ## Configuración de Gmail ##
 
-Es necesario permitir el acceso a aplicaciones no seguras desde la configuración de Gmail tal como se describe en la 
+Es necesario permitir el acceso a aplicaciones no seguras desde la configuración de Gmail tal como se describe en la
 [documentación de Gmail](https://support.google.com/accounts/answer/6010255?hl=es-41).
 
 <img data-src="/img/AccesoAplicacionesMenosSeguras.PNG" class="lazyload"  alt="Script Tag Helper">
 
-La configuración necesaria para el cliente de SMTP de acuerdo a la [documentación de Gmail](https://support.google.com/mail/answer/7126229?visit_id=1-636683482170517029-2536242402&hl=es&rd=1) 
+La configuración necesaria para el cliente de SMTP de acuerdo a la [documentación de Gmail](https://support.google.com/mail/answer/7126229?visit_id=1-636683482170517029-2536242402&hl=es&rd=1)
 es la siguiente:
 
 Parámetro    | Valor
@@ -107,11 +107,10 @@ code ..
 
 ## Código biblioteca de clases.
 
-Esta clase esta compuesta por 2 campos y una propiedad. En el constructor se inicializa la propiedad ```Configuration``` responsable de leer los archivos de XML y se
-inicializa el cliente SMTP con los parámetros de configuración.
+Esta clase esta compuesta por 2 campos y una propiedad. En el constructor se inicializa la propiedad ```Configuration``` responsable de leer los archivos de XML y se inicializa el cliente SMTP con los parámetros de configuración.
 
 El método ```EnviarCorreo(string , string , string ,bool esHtlm = false)``` utiliza un parámetro opcional que define si el mensaje es HTML. Por default envia texto.
-El método  ```EnviarCorreo(MailMessage)``` esta pensado para poder construir un objecto MailMessage y poder aprovechar todas las capacidades este objecto como adjuntar archivos
+El método  ```EnviarCorreo(MailMessage)``` esta pensado para poder construir un objecto `MailMessage` y poder aprovechar todas las capacidades este objecto como adjuntar archivos
 
 
 ```cs
@@ -202,7 +201,8 @@ namespace EmailServiceCliente
 
 # Ejecutar
 
-Abrir la terminal en la carpeta _EmailServiceCliente_ y ejecutar 
+Abrir la terminal en la carpeta _EmailServiceCliente_ y ejecutar
+
 ```sh
 dotnet run
 ```

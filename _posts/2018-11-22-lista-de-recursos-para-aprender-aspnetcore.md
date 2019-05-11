@@ -14,7 +14,7 @@ Mi opción preferida para aprender algo nuevo siempre es un libro. He de decir q
 
 ## Gratuitos
 
-| Titulo                                                      | Autor         | Comentario      
+| Titulo                                                      | Autor         | Comentario 
 | ------------------------------------------------------------| ------------- | ----------------
 | [Little ASP.NET Core Book](https://recaffeinate.co/book/)   |Nate Barbettini| Te enseña los fundamentos de ASP.NET Core MVC construyendo una aplicación para controlar las tareas pendientes. -Estoy preparando una- Ya esta lista la [traducción en español](https://aspnetcoremaster.com/little-aspnetcore-book/)|
 | [ASP.NET Core Succintly](https://www.syncfusion.com/ebooks/asp_net_core_succinctly)|Simone Chiaretta y Ugo Lattanzi | Da explicaciones sencillas de la evolución de ASP.NET  hasta ASP.NET Core 1.0 |
@@ -28,7 +28,6 @@ Mi opción preferida para aprender algo nuevo siempre es un libro. He de decir q
 | ------------------------------------------------------------| ------------- | ----------------|
 [*ASP.NET Core In Action*](https://www.manning.com/books/asp-net-core-in-action)|Andrew Lock|Brinda explicaciones detalladas y acompañadas de muchos diagramas que ayudan a entender mejor como funciona ASP.NET Core MVC|
 [Entity Framework Core in Action ](https://www.manning.com/books/entity-framework-core-in-action)|Jon P Smith|Los capítulos que tratan sobre ASP.NET Core me parecen excelentes y creo que el autor debe escribir un libro sobre arquitectura de software. Esta muy influenciado por el libro de [Domain Driven Design](https://www.amazon.com.mx/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/ref=asc_df_0321125215/?tag=gledskshopmx-20&linkCode=df0&hvadid=295433315443&hvpos=1o1&hvnetw=g&hvrand=4347609638994032332&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9073925&hvtargid=pla-449269547899&psc=1) de Eric Evans. Recomendables los capítulos que tratan sobre el patrón Bounded Context y Optimización de EF Core
-
 
 # Blogs
 
@@ -64,4 +63,8 @@ Los cursos aquí mencionados son gratuitos o que puedes tomar en el periodo de e
 
 # Eventos
 
+Microsoft Innovation Submit
+Microsoft Ignite Tour
+Azure Bootcamp
+Microsoft Build
 .NET Conf

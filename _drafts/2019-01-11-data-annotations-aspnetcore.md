@@ -13,7 +13,7 @@ System.ComponentModel.Annotations
 ```
 
 
-La documenyacion esta alojada en [aqui](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations?view=netframework-4.7.2)
+La documentación esta alojada en [aqui](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations?view=netframework-4.7.2)
 
 
 Son atributos

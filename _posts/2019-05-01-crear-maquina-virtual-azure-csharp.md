@@ -12,7 +12,7 @@ image:
 
 La máquinas virtuales de Azure son un ejemplo de Infraestructura como Servicio o <abbr lang="en" title="Infrastructure as a Service">IaaS</abbr> por sus siglas en ingles. Estas se pueden crear mediante el portal de Azure, la linea de comandos, el Cloud Shell o mediante un lenguaje de programación para los que exista un SDK como C#, Java o Javascript entre otros. Aquí te mostramos como crear una máquina virtual con C# y .NET Core.
 
-Una vez que hayamos iniciado sesión con `az login` en la linea de comandos de Azure podemos permitir  acceder a Azure una aplicación de C# necesitamos crear un "service principal" y lo hacemos con la linea de comandos ejecutando:
+Una vez que hayamos iniciado sesión con `az login` en la linea de comandos de Azure podemos permitir acceder a Azure una aplicación de C# necesitamos crear un "service principal" y lo hacemos con la linea de comandos ejecutando:
 
 ```bash
 az ad sp create-for-rbac --sdk-auth
@@ -42,7 +42,7 @@ dotnet add package Microsoft.Azure.Management.Compute.Fluent
 dotnet add package Microsoft.Azure.Management.Compute
 ```
 
-El código es divido en 3 partes la primera sirve para crear las credenciales y autenticarse en Azure. La segunda parte crea una maquina virtual de Linux usando Centos 7.2 y la ultima parte crea una maquina virtual de Windows Server 2012. Cada una de las maquinas se crea en su propio Grupo de Recursos. Nota los enumeraciones que existen para las regiones de azure , el tamaño de las maquinas virtuales y los sistemas operativos conocidos.
+El código es divido en 3 partes la primera sirve para crear las credenciales y autenticarse en Azure. La segunda parte crea una maquina virtual de Linux usando Centos 7.2 y la ultima parte crea una maquina virtual de Windows Server 2012. Cada una de las maquinas se crea en su propio Grupo de Recursos. Nota los enumeraciones que existen para las regiones de azure, el tamaño de las maquinas virtuales y los sistemas operativos conocidos.
 
 ```cs
 using Microsoft.Azure.Management.Compute.Fluent;
@@ -109,7 +109,13 @@ MyVirtualMachine   MIGRUPDERECURSOSCETNOS   southcentralus
 
 <img data-src="/img/MaquinasVistualesAzure.PNG" class="lazyload"  alt="Máquinas virtuales creadas con C# en Azure">
 
-> Nota: En el portal de Azure hay una sección para descargar la **plantilla** que contiene la definición de un recurso en Azure en distintos lenguajes como C#, Ruby o  json, la CLI de Azure o PowerShell.
+Si deseas eliminar estas máquinas virtuales, también puedes hacerlo con C# , en este caso eliminamos el grupo de recursos y los recursos que le pertenecen.
+
+```cs
+azure.ResourceGroups.DeleteByName("MiGrupDeRecursosWindows");
+```
+
+> Nota: En el portal de Azure hay una sección para descargar la **plantilla** que contiene la definición de un recurso en Azure en distintos lenguajes como C#, Ruby o json, la CLI de Azure o PowerShell. Pero en el caso de C# no usa la version de la <abbr lang="en" title="Application Programming Interface">API</abbr> fluida de Azure.
 
 Donde aprender más
 

@@ -214,6 +214,8 @@ namespace EmailServiceCliente
 }
 ```
 
+<img data-src="/img/CorreoAdjunto.PNG" class="lazyload"  alt="Imagen del correo enviado">
+
 # Ejecutar
 
 Abrir la terminal en la carpeta _EmailServiceCliente_ y ejecutar

@@ -56,7 +56,7 @@ Estos tienen un gran alcance porque abarcan gran cantidad de temas pasando pro <
 
 ## Donde ver las sesiones de Microsoft Build 2019
 
-Puedes ver las sesiones de Microsoft Build 2019 en la página oficial del evento o en el canal de [Microsoft Developer](https://www.youtube.com/channel/UCsMica-v34Irf9KVTh6xx-g) :
+Puedes ver las sesiones de Microsoft Build 2019 en la [página oficial del evento](https://www.microsoft.com/en-us/build) o en el canal de [Microsoft Developer](https://www.youtube.com/channel/UCsMica-v34Irf9KVTh6xx-g) :
 
 [Lista de reproducción Microsoft Build 2019](https://www.youtube.com/playlist?list=PLlrxD0HtieHgspNIlv1x2H5_cxSRm7B17)
 

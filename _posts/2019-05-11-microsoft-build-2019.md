@@ -55,3 +55,15 @@ Los anuncios relacionados con Azure se recopilan en la siguiente página :
 Estos tienen un gran alcance porque abarcan gran cantidad de temas pasando pro <abbr lang="en" title="Artificial Intelligence">AI</abbr>, Contendores, Bases de datos , Seguridad , Internet de las Cosas y Devops.
 
 ## Donde ver las sesiones de Microsoft Build 2019
+
+Puedes ver las sesiones de Microsoft Build 2019 en la página oficial del evento o en el canal de [Microsoft Developer](https://www.youtube.com/channel/UCsMica-v34Irf9KVTh6xx-g) :
+
+[Lista de reproducción Microsoft Build 2019](https://www.youtube.com/playlist?list=PLlrxD0HtieHgspNIlv1x2H5_cxSRm7B17)
+
+## Sesiones recomendadas
+
+0. [Full stack web development with ASP.NET Core 3.0 and Blazor](https://www.youtube.com/watch?v=y7LAbdoNBJA&list=PLlrxD0HtieHgspNIlv1x2H5_cxSRm7B17&index=110)
+1. [.NET Platform Overview and Roadmap](https://www.youtube.com/watch?v=ZlO1utbB2GQ&list=PLlrxD0HtieHgspNIlv1x2H5_cxSRm7B17&index=38&t=0s)
+2. [What’s new with WSL](https://www.youtube.com/watch?v=9ZqeyTjX0TQ)
+3. [Windows Terminal: Building a better command line experience for developers](https://www.youtube.com/watch?v=KMudkRcwjCw&t=11s)
+4. All the Developer Things with Hanselman and Friends

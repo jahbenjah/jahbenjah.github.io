@@ -7,7 +7,7 @@ last_modified_at: 2019-05-11 13:05:55 +0000
 ---
 
 En el desarrollo de software empresarial enviar correos electrónicos con documentos adjuntos o con un diseño personalizados es un requerimiento muy frecuente, en este tutorial te mostramos enviar correos con C#, .NET Core 2.0 y Visual Studio Code.
-Actualmente existen varias bibliotecas para enviar correos como SendGrid o MailKit, 8sin embargo en este tutorial se utiliza la clase [SmtpClient](https://docs.microsoft.com/en-us/dotnet/api/system.net.mail.smtpclient?view=netframework-4.7.2) parte de .NET Standard 2.0.
+Actualmente existen varias bibliotecas para enviar correos como SendGrid o MailKit, sin embargo en este tutorial se utiliza la clase [SmtpClient](https://docs.microsoft.com/en-us/dotnet/api/system.net.mail.smtpclient?view=netframework-4.7.2) parte de .NET Standard 2.0.
 
 <img data-src="/img/adult-business-businessman-1061588.jpg" class="lazyload"  alt="Revisando el correo electrónico">
 

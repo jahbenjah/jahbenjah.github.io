@@ -97,3 +97,8 @@ WHERE Products.CategoryID = Categories.CategoryID ;
 -- Description:	<Description,,>
 -- =============================================
 ```
+
+# Referencias
+
+Un libro que he encontrado bastante util  y que tengo como mi fuente de consulta es 
+[119 SQL Code Smells](https://www.red-gate.com/simple-talk/books/sql-books/119-sql-code-smells/) del autor [Phil Factor](https://twitter.com/phil_factor). Lo recomiendo ampliamente.

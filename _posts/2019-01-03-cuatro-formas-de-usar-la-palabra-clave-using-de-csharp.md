@@ -15,7 +15,7 @@ Puedes consultar la lista completa de:[Palabras clave de C#](https://docs.micros
 
 Un programa **Hola Mundo**sin la instrucción luce de la siguiente manera:
 
-```
+```cs
 namespace Using
 {
     class Program
@@ -34,7 +34,7 @@ Básicamente se observa que es necesario escribir el nombre calificado (incluyen
 
 Con la instrucción `using System` a principio del programa es posible reducir el enunciado `System.Console.WriteLine("Hola Mundo : sin using");` por `Console.WriteLine("using  espacios de nombres");`
 
-```
+```cs
 using System;
 
 namespace Using
@@ -61,7 +61,7 @@ Este es especialmente util cuando nuestro programa hace un gran uso de miembros 
 2. [System.IO.File](https://docs.microsoft.com/es-mx/dotnet/api/system.io.file?view=netframework-4.7.2)
 3. [System.Math](https://docs.microsoft.com/es-mx/dotnet/api/system.math?view=netframework-4.7.2)
 
-```
+```cs
 using static System.Console;
 
 namespace Using
@@ -84,7 +84,7 @@ En raras ocasiones, pero si pasa, dos o más tipos tienen el mismo nombre pero e
 
 Podemos crear un alias para un tipo usando la palabra using seguida del alias igualando con el nombre completo de la clase : `using Consola = System.Console;`.
 
-```csharp
+```cs
 
 using Consola = System.Console;
 
@@ -106,7 +106,7 @@ Con el alias se resuelve el problemas de las colisión de nombres y la clase `Sy
 
 El ultimo caso es cuando una clase implementa la interfaz [IDisposable](https://docs.microsoft.com/dotnet/api/system.idisposable?view=netframework-4.7.2) esto asegura que tendrá el método `Dispose` que es utilizado para liberar recursos no administrados como un archivo, una conexión de red, una conexión con base de datos entre otros. Este caso es muy similar al [<span lang="en">try with resources</span>](https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html) de Java.
 
-```csharp
+```cs
 
 namespace Using
 {
@@ -125,13 +125,14 @@ namespace Using
 
 Esto asegura que se ejecute en método `Dispose` de la clase `StreamReader` al terminar el bloque de código encerrado por el enunciado `using`.
 
-> Para ver si una clase o su clase padre implementa implementa la interfaz ``IDisposable`` puedes usar la característica del _Visual Studio_  **Ir a definición F12**.
+> Para ver si una clase o su clase padre implementa implementa la interfaz `IDisposable` puedes usar la característica del _Visual Studio_  **Ir a definición F12**.
 
 # Para llevar
 
 * El lenguaje de programación en el que programamos es una elección. Por lo que debemos familiarizarnos con las características y los llamados [**Programming idioms**](https://en.wikipedia.org/wiki/Programming_idiom).
 
 * Ya lo escribió Jon Skeet si elegiste C#: 
+
 > La especificación de C# debe ser tu nueva mejor amiga
 
 * ¿ Conoces el patrón Dispose ?

@@ -3,9 +3,10 @@ layout: post
 title:  "Tipos de proyectos de ASP.NET Core "
 date:   2019-02-09 20:00:01 +0000
 categories: asp.net core
+last_modified_at: 2019-05-25 09:42:55 +0000
 ---
 
-Una aplicación de ASP\.NET Core no es más que una aplicación de consola que ejecuta un servidor web en el método `Main`. En este artículo describo los tipos de proyectos disponibles con el SDK de dotnet.
+Una aplicación de ASP\.NET Core no es más que una aplicación de consola que ejecuta un servidor web en el método `Main`. En este artículo describo los tipos de proyectos disponibles con el <abbr lang="en" title="Software Developer Kit">SDK</abbr> de *dotnet*.
 
 Todo comienza con el comando `dotnet new` por lo que es importante saber cuales son las opciones disponibles para el mismo . Invocaremos la ayuda sobre mediante la instrucción `dotnet new --help` en la consola o terminal. La salida se muestra en lo siguiente 
 
@@ -13,7 +14,7 @@ Todo comienza con el comando `dotnet new` por lo que es importante saber cuales 
 
 Hay varias observaciones para esta salida:
 
-* Las opciones tienen una forma corta precedida por un guion medio `-h` y una forma larga precedida por dos guiones medios `--help`. Es decir es equivalente `dotnet new --help` a `dotnet new -h`.
+* Las opciones tienen una forma corta precedida por un guion medio `-h` y una forma larga precedida por dos guiones medios `--help`. Es decir, es equivalente `dotnet new --help` a `dotnet new -h`.
 
 * Las opciones que me parecen importantes son :
     `--name` Permite especificar el nombre del proyecto
@@ -22,32 +23,49 @@ Hay varias observaciones para esta salida:
     `--type` permite mostrar los diferentes tipos de plantillas: `project`, `items` y `others`
     `--language` Permite elegir el lenguaje de programación para algunas plantillas puede ser C# , VB o F#.
 
-* Cada plantillas de proyecto contiene un nombre corto como por ejemplo **mvc**, **web** , **webapp** o **webapi** que es usado para crearlo.
+* Cada plantilla de proyecto contiene un nombre corto, por ejemplo, **mvc**, **web** , **webapp** o **webapi** y  este nombre corto se usa como argumento para el comando `dotnet new <nombre_corto>`.
 
 * Se pueden crear proyectos de las plantillas  **mvc**, **web** y **webapi** usando C# y F#.
 
 # Los proyectos web de ASP.NET Core
 
 Podemos clasificar los tipos de proyectos de ASP.NET Core en las siguientes categorías:  
-_Aplicaciones web tradicionales basadas en **MVC**_
-_Aplicaciones we tradicionales basadas en **Razor Pages**_,
-_Aplicaciones una sola página (SPA Single Page Application)_
+* _Aplicaciones web tradicionales basadas en **MVC**_
+* _Aplicaciones web tradicionales basadas en **Razor Pages**_,
+* _Aplicaciones una sola página (<abbr lang="en" title="Single Page Application">SPA</abbr> )_. Estas requieren tener instalado [Node.js](https://nodejs.org/en/)
 
- Veamos los tipos de proyectos disponibles y como crear un proyecto.
+ Veamos los tipos de proyectos disponibles y como crear un proyecto. Puedes ejecutar el comando `dotnet new --type project` para revisar las plantillas de proyecto que tienes instaladas: En este caso mostramos solo las de tipo web, observa que especifican los lenguajes de programación para los que las plantillas de proyecto están disponibles.
 
-|Proyecto|Nombre Corto|Comando|
-|-|-|-|
-|ASP.NET Core Empty|web|`dotnet new web`|
-|ASP.NET Core Web App (Model-View-Controller)|mvc|`dotnet new mvc`|
-|ASP.NET Core Web API|webapi|`dotnet new webapi`|
-|ASP.NET Core with Angular|angular|`dotnet new angular`|
-|ASP.NET Core with React.js|react|`dotnet new react`|
-|ASP.NET Core with React.js and Redux|reactredux|`dotnet new reactredux`|
-|ASP.NET Core Web App|webapp|`dotnet new webapp`|
-|Razor Class Library|razorclasslib|`dotnet new razorclasslib`|
+ ```bash
+Plantillas                                        Nombre corto       Idioma            Etiquetas
+----------------------------------------------------------------------------------------------------------------------------
+ASP.NET Core Web App (Model-View-Controller)      mvc                [C#], F#          Web/MVC
+ASP.NET Core Web App                              webapp             [C#]              Web/MVC/Razor Pages
+ASP.NET Core with Angular                         angular            [C#]              Web/MVC/SPA
+ASP.NET Core with React.js                        react              [C#]              Web/MVC/SPA
+ASP.NET Core with React.js and Redux              reactredux         [C#]              Web/MVC/SPA
+Razor Class Library                               razorclasslib      [C#]              Web/Razor/Library/Razor Class Library
+ASP.NET Core Web API                              webapi             [C#], F#          Web/WebAPI
+```
+
+En la tabla siguiente mostramos ejemplos de como crear proyectos con la linea de comandos usamos como ejemplo el proyecto <abbr lang="en" title="Model View Controller">MVC</abbr>. Cada tipo de plantilla tiene diferentes opciones que puedes ver con el comando.
+
+```bash
+dotnet new <nombre-corto> --help
+```
+
+|Comando|Descripción|
+|-|-|
+|`dotnet new mvc --help` | Obtiene las opciones disponibles para este tipo de plantilla|
+|`dotnet new mvc` | Crea un proyecto tipo MVC en la capeta actual. El nombre del proyecto predeterminado es igual al nombre de la carpeta desde donde se ejecuta el comando `dotnet new` |
+|`dotnet new mvc -o HolaMvc` |Crea un proyecto tipo MVC en la capeta _HolaMvc_ si la carpeta no existe esta sera creada |
+|`dotnet new mvc -o HolaMvc --name MiProyecto`| Crea un proyecto MVC en la carpeta _HolaMvc_ y con nombre _MiProyecto_|
+|`dotnet new mvc -lang F# -o HelloMvcFSharp`| Crea un proyecto MVC en la carpeta _HolaMvc_ y con nombre _MiProyecto_|}
+
+Recomendamos que por lo menos uses el argumento `-o` para especificar la carpeta donde se colocara el proyecto de salida. Puedes cambiar el nombre corto por el de otro tipo de proyecto y utilizar los ejemplos anteriores con otro tipo de proyecto.
 
 ## Visual Studio 
 
-Si usas Visual Studio puedes crear  nuevo proyecto mediante _Archivo> Nuevo Proyecto > Web > Aplicación Web ASP.NET Core_
+Si usas **Visual Studio** puedes crear un nuevo proyecto mediante _Archivo> Nuevo Proyecto > Web > Aplicación Web ASP.NET Core_.
 
 <img data-src="/img/ProyectoNuevo.PNG" class="lazyload"  alt="Nuevo Proyecto ASP.NET Core">

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Instalar AutoMapper"
-date:   2019-04-07 12:00:01 +0000
+date:   2019-05-12 12:00:01 +0000
 categories: asp.net core
 ---
 

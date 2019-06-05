@@ -9,7 +9,7 @@ image:
   width: 632
 ---
 
-El Script Tag Helper tiene 3 casos de uso: el primero ayuda generar dinámicamente el atributo **src** del elemento [script](https://www.w3.org/TR/html5/semantics-scripting.html), el segundo permite usar un ubicación alternativa en caso de que la del script principal no éste disponible y el tercero para impedir que los scripts sean tomados de la memoria cache del navegador (Cache busting).
+El Script Tag Helper de ASP.NET Core tiene 3 casos de uso: el primero ayuda generar dinámicamente el atributo **src** del elemento [script](https://www.w3.org/TR/html5/semantics-scripting.html), el segundo permite usar un ubicación alternativa en caso de que la del script principal no éste disponible y el tercero para impedir que los scripts sean tomados de la memoria cache del navegador (<span lang="en">Cache busting</span>).
 
 <img data-src="/img/scripttaghelper.PNG" class="lazyload"  alt="Script Tag Helper">
 
@@ -19,7 +19,7 @@ Como `ASP.NET Core` es *open source* puede ver directamente el código fuente de
  @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
  ```
 
-## Generar elementos *script* de forma dinamíca
+## Generar elementos *script* de forma dinámica
 
 El atributo `asp-src-include` permite indicar un patrón para encontrar los archivos de los que se debe generar un elemento script.
 
@@ -67,7 +67,7 @@ Generar el siguiente código HTML que inserta la librería con la ubicación alt
 ```
 ## Invalidar Cache del navegador
 
-Si quieres invalidar la memoria cache del navegador puedes usar el atributo `asp-append-version` para agregar un identificador unico al archivo. Este cambiara cada que modifiques el archivo del tal forma que el navegador puede determinar cuando es necesario obtener este nuevamente este archivo. Por ejemplo
+Si quieres invalidar la memoria cache del navegador puedes usar el atributo `asp-append-version` para agregar un identificador único al archivo. Este cambiara cada que modifiques el archivo del tal forma que el navegador puede determinar cuando es necesario obtener este nuevamente este archivo. Por ejemplo
 
 ```html
 <script src="~/js/site.js" asp-append-version="true"></script>

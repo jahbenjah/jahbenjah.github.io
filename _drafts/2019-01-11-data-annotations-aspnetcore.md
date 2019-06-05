@@ -4,12 +4,13 @@ title:  "Anotaciones de datos con C#"
 date:   2019-02-23 12:00:01 +0000
 categories: asp.net core
 ---
-Se encuentran en el repositotio [dontet/corefx](https://github.com/dotnet/corefx)
+Se encuentran en el repositorio [dontet/corefx](https://github.com/dotnet/corefx)
 
-Los espacions de nombres son 
+Los espacios de nombres son 
 
-```
-System.ComponentModel.Annotations
+```cs
+using System.ComponentModel.Annotations;
+using System.CompoenetModel;
 ```
 
 
@@ -19,8 +20,8 @@ La documentación esta alojada en [aqui](https://docs.microsoft.com/en-us/dotnet
 Son atributos
 
 
-# Entity Framework COre
+# ¿ Como usar las anotaciones de datos en Entity Framework Core ?
 
 
 
-# ASP .NET Core
+# ¿Cómo usar las anotaciones de datos en ASP.NET Core ?

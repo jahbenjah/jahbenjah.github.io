@@ -9,7 +9,7 @@ image:
   width: 647
 ---
 
-Los elementos gráficos de las aplicaciones web le dan un atractivo adicional a nuestra interfaz gráfica. Un elemento que puede mejorar significativamente la apariencia de tu sitio web son los iconos. En este tutorial te mostramos como usar agregar los iconos [Feather](https://feathericons.com/) a un proyecto de ASP.NET Core. Feather es un conjunto de 274 iconos en [SVG](https://svgontheweb.com/#svg).
+Los elementos gráficos de las aplicaciones web le dan un atractivo adicional a nuestra interfaz gráfica. Un elemento que puede mejorar significativamente la apariencia de tu sitio web son los iconos. En este tutorial te mostramos como usar agregar los iconos [Feather](https://feathericons.com/) a un proyecto de ASP.NET Core. Feather es un conjunto de 274 iconos en formato [SVG](https://svgontheweb.com/#svg).
 
 <img data-src="/img/feather-sample.png" class="lazyload"  alt="Muestra de los iconos de Feather">
 

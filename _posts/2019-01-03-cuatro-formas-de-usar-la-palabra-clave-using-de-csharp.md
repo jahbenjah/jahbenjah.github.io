@@ -28,7 +28,7 @@ namespace Using
 }
 ```
 
-Básicamente se observa que es necesario escribir el nombre calificado (incluyendo el espacio de nombre) del los tipos que utiliza el programa en este caso `System.Console.WriteLine`. Esto no es un problema para programas simples y sin sentido como este pero en un programa más complejo en el que se utilizan varias clases lo que dificulta su escritura. Adicionalmente hay un rumor de que _los programadores somos flojos por naturaleza_ por lo que no nos gusta escribir tanto, para ello esta el primer caso de uso:
+Básicamente se observa que es necesario escribir el nombre calificado (incluyendo el espacio de nombre) del los tipos que utiliza el programa en este caso `System.Console.WriteLine`. Esto no es un problema para programas simples y sin sentido como este pero en un programa más complejo en el que se utilizan varias clases esto se vuelve en martirio. Adicionalmente hay un rumor de que _los programadores somos flojos por naturaleza_ por lo que no nos gusta escribir tanto, para ello esta el primer caso de uso:
 
 # **using** para importar espacios de nombres
 
@@ -124,6 +124,8 @@ namespace Using
 ```
 
 Esto asegura que se ejecute en método `Dispose` de la clase `StreamReader` al terminar el bloque de código encerrado por el enunciado `using`.
+
+La especificación de C# sobre el [using statement](https://docs.microsoft.com/dotnet/csharp/language-reference/language-specification/statements#the-using-statement)
 
 > Para ver si una clase o su clase padre implementa implementa la interfaz `IDisposable` puedes usar la característica del _Visual Studio_  **Ir a definición F12**.
 

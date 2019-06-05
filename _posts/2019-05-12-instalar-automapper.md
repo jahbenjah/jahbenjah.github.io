@@ -10,7 +10,7 @@ En este articulo te mostramos paso a paso como instalar la librería AutoMapper 
 AutoMapper es una librería de código abierto por lo que puedes ver todo el código en el repositorio en Github : [código fuente AutoMapper](https://github.com/AutoMapper/AutoMapper). En el contexto de ASP.NET Core esta librería se usa para crear objetos que se usaran en las vistas sin necesidad de tener las mismas propiedades que el objeto que guardamos en la base de datos.
 Permite usar anotaciones de datos que solo son utilizadas para la vista sin tener que _ensuciar_ nuestras entidades.
 
-1. Crea un proyecto de ASP.NET Core. Aquí tomamos como ejemplo un proyecto tipo MVC pero sirve igual para otros proyectos de ASP.NET Core.
+1. Crea un proyecto de ASP.NET Core. Aquí tomamos como ejemplo un proyecto tipo MVC pero sirve igual para [otros proyectos]({% post_url 2019-02-09-tipos-de-proyectos %}) de ASP.NET Core.
 
 ```bash
 dotnet new mvc -o InstalarAutoMapper

@@ -11,7 +11,7 @@ Para ello utilizamos SQL Server Data Tools 2017 (https://docs.microsoft.com/es-e
 aplica de la misma forma para la 2015 aunque  es un instalación independiente.
 
 Se considera el siguiente escenario inicial: 
-se tiene una base de datos en un servidor de produccion a la cual se realizan cambios comentan
+se tiene una base de datos en un servidor de produccon a la cual se realizan cambios comentan
 
 El escenario ideal seria como el siguiente:
 

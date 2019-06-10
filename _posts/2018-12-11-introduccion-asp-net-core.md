@@ -3,14 +3,15 @@ layout: post
 title:  "Introducción a ASP.NET Core"
 comments: true
 categories: asp.net core mvc dotnet aspnetcore
+last_modified_at: 2019-06-06 15:06:33 +0000
 ---
-**ASP\.NET Core** es un *framework* para desarrollo web de código abierto, ligero, modular y multiplataforma creado por Microsoft con aportes de la comunidad.
+**ASP.NET Core** es un *<span lang="en">framework</span>* para desarrollo web de código abierto, ligero, modular y multiplataforma creado por Microsoft con aportes de la comunidad.
 
-Como es un framework de desarrollo web ASP\.NET Core el proposito principal es generar HTML de forma dinámica. Esto lo hace mediante **Razor** que permite combinar el marcado en HTML con código C#.
+Como es un framework de desarrollo web ASP.NET Core el proposito principal es generar HTML de forma dinámica. Esto lo hace mediante **Razor** que permite combinar el marcado en HTML con código C#.
 
 Revisemos cada una de las características mencionadas:
 
-**Framework de código abierto** Es algo que para muchos todavía parece increíble: 
+**Framework de código abierto** Es algo que para muchos todavía parece increíble:
 > [Microsoft](https://octoverse.github.com/projects) esta ente los principales contribuidores a proyectos de Código Abierto.
 
 Es posible que camino de .NET y Microsoft en el software libre haya iniciado con la liberación de la [**Especificación del Lenguaje C#**](https://www.ecma-international.org/publications/standards/Ecma-334.htm) en el 2003. Pero por ahora solo basta mencionar que todo código y documentación de ASP\.NET Core esta alojado en la más reciente adquisición de Microsoft: **Github**. Puedes explorar los detalles de cada línea de código, revisar y reportar incidencias (**issues**), ver el plano de ruta ,aportar con tu propio código y/o documentación.
@@ -21,11 +22,11 @@ Aquí la lista de repositorios relevantes para ASP.NET Core:
 2. Repositorio de anuncios de ASP\.NET Core: https://github.com/aspnet/Announcements
 3. Repositorio de la documentación https://github.com/aspnet/Docs
 
-**Ligero** ASP\.NET Core puede correr en los sistemas operativos Windows, Mac OS y Linux y no esta atado a ningún IDE (_Visual Studio_) , Servidor Web (_IIS_) o Sistema Operativo (_Windows_) ya que puedes editar el código con tu editor favorito y compilar y desplegar tu aplicación desde la linea de comandos del SDK : `dotnet` .
+**Ligero** ASP\.NET Core puede correr en los sistemas operativos Windows, Mac OS y Linux y no esta atado a ningún IDE (_Visual Studio_) , Servidor Web (_IIS_) o Sistema Operativo (_Windows_) ya que puedes editar el código con tu editor favorito , compilar y desplegar tu aplicación desde la linea de comandos del SDK : `dotnet` .
 
-**Modular**: ASP.NET Core esta compuesto por más de 95 paquetes _Nuget_ independientes que permiten usar solo las funciones deseadas sin estar obligado a usar todas las características del framework. Al esta compuesto por demasiados paquetes es posible que hayas pensado que es necesario aprenderse cada uno de los paquetes pero te comento que a partir de la version 2.0 no es necesario ya que existen los meta-paquetes que se encargan de referencias todos los paquetes necesarios para una aplicación web.
+**Modular**: ASP.NET Core esta compuesto por más de 95 paquetes _Nuget_ independientes que permiten usar solo las funciones deseadas sin estar obligado a usar todas las características del framework. Al estar compuesto por demasiados paquetes es posible que hayas pensado que es necesario aprenderse cada uno de los paquetes pero te comento que a partir de la version 2.0 no es necesario ya que existen los [metapaquetes](https://docs.microsoft.com/dotnet/core/packages#metapackages) que se encargan de referenciar todos los paquetes necesarios para una aplicación web.
 
-## Versiones 
+## Versiones
 
 La última versión al momento de escribir este artículo es la 2.2.
 

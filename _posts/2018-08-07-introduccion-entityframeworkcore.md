@@ -2,7 +2,7 @@
 layout: post
 title:  "Introdución a Entity Framework Core 2.1."
 categories: C# EntityFrameworkCore dotnet ef
-last_modified_at: 2019-06-03 8:30:55 +0000
+last_modified_at: 2019-06-3 8:30:55 +0000
 ---
 
 *Entity Framework Core* es una tecnología de acceso a datos para .NET Core y .NET Framework. Es multiplataforma y de código abierto desarrollado por Microsoft con aportes de la comunidad.
@@ -18,7 +18,7 @@ A continuación un serie de preguntas y respuestas que pueden servir como introd
 
 ### ¿ Con que bases de datos puedo usar Entity Framework Core ?
 
-Entity Framework Core tiene un modelo de [proveedores](https://docs.microsoft.com/ef/core/providers/) lo que permite usarlo con multiples bases de datos. Solamente es necesario instalar el paquete de Nuget correspondiente y construir la [cadena de conexión]({% post_url 2019-02-027-cadenas-de-conexion-csharp %}).
+Entity Framework Core tiene un modelo de [proveedores](https://docs.microsoft.com/ef/core/providers/) lo que permite usarlo con multiples bases de datos. Solamente es necesario instalar el paquete de Nuget correspondiente y construir la [cadena de conexión]({% post_url 2019-02-27-cadenas-de-conexion-csharp %}).
 
 A continuacion una lista de ejemplos de algunas bases de datos con las que puedes usar Entity Framework Core y la dirección del paquete de Nuget
 Base de dato | Paquete de Nuget               |

@@ -20,7 +20,7 @@ A continuación un serie de preguntas y respuestas que pueden servir como introd
 
 Entity Framework Core tiene un modelo de [proveedores](https://docs.microsoft.com/ef/core/providers/) lo que permite usarlo con multiples bases de datos. Solamente es necesario instalar el paquete de Nuget correspondiente y construir la [cadena de conexión]({% post_url 2019-02-27-cadenas-de-conexion-csharp %}).
 
-A continuacion una lista de ejemplos de algunas bases de datos con las que puedes usar Entity Framework Core y la dirección del paquete de Nuget
+A continuación una lista de ejemplos de algunas bases de datos con las que puedes usar Entity Framework Core y la dirección del paquete de Nuget
 Base de dato | Paquete de Nuget               |
 -------------|--------------------------------|
 SqlServer    |[Microsoft.EntityFrameworkCore.SqlServe](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer)|

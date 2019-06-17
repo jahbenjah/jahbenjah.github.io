@@ -23,6 +23,7 @@ layout: default
   <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
   </div>
+  {% include facebook-promotion.html %}
   {% include share-bar.html %}
   {%- if site.disqus.shortname -%}
     {%- include disqus_comments.html -%}

@@ -18,7 +18,7 @@ social:
     - https://www.facebook.com/csharpmx/
 markdown: kramdown
 theme: minima
-show_excerpts: true
+show_excerpts: false
 
 disqus:
  shortname: https-jahbenjah-github-io

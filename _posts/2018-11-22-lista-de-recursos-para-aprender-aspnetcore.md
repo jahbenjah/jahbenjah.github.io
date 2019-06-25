@@ -26,8 +26,8 @@ Mi opción preferida para aprender algo nuevo siempre es un libro. He de decir q
 
 | Titulo                                                      | Autor         | Comentario      |
 | ------------------------------------------------------------| ------------- | ----------------|
-<a target="_blank" href="https://www.amazon.com.mx/gp/product/1617294616/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1617294616&linkCode=as2&tag=aspnetcoremas-20&linkId=cc9bfae44a880d161a7a23423aa08284">ASP.NET Core in Action</a><img src="//ir-mx.amazon-adsystem.com/e/ir?t=aspnetcoremas-20&l=am2&o=34&a=1617294616" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />|Andrew Lock|Brinda explicaciones detalladas y acompañadas de muchos diagramas que ayudan a entender mejor como funciona ASP.NET Core MVC|
-[Entity Framework Core in Action ](https://www.manning.com/books/entity-framework-core-in-action)|Jon P Smith|Los capítulos que tratan sobre ASP.NET Core me parecen excelentes y creo que el autor debe escribir un libro sobre arquitectura de software. Esta muy influenciado por el libro de [Domain Driven Design](https://www.amazon.com.mx/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/ref=asc_df_0321125215/?tag=gledskshopmx-20&linkCode=df0&hvadid=295433315443&hvpos=1o1&hvnetw=g&hvrand=4347609638994032332&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9073925&hvtargid=pla-449269547899&psc=1) de Eric Evans. Recomendables los capítulos que tratan sobre el patrón Bounded Context y Optimización de EF Core
+[*ASP.NET Core In Action*](https://amzn.to/2NnUPf4)|Andrew Lock|Brinda explicaciones detalladas y acompañadas de muchos diagramas que ayudan a entender mejor como funciona ASP.NET Core MVC|
+[Entity Framework Core in Action ](https://amzn.to/2YfcUgq) de Eric Evans. Recomendables los capítulos que tratan sobre el patrón Bounded Context y Optimización de EF Core
 
 # Blogs
 

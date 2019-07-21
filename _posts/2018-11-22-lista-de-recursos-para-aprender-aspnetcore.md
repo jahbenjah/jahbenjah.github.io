@@ -14,7 +14,7 @@ Mi opción preferida para aprender algo nuevo siempre es un libro. He de decir q
 
 ## Gratuitos
 
-| Titulo                                                      | Autor         | Comentario 
+| Titulo                                                      | Autor         | Comentario
 | ------------------------------------------------------------| ------------- | ----------------
 | [Little ASP.NET Core Book](https://recaffeinate.co/book/)   |Nate Barbettini| Te enseña los fundamentos de ASP.NET Core MVC construyendo una aplicación para controlar las tareas pendientes. -Estoy preparando una- Ya esta lista la [traducción en español](https://aspnetcoremaster.com/little-aspnetcore-book/)|
 | [ASP.NET Core Succintly](https://www.syncfusion.com/ebooks/asp_net_core_succinctly)|Simone Chiaretta y Ugo Lattanzi | Da explicaciones sencillas de la evolución de ASP.NET  hasta ASP.NET Core 1.0 |
@@ -24,10 +24,10 @@ Mi opción preferida para aprender algo nuevo siempre es un libro. He de decir q
 
 ## De paga
 
-| Titulo                                                      | Autor         | Comentario      |
-| ------------------------------------------------------------| ------------- | ----------------|
-[*ASP.NET Core In Action*](https://amzn.to/2NnUPf4)|Andrew Lock|Brinda explicaciones detalladas y acompañadas de muchos diagramas que ayudan a entender mejor como funciona ASP.NET Core MVC|
-[Entity Framework Core in Action ](https://amzn.to/2YfcUgq) de Eric Evans. Recomendables los capítulos que tratan sobre el patrón Bounded Context y Optimización de EF Core
+| Titulo   | Autor         | Comentario      |
+| -------  | ------------- | ----------------|
+|[*ASP.NET Core In Action*](https://amzn.to/2NnUPf4)|Andrew Lock|Brinda explicaciones detalladas y acompañadas de muchos diagramas que ayudan a entender mejor como funciona ASP.NET Core MVC|
+|[Entity Framework Core in Action](https://amzn.to/2YfcUgq)| Jon P Smith|Recomendables los capítulos que tratan sobre el patrón Bounded Context y Optimización de EF Core|
 
 # Blogs
 

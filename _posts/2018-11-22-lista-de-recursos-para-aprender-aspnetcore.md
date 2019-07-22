@@ -4,7 +4,7 @@ title:  "Recursos de la comunidad de ASP.NET Core"
 comments: true
 categories: asp.net core mvc dotnet 
 seo:
-  date_modified: 2019-03-26 9:00:01 +0000
+  date_modified: 2019-07-21 9:00:01 +0000
 ---
 Lo más valioso de un framework es su comunidad y ASP.NET Core tiene una comunidad excelente llena de recursos valiosos para aprender obtener inspiración o realizar *networking*. A continuación una lista (siempre incompleta) de recursos que he encontrado valiosos para mi travesía de aprendizaje de este grandioso framework.
 
@@ -40,15 +40,15 @@ Mi opción preferida para aprender algo nuevo siempre es un libro. He de decir q
 
 Los cursos aquí mencionados son gratuitos o que puedes tomar en el periodo de evaluación. También puedes usar los beneficios que te brinda la suscripción de [Visual Studio Dev Essentials](https://visualstudio.microsoft.com/dev-essentials/).
 
-* [Microsoft Virtual Academy](https://mva.microsoft.com/)
+* ~~[Microsoft Virtual Academy](https://mva.microsoft.com/)~~ Esta opciones han sido sustituidad por [Microsoft Learn](https://docs.microsoft.com/en-us/learn/)
 * [Pluralsight](https://www.pluralsight.com/)
 * [Linkedin Learning](https://www.linkedin.com/learning/me)
 * [EDX](https://www.edx.org/course?search_query=asp.net)
-* [Dev Collective](https://developer.microsoft.com/en-us/collective/learning/courses)
+* ~~[Dev Collective](https://developer.microsoft.com/en-us/collective/learning/courses)~~ Este era un programa piloto que también fue sustituido por Microsoft Learn.
 
 # Noticias
 
-* [ASP.NET Weekly](https://www.getrevue.co/profile/aspnetweekly)
+* [ASP.NET Weekly](https://www.getrevue.co/profile/aspnetweekly): Boletín semanal que incluye algunos artículos relacionados con ASP.NET Core publicados la semana anterior. Este llega cada lunes.
 
 # Videos
 
@@ -63,8 +63,8 @@ Los cursos aquí mencionados son gratuitos o que puedes tomar en el periodo de e
 
 # Eventos
 
-Microsoft Innovation Submit
-Microsoft Ignite Tour
-Azure Bootcamp
-Microsoft Build
-.NET Conf
+* Microsoft Innovation Submit
+* Microsoft Ignite Tour
+* Azure Bootcamp
+* Microsoft Build
+* [.NET Conf](https://www.dotnetconf.net/) es un evento virtual que tiene lugar cada septiembre. Este año coincidirá con el lanzamiento de .NET Core 3.0 y sera del 23 al 25 de septiembre.

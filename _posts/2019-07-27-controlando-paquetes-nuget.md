@@ -2,7 +2,8 @@
 layout: post
 title:  "Controlando los paquetes de Nuget"
 comments: true
-categories: dotnet netcore
+categories: asp net core
+permalink: /:categories/:title:output_ext
 ---
 
 ASP.NET Core esta formado por múltiples paquetes de Nuget y es normal que nuestros proyectos requieran funciones adicionales por lo que necesitamos instalar más paquetes por lo que nuestros archivos _.csproj_ pueden contener por lo menos 3 paquetes o en algunos casos más. El manejo (actualización) de estos paquetes puede convertirse en un proceso algo tedioso considerando que generalmente una solución tiene más de un proyecto. En este artículo te mostramos 3 formas de manejar los paquetes de Nuget.

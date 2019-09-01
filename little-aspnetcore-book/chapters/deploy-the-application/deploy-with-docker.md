@@ -4,7 +4,7 @@ Si no está utilizando una plataforma como Azure, las tecnologías de contenedor
 
 Docker también puede hacer que escalar su aplicación en múltiples servidores sea más fácil. Una vez que tenga una imagen, usarla para crear 1 contenedor es el mismo proceso que crear 100 contenedores.
 
-Antes de comenzar, necesita tener instalada la CLI de Docker en su máquina de desarrollo. Busque "get docker for (mac / windows / linux)" y siga las instrucciones en el sitio web oficial de Docker. Puedes verificar que está instalado correctamente con
+Antes de comenzar, necesita tener instalada la CLI de Docker en su máquina de desarrollo. Busque "instalar docker para (mac /windows/linux)" y siga las instrucciones en el sitio web oficial de Docker. Puedes verificar que está instalado correctamente con
 
 ```
 docker version

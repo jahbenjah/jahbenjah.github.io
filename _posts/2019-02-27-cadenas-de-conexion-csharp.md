@@ -18,9 +18,9 @@ Para ello utilizamos la clase `ConnectionStringBuilder` que implementan los prov
 
 Es importante mencionar que para cada base de datos hay una gran cantidad de parámetros que se pueden agregar muchos de ellos tienes un nombre que permite aclarar su función pero de otros es necesario que veas la documentación del proveedor. En Visual Studio o Visual Studio Code puedes ver los parámetros que contiene cada base de datos usando Intellisense o Presionando F12 para ir a la definición del tipo.
 
-## Cadena de conexión para SQL Server
+## Cadena de conexión SQL Server
 
-1. Ejemplo de cadena de conexión para SQL Server. Es importante notar la presencia del parámetro **Application Name** este campo se puede utilizar para identificar una aplicación diagnostico de problemas de desempeño en (SQL Server Profiler)[https://docs.microsoft.com/sql/tools/sql-server-profiler/sql-server-profiler?view=sql-server-2017]. Es recomendable siempre incluirlo.
+1. Ejemplo de cadena de conexión para SQL Server. Es importante notar la presencia del parámetro **Application Name** este campo se puede utilizar para identificar que acciones ejecuta una aplicación y en el diagnostico de problemas de desempeño en [SQL Server Profiler](https://docs.microsoft.com/sql/tools/sql-server-profiler/sql-server-profiler?view=sql-server-2017) . Es recomendable siempre incluirlo.
 
 ```bash
 Data Source=192.168.0.1;Initial Catalog=master;User ID=sa;Password=TuContraseña;Application Name=MyApp
@@ -59,7 +59,7 @@ using (SqlConnection connection = new SqlConnection("Data Source=192.168.0.1;Ini
 }
 ```
 
-## Cadena de conexión para MySQL
+## Cadena de conexión MySQL
 
 1. Ejemplo de cadena de conexión para MySQL
 
@@ -83,7 +83,7 @@ MySqlConnectionStringBuilder builder = new MySqlConnectionStringBuilder()
 Console.WriteLine(builder.ConnectionString);
 ```
 
-## Cadena de conexión para Oracle
+## Cadena de conexión Oracle
 
 1. Ejemplo de cadena de conexión para Oracle
 
@@ -105,7 +105,7 @@ OracleConnectionStringBuilder builder = new OracleConnectionStringBuilder()
 Console.WriteLine(builder.ConnectionString);
 ```
 
-## Cadena de conexión para Firebird
+## Cadena de conexión Firebird
 
 1. Ejemplo de cadena de conexión para SQL Server
 
@@ -127,9 +127,9 @@ builder.Charset = "utf8";
 Console.WriteLine(builder.ConnectionString);
 ```
 
-## Cadena de conexión para SQLite
+## Cadena de conexión SQLite
 
-1. Ejemplo de cadena de conexión para SQL Server
+1. Ejemplo de cadena de conexión para SQLite
 
 ```
 data source=blogging.db

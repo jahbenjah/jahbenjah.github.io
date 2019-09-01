@@ -4,13 +4,11 @@ name: Benjamín Camacho
 position: Programador C#
 ---
 
-# Benjamín Camacho
+Hola soy Benjamín Camacho y trabajo como programador .NET creando y manteniendo aplicaciones con C#. Mantengo este sitio dedicado a ASP.NET Core. También soy un orgulloso miembro de la [.NET Foundation](https://dotnetfoundation.org/) (tú también puedes ser parte si ) que es una organización dedicada a fortalecer el ecosistema .NET en dentro del <span lang="en">open source</span>.
 
-Hola soy Benjamín Camacho y trabajo como programador .NET creando y manteniendo aplicaciones con C#. Mantengo este sitio dedicado a ASP.NET Core. También soy un orgulloso miembro de la [.NET Foundation](https://dotnetfoundation.org/) (tú también puedes ser parte). ques es una organización dedicada a fortalecer el ecosistema .NET en dentro del open source.
+Puedes contactarme por [correo](mailto:benjamin@aspnetcoremaster.com) o seguirme en twitter [@jbenjamincmcho](https://twitter.com/jbenjamincmcho)
 
-Puedes contactarme al correo [benjamin@aspnetcoremaster.com](benjamin@aspnetcoremaster.com) o seguirme en twitter [@jbenjamincmcho](https://twitter.com/jbenjamincmcho)
-
-Mis principales intereses son el desarrollo web:
+Mis principales intereses se centran entorno al desarrollo web y temas relacionados
 
 * C#
 * ASP.NET Core
@@ -26,7 +24,7 @@ Una forma interesante de validar los conocimientos es realizando exámenes de ce
 </div>
 <script type="text/javascript" async src="//cdn.youracclaim.com/assets/utilities/embed.js"></script>
 
-# ¿Cómo esta hecho este sitio?
+# ¿Cómo esta hecho este sitio ?
 
 Algo que he visto en otros autores de blogs o podcast que sigo es que tienen una sección donde explican como es el proceso en el que desarrollan su contenido y cuales son las herramientas que utilizan. Esto me parece genial porque como principiante es difícil saber por donde empezar y que herramientas utilizar para crear un propio blog.
 
@@ -34,15 +32,15 @@ Aquí también veo que en ocasiones puede haber algún tipo de regalías para lo
 
 Este sitio esta creado con [Jekyll](https://jekyllrb.com/) y alojado en [Github Pages](https://pages.github.com/)
 
-Característica    | Herramienta usada 
+Característica    | Herramienta usada
 ------------------| ------------------
-Sistema Operativo | Windows 10        
+Sistema Operativo | Windows 10
 Editor de código  | Visual Studio Code
-SDK               | ruby 2.6.1p33     
-Generador de sitio| Jekyll            
-Dominio           | GoDaddy           
-Hosting           | Github Pages      
-Correo electrónico| Zoho Mail         
-Control de versiones| Git + Github        
+SDK               | ruby 2.6.1p33
+Generador de sitio| Jekyll
+Dominio           | GoDaddy
+Hosting           | Github Pages
+Correo electrónico| Zoho Mail
+Control de versiones| Git + Github
 
 Generalmente uso Windows 10, pero también tengo una máquina virtual con Centos porque configurar Ruby para Windows me costo mucho trabajo. También use una VM con Ubuntu en la nube con "Cloud9.io antes de lo que comprara AWS.

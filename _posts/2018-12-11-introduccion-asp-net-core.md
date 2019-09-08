@@ -3,6 +3,7 @@ layout: post
 title:  "Introducción a ASP.NET Core"
 comments: true
 categories: asp.net core mvc dotnet aspnetcore
+description: Breve descripción de que es ASP.NET Core y cuales son sus características principales
 last_modified_at: 2019-06-06 15:06:33 +0000
 ---
 **ASP.NET Core** es un *<span lang="en">framework</span>* para desarrollo web de código abierto, ligero, modular y multiplataforma creado por Microsoft con aportes de la comunidad.
@@ -30,7 +31,7 @@ Aquí la lista de repositorios relevantes para ASP.NET Core:
 
 La última versión al momento de escribir este artículo es la 2.2.
 
-Actualmente hay 2 versiones principales con varias versiones menores y estimo que a mediados del 2019 este disponible la versión 3.0. Puedes revisar los detalles y características nuevas de cada version en el anuncio de la liberación realizado por algún miembro el equipo de desarrollo de ASP\.NET Core.
+Actualmente hay 2 versiones principales con varias versiones menores y -estimo que a mediados- del 2019 este disponible la versión 3.0. Puedes revisar los detalles y características nuevas de cada version en el anuncio de la liberación realizado por algún miembro el equipo de desarrollo de ASP\.NET Core.
 
 Versión | Fecha de lanzamiento|  Detalles
 --------| --------------------|-----------
@@ -44,7 +45,7 @@ Versión | Fecha de lanzamiento|  Detalles
 
 Para desarrollar aplicaciones con ASP.NET Core necesitas el [SDK de .NET Core](https://dotnet.microsoft.com/download) que puedes descargar gratuitamente ya se para Linux, Mac o Windows.Para comprobar que tienes instalado puedes ejecutar el comando `dotnet --version` en una terminal o consola.
 
-Aunque es posible  crear aplicaciones con la linea de comandos y un editor de textos sencillos como NotePad++, Vim  es probable que prefieras usar el entorno de desarrollo integrado. Puedes usar las siguientes opciones:
+Aunque es posible  crear aplicaciones con la linea de comandos y un editor de textos sencillos como NotePad++ o Vim es probable que prefieras usar el entorno de desarrollo integrado. Puedes usar las siguientes opciones:
 
 1. El IDE estrella de Microsoft : [Visual Studio 2017](https://visualstudio.microsoft.com/es/) disponible para Windows y Mac La ultima versión de Visual Studio es la 2017 y esta en previo la version 2019. Este IDE es de paga en las ediciones Profesional y Enterprise pero la edición Community es gratuita para desarrolladores de software libre y estudiantes.
 

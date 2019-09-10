@@ -127,34 +127,6 @@ dotnet add src\Sakila.Web\Sakila.Web.csproj reference src\Sakila.Infrastructure\
 
 Hasta aquí tenemos lista la estructura del proyecto por lo que es un buen momento para inicializar el repositorio de git. Posteriormente comenzaremos el proceso para generar el modelo de clases de C# a partir de una base existente. Si usas Visual Studio fácilmente puedes usar _Archivo>Nuevo Proyecto_ en la interfaz gráfica para crear estos proyectos.
 
-## Control de código fuente
-
-Para crear el repositorio en Github usamos las siguientes opciones en la pantalla de crear repositorios. Observa que hay una opción para activar las Azure Pipelines esto es por que tengo instalada está extensión en mi cuenta espera un post para agregar el archivo _.yml_ y definir el proceso de integración continua en Azure Devops.
-
-<img data-src="/img/crear-sakila-repo.JPG" class="lazyload" alt="Pantalla para crear un nuevo repositorio en Github">
-
-Para inicializar el repositorio ejecuta el comando `git init` posteriormente agregaremos el archivo `.gitignore` usando la plantilla del repositorio.
-
-> **Archivo .gittgnore** es una buena practica incluir siempre el archivo `.gitignore` en el repositorio. Hay una gran colección de archivos con opciones predefinidas en el repositorio [Github gitignore](https://github.com/github/gitignore/). Generalmente usamos el [archivo _.gitignore_ para Visual Studio](https://github.com/github/gitignore/blob/master/VisualStudio.gitignore)
-
-```bash
-git init
-```
-
-Hasta aquí tenemos un repositorio local. Para agregar una relación con el repositorio creado en Github necesitamos agregar lo que en git se conoce como un remoto. Esto lo hacemos mediante el siguiente comando
-
-```bash
-git remote add origin https://github.com/jahbenjah/Sakila.git
-```
-
-Creamos un archivo llamado `gitignore` y copiamos el contenido 
-
-```bash
-git add .gitignore
-git commit -m "Se crea estructura inicial del proyecto"
-git push -u origin master
-```
-
 ## Cadena de conexión para MySQL
 
 Lo primero que necesitamos son las credenciales para acceder a la base de datos. Con estas debemos crear una cadena de conexión que no es más que un conjunto de claves y valores separadas por comas. Si tienes duda como crearla puedes ver mi post [sobre cadenas de conexión con C#]({% post_url 2019-02-27-cadenas-de-conexion-csharp %}) para más detalles.

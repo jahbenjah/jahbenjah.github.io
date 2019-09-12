@@ -8,14 +8,14 @@ image:
   path: /img/og-tutorial.jpg
   height: 378
   width: 729
-description: Tutorial de ASP.NET Core 2.2, Entity Framework Core y MySQL creando una aplicación MVC. Estructura del proyecto y creación del modelo de C# usando "Code Firts" 
-last_modified_at: 2019-09-08 8:05:26 +0000
+description: Tutorial de ASP.NET Core 2.2, Entity Framework Core y MySQL creando una aplicación MVC. Control de código fuente con Git, estructura del proyecto y creación del modelo de C# usando "Code Firts" 
+last_modified_at: 2019-09-12 5:05:23 +0000
 author: Benjamin Camacho
 ---
 
 Bienvenido a la primera publicación del tutorial de ASP.NET Core en español en este crearemos una aplicación web basada en la plantilla MVC de ASP.NET Core y tiene como propósito principal mostrar una forma de hacer tareas comunes en este framework como ejecutar las operaciones <abbr lang="en" title="Create Read Update Delete">CRUD</abbr> con una base de datos, validar formularios ,instalar la aplicación , crear un contenedor de docker, usar la inyección de dependencias y algunos temas adicionales. Este estará basado en mi experiencia personal e incluirá las referencias a otros recursos de donde aprendido como son libros, blogs o la documentación misma.
 
-En este primera sección creamos la estructura del proyecto,agregaremos el control de código fuente con git y crearemos el modelo de la base de datos. Adicionalme alojaremos el código fuente del proyecto en un repositorio de Github.
+En este primera sección creamos la estructura del proyecto,agregaremos el control de código fuente con Git y crearemos el modelo de la base de datos. Adicionalmente alojaremos el código fuente del proyecto en un repositorio de Github.
 
 Aunque en mi trabajo del dia a dia uso Visual Studio y harto el ratón siempre me ha atraído el poder de la linea de comandos y poder teclar sin el uso del ratón por tal motivo siempre que exista una herramienta de linea de comandos intentare hacer uso de ella, esto siguiendo el consejo "**Aprende a usar la herramientas de linea de comanando**" del libro [97 Things Every Programmer Should Know](https://www.oreilly.com/library/view/97-things-every/9780596809515/). Para poder seguir este tutorial debes tener instalado las siguientes herramientas de línea de comandos y tener una cuenta en Github. Incluimos el comando para para verificar la versión que están instaladas.
 
@@ -49,10 +49,11 @@ Para comenzar con el proyecto crea una carpetalla llamada _Sakila_ y ejecuta ini
 
 ```bash
 mkdir Sakila
+cd Sakila
 git init
 ```
 
-Hasta aquí tenemos un repositorio local sin ningun archivo. Para agregar una relación con el repositorio creado en Github necesitamos agregar lo que en git se conoce como un remoto. Esto lo hacemos mediante el siguiente comando
+Hasta aquí tenemos un repositorio local sin ningún archivo. Para agregar una relación con el repositorio creado en Github necesitamos agregar lo que en git se conoce como un remoto. Esto lo hacemos mediante el siguiente comando
 
 ```bash
 git remote add origin https://github.com/jahbenjah/Sakila.git
@@ -71,12 +72,14 @@ git commit -m "Se crea estructura inicial del proyecto"
 git push -u origin master
 ```
 
-A partir de aqui empezaremos a repetir el patron anterior de publicación y seguieremos el [flujo de Github](https://guides.github.com/introduction/flow/),es decir, para cada característica nueva de la aplicación crearemos una **rama de git** y cuando esten listos los cambios crearemos un **Pull Request** para incorporar nuestros cambios a la rama _master_. Para crear una rama y cambiarse de rama ejecuta
+A partir de aquí empezaremos a repetir esté patrón para la publicación y seguiremos el [flujo de Github](https://guides.github.com/introduction/flow/),es decir, para cada característica nueva de la aplicación crearemos una **rama de git** y cuando estén listos los cambios crearemos un **Pull Request** para incorporar nuestros cambios a la rama _master_. Para crear una rama y cambiarse de rama ejecuta
 
 ```bash
 git branch estructura-proyecto
 git checkout estructura-proyecto
 ```
+
+Git en si mismo requiere de grandes conocimientos por lo que te recomiendo guardar el libro [Pro Git](https://git-scm.com/book/es/v2) en tus favoritos. Siguiendo el consejo "Conoce tu <abbr lang="en" title="Integrated Development Enviroment">IDE</abbr> del libro **97 Things Every Programmer Should Know** deberías saber que [Visual Studio tiene soporte para git](https://docs.microsoft.com/visualstudio/version-control/index?view=vs-2019) y una [extensión para  Github](https://visualstudio.github.com/) de tal forma que la mayoría de las tareas de git las puedes hacer mediante la interfaz gráfica.
 
 ## Proyecto
 
@@ -91,7 +94,6 @@ Crearemos 3 proyectos contenidos en la carpeta `Sakila/src`. Tenemos planeado ag
 En una terminal ejecuta los siguientes comandos para crear una carpeta y un solución llamada *Sakila* y _Sakila.sln_ respectivamente.Para crear los proyectos ejecuta los siguientes comandos uno seguido de otro. La opción -o permite especificar el directorio de salida.
 
 ```bash
-mkdir Sakila
 cd Sakila
 dotnet new sln
 dotnet new globaljson --sdk-version 2.2.401
@@ -141,7 +143,7 @@ dotnet add src\Sakila.Web\Sakila.Web.csproj reference src\Sakila.Core\Sakila.Cor
 dotnet add src\Sakila.Web\Sakila.Web.csproj reference src\Sakila.Infrastructure\Sakila.Infrastructure.csproj
 ```
 
-Hasta aquí tenemos lista la estructura del proyecto por lo que es un buen momento para inicializar el repositorio de git. Posteriormente comenzaremos el proceso para generar el modelo de clases de C# a partir de una base existente. Si usas Visual Studio fácilmente puedes usar _Archivo>Nuevo Proyecto_ en la interfaz gráfica para crear estos proyectos.
+Hasta aquí tenemos lista la estructura del proyecto por lo que es un buen momento para inicializar el repositorio de Git. Posteriormente comenzaremos el proceso para generar el modelo de clases de C# a partir de una base existente. Si usas Visual Studio fácilmente puedes usar _Archivo>Nuevo Proyecto_ en la interfaz gráfica para crear estos proyectos.
 
 ## Cadena de conexión para MySQL
 

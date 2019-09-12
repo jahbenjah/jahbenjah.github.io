@@ -13,20 +13,24 @@ last_modified_at: 2019-09-08 8:05:26 +0000
 author: Benjamin Camacho
 ---
 
-Bienvenido a la primera publicación del tutorial de ASP.NET Core en español es este crearemos una aplicación web basada en la plantilla MVC de ASP.NET Core y tiene como propósito principal mostrar una forma de hacer tareas comunes en este framework como ejecutar las operaciones <abbr lang="en" title="Create Read Update Delete">CRUD</abbr> con una base de datos, validar formularios ,instalar la aplicación , crear un contenedor de docker, usar la inyección de dependencias y algunos temas adicionales. Este estará basado en mi experiencia personal e incluirá las referencias a otros recursos de donde aprendido como son libros, blogs o la documentación misma.
+Bienvenido a la primera publicación del tutorial de ASP.NET Core en español en este crearemos una aplicación web basada en la plantilla MVC de ASP.NET Core y tiene como propósito principal mostrar una forma de hacer tareas comunes en este framework como ejecutar las operaciones <abbr lang="en" title="Create Read Update Delete">CRUD</abbr> con una base de datos, validar formularios ,instalar la aplicación , crear un contenedor de docker, usar la inyección de dependencias y algunos temas adicionales. Este estará basado en mi experiencia personal e incluirá las referencias a otros recursos de donde aprendido como son libros, blogs o la documentación misma.
 
-En este primera sección creamos la estructura del proyecto,el control de código fuente con git y crearemos el modelo de la base de datos. Finalmente alojaremos el código fuente del proyecto en un repositorio de Github.
+En este primera sección creamos la estructura del proyecto,agregaremos el control de código fuente con git y crearemos el modelo de la base de datos. Adicionalme alojaremos el código fuente del proyecto en un repositorio de Github.
 
-Aunque en mi trabajo del dia a dia uso Visual Studio y harto el ratón siempre me ha atraído el poder de la linea de comandos y por tal motivo siempre que exista una herramienta de linea de comandos intentare hacer uso de ella, esto siguiendo el consejo "**Aprende a usar la herramientas de linea de comanando**" del libro [97 Things Every Programmer Should Know](https://www.oreilly.com/library/view/97-things-every/9780596809515/). Para poder seguir este tutorial debes tener instalado las siguientes herramientas de línea de comandos y tener una cuenta en Github. Incluimos el comando para para verificar la versión que están instaladas.
+Aunque en mi trabajo del dia a dia uso Visual Studio y harto el ratón siempre me ha atraído el poder de la linea de comandos y poder teclar sin el uso del ratón por tal motivo siempre que exista una herramienta de linea de comandos intentare hacer uso de ella, esto siguiendo el consejo "**Aprende a usar la herramientas de linea de comanando**" del libro [97 Things Every Programmer Should Know](https://www.oreilly.com/library/view/97-things-every/9780596809515/). Para poder seguir este tutorial debes tener instalado las siguientes herramientas de línea de comandos y tener una cuenta en Github. Incluimos el comando para para verificar la versión que están instaladas.
 
 * SDK de dotnet : `dotnet --version`
 * git `git --version`
 
 Si tienes alguna duda con alguna de ellas revisa la documentación o dejame un comentario que intentare responder a la brevedad.
 
-## Control de código fuente y Estructura del proyecto
+# Control de código fuente y Estructura del proyecto
 
-Todo el código de la aplicación estará dentro de la carpeta _Sakila_ que incluirá dos carpetas: _src_ pra el código y _test_ para los proyectos de prueba. A nivel de la estos directorios incluiremos archivos que tienen un alcance para todo el proyecto como los siguientes archivos `.gitignore`, `LICENSE`, `Dockerfile`,`global.json`  o el archivo `README` entre otros.
+ Seguiremos una estructura del proyecto muy común en el contexto del Open Source.El código sera alojado en un repositorio de Github pero es posible alaojarlo en cualquier otro servicio que soporte git como Azure Repos, BitBucket o Gitlab. Particularmente en mi trabajo uso Gitlab en una máquina virtual y funciona de maravilla.
+
+## git y Github
+
+Todo el código de la aplicación estará dentro de la carpeta _Sakila_ que incluirá dos carpetas: _src_ para el código y _test_ para los proyectos de prueba. A nivel de la estos directorios incluiremos archivos que tienen un alcance para todo el proyecto como los siguientes archivos `.gitignore`, `LICENSE`, `Dockerfile`,`global.json` o el archivo `README` entre otros.
 
 > En proyectos más grandes pueden existir carpetas adicionales a _src_ y _test_ como ejemplo ve la estructura del código fuente de [ASP.NET Core](https://github.com/aspnet/AspNetCore) y revisa el contenido de la carpeta _eng_  y _docs_.
 
@@ -35,34 +39,46 @@ Todo el código de la aplicación estará dentro de la carpeta _Sakila_ que incl
 └───test
 ```
 
-Para crear el repositorio en Github usamos las siguientes opciones en la pantalla de crear repositorios. Observa que hay una opción para activar las Azure Pipelines esto es por que tengo instalada está extensión en mi cuenta espera un post para agregar el archivo _.yml_ y definir el proceso de integración continua en Azure Devops.
+La primer tarea a realizar es el repositorio git, agregaremos el archivo `.gitignore` basado en la plantilla de Visual Studio y crearemos repositorio de Github. Para crear el repositorio en Github usamos las siguientes opciones en la pantalla. Observa que hay una opción para activar las Azure Pipelines esto es por que tengo instalada está [extensión](https://github.com/marketplace/azure-pipelines) en mi cuenta espera un post para agregar el archivo _.yml_ y definir el proceso de integración continua en Azure Devops.
 
 <img data-src="/img/crear-sakila-repo.JPG" class="lazyload" alt="Pantalla para crear un nuevo repositorio en Github">
 
-La primer tarea a realizar es el repositorio git, agregaremos el archivo `.gitignore` y agregar el remoto del repositorio de Github
+> **Archivo .gittgnore** es una buena practica incluir siempre el archivo `.gitignore` en el repositorio. Hay una gran colección de archivos con opciones predefinidas en el repositorio [Github gitignore](https://github.com/github/gitignore/). Generalmente usamos el [archivo _.gitignore_ para Visual Studio](https://github.com/github/gitignore/blob/master/VisualStudio.gitignore). El SDK de .NET Core trae una nueva plantilla que copia el archivo .gitignore para Visual Studio con `dotnet new gitignore`
 
-> **Archivo .gittgnore** es una buena practica incluir siempre el archivo `.gitignore` en el repositorio. Hay una gran colección de archivos con opciones predefinidas en el repositorio [Github gitignore](https://github.com/github/gitignore/). Generalmente usamos el [archivo _.gitignore_ para Visual Studio](https://github.com/github/gitignore/blob/master/VisualStudio.gitignore). El SDK de .NET Core trae una nueva platilla que copia el archivo .gitignore para Visual Studio con `dotnet new gitignore`
-
-Para comenzar con el proyecto crea una carpetalla llamada Sakila y ejecuta inicializa el repositorio de git.
+Para comenzar con el proyecto crea una carpetalla llamada _Sakila_ y ejecuta inicializa el repositorio de git.
 
 ```bash
 mkdir Sakila
 git init
 ```
 
-Hasta aquí tenemos un repositorio local. Para agregar una relación con el repositorio creado en Github necesitamos agregar lo que en git se conoce como un remoto. Esto lo hacemos mediante el siguiente comando
+Hasta aquí tenemos un repositorio local sin ningun archivo. Para agregar una relación con el repositorio creado en Github necesitamos agregar lo que en git se conoce como un remoto. Esto lo hacemos mediante el siguiente comando
 
 ```bash
 git remote add origin https://github.com/jahbenjah/Sakila.git
 ```
 
+Copiamos el contenido del archivo _.gitignore_ del repositorio de Github y lo agregamos al control de código fuente mediante el comando
+
 ```bash
 git add .gitignore
+```
+
+Con esto ya podemos publicar nuestro código el el repositorio remoto para ello agregammos un `commit` y publicamos la rama master al repositorio remoto.
+
+```bash
 git commit -m "Se crea estructura inicial del proyecto"
 git push -u origin master
 ```
 
-`dotnet ef dbcontext scaffold` para generar una modelo de _Entity Framework Core_ para la base de datos *sakila* de MySQL con un proyecto que sigue la arquitectura limpia que describen en el libro gratuito [Architect Modern Web Applications with ASP.NET Core and Azure](https://dotnet.microsoft.com/learn/aspnet/architecture). Usamos la version de 5.7 de MySQL y la version 2.2 de ASP.NET Core.
+A partir de aqui empezaremos a repetir el patron anterior de publicación y seguieremos el [flujo de Github](https://guides.github.com/introduction/flow/),es decir, para cada característica nueva de la aplicación crearemos una **rama de git** y cuando esten listos los cambios crearemos un **Pull Request** para incorporar nuestros cambios a la rama _master_. Para crear una rama y cambiarse de rama ejecuta
+
+```bash
+git branch estructura-proyecto
+git checkout estructura-proyecto
+```
+
+## Proyecto
 
 Crearemos 3 proyectos contenidos en la carpeta `Sakila/src`. Tenemos planeado agregaremos pruebas unitarias a esta aplicación en un articulo posterior
 
@@ -140,6 +156,9 @@ Esta cadena la usaremos más adelante para general el modelo de clases a partir 
 ## Generando el modelo de clases en C\#
 
 Para generar el modelo de clases de C# de la base de _sakila_ usaremos el comando `dotnet ef dbcontext scaffold` por lo que es importante conocer las opciones disponibles para ello ejecutamos `dotnet ef dbcontext scaffold --help` para obtener la siguiente salida:
+
+`dotnet ef dbcontext scaffold` para generar una modelo de _Entity Framework Core_ para la base de datos *sakila* de MySQL con un proyecto que sigue la arquitectura limpia que describen en el libro gratuito [Architect Modern Web Applications with ASP.NET Core and Azure](https://dotnet.microsoft.com/learn/aspnet/architecture). Usamos la version de 5.7 de MySQL y la version 2.2 de ASP.NET Core.
+
 
 Los valores para los argumentos que necesitamos son:
 

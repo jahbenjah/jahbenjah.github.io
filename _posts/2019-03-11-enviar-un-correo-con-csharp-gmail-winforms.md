@@ -16,7 +16,7 @@ Para el tutorial hacemos uso de [Visual Studio 2017](https://visualstudio.micros
 
 3. El proyecto **EnviarCorreo** necesitar una referencia al proyecto **Emailer**. Agregala dando clic en el nodo del proyecto **EnviarCorreo** en el Explorador de soluciones y elige _> Proyecto> Agregar Referencia > Proyectos > Emailer_.
 
-Hasta aquí tenemos la estructura del proyecto. En la siguiente seccion revisaremos el código.
+Hasta aquí tenemos la estructura del proyecto. En la siguiente sección revisaremos el código.
 
 # El código
 

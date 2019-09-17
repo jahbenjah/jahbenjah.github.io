@@ -15,7 +15,7 @@ author: Benjamin Camacho
 
 Bienvenido a la primera publicación del tutorial de ASP.NET Core en español en este crearemos una aplicación web basada en la plantilla MVC de ASP.NET Core y tiene como propósito principal mostrar una forma de hacer tareas comunes en este framework como ejecutar las operaciones <abbr lang="en" title="Create Read Update Delete">CRUD</abbr> con una base de datos, validar formularios ,instalar la aplicación , crear un contenedor de docker, usar la inyección de dependencias y algunos temas adicionales. Este estará basado en mi experiencia personal e incluirá las referencias a otros recursos de donde aprendido como son libros, blogs o la documentación misma.
 
-En este primera sección creamos la estructura del proyecto,agregaremos el control de código fuente con Git y crearemos el modelo de la base de datos. Adicionalmente alojaremos el código fuente del proyecto en un repositorio de Github.
+En esta primera sección creamos la estructura del proyecto,agregaremos el control de código fuente con Git y crearemos el modelo de la base de datos. Adicionalmente alojaremos el código fuente del proyecto en un repositorio de Github.
 
 Aunque en mi trabajo del dia a dia uso Visual Studio y harto el ratón siempre me ha atraído el poder de la linea de comandos y poder teclar sin el uso del ratón por tal motivo siempre que exista una herramienta de linea de comandos intentare hacer uso de ella, esto siguiendo el consejo "**Aprende a usar la herramientas de linea de comanando**" del libro [97 Things Every Programmer Should Know](https://www.oreilly.com/library/view/97-things-every/9780596809515/). Para poder seguir este tutorial debes tener instalado las siguientes herramientas de línea de comandos y tener una cuenta en Github. Incluimos el comando para para verificar la versión que están instaladas.
 
@@ -68,7 +68,7 @@ git add .gitignore
 Con esto ya podemos publicar nuestro código el el repositorio remoto para ello agregammos un `commit` y publicamos la rama master al repositorio remoto.
 
 ```bash
-git commit -m "Se crea estructura inicial del proyecto"
+git commit -m "Se agrega archivo .gitignore"
 git push -u origin master
 ```
 
@@ -91,12 +91,11 @@ Crearemos 3 proyectos contenidos en la carpeta `Sakila/src`. Tenemos planeado ag
 
 > **Nota** Si cuentas con más de una versión del _SDK_ de .NET Core es recomendable que uses un archivo _global.json_ para especificar la versión de las herramientas que deseas utilizar. Se sugiere que el archivo global.json se coloque en la carpeta raíz que contiene todo el código. Puedes verificar los SDK instalado en tu computadora con el comando `dotnet --list-sdks`. Puedes crear un archivo global.json con el comando `dotnet new globaljson --sdk-version 2.2.401`.
 
-En una terminal ejecuta los siguientes comandos dentro de la carpeta *Sakila* para crear una solución y los proyectos ejecuta los siguientes comandos uno seguido de otro. La opción -o permite especificar el directorio de salida. Para nuestra conveniencia agregamos una solución que puede usarse con Visual Studio si a si lo prefieres.
+En una terminal ejecuta los siguientes comandos dentro de la carpeta *Sakila* para crear una solución y los proyectos uno seguido de otro. La opción -o permite especificar el directorio de salida. Para nuestra conveniencia agregamos una solución que puede usarse con Visual Studio si a si lo prefieres.
 
 ```bash
-cd Sakila
-dotnet new sln
 dotnet new globaljson --sdk-version 2.2.401
+dotnet new sln
 dotnet new classlib -o src\Sakila.Core --no-restore
 dotnet new classlib -o src\Sakila.Infrastructure --no-restore
 dotnet new mvc -o src\Sakila.Web --no-restore
@@ -131,46 +130,48 @@ dotnet add src\Sakila.Infrastructure\Sakila.Infrastructure.csproj package MySql.
 dotnet add src\Sakila.Infrastructure\Sakila.Infrastructure.csproj reference src\Sakila.Core\Sakila.Core.csproj
 ```
 
-Finalmente en el proyecto _Sakila.Web_ instala el paquete de Nuget `Microsoft.EntityFrameworkCore.Design` con el comando:
-También agrega referencias a los proyectos Sakila.Core y Sakila.Infrastructure
+Finalmente en el proyecto _Sakila.Web_ requiere el paquete de Nuget `Microsoft.EntityFrameworkCore.Design` y referencias a los proyectos Sakila.Core y Sakila.Infrastructure
 
 ```bash
-dotnet add src\Sakila.Web\Sakila.Web.csproj package Microsoft.EntityFrameworkCore.Design --version 2.2.2
+dotnet add src\Sakila.Web\Sakila.Web.csproj package MySql.Data.EntityFrameworkCore
+dotnet add src\Sakila.Web\Sakila.Web.csproj package Microsoft.EntityFrameworkCore.Design
 dotnet add src\Sakila.Web\Sakila.Web.csproj reference src\Sakila.Core\Sakila.Core.csproj
 dotnet add src\Sakila.Web\Sakila.Web.csproj reference src\Sakila.Infrastructure\Sakila.Infrastructure.csproj
 ```
 
 Hasta aquí tenemos lista la estructura del proyecto por lo que es un buen momento para agregar un nuevo commit a nuestro el repositorio de Git local. Posteriormente comenzaremos el proceso para generar el modelo de clases de C# a partir de una base existente. Si usas Visual Studio fácilmente puedes usar _Archivo>Nuevo Proyecto_ en la interfaz gráfica para crear estos proyectos.
 
-## Cadena de conexión para MySQL
-
-Lo primero que necesitamos son las credenciales para acceder a la base de datos. Con estas debemos crear una cadena de conexión que no es más que un conjunto de claves y valores separadas por comas. Si tienes duda como crearla puedes ver mi post [sobre cadenas de conexión con C#]({% post_url 2019-02-27-cadenas-de-conexion-csharp %}) para más detalles.
-
 ```bash
-server=localhost;database=Sakila;port=3306;user id=root;password=TuContraseña.
+git add .
+git commit -m "Se crea la estructura del proyecto"
 ```
-
-Esta cadena la usaremos más adelante para general el modelo de clases a partir de la base de datos.
 
 ## Generando el modelo de clases en C\#
 
-Para generar el modelo de clases de C# de la base _sakila_ usaremos el comando `dotnet ef dbcontext scaffold`
-`dotnet ef dbcontext scaffold` de la línea de comando de Entity Framework Core. Debido a que existen gran cantidad de opciones disponibles. A continuacion enlistamos las que opciones que usaremos:
+Para generar el modelo de clases de C# de una base existente se usa el comando `dotnet ef dbcontext scaffold` y para ello necesitamos una cadena de conexion y el nombre del proveedor de Entity Framework Core. Para el caso de MySQL 
+
+|Parámetro                |Valor                    |
+|-------------------------|-------------------------|
+|Cadena de conexion MySQl | database=Sakila;server=localhost;port=3306;user id=root;password=Password|
+|Provedor                 | MySql.Data.EntityFrameworkCore |
+
+Si tienes duda como [crear una cadena de conexión con C#]({% post_url 2019-02-27-cadenas-de-conexion-csharp %}).
+Tambien usamos las siguientes opciones del comando `dotnet ef dbcontext scaffold`. Puedes usar `dotnet ef dbcontext scaffold --help` para ver más detalles sobre este comando.
 
 |Parámetro    |Valor                    | Descripción|
 |-------------|-------------------------|------------|
 |-s           | src/Sakila.Web/Sakila.Web.csproj|Define el proyecto de inicio |
-|-o           | ../Sakila.Core/Entities | Define el directorio donde se colocaran los archivos de salida|
+|-o           | ../Sakila.Core/Entities |Define el directorio donde se colocarán los archivos de salida|
 |-c           | SakilaContext           |Especifica el nombre del `DbContext`|
 |-context-dir |./Sakila.Infrastructure  |Especifica la ubicación del `DbContext`|
 
-Sin más detalle ejecutamos el siguiente comando para realizar la ingenieria inversa de la base de MySQL
+Nuestro comando para generar los el modelo de la base de datos Sakila el comando es el siguiente:
 
 ```bash
 dotnet ef dbcontext scaffold "database=Sakila;server=localhost;port=3306;user id=root;password=Password" MySql.Data.EntityFrameworkCore -s src/Sakila.Web/Sakila.Web.csproj -o ../Sakila.Core/Entities -c SakilaContext --context-dir ../Sakila.Infrastructure
 ```
 
-Esto nos creara el modelo de clases de C# usando por el método la API fluida de Entity Framework Core en el método `OnModelCreating` por ejemplo para la clase `Actor` que se encuentra en el esquema `sakila`. Desde mi punto de vista esto genera una clase que no es fácil de mantener porque este método contiene una gran cantidad de líneas, un indice de mantenimiento y una complejidad ciclomatica grande. Posteriormente agregaremos una entrada sobre como obtener las metricas del código.
+Esto nos creara el modelo de clases de C# usando por el método la API fluida de Entity Framework Core en el método `OnModelCreating` por ejemplo para la clase `Actor` que se encuentra en el esquema `sakila`. Desde mi punto de vista esto genera una clase `SakilaContext` que no es fácil de mantener porque este método contiene una gran cantidad de líneas, un indice de mantenimiento bajo y una complejidad ciclomatica grande. Posteriormente agregaremos una entrada sobre como obtener las metricas del código.
 
 ```cs
 protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -199,7 +200,7 @@ protected override void OnModelCreating(ModelBuilder modelBuilder)
   //...
 ```
 
-Una forma alternativa de crear el Modelo es usando las anotaciones de datos. Puedes crear un modelo usando las anotaciones de datos agregando la opción `-d` al comando `dotnet ef dbcontext`. Por ejemplo la clase `Actor` configurada con anotaciones de datos luce de la siguiente manera. Es necesario notar que no todas las opciones de la API fluida estan disponibles en las anotaciones de datos.
+Una forma alternativa de crear el modelo es usando las anotaciones de datos. Puedes crear un modelo usando las anotaciones de datos agregando la opción `-d` al comando `dotnet ef dbcontext`. Por ejemplo la clase `Actor` configurada con anotaciones de datos luce de la siguiente manera. Es necesario notar que no todas las opciones de la API fluida estan disponibles en las anotaciones de datos.
 
 ```cs
 using System;
@@ -236,13 +237,6 @@ namespace Sakila.Console
 }
 ```
 
-Estes es un buen punto para publicar los cambios en el repositorio Git local para llevar una trazabilidad de los cambios realizados en el códiggo. Ejecuta los comandos:
-
-```bash
-git add .
-git commit -m "Se crea el modelo de datos"
-```
-
 Un punto que debemos tener en cuenta es que cuando usamos las herramientas para generar el modelo de bases de datos  la cadena de conexión se incluye en el método `OnConfiguring` que es considerado una mala práctica por lo que eliminaremos este método. Y la cadena de conexión la obtendremos del archivo de configuración.
 
 ```cs
@@ -255,9 +249,28 @@ protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 }
 ```
 
+Otro punto a considerar el espacio de nombres que las herramientas de linea de comandos de EF Core usa por default espacio de nombres del proyecto de inicio en este caso `Sakila.Web`. Ajustaremos los espacios de nombres a `Sakila.Core.Entities` y `Sakila.Infrastructure` dependiendo de l proyecto al que pertenezacan las clases.
+
+Este es un buen punto para publicar los cambios en el repositorio Git local para llevar una trazabilidad de los cambios realizados en el códiggo. Ejecuta los comandos:
+
+```bash
+git add .
+git commit -m "Se crea el modelo de datos"
+```
+
 ## Usar el contexto en la aplicación ASP.NET Core MVC
 
-Para usar el contexto de la aplicación en el proyecto de ASP.NET Core requerimos hacer uso de la inyección de dependecias que viene integrado con ASP.NET Core. Lo primero que tenemos que hacer es agregar el servicio en el método `ConfigureServices`
+Para usar el contexto de la aplicación en el proyecto de ASP.NET Core requerimos hacer uso de la inyección de dependecias que viene integrado con ASP.NET Core. Lo primero que tenemos que hacer es agregar la cadena de conexión al archivo `appsettings.json` en una seccion llamada `ConnectionStrings`
+
+```json
+{
+  "ConnectionStrings": {
+    "Sakila": "database=Sakila;server=localhost;port=3306;user id=root;password=Password"
+  },
+}
+```
+
+Posteriormente tenemos que agregar el servicio en el método `ConfigureServices` usando el método de extensión `AddDbContext<T>` y leyendo la cadena de conexion del archivo de configuración. Tambien es necesario agregar las instruciones `using Microsoft.EntityFrameworkCore;` y `using Sakila.Infrastructure;` al archivo `Startup.cs`
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -269,7 +282,7 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-El siguiente paso es especificar la dependencia en el controlador. Para este caso HomeController
+El siguiente paso es especificar la dependencia en el constructor junto con un campo privado donde haremos uso de esta dependencia `SakilaContext`, en este caso la clase `HomeController`.
 
 ```csharp
 private readonly SakilaContext _context;
@@ -279,4 +292,40 @@ public HomeController(SakilaContext context)
 }
 ```
 
-## Para llevar
+Puara mostrar como usar el la clase `SakilaContext` modificares el método de acción `Index` de la clase `HomeController` de la siguiente manera:
+
+```cs
+public IActionResult Index()
+{
+  return View(_context.Actor.ToList());
+}
+```
+
+La vista _Views\Home\Index.cshtml_ contendra el siguiente código para leer datos desde la base de datos _sakila_ y mostrarlos en una lista en la página de inicio de la aplicación.
+
+```cshtml
+@model List<Sakila.Core.Entities.Actor>  
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Bienvenidos</h1>
+    <p>Los actores en la base Sakila son:</p>
+</div>
+
+<div>
+    <ul class="list-group">
+        @foreach (var actor in Model)
+        {
+        <li class="list-group-item">@actor.FirstName @actor.LastName;</li>
+        }
+    </ul>
+</div>
+```
+
+Para ejecutar la aplicación ejecuta el siguiente comando:
+
+```bash
+dotnet run --project src\Sakila.Web\Sakila.Web.csproj
+```

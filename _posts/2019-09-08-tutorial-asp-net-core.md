@@ -292,7 +292,7 @@ public HomeController(SakilaContext context)
 }
 ```
 
-Puara mostrar como usar el la clase `SakilaContext` modificares el método de acción `Index` de la clase `HomeController` de la siguiente manera:
+Para mostrar como usar la clase `SakilaContext` modificamos el método de acción `Index` de la clase `HomeController` de la siguiente manera:
 
 ```cs
 public IActionResult Index()
@@ -301,7 +301,7 @@ public IActionResult Index()
 }
 ```
 
-La vista _Views\Home\Index.cshtml_ contendra el siguiente código para leer datos desde la base de datos _sakila_ y mostrarlos en una lista en la página de inicio de la aplicación.
+La vista _Views\Home\Index.cshtml_ contendrá el siguiente código para mostrar los nombres de los actores de la base _sakila_ en una lista en la página de inicio de la aplicación.
 
 ```cshtml
 @model List<Sakila.Core.Entities.Actor>  
@@ -329,3 +329,13 @@ Para ejecutar la aplicación ejecuta el siguiente comando:
 ```bash
 dotnet run --project src\Sakila.Web\Sakila.Web.csproj
 ```
+
+Cuando estemos listos podemos publicar la rama a nuestro repositorio remoto de Gtihub.
+
+```bash
+git add .
+git commit -m "Se agrega el DbContext al proyecto Web"
+git push origin estructura-proyecto
+```
+
+El último paso sera crear un **Pull request** para integrar nuestros cambios la rama master.

@@ -1,4 +1,4 @@
-var CACHE_NAME = 'aspnetcormaster-cache-v2';
+var CACHE_NAME = 'aspnetcormaster-cache-v3';
 var urlsToCache = [
    '/assets/css/style.css',
    '/assets/gitbook/style.css',
@@ -64,7 +64,7 @@ self.addEventListener('fetch', function (event) {
 
 self.addEventListener('activate', function (event) {
 
-  var cacheWhitelist = ['dummy-cache-v2'];
+  var cacheWhitelist = ['dummy-cache-v3'];
 
   event.waitUntil(
     caches.keys().then(function (cacheNames) {

@@ -6,11 +6,11 @@ description: >-
   Sitio dedicado a temas de programación usando C# ,ASP.NET Core, Entity Framework Core y Sql Server.
 baseurl: ""
 url: "https://aspnetcoremaster.com"
-twitter_username: jbenjamincmcho
+twitter_username: jbenjamincc
 github_username:  jahbenjah
 linkedin_username: benjamin-camacho-castro
 twitter:
-  username: jbenjamincmcho
+  username: jbenjamincc
   card: summary
 social:
   name: csharpmx

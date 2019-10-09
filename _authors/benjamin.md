@@ -6,7 +6,7 @@ position: Programador C#
 
 Hola soy Benjamín Camacho y trabajo como programador .NET creando y manteniendo aplicaciones con C#. Mantengo este sitio dedicado a ASP.NET Core. También soy un orgulloso miembro de la [.NET Foundation](https://dotnetfoundation.org/) (tú también puedes ser parte si ) que es una organización dedicada a fortalecer el ecosistema .NET en dentro del <span lang="en">open source</span>.
 
-Puedes contactarme por [correo](mailto:benjamin@aspnetcoremaster.com) o seguirme en twitter [@jbenjamincmcho](https://twitter.com/jbenjamincmcho)
+Puedes contactarme por [correo](mailto:benjamin@aspnetcoremaster.com) o seguirme en twitter [@jbenjamincc](https://twitter.com/jbenjamincc)
 
 Mis principales intereses se centran entorno al desarrollo web y temas relacionados
 

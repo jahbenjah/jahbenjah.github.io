@@ -5,7 +5,7 @@ comments: true
 categories: dotnet 
 ---
 
- La práctica llamada desarrollo guiado por pruebas o por sus siglas en ingles TDD <span lang="en">Test Driven Development</span>) es algo que no he encontrado en los proyectos que he visto y participado mas sin embargo considero que todos los proyectos deberían tener prueba automatizadas debido principalmente a dos razones: he visto lo tedioso y susceptible de error que son las pruebas manuales y la facilidad con que los programadores cometemos el mismo error más de una vez en nuestro código. 
+ La práctica llamada desarrollo guiado por pruebas o por sus siglas en ingles TDD <span lang="en">Test Driven Development</span>) es algo que no he encontrado en los proyectos que he visto y participado mas sin embargo considero que todos los proyectos deberían tener prueba automatizadas debido principalmente a dos razones: he visto lo tedioso y susceptible de error que son las pruebas manuales y la facilidad con que los programadores cometemos el mismo error más de una vez en nuestro código.
 
 > Nunca pidas permiso para [refactorizar](https://es.wikipedia.org/wiki/Refactorizaci%C3%B3n). Nunca pidas permiso para escribir pruebas. Haces estas cosas porque SABES que son la mejor manera de avanzar más rápido. Cuando pides permiso, le estás pidiendo a alguien que se haga responsable de tus acciones. [Tio Bob Martin](https://twitter.com/unclebobmartin/status/1134824807969804291)
 
@@ -13,7 +13,7 @@ En la practica del <abbr title="Test Driven Development" lang="en">TDD</abbr> se
 
 El ciclo Red-Green-Refactor lleva 3 etapas : La primera RED, implica escribir una prueba unitaria está debe fallar ya que aun no contamos con el código escrito y el ejecutar de pruebas la marca en rojo. La segunda etapa se alcanza cuando se ha escrito código suficiente para pasar la prueba unitaria y el ejecutor de pruebas indica un estado verde. El último paso es refactorizar nuestro código para este optimizado y que sea que sea legible se debe asegurar que el estado quede en verde.
 
-En este articulo se da una guía de como crear un proyecto con pruebas unitarias usando C# , [x.unit.net](https://xunit.net/) y la línea de comando `dotnet`. Para crear el proyecto se usa la versión preliminar del SDK de .NET Core 3.0 pero funcionará igual para cualquier otra versión. 
+En este articulo se da una guía de como crear un proyecto con pruebas unitarias usando C# , [x.unit.net](https://xunit.net/) y la línea de comando `dotnet`. Para crear el proyecto se usa la versión preliminar del SDK de .NET Core 3.0 pero funcionará igual para cualquier otra versión.
 
 A pesar de que existen gran cantidad de marcos de pruebas unitarias como [NUnit](https://nunit.org/) y [MSTest](https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-mstest) preferimos usar **xunit.net** principalmente porque es el marco de pruebas elegido por los proyectos de código abierto [ASP.NET Core](https://github.com/aspnet/AspNetCore) y [Entitity Framework Core](https://github.com/aspnet/EntityFrameworkCore) y tengo la idea de en algún momento contribuir con algo de código. He de decir que ahora mismo esa posibilidad la veo lejana pero aun asi tengo la ilusión de poder hacerlo. Los marcos de pruebas unitarias tambíen se pueden usar para crear pruebas de integración ver por ejemplo:
 
@@ -21,6 +21,7 @@ A pesar de que existen gran cantidad de marcos de pruebas unitarias como [NUnit]
 * [Web scraping con C#]({% post_url 2018-12-24-web-scraping-con-csharp %})
 
 Elegimos hacerlo con la linea de comandos por dos razones porque me gusta entender como funcionan las cosas detrás de cámaras y es necesario saber estas cosa para configurar un <span lan="en">Pipeline</span> de entrega continua en Azure Devops o GitLab. Lo que es básicamente un archivo con extensión  *.yml* (ver ejemplo a continuación) donde se especifican las pasos necesarios (instrucciones para la linea de comandos) para construir, probar y desplegar nuestra aplicación. En mi trabajo uso [Gitlab Comunnity Edition](https://about.gitlab.com/) para el control de código fuente en un servidor en alojado en la red interna. Altamente recomendable.
+
 ```yml
 
 image: microsoft/dotnet:latest
@@ -75,7 +76,7 @@ dotnet new sln -o MiApp
 
 Esto es por si en algún momento quieres usar Visual Studio 2019 [aca]({% post_url 2019-04-05-visual-studio-2019 %}) puedes ver las características mas importantes de esta version. Esto creara una carpeta llamada *MiApp* que contendrá el proyecto que tiene la siguiente estructura. En la carpeta *src* colocaremos todo el código de la aplicación y en la carpeta *test* el código de pruebas unitarias.
 
-```
+```clean
  MiApp
 ├───src
 │   └───MiApp
@@ -85,7 +86,7 @@ Esto es por si en algún momento quieres usar Visual Studio 2019 [aca]({% post_u
 
 2. Crear un proyecto biblioteca de clases:
 
-```
+```console
 dotnet new classlib -o MiApp/src/MiApp
 ```
 

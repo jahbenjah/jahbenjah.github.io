@@ -5,7 +5,7 @@ date:   2019-04-07 12:00:01 +0000
 categories: asp.net core
 ---
 
-En este post te mostrare como como leer los datos contenidos en el archivo de configuración de una aplicación ASP.NET Core  incluido en el proyecto por *MVC con autenticación de cuentas individuales*. *appsettings.json*. El soporte para poder manejar este archivo configuración se agrega en el archivo _Program.cs_ con una llamada al método estático `CreateDefaultBuilder` de la clase `WebHost`, es decir, `WebHost.CreateDefaultBuilder(args)`. 
+En este post te mostrare como como leer los datos contenidos en el archivo de configuración de una aplicación ASP.NET Core  incluido en el proyecto por *MVC con autenticación de cuentas individuales*. *appsettings.json*. El soporte para poder manejar este archivo configuración se agrega en el archivo _Program.cs_ con una llamada al método estático `CreateDefaultBuilder` de la clase `WebHost`, es decir, `WebHost.CreateDefaultBuilder(args)`.
 
 Pero ¿cómo sabemos que hace este método si pertenece a ASP.NET Core ?. La respuesta es muy sencilla ya que ASP.NET Core es *open source* y podemos usa revisar el código de cada uno de los métodos en el [repositorio de ASP.NET Core en Github](https://github.com/aspnet/AspNetCore). Navegar por el código puede ser difícil porque es un proyecto muy grande por lo que he pensado que seria bueno preparar una guía pero por ahora solo basta decir que la la clase `WebHost` se encuentra [aquí](https://github.com/aspnet/AspNetCore/blob/master/src/DefaultBuilder/src/WebHost.cs) y que las lineas relacionadas con el el archivo `appsetting.json` son:
 
@@ -38,6 +38,7 @@ Con este código el contenedor de dependencias de ASP.NET Core se encargara de c
 services.AddDbContext<ApplicationDbContext>(options =>
          options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 ```
+
 El método de extensión `GetConnectionString` requiere una clave para buscar en en el objeto JSON *ConnectionStrings*. y devuelve una cadena.
 
 Si deseas agregar más de una cadena de conexión puedes usar el mismo patrón para traerla. adicionalente agregamos mas parámetros como ejemplo.
@@ -82,6 +83,7 @@ namespace LeerAppSettings.Models
   }
 }
 ```
+
 Con esto construiremos un objecto al cual asignaremos los valores  del archivo de configuración.
 
 ```cs

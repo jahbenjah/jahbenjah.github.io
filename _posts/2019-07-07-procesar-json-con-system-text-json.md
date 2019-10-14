@@ -100,7 +100,6 @@ Producto producto2 = JsonSerializer.Parse<Producto>(cadena);
 Console.WriteLine(producto2.Nombre);
 ```
 
-
 # Para llevar
 
 Es interesante ver la discusión entorno a al futuro de JSON en el entorno .NET y como puede cambiar la API de `System.Text.Json` de acuerdo a los estudios de usabilidad realizados.

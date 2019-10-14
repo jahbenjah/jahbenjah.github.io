@@ -3,11 +3,13 @@ layout: post
 title:  "Archivo appsettings.json ASP.NET Core"
 date:   2019-04-07 12:00:01 +0000
 categories: asp.net core
+last_modified_at: 2019-05-11 13:05:55 +0000
+description: Breve descripción de que es ASP.NET Core y cuales son sus características principales
 ---
 
-En este post te mostrare como como leer los datos contenidos en el archivo de configuración de una aplicación ASP.NET Core  incluido en el proyecto por *MVC con autenticación de cuentas individuales*. *appsettings.json*. El soporte para poder manejar este archivo configuración se agrega en el archivo _Program.cs_ con una llamada al método estático `CreateDefaultBuilder` de la clase `WebHost`, es decir, `WebHost.CreateDefaultBuilder(args)`.
+En este post te mostrare como como leer los datos contenidos en el archivo de configuración de una aplicación ASP.NET Core incluido en el proyecto *MVC con autenticación de cuentas individuales*. *appsettings.json*. El soporte para poder manejar este archivo configuración se agrega en el archivo _Program.cs_ con una llamada al método estático `CreateDefaultBuilder` de la clase `WebHost`, es decir, `WebHost.CreateDefaultBuilder(args)`.
 
-Pero ¿cómo sabemos que hace este método si pertenece a ASP.NET Core ?. La respuesta es muy sencilla ya que ASP.NET Core es *open source* y podemos usa revisar el código de cada uno de los métodos en el [repositorio de ASP.NET Core en Github](https://github.com/aspnet/AspNetCore). Navegar por el código puede ser difícil porque es un proyecto muy grande por lo que he pensado que seria bueno preparar una guía pero por ahora solo basta decir que la la clase `WebHost` se encuentra [aquí](https://github.com/aspnet/AspNetCore/blob/master/src/DefaultBuilder/src/WebHost.cs) y que las lineas relacionadas con el el archivo `appsetting.json` son:
+Pero ¿cómo sabemos que hace este método si pertenece a ASP.NET Core ?. La respuesta es muy sencilla ya que ASP.NET Core es *Open Source* y podemos usa revisar el código de cada uno de los métodos en el [repositorio de ASP.NET Core en Github](https://github.com/aspnet/AspNetCore). Navegar por el código puede ser difícil porque es un proyecto muy grande por lo que he pensado que seria bueno preparar una guía pero por ahora solo basta decir que la la clase `WebHost` se encuentra [aquí](https://github.com/aspnet/AspNetCore/blob/master/src/DefaultBuilder/src/WebHost.cs) y que las lineas relacionadas con el el archivo `appsetting.json` son:
 
 ```cs
 config.AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
@@ -18,9 +20,9 @@ Básicamente agrega la posibilidad de usar dos variantes del archivo de configur
 
 > **Opinión personal :** A mi gusto deberíamos tener la capacidad de ver los detalles del código de proyectos _open source_ desde Visual Studio o VS Code similar cómo según recuerdo Eclipse te permite agregar el código fuente de Java y navegar en el cuando fuese necesario. Las características **Ir a la definición F12** y **Ver la definición Alt + F12** muestran unicamente los metadatos de las clases que dan alguna idea pero no el detalle.
 
-# Leer el archivo appsettings.jsonn en la clase Startup
+# Leer el archivo appsettings.json en la clase Startup
 
-Este codigo es proporcionado por el ejemplo y muestra los pasos nececeario para usar la configuracion en las diferentes secciones del proyecto. Se usa la inyeccion de dependencias para leer este archivo
+Este código es proporcionado por el ejemplo y muestra los pasos necesario para usar la configuración en las diferentes secciones del proyecto. Se usa la inyección de dependencias para leer este archivo
 
 Primero se declara un parámetro de tipo `IConfiguration` en el constructor de la clase Startup y se asigna una propiedad de solo lectura llamada `Configuration` del espacio de nombres `Microsoft.Extensions.Configuration`.
 

@@ -75,7 +75,7 @@ Aunque en la vida real estos objetos se pueden obtener de una base de datos, un 
 
 El proceso de convertir un objeto de C# en una cadena JSON se conoce como serialización. Esta tarea se realiza con el método `ToString` y sus sobrecargas.
 
-<img data-src="/img/json.jpg" class="lazyload"  alt="F12 en Visual Studio Code"> 
+<img data-src="/img/json.webp" class="lazyload"  alt="F12 en Visual Studio Code"> 
 
 En su forma genérica requiere especificar el tipo a convertir y  el  una instancia del objeto a convertir a JSON. Adicionalmete puedes agregar un objeto del tipo `JsonSerializerOptions` que controla el comportamiento de la serialización.
 

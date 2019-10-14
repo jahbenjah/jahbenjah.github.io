@@ -17,7 +17,7 @@ Puedes revisar la documentación en [SmtpClient](https://docs.microsoft.com/en-u
 
 ## Configuración de Gmail ##
 
-<img data-src="Imagenes/AccesoAplicacionesMenosSeguras.PNG" class="lazyload"  alt="Gmail acceso a aplicaciones menos seguras">
+<img data-src="Imagenes/AccesoAplicacionesMenosSeguras.webp" class="lazyload"  alt="Gmail acceso a aplicaciones menos seguras">
 
  Permitir el acceso a aplicaciones no seguras para GMAIL. tal como se describe aqui
 [https://support.google.com/accounts/answer/6010255?hl=es-41]

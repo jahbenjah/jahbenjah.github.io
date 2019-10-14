@@ -186,7 +186,7 @@ Con esto podemos estamos en la primera etapa del ciclo Red-Green-Refactor ejecut
 dotnet test
 ```
 
-<img data-src="/img/dotnet-test-red.JPG" class="lazyload"  alt="Salida del comando dotnet test">
+<img data-src="/img/dotnet-test-red.webp" class="lazyload"  alt="Salida del comando dotnet test">
 
 La primeras 3 pruebas se pueden pasar con el siguiente código. La salida del comando `dotnet test`.
 
@@ -201,7 +201,7 @@ else
 }
 ```
 
-<img data-src="/img/dotnet-test-red-2.JPG" class="lazyload"  alt="Salida del comando dotnet test">
+<img data-src="/img/dotnet-test-red-2.webp" class="lazyload"  alt="Salida del comando dotnet test">
 
 El código que puede pasar todas las pruebas el siguiente.
 ```cs
@@ -225,11 +225,11 @@ public static string InvierteCadena(string entrada)
 }
 ```
 
-<img data-src="/img/dotnet-test-green.JPG" class="lazyload"  alt="Salida del comando dotnet test">
+<img data-src="/img/dotnet-test-green.webp" class="lazyload"  alt="Salida del comando dotnet test">
 
 Finalmente puedes refactorizar el codigo para aumentar la calidad del mismo. Por ejemplo usando el refactoring sugerido de Visual Studio conocido como **Invertir if**
 
-<img data-src="/img/dotnet-test-refactor.JPG" class="lazyload"  alt="Salida del comando dotnet test">
+<img data-src="/img/dotnet-test-refactor.webp" class="lazyload"  alt="Salida del comando dotnet test">
 
 # Referencias
 

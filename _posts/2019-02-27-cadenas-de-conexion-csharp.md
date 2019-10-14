@@ -13,7 +13,7 @@ description: Creación de cadena de conexión SQL Server, MySQL , Oracle , Postg
 
 En este tutorial te mostramos como crear, manipular y validar la cadena de conexión para SQL Server, MYSQL, Oracle, Firebird, PostgreSQL y  Sqlite usando C# y un proyecto de consola de .NET Core.
 
-<img data-src="/img/connectionstring.PNG" class="lazyload"  alt="Script Tag Helper">
+<img data-src="/img/connectionstring.webp" class="lazyload"  alt="Script Tag Helper">
 
 Para ello utilizamos la clase `ConnectionStringBuilder` que implementan los proveedores de ADO.NET. Para cada proveedor de ADO.NET es necesario instalar el paquete de Nuget correspondiente e importar el espacio de nombres con la instrucción [using]({% post_url 2019-01-03-cuatro-formas-de-usar-la-palabra-clave-using-de-csharp %}).
 

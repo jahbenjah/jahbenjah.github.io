@@ -68,7 +68,7 @@ Para el proyecto de  Windows Forms es necesario crear el formulario para la inte
 
 El formulario se muestra a continuación y es necesario crear dos métodos uno para manejar el evento de clic del botón y otro para limpiar el formulario.
 
-<img data-src="/img/emailForm.PNG" class="lazyload"  alt="Interfaz gráfica para enviar correo">
+<img data-src="/img/emailForm.webp" class="lazyload"  alt="Interfaz gráfica para enviar correo">
 
 Modificar el archivo de configuración *App.config* y agregar el elemento `<system.net>` que lee el constructor del SmtpClient automáticamente. :
 
@@ -149,11 +149,11 @@ Ya puedes probar la aplicación. El mensaje enviado puede incluir `html`. por ej
     <li><a href="https://aspnetcoremaster.com/.net/smtp/smptclient/dotnet/2018/07/22/enviar-un-correo-con-csharp-gmail.html">Enviar un correo con C# y Gmail.</a></li>
 <li><a href="https://aspnetcoremaster.com/c%23/entityframeworkcore/dotnet/ef/2018/08/07/introduccion-entityframeworkcore.html">Introducción a Entity Framework Core 2.1.</a></li>
 
-<img src="https://aspnetcoremaster.com/img/og-image.jpg" alt="logo de C#" />
+<img src="https://aspnetcoremaster.com/img/og-image.webp" alt="logo de C#" />
 </ul>
 ```
 
-<img data-src="/img/CorreoRecibido.PNG" class="lazyload"  alt="Muestra de correo recibido">
+<img data-src="/img/CorreoRecibido.webp" class="lazyload"  alt="Muestra de correo recibido">
 
 # Para llevar
 

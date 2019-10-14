@@ -77,7 +77,7 @@ El catalogo esta compuesto de 50 paginas en cada pagina se muestran 20 libros. C
 
 Las categorías se encuentran en la barra lateral de las paginas del catalogo por lo que solo es necesario navegar por la primera pagina y extraer los datos de las categorías (Id, Nombre , Url).
 
-<img data-src="/img/Categorias.PNG" class="lazyload"  alt="Muestra de categorias">
+<img data-src="/img/Categorias.webp" class="lazyload"  alt="Muestra de categorias">
 
 ## Extracción categorías
 
@@ -221,7 +221,7 @@ public static void GuardarCategorias()
 
 Si abrimos la base de datos SQLite veremos las categorias.
 
-<img data-src="/img/categoriasbd.PNG" class="lazyload"  alt="Resultado de la extracción de categorias">
+<img data-src="/img/categoriasbd.webp" class="lazyload"  alt="Resultado de la extracción de categorias">
 
 ## Extración detalle libros
 
@@ -314,7 +314,7 @@ static void Main(string[] args)
 
 Aqui es recomendable usar el [modo headless de Chrome](https://developers.google.com/web/updates/2017/04/headless-chrome) . Puedes descomentar la línea ``options.AddArgument("--headless");``  ``GetDriver`` del método para que no se veas el navegador.
 
-<img data-src="/img/ExtraccionFinal.PNG" class="lazyload"  alt="base de libros y categorias">
+<img data-src="/img/ExtraccionFinal.webp" class="lazyload"  alt="base de libros y categorias">
 
 # Para llevar 
 

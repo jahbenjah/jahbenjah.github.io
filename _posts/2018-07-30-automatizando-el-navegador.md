@@ -8,7 +8,7 @@ categories: C# selenium testing xunit dotnet
 Automatiza todas las tares repetitivas que realizas en el navegador usando C# y Selenium; 
 Aquí te mostramos como automatizar el inicio de sesión de Facebook.
 
-<img data-src="/img/blurred-background-dolls-fashion-935019.jpg" class="lazyload"  alt="Controlando un títere. Metáfora de automatización">
+<img data-src="/img/blurred-background-dolls-fashion-935019.webp" class="lazyload"  alt="Controlando un títere. Metáfora de automatización">
 
 > "Selenium es un conjunto de herramientas para automatizar navegadores web a tráves de múltiples plataformas.
   ...Selenium puede ser controlado por múltiples lenguajes de programación y frameworks de pruebas."  
@@ -97,7 +97,7 @@ Esta clase intenta seguir el patrón de diseño
 La clase _IniciaSesion_ contiene 3 constantes de solo lectura que permiten identificar los elementos _HTML_ de la página..
 Puedes obtenerlos mediante las herramientas para desarrollador del navegador.
 
-<img data-src="/img/InspecionarFacebook.PNG" class="lazyload"  alt="Herramientas de desarrador Firefox">
+<img data-src="/img/InspecionarFacebook.webp" class="lazyload"  alt="Herramientas de desarrador Firefox">
 
 El constructor requiere un objeto del tipo `IWebDriver` lo que permite ejecutar las pruebas en diferentes Navegadores
 
@@ -230,7 +230,7 @@ Para ejecutar desde la linea de comandos puedes usar `dotnet test` o `dotnet xun
 Para ejecutar con Visual Studio abre la solución  AutomatizarNavegador.sln.
 Posteriorment el abre  _Menu Pruebas  > Ventanas  > Explorador De Pruebas_ y selecciona ejecutar todas las pruebas.
 
-<img data-src="/img/vs2017.PNG" class="lazyload"  alt="Visual Studio 2017.">
+<img data-src="/img/vs2017.webp" class="lazyload"  alt="Visual Studio 2017.">
 
 ## Para llevar
 

@@ -9,7 +9,7 @@ last_modified_at: 2019-05-05 16:05:26 +0000
 ---
 Cada lenguaje de programación cuenta con un conjunto de palabras claves que son utilizadas por el compilador. En este articulo te mostramos 4 formas de usar la palabra reservada **using** de C# con el clásico hola mundo.
 
-<img data-src="/img/csharp.jpg" class="lazyload"  alt="Logo del lenguaje de programación C#">
+<img data-src="/img/csharp.webp" class="lazyload"  alt="Logo del lenguaje de programación C#">
 
 Puedes consultar la lista completa de:[Palabras clave de C#](https://docs.microsoft.com/es-mx/dotnet/csharp/language-reference/keywords/) en la documentación.
 

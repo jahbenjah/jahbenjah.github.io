@@ -31,7 +31,7 @@ Está vista debe invocarse dentro de la sección Scripts (`@RenderSection("Scrip
 
 La vista **_LoginPartial** muestra dos elementos en la barra de navegación que cambian dependiendo si el usuario ha iniciado sesión o no. Se muestran los ligas para *Registrarse* e *Iniciar sesión* si no ha ingresado y un mensaje de bienvenida y la liga para cerrar sesión cuando el usuario ha iniciado sesión.
 
-<img data-src="/img/vistasparciales.PNG" class="lazyload"  alt="Visualización de la vista parcial _LoginPartial">
+<img data-src="/img/vistasparciales.webp" class="lazyload"  alt="Visualización de la vista parcial _LoginPartial">
 
 Esta vista usa la inyección de dependencias para poder usar las clases de `Microsoft.AspNetCore.Identity` para poder identificar cuando un usar ha iniciado sesión y obtener el nombre del usuario. A continuación mostramos la parte principal de esta vista.
 

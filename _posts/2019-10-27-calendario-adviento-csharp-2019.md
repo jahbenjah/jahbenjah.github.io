@@ -52,7 +52,7 @@ El tema de los artículos es decisión de los autores unicamente se pide que sea
 |   21/12/2019  |               |                 |                |         |
 |   22/12/2019  |               |                 |                |         |
 |   23/12/2019  |               |                 |                |         |
-|   24/12/2019  |               |                 |                |         |
+|   24/12/2019  |[Fredy Guibert](https://twitter.com/fredyfx){:target="_blank" rel="noopener"}|                 |                |         |
 |   25/12/2019  |               |                 |                |         |
 
 ## Algunas ideas para postear

@@ -9,7 +9,7 @@ image:
 
 En ASP.NET Core las vistas parciales permiten mantener secciones de marcado *HTML* separadas en diferentes archivos que después se utilizan para formar una página web completa. Las vistas parciales deben de tener un propósito especifico como incluir un conjunto de scripts o mostrar cierto contenido en caso de que se cumpla una condición. Las vistas parciales tienen una extensión _.cshtml_ y por convención su nombre comienzan con un guion bajo (_).
 
-Las vistas que pueden ser utilizadas por cualquier controlador o vistas suelen estar ubicadas en la carpeta */Views/Shared/* o en la carpeta de vistas especifica para un controlador */Views/{Controller}/*. Las principales ventajas que ofrecen es poder dividir la complejidad de la página en pequeños archivos con propósito especifico  y la re utilización de código.
+Las vistas que pueden ser utilizadas por cualquier controlador o vista suelen estar ubicadas en la carpeta */Views/Shared/* o en la carpeta de vistas especifica para un controlador */Views/{Controller}/*. Las principales ventajas que ofrecen es poder dividir la complejidad de la página en pequeños archivos con propósito especifico  y la re utilización de código.
 
 La plantilla de  proyecto MVC con autenticación de cuentas Individuales o con la linea de comandos `dotnet new mvc --auth individual` contiene 3 vistas parciales que nos permite observar como funcionan las mismas. A continuación mostramos la ruta completa de estas vistas:
 
@@ -33,7 +33,7 @@ La vista **_LoginPartial** muestra dos elementos en la barra de navegación que 
 
 <img data-src="/img/vistasparciales.webp" class="lazyload"  alt="Visualización de la vista parcial _LoginPartial">
 
-Esta vista usa la inyección de dependencias para poder usar las clases de `Microsoft.AspNetCore.Identity` para poder identificar cuando un usar ha iniciado sesión y obtener el nombre del usuario. A continuación mostramos la parte principal de esta vista.
+Esta vista usa la inyección de dependencias para poder usar las clases de `Microsoft.AspNetCore.Identity` para poder identificar cuando un usario ha iniciado sesión y obtener el nombre del usuario. A continuación mostramos la parte principal de esta vista.
 
 ```cs
 @using Microsoft.AspNetCore.Identity

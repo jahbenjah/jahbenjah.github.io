@@ -13,6 +13,8 @@ El año pasado, entre el 16 y 25 de diciembre se llevo acabo [El primer calendar
 
 Para este año la propuesta es que entre el 1 y el 25 de diciembre se publiquen por lo menos un artículo en español de un tema relacionado con C#. Hay posibilidad de publicar dos entradas por día pero dependerá de la respuesta obtenida.
 
+> Una idea que estuve pensado para el segundo año de calendario de adviento de C# en español es que evolucionará a algo más completo con .NET algo así como **El calendario de adviento de .NET en español** y abrir espacios para las diferentes categorías : web, móvil, escritorio, microservicios, video juegos, machine learning, nube e internet de las cosas y lenguajes (C#, F# y VB) para abarcar todo el ecosistema de .NET en español . El principal problema seria llenar todo el calendario para intentar minimizar este problemas lo propuesta es correr _calendarios paralelos_ (aunque inicien en distintas fechas) y buscar **lideres** en las diferente comunidades que apoyen a promover los respectivos calendarios. La dejo como propuesta por si alguien gusta apoyarla.
+
 ## Reglas
 
 1. Elige un tema relacionado con C# y reserva una fecha de deseada para publicar tú artículo.
@@ -61,4 +63,3 @@ El tema de los artículos es decisión de los autores unicamente se pide que sea
 * El futuro de .NET
 * .NET 5
 * Aplicaciones Nativas para la Nube
-

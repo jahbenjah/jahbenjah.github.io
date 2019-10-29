@@ -12,7 +12,8 @@ description: Se agregan los script de Google Analytics a una aplicación ASP.NET
 
 En este tutorial mostramos como agregar los scripts de Google Analitycs a una aplicación de ASP.NET Core MVC. Estos scripts permiten acceder a información util sobre los visitantes a nuestro sitio web.
 
-Si solo lo usas para un sitio web lo mas sencillo es incluir el script dentro del la elemento `head` del layout utilizado.Pero si usas varios layout o tienes más de una aplicación toma sentido pensar en un tener un componente adicional que te permita reutilizarlo en tus aplicaciones o crear una plantilla personalizada que lo incluya.
+Si solo lo usas para un sitio web lo mas sencillo es incluir el script dentro del la elemento `head` del layout.
+Pero si usas varios layout o tienes más de una aplicación toma sentido pensar en un tener un componente adicional que te permita reutilizarlo en tus aplicaciones o crear una plantilla personalizada que lo incluya.
 
 # Configuración de Google Analitycs
 
@@ -21,7 +22,7 @@ Verificar la propiedad de tu dominio
 
 # Usando vistas parciales
 
-Usando inyección de dependincias en la vista
+Usando inyección de dependencias en la vista
 
 ```json
 {
@@ -50,4 +51,4 @@ Usando inyección de dependincias en la vista
 
 # Usando  Tag Helpers Components
 
-> **Anuncio** [diib](diib.com/benjamincamacho) es un servicio que se conecta a la API de google Analytics  y usa la Inteligencia Artificial para 
+> **Anuncio** [diib](https://diib.com/?ref=benjamincamacho) es un servicio que se conecta a la API de google Analytics  y usa la Inteligencia Artificial para generar un plan de crecimiento personalizado para tu sitio web.

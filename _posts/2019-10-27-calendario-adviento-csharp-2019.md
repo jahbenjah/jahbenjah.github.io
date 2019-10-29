@@ -31,24 +31,24 @@ El tema de los artículos es decisión de los autores unicamente se pide que sea
 | ------------- | ------------- | -------------   |----------------|---------|
 |   01/12/2019  |               |                 |                |         |
 |   02/12/2019  |               |                 |                |         |
-|   03/12/2019  |               |                 |                |         |
+|   03/12/2019  |[Luis Beltran](https://twitter.com/darkicebeam){:target="_blank" rel="noopener"}|                 |                |         |
 |   04/12/2019  |               |                 |                |         |
 |   05/12/2019  |               |                 |                |         |
 |   06/12/2019  |               |                 |                |         |
 |   07/12/2019  |               |                 |                |         |
 |   08/12/2019  |               |                 |                |         |
 |   09/12/2019  |               |                 |                |         |
-|   10/12/2019  |               |                 |                |         |
+|   10/12/2019  |[Israel Perez Saucedo](https://twitter.com/pesimx87){:target="_blank" rel="noopener"}|                 |                |         |
 |   11/12/2019  |               |                 |                |         |
 |   12/12/2019  |               |                 |                |         |
 |   13/12/2019  |               |                 |                |         |
-|   14/12/2019  |               |                 |                |         |
-|   15/12/2019  |               |                 |                |         |
-|   16/12/2019  |               |                 |                |         |
+|   14/12/2019  |[Luis Pujols](https://twitter.com/pujolsluis1)|                 |                |         |
+|   15/12/2019  |[apis3445](https://twitter.com/apis3445){:target="_blank" rel="noopener"}|                 |xunit con .net core|         |
+|   16/12/2019  |[Leomaris Reyes](https://twitter.com/LeomarisReyes11){:target="_blank" rel="noopener"}|                 |                |         |
 |   17/12/2019  |               |                 |                |         |
 |   18/12/2019  |               |                 |                |         |
 |   19/12/2019  |               |                 |                |         |
-|   20/12/2019  |               |                 |                |         |
+|   20/12/2019  |[Gustavo Barrientos](https://twitter.com/tavobarrientos){:target="_blank" rel="noopener"}|                 |Entity Framework Core y si se puede algo de Azure DevOps|         |
 |   21/12/2019  |               |                 |                |         |
 |   22/12/2019  |               |                 |                |         |
 |   23/12/2019  |               |                 |                |         |

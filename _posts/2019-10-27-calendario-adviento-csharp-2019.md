@@ -40,7 +40,7 @@ El tema de los artículos es decisión de los autores unicamente se pide que sea
 |   09/12/2019  |[Erick Marcia](https://twitter.com/EMarcia14){:target="_blank" rel="noopener"}|                 |                |         |
 |   10/12/2019  |[Israel Perez Saucedo](https://twitter.com/pesimx87){:target="_blank" rel="noopener"}|                 |                |         |
 |   11/12/2019  |[Luis Matos](https://twitter.com/luismatosluna){:target="_blank" rel="noopener"}|                 |                |         |
-|   12/12/2019  |               |                 |                |         |
+|   12/12/2019  |[Yhorby Matias](https://twitter.com/yhorbymatias){:target="_blank" rel="noopener"}                 |                |         |
 |   13/12/2019  |[Humberto Jaimes](https://twitter.com/HJaimesDev){:target="_blank" rel="noopener"}|                 |                |         |
 |   14/12/2019  |[Luis Pujols](https://twitter.com/pujolsluis1){:target="_blank" rel="noopener"}|                 |                |         |
 |   15/12/2019  |[apis3445](https://twitter.com/apis3445){:target="_blank" rel="noopener"}|                 |xunit con .net core|         |

@@ -7,6 +7,7 @@ image:
   path: /img/og-image.jpg
   height: 347
   width: 663
+last_modified_at: 2019-11-01 12:45:00 +0000
 ---
 
 El año pasado, entre el 16 y 25 de diciembre se llevo acabo [El primer calendario de adviento de C# en español]({% post_url 2018-11-16-Calendario-adviento-csharp %}). En el cual 14 autores voluntarios publicarón en su blog un articulo de un tema relacionado con C#.Esta propuesta fue inspirada en [The firts C# Advent Calendar](https://crosscuttingconcerns.com/The-First-C-Advent-Calendar){:target="_blank" rel="noopener"} y el [calendario de adviento de F# de Sergey Tihon](https://sergeytihon.com/2018/10/22/f-advent-calendar-in-english-2018/){:target="_blank" rel="noopener"}.
@@ -34,7 +35,7 @@ El tema de los artículos es decisión de los autores unicamente se pide que sea
 |   03/12/2019  |[Luis Beltran](https://twitter.com/darkicebeam){:target="_blank" rel="noopener"}|                 |                |         |
 |   04/12/2019  |               |                 |                |         |
 |   05/12/2019  |               |                 |                |         |
-|   06/12/2019  |               |                 |                |         |
+|   06/12/2019  |[Ricardo J. Torres](https://twitter.com/richard_towers_){:target="_blank" rel="noopener"}|                 |El poder de .NET y Angular|         |
 |   07/12/2019  |               |                 |                |         |
 |   08/12/2019  |[Charlin Agramonte](https://twitter.com/Chard003){:target="_blank" rel="noopener"}|                 |                |         |
 |   09/12/2019  |[Erick Marcia](https://twitter.com/EMarcia14){:target="_blank" rel="noopener"}|                 |                |         |
@@ -43,7 +44,7 @@ El tema de los artículos es decisión de los autores unicamente se pide que sea
 |   12/12/2019  |[Yhorby Matias](https://twitter.com/yhorbymatias){:target="_blank" rel="noopener"}                 |                |         |
 |   13/12/2019  |[Humberto Jaimes](https://twitter.com/HJaimesDev){:target="_blank" rel="noopener"}|                 |                |         |
 |   14/12/2019  |[Luis Pujols](https://twitter.com/pujolsluis1){:target="_blank" rel="noopener"}|                 |                |         |
-|   15/12/2019  |[apis3445](https://twitter.com/apis3445){:target="_blank" rel="noopener"}|                 |xunit con .net core|         |
+|   15/12/2019  |[apis3445](https://twitter.com/apis3445){:target="_blank" rel="noopener"}|                 |xunit con .NET Core|         |
 |   16/12/2019  |[Leomaris Reyes](https://twitter.com/LeomarisReyes11){:target="_blank" rel="noopener"}|                 |                |         |
 |   17/12/2019  |[Leslie Gordian](https://twitter.com/LeslieGordian17){:target="_blank" rel="noopener"}|                 |                |         |
 |   18/12/2019  |               |                 |                |         |

@@ -49,3 +49,46 @@ Una vez que ya tienes agregas las dependencias al contenedor de dependencias pod
 ServiceProvider serviceProvider = services.BuildServiceProvider();
 serviceProvider.GetService<HolaMundo>();
 ```
+
+# Inyección de dependencias en ASP.NET Core
+
+El contenedor de dependencias de ASP.NET Core se llena en el método `Configure` de la clase `Startup` usando los métodos antes mencionados. Cada que agregas un servicio al contenedor de dependencias este esta disponible para todos las clases de la aplicación solo es necesarios declararlos en en constructor de la clase.
+
+```cs
+public void ConfigureServices(IServiceCollection services)
+{
+}
+```
+
+# Inyección de dependencias en las vistas
+
+Un caso particular es el uso de la inyección de dependencias en las vistas ya que ellas requieren la directiva `@inject` para funcionar. Por ejemplo para agregar 
+
+```cshtml
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+<ul class="navbar-nav">
+@if (SignInManager.IsSignedIn(User))
+{
+    <li class="nav-item">
+        <form  class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+            <button  type="submit" class="nav-link btn btn-link text-dark">Logout</button>
+        </form>
+    </li>
+}
+else
+{
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login">Login</a>
+    </li>
+}
+</ul>
+```
+
+# Para llevar
+
+* El sistema de inyección de dependencias de ASP.NET Core puede ser remplazado por otro.
+
+* El sistema de inyección de dependencias de ASP.NET Core unicamente soporta la inyección por medio del constructor.

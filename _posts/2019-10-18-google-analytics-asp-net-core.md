@@ -10,7 +10,7 @@ image:
 description: Se agregan los script de Google Analytics a una aplicación ASP.NET Core MVC usando vistas parciales, Tag Helper y ViewComponents. Se lee la configuración del archivo appsettigs.json y se usa la inyección de dependencias en las vistas.
 ---
 
-En este tutorial mostramos como agregar los scripts de Google Analitycs a una aplicación de ASP.NET Core MVC. Estos scripts permiten acceder a información util sobre los visitantes a nuestro sitio web.
+En este tutorial mostramos como agregar los scripts de Google Analitycs a una aplicación de ASP.NET Core MVC. Estos scripts permiten acceder a información util sobre los visitantes a nuestro sitio web como son el número de vistas diarias,las ubicaciones, el navegador utilizado.
 
 Si solo lo usas para un sitio web lo mas sencillo es incluir el script dentro del la elemento `head` del layout. Pero si usas varios layout o tienes más de una aplicación en la que requieres métricas de uso tiene sentido pensar en un tener un componente adicional que te permita reutilizarlo en tus aplicaciones o crear una plantilla personalizada que lo incluya.
 
@@ -21,13 +21,15 @@ Verificar la propiedad de tu dominio
 
 # Usando vistas parciales
 
-Usando inyección de dependencias en la vista
+Primero agregamos el código de rastreo de Google Analitycs al archivo de configuración _appsettings.json_
 
 ```json
 {
   "GoogleAnalytics": "UA-130293099-1"
 }
 ```
+
+Usando inyección de dependencias en la vista inyectamos una propiedad del tipo `IConfiguration` para leer la clave _GoogleAnalytics_ del archivo de configuración.
 
 ```cs
 @inject Microsoft.Extensions.Configuration.IConfiguration configuration

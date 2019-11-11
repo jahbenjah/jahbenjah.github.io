@@ -58,7 +58,7 @@ El tema de los artículos es decisión de los autores unicamente se pide que sea
 
 ## Algunas ideas para postear
 
-* C# 8.0 y .NET Core 3.0
+* C# 8.0,.NET Core 3.0 ,NET 5
 * ASP.NET Core ,Xamarin, Entity Framework Core, IoT, ML.NET, AI, Blazor
 * .NET y el Open Source.
 * El futuro de .NET

@@ -3,7 +3,7 @@ layout: post
 title:  "Enviar un correo con C# y Gmail."
 comments: true
 categories: .net smtp SmptClient dotnet 
-last_modified_at: 2019-05-11 13:05:55 +0000
+last_modified_at: 2019-12-11 14:45:55 +0000
 ---
 
 En el desarrollo de software empresarial enviar correos electrónicos con documentos adjuntos o con un diseño personalizados es un requerimiento muy frecuente, en este tutorial te mostramos enviar correos con C#, .NET Core 2.0 y Visual Studio Code.
@@ -224,6 +224,123 @@ Abrir la terminal en la carpeta _EmailServiceCliente_ y ejecutar
 dotnet run
 ```
 
-# Para llevar
+# Enviar correos en ASP.NET Core
+
+En el caso de que requieras enviar correos en un aplicacion de ASP.NET Core es necesario usar la [inyección de dependencias]({% post_url 2019-11-05-inyeccion-de-dependencias-asp-net-core %}) que viene integrada en el mismo framework y usar el archivo  [appsettins.json]({% post_url 2019-04-07-aspnetcore appsettings %}) para manejar la configuración. Aquí muestro una forma de hacerlo en un proyecto web haciendo uso del [patrón opciones](https://docs.microsoft.com/aspnet/core/fundamentals/configuration/options?view=aspnetcore-3.0)
+
+1. Agregar la configuración del correo en el archivo _appsettings.json_
+
+```json
+"EmailSenderOptions": {
+    "Port": "587",
+    "Password": "contraseñagmail",
+    "EnableSsl": "true",
+    "Email": "tucuenta@gmail.com",
+    "Host": "smtp.gmail.com"
+  }
+```
+
+2. Posteriormente creamos una clase en la carpeta _Services_ llamada `EmailSenderOptions`. Esta clase nos ayudara a leer los datos de configuración del archivo _json_
+
+```cs
+namespace App.Services
+{
+    public class EmailSenderOptions
+    {
+        public int Port { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
+        public bool EnableSsl { get; set; }
+        public string Host { get; set; }
+    }
+}
+```
+
+3. Posteriormente creamos una interfaz para el servicio de envío de correos y una implementación de la misma. En este caso la interfaz esta en una carpeta llamada interfaces
+
+```cs
+namespace App.Interfaces
+{
+    public interface IEmailSender
+    {
+        Task SendEmailAsync(string email, string subject, string message);
+    }
+}
+```
+
+La clase que implementa esta interfaz se encuentra en la carpeta _Services_. Nota el construcctor de la clase
+
+```cs
+using System.Net;
+using System.Net.Mail;
+using System.Threading.Tasks;
+using Microsoft.Extensions.Options;
+using App.Interfaces;
+
+namespace App.Services
+{
+    public class EmailSender : IEmailSender
+    {
+        private SmtpClient Cliente { get; }
+        private EmailSenderOptions Options { get; }
+
+        public EmailSender(IOptions<EmailSenderOptions> options)
+        {
+            Options = options.Value;
+            Cliente = new SmtpClient()
+            {
+                Host = Options.Host,
+                Port = Options.Port,
+                DeliveryMethod = SmtpDeliveryMethod.Network,
+                UseDefaultCredentials = false,
+                Credentials = new NetworkCredential(Options.Email, Options.Password),
+                EnableSsl = Options.EnableSsl,
+            };
+        }
+
+        public Task SendEmailAsync(string email, string subject, string message)
+        {
+            var correo = new MailMessage(from:Options.Email,to:email,subject: subject, body:message);
+            correo.IsBodyHtml = true;
+            return Cliente.SendMailAsync(correo);
+        }
+    }
+}
+```
+
+4. En la clase `Startup`hay que agregar y configura este servicio al contendedor de dependencias para que este disponible en nuestra aplicación web.
+
+```cs
+services.AddTransient<IEmailSender, EmailSender>();
+services.Configure<EmailSenderOptions>(Configuration.GetSection("EmailSenderOptions"));
+```
+
+5. Con lo anterior el servicio para enviar correos ya esta disponible solo debemos especificar en el constructor la dependencia que necesitamos. Por ejemplo en un controlador:
+
+```cs
+ public class HomeController : Controller
+{
+    private readonly IEmailSender _emailSender;
+    public HomeController(IEmailSender emailSender,)
+    {
+        _emailSender = emailSender;
+    }
+}
+```
+
+6. Finalmente para enviar un correo en un método de acción de forma asíncrona.
+
+```cs
+public async Task<IActionResult> Index()
+{
+    await _emailSender
+        .SendEmailAsync("usuario@email.com", "Asunto","Mensaje")
+        .ConfigureAwait(false);
+
+    return View();
+}
+```
+
+# Conclusión
 
 Puedes encontrar el código fuente el el repositorio de [Github](https://github.com/jahbenjah/CodigoBlog).

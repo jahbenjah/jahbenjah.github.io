@@ -7,7 +7,7 @@ image:
   path: /img/og-image.jpg
   height: 347
   width: 663
-last_modified_at: 2019-11-01 12:45:00 +0000
+last_modified_at: 2019-12-11 09:45:00 +0000
 ---
 
 El año pasado, entre el 16 y 25 de diciembre se llevo acabo [El primer calendario de adviento de C# en español]({% post_url 2018-11-16-Calendario-adviento-csharp %}). En el cual 14 autores voluntarios publicarón en su blog un articulo de un tema relacionado con C#.Esta propuesta fue inspirada en [The firts C# Advent Calendar](https://crosscuttingconcerns.com/The-First-C-Advent-Calendar){:target="_blank" rel="noopener"} y el [calendario de adviento de F# de Sergey Tihon](https://sergeytihon.com/2018/10/22/f-advent-calendar-in-english-2018/){:target="_blank" rel="noopener"}.
@@ -47,11 +47,11 @@ El tema de los artículos es decisión de los autores unicamente se pide que sea
 |   15/12/2019  |[apis3445](https://twitter.com/apis3445){:target="_blank" rel="noopener"}|                 |xunit con .NET Core|         |
 |   16/12/2019  |[Leomaris Reyes](https://twitter.com/LeomarisReyes11){:target="_blank" rel="noopener"}|                 |                |         |
 |   17/12/2019  |[Leslie Gordian](https://twitter.com/LeslieGordian17){:target="_blank" rel="noopener"}|                 |                |         |
-|   18/12/2019  |               |                 |                |         |
+|   18/12/2019  |[Jorge Serrano](https://twitter.com/J0rgeSerran0){:target="_blank" rel="noopener"}|                 |                |         |
 |   19/12/2019  |[Eduard Tomàs](https://twitter.com/eiximenis){:target="_blank" rel="noopener"}|                 |                |         |
 |   20/12/2019  |[Gustavo Barrientos](https://twitter.com/tavobarrientos){:target="_blank" rel="noopener"}|                 |Entity Framework Core y si se puede algo de Azure DevOps|         |
-|   21/12/2019  |               |                 |                |         |
-|   22/12/2019  |               |                 |                |         |
+|   21/12/2019  |[Jorge Serrano](https://twitter.com/J0rgeSerran0){:target="_blank" rel="noopener"}|                 |                |         |
+|   22/12/2019  |[Robert Lluberes](https://twitter.com/robertlluberes){:target="_blank" rel="noopener"}|                 |Como registrar cada paso de tu aplicación con Log4Net|         |
 |   23/12/2019  |[Manuel Zapata](https://twitter.com/ManuelZapata){:target="_blank" rel="noopener"}|                 |                |         |
 |   24/12/2019  |[Fredy Guibert](https://twitter.com/fredyfx){:target="_blank" rel="noopener"}|                 |                |         |
 |   25/12/2019  |[Juan K Ruiz](https://twitter.com/JuanKRuiz){:target="_blank" rel="noopener"}|                 |                |         |

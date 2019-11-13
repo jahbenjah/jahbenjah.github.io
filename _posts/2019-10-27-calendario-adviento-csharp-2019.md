@@ -31,7 +31,7 @@ El tema de los artículos es decisión de los autores unicamente se pide que sea
 | Fecha         | Solicitado por| Solicitador por |   Blog 1       |  Blog 2 |
 | ------------- | ------------- | -------------   |----------------|---------|
 |   01/12/2019  |[Juan K Ruiz](https://twitter.com/JuanKRuiz){:target="_blank" rel="noopener"}|                 |                |         |
-|   02/12/2019  |               |                 |                |         |
+|   02/12/2019  |[Miguel Muñoz Serafín](https://twitter.com/msmdotnet){:target="_blank" rel="noopener"}|                 |                |         |
 |   03/12/2019  |[Luis Beltran](https://twitter.com/darkicebeam){:target="_blank" rel="noopener"}|                 |                |         |
 |   04/12/2019  |               |                 |                |         |
 |   05/12/2019  |               |                 |                |         |

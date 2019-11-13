@@ -42,7 +42,7 @@ El tema de los artículos es decisión de los autores unicamente se pide que sea
 |   10/12/2019  |[Israel Perez Saucedo](https://twitter.com/pesimx87){:target="_blank" rel="noopener"}|                 |                |         |
 |   11/12/2019  |[Luis Matos](https://twitter.com/luismatosluna){:target="_blank" rel="noopener"}|                 |                |         |
 |   12/12/2019  |[Yhorby Matias](https://twitter.com/yhorbymatias){:target="_blank" rel="noopener"}                 |                |         |
-|   13/12/2019  |[Humberto Jaimes](https://twitter.com/HJaimesDev){:target="_blank" rel="noopener"}|                 |                |         |
+|   13/12/2019  |[Humberto Jaimes](https://twitter.com/HJaimesDev){:target="_blank" rel="noopener"}|[Antonio Feregrino](https://twitter.com/io_exception){:target="_blank" rel="noopener"}|                |         |
 |   14/12/2019  |[Luis Pujols](https://twitter.com/pujolsluis1){:target="_blank" rel="noopener"}|                 |                |         |
 |   15/12/2019  |[apis3445](https://twitter.com/apis3445){:target="_blank" rel="noopener"}|                 |xunit con .NET Core|         |
 |   16/12/2019  |[Leomaris Reyes](https://twitter.com/LeomarisReyes11){:target="_blank" rel="noopener"}|                 |                |         |
@@ -51,7 +51,7 @@ El tema de los artículos es decisión de los autores unicamente se pide que sea
 |   19/12/2019  |[Eduard Tomàs](https://twitter.com/eiximenis){:target="_blank" rel="noopener"}|                 |                |         |
 |   20/12/2019  |[Gustavo Barrientos](https://twitter.com/tavobarrientos){:target="_blank" rel="noopener"}|                 |Entity Framework Core y si se puede algo de Azure DevOps|         |
 |   21/12/2019  |[Jorge Serrano](https://twitter.com/J0rgeSerran0){:target="_blank" rel="noopener"}|                 |                |         |
-|   22/12/2019  |[Robert Lluberes](https://twitter.com/robertlluberes){:target="_blank" rel="noopener"}|                 |Como registrar cada paso de tu aplicación con Log4Net|         |
+|   22/12/2019  |[Robert Lluberes](https://twitter.com/robertlluberes){:target="_blank" rel="noopener"}|[Alejandro Ruiz](https://twitter.com/alejandroruizva){:target="_blank" rel="noopener"}|Como registrar cada paso de tu aplicación con Log4Net|         |
 |   23/12/2019  |[Manuel Zapata](https://twitter.com/ManuelZapata){:target="_blank" rel="noopener"}|                 |                |         |
 |   24/12/2019  |[Fredy Guibert](https://twitter.com/fredyfx){:target="_blank" rel="noopener"}|                 |                |         |
 |   25/12/2019  |[Juan K Ruiz](https://twitter.com/JuanKRuiz){:target="_blank" rel="noopener"}|                 |                |         |

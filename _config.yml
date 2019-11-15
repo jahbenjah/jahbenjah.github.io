@@ -43,6 +43,7 @@ defaults:
       path: ""
     values:
       lang: "es"
+      lazy: true
       image:
         path: /img/og-image.jpg
         height: 347

@@ -3,15 +3,15 @@ layout: post
 title:  "Cuatro formas de usar la palabra clave using de C#"
 comments: true
 categories: C# dotnet using 
-description: Ejemplos prácticos de como usar using en C# using para importar espacios de nombres y miembros estáticos,crear un alias y liberar recursos no administrados. 
-last_modified_at: 2019-05-05 16:05:26 +0000
+description: ▷ Como usar using en C# using para importar espacios de nombres y miembros estáticos, alias, liberar recursos no administrados y declaraciones using. 
+last_modified_at: 2019-11-20 11:33:26 +0000
 
 ---
 Cada lenguaje de programación cuenta con un conjunto de palabras claves que son utilizadas por el compilador. En este articulo te mostramos 4 formas de usar la palabra reservada **using** de C# con el clásico hola mundo.
 
 <img data-src="/img/csharp.webp" class="lazyload"  alt="Logo del lenguaje de programación C#">
 
-Puedes consultar la lista completa de:[Palabras clave de C#](https://docs.microsoft.com/es-mx/dotnet/csharp/language-reference/keywords/) en la documentación.
+Puedes consultar la lista completa de:[Palabras clave de C#](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/) en la documentación.
 
 Un programa **Hola Mundo**sin la instrucción luce de la siguiente manera:
 
@@ -28,11 +28,35 @@ namespace Using
 }
 ```
 
-Básicamente se observa que es necesario escribir el nombre calificado (incluyendo el espacio de nombre) del los tipos que utiliza el programa en este caso `System.Console.WriteLine`. Esto no es un problema para programas simples y sin sentido como este pero en un programa más complejo en el que se utilizan varias clases esto se vuelve en martirio. Adicionalmente hay un rumor de que _los programadores somos flojos por naturaleza_ por lo que no nos gusta escribir tanto, para ello esta el primer caso de uso:
+Básicamente se observa que es necesario escribir el nombre calificado (incluyendo el espacio de nombre) del los tipos que utiliza el programa en este caso `System.Console.WriteLine`. Esto no es un problema para programas simples y sin sentido como este pero en un programa más complejo en el que se utilizan varias clases esto se vuelve en martirio ya que una clase real puede tener más de 10 instrucciones `using`. Por ejemplo un controlador de una aplicación que cre en ASP.NET Core principal tiene 18
+
+```cs
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
+using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Localization;
+using MiAplicacion.Interfaces;
+using MiAplicacion.Services;
+using MiAplicacion.Data;
+using MiAplicacion.Identity;
+using MiAplicacion.Interfaces;
+using MiAplicacion.Models;
+```
+
+ Adicionalmente hay un rumor de que _los programadores somos flojos por naturaleza_ por lo que no nos gusta escribir tanto, para ello esta el primer caso de uso:
 
 # **using** para importar espacios de nombres
 
-Con la instrucción `using System` a principio del programa es posible reducir el enunciado `System.Console.WriteLine("Hola Mundo : sin using");` por `Console.WriteLine("using  espacios de nombres");`
+Con la instrucción `using System` a principio del programa es posible reducir el enunciado `System.Console.WriteLine("Hola Mundo : sin using");` por `Console.WriteLine("using espacios de nombres");`
 
 ```cs
 using System;
@@ -129,11 +153,39 @@ La especificación de C# sobre el [using statement](https://docs.microsoft.com/d
 
 > Para ver si una clase o su clase padre implementa implementa la interfaz `IDisposable` puedes usar la característica del _Visual Studio_  **Ir a definición F12**.
 
-# Para llevar
+# Declaraciones using C# 8.0
+
+Como punto adicional a este articulo esta la característica conocida como _declaraciones using_ recién liberada con C# 8.0 el pasado 23-09-2019 durante la [.NET Conf 2019]({% post_url 2019-09-23-net-conf-2019 %}).
+
+Básicamente permite declarar una variable precedida de la palabra reservada `using`. Con esto se establece que la recurso declarada debe ser liberado al final del alcance donde se declaro. Eso se puede ver como una simplificación de caso anterior por ejemplo para declarar una conexion tenemos las siguientes dos opciones.
+
+```cs
+static void Main(string[] args)
+{
+    using (SqlConnection connection = new SqlConnection()))
+    {
+      // Realizar operaciones con la conexión
+    } // aquí se libera la conexion
+}
+```
+
+Con las declaraciones using de C# 8.0 el codigo se veria de la siguiente manera.
+
+```cs
+static void Main(string[] args)
+{
+    using SqlConnection connection = new SqlConnection());
+    // Realizar operaciones con la conexión  
+}   // aquí se libera la conexion
+```
+
+> **Nota** Puedes ver que version de C# usas en tu proyecto de Visual Studio en las propiedades del proyecto dentro de la pestaña _Build>Output>Advanced_. C# 8.0 solo esta habilitado por default para proyectos _NET Core 3.x_ y _.NET Standard 2.1_. En todos los demás casos tienes que habilitarlo como se describe aquí: [Control de versiones del lenguaje C#](https://docs.microsoft.com/dotnet/csharp/language-reference/configure-language-version).
+
+# Conclusión
 
 * El lenguaje de programación en el que programamos es una elección. Por lo que debemos familiarizarnos con las características y los llamados [**Programming idioms**](https://en.wikipedia.org/wiki/Programming_idiom).
 
-* Ya lo escribió Jon Skeet si elegiste C#: 
+* Ya lo escribió Jon Skeet si elegiste C#:
 
 > La especificación de C# debe ser tu nueva mejor amiga
 

@@ -7,11 +7,11 @@ image:
   path: /img/og-connectionstring.jpg
   height: 358
   width: 683
-last_modified_at: 2019-10-04 21:24:25 +0000
-description: Creación de cadena de conexión SQL Server, MySQL , Oracle , PostgreSQL, Firebird y SQLite. 
+last_modified_at: 2019-11-13 10:24:25 +0000
+description: Creación y ejemplos de cadena de conexión SQL Server, MySQL , Oracle , PostgreSQL, Firebird y SQLite usando la clase ConnectionStringBuilder de .NET usando C# . 
 ---
 
-En este tutorial te mostramos como crear, manipular y validar la cadena de conexión para SQL Server, MYSQL, Oracle, Firebird, PostgreSQL y  Sqlite usando C# y un proyecto de consola de .NET Core.
+En este tutorial te mostramos como crear, manipular y validar la cadena de conexión SQL Server, MYSQL, Oracle, Firebird, PostgreSQL y Sqlite usando C# y .NET Core.
 
 <img data-src="/img/connectionstring.webp" class="lazyload"  alt="Script Tag Helper">
 
@@ -19,15 +19,20 @@ Para ello utilizamos la clase `ConnectionStringBuilder` que implementan los prov
 
 Es importante mencionar que para cada base de datos hay una gran cantidad de parámetros que se pueden agregar a una cadena de conexión y estos cambian de dependiendo con cada proveedor. Muchos de ellos tienes un nombre que permite aclarar su función pero de otros es necesario que veas la documentación del proveedor. En Visual Studio o Visual Studio Code puedes ver los parámetros que contiene cada base de datos usando Intellisense o Presionando F12 para ir a la definición del tipo.
 
-## Cadena de conexión SQL Server
+# Cadena de conexión SQL Server C#
 
-Para el caso de SQL Server hay varias variantes de la cadena de conexion y depende de si usas la autenticación integrada de Windows o usa un usuario de SQL. Generalmente es preferible usar un usuario de SQL para aplicar el [principio de menor autoridad](https://es.wikipedia.org/wiki/Principio_de_m%C3%ADnimo_privilegio).
+Para el caso de SQL Server hay varias variantes de la cadena de conexion y depende de si usas la autenticación integrada de Windows o un usuario de SQL. Generalmente es preferible usar un usuario y contraseña de SQL Server para aplicar el [principio de menor autoridad](https://es.wikipedia.org/wiki/Principio_de_m%C3%ADnimo_privilegio).
 
-1. Ejemplo de cadena de conexión para SQL Server.
+## Ejemplo de cadena de conexión SQL Server con usuario y contraseña
+
+Para este caso estamos especificando la dirección IP del servidor donde se encuentra la estancia de SQL Server pero tambien pudimos utilizar un punto `.` o localhost en caso de que el servidor se encuentre en nuestra maquina de desarollo o el nombre de la instancia de SQL Server en caso de que esta sea dirente a la defualt por ejemplo `SqlServer\NombreInstancia`.
 
 ```clean
 Data Source=192.168.0.1;Initial Catalog=master;User ID=sa;Password=TuContraseña;Application Name=MyApp
 ```
+
+> **Para obtener el nombre de la instancia de SQL Server** puedes ejecutar la consulta `SELECT @@SERVERNAME + '\' + @@SERVICENAME AS NombreSQLServerInstancia;`
+
 
 ```clean
 Server=(localdb)\mssqllocaldb;Database=Blogging;Trusted_Connection=True;Application Name=MyApp
@@ -37,7 +42,7 @@ Es importante notar la presencia del parámetro **Application Name** este campo 
 
 2. Paquete de Nuget es : [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/) y el espacio de nombres `System.Data.SqlClient`.
 
-3. Para poder crear esta cadena de conexión se uso el código
+3. Para poder generar la cadena cadena de conexión de SQL Server usando C# puedes ejecutar el siguiente código
 
 ```csharp
 SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
@@ -49,7 +54,9 @@ builder.ApplicationName = "MyApp";
 Console.WriteLine(builder.ConnectionString);
 ```
 
-4. Una forma de validar que una cadena de conexión es valida es abriendo la comunicación con con la base de datos. Aquí solo mostramos la forma de hacerlo con SQL Server pero es muy similar para los de mas proveedores de ADO.NET.
+## Validar una cadena de conexión SQL Server con C#
+
+Una forma de validar que una cadena de conexión es abriendo la comunicación con con la base de datos. Aquí solo mostramos la forma de hacerlo con SQL Server pero es muy similar para los de mas proveedores de ADO.NET.
 
 ```csharp
 using (SqlConnection connection = new SqlConnection("Data Source=192.168.0.1;Initial Catalog=master;User ID=sa;Password=TuContraseña;Application Name=MyApp"))
@@ -66,7 +73,9 @@ using (SqlConnection connection = new SqlConnection("Data Source=192.168.0.1;Ini
 }
 ```
 
-5. Si necesitas verificar la version de SQL Server puedes ejecutar el siguiente código de C#.
+# verificar la versión de SQL Server
+
+ Para verificar la version puedes ejecutar el siguiente código de C# que lee la variable global `@@version` de SQL Server.
 
 ```cs
 using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
@@ -101,7 +110,7 @@ Microsoft SQL Server 2016 (SP2) (KB4052908) - 13.0.5026.0 (X64)
         Enterprise Evaluation Edition (64-bit) on Windows 10 Pro N 10.0 <X64> (Build 18362: ) (Hypervisor)
 ```
 
-## Cadena de conexión MySQL
+# Cadena de conexión MySQL
 
 1. Ejemplo de cadena de conexión para MySQL
 
@@ -125,7 +134,7 @@ MySqlConnectionStringBuilder builder = new MySqlConnectionStringBuilder()
 Console.WriteLine(builder.ConnectionString);
 ```
 
-## Cadena de conexión Oracle
+# Cadena de conexión Oracle
 
 1. Ejemplo de cadena de conexión para Oracle
 
@@ -188,7 +197,7 @@ TNS for Linux: Version 11.2.0.2.0 - Production
 NLSRTL Version 11.2.0.2.0 - Production
 ```
 
-## Cadena de conexión Firebird
+# Cadena de conexión Firebird
 
 1. Ejemplo de cadena de conexión para [Firebird](http://www.firebirdsql.org/)
 
@@ -210,7 +219,7 @@ builder.Charset = "utf8";
 Console.WriteLine(builder.ConnectionString);
 ```
 
-## Cadena de conexión SQLite
+# Cadena de conexión SQLite
 
 1. Ejemplo de cadena de conexión para SQLite
 
@@ -228,7 +237,7 @@ builder.DataSource = "blogging.db";
 Console.WriteLine(builder.ConnectionString);
 ```
 
-## Cadena de conexión PostgreSQL
+# Cadena de conexión PostgreSQL
 
 1. Ejemplo de cadena de conexión para PostgreSQl
 

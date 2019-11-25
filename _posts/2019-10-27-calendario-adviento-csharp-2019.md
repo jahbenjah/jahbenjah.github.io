@@ -35,7 +35,7 @@ El tema de los artículos es decisión de los autores unicamente se pide que sea
 |   01/12/2019  |[Juan K Ruiz](https://twitter.com/JuanKRuiz){:target="_blank" rel="noopener"}|                 |                |         |
 |   02/12/2019  |[Miguel Muñoz Serafín](https://twitter.com/msmdotnet){:target="_blank" rel="noopener"}|                 |                |         |
 |   03/12/2019  |[Luis Beltran](https://twitter.com/darkicebeam){:target="_blank" rel="noopener"}|                 |                |         |
-|   04/12/2019  |               |                 |                |         |
+|   04/12/2019  | [Benjamin Camacho]              |                 |                |         |
 |   05/12/2019  |               |                 |                |         |
 |   06/12/2019  |[Ricardo J. Torres](https://twitter.com/richard_towers_){:target="_blank" rel="noopener"}|                 |El poder de .NET y Angular|         |
 |   07/12/2019  |               |                 |                |         |
@@ -47,7 +47,7 @@ El tema de los artículos es decisión de los autores unicamente se pide que sea
 |   13/12/2019  |[Humberto Jaimes](https://twitter.com/HJaimesDev){:target="_blank" rel="noopener"}|[Antonio Feregrino](https://twitter.com/io_exception){:target="_blank" rel="noopener"}|                |         |
 |   14/12/2019  |[Luis Pujols](https://twitter.com/pujolsluis1){:target="_blank" rel="noopener"}|                 |                |         |
 |   15/12/2019  |[apis3445](https://twitter.com/apis3445){:target="_blank" rel="noopener"}|                 |xunit con .NET Core|         |
-|   16/12/2019  |[Leomaris Reyes](https://twitter.com/LeomarisReyes11){:target="_blank" rel="noopener"}|                 |                |         |
+|   16/12/2019  |[Leomaris Reyes](https://twitter.com/LeomarisReyes11){:target="_blank" rel="noopener"}|[Leonardo Romero](https://twitter.com/micnick){:target="_blank" rel="noopener"}|                |         |
 |   17/12/2019  |[Leslie Gordian](https://twitter.com/LeslieGordian17){:target="_blank" rel="noopener"}|[José M. Aguilar](https://twitter.com/jmaguilar){:target="_blank" rel="noopener"}|                |Streaming bidireccional con GRPC en ASP.NET Core|
 |   18/12/2019  |[Jorge Serrano](https://twitter.com/J0rgeSerran0){:target="_blank" rel="noopener"}|                 |                |         |
 |   19/12/2019  |[Eduard Tomàs](https://twitter.com/eiximenis){:target="_blank" rel="noopener"}|                 |                |         |

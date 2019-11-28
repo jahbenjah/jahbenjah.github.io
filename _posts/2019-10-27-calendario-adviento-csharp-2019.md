@@ -57,8 +57,8 @@ El tema de los artículos es decisión de los autores unicamente se pide que sea
 |   23/12/2019  |[Manuel Zapata](https://twitter.com/ManuelZapata){:target="_blank" rel="noopener"}|                 |                |         |
 |   24/12/2019  |[Fredy Guibert](https://twitter.com/fredyfx){:target="_blank" rel="noopener"}|                 |                |         |
 |   25/12/2019  |[Juan K Ruiz](https://twitter.com/JuanKRuiz){:target="_blank" rel="noopener"}|                 |                |         |
-|   26/12/2019  |[Saturnino Pimentel](https://twitter.com/SaturPimentel){:target="_blank" rel="noopener"}|
-                 |                |         |
+|   26/12/2019  |[Saturnino Pimentel](https://twitter.com/SaturPimentel){:target="_blank" rel="noopener"}|                 |                |         |
+
 ## Algunas ideas para postear
 
 * C# 8.0,.NET Core 3.0 ,NET 5

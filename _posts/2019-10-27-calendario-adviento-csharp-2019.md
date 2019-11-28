@@ -35,8 +35,8 @@ El tema de los artículos es decisión de los autores unicamente se pide que sea
 |   01/12/2019  |[Juan K Ruiz](https://twitter.com/JuanKRuiz){:target="_blank" rel="noopener"}|                 |                |         |
 |   02/12/2019  |[Miguel Muñoz Serafín](https://twitter.com/msmdotnet){:target="_blank" rel="noopener"}|                 |                |         |
 |   03/12/2019  |[Luis Beltran](https://twitter.com/darkicebeam){:target="_blank" rel="noopener"}|                 |                |         |
-|   04/12/2019  | [Benjamin Camacho]              |                 |                |         |
-|   05/12/2019  |               |                 |                |         |
+|   04/12/2019  | [Benjamin Camacho](https://twitter.com/jbenjamincc){:target="_blank" rel="noopener"}|                 |                |         |
+|   05/12/2019  |[DrUalcman](https://twitter.com/aprenDprogramar){:target="_blank" rel="noopener"}|                 |                |         |
 |   06/12/2019  |[Ricardo J. Torres](https://twitter.com/richard_towers_){:target="_blank" rel="noopener"}|                 |El poder de .NET y Angular|         |
 |   07/12/2019  |               |                 |                |         |
 |   08/12/2019  |[Charlin Agramonte](https://twitter.com/Chard003){:target="_blank" rel="noopener"}|                 |                |         |
@@ -57,7 +57,8 @@ El tema de los artículos es decisión de los autores unicamente se pide que sea
 |   23/12/2019  |[Manuel Zapata](https://twitter.com/ManuelZapata){:target="_blank" rel="noopener"}|                 |                |         |
 |   24/12/2019  |[Fredy Guibert](https://twitter.com/fredyfx){:target="_blank" rel="noopener"}|                 |                |         |
 |   25/12/2019  |[Juan K Ruiz](https://twitter.com/JuanKRuiz){:target="_blank" rel="noopener"}|                 |                |         |
-
+|   26/12/2019  |[Saturnino Pimentel](https://twitter.com/SaturPimentel){:target="_blank" rel="noopener"}|
+                 |                |         |
 ## Algunas ideas para postear
 
 * C# 8.0,.NET Core 3.0 ,NET 5

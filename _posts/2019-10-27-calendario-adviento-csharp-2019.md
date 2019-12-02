@@ -32,8 +32,8 @@ El tema de los artículos es decisión de los autores unicamente se pide que sea
 
 | Fecha         | Solicitado por| Solicitador por |   Blog 1       |  Blog 2 |
 | ------------- | ------------- | -------------   |----------------|---------|
-|   01/12/2019  |[Juan K Ruiz](https://twitter.com/JuanKRuiz){:target="_blank" rel="noopener"}|[Miguel Muñoz Serafín](https://twitter.com/msmdotnet){:target="_blank" rel="noopener"}|                |[Control de versiones del lenguaje C# 8](https://www.youtube.com/watch?reload=9&v=iaTHd2RW7MQ)|
-|   02/12/2019  |[Miguel Muñoz Serafín](https://twitter.com/msmdotnet){:target="_blank" rel="noopener"}|                 |                |         |
+|   01/12/2019  |[Juan K Ruiz](https://twitter.com/JuanKRuiz){:target="_blank" rel="noopener"}|[Miguel Muñoz Serafín](https://twitter.com/msmdotnet){:target="_blank" rel="noopener"}|[C# - la palabra clave volatile](https://dev.to/juankruiz/c-la-palabra-clave-volatile-2ib4)|[Control de versiones del lenguaje C# 8](https://www.youtube.com/watch?reload=9&v=iaTHd2RW7MQ)|
+|   02/12/2019  |[Miguel Muñoz Serafín](https://twitter.com/msmdotnet){:target="_blank" rel="noopener"}||[Miembros de Interface predeterminados](https://www.youtube.com/watch?v=INAdnkM3MP8)| |
 |   03/12/2019  |[Luis Beltran](https://twitter.com/darkicebeam){:target="_blank" rel="noopener"}|                 |Construyendo un Sistema de Recomendaciones con C# y ML .NET|         |
 |   04/12/2019  |[Benjamin Camacho](https://twitter.com/jbenjamincc){:target="_blank" rel="noopener"}|                 |                |         |
 |   05/12/2019  |[DrUalcman](https://twitter.com/aprenDprogramar){:target="_blank" rel="noopener"}|                 |                |         |

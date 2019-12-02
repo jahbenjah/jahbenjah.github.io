@@ -32,7 +32,7 @@ El tema de los artículos es decisión de los autores unicamente se pide que sea
 
 | Fecha         | Solicitado por| Solicitador por |   Blog 1       |  Blog 2 |
 | ------------- | ------------- | -------------   |----------------|---------|
-|   01/12/2019  |[Juan K Ruiz](https://twitter.com/JuanKRuiz){:target="_blank" rel="noopener"}|                 |                |         |
+|   01/12/2019  |[Juan K Ruiz](https://twitter.com/JuanKRuiz){:target="_blank" rel="noopener"}|[Miguel Muñoz Serafín](https://twitter.com/msmdotnet){:target="_blank" rel="noopener"}|                |[Control de versiones del lenguaje C# 8](https://www.youtube.com/watch?reload=9&v=iaTHd2RW7MQ)|
 |   02/12/2019  |[Miguel Muñoz Serafín](https://twitter.com/msmdotnet){:target="_blank" rel="noopener"}|                 |                |         |
 |   03/12/2019  |[Luis Beltran](https://twitter.com/darkicebeam){:target="_blank" rel="noopener"}|                 |                |         |
 |   04/12/2019  | [Benjamin Camacho](https://twitter.com/jbenjamincc){:target="_blank" rel="noopener"}|                 |                |         |
@@ -52,7 +52,7 @@ El tema de los artículos es decisión de los autores unicamente se pide que sea
 |   18/12/2019  |[Jorge Serrano](https://twitter.com/J0rgeSerran0){:target="_blank" rel="noopener"}|                 |                |         |
 |   19/12/2019  |[Eduard Tomàs](https://twitter.com/eiximenis){:target="_blank" rel="noopener"}|                 |                |         |
 |   20/12/2019  |[Gustavo Barrientos](https://twitter.com/tavobarrientos){:target="_blank" rel="noopener"}|                 |Entity Framework Core y si se puede algo de Azure DevOps|         |
-|   21/12/2019  |[Jorge Serrano](https://twitter.com/J0rgeSerran0){:target="_blank" rel="noopener"}|                 |                |         |
+|   21/12/2019  |[Jorge Serrano](https://twitter.com/J0rgeSerran0){:target="_blank" rel="noopener"}|[Leonardo Vargas](https://twitter.com/lvbernal)|                |         |
 |   22/12/2019  |[Robert Lluberes](https://twitter.com/robertlluberes){:target="_blank" rel="noopener"}|[Alejandro Ruiz](https://twitter.com/alejandroruizva){:target="_blank" rel="noopener"}|Como registrar cada paso de tu aplicación con Log4Net|         |
 |   23/12/2019  |[Manuel Zapata](https://twitter.com/ManuelZapata){:target="_blank" rel="noopener"}|                 |                |         |
 |   24/12/2019  |[Fredy Guibert](https://twitter.com/fredyfx){:target="_blank" rel="noopener"}|                 |                |         |

@@ -34,7 +34,7 @@ El tema de los artículos es decisión de los autores unicamente se pide que sea
 | ------------- | ------------- | -------------   |----------------|---------|
 |   01/12/2019  |[Juan K Ruiz](https://twitter.com/JuanKRuiz){:target="_blank" rel="noopener"}|[Miguel Muñoz Serafín](https://twitter.com/msmdotnet){:target="_blank" rel="noopener"}|                |[Control de versiones del lenguaje C# 8](https://www.youtube.com/watch?reload=9&v=iaTHd2RW7MQ)|
 |   02/12/2019  |[Miguel Muñoz Serafín](https://twitter.com/msmdotnet){:target="_blank" rel="noopener"}|                 |                |         |
-|   03/12/2019  |[Luis Beltran](https://twitter.com/darkicebeam){:target="_blank" rel="noopener"}|                 |Construyendo un Sistema de Recomendaciones con C# y ML .NET|         |
+|   03/12/2019  |[Luis Beltran](https://twitter.com/darkicebeam){:target="_blank" rel="noopener"}|[Miguel Muñoz Serafín](https://twitter.com/msmdotnet){:target="_blank" rel="noopener"}|[Construyendo un Sistema de Recomendaciones con C# y ML .NET](https://www.luisbeltran.mx/2019/12/03/construyendo-un-sistema-de-recomendaciones-con-c-y-ml-net/)|[Miembros de Interface predeterminados - 2a Parte](https://www.youtube.com/watch?v=3t5yBzpdXn8)|
 |   04/12/2019  |[Benjamin Camacho](https://twitter.com/jbenjamincc){:target="_blank" rel="noopener"}|                 |                |         |
 |   05/12/2019  |[DrUalcman](https://twitter.com/aprenDprogramar){:target="_blank" rel="noopener"}|                 |                |         |
 |   06/12/2019  |[Ricardo J. Torres](https://twitter.com/richard_towers_){:target="_blank" rel="noopener"}|                 |El poder de .NET y Angular|         |

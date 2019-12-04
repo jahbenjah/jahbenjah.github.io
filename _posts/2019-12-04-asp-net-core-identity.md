@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Introducción a ASP.NET Core Identity"
-date:   2019-11-14 16:22:01 +0000
+date:   2019-12-04 12:22:01 +0000
 permalink: /:categories/:title:output_ext
 ---
 

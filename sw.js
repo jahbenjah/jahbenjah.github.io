@@ -1,16 +1,9 @@
-const PRECACHE = 'precache-v1';
+const PRECACHE = 'precache-v2';
 const RUNTIME = 'runtime';
 const PRECACHE_URLS = [
-  'index.html',
-  './',
+  '/',
   '/assets/css/style.css',
-   '/assets/gitbook/style.css',
-   '/assets/gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css',
-   '/assets/gitbook/gitbook-plugin-anchors/plugin.css',
-   '/assets/gitbook/gitbook-plugin-forkmegithub/plugin.css',
-   '/assets/gitbook/gitbook-plugin-highlight/website.css',
-   '/assets/gitbook/gitbook-plugin-search/search.css',
-   '/assets/gitbook/gitbook-plugin-fontsettings/website.css'
+   '/assets/gitbook/style.css'
 ];
 
 self.addEventListener('install', event => {

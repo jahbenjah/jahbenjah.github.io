@@ -10,7 +10,7 @@ image:
 last_modified_at: 2019-11-20 09:45:00 +0000
 ---
 
-El año pasado, entre el 16 y 25 de diciembre se llevo acabo [El primer calendario de adviento de C# en español]({% post_url 2018-11-16-Calendario-adviento-csharp %}). En el cual 14 autores voluntarios publicarón en su blog un articulo de un tema relacionado con C#.Esta propuesta fue inspirada en [The firts C# Advent Calendar](https://crosscuttingconcerns.com/The-First-C-Advent-Calendar){:target="_blank" rel="noopener"} y el [calendario de adviento de F# de Sergey Tihon](https://sergeytihon.com/2018/10/22/f-advent-calendar-in-english-2018/){:target="_blank" rel="noopener"}.
+El año pasado, entre el 16 y 25 de diciembre se llevo acabo [El primer calendario de adviento de C# en español]({% post_url 2018-11-16-Calendario-adviento-csharp %}). En el cual 14 autores voluntarios publicarón en su blog un articulo de un tema relacionado con C#. Esta propuesta fue inspirada en [The firts C# Advent Calendar](https://crosscuttingconcerns.com/The-First-C-Advent-Calendar){:target="_blank" rel="noopener"} y el [calendario de adviento de F# de Sergey Tihon](https://sergeytihon.com/2018/10/22/f-advent-calendar-in-english-2018/){:target="_blank" rel="noopener"}.
 
 Para este año la propuesta es que entre el 1 y el 25 de diciembre se publiquen por lo menos un artículo en español de un tema relacionado con C#. Hay posibilidad de publicar dos entradas por día pero dependerá de la respuesta obtenida.
 
@@ -25,8 +25,11 @@ Para este año la propuesta es que entre el 1 y el 25 de diciembre se publiquen 
 3. Prepara tu artículo de blog en español.
 4. Publica tu artículo el día establecido y comparte la liga para actualizar el calendario.
 5. Te sugerimos usar el hashtag _#advientocsharp_ en Twitter para que tu articulo sea localizado fácilmente.
+6. _Opcional_ Comparte las publicaciones de los demás autores y de ser posible añade una liga a otro articulo o al calendario mismo.
 
-El tema de los artículos es decisión de los autores unicamente se pide que sea en español y este relacionado de alguna forma con **C#**, puedes compartir el título de tu articulo o dejarlo hasta el día de publicación.
+El tema de los artículos es decisión de los autores unicamente se pide que sea de preferencia material nuevo, en español y este relacionado de alguna forma con **C#**, puedes compartir el título de tu articulo o dejarlo hasta el día de publicación.
+
+Si por alguna situación no puedes participar escribiendo tu propio articulo apoya a los autores compartiendo en redes sociales o con tus colegas. Deja un comentario o propon mejoras al articulo.
 
 ## Calendario
 
@@ -61,9 +64,24 @@ El tema de los artículos es decisión de los autores unicamente se pide que sea
 
 ## Algunas ideas para postear
 
+Aunque el tema de los articulos es responsabilidad de los autores te dejamos algunas ideas que te pueden  servir de inspiración:
+
 * C# 8.0,.NET Core 3.0 ,NET 5
 * ASP.NET Core ,Xamarin, Entity Framework Core, IoT, ML.NET, AI, Blazor
 * .NET y el Open Source.
 * El futuro de .NET
 * .NET 5
 * Aplicaciones Nativas para la Nube
+* La historia de C# , ASP.NET, Xamarin , etc
+* Tú travesía para convertirte en Desarollador .NET
+* El proceso de reclutamiento que seguiste para conseguir tu empleo actual 
+
+## Estadisticas del calendario de adviento
+
+En estos ultimos dias no he tenido tiempo suficiente para dedicarle a promocionar el calendario ni para terminar mi propio articulo. Desde hace un buen tiempo queria compartir las estadisticas del calendario, asi que sin mas detalle comparto el numero de visitas que han tenido las publicaciones relacionadas con el calendario. 
+
+* La publicación del año 2018 ha tenido un total de 968 vistas desde su publicación hasta el 09/12/2019.
+* La publicacion del año 2019 ha tenido un total de 688 vistas desde su publicación hasta el 09/12/2019.
+* Mi articulo para el calendario []() ha tenido 2638 vistas desde su publicación hasta el 09/12/2019.
+
+<img data-src="/img/estadisticas-calendario.PNG" class="lazyload"  alt="Estadísticas del calendario de adviento">

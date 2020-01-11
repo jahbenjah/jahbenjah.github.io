@@ -2,7 +2,7 @@
 layout: post
 title:  "Introdución a Entity Framework Core"
 categories: C# EntityFrameworkCore dotnet ef
-last_modified_at: 2019-06-3 8:30:55 +0000
+last_modified_at: 2020-01-01 11:03:55 +0000
 ---
 
 *Entity Framework Core* es una tecnología de acceso a datos para .NET Core y .NET Framework. Es multiplataforma y de código abierto desarrollado por Microsoft con aportes de la comunidad.
@@ -87,11 +87,12 @@ Cuenta con una interfaz de linea de comandos  `dotnet ef` que permite :
 
 ### ¿ Cuales son las versiones de Entity Framework Core ? 
 
-La ultima version es 2.2 al momento de actualizar este artículo. Cada liberación de una nueva versión de EF Core va acompañada de un post donde mencionan las nuevas características de la misma. Actualmente ya esta anunciada la próxima liberación de Entity Framework 3.0 para septiembre de 2019 dentro del evento virtual de 3 días [.NET Conf 2019](https://www.dotnetconf.net/) y para 2020 estará disponible [.NET 5.0](https://devblogs.microsoft.com/dotnet/introducing-net-5/)
+La ultima version de Entity Framework Core al momento de actualizar este artículo es la 3.1. Cada liberación de una nueva versión de EF Core va acompañada de un post donde mencionan las nuevas características de la misma. Actualmente ya esta anunciada la próxima liberación de Entity Framework 3.0 para septiembre de 2019 dentro del evento virtual de 3 días [.NET Conf 2019](https://www.dotnetconf.net/) y para 2020 estará disponible [.NET 5.0](https://devblogs.microsoft.com/dotnet/introducing-net-5/)
 
 Versión | Fecha de lanzamiento|  Detalles
 --------| --------------------|-----------
-3.0     |  septiembre 2019   |
+3.1     | 03 diciembre  2019   | [Announcing Entity Framework Core 3.1 and Entity Framework 6.4](https://devblogs.microsoft.com/dotnet/announcing-entity-framework-core-3-1-and-entity-framework-6-4/)
+3.0     | 23 septiembre 2019  |[Announcing Entity Framework Core 3.0 and Entity Framework 6.3 General Availability](https://devblogs.microsoft.com/dotnet/announcing-ef-core-3-0-and-ef-6-3-general-availability/)
 2.2     | 04 Diciembre 2018   |[Announcing Entity Framework Core 2.2](https://devblogs.microsoft.com/dotnet/announcing-entity-framework-core-2-2/)
 2.1     | 30 Mayo 2018        |[Announcing Entity Framework Core 2.1](https://blogs.msdn.microsoft.com/dotnet/2018/05/30/announcing-entity-framework-core-2-1/)
 2.0     | 14 Agosto 2017      |[Announcing Entity Framework Core 2.0](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-entity-framework-core-2-0/)

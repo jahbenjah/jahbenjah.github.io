@@ -11,7 +11,7 @@ last_modified_at: 2019-11-13 10:24:25 +0000
 description: Creación y ejemplos de cadena de conexión SQL Server, MySQL , Oracle , PostgreSQL, Firebird y SQLite usando la clase ConnectionStringBuilder de .NET usando C# . 
 ---
 
-En este tutorial te mostramos como crear, manipular y validar la cadena de conexión SQL Server, MYSQL, Oracle, Firebird, PostgreSQL y Sqlite usando C# y .NET Core.
+En este tutorial te mostramos como crear, manipular y validar la cadena de conexión SQL Server ✅, MYSQL, Oracle, Firebird, PostgreSQL y Sqlite usando C# y .NET Core.
 
 <img data-src="/img/connectionstring.webp" class="lazyload"  alt="Script Tag Helper">
 

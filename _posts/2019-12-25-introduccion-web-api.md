@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Introducción a ASP.NET Core Web API"
-date:   2019-12-22 12:22:01 +0000
+date:   2019-12-25 12:22:01 +0000
 permalink: /:categories/:title:output_ext
 ---
 

@@ -8,7 +8,7 @@ image:
   path: /img/og-tutorial.jpg
   height: 378
   width: 729
-description: Tutorial de ASP.NET Core 2.2, Entity Framework Core y MySQL creando una aplicación MVC. Control de código fuente con Git, estructura del proyecto y creación del modelo de C# usando "Code Firts" 
+description: Tutorial de ASP.NET Core 2.2, Entity Framework Core y MySQL ✅ creando una aplicación MVC.  Control de código fuente con Git, estructura del proyecto y creación del modelo de C# usando "Code Firts" 
 last_modified_at: 2019-09-12 5:05:23 +0000
 author: Benjamin Camacho
 ---

@@ -40,4 +40,4 @@ Todo comienza en la linea de comandos para crear un proyecto web MVC sin autenti
 dotnet new mvc -o IntroduccionIdentity
 ```
 
-Después necesitamos agregar 2 paquetes de Nuget el primero `Microsoft.AspNetCore.Identity.EntityFrameworkCore` sirve para crearemos una clase que deriva de `IdentityDbContext`
+Después necesitamos agregar el paquete de Nuget `Microsoft.AspNetCore.Identity.EntityFrameworkCore` sirve para poder crear una clase que deriva de `IdentityDbContext` que es la clase base que usa ASP.NET Core Identity

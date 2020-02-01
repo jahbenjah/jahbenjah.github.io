@@ -4,8 +4,8 @@ title:  "Procesar JSON con System.Text.Json"
 comments: true
 categories: C#
 permalink: /:categories/:title:output_ext
-last_modified_at: 2020-01 22:10:32 +0000
-description: "Selenium es un conjunto de herramientas que permite automatizar navegadores usando múltiples lenguajes de programación."
+last_modified_at: 2020-01-31 22:10:32 +0000
+description: "Serializar JSON con C# y .NET Core es cada vez más facil gracias a la nueva API: System.Text.Json"
 ---
 
 Sin lugar a dudas el formato <abbr lang="en" title="Javascript Object Notation">JSON</abbr> se ha convertido en un uno de los formatos preferidos al momento de intercambiar datos entre sistemas. En el entorno de .NET la librería _de facto_ para serializar y deserializar JSON es [Json.NET](https://www.newtonsoft.com/json) superando en facilidad de uso y en velocidad incluso (50% más rápida) a las API nativas del mismo .NET Framework es decir [DataContractJsonSerializer](https://docs.microsoft.com/dotnet/api/system.runtime.serialization.json.datacontractjsonserializer?view=netframework-4.8).

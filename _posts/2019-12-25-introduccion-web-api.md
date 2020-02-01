@@ -5,10 +5,11 @@ date:   2019-12-25 12:22:01 +0000
 permalink: /:categories/:title:output_ext
 ---
 
+La historia de este post es más o menos asi
 
 
 
-# Consumir una API desde .NET Core
+#  Como consumir una API desde .NET Core
 
 
 

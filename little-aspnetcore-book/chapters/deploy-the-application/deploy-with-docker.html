@@ -314,7 +314,7 @@ WORKDIR /app
 <h3 id="crear-una-imagen"><a name="crear-una-imagen" class="plugin-anchor" href="#crear-una-imagen"><i class="fa fa-link" aria-hidden="true"></i></a>Crear una imagen</h3>
 <p>Aseg&#xFA;rese de que Dockerfile est&#xE9; guardado y luego use <code>docker build</code> para crear una imagen:</p>
 <pre><code>docker build -t aspnetcoretodo .
-</code></pre><p>&#xA1;No te pierdas el per&#xED;odo final! Eso le dice a Docker que busque un Dockerfile en el directorio actual.</p>
+</code></pre><p>&#xA1;No te olvides el punto al final! Eso le dice a Docker que busque un Dockerfile en el directorio actual.</p>
 <p>Una vez creada la imagen, puede ejecutar <code>docker images</code> para listar todas las im&#xE1;genes disponibles en su m&#xE1;quina local. Para probarlo en un contenedor, ejecute</p>
 <pre><code>docker run --name aspnetcoretodo_sample --rm -it -p 8080:80 aspnetcoretodo
 </code></pre><p>El indicador <code>-it</code> le dice a Docker que ejecute el contenedor en modo interactivo (dando salida al terminal, en lugar de ejecutarse en segundo plano). Cuando quieras detener el contenedor, presiona Control-C.</p>

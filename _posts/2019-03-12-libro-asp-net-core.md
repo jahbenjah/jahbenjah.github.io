@@ -9,13 +9,15 @@ seo:
   date_modified: 2019-03-24 12:00:01 +0000
 ---
 
-Los mayoría de los recursos para aprender "ASP.NET! Core están en inglés. Esta traducción del libro "The Little ASP.NET Core Book" de [Nate Barbettini](https://twitter.com/nbarbettini) es un intento de tener más materiales en nuestro propio idioma.
+Los mayoría de los recursos para aprender ASP.NET Core están en inglés. Esta traducción del libro "The Little ASP.NET Core Book" de [Nate Barbettini](https://twitter.com/nbarbettini) es un intento de tener más materiales en nuestro propio idioma.
 
 <img data-src="/little-aspnetcore-book/cover.webp" class="lazyload"  alt="Portada de El pequeño libro de ASP.NET Core">
 
 La traducción sin duda puede contener errores así que te animamos a reportar cualquier error que encuentres en el libro. Puedes abrir una incidencia en el [repositorio Github](https://github.com/jahbenjah/little-aspnetcore-book/issues).
 
-Los planes a futuro para esta traducción son mantenerla actualizada cada que se actualice la edición en ingles esta sera gratuita siempre. Adicionalmente tengo planeado hacer un **versión extendida** con explicaciones detalladas donde sea necesario , un glosario, sección de ejercicios resueltos y propuestos y por su puesto actualizada con la version 3.0 que esta por salir en este 2019.
+Los planes a futuro para esta traducción son mantenerla actualizada cada que se actualice la edición en ingles esta sera gratuita siempre. Adicionalmente tengo planeado hacer un **versión extendida** con explicaciones detalladas donde sea necesario , un glosario, sección de ejercicios resueltos y propuestos y por su puesto actualizada con la version 3.1 que salio en diciembre del 2019 y esta marcada como LTS es decir es una versión que tendrá soporte por 3 años.
+
+> **Actualización en proceso** estoy comenzando a actualizar el contenido del libro para usar la versión 3.1 de ASP.NET Core
 
 # Una introducción amigable a la programación web
 

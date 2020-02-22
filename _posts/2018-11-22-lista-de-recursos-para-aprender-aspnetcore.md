@@ -10,7 +10,7 @@ Lo más valioso de un framework es su comunidad y ASP.NET Core tiene una comunid
 
 # Libros
 
-Mi opción preferida para aprender algo nuevo siempre es un libro. He de decir que los libros de tecnología es difícil leerlos de principio a fin y es probable que no haya leído completamente cada uno de los siguientes libros pero me han servido como fuente de consulta cuando necesito revisar algo que tiene relación con el problema que enfrento.
+Mi opción preferida para aprender algo nuevo siempre es un libro. He de decir que los libros de tecnología son difícil leerlos de principio a fin y es probable que no haya leído completamente cada uno de los siguientes libros pero me han servido como fuente de consulta cuando necesito revisar algo que tiene relación con el problema que enfrento.
 
 ## Gratuitos
 
@@ -52,6 +52,7 @@ Los cursos aquí mencionados son gratuitos o que puedes tomar en el periodo de e
 
 # Videos
 
+* [dot.net/videos](dot.net/videos)
 * [ASP.NET Community StandUp](https://live.asp.net/)
 * [Jeff Fritz](https://www.twitch.tv/csharpfritz/videos)
 * [Canal de Visual Studio](https://www.youtube.com/visualstudio)

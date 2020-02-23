@@ -27,7 +27,7 @@ Si usas un proyecto web puedes usar lo mismo en el *Web.config*.
 Es necesario permitir el acceso a aplicaciones no seguras desde la configuración de Gmail tal como se describe en la
 [documentación de Gmail](https://support.google.com/accounts/answer/6010255?hl=es-41).
 
-<img data-src="/img/AccesoAplicacionesMenosSeguras.webp" class="lazyload"  alt="Script Tag Helper">
+<img data-src="/img/AccesoAplicacionesMenosSeguras.webp" class="lazyload"  alt="Pantalla de configuracion de Gmail">
 
 La configuración necesaria para el cliente de <abbr lang="en" title="Simple Mail Transfer Protocol">SMTP</abbr> de acuerdo a la [documentación de Gmail](https://support.google.com/mail/answer/7126229?visit_id=1-636683482170517029-2536242402&hl=es&rd=1)
 es la siguiente:

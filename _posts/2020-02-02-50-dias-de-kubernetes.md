@@ -12,7 +12,7 @@ El repositorio de Kubernetes esta alojado en Github [Kubernetes](https://github.
 Los 50 días de Kubernetes es la forma en que pienso aprenden esta tecnología aprovechando los recursos que brinda Microsoft Azure en la ruta conocida como [50 days from zero to
 hero with Kubernetes](https://azure.microsoft.com/resources/kubernetes-learning-path/) usare el #tag #50diasdek8s en Twitter para compartir mis avances si asi lo deseas puedes unirte. Mi propósito es básicamente pasar a algo más allá del hola mundo usando principalmente C#, ASP.NET Core, Docker y Kubernetes.
 
-# Día 1: Conociendo nuevos animales
+## Día 1: Conociendo nuevos animales
 
 El recurso para este dia es un libro para niños (esto por las imágenes pero no por el contenido) [Phippy Goes to the Zoo](https://azure.microsoft.com/mediahandler/files/resourcefiles/phippy-goes-to-the-zoo/Phippy%20Goes%20To%20The%20Zoo_MSFTonline.pdf) en el cuál se explican algunos conceptos básicos de Kubernetes. Para mi algunos de estos conceptos no me hacen sentido aun pero espero que pronto se vuelvan mas relevantes
 
@@ -60,6 +60,13 @@ mcr.microsoft.com/dotnet/core/aspnet    3.1                 5b704ff3cb6b        
 mcr.microsoft.com/dotnet/core/runtime   3.1                 a708cda756ab        2 weeks ago         190MB
 ```
 
-# Dia 2 al 5: Fundamentos de Kubernates
+## Dia 2 al 5: Fundamentos de Kubernates
 
-El recursos para este period es una lista de reproducción en Youtube donde el co-fundador del proyecto Kubernetes Brendan Burns explica algunos conceptos. [Kubernetes Basics](https://www.youtube.com/playlist?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT)
+El recursos para este periodo es una lista de reproducción en Youtube donde el co-fundador del proyecto Kubernetes Brendan Burns explica algunos conceptos. [Kubernetes Basics](https://www.youtube.com/playlist?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT)
+
+Aquí he descubierto que esta ruta de aprendizaje me llevará mas de los 50 días inicialmente marcados esto por mi desconocimiento en muchos temas. Por est motivo he tenido que agregar recursos adicionales  El primer libro.
+
+¿Qué es un cluster de Kebernetes?
+¿ASP.NET Core cumple con los 12 puntos de las aplicaciones de 12 factores?
+
+## Días 6 - 1 : Conceptos fundamentales de Azure Kubernetes Services

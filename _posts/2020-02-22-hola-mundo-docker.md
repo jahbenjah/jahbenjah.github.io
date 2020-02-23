@@ -5,14 +5,14 @@ date:   2020-02-22 11:18:01 +0000
 categories: aspnetcore
 permalink: /:categories/:title:output_ext
 image:
-  path: /img/og-tutorial.jpg
-  height: 378
-  width: 729
+  path: /img/og-docker.jpg
+  height: 398
+  width: 760
 description: "ASP.NET Core y Docker pueden trabajar juntos para crear y desplegar aplicaciones" 
 author: Benjamin Camacho
 ---
 
-En este artículo te explico los pasos para crear una imagen de un contenedor Docker para una aplicación Hola Mundo de .NET Core. Intento explicar com más detalles las cosas relativas a las proceso de crear las imagenes de Docker que al proceso de desarrollar la aplicación con .NET Core considerando que una vez que tienes listo el archivo Dockerfile puedes reutilizarlo en otras aplicaciones.
+En este artículo te explico los pasos para crear una imagen de un contenedor Docker para una aplicación Hola Mundo de .NET Core. Intento explicar com más detalles las cosas relativas a las proceso de crear las imágenes de Docker que al proceso de desarrollar la aplicación con .NET Core considerando que una vez que tienes listo el archivo Dockerfile puedes reutilizarlo en otras aplicaciones.
 
 > **TL:DR**  Si ya tienes Docker instalado puedes ver el no muy impresionante resultado ejecutando `docker run jahbenjah/holamundodocker`
 
@@ -22,9 +22,9 @@ Primero asegurate de tener instalado Docker, en mi caso uso [Docker Desktop para
 
 ## Imágenes de Docker para .NET Core y ASP.NET Core
 
-Para construir nuestras propias imágenes de Docker para nuestras aplicaciones de .NET Core necesitamos por lo menos 2 imágenes distintas:
+Para construir nuestras propias imágenes de Docker para nuestras aplicaciones de .NET Core necesitamos por lo menos 2 imágenes distintas una con el SDK y otra con el motor de tiempo de ejecución o con las dependencias del mismo si utilizamos un despliegue con
 
-1. **Imagen del SDK** Esta imagen contiene todo lo necesario para compilar y probar aplicaciones en .NET Core pero muchas de las cosas incluidad en esta imagen no son necesarias en producción como el compilador o Power Shell Core . Aunque hablamos de una imagen es importante decir que mas bien representan un conjunto de imágenes basadas en diferentes sistemas operativos identificadas por una etiqueta. La imágenes del SDK de .NET Core basadas en Linux pesan entre los 400Mb y 600MB. Aunque el equipo de Microsoft ha logrado [reducir el tamaño de las imágenes de Docker para Windows Server en un 40%](https://devblogs.microsoft.com/dotnet/we-made-windows-server-core-container-images-40-smaller/) para mi están descartadas completamente y solo haré referencia a las imágenes basadas en Linux.
+1. **Imagen del SDK** Esta imagen contiene todo lo necesario para compilar y probar aplicaciones en .NET Core pero muchas de las cosas incluidas en esta imagen no son necesarias en producción como el compilador o Power Shell Core. Aunque hablamos de una imagen es importante decir que mas bien representan un conjunto de imágenes basadas en diferentes sistemas operativos identificadas por una etiqueta. La imágenes del SDK de .NET Core basadas en Linux pesan entre los 400Mb y 600MB. Aunque el equipo de Microsoft ha logrado [reducir el tamaño de las imágenes de Docker para Windows Server en un 40%](https://devblogs.microsoft.com/dotnet/we-made-windows-server-core-container-images-40-smaller/) para mi están descartadas completamente y solo haré referencia a las imágenes basadas en Linux.
 
 Para descarga la imagen del .NET Core SDK puedes ejecutar el comando `docker pull` especificando el nombre de la imagen. Opcionalmente puedes especificar la etiqueta pero si no especificas la etiqueta por default se usa la etiqueta `lastest`. Puedes ver la lista completa de etiquetas en el [Docker Hub](https://hub.docker.com/_/microsoft-dotnet-core-sdk/).  
 

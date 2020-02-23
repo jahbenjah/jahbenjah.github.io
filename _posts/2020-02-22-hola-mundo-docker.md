@@ -22,34 +22,67 @@ Primero asegurate de tener instalado Docker, en mi caso uso [Docker Desktop para
 
 ## Imágenes de Docker para .NET Core y ASP.NET Core
 
-Para construir nuestras propias imágenes de Docker para nuestras aplicaciones de .NET Core necesitamos por lo menos 2 imágenes distintas una con el SDK y otra con el motor de tiempo de ejecución o con las dependencias del mismo si utilizamos un despliegue con
+Para construir nuestras propias imágenes de Docker para nuestras aplicaciones de .NET Core necesitamos por lo menos 2 imágenes distintas una con el SDK y otra con el motor de tiempo de ejecución o con las dependencias del mismo si utilizamos un despliegue con autocontenido o de un solo archivo. Si quiere tener más detalles sobre como publicar una aplicación autocontenida te recomiendo el artículo [Publicación self-contained y single-file en .NET Core](https://www.variablenotfound.com/2020/02/publicacion-self-contained-y-single.html) o la [documentación](https://docs.microsoft.com/dotnet/core/deploying/)
 
-1. **Imagen del SDK** Esta imagen contiene todo lo necesario para compilar y probar aplicaciones en .NET Core pero muchas de las cosas incluidas en esta imagen no son necesarias en producción como el compilador o Power Shell Core. Aunque hablamos de una imagen es importante decir que mas bien representan un conjunto de imágenes basadas en diferentes sistemas operativos identificadas por una etiqueta. La imágenes del SDK de .NET Core basadas en Linux pesan entre los 400Mb y 600MB. Aunque el equipo de Microsoft ha logrado [reducir el tamaño de las imágenes de Docker para Windows Server en un 40%](https://devblogs.microsoft.com/dotnet/we-made-windows-server-core-container-images-40-smaller/) para mi están descartadas completamente y solo haré referencia a las imágenes basadas en Linux.
+### Imagen del SDK mcr.microsoft.com/dotnet/core/sdk
 
-Para descarga la imagen del .NET Core SDK puedes ejecutar el comando `docker pull` especificando el nombre de la imagen. Opcionalmente puedes especificar la etiqueta pero si no especificas la etiqueta por default se usa la etiqueta `lastest`. Puedes ver la lista completa de etiquetas en el [Docker Hub](https://hub.docker.com/_/microsoft-dotnet-core-sdk/).  
+Esta imagen contiene todo lo necesario para compilar y probar aplicaciones en .NET Core pero muchas de las cosas incluidas en esta imagen no son necesarias en producción como el compilador o Power Shell Core. Aunque hablamos de una imagen es importante decir que mas bien representan un conjunto de imágenes basadas en diferentes sistemas operativos identificadas por una etiqueta. La imágenes del SDK de .NET Core basadas en. Linux pesan entre los 400Mb y 600MB. Aunque el equipo de Microsoft ha logrado [reducir el tamaño de las imágenes de Docker para Windows Server en un 40%](https://devblogs.microsoft.com/dotnet/we-made-windows-server-core-container-images-40-smaller/) para mi están descartadas completamente y solo haré referencia a las imágenes basadas en Linux.
+
+Para descargar la imagen del .NET Core SDK puedes ejecutar el comando `docker pull` especificando el nombre de la imagen. Opcionalmente puedes especificar la etiqueta pero si no especificas la etiqueta por default se usa la etiqueta `lastest`.  
 
 ```bash
->docker pull mcr.microsoft.com/dotnet/core/sdk
-
-Using default tag: latest
-latest: Pulling from dotnet/core/sdk
-dc65f448a2e2: Already exists
-346ffb2b67d7: Already exists
-dea4ecac934f: Already exists
-8ac92ddf84b3: Already exists
-5739cea041bc: Pull complete
-c672494e8688: Pull complete
-5ef2f2a67e1c: Pull complete
-Digest: sha256:95f3924485a995b3e5098527e74863209ea7686f2682cf311dbd9e1dcd67ca15
-Status: Downloaded newer image for mcr.microsoft.com/dotnet/core/sdk:latest
-mcr.microsoft.com/dotnet/core/sdk:latest
+docker pull mcr.microsoft.com/dotnet/core/sdk:3.1-alpine
 ```
 
-> **Buena practicas para Docker:** Se considera una buena practica especificar siempre la etiqueta de la imagen deseada por ejemplo mcr.microsoft.com/dotnet/core/sdk:3.1-alpine
+De forma general podemos decir que el Microsoft proporciona tres imágenes para el SDK de .NET Core basadas en Debian,Ubuntu y Alpine respectivamente.Puedes ver la lista completa de etiquetas en el [Docker Hub](https://hub.docker.com/_/microsoft-dotnet-core-sdk/).
 
-2. **Imagen del Runtime o imagen con las dependencias del RUNTIME**
+> **Buena prácticas para Docker:** Se considera una buena practica especificar siempre la etiqueta de la imagen deseada por ejemplo mcr.microsoft.com/dotnet/core/sdk:3.1-alpine
 
-En mi ruta de aprendizaje de Kubernetes con los [50 días de Kubernetes]({% post_url 2020-02-02-50-dias-de-kubernetes %}) y he leído y visto [videos](https://www.youtube.com/watch?v=wGz_cbtCiEA) que por razones de seguridad y rendimiento es una buena practica usar contenedores pequeños.
+| Etiqueta      | Sistema operativo |Tamaño|
+| ------------- | ------------------|------|
+|3.1-buster latest|Debian 10|614MB|
+|3.1-alpine|Alpine 3.11|406MB|
+|3.1-bionic|Ubuntu 18.04|614MB|
+
+Como soy un poco codo, mi internet es lento, tengo poco espacio en disco  y realizo unicamente DemoWare con _Hola mundo_ siempre utilizare las imágenes más pequeñas, es decir, las basada en Linux Alpine.
+
+## Imagen del Runtime o imagen con las dependencias del RUNTIME
+
+mcr.microsoft.com/dotnet/core/runtime-deps
+mcr.microsoft.com/dotnet/core/aspnet
+mcr.microsoft.com/dotnet/core/runtime
+
+> **Buena práctica :** En mi ruta de aprendizaje de los [50 días de Kubernetes]({% post_url 2020-02-02-50-dias-de-kubernetes %}) he aprendido que que por razones de seguridad y rendimiento es una buena practica **usar contenedores pequeños**. Por lo que intentare usar Linux Alpine como base.
+
+<img data-src="/img/runtime-deps.PNG" class="lazyload"  alt="Peso de las imagenes de Docker para el motor de tiempo de ejecución de .NET Core">
+
+## Construyendo nuestra propia imagen de Docker para .NET Core
+
+Para que nuestra aplicación este disponible en un contenedor de Docker es necesario agregar por lo menos dos archivos adicionales a nuestro proyecto de .NET Core el `.dockerignore` y el `Dockerfile` el primero especifica carpetas y archivos que no deben ser incluidos en la imagen final y el segundo define los pasos necesario para construir la imagen.
+
+En nuestro ejemplo la aplicación solo es un _hola mundo_ y este lo conseguimos con el comando `dotnet new console -o HolaMundoDocker`. Posteriormente abre la carpeta _HolaMundoDocker_ con `cd HolaMundoDocker` y edita el archivo _Program.cs` para que el lugar de imprimir _Hello World!_ escriba _¡Hola Mundo!_ y tu aplicación esta lista para crear una imagen de Docker y poder crear contenedores. 
+
+Añade el archivo `.dockerignore` sin  extension y con el siguiente contenido para evitar que se copien loas carpetas `obj` y  `bin`
+
+```.gitignore
+/bin
+/obj
+```
+
+Añade otro archivo llamado `Dockerfile` con el siguiente contenido:
+
+```Dokcerfile
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1-alpine AS build
+WORKDIR /source
+COPY *.csproj .
+RUN dotnet restore -r linux-musl-x64
+COPY . .
+RUN dotnet publish -c release -o /app -r linux-musl-x64 --self-contained true --no-restore /p:PublishTrimmed=true /p:PublishReadyToRun=true
+FROM mcr.microsoft.com/dotnet/core/runtime-deps:3.1-alpine
+WORKDIR /app
+COPY --from=build /app .
+ENTRYPOINT ["./HolaMundoDocker"]
+```
 
 ```console
 >docker build -t jahbenjah/holamundodocker:latest .
@@ -102,9 +135,10 @@ Successfully tagged jahbenjah/holamundodocker:latest
 SECURITY WARNING: You are building a Docker image from Windows against a non-Windows Docker host. All files and directories added to build context will have '-rwxr-xr-x' permissions. It is recommended to double check and reset permissions for sensitive files and directories.
 ```
 
+## Docker y ASP.NET Core
+
 ## Publicando la imagen en registro : Ducker Hub
 
-Para publicar tu imagen un registro de contenedores puedes usar el comando `docker push`. La imagen debe contener una etiqueta y debes estar logeado en el regitro
+Para publicar tu imagen un registro de contenedores puedes usar el comando `docker push`. La imagen debe contener una etiqueta y debes estar logeado en el registro
 
 ## Conclusiones
-

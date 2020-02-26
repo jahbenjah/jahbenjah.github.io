@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "Enviar un correo con C# y Gmail."
-comments: true
 categories: .net smtp SmptClient dotnet 
 last_modified_at: 2019-12-11 14:45:55 +0000
 ---

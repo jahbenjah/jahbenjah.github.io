@@ -20,8 +20,8 @@ markdown: kramdown
 theme: minima
 show_excerpts: false
 
-# disqus:
-#  shortname: https-jahbenjah-github-io
+disqus:
+ shortname: https-jahbenjah-github-io
 
 google_analytics: UA-130293099-1
 

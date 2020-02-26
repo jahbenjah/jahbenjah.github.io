@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "Un entorno de desarollo para .NET"
-comments: true
 categories: dotnet csharp
 ---
 

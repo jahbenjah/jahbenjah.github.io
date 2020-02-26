@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "Procesar JSON con System.Text.Json"
-comments: true
 categories: C#
 permalink: /:categories/:title:output_ext
 last_modified_at: 2020-01-31 22:10:32 +0000

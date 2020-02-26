@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "Automatizando el Navegador con C# y Selenium."
-comments: true
 categories: C# selenium testing xunit dotnet 
 last_modified_at: 2020-01-20 12:39:52 +0000
 description: "Selenium es un conjunto de herramientas que permite automatizar navegadores usando múltiples lenguajes de programación."

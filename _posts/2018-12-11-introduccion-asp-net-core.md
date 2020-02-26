@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "Introducción a ASP.NET Core"
-comments: true
 categories: asp.net core mvc dotnet aspnetcore
 description: Breve descripción de que es ASP.NET Core y cuales son sus características principales
 last_modified_at: 2019-06-06 15:06:33 +0000

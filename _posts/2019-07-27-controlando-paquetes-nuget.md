@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "Controlando los paquetes de Nuget"
-comments: true
 categories: asp net core
 permalink: /:categories/:title:output_ext
 ---

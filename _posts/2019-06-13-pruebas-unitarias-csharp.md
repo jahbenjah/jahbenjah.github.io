@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "Pruebas unitarias con C#"
-comments: true
 categories: dotnet 
 ---
 

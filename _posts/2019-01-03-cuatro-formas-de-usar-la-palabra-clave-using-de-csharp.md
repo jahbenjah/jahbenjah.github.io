@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "Cuatro formas de usar la palabra clave using de C#"
-comments: true
 categories: C# dotnet using 
 description: ▷ Como usar using en C# using para importar espacios de nombres y miembros estáticos, alias, liberar recursos no administrados y declaraciones using. 
 last_modified_at: 2019-11-20 11:33:26 +0000

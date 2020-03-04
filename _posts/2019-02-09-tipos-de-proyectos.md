@@ -6,9 +6,9 @@ categories: asp.net core
 last_modified_at: 2019-05-25 09:42:55 +0000
 ---
 
-Una aplicación de ASP\.NET Core no es más que una aplicación de consola que ejecuta un servidor web en el método `Main`. En este artículo describo los tipos de proyectos disponibles con el <abbr lang="en" title="Software Developer Kit">SDK</abbr> de *dotnet*.
+Una aplicación de ASP.NET Core no es más que una aplicación de consola que ejecuta un servidor web en el método `Main`. En este artículo describo los tipos de proyectos disponibles con el <abbr lang="en" title="Software Developer Kit">SDK</abbr> de *dotnet*.
 
-Todo comienza con el comando `dotnet new` por lo que es importante saber cuales son las opciones disponibles para el mismo . Invocaremos la ayuda sobre mediante la instrucción `dotnet new --help` en la consola o terminal. La salida se muestra en lo siguiente 
+Todo comienza con el comando `dotnet new` por lo que es importante saber cuales son las opciones disponibles para el mismo . Invocaremos la ayuda sobre mediante la instrucción `dotnet new --help` en la consola o terminal. La salida se muestra en lo siguiente:
 
 <img data-src="/img/dotnetnewhelp.webp" class="lazyload"  alt="Captura de pantalla del comando dotnet new --help">
 

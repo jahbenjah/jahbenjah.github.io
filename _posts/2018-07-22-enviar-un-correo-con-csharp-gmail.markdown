@@ -5,23 +5,20 @@ categories: .net smtp SmptClient dotnet
 last_modified_at: 2019-12-11 14:45:55 +0000
 ---
 
-En el desarrollo de software empresarial enviar correos electrónicos con documentos adjuntos o con un diseño personalizados es un requerimiento muy frecuente, en este tutorial te mostramos enviar correos con C#, .NET Core 2.0 y Visual Studio Code.
-Actualmente existen varias bibliotecas para enviar correos como SendGrid o MailKit, sin embargo en este tutorial se utiliza la clase [SmtpClient](https://docs.microsoft.com/en-us/dotnet/api/system.net.mail.smtpclient?view=netframework-4.7.2) parte de .NET Standard 2.0.
+En el desarrollo de software empresarial enviar correos electrónicos con documentos adjuntos o con un diseño personalizados es un requerimiento muy frecuente, en este tutorial te mostramos enviar correos usando  C# y .NET Core Usaremos Visual Studio Code como nuestro editor de código pero si así lo prefieres puedes usar Visual Studio.
+Actualmente existen varias [paquetes de Nuget]({% post_url 2019-07-27-controlando-paquetes-nuget %}) para enviar correos como [SendGrid](https://www.nuget.org/packages/SendGrid/) o [MailKit](https://www.nuget.org/packages/MailKit/), sin embargo en este tutorial se utiliza la clase [SmtpClient](https://docs.microsoft.com/en-us/dotnet/api/system.net.mail.smtpclient?view=netcore-3.1) parte de .NET Standard 2.0.
 
 <img data-src="/img/adult-business-businessman-1061588.webp" class="lazyload"  alt="Revisando el correo electrónico">
 
-Este artículo representa una guía paso a paso para enviar un correo electrónico usando C# y una cuenta de Gmail el correo puede estar formateado como HTML, texto e incluir archivos adjuntos.
+Este artículo representa una guía paso a paso para enviar un correo electrónico usando C# y una cuenta de Gmail. El cuerpo del correo puede estar formateado como texto plano o HTML e incluir archivos adjuntos.
 Se asume que tienes instalado el SDK de [.NET Core](https://www.microsoft.com/net/download) y el editor de código [Visual Studio Code](https://code.visualstudio.com/). Adicionalmente se creará una solución para poder abrir el proyecto con Visual Studio.
 
 Se creará una biblioteca de clases que tiene como única función enviar correos. Después se usa esta clase en un proyecto de consola. Esta clase se puede usar en cualquier otro tipo de proyectos que soporte .NET Standard.
 El caso de uso cubre está clase es : Una aplicación tiene asignada una cuenta de correo con la cuál envía todos los correos al destinatario especificado.
 
-# Actualización
+> **Advertencia** El equipo de .NET ha marcado la clase `SmtpClient` como obsoleta. En su lugar recomiendan **MailKit**
 
-Si requieres enviar un correo en usando el .NET Framework en lugar de .NET Core puedes ver mi articulo [Enviar un correo con C# y Gmail: Windows Forms]({% post_url 2019-03-11-enviar-un-correo-con-csharp-gmail-winforms %}). Aquí se utiliza el archivo de configuración *App.config* para guardar los datos de la cuenta de gmail
-Si usas un proyecto web puedes usar lo mismo en el *Web.config*.
-
-## Configuración de Gmail ##
+## Configuración de Gmail
 
 Es necesario permitir el acceso a aplicaciones no seguras desde la configuración de Gmail tal como se describe en la
 [documentación de Gmail](https://support.google.com/accounts/answer/6010255?hl=es-41).
@@ -41,8 +38,7 @@ Nombre completo o nombre mostrado|Tu nombre
 Nombre de la cuenta, nombre de usuario o dirección de correo electrónico|Tu dirección de correo electrónico completa
 Contraseña|Tu contraseña de Gmail
 
-Con esta configuración se creara un archivo XML que la aplicación leerá al momento que se crear una instancia de la clase.
-Esto tiene como propósito hacer la aplicación no dependa de la configuración y en caso de ser necesario actualizar la contraseña o cambiar la cuenta no sea necesario recompilar la aplicación nuevamente.
+Esta configuración se almacenará un archivo XML que la aplicación leerá al momento que se crear una instancia de la clase. Esto tiene como propósito hacer la aplicación no incluya valores que pueden cambiar en código duro configuración y en caso de ser necesario actualizar la contraseña o cambiar la cuenta no sea necesario recompilar la aplicación nuevamente.
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -55,11 +51,16 @@ Esto tiene como propósito hacer la aplicación no dependa de la configuración 
 </configuration>
 ```
 
-## Preparando el proyecto en Visual Studio Code ##
+## Cliente SMTP para .NET Framework
 
-Para realizarlo ejecuta en la terminal o consola los siguientes comandos. Ejecuta línea por línea ya que se colocarón más de un comando por descripción.
+Si requieres enviar un correo en usando el .NET Framework en lugar de .NET Core puedes ver mi articulo [Enviar un correo con C# y Gmail: Windows Forms]({% post_url 2019-03-11-enviar-un-correo-con-csharp-gmail-winforms %}). Aquí se utiliza el archivo de configuración *App.config* para guardar los datos de la cuenta de gmail
+Si usas un proyecto web puedes usar lo mismo en el *Web.config*.
 
-1. Se creará una solución llamada _EnviarCorreo_ y dos proyectos, el primero una biblioteca de clases llamada _EmailService_ y el segundo proyecto es una aplicación de consola llamada _EmailServiceCliente_.
+## Preparando el proyecto con dotnet y Visual Studio Code
+
+Para crear la estructura del proyecto usando .NET Core ejecuta en la terminal o consola los siguientes comandos. Ejecuta línea por línea ya que se colocarón más de un comando por descripción.
+
+Se creará una solución llamada _EnviarCorreo_ y dos proyectos, el primero una biblioteca de clases llamada _EmailService_ y el segundo proyecto es una aplicación de consola llamada _EmailServiceCliente_.
  
 ```sh
 dotnet new sln -o EnviarCorreo
@@ -67,34 +68,34 @@ dotnet new classlib -o EnviarCorreo/EmailService
 dotnet new console -o EnviarCorreo/EmailServiceCliente
 ```
 
-2. Para agregar los proyectos a la solución ejecuta los siguientes comandos
+Para agregar los proyectos a la solución ejecuta los siguientes comandos
 
 ```sh
 dotnet sln EnviarCorreo/EnviarCorreo.sln add EnviarCorreo/EmailServiceCliente/EmailServiceCliente.csproj
 dotnet sln EnviarCorreo/EnviarCorreo.sln add EnviarCorreo/EmailServiceCliente/EmailServiceCliente.csproj
 ```
 
-3. El proyecto _EmailServiceCliente_ necesita una referencia al proyecto _EmailService_ para poder utilizarlo.
+El proyecto _EmailServiceCliente_ necesita una referencia al proyecto _EmailService_ para poder utilizarlo.
 
 ```sh
  dotnet add EnviarCorreo/EmailServiceCliente/EmailServiceCliente.csproj reference EnviarCorreo/EmailService/EmailService.csproj
 ```
 
-4. Abrir la carpeta _EnviarCorreo\EmailService_ (`cd EnviarCorreo\EmailService`) y agregar la referencia al paquete de Nuget `Microsoft.Extensions.Configuration.Xml` esta es necesaria para poder leer el archivo _XML_.
+Abrir la carpeta _EnviarCorreo\EmailService_ (`cd EnviarCorreo\EmailService`) y agregar la referencia al paquete de Nuget `Microsoft.Extensions.Configuration.Xml` esta es necesaria para poder leer el archivo _XML_.
     
-```sh    
+```sh
 dotnet add package Microsoft.Extensions.Configuration.Xml
 ```
 
-5. Crear un nuevo archivo llamado _Configuracion.xml_ xml (Windows `type NUL > Configuration.xml` , Linux `touch Configuracion.xml`).
+Crear un nuevo archivo llamado _Configuracion.xml_ xml (Windows `type NUL > Configuration.xml` , Linux `touch Configuracion.xml`).
 
-6. Abrir la carpeta _EnviarCorreo_ con Visual Studio Code. Los `..` especifican el directorio un directorio arriba del actual `EnviarCorreo\EmailService`.
+Abrir la carpeta _EnviarCorreo_ con Visual Studio Code. Los `..` especifican el directorio un directorio arriba del actual `EnviarCorreo\EmailService`.
 
 ```sh
 code ..
 ```
 
-7. Editar el archivo del proyecto _EmailService/EmailService.csproj_ para agregar el siguiente código antes de la etiqueta de cierre de `</Project>`. Este hace que siempre coloque el archivo de configuración en la carpeta de salida del proceso de compilación
+Editar el archivo del proyecto _EmailService/EmailService.csproj_ para agregar el siguiente código antes de la etiqueta de cierre de `</Project>`. Este hace que siempre coloque el archivo de configuración en la carpeta de salida del proceso de compilación
     
 ```xml
 <ItemGroup>
@@ -215,19 +216,17 @@ namespace EmailServiceCliente
 
 <img data-src="/img/CorreoAdjunto.webp" class="lazyload"  alt="Imagen del correo enviado">
 
-# Ejecutar
-
-Abrir la terminal en la carpeta _EmailServiceCliente_ y ejecutar
+Para ejecutar el proyecto abre la terminal en la carpeta _EmailServiceCliente_ y ejecuta el comando
 
 ```sh
 dotnet run
 ```
 
-# Enviar correos en ASP.NET Core
+## Enviar correos en ASP.NET Core
 
 En el caso de que requieras enviar correos en un aplicacion de ASP.NET Core es necesario usar la [inyección de dependencias]({% post_url 2019-11-05-inyeccion-de-dependencias-asp-net-core %}) que viene integrada en el mismo framework y usar el archivo  [appsettins.json]({% post_url 2019-04-07-aspnetcore appsettings %}) para manejar la configuración. Aquí muestro una forma de hacerlo en un proyecto web haciendo uso del [patrón opciones](https://docs.microsoft.com/aspnet/core/fundamentals/configuration/options?view=aspnetcore-3.0)
 
-1. Agregar la configuración del correo en el archivo _appsettings.json_
+Agregar la configuración del correo en el archivo _appsettings.json_
 
 ```json
 "EmailSenderOptions": {
@@ -239,7 +238,7 @@ En el caso de que requieras enviar correos en un aplicacion de ASP.NET Core es n
   }
 ```
 
-2. Posteriormente creamos una clase en la carpeta _Services_ llamada `EmailSenderOptions`. Esta clase nos ayudara a leer los datos de configuración del archivo _json_
+Posteriormente creamos una clase en la carpeta _Services_ llamada `EmailSenderOptions`. Esta clase nos ayudara a leer los datos de configuración del archivo _json_
 
 ```cs
 namespace App.Services
@@ -255,7 +254,7 @@ namespace App.Services
 }
 ```
 
-3. Posteriormente creamos una interfaz para el servicio de envío de correos y una implementación de la misma. En este caso la interfaz esta en una carpeta llamada interfaces
+Posteriormente creamos una interfaz para el servicio de envío de correos y una implementación de la misma. En este caso la interfaz esta en una carpeta llamada interfaces
 
 ```cs
 namespace App.Interfaces
@@ -267,7 +266,7 @@ namespace App.Interfaces
 }
 ```
 
-La clase que implementa esta interfaz se encuentra en la carpeta _Services_. Nota el construcctor de la clase
+La clase que implementa esta interfaz se encuentra en la carpeta _Services_. Nota el constructor de la clase
 
 ```cs
 using System.Net;
@@ -307,14 +306,14 @@ namespace App.Services
 }
 ```
 
-4. En la clase `Startup`hay que agregar y configura este servicio al contendedor de dependencias para que este disponible en nuestra aplicación web.
+En la clase `Startup`hay que agregar y configura este servicio al contendedor de dependencias para que este disponible en nuestra aplicación web.
 
 ```cs
 services.AddTransient<IEmailSender, EmailSender>();
 services.Configure<EmailSenderOptions>(Configuration.GetSection("EmailSenderOptions"));
 ```
 
-5. Con lo anterior el servicio para enviar correos ya esta disponible solo debemos especificar en el constructor la dependencia que necesitamos. Por ejemplo en un controlador:
+Con lo anterior el servicio para enviar correos ya esta disponible solo debemos especificar en el constructor la dependencia que necesitamos. Por ejemplo en un controlador:
 
 ```cs
  public class HomeController : Controller
@@ -327,7 +326,7 @@ services.Configure<EmailSenderOptions>(Configuration.GetSection("EmailSenderOpti
 }
 ```
 
-6. Finalmente para enviar un correo en un método de acción de forma asíncrona.
+Finalmente para enviar un correo en un método de acción de forma asíncrona.
 
 ```cs
 public async Task<IActionResult> Index()
@@ -340,6 +339,6 @@ public async Task<IActionResult> Index()
 }
 ```
 
-# Conclusión
+## Conclusión
 
 Puedes encontrar el código fuente el el repositorio de [Github](https://github.com/jahbenjah/CodigoBlog).

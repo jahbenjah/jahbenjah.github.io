@@ -21,7 +21,12 @@ El caso de uso cubre está clase es : Una aplicación tiene asignada una cuenta 
 ## Configuración de Gmail
 
 Es necesario permitir el acceso a aplicaciones no seguras desde la configuración de Gmail tal como se describe en la
-[documentación de Gmail](https://support.google.com/accounts/answer/6010255?hl=es-41).
+[documentación de Gmail](https://support.google.com/accounts/answer/6010255?hl=es-41). Ya que si no lo habilitas recibirás una alerta de seguridad por parte de Google indicando que una aplicación diferente a Gmail ha accedido a tu correo y  la aplicación te mostrara este mensaje.
+
+```
+The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.0 Authentication Required. Learn more at
+
+```
 
 <img data-src="/img/AccesoAplicacionesMenosSeguras.webp" class="lazyload"  alt="Pantalla de configuracion de Gmail">
 

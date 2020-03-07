@@ -13,17 +13,17 @@ description: Tutorial para exportar una colección de objetos a un libro de Exce
 
 En este articulo intentamos mostrar una opción para generar archivos de Excel en nuestras aplicaciones de ASP.NET Core. Esta funcionalidad es constantemente requerida en las empresas y una pregunta frecuente en grupos de programadores.
 
-Para generar el archivo usamos una el paquete de Nuget llamada [EPPlus](https://www.nuget.org/packages/EPPlus)
+Para generar el archivo usamos el paquete de Nuget llamado [EPPlus](https://www.nuget.org/packages/EPPlus)
 
 ```
 dotnet add package EPPlus --version 4.5.3.3
 ```
 
-> **Advertencia** asegurate de asegurate de revisar los cambios en la licencia [licencia](https://github.com/JanKallman/EPPlus#epplus) de EPPlus.
+> **Advertencia** asegurate de asegurate de revisar los cambios en la [licencia](https://github.com/JanKallman/EPPlus#epplus) de EPPlus.
 
 ## EPPlus
 
-EPPlus se vende a si mismo como una librería capaz de crear avanzadas hojas de Excel sin la dependencia de Interop  y ninguna otra dependencia adicional a .NET. Funciona con .NET Core y .NET Framework. Fue creada por [Jan Källman](https://github.com/JanKallman) como un proyecto de código abierto con licencia *GNU Library General Public License (LGPL)* pero esta próximo a cambiar por una licencia [PolyForm Noncommercial License 1.0.0] con la creación de la compañia [EPPlus Software](https://www.epplussoftware.com/).
+EPPlus se vende a si mismo como una librería capaz de crear avanzadas hojas de Excel sin la dependencia de Interop y ninguna otra dependencia adicional a .NET. Funciona con .NET Core y .NET Framework. Fue creada por [Jan Källman](https://github.com/JanKallman) como un proyecto de código abierto con licencia *GNU Library General Public License (LGPL)* pero esta próximo a cambiar por una licencia [PolyForm Noncommercial License 1.0.0] con la creación de la compañia [EPPlus Software](https://www.epplussoftware.com/).
 
 Algunas de las características de Excel soportadas por EPPlus son
 
@@ -38,7 +38,7 @@ Algunas de las características de Excel soportadas por EPPlus son
 * Tablas dinámicas
 * Entre otras
 
-Aquí mostramos unicamente las creación de un libro con una hoja  con el fin de inicia y probablemente retornemos para agregar mas características conforme conozca mas de esta librería.
+Aquí mostramos unicamente las creación de un libro con una hoja con el fin de iniciar en el manejo y probablemente retornemos para agregar mas características conforme conozca más de esta librería.
 
 ## Exportar a Excel ASP.NET Core
 
@@ -46,7 +46,7 @@ Para este proyecto usamos la plantilla MVC con autenticación de cuentas individ
 
 <img data-src="/img/agregar-controlador-mvc.PNG" class="lazyload"  alt="Agregar controlador MVC Visual Studio 2019">
 
-El modelo que creamos corresponde a un Producto. Esta clase que usa las anotaciones de datos para especificar restricciones al crear la base de datos como la longitud de los campos, el nombre de la tabla, el esquema entre otras cosas. Adicionalmente porque lei que estas eran usadas cuando exportabas una colección a Excel pero por ahora no he logrado que funcionen. Abajo los detalles de la clase producto:
+El modelo que creamos corresponde a un _Producto_. Esta clase que usa las anotaciones de datos para especificar restricciones al crear la tabla en la base de datos como la longitud de los campos, el nombre de la tabla y el esquema entre otras cosas. Adicionalmente porque lei que estas eran usadas cuando exportabas una colección a Excel pero por ahora no he logrado que funcionen. Abajo los detalles de la clase producto:
 
 ```cs
 using System;
@@ -127,7 +127,7 @@ Abajo mostramos la pagina de la lista de productos creada por el asistente de Vi
 
 <img data-src="/img/lista-excel.PNG" class="lazyload"  alt="Pantalla de una lista en ASP.NET Core">
 
-El método de acción en cuestión es el responsable de obtener los datos de EF y crear el libro de Excel mediante las clases `ExcelPackage`, crear una hoja y los datos en la misma, asignarle formato al documento y finalmente regresar el archivo mediante el método `File` que regresa un  `FileContetResult`. La parte del formato todavía no la conozco bien por lo que por ahora lo dejare aquí.
+El método de acción en cuestión es el responsable de obtener los datos de EF y crear el libro de Excel mediante las clases `ExcelPackage`, crear una hoja y los datos en la misma, asignarle formato al documento y finalmente regresar el archivo mediante el método `File` que regresa un  `FileContentResult`. La parte del formato todavía no la conozco bien por lo que por ahora lo dejare aquí.
 
 ```cs
 public IActionResult ExportarExcel()

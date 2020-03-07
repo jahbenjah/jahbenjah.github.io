@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Exportar a Excel"
+title:  "Exportar datos a Excel ASP.NET Core"
 date:   2020-03-06 12:00:01 +0000
 categories: aspnetcore
 permalink: /:categories/:title:output_ext

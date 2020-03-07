@@ -21,7 +21,7 @@ dotnet add package EPPlus --version 4.5.3.3
 
 > **Advertencia** asegurate de asegurate de revisar los cambios en la [licencia](https://github.com/JanKallman/EPPlus#epplus) de EPPlus.
 
-## EPPlus
+## Qué es EPPlus
 
 EPPlus se vende a si mismo como una librería capaz de crear avanzadas hojas de Excel sin la dependencia de Interop y ninguna otra dependencia adicional a .NET. Funciona con .NET Core y .NET Framework. Fue creada por [Jan Källman](https://github.com/JanKallman) como un proyecto de código abierto con licencia *GNU Library General Public License (LGPL)* pero esta próximo a cambiar por una licencia [PolyForm Noncommercial License 1.0.0] con la creación de la compañia [EPPlus Software](https://www.epplussoftware.com/).
 
@@ -44,7 +44,7 @@ Aquí mostramos unicamente las creación de un libro con una hoja con el fin de 
 
 Para este proyecto usamos la plantilla MVC con autenticación de cuentas individuales esto para tener Entity Framework instalados y funcionando. Usamos el asistente de creación de controladores que usan Entity Framework para las operaciones CRUD
 
-<img data-src="/img/agregar-controlador-mvc.PNG" class="lazyload"  alt="Agregar controlador MVC Visual Studio 2019">
+<img data-src="/img/agregar-controlador-mvc.PNG" class="lazyload" alt="Agregar controlador MVC Visual Studio 2019">
 
 El modelo que creamos corresponde a un _Producto_. Esta clase que usa las anotaciones de datos para especificar restricciones al crear la tabla en la base de datos como la longitud de los campos, el nombre de la tabla y el esquema entre otras cosas. Adicionalmente porque lei que estas eran usadas cuando exportabas una colección a Excel pero por ahora no he logrado que funcionen. Abajo los detalles de la clase producto:
 
@@ -80,7 +80,7 @@ namespace ExportarExcel.Models
 }
 ```
 
-Para evitar la necesitad de crear objetos uso el método `HasData` en el contexto de EF Core para tener datos de prueba.
+Para evitar la necesidad de crear objetos uso el método `HasData` en el contexto de Entity Framework Core para tener datos de prueba.
 
 ```cs
 using ExportarExcel.Models;
@@ -125,9 +125,11 @@ Abajo mostramos la pagina de la lista de productos creada por el asistente de Vi
 <a asp-action="ExportarExcel">Exporta a Excel</a>
 ```
 
-<img data-src="/img/lista-excel.PNG" class="lazyload"  alt="Pantalla de una lista en ASP.NET Core">
+<img data-src="/img/lista-excel.PNG" class="lazyload" alt="Pantalla de una lista en ASP.NET Core">
 
-El método de acción en cuestión es el responsable de obtener los datos de EF y crear el libro de Excel mediante las clases `ExcelPackage`, crear una hoja y los datos en la misma, asignarle formato al documento y finalmente regresar el archivo mediante el método `File` que regresa un  `FileContentResult`. La parte del formato todavía no la conozco bien por lo que por ahora lo dejare aquí.
+El método de acción en cuestión es el responsable de obtener los datos de EF y crear el libro de Excel mediante las clases `ExcelPackage`, crear una hoja y los datos en la misma, asignarle formato al documento y finalmente regresar el archivo mediante el método `File` que regresa un `FileContentResult`. La parte del formato todavía no la conozco bien por lo que por ahora lo dejare aquí.
+
+Este método requiere las instrucciones `using using OfficeOpenXml;` y `using OfficeOpenXml.Table;`
 
 ```cs
 public IActionResult ExportarExcel()
@@ -158,7 +160,20 @@ public IActionResult ExportarExcel()
 
 El libro de Excel generado es el siguiente:
 
-<img data-src="/img/libro-excel.PNG" class="lazyload"  alt="Libro del reporte en Excel con en ASP.NET Core">
+<img data-src="/img/libro-excel.PNG" class="lazyload" alt="Libro del reporte en Excel con en ASP.NET Core">
+
+### Crear un libro de Excel
+
+Para crear un libro de Excel se usa la clase `ExcelPackage` que implementa la interfaz `IDisposable` por lo que puede usarse con las declaraciones using de C# 8.0. Esta clase tiene varias propiedades que permiten especificar las propiedades del libro controlar las opciones globales del libro de Excel como el cifrado, la compatibilidad y el libro de trabajo. Principalmente nos enfocaremos en la propiedad `WorkBook` para especificar los metadatos del archivo como autor, palabras clave y compañia. Estas propiedades las ves dando clic derecho sobre el archivo y seleccionar _Propiedades_. Seria utili para matener la marca.
+
+```cs
+using var libro = new ExcelPackage();
+libro.Workbook.Properties.Author = "Benjamín Camacho";
+libro.Workbook.Properties.Company = "aspnetcoremaster.com";
+libro.Workbook.Properties.Keywords = "Excel,Epplus";
+```
+
+<img data-src="/img/propiedades-excel.PNG" class="lazyload" alt="Ventana de propiedades del acrhivo de Excel">
 
 ## Conclusiones
 

@@ -175,6 +175,16 @@ libro.Workbook.Properties.Keywords = "Excel,Epplus";
 
 <img data-src="/img/propiedades-excel.PNG" class="lazyload" alt="Ventana de propiedades del acrhivo de Excel">
 
+### Crear hojas de Excel
+
+Para agregar hojas de Excel a un libro se usa el método `Add` de la propipedad `Worksheets` que requiere especificar el nombre de la hoja y regresa un objeto del tipo `ExcelWorksheet`. El método Add tambien tiene una sobrecarga que permite copiar una hoja de Excel.
+
+```cs
+ ExcelWorksheet hoja = libro.Workbook.Worksheets.Add("MiHoja de Excel");
+//Para copiar una Hoja
+ ExcelWorksheet copiaHoja = libro.Workbook.Worksheets.Add("copia",hoja);
+```
+
 ## Conclusiones
 
 Este es el comienzo para generar libros de Excel en nuestras aplicaciones de ASP.NET Core. La librería EPPlus cuenta con una gran cantidad de opciones que pueden dar para muchos artículos te invito a que me dejes un comentario sobre que función te gustaría conocer de EPPlus.

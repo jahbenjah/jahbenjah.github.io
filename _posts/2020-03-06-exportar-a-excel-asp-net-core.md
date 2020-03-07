@@ -19,7 +19,7 @@ Para generar el archivo usamos el paquete de Nuget llamado [EPPlus](https://www.
 dotnet add package EPPlus --version 4.5.3.3
 ```
 
-> **Advertencia** asegurate de asegurate de revisar los cambios en la [licencia](https://github.com/JanKallman/EPPlus#epplus) de EPPlus.
+> **Advertencia** asegurate de asegurate de revisar los cambios en la [licencia](https://www.epplussoftware.com/Home/LgplToPolyform) de EPPlus. Considera en que casos puedes usarla y evaluá si te conviene pagar por una licencia de uso comercial para en su lugar usar la version 5.
 
 ## Qué es EPPlus
 
@@ -162,7 +162,7 @@ El libro de Excel generado es el siguiente:
 
 <img data-src="/img/libro-excel.PNG" class="lazyload" alt="Libro del reporte en Excel con en ASP.NET Core">
 
-### Crear un libro de Excel
+### Crear un libro de Excel con C#
 
 Para crear un libro de Excel se usa la clase `ExcelPackage` que implementa la interfaz `IDisposable` por lo que puede usarse con las declaraciones using de C# 8.0. Esta clase tiene varias propiedades que permiten especificar las propiedades del libro controlar las opciones globales del libro de Excel como el cifrado, la compatibilidad y el libro de trabajo. Principalmente nos enfocaremos en la propiedad `WorkBook` para especificar los metadatos del archivo como autor, palabras clave y compañia. Estas propiedades las ves dando clic derecho sobre el archivo y seleccionar _Propiedades_. Seria utili para matener la marca.
 
@@ -175,7 +175,7 @@ libro.Workbook.Properties.Keywords = "Excel,Epplus";
 
 <img data-src="/img/propiedades-excel.PNG" class="lazyload" alt="Ventana de propiedades del acrhivo de Excel">
 
-### Crear hojas de Excel
+### Crear hojas de Excel con C#
 
 Para agregar hojas de Excel a un libro se usa el método `Add` de la propipedad `Worksheets` que requiere especificar el nombre de la hoja y regresa un objeto del tipo `ExcelWorksheet`. El método Add tambien tiene una sobrecarga que permite copiar una hoja de Excel.
 
@@ -186,6 +186,23 @@ Para agregar hojas de Excel a un libro se usa el método `Add` de la propipedad 
 ```
 
 <img data-src="/img/excel-hojas.PNG" class="lazyload" alt="Hoja de Excel con en ASP.NET Core">
+
+### Agregar datos a una hoja de Excel con C#
+
+Para agregar datos a la hoja de Excel necesitas tener una referencia a la celda deseada asignar el valor. Tambien puedes especificar el formato.
+
+```cs
+
+hoja.Cells["A1"].Value = "Valor asignado desde C#";
+hoja.Cells["A1"].Style.Font.Color.SetColor(Color.Red);
+hoja.Cells["A1"].Style.Font.Name = "Calibri";
+hoja.Cells["A1"].Style.Font.Size = 40;
+
+hoja.Cells["B1"].Value = "2020/03/07";
+hoja.Cells["B1"].Style.Numberformat.Format = "dd/mm/aaaa";
+```
+
+<img data-src="/img/excel-valores.PNG" class="lazyload" alt="Hoja de Excel con en ASP.NET Core">
 
 ## Conclusiones
 

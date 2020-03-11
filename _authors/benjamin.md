@@ -18,7 +18,7 @@ Mis principales intereses se centran entorno al desarrollo web y temas relaciona
 
 # Certificaciones
 
-Una forma interesante de validar los conocimientos es realizando exámenes de certificación. Hasta el momento he presentado el examen de Consultas para SQL Server 2016. La preparación realizadas para este fue completamente autodidacta y con recursos gratuitos disponibles en el internet. Tengo que decir que se me complicaron algunas partes del examen pero logre una calificación aprobatoria. Si en algún momento realizo mas aquí las veras
+Una forma interesante de validar los conocimientos es realizando exámenes de certificación. Hasta el momento he presentado el examen de Consultas para SQL Server 2016. La preparación realizadas para este fue completamente autodidacta y con recursos gratuitos disponibles en el internet. Tengo que decir que se me complicaron algunas partes del examen pero logre una calificación aprobatoria. Si en algún momento realizo más aquí las veras
 
 <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="12745f9f-20c4-42b6-b882-7faafd344d82">
 </div>

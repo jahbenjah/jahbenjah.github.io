@@ -70,3 +70,17 @@ Aquí he descubierto que esta ruta de aprendizaje me llevará mas de los 50 día
 ¿ASP.NET Core cumple con los 12 puntos de las aplicaciones de 12 factores?
 
 ## Días 6 - 1 : Conceptos fundamentales de Azure Kubernetes Services
+
+
+
+## Libros de Kubernetes "gratuitos"
+
+Nuestros datos personales se han vuelto la moneda de cambio en estos tiempos modernos. Aquí te dejo unos libros o recursos que puedes obtener a cambio de tus datos personales como Nombre, Correo y teléfono. Yo sin pensarlo mucho he decido que vale la pena el intercambio
+
+[Kubernetes: Up and Running, Second Edition](https://azure.microsoft.com/en-us/resources/kubernetes-up-and-running/)
+  
+[Cloud Native DevOps With Kubernetes](https://www.nginx.com/resources/library/cloud-native-devops-with-kubernetes/)
+
+[Using .NET Core, Docker, and Kubernetes Succinctly](https://www.syncfusion.com/ebooks/using-netcore-docker-and-kubernetes-succinctly) 
+
+[Cloud Native DevOps With Kubernetes](https://www.syncfusion.com/ebooks/kubernetes-succinctly) 

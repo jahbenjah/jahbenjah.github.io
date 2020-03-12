@@ -84,3 +84,44 @@ Nuestros datos personales se han vuelto la moneda de cambio en estos tiempos mod
 [Using .NET Core, Docker, and Kubernetes Succinctly](https://www.syncfusion.com/ebooks/using-netcore-docker-and-kubernetes-succinctly) 
 
 [Cloud Native DevOps With Kubernetes](https://www.syncfusion.com/ebooks/kubernetes-succinctly) 
+
+## Creando un cruster de Kubernetes en Azure
+
+Para crear un cluster de Kubernetes en Azure se puede usar el portal, las plantillas ARM y las linea de comandos o CLI.
+
+Una vez que tienes instlada de CLI de Azure en tu equipo debes logearte con el comando `az login` y completar confirmar el dispositivo en un navegador esto te regresa un json similar al que te muestro abajo
+
+```json
+benjamin@laptop:~/source/repos/kuard$ az login
+Abriendo en una sesión existente del navegador
+You have logged in. Now let us find all the subscriptions to which you have access...
+[
+  {
+    "cloudName": "AzureCloud",
+    "homeTenantId": "4de3de93b-4e4b-338e-b6d6-973d2760546d",
+    "id": "06eacb4a-292e-4fa0-92bf-b97d35f34aa4",
+    "isDefault": true,
+    "managedByTenants": [],
+    "name": "Pago por uso",
+    "state": "Enabled",
+    "tenantId": "4de6789-3e3b-789e-d2b2-789d2760877f",
+    "user": {
+      "name": "tu@email.com",
+      "type": "user"
+    }
+  }
+```
+
+Lo primero que se debe crear es un grupo de recursos donde se ubicara el cluster de Kubernetes. Para crear un grupo de recursos en Azure con la linea de comandos se usa el comando `az group create` y requiere por lo menos los parametros de nombre y la región de Azure donde se ubicara
+
+```bash
+az group create --name mi-grupo-de-recursos --location=centralus
+```
+
+Parsa crear un cluster de Kubernetes dentro de un grupo de recurso se usa el comando `az aks create` especificando por lo menos el grupo de recursos y el nombre del cluster
+
+```
+az aks create --resource-group=mi-grupo-de-recursos --name=mi-cluster
+```
+
+> **Nota** asegurate de revisar los valores default al crear el cluster porque ahi se encuentran el tamaño de las maquinas virtuales y el número de nodos. Puedes usar `az aks create --help` para ver la lista completa de opciones y los valores por default.

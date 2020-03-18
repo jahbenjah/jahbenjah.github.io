@@ -14,13 +14,13 @@ Los mayoría de los recursos para aprender ASP.NET Core están en inglés. Esta 
 
 <img data-src="/little-aspnetcore-book/cover.webp" class="lazyload"  alt="Portada de El pequeño libro de ASP.NET Core">
 
-La traducción sin duda puede contener errores así que te animamos a reportar cualquier error que encuentres en el libro. Puedes abrir una incidencia en el [repositorio Github](https://github.com/jahbenjah/little-aspnetcore-book/issues).
+La traducción sin duda puede contener errores así que te animamos a reportar cualquier error que encuentres en el libro. Puedes abrir una incidencia en el [repositorio Github](https://github.com/jahbenjah/little-aspnetcore-book/issues) o mandar tú propia correccion en forma de un Pull Request.
 
-Los planes a futuro para esta traducción son mantenerla actualizada cada que se actualice la edición en ingles esta sera gratuita siempre. Adicionalmente tengo planeado hacer un **versión extendida** con explicaciones detalladas donde sea necesario , un glosario, sección de ejercicios resueltos y propuestos y por su puesto actualizada con la version 3.1 que salio en diciembre del 2019 y esta marcada como LTS es decir es una versión que tendrá soporte por 3 años.
+Los planes a futuro para esta traducción son mantenerla actualizada cada que se actualice la edición en ingles esta sera gratuita siempre. Adicionalmente tengo planeado hacer un **versión extendida** con explicaciones detalladas donde sea necesario, un glosario, sección de ejercicios resueltos y propuestos y por su puesto actualizada con la version 3.1 que salio en diciembre del 2019 y esta marcada como LTS es decir es una versión que tendrá soporte por 3 años.
 
 > **Actualización en proceso** estoy comenzando a actualizar el contenido del libro para usar la versión 3.1 de ASP.NET Core
 
-# Una introducción amigable a la programación web
+## Una introducción amigable a la programación web
 
 El pequeño libro de ASP.NET Core está estructurado como un tutorial. Construirás una aplicación de principio a fin y con ello aprenderás:
 
@@ -33,7 +33,7 @@ El pequeño libro de ASP.NET Core está estructurado como un tutorial. Construir
 
 No te preocupes, no necesitas conocer nada sobre ASP.NET Core (o algo de lo anterior) para iniciar.
 
-# Nota de la traducción
+## Nota de la traducción
 
 Este libro fue escrito usando la version 2.0 de ASP.NET Core para que todo lo descrito en el libro funcione correctamente es necesario tener instalado el [SKD de .NET Core 2.0](https://dotnet.microsoft.com/download/dotnet-core/2.0).
 
@@ -49,14 +49,14 @@ mkdir AspNetCoreTodo
 cd AspNetCoreTodo
 ```
 
-Debe asegurarse que tiene instalado el SDK 2.0
+Debe asegurarse que tiene instalado el _SDK 2.0_
 
 ```
 dotnet --list-sdks
 2.0.3 [C:\Archivos de programa\dotnet\sdk]
 ```
 
-Crea un archivo global.json con el comando .
+Crea un archivo _global.json_ con el comando .
 
 ```
 dotnet new globaljson --sdk-version 2.0.3
@@ -65,8 +65,11 @@ dotnet new globaljson --sdk-version 2.0.3
 donde la versión 2.0.3 es la que da la salida del comando anterior.
 
 Si usas **Visual Studio** hay un combo que permite seleccionar la versión 2.0 al momento de crear el proyecto.
+Si prefieres una explicación en video aca te dejo una donde uso Ubuntu 19.10 para mostrar el funcionamiento del archivo global.json.
 
-# Como obtener el libro
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lN5bW9MTRa8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Como obtener el libro
 
 Puedes leer en línea desde el sitio [aspnetcoremaster.com](https://aspnetcoremaster.com/little-aspnetcore-book/) o descargar la version en [pdf](https://github.com/jahbenjah/little-aspnetcore-book/blob/spanish/ElPeque%C3%B1oLibroDeASPNETCore.pdf) desde aquí
 

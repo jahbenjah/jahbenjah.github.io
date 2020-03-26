@@ -217,16 +217,6 @@ A continuación un serie de preguntas y respuestas que pueden servir como introd
     </div>
 </div>
 
-
-<div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-    <h3 itemprop="name"></h3>
-    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-        <div itemprop="text">
-            <p></p>
-        </div>
-    </div>
-</div>
-
 <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
     <h3 itemprop="name">¿Cuáles son los principales componentes de Entity Framework Core?</h3>
     <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">

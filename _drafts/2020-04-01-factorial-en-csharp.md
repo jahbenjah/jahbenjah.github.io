@@ -23,7 +23,7 @@ Este número es se explica en los primeros cursos de matemáticas y es un ejerci
 
 El motivo principal de incluir este ejercicio en una prueba para programadores es, desde mi punto de vista, ver como el candidato que tanto maneja el lenguaje de programación y revisar si maneja el tema de recursividad.
 
-Este número crece muy rapidamente como puedes ver en la siguiente tabla
+Este número crece muy rápidamente como puedes ver en la siguiente tabla
 
 |**_n_**| Expresión  | Valor  |
 |-------|---|---|

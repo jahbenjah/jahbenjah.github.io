@@ -30,7 +30,7 @@ dotnet new mvc --auth Individual -o IntroIdentity
 |MultiOrg     |Organizational authentication for multiple tenants|
 |Windows      |Windows authentication                  |
 
-ASP.NET Core Identity es un monstruo de muchas cabezas por lo que en este articulo solo veremos temas relacionados con la autenticación de cuentas Individuales usando un proyecto de MVC que se crea sin autenticacion y explicamos detalladamente los pasos a seguir para agregar para ASP.NET Core Identity de forma manula. Adicionalmente explicamos  como realizar algunas actividades frecuentes como crear un usuario, crear un rol, cambiar la configuración predefinida. 
+ASP.NET Core Identity es un monstruo de muchas cabezas por lo que en este articulo solo veremos temas relacionados con la autenticación de cuentas Individuales usando un proyecto de MVC que se crea sin autenticacion y explicamos detalladamente los pasos a seguir para agregar para ASP.NET Core Identity de forma manual. Adicionalmente explicamos  como realizar algunas actividades frecuentes como crear un usuario, crear un rol, cambiar la configuración predefinida. 
 
 
 # Agregando ASP.NET Core Identity
@@ -41,7 +41,7 @@ Todo comienza en la linea de comandos para crear un proyecto web MVC sin autenti
 dotnet new mvc -o IntroduccionIdentity
 ```
 
-> **<abbr lang="en" title="too long; didn't read">TL;DR</abbr>** esta sección explica basicamente las diferencias entre los un proyecto MVC con autenticación y uno que incluye la autenticación. Una forma facil de ver estas direncias es creando un proyecto sin autenticacion y agregar el control de código con Git. Eliminar todo y volver a crear el proyecto con el parametro de autentificacón y ver las diferencias.
+> **<abbr lang="en" title="too long; didn't read">TL;DR</abbr>** esta sección explica básicamente las diferencias entre los un proyecto MVC con autenticación y uno que incluye la autenticación. Una forma fácil de ver estas diferencias es creando un proyecto sin autenticación y agregar el control de código con Git. Eliminar todo y volver a crear el proyecto con el parámetro de autentificacón y ver las diferencias.
 
 Después necesitamos agregar lo paquetes de Nuget para Entity Framework Core y ASP.NET Core Identity. 
 
@@ -62,7 +62,7 @@ dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore
 dotnet add package Microsoft.AspNetCore.Identity.UI
 ```
 
-`Microsoft.AspNetCore.Identity.EntityFrameworkCore` contiene las inmplementaciones de las interfaces de ASP.NET Core Identity especificas para EF Core. lo que nos permite crearna clase que derivada de `IdentityDbContext` para crear las tablas de la base de datos.
+`Microsoft.AspNetCore.Identity.EntityFrameworkCore` contiene las implementaciones de las interfaces de ASP.NET Core Identity especificas para EF Core. lo que nos permite crear una clase que derivada de `IdentityDbContext` para crear las tablas de la base de datos.
 
 ```cs
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -90,8 +90,56 @@ Estoy preparando una lista de reproducción dedicada al tema de ASP.NET Core Ide
    
 2.  Personalizar la tabla AspNetUsers
 
-    <iframe width="805" height="453" src="https://www.youtube.com/embed/MqcLBewsNUE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+   <iframe width="805" height="453" src="https://www.youtube.com/embed/ckkvuA6epY0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 3. Scaffolding ASP.NET Core
    
-   <iframe width="805" height="453" src="https://www.youtube.com/embed/ckkvuA6epY0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="805" height="453" src="https://www.youtube.com/embed/MqcLBewsNUE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+4. Cambiar de base de datos
+
+En este video se muestra como usar el proveedor de Entity Framework Core para MySQL usando el paquete de Nuget `Pomelo.EntityFrameworkCore.MySql` ya que el proveedor oficial de Oracle, al momento de grabar este video presentaba un bug que no permitía usarlo.
+
+> En el proceso para cambiar de base de datos puedes perder datos. Hazlo con cuidado
+
+Primero debes eliminar la carpeta donde se almacenan las migraciones para cambiar el el proveedor de Entity Framework. Este es el procedimiento sugerido porque evita tener que modificar la base de datos anterior. Si no te importan los datos que tienes en la base de datos creada por ASP.NET Core Identity puedes usar la linea de comandos para eliminar la base de datos y quitar las migraciones
+
+```bash
+dotnet ef database drop
+dotnet ef migrations remove
+```
+Posteriormente es necesario instalar el nuevo proveedor de Entity.Framework Core. En este caso usamos el proveedor para MySQL
+
+Adicionalmente es recomendable eliminar el paquete de Nuget del proveedor anterior puedes hacerlo editando el archivo _.csproj_.
+
+```
+dotnet add package Pomelo.EntityFrameworkCore.MySql --version 3.1.1
+```
+
+lo siguiente que debes hacer es cambiar la cadena de conexión en el archivo _appsettings.json_ por el ejemplo la cadena de conexión para MySQl es.
+
+```sql
+server=192.168.0.9;database=identity;user id=root;password=root;port=3306
+```
+
+Especificar que se usará el nuevo proveedor en la clase Startup
+
+```cs
+UseMySql(...)
+```
+
+El paso siguientes es agregar una nueva migración con la linea de comandos de Entityt Framework Core  
+
+```
+dotnet ef migrations add "Se cambia a MySQL"
+```
+
+Finalmente debes acutalizar la base de datos
+
+```
+dotnet ef database update
+```
+
+Puedes ver el video con estos pasos aqui
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/X4Y9JwVC8QQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

@@ -119,10 +119,9 @@ captura.SaveAsFile("Captura.PNG");
 Par ver el codigo fuente de la pagina actual en usa la propiedad `PageSource` que regresa una cadena con todo el codigo HTML de la pagina. Puedes procesar en memoria esta cadena o guardarla en un archivo para su uso posterior.
 
 ```cs
-var html = driver.PageSourcer;
+var html = driver.PageSource;
 Console.Write(html);
-
-File
+File.WriteAllLines("file.html",html);
 
 ```
 
@@ -136,7 +135,7 @@ Esto realizando un curso de Seleniun con C# en [mi canal de YouTube](https://www
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/c4C95oi-v6E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/c4C95oi-v6E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IEZ_CmimpXQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 ## Automatizando un inicio de sesión con Selenium y C#

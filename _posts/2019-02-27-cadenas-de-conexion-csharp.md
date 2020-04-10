@@ -7,42 +7,73 @@ image:
   path: /img/og-connectionstring.jpg
   height: 358
   width: 683
-last_modified_at: 2019-11-13 10:24:25 +0000
-description: Creación y ejemplos de cadena de conexión SQL Server, MySQL , Oracle , PostgreSQL, Firebird y SQLite usando la clase ConnectionStringBuilder de .NET usando C# . 
+last_modified_at: 2020-04-09 22:24:25 +0000
+description: Cadena de conexión SQL Server, MySQL, Oracle, PostgreSQL, Firebird y SQLite usando la clase ConnectionStringBuilder de .NET Core usando C# . 
 ---
 
-En este tutorial te mostramos como crear, manipular y validar la cadena de conexión SQL Server ✅, MYSQL, Oracle, Firebird, PostgreSQL y Sqlite usando C# y .NET Core.
+Una cadena de conexión es un conjunto de claves y valores separados por punto y coma *;* . El conjunto de claves y valores esta conectado por el signo de igual por ejemplo `clave1=valor1;clave2=valor2`. El conjunto de claves y valores disponibles están definidos por el fabricante de la base de datos y muchas veces hay inconsistencias entre las claves de deferentes proveedores de base de datos.
 
-<img data-src="/img/connectionstring.webp" class="lazyload"  alt="Script Tag Helper">
+En este tutorial te muestro como crear, manipular y validar la cadena de conexión para SQL Server, MYSQL, Oracle, Firebird, PostgreSQL y Sqlite usando C# y .NET Core. Para ello utilizamos la clase `ConnectionStringBuilder` que implementan los proveedores de **ADO.NET**. Para cada proveedor de ADO.NET es necesario instalar el paquete de Nuget correspondiente e importar el espacio de nombres con la instrucción [using]({% post_url 2019-01-03-cuatro-formas-de-usar-la-palabra-clave-using-de-csharp %}).
 
-Para ello utilizamos la clase `ConnectionStringBuilder` que implementan los proveedores de ADO.NET. Para cada proveedor de ADO.NET es necesario instalar el paquete de Nuget correspondiente e importar el espacio de nombres con la instrucción [using]({% post_url 2019-01-03-cuatro-formas-de-usar-la-palabra-clave-using-de-csharp %}).
+<img data-src="/img/connectionstring.webp" class="lazyload"  alt="Pantalla de Visual Studio que muestra la definicion de la clase SqlConnectionStringBuilder">
 
-Es importante mencionar que para cada base de datos hay una gran cantidad de parámetros que se pueden agregar a una cadena de conexión y estos cambian de dependiendo con cada proveedor. Muchos de ellos tienes un nombre que permite aclarar su función pero de otros es necesario que veas la documentación del proveedor. En Visual Studio o Visual Studio Code puedes ver los parámetros que contiene cada base de datos usando Intellisense o Presionando F12 para ir a la definición del tipo.
+En el caso más simple puedes crear la cadena de conexión forma manual y hacerlo de forma programática seria un desperdicio de tiempo (ver el caso para SQLite) pero en ocasiones puede ser un verdadero martirio por el número de claves necesarios  y como ejemplo una cadena de conexión para SQL Server con 9 claves.
+
+```
+Data Source=.;Initial Catalog=master;User ID=sa;Password=PasswordO1.;MultipleActiveResultSets=True;Connect Timeout=100;Encrypt=False;Application Name=MyApp;Current Language=spanish
+
+```
 
 # Cadena de conexión SQL Server C#
 
-Para el caso de SQL Server hay varias variantes de la cadena de conexion y depende de si usas la autenticación integrada de Windows o un usuario de SQL. Generalmente es preferible usar un usuario y contraseña de SQL Server para aplicar el [principio de menor autoridad](https://es.wikipedia.org/wiki/Principio_de_m%C3%ADnimo_privilegio).
+Para el caso de SQL Server hay 2 variantes de la cadena de conexión y depende de si usas la autenticación integrada de Windows o un usuario de SQL. Generalmente es preferible usar un usuario y contraseña de SQL Server para aplicar el [principio de menor autoridad](https://es.wikipedia.org/wiki/Principio_de_m%C3%ADnimo_privilegio).
 
-## Ejemplo de cadena de conexión SQL Server con usuario y contraseña
+Los ejemplos siguientes funcionan en la mayoría de las versiones de SQL Server desde la 2008 , 2012, 2014 , 2016 ,2017 y 2019 en Windows. Para SQL Server 2016 y posteriores también tienen soporte para Linux.
 
-Para este caso estamos especificando la dirección IP del servidor donde se encuentra la estancia de SQL Server pero tambien pudimos utilizar un punto `.` o localhost en caso de que el servidor se encuentre en nuestra maquina de desarollo o el nombre de la instancia de SQL Server en caso de que esta sea dirente a la defualt por ejemplo `SqlServer\NombreInstancia`.
+## Cadena de conexión SQL Server usando la autenticación de Windows
+
+En el caso de que uses la autenticación de Windows puedes usar el siguiente ejemplo de cadena de conexion para SQL Server. Esto lo que hacer es reutilizar las credenciales del usuario de Windows para conectate a SQL Server.
+
+```
+Data Source=.;Initial Catalog=master;Integrated Security=True
+```
+ 
+ Es importante asegurate que el parámetro `Integrated Security` no lo uses en combinación con con un usuario y contraseña SQL Server toma utiliza la autenticación de Windows en lugar de la de SQL Server.
+
+
+## Cadena de conexión SQL Server con usuario y contraseña
+
+Para el caso de SQL Server podemos especificar la dirección IP del servidor donde se encuentra la instancia de SQL Server pero también puedes utilizar un punto `.` o `localhost` en caso de que el servidor se encuentre en nuestra máquina de desarollo o el nombre de la instancia de SQL Server en caso de que esta sea diferente a la default por ejemplo `SqlServer\NombreInstancia`.
 
 ```clean
+
 Data Source=192.168.0.1;Initial Catalog=master;User ID=sa;Password=TuContraseña;Application Name=MyApp
+
+Data Source=.;Initial Catalog=master;User ID=sa;Password=TuContraseña;Application Name=MyApp
+
+Data Source=localhost;Initial Catalog=master;User ID=sa;Password=TuContraseña;Application Name=MyApp
 ```
 
 > **Para obtener el nombre de la instancia de SQL Server** puedes ejecutar la consulta `SELECT @@SERVERNAME + '\' + @@SERVICENAME AS NombreSQLServerInstancia;`
 
+## Usando una instancia con nombre de SQL Server
+
+En el caso de que uses una instancia con nombre de SQL Server debes especificar el nombre seguidor del servidor seguido por el nombre de la instancia. Esto también aplica para la version de SQL Server conocida como [LocalDb](https://docs.microsoft.com/sql/database-engine/configure-windows/sql-server-express-localdb?view=sql-server-ver15)
 
 ```clean
 Server=(localdb)\mssqllocaldb;Database=Blogging;Trusted_Connection=True;Application Name=MyApp
 ```
 
+## Parámetros adicionales  
+
 Es importante notar la presencia del parámetro **Application Name** este campo se puede utilizar para identificar que acciones ejecuta una aplicación y es muy util en el diagnostico de problemas de desempeño en [SQL Server Profiler](https://docs.microsoft.com/sql/tools/sql-server-profiler/sql-server-profiler?view=sql-server-2017) . Es recomendable siempre incluirlo.
 
-2. Paquete de Nuget es : [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/) y el espacio de nombres `System.Data.SqlClient`.
 
-3. Para poder generar la cadena cadena de conexión de SQL Server usando C# puedes ejecutar el siguiente código
+## Crear una cadena de conexión para SQL Server
+
+Paquete de Nuget es : [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/) y el espacio de nombres `System.Data.SqlClient`.
+
+Para poder generar la cadena cadena de conexión de SQL Server usando C# puedes ejecutar el siguiente código
 
 ```csharp
 SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
@@ -59,7 +90,7 @@ Console.WriteLine(builder.ConnectionString);
 Una forma de validar que una cadena de conexión es abriendo la comunicación con con la base de datos. Aquí solo mostramos la forma de hacerlo con SQL Server pero es muy similar para los de mas proveedores de ADO.NET.
 
 ```csharp
-using (SqlConnection connection = new SqlConnection("Data Source=192.168.0.1;Initial Catalog=master;User ID=sa;Password=TuContraseña;Application Name=MyApp"))
+using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
 {
     try
     {
@@ -73,9 +104,9 @@ using (SqlConnection connection = new SqlConnection("Data Source=192.168.0.1;Ini
 }
 ```
 
-# verificar la versión de SQL Server
+## Verificar la versión de SQL Server
 
- Para verificar la version puedes ejecutar el siguiente código de C# que lee la variable global `@@version` de SQL Server.
+ Para verificar la version que tiene la instancia de SQL Server usando el lenguaje de programación C# puedes ejecutar el siguiente código de que lee la variable global `@@version` de SQL Server.
 
 ```cs
 using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
@@ -109,6 +140,7 @@ Microsoft SQL Server 2016 (SP2) (KB4052908) - 13.0.5026.0 (X64)
         Copyright (c) Microsoft Corporation
         Enterprise Evaluation Edition (64-bit) on Windows 10 Pro N 10.0 <X64> (Build 18362: ) (Hypervisor)
 ```
+
 
 # Cadena de conexión MySQL
 
@@ -258,3 +290,7 @@ builder.Password = "password";
 builder.ApplicationName = "";
 Console.WriteLine(builder.ConnectionString);
 ```
+
+# Conclusión
+
+Es importante mencionar que para cada base de datos hay una gran cantidad de parámetros que se pueden agregar a una cadena de conexión y estos cambian de dependiendo con cada proveedor. Muchos de ellos tienes un nombre que permite deternminar su función pero de otros es necesario que veas la documentación del proveedor. En Visual Studio o Visual Studio Code puedes ver los parámetros que contiene cada base de datos usando Intellisense o Presionando F12 para ir a la definición del tipo.

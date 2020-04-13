@@ -1,5 +1,5 @@
 ---
-layout: plantillas
+layout: page
 title: Plantillas
 description: Plantilla HTML5 con Bootstrap 4 para ASP.NET Core. 
 ---
@@ -23,4 +23,4 @@ dotnet run
 
 Aquí un captura de pantalla de la plantilla
 
-<img data-src="/img/ExtensionDockerVSCode.png" class="lazyload" alt="Captura de pantalla del Panel de administración">
+<img data-src="/img/admin.png" class="lazyload" alt="Captura de pantalla del Panel de administración">

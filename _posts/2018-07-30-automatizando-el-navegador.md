@@ -137,6 +137,11 @@ Esto realizando un curso de Seleniun con C# en [mi canal de YouTube](https://www
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/IEZ_CmimpXQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MVWZ2OtBdNw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/odFZZ9WalFs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SVDDgChE-vg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Automatizando un inicio de sesión con Selenium y C#
 

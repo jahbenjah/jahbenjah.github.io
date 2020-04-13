@@ -138,3 +138,7 @@ Después de ejecutar  estas sentencias SQL podemos revisar la nueva base de dato
 ## Conclusión
 
 Esta forma de usar SQL Server sirve para probar el concepto de Servicio en Docker Compose. El comando que podemos usar para detener el contenedor es `docker-compose down`. La ventaja de usar los volumen de Docker es que nuestras bases de datos quedan en la carpeta local y podemos detiene y ejecutar el contenedor. Todo este escenario esta pensando principalmente para entornos de desarollo y es un primer paso para pensar en entornos de producción.
+
+Este artículo es una transcripción con algunos ajustes del video. Si prefieres ver el video aquí lo tienes. Hay material nuevo que no esta incluido en el blog.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/j-aBeIY0Js8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

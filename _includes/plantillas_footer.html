@@ -1,0 +1,64 @@
+<!-- ======= Footer ======= -->
+<footer id="footer">
+
+    <!-- {%- include plantillas_newsletter.html -%} -->
+
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-6 col-md-6 footer-contact">
+                    <h4>Contacto</h4>
+                    <p>
+                        {{ site.author }} <br>
+                        <strong>Correo:</strong> <a href="mailto:{{ site.email }}">{{ site.email }}</a> <br>
+                    </p>
+                </div>
+
+                <div class="col-lg-6 col-md-6 footer-info">
+                    <h3>Acerca de {{ site.title | escape }}</h3>
+                    <p>{{ site.description | escape }} </p>
+                    <div class="social-links mt-3">
+
+                        {%- if site.facebook_username -%}
+                        <a class="facebook"
+                            href="https://www.facebook.com/{{ site.facebook_username| cgi_escape | escape }}">
+                            <i class="bx bxl-facebook"></i></a>
+                        {%- endif -%}
+
+                        {%- if site.github_username -%}
+                        <a class="github" href="https://github.com/{{ site.github_username| cgi_escape | escape }}"><i
+                                class="bx bxl-github"></i></a>
+                        {%- endif -%}
+                        {%- if site.linkedin_username -%}
+                        <a class="linkedin"
+                            href="https://www.linkedin.com/in/{{ site.linkedin_username| cgi_escape | escape }}"><i
+                                class="bx bxl-linkedin"></i></a>
+                        {%- endif -%}
+                        {%- if site.twitter_username -%} <a class="twitter"
+                            href="https://twitter.com/{{ site.twitter_username| cgi_escape | escape }}"><i
+                                class="bx bxl-twitter"></i></a>
+                        {%- endif -%}
+                        {%- if site.youtube_username -%} <a class="youtube"
+                            href="https://www.youtube.com/{{ site.youtube_username| cgi_escape | escape }}"><i
+                                class="bx bxl-youtube"></i></a>
+                        {%- endif -%}
+                        {%- if site.youtube_channel -%} <a class="youtube"
+                            href="https://www.youtube.com/channel/{{ site.youtube_channel| cgi_escape | escape }}"><i
+                                class="bx bxl-youtube"></i></a>
+                        {%- endif -%}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="copyright">
+            &copy; Copyright <strong><span>{{ site.title | escape }}</span></strong>. Todos los derechos reservados
+        </div>
+        <div class="credits">
+            Diseñado por <a href="https://bootstrapmade.com/" rel="nofollow">{{ site.title | escape }}</a>
+        </div>
+    </div>
+</footer>

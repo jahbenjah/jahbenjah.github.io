@@ -1,6 +1,6 @@
 ---
 title : Panel de Administración
-layout: plantillas
+layout: detalles
 web: https://www.facebook.com/FotoArteAlbertoGruel/
 descripcion: Plantilla HTML5 con Bootstrap 4 para ASP.NET Core. 
 imagenes: [/img/admin.png]

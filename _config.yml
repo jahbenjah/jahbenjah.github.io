@@ -30,7 +30,6 @@ google_analytics: UA-130293099-1
 header_pages:
  - contacto.md
  - plantillas.md
- - platillashtml.md
  
 plugins:
   - jekyll-sitemap

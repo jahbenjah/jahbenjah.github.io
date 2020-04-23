@@ -1,26 +1,45 @@
 ---
-layout: page
 title: Plantillas
-description: Plantilla HTML5 con Bootstrap 4 para ASP.NET Core. 
+layout: plantillas
 ---
 
-Próximamente contaremos con plantillas disponibles en [Nuget.org](https://www.nuget.org/packages/BenjaminCamacho.Templates.Admin/) para usar en tu aplicación ASP.NET Core. Puedes revisar la primera plantilla en que estamos trabajando
 
-1. Para instalar ejecuta el siguiente comando  
-```
-dotnet new --install BenjaminCamacho.Templates.Admin::0.0.2
-```
-2. Para crear un proyecto con esta plantilla
-```
-dotnet new admin -n MiProyecto
-```
-3. Abre la carpeta _MiProyecto_ revisa los detalles de la plantilla
 
-```
-cd MiProyecto
-dotnet run
-```
+<!-- ======= Portfolio Section ======= -->
+<section id="portfolio" class="portfolio">
+  <div class="container">
 
-Aquí un captura de pantalla de la plantilla
+    <div class="row">
+      <div class="col-lg-12 d-flex justify-content-center">
+        <ul id="portfolio-flters">
+          <li data-filter="*" class="filter-active">Todos</li>
+          {% for categoria in site.data.categorias %}
 
-<img data-src="/img/admin.png" class="lazyload" alt="Captura de pantalla del Panel de administración">
+          <li data-filter=".filter-{{ categoria.nombre }}">{{ categoria.descripcion }}</li>
+
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+    <div class="row portfolio-container">
+      {% for plantilla in site.plantillas %}
+      <div class="col-lg-4 col-md-6 portfolio-item filter-admin">
+        <div class="portfolio-wrap">
+          <img src="{{ plantilla.imagenes | first }}" class="img-fluid" alt="" >
+          <div class="portfolio-info">
+            <h4> {{ plantilla.title }}</h4>
+            <p> {{ plantilla.descripcion }}</p>
+            <div class="portfolio-links">
+              <a href="{{ plantilla.imagen }}" title="{{ plantilla.title }}" data-gall="portfolioGallery" class="venobox"><i
+                  class="bx bx-plus"></i></a>
+              <a href="{{ plantilla.url }}" title="Detalles"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section><!-- End Portfolio Section -->
+

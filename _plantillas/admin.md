@@ -8,14 +8,18 @@ imagenes: [/img/admin.png]
 
 Próximamente contaremos con plantillas disponibles en [Nuget.org](https://www.nuget.org/packages/BenjaminCamacho.Templates.Admin/) para usar en tu aplicación ASP.NET Core. Puedes revisar la primera plantilla en que estamos trabajando
 
-1. Para instalar ejecuta el siguiente comando  
+1. Para instalar ejecuta el siguiente comando
+
 ```
-dotnet new --install BenjaminCamacho.Templates.Admin::0.0.2
+dotnet new --install BenjaminCamacho.Templates.Admin::0.0.3
 ```
+
 2. Para crear un proyecto con esta plantilla
+
 ```
 dotnet new admin -n MiProyecto
 ```
+
 3. Abre la carpeta _MiProyecto_ revisa los detalles de la plantilla
 
 ```

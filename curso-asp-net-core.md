@@ -20,6 +20,13 @@ Mira este vídeo para empezar
 
 Recibirás **GRATIS** un ebook para aprovechar al máximo este Curso de **ASP.NET Core**
 
+<form action="" method="post">
+  <label for="nombre">Nombre</label>
+  <input type="text" name="nombre" id="nombre"> 
+  <label for="nombre">Email</label>
+  <input type="text" name="email" id="email">
+  <input type="submit" value="Quiero aprender ASP.NET Core">
+</form>
 
 # Curso de ASP.NET Core en YouTube Gratis y 100% práctico
 

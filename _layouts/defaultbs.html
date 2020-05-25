@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "es" }}">
+
+{%- include headbs.html -%}
+
+<body>
+  {%- include headerbs.html -%}
+
+  <main id="main" data-aos="fade-in">
+    {{ content }}
+  </main>
+
+  {%- include footerbs.html -%}
+  <!-- <script src="/assets/js/site.js" async></script> -->
+</body>
+
+</html>

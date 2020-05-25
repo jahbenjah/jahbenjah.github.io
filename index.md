@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: homebs
 title: Bienvenido
 lazy: false
 ---

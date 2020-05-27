@@ -50,7 +50,7 @@ namespace IntroSelenium
 }
 ```
 
-<img data-src="/img/selenium-abrir.png" class="lazyload"  alt="Pantalla de Chrome">
+<img data-src="/img/selenium-abrir.webp" class="lazyload"  alt="Pantalla de Chrome">
 
 
 Para cerrar Chrome con Selenium usamos el método `Close` o  `Dispose`. Puedes colocar una espera de 5 segundo con una llamada al método `Thread.Sleep(5000);`. 

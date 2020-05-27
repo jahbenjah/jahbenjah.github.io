@@ -44,7 +44,7 @@ Aquí mostramos unicamente las creación de un libro con una hoja con el fin de 
 
 Para este proyecto usamos la plantilla MVC con autenticación de cuentas individuales esto para tener Entity Framework instalados y funcionando. Usamos el asistente de creación de controladores que usan Entity Framework para las operaciones CRUD
 
-<img data-src="/img/agregar-controlador-mvc.PNG" class="lazyload" alt="Agregar controlador MVC Visual Studio 2019">
+<img data-src="/img/agregar-controlador-mvc.webp" class="lazyload" alt="Agregar controlador MVC Visual Studio 2019">
 
 El modelo que creamos corresponde a un _Producto_. Esta clase que usa las anotaciones de datos para especificar restricciones al crear la tabla en la base de datos como la longitud de los campos, el nombre de la tabla y el esquema entre otras cosas. Adicionalmente porque lei que estas eran usadas cuando exportabas una colección a Excel pero por ahora no he logrado que funcionen. Abajo los detalles de la clase producto:
 

@@ -3,7 +3,7 @@ title : Panel de Administración
 layout: detalles
 web: https://www.facebook.com/FotoArteAlbertoGruel/
 descripcion: Plantilla HTML5 con Bootstrap 4 para ASP.NET Core. 
-imagenes: [/img/admin.png]
+imagenes: [/img/admin.webp]
 ---
 
 Próximamente contaremos con plantillas disponibles en [Nuget.org](https://www.nuget.org/packages/BenjaminCamacho.Templates.Admin/) para usar en tu aplicación ASP.NET Core. Puedes revisar la primera plantilla en que estamos trabajando

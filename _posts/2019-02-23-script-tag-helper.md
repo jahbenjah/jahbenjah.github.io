@@ -4,7 +4,7 @@ title:  "Script Tag Helper"
 date:   2019-02-23 12:00:01 +0000
 categories: asp.net core
 image:
-  path: /img/og-scripttaghelper.jpg
+  path: /img/og-scripttaghelper.webp
   height: 331
   width: 632
 ---

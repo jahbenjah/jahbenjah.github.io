@@ -50,7 +50,7 @@ defaults:
       lang: "es"
       lazy: true
       image:
-        path: /img/og-image.jpg
+        path: /img/og-image.webp
         height: 347
         width: 663
       author: benjamin

@@ -10,7 +10,7 @@
   // Preloader
   $(window).on('load', function() {
     if ($('#preloader').length) {
-      $('#preloader').delay(50).fadeOut('slow', function() {
+      $('#preloader').delay(5).fadeOut('slow', function() {
         $(this).remove();
       });
     }
@@ -126,13 +126,5 @@
   //     }
   //   }
   // });
-
-  // Initi AOS
-  $(window).on('load', function() {
-    AOS.init({
-      duration: 500,
-      once: true
-    });
-  });
 
 })(jQuery);

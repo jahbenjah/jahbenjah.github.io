@@ -4,7 +4,7 @@ title:  "Entity Framework Core con MySql"
 date:   2019-03-03 12:00:01 +0000
 categories: entity framework core
 image:
-  path: /img/og-sakila.jpg
+  path: /img/og-sakila.webp
   height: 532
   width: 1016
 description: Tutorial de ASP.NET Core 2.2, Entity Framework Core y MySQL creando una aplicación MVC. con el enfoque conocido como "Code Firts"

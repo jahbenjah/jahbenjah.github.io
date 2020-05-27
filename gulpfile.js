@@ -7,7 +7,6 @@ const concat = require("gulp-concat");
 const cleanCSS = require("gulp-clean-css");
 const uglify = require("gulp-uglify");
 const rename = require('gulp-rename');
-const responsive = require('gulp-responsive')
 const imagemin = require('gulp-imagemin');
 
 gulp.task('imagemin', function () {

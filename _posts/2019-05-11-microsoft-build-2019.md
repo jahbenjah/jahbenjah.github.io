@@ -5,7 +5,7 @@ date:   2019-05-11 21:18:55 +0000
 categories: eventos
 permalink: /:categories/:title:output_ext
 image:
-  path: /img/og-msbuild2019.jpg
+  path: /img/og-msbuild2019.webp
   height: 324
   width: 619
 ---

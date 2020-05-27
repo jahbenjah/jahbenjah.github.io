@@ -5,7 +5,7 @@ date:   2019-09-20 11:41:01 +0000
 categories: aspnetcore
 permalink: /:categories/:title:output_ext
 image:
-  path: /img/og-tutorial.jpg
+  path: /img/og-tutorial.webp
   height: 378
   width: 729
 description: Tutorial de ASP.NET Core parte 2 cómo enviar correos electrónicos con SMTP y una cuenta de gmail.

@@ -4,7 +4,7 @@ title:  "Vistas parciales ASP.NET Core"
 date:   2019-03-25 12:00:01 +0000
 categories: asp.net core
 image:
-  path: /img/vistasparciales.PNG
+  path: /img/vistasparciales.webp
 ---
 
 En ASP.NET Core las vistas parciales permiten mantener secciones de marcado *HTML* separadas en diferentes archivos que después se utilizan para formar una página web completa. Las vistas parciales deben de tener un propósito especifico como incluir un conjunto de scripts o mostrar cierto contenido en caso de que se cumpla una condición. Las vistas parciales tienen una extensión _.cshtml_ y por convención su nombre comienzan con un guion bajo (_).

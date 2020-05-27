@@ -5,7 +5,7 @@ date:   2019-04-27 21:18:55 +0000
 categories: eventos
 permalink: /:categories/:title:output_ext
 image:
-  path: /img/azurebootcamp.jpg
+  path: /img/azurebootcamp.webp
   height: 433
   width: 827
 ---

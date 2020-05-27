@@ -4,7 +4,7 @@ title:  "Agregar Google Analytics ASP.NET Core"
 date:   2019-10-27 01:11:01 +0000
 permalink: /:categories/:title:output_ext
 image:
-  path: /img/og-tutorial.jpg
+  path: /img/og-tutorial.webp
   height: 378
   width: 729
 description: Se agregan los script de Google Analytics a una aplicación ASP.NET Core MVC usando vistas parciales, Tag Helper y ViewComponents. Se lee la configuración del archivo appsettigs.json y se usa la inyección de dependencias en las vistas.

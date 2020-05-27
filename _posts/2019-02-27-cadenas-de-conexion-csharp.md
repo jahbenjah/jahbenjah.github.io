@@ -4,7 +4,7 @@ title:  "Crear cadenas de conexión con C#"
 date:   2019-02-27 12:00:01 +0000
 categories: connectionstring
 image:
-  path: /img/og-connectionstring.jpg
+  path: /img/og-connectionstring.webp
   height: 358
   width: 683
 last_modified_at: 2020-04-09 22:24:25 +0000

@@ -4,7 +4,7 @@ title:  "Segundo calendario de adviento de C# en español"
 date:   2019-10-27 00:43:01 +0000
 permalink: /:categories/:title:output_ext
 image:
-  path: /img/og-image.jpg
+  path: /img/og-image.webp
   height: 347
   width: 663
 last_modified_at: 2019-11-20 09:45:00 +0000

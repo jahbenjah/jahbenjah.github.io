@@ -4,7 +4,7 @@ title:  "Agregar iconos a un proyecto de ASP.NET Core "
 date:   2019-02-16 12:00:01 +0000
 categories: asp.net core
 image:
-  path: /img/og-iconos.jpg
+  path: /img/og-iconos.webp
   height: 339
   width: 647
 ---

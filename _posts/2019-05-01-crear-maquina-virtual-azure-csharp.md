@@ -5,7 +5,7 @@ date:   2019-05-01 11:18:55 +0000
 categories: azure
 permalink: /:categories/:title:output_ext
 image:
-  path: /img/og-vmcsharp.jpg
+  path: /img/og-vmcsharp.webp
   height: 341
   width: 650
 ---

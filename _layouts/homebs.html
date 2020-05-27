@@ -29,7 +29,7 @@ layout: defaultbs
                         <p>{{ post.excerpt | strip_html | strip_newlines | truncate: 150 }} </p>
                         <div class="trainer d-flex justify-content-between align-items-center">
                             <div class="trainer-profile d-flex align-items-center">
-                                <img src="assets/img/trainer-1.jpg" class="img-fluid" alt="{{ page.image | escape}}">
+                                <!-- <img src="assets/img/autor.jpg" class="img-fluid" alt="{{ page.image | escape}}" loading="lazy"> -->
                                 {%- if page.author -%}
                                 {% assign post_authors = site.authors | where: 'short_name', page.author %}
                                 {% for author in post_authors %}

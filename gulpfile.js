@@ -7,6 +7,14 @@ const concat = require("gulp-concat");
 const cleanCSS = require("gulp-clean-css");
 const uglify = require("gulp-uglify");
 const rename = require('gulp-rename');
+const responsive = require('gulp-responsive')
+const imagemin = require('gulp-imagemin');
+
+gulp.task('imagemin', function () {
+  gulp.src('img/**/*')
+  .pipe(imagemin())
+  .pipe(gulp.dest('images'));
+});
 
 gulp.task('home', function () {
   return gulp.src('assets/css/home.css')

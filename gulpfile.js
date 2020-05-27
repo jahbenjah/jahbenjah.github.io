@@ -8,11 +8,14 @@ const cleanCSS = require("gulp-clean-css");
 const uglify = require("gulp-uglify");
 const rename = require('gulp-rename');
 const imagemin = require('gulp-imagemin');
+const plumber = require("gulp-plumber");
+const sass = require("gulp-sass");
+const autoprefixer = require("gulp-autoprefixer");
 
 gulp.task('imagemin', function () {
   gulp.src('img/**/*')
-  .pipe(imagemin())
-  .pipe(gulp.dest('images'));
+    .pipe(imagemin())
+    .pipe(gulp.dest('images'));
 });
 
 gulp.task('home', function () {
@@ -42,6 +45,28 @@ gulp.task('main2', function () {
     .pipe(rename('assets/js/main2.min.js'))
     .pipe(gulp.dest('.'));
 });
+
+gulp.task("bs",
+  function css() {
+    return gulp
+      .src("./scss/**/*.scss")
+      .pipe(plumber())
+      .pipe(sass({
+        outputStyle: "expanded",
+        includePaths: "./node_modules",
+      }))
+      .on("error", sass.logError)
+      .pipe(autoprefixer({
+        browsers: ['last 2 versions'],
+        cascade: false
+      }))
+      .pipe(gulp.dest("./css"))
+      .pipe(rename({
+        suffix: ".min"
+      }))
+      .pipe(cleanCSS())
+      .pipe(gulp.dest("./assets/css")); 
+  });
 
 
 gulp.task("min", gulp.series(["home", "plantillas", "main", "main2"]));

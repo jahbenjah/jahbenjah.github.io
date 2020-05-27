@@ -5,7 +5,7 @@ date:   2020-02-22 11:18:01 +0000
 categories: aspnetcore
 permalink: /:categories/:title:output_ext
 image:
-  path: /img/og-docker.jpg
+  path: /img/og-docker.webp
   height: 398
   width: 760
 description: "ASP.NET Core y Docker pueden trabajar juntos para crear y desplegar aplicaciones" 

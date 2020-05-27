@@ -75,7 +75,7 @@ Aunque en la vida real estos objetos se pueden obtener de una base de datos, un 
 
 El proceso de convertir un objeto de C# en una cadena JSON se conoce como serialización. Esta tarea se realiza utilizando la clase `` el método estatico de `Serialize` y sus sobrecargas. Existen versiones sincronas y asincronas
 
-<img data-src="/img/json.png" class="lazyload"  alt="Metadatos de la la clase JsonSerializer de System.Text.Json"> 
+<img data-src="/img/json.webp" class="lazyload"  alt="Metadatos de la la clase JsonSerializer de System.Text.Json"> 
 
 En su forma genérica requiere especificar el tipo a convertir y el una instancia del objeto a convertir a JSON. Es importante notar que el método `Serialize` usa un parámetro opcional del tipo `JSerializerOptions` que si no lo especificas lo será una referencia `null`.
 

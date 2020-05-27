@@ -5,7 +5,7 @@ date:   2019-03-17 12:00:01 +0000
 categories: asp.net core
 comments: true
 image:
-  path: https://aspnetcoremaster.com/little-aspnetcore-book/cover.jpg
+  path: https://aspnetcoremaster.com/little-aspnetcore-book/cover.webp
 seo:
   date_modified: 2019-03-24 12:00:01 +0000
 ---

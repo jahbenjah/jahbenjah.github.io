@@ -84,4 +84,4 @@ En estos ultimos dias no he tenido tiempo suficiente para dedicarle a promociona
 * La publicacion del año 2019 ha tenido un total de 688 vistas desde su publicación hasta el 09/12/2019.
 * Mi articulo para el calendario []() ha tenido 2638 vistas desde su publicación hasta el 09/12/2019.
 
-<img data-src="/img/estadisticas-calendario.PNG" class="lazyload"  alt="Estadísticas del calendario de adviento">
+<img data-src="/img/estadisticas-calendario.webp" class="lazyload"  alt="Estadísticas del calendario de adviento">

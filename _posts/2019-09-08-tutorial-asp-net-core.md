@@ -5,7 +5,7 @@ date:   2019-09-08 12:00:01 +0000
 categories: aspnetcore
 permalink: /:categories/:title:output_ext
 image:
-  path: /img/og-tutorial.jpg
+  path: /img/og-tutorial.webp
   height: 378
   width: 729
 description: Tutorial de ASP.NET Core 2.2, Entity Framework Core y MySQL ✅ creando una aplicación MVC.  Control de código fuente con Git, estructura del proyecto y creación del modelo de C# usando "Code Firts" 

@@ -5,7 +5,7 @@ date:   2020-03-06 12:00:01 +0000
 categories: aspnetcore
 permalink: /:categories/:title:output_ext
 image:
-  path: /img/og-exportar.jpg
+  path: /img/og-exportar.webp
   height: 579
   width: 1106
 description: Tutorial para exportar una colección de objetos a un libro de Excel en una aplicación ASP.NET Core y Entity Framework Core. Se usa la librería EPPlus"

@@ -497,47 +497,6 @@ mark,
   color: #6c757d;
 }
 
-code {
-  font-size: 87.5%;
-  color: #e83e8c;
-  word-wrap: break-word;
-}
-
-a > code {
-  color: inherit;
-}
-
-kbd {
-  padding: 0.2rem 0.4rem;
-  font-size: 87.5%;
-  color: #fff;
-  background-color: #212529;
-  border-radius: 0.2rem;
-}
-
-kbd kbd {
-  padding: 0;
-  font-size: 100%;
-  font-weight: 700;
-}
-
-pre {
-  display: block;
-  font-size: 87.5%;
-  color: #212529;
-}
-
-pre code {
-  font-size: inherit;
-  color: inherit;
-  word-break: normal;
-}
-
-.pre-scrollable {
-  max-height: 340px;
-  overflow-y: scroll;
-}
-
 .container {
   width: 100%;
   padding-right: 15px;
@@ -3059,41 +3018,6 @@ input[type="button"].btn-block {
   width: 100%;
 }
 
-.fade {
-  -webkit-transition: opacity 0.15s linear;
-  transition: opacity 0.15s linear;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .fade {
-    -webkit-transition: none;
-    transition: none;
-  }
-}
-
-.fade:not(.show) {
-  opacity: 0;
-}
-
-.collapse:not(.show) {
-  display: none;
-}
-
-.collapsing {
-  position: relative;
-  height: 0;
-  overflow: hidden;
-  -webkit-transition: height 0.35s ease;
-  transition: height 0.35s ease;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .collapsing {
-    -webkit-transition: none;
-    transition: none;
-  }
-}
-
 .nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3635,6 +3559,42 @@ input[type="button"].btn-block {
 
 .navbar-dark .navbar-text a:hover, .navbar-dark .navbar-text a:focus {
   color: #fff;
+}
+
+.breadcrumb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  list-style: none;
+  background-color: #e9ecef;
+  border-radius: 0.25rem;
+}
+
+.breadcrumb-item + .breadcrumb-item {
+  padding-left: 0.5rem;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  display: inline-block;
+  padding-right: 0.5rem;
+  color: #6c757d;
+  content: "/";
+}
+
+.breadcrumb-item + .breadcrumb-item:hover::before {
+  text-decoration: underline;
+}
+
+.breadcrumb-item + .breadcrumb-item:hover::before {
+  text-decoration: none;
+}
+
+.breadcrumb-item.active {
+  color: #6c757d;
 }
 
 .media {

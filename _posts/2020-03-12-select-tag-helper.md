@@ -87,7 +87,7 @@ La sección del la vista del formulario de registro responsable de crear el sele
 </div>
 ```
 
-<img src="/img/simple-select.PNG" loading="lazy"  alt="SelectTagHelper en el formulario de registro">
+<img src="/img/simple-select.webp" loading="lazy"  alt="SelectTagHelper en el formulario de registro">
 
 ## Llenar un select con una enumeración
 

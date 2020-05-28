@@ -7,7 +7,7 @@ last_modified_at: 2019-04-18 12:30:55 +0000
 
 Actualmente hay datos a montones y día con dia la información disponible en internet aumenta de forma considerable por ello cuando se requiere extraer gran cantidad de información de un sitio web es preciso ayudarse de técnicas automatizadas como el: _Web Scraping_.
 
-<img src="/img/webscraping.jpeg" loading="lazy"  alt="Inspección de página web">
+<img src="/img/webscraping.webp" loading="lazy"  alt="Inspección de página web">
 
 De acuerdo con la definición de Wikipedia:
 

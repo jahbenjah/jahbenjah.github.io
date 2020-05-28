@@ -160,7 +160,7 @@ public IActionResult ExportarExcel()
 
 El libro de Excel generado es el siguiente:
 
-<img src="/img/libro-excel.PNG" loading="lazy" alt="Libro del reporte en Excel con en ASP.NET Core">
+<img src="/img/libro-excel.webp" loading="lazy" alt="Libro del reporte en Excel con en ASP.NET Core">
 
 ### Crear un libro de Excel con C#
 
@@ -173,7 +173,7 @@ libro.Workbook.Properties.Company = "aspnetcoremaster.com";
 libro.Workbook.Properties.Keywords = "Excel,Epplus";
 ```
 
-<img src="/img/propiedades-excel.PNG" loading="lazy" alt="Ventana de propiedades del acrhivo de Excel">
+<img src="/img/propiedades-excel.webp" loading="lazy" alt="Ventana de propiedades del acrhivo de Excel">
 
 ### Crear hojas de Excel con C#
 
@@ -185,7 +185,7 @@ Para agregar hojas de Excel a un libro se usa el método `Add` de la propipedad 
  ExcelWorksheet copiaHoja = libro.Workbook.Worksheets.Add("copia",hoja);
 ```
 
-<img src="/img/excel-hojas.PNG" loading="lazy" alt="Hoja de Excel con en ASP.NET Core">
+<img src="/img/excel-hojas.webp" loading="lazy" alt="Hoja de Excel con en ASP.NET Core">
 
 ### Agregar datos a una hoja de Excel con C#
 

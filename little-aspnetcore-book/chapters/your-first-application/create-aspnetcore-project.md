@@ -55,11 +55,11 @@ Si estas usando Visual Studio Code por primera vez, aquí tienes un par de tips 
 
 * **F5 para ejecutar (y puntos de interrupción de depuración)**: Con tu proyecto abierto, presiona F5 pra ejecutar el proyecto en el modo de depuración. Esto es lo mismo que ejecutar `dotnet run` en la linea de comandos, pero tienes el beneficio de configurar puntos de interrupción en tu código dando doble clic en el margen izquierdo:
 
-![Punto de interrupción en Visual Studio Code](breakpoint.png)
+![Punto de interrupción en Visual Studio Code](breakpoint.webp)
 
 * **Foco para corregir problemas**: Si tu código contiene lineas rojos (errores del compilador, coloca el cursor sobre el código que esta en rojo y mirar el icono del foco encendido en el margen izquierdo. el foco te sugerirá reparaciones comunes, como agregar enunciados `using` faltantes en tu código:
 
-![Foco de Sugerencias ](lightbulb.png)
+![Foco de Sugerencias ](lightbulb.webp)
 
 * **Compila rápidamente**: Usa el atajo `Command-Shift-B` o `Control-Shift-B` para ejecutar la tarea de Build run la cual realiza lo mismo que `dotnet build`.
 

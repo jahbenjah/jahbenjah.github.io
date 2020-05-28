@@ -125,7 +125,7 @@ Abajo mostramos la pagina de la lista de productos creada por el asistente de Vi
 <a asp-action="ExportarExcel">Exporta a Excel</a>
 ```
 
-<img src="/img/lista-excel.PNG" loading="lazy" alt="Pantalla de una lista en ASP.NET Core">
+<img src="/img/lista-excel.webp" loading="lazy" alt="Pantalla de una lista en ASP.NET Core">
 
 El método de acción en cuestión es el responsable de obtener los datos de EF y crear el libro de Excel mediante las clases `ExcelPackage`, crear una hoja y los datos en la misma, asignarle formato al documento y finalmente regresar el archivo mediante el método `File` que regresa un `FileContentResult`. La parte del formato todavía no la conozco bien por lo que por ahora lo dejare aquí.
 
@@ -202,7 +202,7 @@ hoja.Cells["B1"].Value = "2020/03/07";
 hoja.Cells["B1"].Style.Numberformat.Format = "dd/mm/aaaa";
 ```
 
-<img src="/img/excel-valores.PNG" loading="lazy" alt="Hoja de Excel con en ASP.NET Core">
+<img src="/img/excel-valores.webp" loading="lazy" alt="Hoja de Excel con en ASP.NET Core">
 
 ## Conclusiones
 

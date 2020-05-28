@@ -14,7 +14,7 @@ Esto crea una nueva migración llamada `AddItems` al examinar cualquier cambio q
 
 Si abres el directorio `Data/Migrations`, verás algunos archivos:
 
-![Migraciones múltiples](migrations.png)
+![Migraciones múltiples](migrations.webp)
 
 El primer archivo de migración (con un nombre como `00_CreateIdentitySchema.cs`) se creó y se aplicó hace mucho cuando ejecutó `dotnet new`. La nueva migración de `AddItem` tiene el prefijo de una marca de tiempo cuando la creas.
 

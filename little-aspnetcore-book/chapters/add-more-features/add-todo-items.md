@@ -2,7 +2,7 @@
 
 El usuario agregará nuevas tareas con un simple formulario abajo de la lista
 
-![Formulario final](final-form.png)
+![Formulario final](final-form.webp)
 
 Para agregar esta característica requieres algunos pasos:
 

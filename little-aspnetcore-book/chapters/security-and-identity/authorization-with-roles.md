@@ -129,7 +129,7 @@ Finalmente, cree una carpeta `Views/ManageUsers` y una vista para la acción `In
 
 Inicie la aplicación e intente acceder a la ruta `/ManageUsers` mientras esté conectado como un usuario normal. Verás esta página de acceso denegado:
 
-![Error de acceso denegado](access-denied.png)
+![Error de acceso denegado](access-denied.webp)
 
 Eso es porque a los usuarios no se les asigna automáticamente el rol de Administrador.
 
@@ -343,5 +343,5 @@ Para incluir este parcial en el diseño principal, edite `_Layout.cshtml` y agr�
 
 Cuando inicie sesión con una cuenta de administrador, ahora verá un nuevo elemento en la parte superior derecha:
 
-![Liga para administrar usuarios](manage-users.png)
+![Liga para administrar usuarios](manage-users.webp)
 

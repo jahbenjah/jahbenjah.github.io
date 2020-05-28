@@ -6,7 +6,7 @@ NuGet es ambos, gestor de paquetes y el repositorio de paquetes oficial (en http
 ## Instalar el paquete Humanizer
 El final del último capítulo, la aplicación de tareas mostraba las tareas de la siguiente manera:
 
-![Fechas en formato ISO 8601](iso8601.png)
+![Fechas en formato ISO 8601](iso8601.webp)
 
 La columna fecha está mostrando fechas en un formato que es bueno para las máquinas (llamado IS0 8601), pero ambiguo para humanos. ¿No sería mejor si simplemente leemos “X días a partir de hoy”?
 
@@ -45,7 +45,7 @@ Después actualiza la línea que escribe la propiedad `DueAt` para usar el méto
 
 Ahora las fechas son mucho más legibles.
 
-![Fechas legibles para humanos](friendly-dates.png)
+![Fechas legibles para humanos](friendly-dates.webp)
 
 Hay paquetes disponibles en NuGet para todo desde parsear un XML hasta aprendizaje automático para postear en Twitter. ASP.NET Core mismo, bajo el capo, no es más que una colección de paquetes de NuGet que son agregados a tu proyecto.
 

@@ -27,7 +27,7 @@ dotnet add package AutoMapper.Extensions.Microsoft.DependencyInjection
 
 > **Tip :** Puedes explorar los detalles de cualquier paquete de Nuget usando el sitio [fuget.org](https://www.fuget.org/) solo cambia la _n_ en la url del paquete de Nuget. Por ejemplo la url  Nuget de automaper es https://www.nuget.org/packages/AutoMapper y la de fuget.org es :https://www.fuget.org/packages/AutoMapper
 
-<img data-src="/img/automapper.webp" class="lazyload"  alt="Automapper en fuget.org">
+<img src="/img/automapper.webp" loading="lazy"  alt="Automapper en fuget.org">
 
 3. Configurar AutoMapper en el método `ConfigureServices` de la clase `Startup.cs`. Agrega el siguiente código justo antes de `services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);`
 
@@ -111,4 +111,4 @@ public class ClienteViewModel
 <p>Estimado @Model.Nombre @Model.ApellidoPaterno le escribimos para ...</p>
 ```
 
-<img data-src="/img/AutomapperView.webp" class="lazyload"  alt="Automapper en fuget.org">
+<img src="/img/AutomapperView.webp" loading="lazy"  alt="Automapper en fuget.org">

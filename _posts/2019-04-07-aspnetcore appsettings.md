@@ -224,7 +224,7 @@ Finalmente regresaremos la vista debe tener el siguiente codigo para mostrar est
 
 ```
 
-<img data-src="/img/LeerAppsettings.webp" class="lazyload"  alt="Vista que muestra los valores del archivo appssetting.json">
+<img src="/img/LeerAppsettings.webp" loading="lazy"  alt="Vista que muestra los valores del archivo appssetting.json">
 
 ## Conclusión
 

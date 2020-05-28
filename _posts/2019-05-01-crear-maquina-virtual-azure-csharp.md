@@ -18,7 +18,7 @@ Una vez que hayamos iniciado sesión con `az login` en la linea de comandos de A
 az ad sp create-for-rbac --sdk-auth
 ```
 
-<img data-src="/img/serviceprincipal.webp" class="lazyload"  alt="Linea de comandos de Azure">
+<img src="/img/serviceprincipal.webp" loading="lazy"  alt="Linea de comandos de Azure">
 
 Con esta información armaremos un archivo de texto llamado `azureauth.properties` con el siguiente contenido :
 
@@ -107,7 +107,7 @@ WinVirtualMachine  MIGRUPDERECURSOSWINDOWS  eastus
 MyVirtualMachine   MIGRUPDERECURSOSCETNOS   southcentralus
 ```
 
-<img data-src="/img/MaquinasVistualesAzure.webp" class="lazyload"  alt="Máquinas virtuales creadas con C# en Azure">
+<img src="/img/MaquinasVistualesAzure.webp" loading="lazy"  alt="Máquinas virtuales creadas con C# en Azure">
 
 Si deseas eliminar estas máquinas virtuales, también puedes hacerlo con C# , en este caso eliminamos el grupo de recursos y los recursos que le pertenecen.
 

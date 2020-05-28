@@ -41,7 +41,7 @@ Todo el código de la aplicación estará dentro de la carpeta _Sakila_ que incl
 
 La primer tarea a realizar es el repositorio git, agregaremos el archivo `.gitignore` basado en la plantilla de Visual Studio y crearemos repositorio de Github. Para crear el repositorio en Github usamos las siguientes opciones en la pantalla. Observa que hay una opción para activar las Azure Pipelines esto es por que tengo instalada está [extensión](https://github.com/marketplace/azure-pipelines) en mi cuenta espera un post para agregar el archivo _.yml_ y definir el proceso de integración continua en Azure Devops.
 
-<img data-src="/img/crear-sakila-repo.webp" class="lazyload" alt="Pantalla para crear un nuevo repositorio en Github">
+<img src="/img/crear-sakila-repo.webp" loading="lazy" alt="Pantalla para crear un nuevo repositorio en Github">
 
 > **Archivo .gittgnore** es una buena practica incluir siempre el archivo **.gitignore** en el repositorio. Hay una gran colección de archivos con opciones predefinidas en el repositorio [Github gitignore](https://github.com/github/gitignore/). Generalmente usamos el [archivo _.gitignore_ para Visual Studio](https://github.com/github/gitignore/blob/master/VisualStudio.gitignore). El SDK de .NET Core trae una nueva plantilla que copia el archivo _.gitignore_ para Visual Studio con `dotnet new gitignore`
 

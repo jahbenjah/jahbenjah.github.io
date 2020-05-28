@@ -10,7 +10,7 @@ Una aplicación de ASP.NET Core no es más que una aplicación de consola que ej
 
 Todo comienza con el comando `dotnet new` por lo que es importante saber cuales son las opciones disponibles para el mismo . Invocaremos la ayuda sobre mediante la instrucción `dotnet new --help` en la consola o terminal. La salida se muestra en lo siguiente:
 
-<img data-src="/img/dotnetnewhelp.webp" class="lazyload"  alt="Captura de pantalla del comando dotnet new --help">
+<img src="/img/dotnetnewhelp.webp" loading="lazy"  alt="Captura de pantalla del comando dotnet new --help">
 
 Hay varias observaciones para esta salida:
 
@@ -68,4 +68,4 @@ Recomendamos que por lo menos uses el argumento `-o` para especificar la carpeta
 
 Si usas **Visual Studio** puedes crear un nuevo proyecto mediante _Archivo> Nuevo Proyecto > Web > Aplicación Web ASP.NET Core_.
 
-<img data-src="/img/ProyectoNuevo.webp" class="lazyload"  alt="Nuevo Proyecto ASP.NET Core">
+<img src="/img/ProyectoNuevo.webp" loading="lazy"  alt="Nuevo Proyecto ASP.NET Core">

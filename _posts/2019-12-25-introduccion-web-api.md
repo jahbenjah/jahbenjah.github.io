@@ -20,7 +20,7 @@ La clase `HttpClient` se ha usado principalmente con dos patrones : dentro de un
 
 Consumiremos el API de Github y trataremos de hacer un clon de la interfaz de usuario de Github que muestra los detalles del usuario y los repositorios
 
-<img data-src="/img/CapturaGithub.PNG" class="lazyload"  alt="Captura de la página de Github">
+<img src="/img/CapturaGithub.PNG" loading="lazy"  alt="Captura de la página de Github">
 
 En un proyecto MVC coloca el siguiente código en el método `ConfigureServices` la clase `Startup`
 

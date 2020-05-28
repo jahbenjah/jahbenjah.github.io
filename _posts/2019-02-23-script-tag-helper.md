@@ -11,7 +11,7 @@ image:
 
 El Script Tag Helper de ASP.NET Core tiene 3 casos de uso: el primero ayuda generar dinámicamente el atributo **src** del elemento [script](https://www.w3.org/TR/html5/semantics-scripting.html), el segundo permite usar un ubicación alternativa en caso de que la del script principal no éste disponible y el tercero para impedir que los scripts sean tomados de la memoria cache del navegador (<span lang="en">Cache busting</span>).
 
-<img data-src="/img/scripttaghelper.webp" class="lazyload"  alt="Script Tag Helper">
+<img src="/img/scripttaghelper.webp" loading="lazy"  alt="Script Tag Helper">
 
 Como `ASP.NET Core` es *open source* puede ver directamente el código fuente del [Script Tag Helper](https://github.com/aspnet/AspNetCore/blob/master/src/Mvc/Mvc.TagHelpers/src/ScriptTagHelper.cs) en el repositorio en Github. La documentación se [ScripTag Helper](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.taghelpers.scripttaghelper?view=aspnetcore-2.2) Se encuentra en el espacio de nombres _Microsoft.AspNetCore.Mvc.TagHelpers_ y  para que este disponible en todas nuestras vistas  de estar la siguiente directiva en el archivo *_Views/_ViewImports.cshtml*.
 

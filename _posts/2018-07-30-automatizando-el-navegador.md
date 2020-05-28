@@ -8,7 +8,7 @@ description: "Selenium es un conjunto de herramientas que permite automatizar na
 
 Puedes automatizar todas las tares repetitivas que realizas en el navegador web usando un lenguaje de programación y Selenium. Este articulo es una introducción a Selenium con C# donde te mostramos como hacer cosas básicas como iniciar un navegador, presionar un botón, ingresar texto en un control, visitar una página web. Todo esto lo realizaremos usando una aplicación de consola de .NET Core.La version inicial de este articulo se creo con la versión 2.0 de .NET Core pero como usamos principalmente la línea de comandos el proceso es el mismo para otra version de .NET Core como la 3.1. Finalmente te mostramos como automatizar el inicio de sesión de Facebook.
 
-<img data-src="/img/blurred-background-dolls-fashion-935019.webp" class="lazyload"  alt="Controlando un títere. Metáfora de automatización">
+<img src="/img/blurred-background-dolls-fashion-935019.webp" loading="lazy"  alt="Controlando un títere. Metáfora de automatización">
 
 > "Selenium es un conjunto de herramientas para automatizar navegadores web a tráves de múltiples plataformas.
   ...Selenium puede ser controlado por múltiples lenguajes de programación y frameworks de pruebas."  
@@ -50,7 +50,7 @@ namespace IntroSelenium
 }
 ```
 
-<img data-src="/img/selenium-abrir.webp" class="lazyload"  alt="Pantalla de Chrome">
+<img src="/img/selenium-abrir.webp" loading="lazy"  alt="Pantalla de Chrome">
 
 
 Para cerrar Chrome con Selenium usamos el método `Close` o  `Dispose`. Puedes colocar una espera de 5 segundo con una llamada al método `Thread.Sleep(5000);`. 
@@ -221,7 +221,7 @@ Esta clase intenta seguir el patrón de diseño
 La clase _IniciaSesion_ contiene 3 constantes de solo lectura que permiten identificar los elementos _HTML_ de la página..
 Puedes obtenerlos mediante las herramientas para desarrollador del navegador.
 
-<img data-src="/img/InspecionarFacebook.webp" class="lazyload"  alt="Herramientas de desarrador Firefox">
+<img src="/img/InspecionarFacebook.webp" loading="lazy"  alt="Herramientas de desarrador Firefox">
 
 El constructor requiere un objeto del tipo `IWebDriver` lo que permite ejecutar las pruebas en diferentes Navegadores
 
@@ -354,7 +354,7 @@ Para ejecutar desde la linea de comandos puedes usar `dotnet test` o `dotnet xun
 Para ejecutar con Visual Studio abre la solución  AutomatizarNavegador.sln.
 Posteriorment el abre  _Menu Pruebas  > Ventanas  > Explorador De Pruebas_ y selecciona ejecutar todas las pruebas.
 
-<img data-src="/img/vs2017.webp" class="lazyload"  alt="Explorador de pruebas Visual Studio.">
+<img src="/img/vs2017.webp" loading="lazy"  alt="Explorador de pruebas Visual Studio.">
 
 ## Para llevar
 

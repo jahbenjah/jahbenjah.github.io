@@ -28,17 +28,17 @@ Los paquetes de Nuget instalados en nuestro proyecto se encuentran en el archivo
 
 Visual Studio tiene integrado una herramienta gráfica para el manejo de paquetes de Nuget. Esta puede funcionar por proyecto o para toda la solución. A la primera que puedes acceder mediante _Proyecto>Administrar paquetes Nuget_ mientras que a la segunda accedes _Herramientas>Administrar Paquetes de Nuget para la solución_.
 
-<img data-src="/img/NugetVisualStudio.webp" class="lazyload"  alt="Administrador de Paquetes de Nuget Visual Studio para un proyecto">
+<img src="/img/NugetVisualStudio.webp" loading="lazy"  alt="Administrador de Paquetes de Nuget Visual Studio para un proyecto">
 
 Básicamente esta compuesta por 3 pestañas: Examinar, Instalado, Actualizaciones: que permiten buscar e instalar nuevos paquetes. Verificar los paquetes instalados y actualizar la version de los paquetes. Cuando toca actualizar los paquetes de Nuget te recomiendo hacerlo usando el Administrador de paquetes de Nuget para porque con unos clics puedes actualizar todos. Unicamente tienes que seleccionar los paquetes que deseas actualizar y da clic en el botón actualizar adicionalmente tienes que aceptar la licencia.
 
-<img data-src="/img/NugetSolucion.webp" class="lazyload"  alt="Administrador de Paquetes de Nuget Visual Studio para la solución">
+<img src="/img/NugetSolucion.webp" loading="lazy"  alt="Administrador de Paquetes de Nuget Visual Studio para la solución">
 
 Al final veras que todos los archivos de proyecto fueron actualizados.
 
 > **Tip profesional** siempre usa el control de versiones en tu proyecto. Visual Studio tiene herramientas integradas que permiten el manejo fácil de git.
 
-<img data-src="/img/TeamExplorerNuget.webp" class="lazyload"  alt="Administrador de Paquetes de Nuget Visual Studio para la solución">
+<img src="/img/TeamExplorerNuget.webp" loading="lazy"  alt="Administrador de Paquetes de Nuget Visual Studio para la solución">
 
 # Linea de comandos : **dotnet-outdated**
 
@@ -62,7 +62,7 @@ dotnet outdated eShopOnWeb.sln
 
 La salida de este comando muestra los paquetes que pueden ser actualizados indicando posibles incompatibilidades o cambios que pueden provocar errores.
 
-<img data-src="/img/dotnet-outdated.webp" class="lazyload"  alt="Salida del comando dotnet outdated">
+<img src="/img/dotnet-outdated.webp" loading="lazy"  alt="Salida del comando dotnet outdated">
 
 Si decides actualizar los paquetes de Nuget puedes usar la opción `-u`.
 
@@ -70,11 +70,11 @@ Si decides actualizar los paquetes de Nuget puedes usar la opción `-u`.
 dotnet outdated eShopOnWeb.sln -u
 ```
 
-<img data-src="/img/CliUpdate.webp" class="lazyload"  alt="Salida del comando dotnet outdated -u">
+<img src="/img/CliUpdate.webp" loading="lazy"  alt="Salida del comando dotnet outdated -u">
 
 Si quieres ver los cambios puedes usar el los comandos `git status` y `git diff` para ver los archivos modificados. Adicionalmente puedes ver la ayuda de **dotnet-outdated** mediante el comando `dotnet outdated --help`.
 
-<img data-src="/img/CLIDiferencias.webp" class="lazyload"  alt="Salida del comando git diff">
+<img src="/img/CLIDiferencias.webp" loading="lazy"  alt="Salida del comando git diff">
 
 # Directory.Build.props
 

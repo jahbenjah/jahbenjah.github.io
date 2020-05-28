@@ -91,13 +91,13 @@ La salida de este comando nos dice el id del contenedor, los puertos, el nombre 
 
 Para diagnosticar problemas en el contenedor de SQL Server puedes usar la extensión d Docker para Visual Studio Code. Esta te permite ver los contenedores corriendo actualmente y también puedes ver los logs de la creación del contenedor que pueden ser muy útiles para encontrar errores.
 
-<img data-src="/img/ExtensionDockerVSCode.png" class="lazyload" alt="Captura de pantalla de la extensión de Docker para Visual Studio Code">
+<img src="/img/ExtensionDockerVSCode.png" loading="lazy" alt="Captura de pantalla de la extensión de Docker para Visual Studio Code">
 
 Para conectarte a SQL Server desde Visual Studio Code se puedes usar la extensión **mssql** . El proceso de instalación es muy sencillo. En su Visual Studio Code busca en las extensiones : mssql y da clic en instalar. 
 
 Para conectarnos a SQL Server desde Visual Studio Code puedes crear un archivo *.sql* para activar la extensión **msssql** en la parte inferior podemos dar clic donde indica del estado **disconnected** para crear un nuevo perfil de conexión ingresando los datos definidos en el archivo _docker-compose.yml_
 
-<img data-src="/img/mssql.png" class="lazyload" alt="Captura de pantalla de la extensión de SQL Server para Visual Studio Code">
+<img src="/img/mssql.png" loading="lazy" alt="Captura de pantalla de la extensión de SQL Server para Visual Studio Code">
 
 | Parámetro           | Valor            |
 | ------------------- | ---------------- |

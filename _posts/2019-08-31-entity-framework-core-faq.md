@@ -315,7 +315,7 @@ A continuación un serie de preguntas y respuestas que pueden servir como introd
 <li>Gestionar los cambios a la base de datos.</li>
 </ol>
 
-<img data-src="/img/efcoretools.webp" class="lazyload"  alt="Imagen de linea de comando Entity Framework Core">
+<img src="/img/efcoretools.webp" loading="lazy"  alt="Imagen de linea de comando Entity Framework Core">
         </div>
     </div>
 </div>

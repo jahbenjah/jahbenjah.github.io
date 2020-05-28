@@ -29,4 +29,4 @@ dotnet run
 
 Aquí un captura de pantalla de la plantilla
 
-<img data-src="/img/admin.webp" class="lazyload" alt="Captura de pantalla del Panel de administración">
+<img src="/img/admin.webp" loading="lazy" alt="Captura de pantalla del Panel de administración">

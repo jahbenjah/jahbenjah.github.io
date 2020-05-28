@@ -25,11 +25,11 @@ Se liberaron nuevas versiones previas para:
 
 Se libero el mapa de ruta para ASP.NET Core donde se establece que para septiembre sale la versión 3.0 y para 2020  una nueva version llamada .NET 5.0 que unificara todos los "runtimes" de .NET
 
-<img data-src="https://devblogs.microsoft.com/dotnet/wp-content/uploads/sites/10/2019/05/dotnet_schedule.webp" class="lazyload"  alt="Plataforma .NET 5.0">
+<img src="https://devblogs.microsoft.com/dotnet/wp-content/uploads/sites/10/2019/05/dotnet_schedule.webp" loading="lazy"  alt="Plataforma .NET 5.0">
 
 Básicamente se establece que la versión 4.8 de .NET Framework será la última y solo se mantendrá soporte sin agregar nuevas características ya que todas los esfuerzos de los equipos de desarrollo serán para .NET Core. Recomiendan que todo los nuevos proyectos sean basados en .NET Core y solo migrar los que requieren las nuevas características.
 
-<img data-src="https://devblogs.microsoft.com/dotnet/wp-content/uploads/sites/10/2019/05/dotnet5_platform.webp" class="lazyload"  alt="Plataforma .NET 5.0">
+<img src="https://devblogs.microsoft.com/dotnet/wp-content/uploads/sites/10/2019/05/dotnet5_platform.webp" loading="lazy"  alt="Plataforma .NET 5.0">
 
 Las dos referencias obligadas son:
 
@@ -42,7 +42,7 @@ Estos anuncios son de mi interés porque me encanta usar la linea de comandos (a
 
 *[Nueva Windows Terminal](https://devblogs.microsoft.com/commandline/introducing-windows-terminal/)
 
-<img data-src="https://devblogs.microsoft.com/commandline/wp-content/uploads/sites/33/2019/05/terminal-screenshot.webp" class="lazyload"  alt="Terminal de Windows">
+<img src="https://devblogs.microsoft.com/commandline/wp-content/uploads/sites/33/2019/05/terminal-screenshot.webp" loading="lazy"  alt="Terminal de Windows">
 
 *[WSL 2](https://devblogs.microsoft.com/commandline/announcing-wsl-2/)
 

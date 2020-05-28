@@ -18,7 +18,7 @@ El Global Azure Bootcamp CMDX evento totalmente gratuito incluido el desayuno y 
 
  Las sesiones técnicas estuvieron divididas en 3 tracks Cloud,Bussines Apps y AI cada una en un salón diferente. Los asistentes pudieron elegir las sesiones a las que deseaban asistir. Estas fueron dictadas por varios [MVP mexicanos](https://mvp.microsoft.com/es-es/MvpSearch?lo=Mexico&sc=e) y de latinoamérica. Si requieres más detalles puedes revisar el programa completo [aquí](https://secure.meetupstatic.com/photos/event/4/7/4/0/highres_480498240.jpeg).
 
-<img data-src="/img/AzureEvent.webp" class="lazyload"  alt="Asistentes y ponentes de Azure Bootcamp CMDX">
+<img src="/img/AzureEvent.webp" loading="lazy"  alt="Asistentes y ponentes de Azure Bootcamp CMDX">
 
 Los temas incluyeron [Bots](https://dev.botframework.com/), [SQL Server y SQL Database](https://azure.microsoft.com/services/sql-database/), [Cognitive Services](https://azure.microsoft.com/services/cognitive-services/), [Azure Devops](https://azure.microsoft.com/services/devops/), [Azure Functions](https://azure.microsoft.com/services/functions/), [Cosmos DB](https://azure.microsoft.com/services/cosmos-db/) y otros
 
@@ -29,7 +29,7 @@ La parte que considero la mejor fue la experiencias y disposición de los exposi
 Desde mi perspectiva las sesiones estuvieron inclinadas a usar el portal de Azure y dejar de lado las otras [herramientas](https://azure.microsoft.com/es-mx/downloads/) como la linea de comandos, el <abbr title="Software Development Kit">SDK</abbr> o el Azure Cloud Shell. Siempre me es grato cuando un presentador realiza sus demos en la línea de comandos y comparte un repositorio donde uno puede replicar los demos después.
 Unas sesiones pueden parecer repetitivas si eres un seguidor de los presentadores o de las redes sociales de los equipos de desarrollo Microsoft pero debemos ser pacientes y ver lo que aporta cada presentador.
 
-<img data-src="/img/AzureFunctions.webp" class="lazyload"  alt="Linea de comandos de Azure Functions">
+<img src="/img/AzureFunctions.webp" loading="lazy"  alt="Linea de comandos de Azure Functions">
 
 La comunidad esta integrada por personas con diferentes perfiles desde administradores, vendedores, administradores, estudiantes, desarrolladores y más. He tenido la oportunidad de platicar con un Product Manager de Microsoft, un MVP y un administrador de Azure.
 

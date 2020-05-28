@@ -18,7 +18,7 @@ En este artículo te explico los pasos para crear una imagen de un contenedor Do
 
 Primero asegurate de tener instalado Docker, en mi caso uso [Docker Desktop para Windows](https://www.docker.com/products/docker-desktop), el SDK de .NET Core 3.1, Visual Studio Code y la [extensión para Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker).
 
-<img data-src="/img/DockerDesktop.webp" class="lazyload"  alt="Pantalla de Docker Desktop">
+<img src="/img/DockerDesktop.webp" loading="lazy"  alt="Pantalla de Docker Desktop">
 
 ## Imágenes de Docker para .NET Core y ASP.NET Core
 
@@ -54,7 +54,7 @@ mcr.microsoft.com/dotnet/core/runtime
 
 > **Buena práctica :** En mi ruta de aprendizaje de los [50 días de Kubernetes]({% post_url 2020-02-02-50-dias-de-kubernetes %}) he aprendido que que por razones de seguridad y rendimiento es una buena practica **usar contenedores pequeños**. Por lo que intentare usar Linux Alpine como base.
 
-<img data-src="/img/runtime-deps.webp" class="lazyload"  alt="Peso de las imagenes de Docker para el motor de tiempo de ejecución de .NET Core">
+<img src="/img/runtime-deps.webp" loading="lazy"  alt="Peso de las imagenes de Docker para el motor de tiempo de ejecución de .NET Core">
 
 ## Construyendo nuestra propia imagen de Docker para .NET Core
 

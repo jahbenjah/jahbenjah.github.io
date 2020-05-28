@@ -8,7 +8,7 @@ last_modified_at: 2019-12-11 14:45:55 +0000
 En el desarrollo de software empresarial enviar correos electrónicos con documentos adjuntos o con un diseño personalizados es un requerimiento muy frecuente, en este tutorial te mostramos enviar correos usando  C# y .NET Core Usaremos Visual Studio Code como nuestro editor de código pero si así lo prefieres puedes usar Visual Studio.
 Actualmente existen varias [paquetes de Nuget]({% post_url 2019-07-27-controlando-paquetes-nuget %}) para enviar correos como [SendGrid](https://www.nuget.org/packages/SendGrid/) o [MailKit](https://www.nuget.org/packages/MailKit/), sin embargo en este tutorial se utiliza la clase [SmtpClient](https://docs.microsoft.com/en-us/dotnet/api/system.net.mail.smtpclient?view=netcore-3.1) parte de .NET Standard 2.0.
 
-<img data-src="/img/adult-business-businessman-1061588.webp" class="lazyload"  alt="Revisando el correo electrónico">
+<img src="/img/adult-business-businessman-1061588.webp" loading="lazy"  alt="Revisando el correo electrónico">
 
 Este artículo representa una guía paso a paso para enviar un correo electrónico usando C# y una cuenta de Gmail. El cuerpo del correo puede estar formateado como texto plano o HTML e incluir archivos adjuntos.
 Se asume que tienes instalado el SDK de [.NET Core](https://www.microsoft.com/net/download) y el editor de código [Visual Studio Code](https://code.visualstudio.com/). Adicionalmente se creará una solución para poder abrir el proyecto con Visual Studio.
@@ -28,7 +28,7 @@ The SMTP server requires a secure connection or the client was not authenticated
 
 ```
 
-<img data-src="/img/AccesoAplicacionesMenosSeguras.webp" class="lazyload"  alt="Pantalla de configuracion de Gmail">
+<img src="/img/AccesoAplicacionesMenosSeguras.webp" loading="lazy"  alt="Pantalla de configuracion de Gmail">
 
 La configuración necesaria para el cliente de <abbr lang="en" title="Simple Mail Transfer Protocol">SMTP</abbr> de acuerdo a la [documentación de Gmail](https://support.google.com/mail/answer/7126229?visit_id=1-636683482170517029-2536242402&hl=es&rd=1)
 es la siguiente:
@@ -219,7 +219,7 @@ namespace EmailServiceCliente
 }
 ```
 
-<img data-src="/img/CorreoAdjunto.webp" class="lazyload"  alt="Imagen del correo enviado">
+<img src="/img/CorreoAdjunto.webp" loading="lazy"  alt="Imagen del correo enviado">
 
 Para ejecutar el proyecto abre la terminal en la carpeta _EmailServiceCliente_ y ejecuta el comando
 

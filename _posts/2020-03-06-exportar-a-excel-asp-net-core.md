@@ -44,7 +44,7 @@ Aquí mostramos unicamente las creación de un libro con una hoja con el fin de 
 
 Para este proyecto usamos la plantilla MVC con autenticación de cuentas individuales esto para tener Entity Framework instalados y funcionando. Usamos el asistente de creación de controladores que usan Entity Framework para las operaciones CRUD
 
-<img data-src="/img/agregar-controlador-mvc.webp" class="lazyload" alt="Agregar controlador MVC Visual Studio 2019">
+<img src="/img/agregar-controlador-mvc.webp" loading="lazy" alt="Agregar controlador MVC Visual Studio 2019">
 
 El modelo que creamos corresponde a un _Producto_. Esta clase que usa las anotaciones de datos para especificar restricciones al crear la tabla en la base de datos como la longitud de los campos, el nombre de la tabla y el esquema entre otras cosas. Adicionalmente porque lei que estas eran usadas cuando exportabas una colección a Excel pero por ahora no he logrado que funcionen. Abajo los detalles de la clase producto:
 
@@ -125,7 +125,7 @@ Abajo mostramos la pagina de la lista de productos creada por el asistente de Vi
 <a asp-action="ExportarExcel">Exporta a Excel</a>
 ```
 
-<img data-src="/img/lista-excel.PNG" class="lazyload" alt="Pantalla de una lista en ASP.NET Core">
+<img src="/img/lista-excel.PNG" loading="lazy" alt="Pantalla de una lista en ASP.NET Core">
 
 El método de acción en cuestión es el responsable de obtener los datos de EF y crear el libro de Excel mediante las clases `ExcelPackage`, crear una hoja y los datos en la misma, asignarle formato al documento y finalmente regresar el archivo mediante el método `File` que regresa un `FileContentResult`. La parte del formato todavía no la conozco bien por lo que por ahora lo dejare aquí.
 
@@ -160,7 +160,7 @@ public IActionResult ExportarExcel()
 
 El libro de Excel generado es el siguiente:
 
-<img data-src="/img/libro-excel.PNG" class="lazyload" alt="Libro del reporte en Excel con en ASP.NET Core">
+<img src="/img/libro-excel.PNG" loading="lazy" alt="Libro del reporte en Excel con en ASP.NET Core">
 
 ### Crear un libro de Excel con C#
 
@@ -173,7 +173,7 @@ libro.Workbook.Properties.Company = "aspnetcoremaster.com";
 libro.Workbook.Properties.Keywords = "Excel,Epplus";
 ```
 
-<img data-src="/img/propiedades-excel.PNG" class="lazyload" alt="Ventana de propiedades del acrhivo de Excel">
+<img src="/img/propiedades-excel.PNG" loading="lazy" alt="Ventana de propiedades del acrhivo de Excel">
 
 ### Crear hojas de Excel con C#
 
@@ -185,7 +185,7 @@ Para agregar hojas de Excel a un libro se usa el método `Add` de la propipedad 
  ExcelWorksheet copiaHoja = libro.Workbook.Worksheets.Add("copia",hoja);
 ```
 
-<img data-src="/img/excel-hojas.PNG" class="lazyload" alt="Hoja de Excel con en ASP.NET Core">
+<img src="/img/excel-hojas.PNG" loading="lazy" alt="Hoja de Excel con en ASP.NET Core">
 
 ### Agregar datos a una hoja de Excel con C#
 
@@ -202,7 +202,7 @@ hoja.Cells["B1"].Value = "2020/03/07";
 hoja.Cells["B1"].Style.Numberformat.Format = "dd/mm/aaaa";
 ```
 
-<img data-src="/img/excel-valores.PNG" class="lazyload" alt="Hoja de Excel con en ASP.NET Core">
+<img src="/img/excel-valores.PNG" loading="lazy" alt="Hoja de Excel con en ASP.NET Core">
 
 ## Conclusiones
 

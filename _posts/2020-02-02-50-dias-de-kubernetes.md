@@ -34,7 +34,7 @@ También una version en [video](https://www.youtube.com/watch?v=R9-SOzep73w)
 
 Por lo que he entendido Kubernetes no esta asociado directamente con Docker y puede manejar otros tipos de contenedores pero por fines prácticos he elegido Docker como mi plataforma de contenedores. He instalad Docker Desktop con la opción de contenedores para Linux en mi "superpoderosa máquina Lenovo Ideapad 320 con 8GB de RAM y Windows" va muy lento pero anda. Adicionalmente he activado la opción de Kubernetes en la configuración de Docker Desktop y ahora veo que tengo unas imágenes de Docker relacionadas a Kubernetes que yo no descargue y la herramienta de linea de comandos **kubectl**
 
-<img data-src="/img/DDKubernetes.webp" class="lazyload"  alt="Pantalla de configuración de Kubernetes de Docker Desktop">
+<img src="/img/DDKubernetes.webp" loading="lazy"  alt="Pantalla de configuración de Kubernetes de Docker Desktop">
 
 ```bash
 >docker images

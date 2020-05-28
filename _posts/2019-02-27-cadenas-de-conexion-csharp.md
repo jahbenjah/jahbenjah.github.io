@@ -15,7 +15,7 @@ Una cadena de conexión es un conjunto de claves y valores separados por punto y
 
 En este tutorial te muestro como crear, manipular y validar la cadena de conexión para SQL Server, MYSQL, Oracle, Firebird, PostgreSQL y Sqlite usando C# y .NET Core. Para ello utilizamos la clase `ConnectionStringBuilder` que implementan los proveedores de **ADO.NET**. Para cada proveedor de ADO.NET es necesario instalar el paquete de Nuget correspondiente e importar el espacio de nombres con la instrucción [using]({% post_url 2019-01-03-cuatro-formas-de-usar-la-palabra-clave-using-de-csharp %}).
 
-<img data-src="/img/connectionstring.webp" class="lazyload"  alt="Pantalla de Visual Studio que muestra la definicion de la clase SqlConnectionStringBuilder">
+<img src="/img/connectionstring.webp" loading="lazy"  alt="Pantalla de Visual Studio que muestra la definicion de la clase SqlConnectionStringBuilder">
 
 En el caso más simple puedes crear la cadena de conexión forma manual y hacerlo de forma programática seria un desperdicio de tiempo (ver el caso para SQLite) pero en ocasiones puede ser un verdadero martirio por el número de claves necesarios  y como ejemplo una cadena de conexión para SQL Server con 9 claves.
 

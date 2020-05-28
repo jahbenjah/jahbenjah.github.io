@@ -121,7 +121,7 @@ Para inicializar el repositorio ejecuta el comando `git init` posteriormente agr
 
 Para crear el repositorio en Github usamos las siguientes opciones en la pantalla de crear repositorios. Observa que hay una opción para activar las Azure Pipelines esto es por que tengo instalada está extensión en mi cuenta espera un post para agregar el archivo _.yml_ y definir el proceso de integración continua en Azure Devops.
 
-<img data-src="/img/crear-sakila-repo.webp" class="lazyload"  alt="Pantalla para crear un nuevo repositorio en Github">
+<img src="/img/crear-sakila-repo.webp" loading="lazy"  alt="Pantalla para crear un nuevo repositorio en Github">
 
 ```bash
 git init

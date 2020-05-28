@@ -7,7 +7,7 @@ last_modified_at: 2019-04-18 12:30:55 +0000
 
 Actualmente hay datos a montones y día con dia la información disponible en internet aumenta de forma considerable por ello cuando se requiere extraer gran cantidad de información de un sitio web es preciso ayudarse de técnicas automatizadas como el: _Web Scraping_.
 
-<img data-src="/img/webscraping.jpeg" class="lazyload"  alt="Inspección de página web">
+<img src="/img/webscraping.jpeg" loading="lazy"  alt="Inspección de página web">
 
 De acuerdo con la definición de Wikipedia:
 
@@ -77,7 +77,7 @@ El catalogo esta compuesto de 50 paginas en cada pagina se muestran 20 libros. C
 
 Las categorías se encuentran en la barra lateral de las paginas del catalogo por lo que solo es necesario navegar por la primera pagina y extraer los datos de las categorías (Id, Nombre , Url).
 
-<img data-src="/img/Categorias.webp" class="lazyload"  alt="Muestra de categorias">
+<img src="/img/Categorias.webp" loading="lazy"  alt="Muestra de categorias">
 
 ## Extracción categorías
 
@@ -221,7 +221,7 @@ public static void GuardarCategorias()
 
 Si abrimos la base de datos SQLite veremos las categorias.
 
-<img data-src="/img/categoriasbd.webp" class="lazyload"  alt="Resultado de la extracción de categorias">
+<img src="/img/categoriasbd.webp" loading="lazy"  alt="Resultado de la extracción de categorias">
 
 ## Extración detalle libros
 
@@ -314,7 +314,7 @@ static void Main(string[] args)
 
 Aqui es recomendable usar el [modo headless de Chrome](https://developers.google.com/web/updates/2017/04/headless-chrome) . Puedes descomentar la línea ``options.AddArgument("--headless");``  ``GetDriver`` del método para que no se veas el navegador.
 
-<img data-src="/img/ExtraccionFinal.webp" class="lazyload"  alt="base de libros y categorias">
+<img src="/img/ExtraccionFinal.webp" loading="lazy"  alt="base de libros y categorias">
 
 # Para llevar 
 

@@ -14,10 +14,11 @@ youtube_channel: UCFz5TO8oRcws22p96jrBeqQ
 twitter:
   username: jbenjamincc
   card: summary
+  image: /img/og-image.webp
 social:
-  name: csharpmx
+  name: aspnetcoremaster
   links:
-    - https://www.facebook.com/csharpmx/
+    - https://www.facebook.com/aspnetcoremaster/
 markdown: kramdown
 theme: minima
 show_excerpts: false

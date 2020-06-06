@@ -2,12 +2,11 @@
 <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-        <h1 class="logo mr-auto"><a href="{{ "/" | relative_url }}">{{ site.title | escape }}</a></h1>
+        <h1 class="logo mr-auto"><a href="{{ "/" | relative_url }}">.NET Master</a></h1>
         {%- assign default_paths = site.pages | map: "path" -%}
         {%- assign page_paths = site.header_pages | default: default_paths -%}
         <nav class="nav-menu d-none d-lg-block">
             <ul>
-                <li class="active"><a href="{{ "/" | relative_url }}">Blog</a></li>
                 {%- for path in page_paths -%}
                 {%- assign my_page = site.pages | where: "path", path | first -%}
                 {%- if my_page.title -%}

@@ -5,7 +5,7 @@ categories: kubernetes
 permalink: /:categories/:title:output_ext
 ---
 
-Kubernetes es un orquestador de contenedores. Kubernetes se abrevia como _K8S_ por el hecho de que hay 8 letras entre la *K* y la *s* en la palabra de origen griego Kubernates que significa "timón". Es un proyecto que inicio en Google pero ahora pertenece a la <abbr lang="en" title="Cloud Native Computing Foundation">CNCF</abbr> fue programado en el lenguaje de programación Go inicialmente por [Brendan Burns](https://twitter.com/brendandburns), [Brian Grant](https://twitter.com/bgrant0607), [David Oppenheimer](David Oppenheimer), [Eric Brewer](https://research.google/people/EricBrewer/) y [John Wilkes](https://research.google/people/JohnWilkes/).
+Kubernetes es un orquestador de contenedores. Kubernetes se abrevia como _K8S_ por el hecho de que hay 8 letras entre la *K* y la *s* en la palabra de origen griego Kubernates que significa "timón". Es un proyecto que inicio en Google pero ahora pertenece a la <abbr lang="en" title="Cloud Native Computing Foundation">CNCF</abbr> fue programado en el lenguaje de programación Go inicialmente por [Brendan Burns](https://twitter.com/brendandburns), [Brian Grant](https://twitter.com/bgrant0607), **David Oppenheimer**, [Eric Brewer](https://research.google/people/EricBrewer/) y [John Wilkes](https://research.google/people/JohnWilkes/).
 
 El repositorio de Kubernetes esta alojado en Github [Kubernetes](https://github.com/kubernetes/kubernetes) y la página oficial del proyecto es [kubernetes.io](https://kubernetes.io/)
 

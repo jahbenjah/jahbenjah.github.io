@@ -1,6 +1,7 @@
 ---
 title: Plantillas
 layout: plantillas
+description: Plantillas HTML para ASP.NET Core instalables desde Nuget
 ---
 
 

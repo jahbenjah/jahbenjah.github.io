@@ -51,7 +51,7 @@ Los cursos aquí mencionados son gratuitos o que puedes tomar en el periodo de e
 
 ## Videos
 
-* [dot.net/videos](dot.net/videos)
+* [dot.net/videos](https://dotnet.microsoft.com/learn/videos)
 * [ASP.NET Community StandUp](https://live.asp.net/)
 * [Jeff Fritz](https://www.twitch.tv/csharpfritz/videos)
 * [Canal de Visual Studio](https://www.youtube.com/visualstudio)

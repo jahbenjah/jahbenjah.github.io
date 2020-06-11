@@ -38,7 +38,7 @@ El código de para este articulo esta disponible en el siguiente [repositorio](h
 git clone https://github.com/jahbenjah/WebScrappingCSharp.git
 ``` 
 
-Inicialmente pensaba realizar un tutorial paso a paso pero por cuestiones de tiempo no me fue posible. Por lo que el código lo comparto sin muchas explicaciones. Si tienes alguna duda al respecto deja un comentario. Anteriormente ya había escrito como configurar un proyecto para usar [Selenium](../2018-07-30-automatizando-el-navegador.md) que te puede dar una idea de como configurar tu proyecto con Selenium.
+Inicialmente pensaba realizar un tutorial paso a paso pero por cuestiones de tiempo no me fue posible. Por lo que el código lo comparto sin muchas explicaciones. Si tienes alguna duda al respecto deja un comentario. Anteriormente ya había escrito como configurar un proyecto para usar [Selenium]({% post_url 2018-07-30-automatizando-el-navegador %}) que te puede dar una idea de como configurar tu proyecto con Selenium.
 
 |Proyecto  |Tipo|Descripción|
 -----------|----|-----------|

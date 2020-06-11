@@ -46,6 +46,13 @@ gulp.task('main2', function () {
     .pipe(gulp.dest('.'));
 });
 
+gulp.task('lun', function () {
+  return gulp.src('assets/gitbook/gitbook-plugin-lunr/search-lunr.js')
+    .pipe(uglify())
+    .pipe(rename('assets/gitbook/gitbook-plugin-lunr/search-lunr.min.js'))
+    .pipe(gulp.dest('.'));
+});
+
 gulp.task("bs",
   function css() {
     return gulp

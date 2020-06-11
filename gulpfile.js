@@ -53,6 +53,13 @@ gulp.task('lun', function () {
     .pipe(gulp.dest('.'));
 });
 
+gulp.task('fork', function () {
+  return gulp.src('assets/gitbook/gitbook-plugin-forkmegithub/plugin.js')
+    .pipe(uglify())
+    .pipe(rename('assets/gitbook/gitbook-plugin-forkmegithub/plugin.min.js'))
+    .pipe(gulp.dest('.'));
+});
+
 gulp.task("bs",
   function css() {
     return gulp

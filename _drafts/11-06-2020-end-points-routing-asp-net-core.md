@@ -1,0 +1,23 @@
+
+En este articulo aprenderemos todo sobre el enrutamiento o Endpoint Routing en ASP.NET Core 3.0 y 3 1. Responderemos a las preguntas 
+¿Qué es el enrutamiento en ASP.NET Core? ¿Cómo funciona el Endpoint Routing?
+
+
+
+
+ genial, así que sé con 3.0 y sabes 3 1 hay toneladas de nuevas características y sabes toneladas de nuevas capacidades que se habilitaron pero hoy yo realmente quiero hablar sobre el punto final de enrutamiento lik e T
+ 
+  
+  realmente genial, puedes darnos un poco de una visión general sobre qué es exactamente el punto final que se ejecuta,
+  
+ seguro, bien enrutado, lo considero como el corazón palpitante del marco como si estuviera en las rutas realmente en el centro de todo, como antes de que algo más suceda en el marco, debes tomar una decisión sobre hacia dónde vas y eso es lo que el enrutamiento hace por ti, es como si llegara una solicitud a dónde va una vez que descubres a dónde va, puedes tomar todo tipo de otras decisiones o tener todo tipo de otras funciones basadas en eso, de modo que el enrutamiento de punto final es nuevo en 300 o bien, tenía una apertura suave (reemplazamos la implementación del enrutamiento con él) y mantuvimos la API igual y 300+ 31 que deberías estar usando 31 no 300 
+ son son tan rt como el debut real del enrutamiento de punto final 
+ 
+ y se puede considerar como una reescritura total del sistema de montaje con un par de objetivos en mente, abordamos un montón de puntos débiles, hemos vestido un montón de cosas que los usuarios han estado preguntando por nosotros unificó el sistema de enrutamiento a través de un montón de marcos diferentes para que el sistema de enrutamiento que utiliza MVC sea el mismo que el sistema de enrutamiento utilizado por la señal si es lo mismo que GRPC es lo mismo que Blazer en el servidor todo ese tipo de cosas y luego, en el rendimiento, trabajamos mucho para ajustar el rendimiento del enrutamiento y optimizarlo tanto para escenarios en los que tiene solo unas pocas rutas como para escenarios en los que tiene una tabla de rutas masiva, así que sé antes de que nos gustaran los enrutamientos tradicionales 
+ 
+ Me gustaría saber si sabes dentro de mi método configurado dentro de mi inicio.
+ Tendría una aplicación de mapa de puntos MVC o conoces la ruta predeterminada del mapa o algo así y luego también hemos atribuido una B correcta, así que esto hace esto ge cualquiera de esos o reemplaza esas cosas o es esto como una opción adicional que tenemos, sí, por lo que debería pensar en el enrutamiento de punto final es como si fuera un usuario de MVC o un usuario de API web, debería pensar sobre el enrutamiento de punto final es como una actualización de las cosas que ha estado haciendo antes de que descubra que casi todo funciona igual, solo hay un par de cosas pequeñas que son diferentes y el tipo de experiencias a las que está acostumbrado en el el pasado seguirá funcionando igual, básicamente, todos tus amigos están allí, así que si estás acostumbrado a usar controladores de mapas, hay una nueva API que es realmente similar a los controladores de mapas si estás acostumbrado a usar rutas de atributos, literalmente, nada cambia como las cosas, simplemente funcionan. hay algunos cambios en el código de inicio, pero aparte de eso, 
+ 
+ hemos hecho un montón de trabajo para tratar de mantener las cosas funcionando de la manera que está familiarizado, además de agregar algunas cosas nuevas, así que ¿por qué no miramos algún código y Quiero hablar de abetos t algunos de los problemas que tratamos de resolver con el enrutamiento de punto final y cómo lo hacemos, así que vamos a algún código bien, así que tengo una aplicación MVC muy simple aquí y tengo un inicio antiguo y un inicio nuevo y el La razón por la que le estoy mostrando esto es que le estoy mostrando cómo podemos usar las rutas antiguas o el antiguo sistema de enrutamiento y el nuevo sistema de enrutamiento y vamos a hablar sobre algunos de los problemas que resolvimos aquí, así que este es un asp net core y estoy usando FM BC con opciones MVC que habilitan el enrutamiento de punto final falso, por lo que esto es lo que debe hacer en 3.0 
+ 
+ si desea continuar usando el sistema de enrutamiento anterior y, aparte de eso, todo esto es lo mismo así que déjame darte déjame ejecutar esto y darte un breve recorrido de lo que está haciendo esta aplicación para que esto comience y tengo una identidad básica de asp net aquí, así que tenemos el registro, el registro familiar y los tipos de inicio de sesión de enlaces aquí y tengo una página de inicio que estás viendo en este momento y tengo esto como una página secreta, así que si

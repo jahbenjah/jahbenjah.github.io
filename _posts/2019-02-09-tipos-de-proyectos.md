@@ -56,7 +56,7 @@ xUnit Test Project                                xunit                    [C#],
 ## Los proyectos web de ASP.NET Core
 
 Podemos clasificar los tipos de proyectos de ASP.NET Core en las siguientes categorías:  
-* _Aplicaciones web tradicionales basadas en **MVC**  y [Web API]({% post_url s2019-12-25-introduccion-web-api %})_ 
+* _Aplicaciones web tradicionales basadas en **MVC**  y [Web API]({% post_url 2019-12-25-introduccion-web-api %})_ 
 * _Aplicaciones web tradicionales basadas en **Razor Pages**_,
 * _Aplicaciones de una sola página con C# usando **Blazor**_, 
 * _Aplicaciones una sola página (<abbr lang="en" title="Single Page Application">SPA</abbr> ) con Javascript_. Estas requieren tener instalado [Node.js](https://nodejs.org/en/)

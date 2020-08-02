@@ -16,5 +16,4 @@ El **Modelo** es un objeto que representa alguna información especifica del dom
 
 La **Vista** es la representación visual del modelo y esta es su única responsabilidad 
 
-
 La mayoría de los frameworks para desarollo web usan el patrón de diseño MVC

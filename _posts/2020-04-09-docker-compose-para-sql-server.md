@@ -13,11 +13,12 @@ En el caso de que tú quieres requieres otra imagen en específico por acá est�
 
 ## SQL Server en un contenedor Docker
 
-Una cosa importante que incluye el Docker Hub son ejemplos de cómo ejecutar el contenedor para SQL Server. Básicamente utilizan el comando 
+Una cosa importante que incluye el Docker Hub son ejemplos de cómo ejecutar el contenedor para SQL Server. Básicamente utilizan el comando
 
 ```bash
 docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=yourStrong(!)Password' -p 1433:1433 -d mcr.microsoft.com/mssql/server:2017-CU8-ubuntu
 ```
+
 En este comando se esta especificando las variables de entorno ACCEPT_EULA ,SA_PASSWORD y MSSQL_PID están sirven para aceptar la licencia de SQL Server, definir el password del usuario _sa_ y definir la edición que usara el contenedor.
 
 Debes tener en cuenta los requerimientos mínimos que necesita SQL Server. Se necesitan por lo menos 2GB para las versiones más recientes y 3GB para las versiones anteriores.

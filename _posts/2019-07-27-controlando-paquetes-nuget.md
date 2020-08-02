@@ -48,7 +48,7 @@ Si prefieres usar la linea de comandos puedes usar el comando `dotnet add packag
 dotnet add package Humanizer --version 2.6.2
 ```
 
-Lamentablemente este comando no permite actualizar los paquetes de Nuget pero para ello puede usar la herramienta global [dotnet outdated](https://github.com/jerriep/dotnet-outdated). Lo primero que tienes que hacer es instalarla con el siguiente comando:
+Lamentablemente este comando no permite actualizar los paquetes de Nuget pero para ello puede usar la herramienta global [dotnet outdated](https://www.nuget.org/packages/dotnet-outdated/). Lo primero que tienes que hacer es instalarla con el siguiente comando:
 
 ```console
 dotnet tool install --global dotnet-outdated

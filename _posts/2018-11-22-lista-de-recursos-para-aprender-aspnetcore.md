@@ -32,8 +32,8 @@ Mi opción preferida para aprender algo nuevo siempre es un libro. He de decir q
 
 * [Blog de Sccot Hanselman](https://www.hanselman.com/blog/CategoryView.aspx?category=ASP.NET): No necesita presentación revisalo seguro encontrarás algo inspirador.
 * [Andrew Lock](https://andrewlock.net/) : Autor del libro ASP.NET Core in Action.
-* [ASP.NET Team Blog]()
-* [Blog de Steve Smith aka Ardalis](https://ardalis.com/tag/asp-net-core)
+* [ASP.NET Team Blog](https://devblogs.microsoft.com/aspnet/)
+* [Blog de Steve Smith aka Ardalis](https://ardalis.com/)
 
 ## Cursos
 
@@ -47,7 +47,7 @@ Los cursos aquí mencionados son gratuitos o que puedes tomar en el periodo de e
 
 ## Noticias
 
-* [ASP.NET Weekly](https://www.getrevue.co/profile/aspnetweekly): Boletín semanal que incluye algunos artículos relacionados con ASP.NET Core publicados la semana anterior. Este llega cada lunes.
+* [ASP.NET Core News](https://aspnetcore.news/) Boletín semanal que incluye algunos artículos relacionados con ASP.NET Core en idioma ingles publicados la semana anterior. Este llega cada viernes.
 
 ## Videos
 

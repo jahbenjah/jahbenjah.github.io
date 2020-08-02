@@ -12,7 +12,7 @@ Como es un framework de desarrollo web ASP.NET Core el proposito principal es ge
 Revisemos cada una de las características mencionadas:
 
 **Framework de código abierto** Es algo que para muchos todavía parece increíble:
-> [Microsoft](https://octoverse.github.com/projects) esta ente los principales contribuidores a proyectos de Código Abierto.
+> [Microsoft](https://octoverse.github.com) esta ente los principales contribuidores a proyectos de Código Abierto.
 
 Es posible que camino de .NET y Microsoft en el software libre haya iniciado con la liberación de la [**Especificación del Lenguaje C#**](https://www.ecma-international.org/publications/standards/Ecma-334.htm) en el 2003. Pero por ahora solo basta mencionar que todo código y documentación de ASP\.NET Core esta alojado en la más reciente adquisición de Microsoft: **Github**. Puedes explorar los detalles de cada línea de código, revisar y reportar incidencias (**issues**), ver el plano de ruta ,aportar con tu propio código y/o documentación.
 

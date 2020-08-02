@@ -8,7 +8,7 @@ image:
   height: 339
   width: 647
 last_modified_at: 2020-08-01 12:29:55 +0000
-description: "Se describen las plantillas del SDK de NET Core disponibles para clear proyectos de consola, web"
+description: "Aprende como agregar Font Awesome a un proyecto de ASP.NET Core. También se agregan los iconos de Feather "
 ---
 
 Los elementos gráficos de las aplicaciones web le dan un atractivo adicional a nuestra interfaz gráfica. Un elemento que puede mejorar significativamente la apariencia de tu sitio web son los iconos. En este tutorial te mostramos como usar agregar los iconos [Feather](https://feathericons.com/) y [Fontaweosme](https://fontawesome.com/) a un proyecto de ASP.NET Core. Feather es un conjunto de 274 iconos en formato [SVG](https://svgontheweb.com/#svg).
@@ -21,7 +21,60 @@ Partimos de un nuevo proyecto ASP.NET Core 3.1 creado en Visual Studio 2019 con 
 
 _Archivo > Nuevo proyecto > .NET Core > Aplicación Web ASP.NET Core (Agregar a control de Código Fuente)_ después seleccionar _.NET Core 3.1 > Aplicación Web (MVC)_
 
-## Instrucciones para instalar Feather con ****LibMan****
+## Cómo instalar Font Awesome en un proyecto de ASP.NET Core **LibMan**
+
+La librería de iconos más famosa es sin duda es [Font Awesome](https://fontawesome.com/) en esta sección te muestro como utilizar la herramienta global para .NET Core de **LibMan** para instalar Font Awesome dentro de un proyecto MVC de ASP.NET Core. Si prefieres utilizar una interfaz gráfica revisa la sección anterior que utiliza **LibMan** pero con Visual Studio.
+
+Para instalar **LibMan** en un proyecto de ASP.NET Core realiza el siguiente procedimiento dentro de la carpeta del proyecto
+
+1. Instalar **LibMan** como herramienta global: `dotnet tool install -g Microsoft.Web.LibraryManager.Cli`
+
+2. Inicializa **LibMan** dentro del proyecto con el comando `LibMan init` . Se te solicitara elegir entre los proveedor de CDN disponibles *cdnjs*, *filesystem* , *jsdelivr* ,*unpkg*. El proveedor default es *cdnjs*. Esto creara un archivo json con la siguiente contenido.
+
+```json
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": []
+}
+```
+
+3. Instalar Font Awesome con el comando especificando la ruta donde se guardaran los archivos en este caso _wwwroot/lib/font-awesome_ . La siguiente acción descargara los 46 archivos (hojas de estilos, scripts y fuentes) de Font Awesome desde el CDN. Adicionalmente puedes usar la opción _--files_ para especificar unicamente los archivos que deseas por ejemplo `--files css/all.min.css`
+
+```bash
+libman install font-awesome@5.14.0 --destination wwwroot/lib/font-awesome
+```
+
+Al finalizar veras el mensaje `la biblioteca "font-awesome@5.14.0" se instaló en "wwwroot/lib/font-awesome"`. Y el archivo _libman.json_ quedara de la siguiente manera
+
+```json
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "font-awesome@5.14.0",
+      "destination": "wwwroot/lib/font-awesome"
+    }
+  ]
+}
+```
+
+Con esto ya se puede utilizar la librería en nuestra aplicación puedes agregar en elemento **head** del archivo del _Layout.cshtml_. Pero considera que esto agregara la el archivo css a todas las vistas que utilicen este layout.
+
+```html
+ <link rel="stylesheet" href="~/lib/font-awesome/css/all.min.css" />
+```
+
+Otra opción que te permite agregar de forma selectiva en cada vista el css es agregan una sección opcional al elemento _head_ con la instruccións `@RenderSection("Estilos", required: false)` del archivo layout y especificar en cada vista que requiera usar los iconos de la siguiente manera
+
+```html
+@section Estilos {
+    <link rel="stylesheet" href="~/lib/font-awesome/css/all.min.css" />
+}
+```
+
+## Como para instalar Feather con LibMan
 
 [LibMan](https://docs.microsoft.com/es-mx/aspnet/core/client-side/****LibMan****/index?view=aspnetcore-2.2) es el gestor de librearías del lado del client incluido en Visual Studio 2019 que básicamente lo que permite es agregar librerías js y css fácilmente a un proyecto de ASP. NET Core.
 
@@ -62,56 +115,3 @@ Con esto ya tenemos listo todo para poder usar los iconos de Feather en nuestro 
 El ejemplo [Dashboard de Bootstrap 4](https://getbootstrap.com/docs/4.0/examples/dashboard/) usar estos iconos.
 
 Puedes revisar todos los cambios realizados en el Team Explorer y veras que se han hecho: 5 archivos agregados y 3 archivos modificados.
-
-## Cómo instalar Font Awesome en un proyecto de ASP.NET Core **LibMan**
-
-La librería de iconos más famosa es sin duda es [Font Awesome](https://fontawesome.com/) en esta sección te muestro como utilizar la herramienta global para .NET Core de **LibMan** para instalar Font Awesome dentro de un proyecto MVC de ASP.NET Core. Si prefieres utilizar una interfaz gráfica revisa la sección anterior que utiliza **LibMan** pero con Visual Studio.
-
-Para instalar **LibMan** en un proyecto de ASP.NET Core realiza el siguiente procedimiento dentro de la carpeta del proyecto
-
-1. Instalar **LibMan** como herramienta global: `dotnet tool install -g Microsoft.Web.LibraryManager.Cli`
-
-2. Inicializa **LibMan** dentro del proyecto con el comando `LibMan init` . Se te solicitara elegir entre los proveedor de CDN disponibles *cdnjs*, *filesystem* , *jsdelivr* ,*unpkg*. El proveedor default es *cdnjs*. Esto creara un archivo json con la siguiente contenido.
-
-```json
-{
-  "version": "1.0",
-  "defaultProvider": "cdnjs",
-  "libraries": []
-}
-```
-
-3. Instalar Font Awesome con el comando especificando la ruta donde se guardaran los archivos en este caso _wwwroot/lib/font-awesome_ . La siguiente acción descargara los 46 archivos (hojas de estilos, scripts y fuentes) de Font Awesome desde el CDN. Adicionalmente puedes usar la opción _--files_ para especificar unicamente los archivos que deseas por ejemplo `--files css/all.min.css`
-   
-```bash
-libman install font-awesome@5.14.0 --destination wwwroot/lib/font-awesome
-```
-
-Al finalizar veras el mensaje `la biblioteca "font-awesome@5.14.0" se instaló en "wwwroot/lib/font-awesome"`. Y el archivo _libman.json_ quedara de la siguiente manera
-
-```json
-{
-  "version": "1.0",
-  "defaultProvider": "cdnjs",
-  "libraries": [
-    {
-      "library": "font-awesome@5.14.0",
-      "destination": "wwwroot/lib/font-awesome"
-    }
-  ]
-}
-```
-
-Con esto ya se puede utilizar la librería en nuestra aplicación puedes agregar en elemento **head** del archivo del _Layout.cshtml_. Pero considera que esto agregara la el archivo css a todas las vistas que utilicen este layout.
-
-```html
- <link rel="stylesheet" href="~/lib/font-awesome/css/all.min.css" />
-```
-
-Otra opción que te permite agregar de forma selectiva en cada vista el css es agregan una sección opcional al elemento _head_ con la instruccións `@RenderSection("Estilos", required: false)` del archivo layout y especificar en cada vista que requiera usar los iconos de la siguiente manera
-
-```html
-@section Estilos {
-    <link rel="stylesheet" href="~/lib/font-awesome/css/all.min.css" />
-}
-```

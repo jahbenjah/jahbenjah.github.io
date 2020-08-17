@@ -1,7 +1,9 @@
 
+
 En este articulo trataremos los tipos anónimos de C#. Esta característica fue agregada en la versión 3.0 del lenguaje allá por el 2007 junto con otras características del lenguaje para soportar LINQ o Lenguaje Integrado de Consultas que es una de las grandes características que tiene este lenguaje C# y que lo comienzan a diferenciar de Java.
 
 Las otras características dan soporte a LINQ y van de la mano junto con los tipos anónimos son  
+
 * El **tipado de implícito** es decir el uso de la palabra `var` para declarar variables `var nombre = "Benjamin";` 
 * La **inicializadores de objetos** `var persona = new Persona (){ Nombre = "Pedro" , Edad = 22 };` 
 * Los inicializadores de colecciones

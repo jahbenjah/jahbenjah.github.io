@@ -32,14 +32,13 @@ Los ejemplos siguientes funcionan en la mayoría de las versiones de SQL Server 
 
 ## Cadena de conexión SQL Server usando la autenticación de Windows
 
-En el caso de que uses la autenticación de Windows puedes usar el siguiente ejemplo de cadena de conexion para SQL Server. Esto lo que hacer es reutilizar las credenciales del usuario de Windows para conectate a SQL Server.
+En el caso de que uses la autenticación de Windows puedes usar el siguiente ejemplo de cadena de conexión para SQL Server. Esto lo que hacer es reutilizar las credenciales del usuario de Windows para conectate a SQL Server.
 
 ```
 Data Source=.;Initial Catalog=master;Integrated Security=True
 ```
  
  Es importante asegurate que el parámetro `Integrated Security` no lo uses en combinación con con un usuario y contraseña SQL Server toma utiliza la autenticación de Windows en lugar de la de SQL Server.
-
 
 ## Cadena de conexión SQL Server con usuario y contraseña
 
@@ -67,7 +66,6 @@ Server=(localdb)\mssqllocaldb;Database=Blogging;Trusted_Connection=True;Applicat
 ## Parámetros adicionales  
 
 Es importante notar la presencia del parámetro **Application Name** este campo se puede utilizar para identificar que acciones ejecuta una aplicación y es muy util en el diagnostico de problemas de desempeño en [SQL Server Profiler](https://docs.microsoft.com/sql/tools/sql-server-profiler/sql-server-profiler?view=sql-server-2017) . Es recomendable siempre incluirlo.
-
 
 ## Crear una cadena de conexión para SQL Server
 
@@ -140,7 +138,6 @@ Microsoft SQL Server 2016 (SP2) (KB4052908) - 13.0.5026.0 (X64)
         Copyright (c) Microsoft Corporation
         Enterprise Evaluation Edition (64-bit) on Windows 10 Pro N 10.0 <X64> (Build 18362: ) (Hypervisor)
 ```
-
 
 # Cadena de conexión MySQL
 

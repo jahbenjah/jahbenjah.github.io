@@ -1,0 +1,121 @@
+Hey friends I'm Scott Hanselman a number of people have asked me what is .NET what is C# what is the.NET ecosystem and can i explain it because 
+it seems confusing i've got a couple of interesting tweets here from some new friends this gentleman is saying i know nothing about C# but 
+there's lots of programmers who like it and he says is it an ecosystem is it a product is it part of windows is it part of azure you know why do people use it 
+do they like the tooling kelsey hightower says he thought it was a programming language but then discovered that he feels it was a mini operating system with 
+lots of different execution environments and programming languages i did the best i could to explain it in a tweet and i'm going to take this tweet and i'm going
+to explain a little bit of that to you today in a short video to give you a sense of what is .NET.
+ 
+okay it's not the best name but it's the name that we have so net is a platform for building stuff that means it's a runtime a series 
+of languages and a bunch of libraries that can enable you to build basically any app because there are run times or environments basically 
+anywhere so whether that be a desktop app or a web app or something on a mobile device an android or watch raspberry pi unity which you play a lot of games with use a C# at its heart and do all these different things you know and people like it 
+blah blah blah marketing marketing uh the confusing part was that there were a bunch of different ways to run .NET for a while 
+the.NET framework is the one that you probably have heard of runs on windows 
+
+.NET Core is new and open source and then Mono or Xamarin is a oh is it basically an open source re-implementation or a clean room
+re-implementation of .NET that ran originally on Linux that's all being combined into one single SDK software development kit with 
+one base class library BCL one of the things that's cool about net is that there's a bunch of libraries you don't necessarily have to go
+looking for a library just because you want to left pad a string so there'll be all kinds of cool features with cross platform uis and 
+native this and that and it'll be lovely net has been out for many years and currently in the year of our lord 2020 we have a long-term support three years of support version 
+of .NET Core it's open source all the way down to the metal and it runs on windows and mac and ubuntu and all the different Linuxes and docker it runs 
+everywhere you can make anything you want with it later this year in 2020 dot at five will come out and then we'll just bounce every other year with a 
+new long term support edition
+
+so net is a thing and then it says hey go use it today what does that even mean well if we go up at the website 
+we see that we can go and download.net this is the windows 1 this one is basically done you want to spend your time with net core because it runs 
+anywhere you can go and download the SDK for Linux or mac or whatever it makes you happy and again SDK is software development kit we have a little table
+ here it just basically says you can use this one and you'll be supported for a long time and we actually put the date of when it'll be supported till and then
+ .NET 5 is currently in preview so we're pretty clear about the one that you might want to get let's look back here so net is a weird name a weird top-level 
+ domain that is the ecosystem that means languages run times and libraries and then all the different things around it so languages like C# and f-sharp 
+ and vb and others there are lots of languages these are your main ones runtimes are places that you can run these languages we have a common language runtime 
+ and that lets you run all these things and that core CLR runs all over its nice clean open source code you can compile it for playstation for all i care and 
+ then you've got libraries there's a lot of base class libraries a lot of functions and stuff that you can get they're built in thousands of them that's 
+ one of the main things that people like about.NET is it has a ton of functions built in and you just bring them in by bringing in namespaces we'll talk about 
+ that in a little bit and then there's all the great third party and oss libraries that there's millions and millions of and you can go check those out 
+ okay so if.NET is an ecosystem of stuff comprising languages and runtimes and libraries but the CLR is kind of like the jvm if we put this in Java terms 
+ and nuget are basically packages you bring those libraries in those third-party libraries those open source libraries via our thing called nuget that's 
+ like the node package manager or maven on Java we have a command line interface that will show you called net and then you can do stuff.NET 
+ stuff.NETnew.NETrun.NETbuild.NET publish and things like that that's your main entry point that's your thing that you talk to.NET with that you 
+ do Java c or go or whatever node that's the thing that you do if i come out here to the command line and i go super fancy and i just make a directory 
+ i'm just on windows and i have an empty folder here and i say .NET new there's a list of stuff i can make these are all things you can make now this 
+ is a little different because oftentimes with node or go or rust it's like here's hello world these are templates these are starter packs if i said net
+ new console it'll set me up it'll set up my folder with the things that i want but i can make windows presentation foundation apps i can do unit tests i 
+ can do razer pages for making websites and i can do model view controller like ruby on rails but.NET i can do react grpc this list here are just templates
+ at its root though it's using the dotnet runtime and then if it's a web application we add on top of that ASP.NET which is the web part of things it's like 
+ express in the context of node and you see the language support that you have over here on the side okay so that means i could go and say .NET new 
+ console it goes in it makes one i have suddenly some stuff the stuff part is a little confusing because this is a compiled and strongly typed language 
+ you'll see some binary folders and some files that get created for you you can usually delete those they have caches and project stuff i could delete 
+ that folder and still run it again because the next time i build those artifacts those temporary artifacts will be created languages like go and other 
+ languages might hide that stuff in the temp folder that's basically where it is it's sitting right there now if i say net build and i run it again now 
+ i've got a binaries folder where my my thing is output so i can go down there and i can see my application and there it is there's my super fancy application
+ again there's the executable and a dynamic link library those are the things that you need your portable debug file and then some json things for development 
+ and runtime configuration those can largely be ignored as well because now i can just go and say super fancy exe and it runs and then you can run it at scale 
+ i'm running let's go net in a nutshell in this case here though the run time the shared runtime the thing that makes .NET work is installed on this machine
+ and you'll notice that i'm saying .NET this and dotnet that i can say.NET info to find out the versions of net that i have i can find out about my runtime 
+ environment and where these things are located now if i switch over on my same machine to ubuntu or Linux machine maybe you're on a mac i can say .NET
+ dash dash info and i can see here it's installed somewhere else and i have fewer .NETs i just have this one runtime and this one SDK installed and i 
+ could go and do the same stuff again it runs everywhere over on my main development machine you see i have different versions that's important because you 
+ can run your applications side by side meaning that if i want to use this version or that version one.NET app can't break another just because you have 
+ different versions okay now let's switch over to now let's switch over to something that's actually an app here's C# now this is kind of classic 
+ or what they call idiomatic C# where we just have a fibonacci sequence and we're saying that we're going to use one of those base class libraries 
+ that comes in this is a thing that allows me to say console.writeline i could just say system.console.rightline and now i can get rid of that it's 
+ just a namespace scoper here i'm saying that the namespace for my application is c fib i can be whatever it doesn't matter that's going to become now 
+ the name space for my class here which i just called program also not a big deal my static void main my entry point to my application right here called main 
+ you might see that in other C type languages C++, Java i have this idea of a main and then we go and we call a function called fib which we created
+ up here takes in an integer says hey if that i is less than or equal to two we'll return one otherwise we'll go and we'll call ourselves we'll do a recursive
+ call we'll do the fibonacci sequence now again we've got that obj folder that's full of stuff that i can delete and it'll get recreated when i recompile 
+ at that bin folder with the resulting application these things can all be deleted so for example i can go and just torch that torch that okay now from within my
+ visual studio code here i'm just going to open up the terminal and i'll say dotnet run which is going to build it and run it and you'll notice on the left hand
+ side those two vestigial artifacts files just came back i did run and there's the value there 67 65 the fibonacci of 20. 
+ 
+ one of the things that people find confusing about .NET is it has a project file you see this C# praj some languages are folder-based where you just put stuff in a folder and then it works
+ but C# is really welcome in the enterprises and a lot of people use it on really big systems and sometimes that system breaks down and you have this 
+ project file which has settings configuration and then sometimes including or excluding the files that you want for your application so there's important 
+ things happening in here like the kind of thing that we're outputting are we outputting a library around putting an executable which framework are we using 
+ the SDK that we're using here i could use a web SDK or a regular SDK one of the things that i thought might be kind of cool to show you is again because.NET
+ is an ecosystem there's a lot of subtlety going on remember how i said that there's the run time and there's also the language the languages themselves have 
+ versions so for example C# 9 is being worked on right now so that's different i could go in here and i could say you know let's do the fibonacci sequence
+ except i want to try a different version of the language i want to try one of the preview versions of our language so i'm going to try a preview of C# 
+ 9 all right we'll go in here okay see if it still runs we'll just run out of the command line here and we'll make sure it still runs i want to go back up to my
+ desktop and down into the C# folder i could do all of this in visual studio but i thought it'd be nice for you to actually see someone drive a stick shift
+ rather than drive an automatic we see that i changed the language and nothing changed right so nothing's really interesting there but there are some things 
+ about C# that people might not like for example they might not want to do that or they might not want the namespace you might find classes frustrating or
+ annoying for basic applications they might find that entry point to be somewhat frustrating so they may not necessarily want these things they may just want to
+ have something like this so here i've got a top level program and all those things that were around us the using statement the entry point that's all implied 
+ this looks a little bit more like a python application where you just say hey well print screen let's do it right so here we're doing a pretty simple if
+ statement and then a return if i wanted to i could do something like this right as we see or if you like your knrc you could do it like that that's cool 
+ you know everyone's different but with C# 9 you could do because this is effectively a matching statement you could do things a little differently 
+ right maybe then rather than doing it like this i might want to basically get rid of this whole function here and we'll say make it as a a lambda so 
+ i'm going to go here and i'm going to switch on that i that's coming in all right and then what we're going to do is we're going to pull this in here 
+ and i'm going to say that integer when i is less than 2 then that right goes to 1 okay and then down here everything else kind of the else statement 
+ is going to go to fib ourselves cool all right so that's a very different looking application here this is C# 9 so it's a living language it's 
+ changing it's uh optional you saw of course that i was able to run things either way it just depends on how you want things to look let's go and see if that
+ still runs and it does now you note that that took a moment 1 1000 to 1000. that's because run implies a build it's a statically typed language that's important
+ and it implies a run but if i went down there and i ran it directly that runs just fine so so here is our C# 9 version of fib if we put it back the way 
+ it was we just control z our way to glory that's your idiomatic way of doing things in C# you get a lot of flexibility there a lot of choices remember how 
+ i said that this was in fact a a series of languages you could also do things like this so this is f-sharp this is our functional ocamel style language here
+ also.NET can also use all the libraries in the ecosystem can also run in all those different places it's just doing things in a functional way and you'll notice
+ that that C# 9 with its pattern matching introduced some interesting functional styles as well so these different languages kind of feed off each other 
+ and you'll see them taking features back and forth because it's all part of the same .NET family so here's a cool and interesting way to go and do that let 
+ declare that that's the case and then call this fib function and i could theoretically call C# and other things from fsharp and vice versa because it's 
+ just net it's a bit of an oversimplification but all of that turns into an intermediate language and then gets run through that common language runtime which 
+ then again runs anywhere so that is f sharp all of this is part of that.NET ecosystem all right reminding ourself of what's going on here when we say net 
+ it's the product it's the ecosystem it's the download you could call it that but you've got all these languages you've got run times that can run anywhere 
+ you've got tons of libraries that you can bring in and of course your common language runtime different languages living languages languages that have 
+ version numbers. 
+ 
+Nuget is our package manager you can go to (nuget.org)[nuget.org] and you can see all the different packages at 57 billion downloads you can go up 
+there and explore the different open source packages that have been downloaded the runtimes open source the docs themselves are open source all the 
+libraries compilers everything is pretty cool so if we go back to our friends who have just stumbled into .NET they really are finding a mini operating 
+system you've got support for basically executing anywhere lots of different programming languages and i'm glad that you have questions because we are 
+a welcoming community and we're here to help you there's a lot of fun stuff you can do i'm just doing fibonacci right here the fun part of course is that
+if i wanted to do something even more like for example my podcast which is a whole web application that runs in docker and runs on Linux i can go here and 
+i can say dotnet run i'm going to go and compile my podcast website locally here pop it up on localhost i'll then jump over and i'll say localhost 5000 
+5001 we'll see if we can bring up my podcast for a second boom there we go and now i'm running my application now if you go to my website for my podcast
+which is called hansel minutes i think you should check it out it's a lovely show you can see right here that it was powered net core 3.1 and i've even
+got the git commit and the build listed down there at the bottom so i can make websites i can make mobile apps games all kinds of stuff so that's my 
+short how long was this less than 20-minute explanation of what dot-net is it's a a really lovely world of libraries languages runtimes it might take a
+moment looks like it's going to take you 20 minutes to get a sense of what's going on i would encourage you to take a look at dot .NET slash videos 
+slash videos we have a whole series of videos here for you to check out C# 101 it's a 19 part series just short little bite size videos see leslie 
+here talking about ASP.NET Core squeaky talking about using it on a raspberry pi making desktop apps containers we've got a whole bunch of great folks 
+talking about all of this stuff and if you don't want to install anything we've even got a no install version of net just play with it in the browser and 
+try it out after you install anything it's super cool so that's.NET in just a few minutes check it out 

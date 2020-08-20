@@ -74,6 +74,10 @@ Otra opción que te permite agregar de forma selectiva en cada vista el css es a
 }
 ```
 
+<div class="video-responsive">
+<iframe  src="https://www.youtube.com/embed/Gj5YM9TlXN8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 ## Como para instalar Feather con LibMan
 
 [LibMan](https://docs.microsoft.com/es-mx/aspnet/core/client-side/LibMan/?view=aspnetcore-3.1) es el gestor de librearías del lado del client incluido en Visual Studio 2019 que básicamente lo que permite es agregar librerías js y css fácilmente a un proyecto de ASP. NET Core.

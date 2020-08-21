@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Compilacion de vistas ASP.NET Core"
-date:   2020-03-12 23:23:47 +0000
+date:   2020-08-20 22:22:47 +0000
 categories: aspnetcore
 permalink: /:categories/:title:output_ext
 image:

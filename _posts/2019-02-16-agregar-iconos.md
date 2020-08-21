@@ -78,6 +78,39 @@ Otra opción que te permite agregar de forma selectiva en cada vista el css es a
 <iframe  src="https://www.youtube.com/embed/Gj5YM9TlXN8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
+### Cómo cambiar el tamaño de los iconos de Font Awesome
+
+Para cambiar el tamaño de los iconos de Font Awesome puedes utilizar la propiedad `font-size` y usar alguna de las unidades soportadas como `em` o  `px` para más detalle visita la [font-size en MDN](https://developer.mozilla.org/es/docs/Web/CSS/font-size). Por ejemplo para tener un icono 9 veces más grande que el tamaño regular.
+
+```html
+<div>
+    <i class="fas fa-user" style="font-size:9em"></i>
+</div>
+```
+
+Aunque colocar los estilos en linea en cada elemento HTML funciona tiene la desventaja que no es reutilizable por lo cual es una mejor idea colocarlo crear una clase CSS en un archivo de estilos.
+
+```css
+.icono-9x {
+    font-size: 9em;
+}
+
+<div>
+    <i class="fas fa-user icono-9x"></i>
+</div>
+```
+
+### Cómo cambiar el color de los iconos de Font Awesome
+
+Para cambiar el color de los iconos de Font Awesome se usa la propiedad CSS ``color` 
+
+```css
+.icono-9x-rojO {
+    font-size: 9em;
+    color:red;
+}
+```
+
 ## Como para instalar Feather con LibMan
 
 [LibMan](https://docs.microsoft.com/es-mx/aspnet/core/client-side/LibMan/?view=aspnetcore-3.1) es el gestor de librearías del lado del client incluido en Visual Studio 2019 que básicamente lo que permite es agregar librerías js y css fácilmente a un proyecto de ASP. NET Core.

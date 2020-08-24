@@ -66,8 +66,9 @@ donde la versión 2.0.3 es la que da la salida del comando anterior.
 
 Si usas **Visual Studio** hay un combo que permite seleccionar la versión 2.0 al momento de crear el proyecto.
 Si prefieres una explicación en video aca te dejo una donde uso Ubuntu 19.10 para mostrar el funcionamiento del archivo global.json.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/lN5bW9MTRa8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/lN5bW9MTRa8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## Como obtener el libro
 

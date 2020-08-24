@@ -84,17 +84,22 @@ namespace IntroduccionIdentity.Data
 
 Estoy preparando una lista de reproducción dedicada al tema de ASP.NET Core Identity. Actualmente esta [lista de reproducción en YouTube](https://www.youtube.com/playlist?list=PLnk7QzMh6N-JKP6ZdfXfaRGhxRk0Xu11j) cuenta con 3 videos. Esta serie de videos se usando el sistema operativo Ubuntu 19.10 con el SDK 3.1 de .NET Core. A pesar de que se usa Linux para mostrar como funciona ASP.NET Core Identity la herramienta de linea de comandos funciona igual en Windows o Mac.
 
-1. Introducción a ASP.NET Core Identity. Muestra las diferencias entre crear un proyecto con autenticación de cuentas indivduales y uno sin autenticación. 
-   <div class="video-responsive">
-    <iframe src="https://www.youtube.com/embed/TQK9Y3jviZw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-   </div>
-2.  Personalizar la tabla AspNetUsers
+* Introducción a ASP.NET Core Identity. Muestra las diferencias entre crear un proyecto con autenticación de cuentas indivduales y uno sin autenticación. 
+   
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/TQK9Y3jviZw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+*  Personalizar la tabla AspNetUsers
+
 <div class="video-responsive">
    <iframe src="https://www.youtube.com/embed/ckkvuA6epY0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-3. Scaffolding ASP.NET Core
-   <div class="video-responsive">
-    <iframe src="https://www.youtube.com/embed/MqcLBewsNUE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+* Scaffolding ASP.NET Core
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/MqcLBewsNUE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 4. Cambiar de base de datos

@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Tipos de proyectos de ASP.NET Core "
-date:   2019-02-09 20:00:01 +0000
+title: "Tipos de proyectos de ASP.NET Core "
+date: 2019-02-09 20:00:01 +0000
 categories: asp.net core
 last_modified_at: 2019-05-25 09:42:55 +0000
-description: "Se describen las plantillas del SDK de NET Core disponibles para clear proyectos de consola, web"
+description: "Se describen las plantillas del SDK de NET Core disponibles para crear proyectos de consola, web"
 image:
   path: /img/csharp.webp
   height: 324
@@ -15,7 +15,7 @@ Una aplicación de ASP.NET Core no es más que una aplicación de consola que ej
 
 Todo comienza con el comando `dotnet new` por lo que es importante saber cuales son las opciones disponibles para el mismo . Invocaremos la ayuda sobre mediante la instrucción `dotnet new --help` en la consola o terminal. La salida se muestra en lo siguiente:
 
-<img src="/img/dotnetnewhelp.webp" loading="lazy"  alt="Captura de pantalla del comando dotnet new --help">
+<img src="/img/dotnetnewhelp.webp" loading="lazy" alt="Captura de pantalla del comando dotnet new --help">
 
 Hay varias observaciones para esta salida:
 
@@ -28,9 +28,9 @@ Hay varias observaciones para esta salida:
     `--type` permite mostrar los diferentes tipos de plantillas: `project`, `items` y `others`
     `--language` Permite elegir el lenguaje de programación para algunas plantillas puede ser C# , VB o F#.
 
-* Cada plantilla de proyecto contiene un nombre corto, por ejemplo, **mvc**, **web** , **webapp** o **webapi** y  este nombre corto se usa como argumento para el comando `dotnet new <nombre_corto>`.
+* Cada plantilla de proyecto contiene un nombre corto, por ejemplo, **mvc**, **web** , **webapp** o **webapi** y este nombre corto se usa como argumento para el comando `dotnet new <nombre_corto>`.
 
-* Se pueden crear proyectos de las plantillas  **mvc**, **web** y **webapi** usando los lenguajes de programación C# o F#.
+* Se pueden crear proyectos de las plantillas **mvc**, **web** y **webapi** usando los lenguajes de programación C# o F#.
 
 ## Los proyectos de NET Core
 
@@ -55,8 +55,8 @@ xUnit Test Project                                xunit                    [C#],
 
 ## Los proyectos web de ASP.NET Core
 
-Podemos clasificar los tipos de proyectos de ASP.NET Core en las siguientes categorías:  
-* _Aplicaciones web tradicionales basadas en **MVC**  y [Web API]({% post_url 2019-12-25-introduccion-web-api %})_ 
+Podemos clasificar los tipos de proyectos de ASP.NET Core en las siguientes categorías: 
+* _Aplicaciones web tradicionales basadas en **MVC** y [Web API]({% post_url 2019-12-25-introduccion-web-api %})_ 
 * _Aplicaciones web tradicionales basadas en **Razor Pages**_,
 * _Aplicaciones de una sola página con C# usando **Blazor**_, 
 * _Aplicaciones una sola página (<abbr lang="en" title="Single Page Application">SPA</abbr> ) con Javascript_. Estas requieren tener instalado [Node.js](https://nodejs.org/en/)
@@ -99,4 +99,4 @@ Recomendamos que por lo menos uses el argumento `-o` para especificar la carpeta
 
 Si usas **Visual Studio** puedes crear un nuevo proyecto mediante _Archivo> Nuevo Proyecto > Web > Aplicación Web ASP.NET Core_.
 
-<img src="/img/ProyectoNuevo.webp" loading="lazy"  alt="Nuevo Proyecto ASP.NET Core">
+<img src="/img/ProyectoNuevo.webp" loading="lazy" alt="Nuevo Proyecto ASP.NET Core">

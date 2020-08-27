@@ -19,9 +19,7 @@ La documentación esta alojada en [aqui](https://docs.microsoft.com/en-us/dotnet
 
 Son atributos
 
-
 # ¿ Como usar las anotaciones de datos en Entity Framework Core ?
-
 
 
 # ¿Cómo usar las anotaciones de datos en ASP.NET Core ?

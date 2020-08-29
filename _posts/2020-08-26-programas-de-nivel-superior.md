@@ -4,7 +4,7 @@ title:  "Programas de Nivel Superior"
 date:   2020-08-26 22:22:47 +0000
 categories: csharp
 permalink: /:categories/:title:output_ext
-description: Los Top Level Programs en C# 9.0 permiten eliminar la necesidad del método Main en las aplicaciones de .NET sin perder ninguna característica.
+description: "Los Top Level Programs en C# 9.0 permiten eliminar la necesidad del método Main en las aplicaciones de .NET sin perder ninguna característica."
 ---
 
 Hola qué tal en este vídeo les mostraré una de las características de C# 9.0 llamada en ingles "Top Level Programs" o programas de nivel superior en español que lo que hace básicamente eliminar la necesidad de tener una clase llamada `Program` y dentro de esa clase programa un método `Main`. Esta característica esta por salir en C# 9.0 en conjunto con la liberación de .NET 5. La primera como ves que vi un demo sobre esto fue en la sesión de Mads Torgensen y Dusting Cambell [C# Today & Tomorrow](https://www.youtube.com/watch?v=OHue6faaIwU) en la conferencia de [Build 2020](https://www.youtube.com/watch?v=S_wNRx7f7rU&list=PLFPUGjQjckXEiPiW868RGBYYHXhBCGLng). Justo unos minutos después de ver este demo ya tenia intenciones de probar esta característica , asi que me descargue .NET 5 y comencé a realizar pruebas para mi sorpresa todavía no estaba disponible ninguna de las características de C# 9.0. Como antes he visto otros autores que admiro citar sus propios Tweets y yo también quiero hacerlo le escribía se mismo día al diseñador principal de C# , Mad Torgensen , para mi sorpresa si me contesto

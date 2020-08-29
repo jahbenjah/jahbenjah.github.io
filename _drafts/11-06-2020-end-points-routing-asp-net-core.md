@@ -1,11 +1,11 @@
 
-En este articulo aprenderemos todo sobre el enrutamiento o Endpoint Routing en ASP.NET Core 3.0 y 3 1. Responderemos a las preguntas 
+En este articulo aprenderemos todo sobre el enrutamiento o Endpoint Routing en ASP.NET Core 3 1. Responderemos a las preguntas 
 ¿Qué es el enrutamiento en ASP.NET Core? ¿Cómo funciona el Endpoint Routing?
 
 
 
 
- genial, así que sé con 3.0 y sabes 3 1 hay toneladas de nuevas características y sabes toneladas de nuevas capacidades que se habilitaron pero hoy yo realmente quiero hablar sobre el punto final de enrutamiento lik e T
+ Con la liberacion de la version 3.1 de ASP.NET Core con soporte a largo plazo se liberaron muchas nuevas características y capacidades nuevas en el Framework que se habilitaron pero hoy yo realmente quiero hablar sobre el punto final de enrutamiento lik e T
  
   
   realmente genial, puedes darnos un poco de una visión general sobre qué es exactamente el punto final que se ejecuta,

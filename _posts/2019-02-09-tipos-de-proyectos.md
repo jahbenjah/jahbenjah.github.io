@@ -4,11 +4,7 @@ title: "Tipos de proyectos de ASP.NET Core "
 date: 2019-02-09 20:00:01 +0000
 categories: asp.net core
 last_modified_at: 2019-05-25 09:42:55 +0000
-<<<<<<< HEAD
-description: "Se describen las plantillas del SDK de NET Core disponibles para crear proyectos de consola, web"
-=======
 description: "Se describen las plantillas del SDK de .NET Core disponibles para crear proyectos de consola, web"
->>>>>>> ccfefea5f2278d23f034d8f31505252c10243e98
 image:
   path: /img/csharp.webp
   height: 324

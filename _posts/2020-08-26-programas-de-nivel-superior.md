@@ -11,7 +11,7 @@ Hola qué tal en este vídeo les mostraré una de las características de C# 9.0
 
 > que sobre temas organicen le preguntaba hoy estoy esté tratando de utilizar los nuevos este la característica de 669 programas de nivel superior y sorprendentemente si me contestando lo que me decía era que es a veces en ese demos está mostrando una versión privada todavía y que vendría en los nuevos nuevos previos por liberar 
 
-El día 25 de agosto del 2020 anunciaron la nueva versión de .NET 5 el previo 8 esta version ya es una versión completa en características y muy parecida a la versión final que saldrá en noviembre.Falta cerca de dos meses para que completen todo lo que incluye .NET 5 que será una versión _Current_  es decir no tiene marcada como a largo plazo es decir tendrá soporte de un año. La versión que esta planeado para tener soporte largo plazo o LTS sera la version  NET 6.0.Bueno para probar las nuevas características de C# 9.0 necesitas tener el SDK de .NET 5.0 O superior por ejemplo `5.0.100-preview.8.20417.9`. 
+El día 25 de agosto del 2020 anunciaron la nueva versión de .NET 5 el previo 8 esta version ya es una versión completa en características y muy parecida a la versión final que saldrá en noviembre.Falta cerca de dos meses para que completen todo lo que incluye .NET 5 que será una versión _Current_ es decir no tiene marcada como a largo plazo es decir tendrá soporte de un año. La versión que esta planeado para tener soporte largo plazo o LTS sera la version NET 6.0.Bueno para probar las nuevas características de C# 9.0 necesitas tener el SDK de .NET 5.0 O superior por ejemplo `5.0.100-preview.8.20417.9`. 
 
 Dentro de las nuevas características de C# 9.0 están
 * Init-only properties

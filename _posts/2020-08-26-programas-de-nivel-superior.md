@@ -4,16 +4,23 @@ title:  "Programas de Nivel Superior"
 date:   2020-08-26 22:22:47 +0000
 categories: csharp
 permalink: /:categories/:title:output_ext
+image:
+  path: /img/og-top-level-programs.jpg
+  height: 715
+  width: 1366
 description: "Los Top Level Programs en C# 9.0 permiten eliminar la necesidad del método Main en las aplicaciones de .NET sin perder ninguna característica."
 ---
 
-Hola qué tal en este vídeo les mostraré una de las características de C# 9.0 llamada en ingles "Top Level Programs" o programas de nivel superior en español que lo que hace básicamente eliminar la necesidad de tener una clase llamada `Program` y dentro de esa clase programa un método `Main`. Esta característica esta por salir en C# 9.0 en conjunto con la liberación de .NET 5. La primera como ves que vi un demo sobre esto fue en la sesión de Mads Torgensen y Dusting Cambell [C# Today & Tomorrow](https://www.youtube.com/watch?v=OHue6faaIwU) en la conferencia de [Build 2020](https://www.youtube.com/watch?v=S_wNRx7f7rU&list=PLFPUGjQjckXEiPiW868RGBYYHXhBCGLng). Justo unos minutos después de ver este demo ya tenia intenciones de probar esta característica , asi que me descargue .NET 5 y comencé a realizar pruebas para mi sorpresa todavía no estaba disponible ninguna de las características de C# 9.0. Como antes he visto otros autores que admiro citar sus propios Tweets y yo también quiero hacerlo le escribía se mismo día al diseñador principal de C# , Mad Torgensen , para mi sorpresa si me contesto
+Hola qué tal en este artículo les mostraré una de las características de C# 9.0 llamada en ingles "Top Level Programs" o programas de nivel superior en español que lo que hace básicamente eliminar la necesidad de tener una clase llamada `Program` y dentro de esa clase programa un método `Main`. Esta característica esta por salir en C# 9.0 en conjunto con la liberación de .NET 5. La primera como ves que vi un demo sobre esto fue en la sesión de Mads Torgensen y Dusting Cambell [C# Today & Tomorrow](https://www.youtube.com/watch?v=OHue6faaIwU) en la conferencia de [Build 2020](https://www.youtube.com/watch?v=S_wNRx7f7rU&list=PLFPUGjQjckXEiPiW868RGBYYHXhBCGLng). Justo unos minutos después de ver este demo ya tenia intenciones de probar esta característica , asi que me descargue .NET 5 y comencé a realizar pruebas para mi sorpresa todavía no estaba disponible ninguna de las características de C# 9.0. Como antes he visto otros autores que admiro citar sus propios Tweets y yo también quiero hacerlo le escribía se mismo día al diseñador principal de C# , Mad Torgensen , para mi sorpresa si me contesto
 
-> que sobre temas organicen le preguntaba hoy estoy esté tratando de utilizar los nuevos este la característica de 669 programas de nivel superior y sorprendentemente si me contestando lo que me decía era que es a veces en ese demos está mostrando una versión privada todavía y que vendría en los nuevos nuevos previos por liberar 
+> @MadsTorgersen ,@dcampbell : Estoy tratando de usar la nueva caracteristica de C# 9.0   "programas de nivel superior" con la vista previa 4 de .NET 5.O pero obtengo el error CS0116 ¿Me falta algo?
+
+<img src="/img/respuesta_cshar9.png" loading="lazy"  alt="Respuesta de Mads Torgersen">
 
 El día 25 de agosto del 2020 anunciaron la nueva versión de .NET 5 el previo 8 esta version ya es una versión completa en características y muy parecida a la versión final que saldrá en noviembre.Falta cerca de dos meses para que completen todo lo que incluye .NET 5 que será una versión _Current_ es decir no tiene marcada como a largo plazo es decir tendrá soporte de un año. La versión que esta planeado para tener soporte largo plazo o LTS sera la version NET 6.0.Bueno para probar las nuevas características de C# 9.0 necesitas tener el SDK de .NET 5.0 O superior por ejemplo `5.0.100-preview.8.20417.9`. 
 
 Dentro de las nuevas características de C# 9.0 están
+
 * Init-only properties
 * Init accessors and readonly fields
 * Records
@@ -160,6 +167,7 @@ Puedes ejecutar la mayoría del código de C#  que puedes ejecutar por ejemplo
 * Declarar clases 
 * Declarar interfaces
 * Usar async await
+* Usar un return
 
 # Restricciones
 

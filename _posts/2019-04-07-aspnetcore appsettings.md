@@ -19,6 +19,10 @@ Si tienes experiencia con alguna versión anterior de ASP.NET es importante menc
 
 El sistema de configuración de ASP.NET Core es un sistema de capas en el que puedes agregar diferentes fuentes de configuración en el cual el orden importa ya que si dos fuentes contienen la misma clave esta sera tomada de la ultima fuente agregada.
 
+<a href="https://www.SmarterASP.NET/index?r=benjamincamacho">
+<img src="https://www.SmarterASP.NET/affiliate/728X90.gif" border="0">
+</a>
+
 ## Configuración en una aplicación .NET Core
 
 Para agregar un archivo de configuración a un aplicación .NET Core es necesario agregar unos paquetes de Nuget adicionales. El primer paquete necesario es `Microsoft.Extensions.Configuration`. Este paquete contiene los tipos `IConfiguration` y `ConfigurationBuilder` necesarios para manejar configurar y leer la configuración. El primero es una interfaz que se usa para  leer la configuración basada en claves y valores cuenta con Index que regresa unicamente cadenas de texto. El segundo es una clase que implementa el **patrón de diseño Builder** con tiene un método `Add` para agregar proveedores de configuración y un método `Build` para generar el objeto con todas las opciones. 

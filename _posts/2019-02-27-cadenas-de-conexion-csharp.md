@@ -55,6 +55,10 @@ Data Source=localhost;Initial Catalog=master;User ID=sa;Password=TuContraseña;A
 
 > **Para obtener el nombre de la instancia de SQL Server** puedes ejecutar la consulta `SELECT @@SERVERNAME + '\' + @@SERVICENAME AS NombreSQLServerInstancia;`
 
+<a href="https://www.SmarterASP.NET/index?r=benjamincamacho">
+<img src="https://www.SmarterASP.NET/affiliate/728X90.gif" border="0">
+</a>
+
 ## Usando una instancia con nombre de SQL Server
 
 En el caso de que uses una instancia con nombre de SQL Server debes especificar el nombre seguidor del servidor seguido por el nombre de la instancia. Esto también aplica para la version de SQL Server conocida como [LocalDb](https://docs.microsoft.com/sql/database-engine/configure-windows/sql-server-express-localdb?view=sql-server-ver15)

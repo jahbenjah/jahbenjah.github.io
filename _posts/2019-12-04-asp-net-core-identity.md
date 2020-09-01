@@ -32,6 +32,9 @@ dotnet new mvc --auth Individual -o IntroIdentity
 
 ASP.NET Core Identity es un monstruo de muchas cabezas por lo que en este articulo solo veremos temas relacionados con la autenticación de cuentas Individuales usando un proyecto de MVC que se crea sin autenticacion y explicamos detalladamente los pasos a seguir para agregar para ASP.NET Core Identity de forma manual. Adicionalmente explicamos  como realizar algunas actividades frecuentes como crear un usuario, crear un rol, cambiar la configuración predefinida. 
 
+<a href="https://www.SmarterASP.NET/index?r=benjamincamacho">
+<img src="https://www.SmarterASP.NET/affiliate/728X90.gif" border="0">
+</a>
 
 # Agregando ASP.NET Core Identity
 

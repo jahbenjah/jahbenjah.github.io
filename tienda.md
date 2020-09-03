@@ -14,7 +14,6 @@ description: Encuentra los mejores artículos para programadores.
 <section id="courses" class="courses">
     <div class="container">
         <div class="row">
-            {%- if site.data.libros > 0 -%}
             {%- for libro in site.data.libros -%}
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                 <div class="course-item">
@@ -32,7 +31,6 @@ description: Encuentra los mejores artículos para programadores.
                 </div>
             </div>
             {%- endfor -%}
-            {%- endif -%}
         </div>
     </div>
 </section>

@@ -24,7 +24,7 @@ description: Encuentra los mejores artículos para programadores.
                         <p>{{ libro.descripcion | strip_html | strip_newlines | truncate: 150 }}</p>
                         <div class="trainer d-flex justify-content-between align-items-center">
                             <div class="trainer-profile d-flex align-items-center">  
-                                <a href="{{ libro.link }}">{{ libro.nombre | escape }}</a>
+                                <a href="{{ libro.link }}" target="_blank">{{ libro.nombre | escape }}</a>
                             </div>
                         </div>
                     </div>

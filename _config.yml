@@ -29,7 +29,7 @@ disqus:
 google_analytics: UA-130293099-1
 
 header_pages:
- - contacto.md
+ - tienda.md
  - plantillas.md
  
 plugins:

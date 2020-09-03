@@ -242,6 +242,9 @@ Agregar la configuración del correo en el archivo _appsettings.json_
     "Host": "smtp.gmail.com"
   }
 ```
+<a href="https://www.SmarterASP.NET/index?r=benjamincamacho">
+<img src="https://www.SmarterASP.NET/affiliate/728X90.gif" border="0">
+</a>
 
 Posteriormente creamos una clase en la carpeta _Services_ llamada `EmailSenderOptions`. Esta clase nos ayudara a leer los datos de configuración del archivo _json_
 

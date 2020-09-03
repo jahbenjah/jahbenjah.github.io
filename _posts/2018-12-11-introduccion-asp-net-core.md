@@ -5,9 +5,10 @@ categories: asp.net core mvc dotnet aspnetcore
 description: Breve descripción de que es ASP.NET Core y cuales son sus características principales
 last_modified_at: 2019-06-06 15:06:33 +0000
 ---
+
 **ASP.NET Core** es un *<span lang="en">framework</span>* para desarrollo web de código abierto, ligero, modular y multiplataforma creado por Microsoft con aportes de la comunidad.
 
-Como es un framework de desarrollo web ASP.NET Core el proposito principal es generar HTML de forma dinámica. Esto lo hace mediante **Razor** que permite combinar el marcado en HTML con código C#.
+Como es un framework de desarrollo web ASP.NET Core el propósito principal es generar HTML de forma dinámica. Esto lo hace mediante **Razor** que permite combinar el marcado en HTML con código C#.
 
 Revisemos cada una de las características mencionadas:
 

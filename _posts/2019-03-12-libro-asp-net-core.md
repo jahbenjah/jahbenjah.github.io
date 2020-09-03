@@ -66,11 +66,15 @@ donde la versión 2.0.3 es la que da la salida del comando anterior.
 
 Si usas **Visual Studio** hay un combo que permite seleccionar la versión 2.0 al momento de crear el proyecto.
 Si prefieres una explicación en video aca te dejo una donde uso Ubuntu 19.10 para mostrar el funcionamiento del archivo global.json.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/lN5bW9MTRa8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/lN5bW9MTRa8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## Como obtener el libro
 
 Puedes leer en línea desde el sitio [aspnetcoremaster.com](https://aspnetcoremaster.com/little-aspnetcore-book/) o descargar la version en [pdf](https://github.com/jahbenjah/little-aspnetcore-book/blob/spanish/ElPeque%C3%B1oLibroDeASPNETCore.pdf) desde aquí
 
 Para obtener la versión más reciente de la edición en español de _El pequeño libro de ASP .NET Core_ puedes visitar regularmente este sitio ya que este sera actualizado constantemente.
+
+
+<a target="_blank" href="https://www.amazon.com.mx/gp/offer-listing/B07D6GY392/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B07D6GY392&linkCode=am2&tag=aspnetcorem0c-20&linkId=a3022e7b56af7792fc2f9c2b7de90796">Programador Jr. de aplicaciones ASP.NET MVC: Manual de estudiante</a><img src="//ir-mx.amazon-adsystem.com/e/ir?t=aspnetcorem0c-20&l=am2&o=34&a=B07D6GY392" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />

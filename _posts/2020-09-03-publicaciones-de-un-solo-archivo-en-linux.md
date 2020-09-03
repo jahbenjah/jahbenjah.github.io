@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Publicacion de un solo archivo en Linux"
-date:   2020-08-20 22:22:47 +0000
+title:  "Publicación de un solo archivo en Linux"
+date:   2020-09-03 09:22:47 +0000
 categories: aspnetcore
 permalink: /:categories/:title:output_ext
 image:

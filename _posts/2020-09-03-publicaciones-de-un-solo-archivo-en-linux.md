@@ -20,7 +20,7 @@ Este corto articulo muestra el archivo de un proyecto ASP.NET Core sobre .NET 5.
 </p>&mdash; Ben Adams #BlackLivesMatter (@ben_a_adams)
 <a href="https://twitter.com/ben_a_adams/status/1301388865253650433?ref_src=twsrc%5Etfw">September 3, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-La publicación de una aplicación de ASP.NET Core incluye múltiples archivos como puedes revisar en el ejemplo de salida del comando ` dotnet publish -c Release -r linux-x64` sin ningún paquete de Nuget adicional.
+La publicación de una aplicación de ASP.NET Core incluye múltiples archivos como puedes revisar en el ejemplo de salida del comando `dotnet publish -c Release -r linux-x64` sin ningún paquete de Nuget adicional.
 
 ```bash
 $ ls -lh bin/Release/net5.0/linux-x64/publish/

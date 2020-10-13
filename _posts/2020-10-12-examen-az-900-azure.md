@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Tips para aprobar el examen AZ-900 Fundamentos de Azure"
-date:   2019-05-01 11:18:55 +0000
+date:   2020-10-12 10:10:55 +0000
 categories: azure
 permalink: /:categories/:title:output_ext
 image:

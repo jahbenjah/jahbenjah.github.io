@@ -10,9 +10,11 @@ image:
   width: 1190
 ---
 
-El pasado 7 de octubre aprobé el examen AZ-900 Azure Fundamentals y en este articulo te contare la historia de como me prepare. porque decidí hacer este examen ,algunos tips y que planes tengo con la certificaciones en Azure.
+El pasado 7 de octubre aprobé el examen AZ-900 Azure Fundamentals y en este articulo te contare la historia de como me prepare. porque decidí hacer este examen, algunos tips y que planes tengo con la certificaciones en Azure.
 
-> **TL: DR** Este examen desde el punto de vista de un desarrollador no paree nada atractivo. Contiene conocimientos muyu basicos y no es necesario ser un experto en Azure para aprobarlo.
+> **TL: DR** Este examen desde el punto de vista de un desarrollador no parece nada atractivo. Contiene conocimientos muy básicos y no es necesario ser un experto en Azure para aprobarlo.
+
+## Porque presentar el examen
 
 ## El proceso de inscripción
 
@@ -38,7 +40,7 @@ Entre las opciones basadas en en texto están las dos rutas que estaban disponib
 
 Al momento de terminar tu examen la aplicación inmediatamente te da el resultado. La calificación mínima aprobatoria es de 700 de un máximo de 1000 puntos. Este resultado me fue entregado por los responsables del centro a la salida.
 
-<img src="/img/az900-results-png" loading="lazy"  alt="Pantalla de resultados del Examen AZ900 Azure Fundamentals">
+<img src="/img/az900-results.png" loading="lazy"  alt="Pantalla de resultados del Examen AZ900 Azure Fundamentals">
 
 En seguida puedes descargar el "__*Badge*__" de certificación desde el panel de certificación
 

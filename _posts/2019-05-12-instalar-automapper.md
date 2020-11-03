@@ -4,7 +4,7 @@ title:  "Instalar AutoMapper"
 date:   2019-05-12 12:00:01 +0000
 categories: asp.net core
 image:
-  path: /img/og-automapper.jpg
+  path: /img/automapper.webp
   height: 224
   width: 427
 description: "Como instalar AutoMapper en una aplicación ASP.NET Core"

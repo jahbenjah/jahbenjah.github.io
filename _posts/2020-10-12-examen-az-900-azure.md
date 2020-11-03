@@ -10,11 +10,13 @@ image:
   width: 1190
 ---
 
-El pasado 7 de octubre aprobé el examen AZ-900 Azure Fundamentals y en este articulo te contare la historia de como me prepare. porque decidí hacer este examen, algunos tips y que planes tengo con la certificaciones en Azure.
+El pasado 7 de octubre aprobé el examen _AZ-900 Azure Fundamentals_ y en este articulo te contare los recursos utilizados para prepararme, porque decidí hacer este examen, algunos tips y que planes tengo con la certificaciones en Azure.
 
-> **TL: DR** Este examen desde el punto de vista de un desarrollador no parece nada atractivo. Contiene conocimientos muy básicos y no es necesario ser un experto en Azure para aprobarlo.
+> **TL: DR** Este examen desde el punto de vista de un desarrollador no parece muy atractivo y es opcional. Contiene conocimientos muy básicos y no es necesario ser un experto en Azure para aprobarlo.
 
 ## Porque presentar el examen
+
+Básicamente soy un desarrollador .NET que trabaja con C# y ASP.NET y en mi dia a dia no utilizo Azure ni ninguna tecnología de nube (salvo una que la aplicación principal usa el login de Office 365 y a mi me toco hacer el registro en Azure AD). El interres principal por Azure me surgio en el 200
 
 ## El proceso de inscripción
 

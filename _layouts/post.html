@@ -23,11 +23,9 @@ layout: default
   <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
   </div>
-
-  {% include donaciones.html -%}
   {% include share-bar.html %}
-  <!-- {%- if site.disqus.shortname -%}
+  {%- if site.disqus.shortname -%}
   {%- include disqus_comments.html -%}
-  {%- endif -%} -->
+  {%- endif -%}
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>

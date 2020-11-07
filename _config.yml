@@ -23,10 +23,14 @@ markdown: kramdown
 theme: minima
 show_excerpts: false
 
-disqus:
- shortname: https-jahbenjah-github-io
+# disqus:
+#  shortname: https-jahbenjah-github-io
 
 google_analytics: UA-130293099-1
+
+collections:
+  empleos:
+    output: true
 
 header_pages:
  - libros.md
@@ -56,6 +60,7 @@ defaults:
         height: 347
         width: 663
       author: benjamin
+      comments: false
   - scope:
       path: ""
       type: "authors"

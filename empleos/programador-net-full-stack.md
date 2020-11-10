@@ -1,9 +1,10 @@
 ---
+layout: empleo
 titulo: PROGRAMADOR. NET FULL SATCK
-descripcion: PROGRAMADOR. NET FULL SATCK
+descripcion: PROGRAMADOR .NET FULL SATCK
+pais: "México"
+ciudad: "Ciudad de México"
 ---
-
-# PROGRAMADOR. NET FULL SATCK
 
 **EMPRESA** Compañía multinacional de origen Europeo que desarrollan y administran compañías de suministro de electricidad y gas con amplia experiencia en el desarrollo y construcción de activos eléctricos como plantas solares fotovoltaicas, parques eólicos, líneas de transmisión, etc. La compañía está respaldada por inversiones de capital privado de origen americano.
 

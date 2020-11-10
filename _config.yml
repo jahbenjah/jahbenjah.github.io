@@ -31,6 +31,7 @@ google_analytics: UA-130293099-1
 collections:
   empleos:
     output: true
+    permalink: /:collection/:name
 
 header_pages:
  - libros.md

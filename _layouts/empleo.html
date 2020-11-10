@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<article class="post h-entry" itemscope itemtype="http://schema.org/JobPosting">
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="title">{{ page.titulo | escape }}</h1>
+    <span>
+      <p><strong>Ubicación:</strong>
+        <span itemprop="jobLocation" itemscope itemtype="https://schema.org/Place">
+          <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+            <span itemprop="addressLocality">{{ page.pais | escape }}</span>,
+            <span itemprop="addressRegion">{{ page.ciudad | escape }}</span>
+          </span>
+        </span>
+      </p>
+    </span>
+  </header>
+
+  <div class="post-content e-content" itemprop="description">
+    {{ content }}
+  </div>
+  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+</article>

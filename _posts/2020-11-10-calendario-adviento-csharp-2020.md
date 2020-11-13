@@ -6,7 +6,7 @@ permalink: /:categories/:title:output_ext
 last_modified_at: 2020-11-13 13:00:01 +0000
 ---
 
-El calendario de adviento de C# en estamos ya lleva 3 años este consiste básicamente en publicar artículos para programadores del con C#. Los calendarios anteriores están en [Calendario de adviento de C# en español 2018]({% post_url 2018-11-16-Calendario-adviento-csharp %}) y [Calendario de adviento de C# en español 2019]({% post_url 2019-10-27-calendario-adviento-csharp-2019 %}).
+El calendario de adviento de C# va cumplir 3 años este consiste básicamente en publicar artículos para programadores los días previos a la navidad. Los calendarios anteriores están en [Calendario de adviento de C# en español 2018]({% post_url 2018-11-16-Calendario-adviento-csharp %}) y [Calendario de adviento de C# en español 2019]({% post_url 2019-10-27-calendario-adviento-csharp-2019 %}).
 
 Esta propuesta fue inspirada en [The firts C# Advent Calendar](https://crosscuttingconcerns.com/The-First-C-Advent-Calendar){:target="_blank" rel="noopener"} y el [calendario de adviento de F# de Sergey Tihon](https://sergeytihon.com/2018/10/22/f-advent-calendar-in-english-2018/){:target="_blank" rel="noopener"}.
 
@@ -19,7 +19,8 @@ Para este año la propuesta es que entre el 1 y el 25 de diciembre se publiquen 
 3. Prepara tu artículo de blog en español.
 4. Publica tu artículo el día establecido y comparte la liga para actualizar el calendario.
 5. Te sugerimos usar el hashtag _#advientocsharp_ en Twitter para que tu articulo sea localizado fácilmente.
-6. _Opcional_ Comparte las publicaciones de los demás autores y de ser posible añade una liga a otro articulo o al calendario mismo.
+
+> **Opcional** Comparte las publicaciones de los demás autores y de ser posible añade una liga a otro articulo o al calendario mismo. Sigue a los autores en Twitter aca esta una [lista de Twitter](https://twitter.com/i/lists/1327334384161202176).
 
 El tema de los artículos es decisión de los autores unicamente se pide que sea de preferencia material nuevo, en español y este relacionado de alguna forma con **C#**, puedes compartir el título de tu articulo o dejarlo hasta el día de publicación.
 
@@ -27,7 +28,7 @@ El tema de los artículos es decisión de los autores unicamente se pide que sea
 
 | Fecha         | Solicitado por     | Titulo       |
 | ------------- | -------------      | -------------|
-|               |  Antonio Feregrino |              | 
+|               |  [Antonio Feregrino](https://twitter.com/io_exception){:target="_blank" rel="noopener"} |              | 
 
 ## Algunas ideas para postear
 
@@ -36,12 +37,14 @@ Aunque el tema del articulo es decision de los autores te dejamos algunas ideas 
 * C# 9.0 , C# 8.0,.NET Core 3.0 ,NET 5
 * ASP.NET Core ,Xamarin, Entity Framework Core, IoT, ML.NET, AI, Blazor
 * .NET y el Open Source.
-* El futuro de .NET
+* El futuro de .NET o la historia de C#
 * .NET 6
 * Aplicaciones Nativas para la Nube
 * La historia de C# , ASP.NET, Xamarin , etc
-* Tú travesía para convertirte en Desarollador .NET
+* Tú travesía para convertirte en Desarrollador .NET
 * Alguna historia relacionada con .NET
+* Blazor vs Angular vs React
+* Patrones de diseño con  C#
 
 ## Otros calendarios
 

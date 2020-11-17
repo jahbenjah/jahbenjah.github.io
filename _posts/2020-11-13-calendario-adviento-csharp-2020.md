@@ -28,7 +28,14 @@ El tema de los artículos es decisión de los autores unicamente se pide que sea
 
 | Fecha         | Solicitado por     | Titulo       |
 | ------------- | -------------      | -------------|
-|               |  [Antonio Feregrino](https://twitter.com/io_exception){:target="_blank" rel="noopener"} |              | 
+|               |  [Antonio Feregrino](https://twitter.com/io_exception){:target="_blank" rel="noopener"} || 
+|               |  [Eduardo Barrios](https://twitter.com/ebarriosdev){:target="_blank" rel="noopener"} || 
+| 03/12/2020    |  [Héctor Uriel Pérez Rojas](https://www.facebook.com/hprez21/){:target="_blank" rel="noopener"} | | 
+| 05/12/2020    |  [Luis Beltran](https://twitter.com/darkicebeam){:target="_blank" rel="noopener"} || 
+| 08/12/2020    |  [Erick Marcia](https://twitter.com/Emarcia14){:target="_blank" rel="noopener"} || 
+| 10/12/2020    |  [Lautaro Carro](https://twitter.com/LauchaCarro){:target="_blank" rel="noopener"}|| 
+| 10/12/2020    |  [Héctor Uriel Pérez Rojas](https://www.facebook.com/hprez21/){:target="_blank" rel="noopener"} || 
+| 25/12/2020    |  [Daniel Monettelli L.](https://twitter.com/io_exception){:target="_blank" rel="noopener"} ||
 
 ## Algunas ideas para postear
 
@@ -52,3 +59,4 @@ Aquí te compartimos un listado de otros calendarios de adviento para programado
 
 1. [C# Advent Calendar 2020](csadvent.christmas)
 2. [F# Advent Calendar in English 2020](https://sergeytihon.com/2020/10/22/f-advent-calendar-in-english-2020/)
+3. [Segundo Calendario de Adviento de Xamarin en Español](https://www.luisbeltran.mx/2020/11/16/segundo-calendario-de-adviento-de-xamarin-en-espanol/)

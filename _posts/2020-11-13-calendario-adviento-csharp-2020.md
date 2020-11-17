@@ -37,7 +37,7 @@ El tema de los artículos es decisión de los autores unicamente se pide que sea
 | 10/12/2020    |  [Héctor Uriel Pérez Rojas](https://www.facebook.com/hprez21/){:target="_blank" rel="noopener"} || 
 | 14/12/2020    |  [Leomaris Reyes](https://www.facebook.com/LeomarisReyes11){:target="_blank" rel="noopener"} || 
 | 21/12/2020    |  [Gabriel Acosta](https://twitter.com/GacostaDev){:target="_blank" rel="noopener"} |Patter CQRS with Entity Framework Core|
-| 25/12/2020    |  [Daniel Monettelli L.](https://twitter.com/io_exception){:target="_blank" rel="noopener"} ||
+| 25/12/2020    |  [Daniel Monettelli L.](https://twitter.com/DanielMonetelli){:target="_blank" rel="noopener"} ||
 
 ## Algunas ideas para postear
 

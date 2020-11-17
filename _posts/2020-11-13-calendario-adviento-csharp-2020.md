@@ -33,10 +33,11 @@ El tema de los artículos es decisión de los autores unicamente se pide que sea
 | 03/12/2020    |  [Héctor Uriel Pérez Rojas](https://www.facebook.com/hprez21/){:target="_blank" rel="noopener"} | | 
 | 05/12/2020    |  [Luis Beltran](https://twitter.com/darkicebeam){:target="_blank" rel="noopener"} || 
 | 08/12/2020    |  [Erick Marcia](https://twitter.com/Emarcia14){:target="_blank" rel="noopener"} || 
+| 09/12/2020    |  [Ricardo Josue Perez Altamirano](https://twitter.com/RicardoJosue04){:target="_blank" rel="noopener"}|Patrones creacionales con C#| 
 | 10/12/2020    |  [Lautaro Carro](https://twitter.com/LauchaCarro){:target="_blank" rel="noopener"}|| 
 | 10/12/2020    |  [Héctor Uriel Pérez Rojas](https://www.facebook.com/hprez21/){:target="_blank" rel="noopener"} || 
 | 14/12/2020    |  [Leomaris Reyes](https://www.facebook.com/LeomarisReyes11){:target="_blank" rel="noopener"} || 
-| 21/12/2020    |  [Gabriel Acosta](https://twitter.com/GacostaDev){:target="_blank" rel="noopener"} |Patter CQRS with Entity Framework Core|
+| 21/12/2020    |  [Gabriel Acosta](https://twitter.com/GacostaDev){:target="_blank" rel="noopener"} |Pattern CQRS with Entity Framework Core|
 | 25/12/2020    |  [Daniel Monettelli L.](https://twitter.com/DanielMonetelli){:target="_blank" rel="noopener"} ||
 
 ## Algunas ideas para postear
@@ -47,13 +48,14 @@ Aunque el tema del articulo es decision de los autores te dejamos algunas ideas 
 * ASP.NET Core ,Xamarin, Entity Framework Core, IoT, ML.NET, AI, Blazor
 * .NET y el Open Source.
 * El futuro de .NET o la historia de C#
-* .NET 6
+* .NET 6 , Kubernetes, Tye , YARP o Microservicios.
 * Aplicaciones Nativas para la Nube
 * La historia de C# , ASP.NET, Xamarin , etc
 * Tú travesía para convertirte en Desarrollador .NET
 * Alguna historia relacionada con .NET
 * Blazor vs Angular vs React
 * Patrones de diseño con  C#
+* Tips, herramientas para el trabajo remoto
 
 ## Otros calendarios
 

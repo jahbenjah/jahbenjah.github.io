@@ -42,7 +42,7 @@ El tema de los artículos es decisión de los autores unicamente se pide que sea
 | 11/12/2020    |  [Israel Perez Saucedo](https://twitter.com/pesimx87){:target="_blank" rel="noopener"} ||
 | 12/12/2020    |  [Antonio Feregrino](https://twitter.com/io_exception){:target="_blank" rel="noopener"} ||
 | 13/12/2020    |   | |
-| 14/12/2020    |  [Leomaris Reyes](https://www.facebook.com/LeomarisReyes11){:target="_blank" rel="noopener"} ||
+| 14/12/2020    |  [Leomaris Reyes](https://twitter.com/LeomarisReyes11){:target="_blank" rel="noopener"} ||
 | 15/12/2020    |   | |
 | 16/12/2020    |  [Charlin Agramonte](https://twitter.com/Chard003){:target="_blank" rel="noopener"} ||
 | 17/12/2020    |   | |
@@ -66,7 +66,7 @@ Aunque el tema del articulo es decision de los autores te dejamos algunas ideas 
 * El futuro de .NET o la historia de C#
 * .NET 6 , Kubernetes, Tye , YARP o Microservicios.
 * Aplicaciones Nativas para la Nube
-* La historia de C# , ASP.NET, Xamarin , etc
+* La historia de C# , ASP.NET , etc
 * Tú travesía para convertirte en Desarrollador .NET
 * Alguna historia relacionada con .NET
 * Blazor vs Angular vs React

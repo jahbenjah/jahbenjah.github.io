@@ -3,7 +3,7 @@ layout: post
 title:  "Tercer calendario de adviento de C# en español"
 date:   2020-11-13 13:00:01 +0000
 permalink: /:categories/:title:output_ext
-last_modified_at: 2020-11-13 13:00:01 +0000
+last_modified_at: 2020-11-21 20:00:01 +0000
 ---
 
 El calendario de adviento de C# va cumplir 3 años este consiste básicamente en publicar artículos para programadores los días previos a la navidad. Los calendarios anteriores están en [Calendario de adviento de C# en español 2018]({% post_url 2018-11-16-Calendario-adviento-csharp %}) y [Calendario de adviento de C# en español 2019]({% post_url 2019-10-27-calendario-adviento-csharp-2019 %}).
@@ -28,17 +28,33 @@ El tema de los artículos es decisión de los autores unicamente se pide que sea
 
 | Fecha         | Solicitado por     | Titulo       |
 | ------------- | -------------      | -------------|
-|               |  [Antonio Feregrino](https://twitter.com/io_exception){:target="_blank" rel="noopener"} || 
-|               |  [Eduardo Barrios](https://twitter.com/ebarriosdev){:target="_blank" rel="noopener"} || 
-| 03/12/2020    |  [Héctor Uriel Pérez Rojas](https://www.facebook.com/hprez21/){:target="_blank" rel="noopener"} | | 
-| 05/12/2020    |  [Luis Beltran](https://twitter.com/darkicebeam){:target="_blank" rel="noopener"} || 
-| 08/12/2020    |  [Erick Marcia](https://twitter.com/Emarcia14){:target="_blank" rel="noopener"} || 
-| 09/12/2020    |  [Ricardo Josue Perez Altamirano](https://twitter.com/RicardoJosue04){:target="_blank" rel="noopener"}|Patrones creacionales con C#| 
-| 10/12/2020    |  [Lautaro Carro](https://twitter.com/LauchaCarro){:target="_blank" rel="noopener"}|| 
-| 10/12/2020    |  [Héctor Uriel Pérez Rojas](https://www.facebook.com/hprez21/){:target="_blank" rel="noopener"} || 
-| 14/12/2020    |  [Leomaris Reyes](https://www.facebook.com/LeomarisReyes11){:target="_blank" rel="noopener"} || 
+| 01/12/2020    |   | |
+| 02/12/2020    |   | |
+| 03/12/2020    |  [Héctor Uriel Pérez Rojas](https://www.facebook.com/hprez21/){:target="_blank" rel="noopener"} | |
+| 04/12/2020    |   | |
+| 05/12/2020    |  [Luis Beltran](https://twitter.com/darkicebeam){:target="_blank" rel="noopener"} ||
+| 06/12/2020    |   | |
+| 07/12/2020    |   | |
+| 08/12/2020    |  [Erick Marcia](https://twitter.com/Emarcia14){:target="_blank" rel="noopener"} ||
+| 09/12/2020    |  [Ricardo Josue Perez Altamirano](https://twitter.com/RicardoJosue04){:target="_blank" rel="noopener"}|Patrones creacionales con C#|
+| 10/12/2020    |  [Lautaro Carro](https://twitter.com/LauchaCarro){:target="_blank" rel="noopener"}||
+| 10/12/2020    |  [Héctor Uriel Pérez Rojas](https://www.facebook.com/hprez21/){:target="_blank" rel="noopener"} ||
+| 11/12/2020    |  [Israel Perez Saucedo](https://twitter.com/pesimx87){:target="_blank" rel="noopener"} ||
+| 12/12/2020    |  [Antonio Feregrino](https://twitter.com/io_exception){:target="_blank" rel="noopener"} ||
+| 13/12/2020    |   | |
+| 14/12/2020    |  [Leomaris Reyes](https://www.facebook.com/LeomarisReyes11){:target="_blank" rel="noopener"} ||
+| 15/12/2020    |   | |
+| 16/12/2020    |  [Charlin Agramonte](https://twitter.com/Chard003){:target="_blank" rel="noopener"} ||
+| 17/12/2020    |   | |
+| 18/12/2020    |   | |
+| 19/12/2020    |   | |
+| 20/12/2020    |  [Eduardo Barrios](https://twitter.com/ebarriosdev){:target="_blank" rel="noopener"} ||
 | 21/12/2020    |  [Gabriel Acosta](https://twitter.com/GacostaDev){:target="_blank" rel="noopener"} |Pattern CQRS with Entity Framework Core|
+| 22/12/2020    |  [Leonardo Vargas](https://twitter.com/lvbernal){:target="_blank" rel="noopener"} ||
+| 23/12/2020    |   | |
+| 24/12/2020    |  [Leslie Ramirez](https://twitter.com/iLessRG){:target="_blank" rel="noopener"} ||
 | 25/12/2020    |  [Daniel Monettelli L.](https://twitter.com/DanielMonetelli){:target="_blank" rel="noopener"} ||
+| 27/12/2020    |  [Luis Matos](https://twitter.com/luismatosluna){:target="_blank" rel="noopener"} ||
 
 ## Algunas ideas para postear
 

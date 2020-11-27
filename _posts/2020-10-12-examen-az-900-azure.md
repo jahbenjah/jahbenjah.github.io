@@ -12,11 +12,11 @@ image:
 
 El pasado 7 de octubre aprobé el examen _AZ-900 Azure Fundamentals_ y en este articulo te contare los recursos utilizados para prepararme, porque decidí hacer este examen, algunos tips y que planes tengo con la certificaciones en Azure.
 
-> **TL: DR** Este examen desde el punto de vista de un desarrollador no parece muy atractivo y es opcional. Contiene conocimientos muy básicos y no es necesario ser un experto en Azure para aprobarlo.
+> **TL: DR** Este examen desde el punto de vista de un desarrollador no parece muy atractivo y no brinda una certificación de Microsoft. Contiene conocimientos básicos y no es necesario ser un experto en Azure para aprobarlo.
 
 ## Porque presentar el examen
 
-Básicamente soy un desarrollador .NET que trabaja con C# y ASP.NET y en mi dia a dia no utilizo Azure ni ninguna tecnología de nube (salvo una que la aplicación principal usa el login de Office 365 y a mi me toco hacer el registro en Azure AD). El interres principal por Azure me surgio en el 200
+Básicamente soy un desarrollador .NET que trabaja con C# y ASP.NET y ~~en mi dia a dia no utilizo Azure ni ninguna tecnología de nube (salvo una que la aplicación principal usa el login de Office 365 y a mi me toco hacer el registro en Azure AD)~~ la actualización es que me cambien de trabajo y ahora si usamos Azure. El interés principal por Azure me surgió en el 2019 al asistir a el evento _Microsoft Ignite The Tour_ en busca de mas información sobre las novedades de ASP.NET Core pero para mi sorpresa todo era **Azure**.
 
 ## El proceso de inscripción
 
@@ -24,9 +24,9 @@ Básicamente soy un desarrollador .NET que trabaja con C# y ASP.NET y en mi dia 
 
 ## Opciones de preparación
 
-Para prepararme utilice varios recursos en video y basados en texto. Entro los videos utilice principalmente 2 fuentes Youtube y Udemy(esto Luis Beltrán compartió un post donde por un dia se ofrecían estos 3 cursos gratis)
+Para prepararme utilice varios recursos en video y basados en texto. Entro los videos utilice principalmente 2 fuentes Youtube y Udemy(esto Luis Beltrán compartió un post donde por un dia se ofrecían estos 3 cursos gratis).
 
-Entre las opciones basadas en en texto están las dos rutas que estaban disponibles en [Microsoft Learn](https://docs.microsoft.com/learn/). La primera tiene la leyenda que pronto puede ser eliminada y solo quedar la segunda. La recomendación es elegir la segunda ruta de aprendizaje pero esta todavía no estaba disponible en español al momento de presentar el examen ( 7 de octubre del 2020)
+Entre las opciones basadas en en texto están las dos rutas que estaban disponibles en [Microsoft Learn](https://docs.microsoft.com/learn/). La primera tiene la leyenda que pronto puede ser eliminada y solo quedará la segunda. La recomendación es elegir la segunda ruta de aprendizaje pero esta todavía no estaba disponible en español al momento de presentar el examen ( 7 de octubre del 2020)
 
 * [Ruta de aprendizaje Azure Aspectos Básicos](https://docs.microsoft.com/es-mx/learn/paths/azure-fundamentals/)
 * [Aspectos básicos de Azure, parte 1: Descripción de los conceptos básicos de Azure](https://docs.microsoft.com/es-es/learn/paths/az-900-describe-cloud-concepts/)
@@ -38,6 +38,7 @@ Entre las opciones basadas en en texto están las dos rutas que estaban disponib
 
 ## El Dia del Examen
 
+Yo elegí presentar el examen de forma presencial en un centro autorizado para ello esto puede ser de los más normal pero en año de pandemia no suena lo más razonable pero aquí mis razones vivo en un departamento pequeño por lo que conseguir un lugar tranquilo no me es muy fácil, las restricciones de movilidad fueron relajadas en estas fechas.
 ## Resultados
 
 Al momento de terminar tu examen la aplicación inmediatamente te da el resultado. La calificación mínima aprobatoria es de 700 de un máximo de 1000 puntos. Este resultado me fue entregado por los responsables del centro a la salida.
@@ -47,3 +48,10 @@ Al momento de terminar tu examen la aplicación inmediatamente te da el resultad
 En seguida puedes descargar el "__*Badge*__" de certificación desde el panel de certificación
 
 <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="44cc0f5b-9da4-40d2-8ab0-487e503c6db3" data-share-badge-host="https://www.youracclaim.com"></div><script type="text/javascript" async src="//cdn.youracclaim.com/assets/utilities/embed.js"></script>
+
+## Cupones de Descuento
+
+La plataforma Udemy me deja crear cupones de descuento para mis cursos. Aquí los publicare de forma regular.
+* [100 preguntas de examen Fundamentos de Azure - Gratuito para las primeras 10 personas en noviembre](https://www.udemy.com/course/examenes-de-practica-az-900-fundamentos-de-azure/?couponCode=F1DB8D30DB6C87F66A35)
+* [El mejor precio disponible](https://www.udemy.com/course/examenes-de-practica-az-900-fundamentos-de-azure/?couponCode=DC293952E62DD5FF8843)
+

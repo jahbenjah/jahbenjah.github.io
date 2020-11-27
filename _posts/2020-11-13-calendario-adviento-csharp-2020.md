@@ -43,11 +43,10 @@ El tema de los artículos es decisión de los autores unicamente se pide que sea
 | 12/12/2020    |  [Antonio Feregrino](https://twitter.com/io_exception){:target="_blank" rel="noopener"} ||
 | 13/12/2020    |   | |
 | 14/12/2020    |  [Leomaris Reyes](https://twitter.com/LeomarisReyes11){:target="_blank" rel="noopener"} ||
-| 15/12/2020    |   | |
+| 15/12/2020    |  [Manuel Zapata](https://twitter.com/ManuelZapata){:target="_blank" rel="noopener"} ||
 | 16/12/2020    |  [Charlin Agramonte](https://twitter.com/Chard003){:target="_blank" rel="noopener"} ||
-| 17/12/2020    |   | |
-| 18/12/2020    |   | |
-| 19/12/2020    |   | |
+| 18/12/2020    |  [Roberto Ruiz](https://twitter.com/rruizdev){:target="_blank" rel="noopener"} ||
+| 18/12/2020    |  [Abigail Armijos](https://twitter.com/apis3445){:target="_blank" rel="noopener"} ||
 | 20/12/2020    |  [Eduardo Barrios](https://twitter.com/ebarriosdev){:target="_blank" rel="noopener"} ||
 | 21/12/2020    |  [Gabriel Acosta](https://twitter.com/GacostaDev){:target="_blank" rel="noopener"} |Pattern CQRS with Entity Framework Core|
 | 22/12/2020    |  [Leonardo Vargas](https://twitter.com/lvbernal){:target="_blank" rel="noopener"} ||

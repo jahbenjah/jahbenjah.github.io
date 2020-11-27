@@ -54,4 +54,3 @@ En seguida puedes descargar el "__*Badge*__" de certificación desde el panel de
 La plataforma Udemy me deja crear cupones de descuento para mis cursos. Aquí los publicare de forma regular.
 * [100 preguntas de examen Fundamentos de Azure - Gratuito para las primeras 10 personas en noviembre](https://www.udemy.com/course/examenes-de-practica-az-900-fundamentos-de-azure/?couponCode=F1DB8D30DB6C87F66A35)
 * [El mejor precio disponible](https://www.udemy.com/course/examenes-de-practica-az-900-fundamentos-de-azure/?couponCode=DC293952E62DD5FF8843)
-

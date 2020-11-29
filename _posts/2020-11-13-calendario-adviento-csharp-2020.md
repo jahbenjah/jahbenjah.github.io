@@ -28,32 +28,32 @@ El tema de los artículos es decisión de los autores unicamente se pide que sea
 
 | Fecha         | Solicitado por     | Titulo       |
 | ------------- | -------------      | -------------|
-| 01/12/2020    |   | |
-| 02/12/2020    |   | |
-| 03/12/2020    |  [Héctor Uriel Pérez Rojas](https://www.facebook.com/hprez21/){:target="_blank" rel="noopener"} | |
-| 04/12/2020    |   | |
-| 05/12/2020    |  [Luis Beltran](https://twitter.com/darkicebeam){:target="_blank" rel="noopener"} ||
-| 06/12/2020    |   | |
-| 07/12/2020    |   | |
-| 08/12/2020    |  [Erick Marcia](https://twitter.com/Emarcia14){:target="_blank" rel="noopener"} ||
-| 09/12/2020    |  [Ricardo Josue Perez Altamirano](https://twitter.com/RicardoJosue04){:target="_blank" rel="noopener"}|Patrones creacionales con C#|
-| 10/12/2020    |  [Lautaro Carro](https://twitter.com/LauchaCarro){:target="_blank" rel="noopener"}||
-| 10/12/2020    |  [Héctor Uriel Pérez Rojas](https://www.facebook.com/hprez21/){:target="_blank" rel="noopener"} ||
-| 11/12/2020    |  [Israel Perez Saucedo](https://twitter.com/pesimx87){:target="_blank" rel="noopener"} ||
-| 12/12/2020    |  [Antonio Feregrino](https://twitter.com/io_exception){:target="_blank" rel="noopener"} ||
-| 13/12/2020    |   | |
-| 14/12/2020    |  [Leomaris Reyes](https://twitter.com/LeomarisReyes11){:target="_blank" rel="noopener"} ||
-| 15/12/2020    |  [Manuel Zapata](https://twitter.com/ManuelZapata){:target="_blank" rel="noopener"} ||
-| 16/12/2020    |  [Charlin Agramonte](https://twitter.com/Chard003){:target="_blank" rel="noopener"} ||
-| 18/12/2020    |  [Roberto Ruiz](https://twitter.com/rruizdev){:target="_blank" rel="noopener"} ||
-| 18/12/2020    |  [Abigail Armijos](https://twitter.com/apis3445){:target="_blank" rel="noopener"} ||
-| 20/12/2020    |  [Eduardo Barrios](https://twitter.com/ebarriosdev){:target="_blank" rel="noopener"} ||
-| 21/12/2020    |  [Gabriel Acosta](https://twitter.com/GacostaDev){:target="_blank" rel="noopener"} |Pattern CQRS with Entity Framework Core|
-| 22/12/2020    |  [Leonardo Vargas](https://twitter.com/lvbernal){:target="_blank" rel="noopener"} ||
-| 23/12/2020    |   | |
-| 24/12/2020    |  [Leslie Ramirez](https://twitter.com/iLessRG){:target="_blank" rel="noopener"} ||
-| 25/12/2020    |  [Daniel Monettelli L.](https://twitter.com/DanielMonetelli){:target="_blank" rel="noopener"} ||
-| 27/12/2020    |  [Luis Matos](https://twitter.com/luismatosluna){:target="_blank" rel="noopener"} ||
+| 01  |   | |
+| 02  |   | |
+| 03  |  [Héctor Uriel Pérez Rojas](https://www.facebook.com/hprez21/){:target="_blank" rel="noopener"} | |
+| 04  |   | |
+| 05  |  [Luis Beltran](https://twitter.com/darkicebeam){:target="_blank" rel="noopener"} ||
+| 06  |   | |
+| 07  |   | |
+| 08  |  [Erick Marcia](https://twitter.com/Emarcia14){:target="_blank" rel="noopener"} ||
+| 09  |  [Ricardo Josue Perez Altamirano](https://twitter.com/RicardoJosue04){:target="_blank" rel="noopener"}|Patrones creacionales con C#|
+| 10  |  [Lautaro Carro](https://twitter.com/LauchaCarro){:target="_blank" rel="noopener"}||
+| 10  |  [Héctor Uriel Pérez Rojas](https://www.facebook.com/hprez21/){:target="_blank" rel="noopener"} ||
+| 11  |  [Israel Perez Saucedo](https://twitter.com/pesimx87){:target="_blank" rel="noopener"} ||
+| 12  |  [Antonio Feregrino](https://twitter.com/io_exception){:target="_blank" rel="noopener"} ||
+| 13  |  [Jorge Serrano](https://twitter.com/J0rgeSerran0){:target="_blank" rel="noopener"} ||
+| 14  |  [Leomaris Reyes](https://twitter.com/LeomarisReyes11){:target="_blank" rel="noopener"} ||
+| 15  |  [Manuel Zapata](https://twitter.com/ManuelZapata){:target="_blank" rel="noopener"} ||
+| 16  |  [Charlin Agramonte](https://twitter.com/Chard003){:target="_blank" rel="noopener"} ||
+| 18  |  [Roberto Ruiz](https://twitter.com/rruizdev){:target="_blank" rel="noopener"} ||
+| 18  |  [Abigail Armijos](https://twitter.com/apis3445){:target="_blank" rel="noopener"} ||
+| 20  |  [Eduardo Barrios](https://twitter.com/ebarriosdev){:target="_blank" rel="noopener"} ||
+| 21  |  [Gabriel Acosta](https://twitter.com/GacostaDev){:target="_blank" rel="noopener"} |Pattern CQRS with Entity Framework Core|
+| 22  |  [Leonardo Vargas](https://twitter.com/lvbernal){:target="_blank" rel="noopener"} ||
+| 23  |  [Jorge Serrano](https://twitter.com/J0rgeSerran0){:target="_blank" rel="noopener"} ||
+| 24  |  [Leslie Ramirez](https://twitter.com/iLessRG){:target="_blank" rel="noopener"} ||
+| 25  |  [Daniel Monettelli L.](https://twitter.com/DanielMonetelli){:target="_blank" rel="noopener"} ||
+| 27  |  [Luis Matos](https://twitter.com/luismatosluna){:target="_blank" rel="noopener"} ||
 
 ## Algunas ideas para postear
 

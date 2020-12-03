@@ -30,7 +30,7 @@ El tema de los artículos es decisión de los autores unicamente se pide que sea
 | ------------- | -------------      | -------------|
 | 01  |   | |
 | 02  |   | |
-| 03  |  [Héctor Uriel Pérez Rojas](https://www.facebook.com/hprez21/){:target="_blank" rel="noopener"} | |
+| 03  |  [Héctor Uriel Pérez Rojas](https://www.facebook.com/hprez21/){:target="_blank" rel="noopener"} |[Novedades de C# 9.0](https://elcamino.dev/novedades-c-sharp-9)|
 | 04  |   | |
 | 05  |  [Luis Beltran](https://twitter.com/darkicebeam){:target="_blank" rel="noopener"} ||
 | 06  |   | |

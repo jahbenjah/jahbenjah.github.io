@@ -37,8 +37,8 @@ El tema de los artículos es decisión de los autores unicamente se pide que sea
 | 07  |   | |
 | 08  |  [Erick Marcia](https://twitter.com/Emarcia14){:target="_blank" rel="noopener"} ||
 | 09  |  [Ricardo Josue Perez Altamirano](https://twitter.com/RicardoJosue04){:target="_blank" rel="noopener"}|Patrones creacionales con C#|
+|  9  |  [Héctor Uriel Pérez Rojas](https://www.facebook.com/hprez21/){:target="_blank" rel="noopener"} |[Novedades de C# 9 : webinar en vivo](https://youtu.be/G6YmqmMlhG0)|
 | 10  |  [Lautaro Carro](https://twitter.com/LauchaCarro){:target="_blank" rel="noopener"}||
-| 10  |  [Héctor Uriel Pérez Rojas](https://www.facebook.com/hprez21/){:target="_blank" rel="noopener"} ||
 | 11  |  [Israel Perez Saucedo](https://twitter.com/pesimx87){:target="_blank" rel="noopener"} ||
 | 12  |  [Antonio Feregrino](https://twitter.com/io_exception){:target="_blank" rel="noopener"} ||
 | 13  |  [Jorge Serrano](https://twitter.com/J0rgeSerran0){:target="_blank" rel="noopener"} ||

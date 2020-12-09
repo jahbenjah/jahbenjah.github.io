@@ -36,7 +36,7 @@ El tema de los artículos es decisión de los autores unicamente se pide que sea
 | 06  |   | |
 | 07  |   | |
 | 08  |  [Erick Marcia](https://twitter.com/Emarcia14){:target="_blank" rel="noopener"} ||
-| 09  |  [Ricardo Josue Perez Altamirano](https://twitter.com/RicardoJosue04){:target="_blank" rel="noopener"}|Patrones creacionales con C#|
+| 09  |  [Ricardo Josue Perez Altamirano](https://twitter.com/RicardoJosue04){:target="_blank" rel="noopener"}|[Patrones creacionales con C#](https://solucionessore.com/mirador/patrones_de_diseno_creacionales_en_c)|
 |  9  |  [Héctor Uriel Pérez Rojas](https://www.facebook.com/hprez21/){:target="_blank" rel="noopener"} |[Novedades de C# 9 : webinar en vivo](https://youtu.be/G6YmqmMlhG0)|
 | 10  |  [Lautaro Carro](https://twitter.com/LauchaCarro){:target="_blank" rel="noopener"}||
 | 11  |  [Israel Perez Saucedo](https://twitter.com/pesimx87){:target="_blank" rel="noopener"} ||

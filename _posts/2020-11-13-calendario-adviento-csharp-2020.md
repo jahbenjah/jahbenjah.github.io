@@ -38,10 +38,10 @@ El tema de los artículos es decisión de los autores unicamente se pide que sea
 | 08  |  [Erick Marcia](https://twitter.com/Emarcia14){:target="_blank" rel="noopener"} ||
 | 09  |  [Ricardo Josue Perez Altamirano](https://twitter.com/RicardoJosue04){:target="_blank" rel="noopener"}|[Patrones creacionales con C#](https://solucionessore.com/mirador/patrones_de_diseno_creacionales_en_c)|
 |  9  |  [Héctor Uriel Pérez Rojas](https://www.facebook.com/hprez21/){:target="_blank" rel="noopener"} |[Novedades de C# 9 : webinar en vivo](https://youtu.be/G6YmqmMlhG0)|
-| 10  |  [Lautaro Carro](https://twitter.com/LauchaCarro){:target="_blank" rel="noopener"}||
+| 10  |  [Lautaro Carro](https://twitter.com/LauchaCarro){:target="_blank" rel="noopener"}|[Usando HTTP interceptors en Blazor](https://lautarocarro.blog/usando-http-interceptors-en-blazor/)|
 | 11  |  [Israel Perez Saucedo](https://twitter.com/pesimx87){:target="_blank" rel="noopener"} ||
 | 12  |  [Antonio Feregrino](https://twitter.com/io_exception){:target="_blank" rel="noopener"} ||
-| 13  |  [Jorge Serrano](https://twitter.com/J0rgeSerran0){:target="_blank" rel="noopener"} ||
+| 13  |  [Jorge Serrano](https://twitter.com/J0rgeSerran0){:target="_blank" rel="noopener"} |Null Checking en C#|
 | 14  |  [Leomaris Reyes](https://twitter.com/LeomarisReyes11){:target="_blank" rel="noopener"} ||
 | 15  |  [Manuel Zapata](https://twitter.com/ManuelZapata){:target="_blank" rel="noopener"} ||
 | 16  |  [Charlin Agramonte](https://twitter.com/Chard003){:target="_blank" rel="noopener"} ||
@@ -50,7 +50,7 @@ El tema de los artículos es decisión de los autores unicamente se pide que sea
 | 20  |  [Eduardo Barrios](https://twitter.com/ebarriosdev){:target="_blank" rel="noopener"} ||
 | 21  |  [Gabriel Acosta](https://twitter.com/GacostaDev){:target="_blank" rel="noopener"} |Pattern CQRS with Entity Framework Core|
 | 22  |  [Leonardo Vargas](https://twitter.com/lvbernal){:target="_blank" rel="noopener"} ||
-| 23  |  [Jorge Serrano](https://twitter.com/J0rgeSerran0){:target="_blank" rel="noopener"} ||
+| 23  |  [Jorge Serrano](https://twitter.com/J0rgeSerran0){:target="_blank" rel="noopener"} |JSON Patch en http://ASP.NET Core 5 Web API|
 | 24  |  [Leslie Ramirez](https://twitter.com/iLessRG){:target="_blank" rel="noopener"} ||
 | 25  |  [Daniel Monettelli L.](https://twitter.com/DanielMonetelli){:target="_blank" rel="noopener"} ||
 | 27  |  [Luis Matos](https://twitter.com/luismatosluna){:target="_blank" rel="noopener"} ||

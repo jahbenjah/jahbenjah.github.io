@@ -39,7 +39,7 @@ El tema de los artículos es decisión de los autores unicamente se pide que sea
 | 09  |  [Ricardo Josue Perez Altamirano](https://twitter.com/RicardoJosue04){:target="_blank" rel="noopener"}|[Patrones creacionales con C#](https://solucionessore.com/mirador/patrones_de_diseno_creacionales_en_c)|
 |  9  |  [Héctor Uriel Pérez Rojas](https://www.facebook.com/hprez21/){:target="_blank" rel="noopener"} |[Novedades de C# 9 : webinar en vivo](https://youtu.be/G6YmqmMlhG0)|
 | 10  |  [Lautaro Carro](https://twitter.com/LauchaCarro){:target="_blank" rel="noopener"}|[Usando HTTP interceptors en Blazor](https://lautarocarro.blog/usando-http-interceptors-en-blazor/)|
-| 11  |  [Israel Perez Saucedo](https://twitter.com/pesimx87){:target="_blank" rel="noopener"} ||
+| 11  |  [Israel Perez Saucedo](https://twitter.com/pesimx87){:target="_blank" rel="noopener"} |[Servicios de dependencia en Xamarin.Forms](https://www.youtube.com/watch?v=bfvmN6yYUS8)|
 | 12  |  [Antonio Feregrino](https://twitter.com/io_exception){:target="_blank" rel="noopener"} |[Machine Learning en .NET con C#](https://thatcsharpguy.com/posts/2020-12-12-machine-learning-en-dotnet.html)|
 | 13  |  [Jorge Serrano](https://twitter.com/J0rgeSerran0){:target="_blank" rel="noopener"} |[Null Checking en C#](https://geeks.ms/jorge/2020/12/13/null-checking-en-c/)|
 | 14  |  [Leomaris Reyes](https://twitter.com/LeomarisReyes11){:target="_blank" rel="noopener"} ||

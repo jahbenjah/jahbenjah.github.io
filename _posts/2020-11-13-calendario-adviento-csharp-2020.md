@@ -42,14 +42,14 @@ El tema de los artículos es decisión de los autores unicamente se pide que sea
 | 11  |  [Israel Perez Saucedo](https://twitter.com/pesimx87){:target="_blank" rel="noopener"} |[Servicios de dependencia en Xamarin.Forms](https://www.youtube.com/watch?v=bfvmN6yYUS8)|
 | 12  |  [Antonio Feregrino](https://twitter.com/io_exception){:target="_blank" rel="noopener"} |[Machine Learning en .NET con C#](https://thatcsharpguy.com/posts/2020-12-12-machine-learning-en-dotnet.html)|
 | 13  |  [Jorge Serrano](https://twitter.com/J0rgeSerran0){:target="_blank" rel="noopener"} |[Null Checking en C#](https://geeks.ms/jorge/2020/12/13/null-checking-en-c/)|
-| 14  |  [Leomaris Reyes](https://twitter.com/LeomarisReyes11){:target="_blank" rel="noopener"} ||
+| 14  |  [Leomaris Reyes](https://twitter.com/LeomarisReyes11){:target="_blank" rel="noopener"} |[4 Tips para escribir código más limpio](https://es.askxammy.com/4_tips-simples-para-escribir-codigo-mas-limpio/)|
 | 15  |  [Manuel Zapata](https://twitter.com/ManuelZapata){:target="_blank" rel="noopener"} ||
-| 16  |  [Charlin Agramonte](https://twitter.com/Chard003){:target="_blank" rel="noopener"} ||
-| 18  |  [Roberto Ruiz](https://twitter.com/rruizdev){:target="_blank" rel="noopener"} ||
-| 18  |  [Abigail Armijos](https://twitter.com/apis3445){:target="_blank" rel="noopener"} ||
-| 20  |  [Eduardo Barrios](https://twitter.com/ebarriosdev){:target="_blank" rel="noopener"} ||
+| 16  |  [Charlin Agramonte](https://twitter.com/Chard003){:target="_blank" rel="noopener"} |[Validaciones en Xamarin Forms](https://chard003.medium.com/validaciones-en-xamarin-forms-9eece61842b9)|
+| 18  |  [Roberto Ruiz](https://twitter.com/rruizdev){:target="_blank" rel="noopener"} |[https://rruizdev.medium.com/que-pas%C3%B3-con-net-%C3%A9ste-2020-y-que-pasar%C3%A1-164177829fc4](https://rruizdev.medium.com/que-pas%C3%B3-con-net-%C3%A9ste-2020-y-que-pasar%C3%A1-164177829fc4)|
+| 18  |  [Abigail Armijos](https://twitter.com/apis3445){:target="_blank" rel="noopener"} |[Crear y publicar un servicio REST en Azure con .Net 5 y EF Core](https://apis3445.medium.com/crear-y-publicar-un-servicio-rest-en-azure-con-net-5-y-ef-core-2543ce343d3e)|
+| 20  |  [Eduardo Barrios](https://twitter.com/ebarriosdev){:target="_blank" rel="noopener"} |[Píldoras de C#: Task Parallel Library (TPL) Procesamiento Multihilo y asíncrono](https://dev.to/ebarrioscode/pildoras-de-c-task-parallel-library-tpl-procesamiento-multihilo-y-asincrono-18mp)|
 | 21  |  [Gabriel Acosta](https://twitter.com/GacostaDev){:target="_blank" rel="noopener"} |Pattern CQRS with Entity Framework Core|
-| 22  |  [Leonardo Vargas](https://twitter.com/lvbernal){:target="_blank" rel="noopener"} |Adviento C# 2020: Diario de ASP.NET|
+| 22  |  [Leonardo Vargas](https://twitter.com/lvbernal){:target="_blank" rel="noopener"} |[Adviento C# 2020: Diario de ASP.NET](https://blog.lvbernal.com/2020/12/diario-aspnet.html)|
 | 23  |  [Jorge Serrano](https://twitter.com/J0rgeSerran0){:target="_blank" rel="noopener"} |JSON Patch en ASP.NET Core 5 Web API|
 | 24  |  [Leslie Ramirez](https://twitter.com/iLessRG){:target="_blank" rel="noopener"} ||
 | 25  |  [Daniel Monettelli L.](https://twitter.com/DanielMonetelli){:target="_blank" rel="noopener"} ||

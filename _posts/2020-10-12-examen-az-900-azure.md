@@ -41,7 +41,7 @@ Entre las opciones basadas en en texto están las dos rutas que estaban disponib
 Yo elegí presentar el examen de forma presencial en un centro autorizado para ello esto puede ser de los más normal pero en año de pandemia no suena lo más razonable pero aquí mis razones vivo en un departamento pequeño por lo que conseguir un lugar tranquilo no me es muy fácil, las restricciones de movilidad fueron relajadas en estas fechas.
 ## Resultados
 
-Al momento de terminar tu examen la aplicación inmediatamente te da el resultado. La calificación mínima aprobatoria es de 700 de un máximo de 1000 puntos. Este resultado me fue entregado por los responsables del centro a la salida.
+Al momento de terminar tu examen la aplicación inmediatamente te da el resultado. La calificación mínima aprobatoria es de 700 de un máximo de 1000 puntos. Este resultado me fue entregado impreso por los responsables del centro a la salida.
 
 <img src="/img/az900-results.png" loading="lazy"  alt="Pantalla de resultados del Examen AZ900 Azure Fundamentals">
 
@@ -52,5 +52,6 @@ En seguida puedes descargar el "__*Badge*__" de certificación desde el panel de
 ## Cupones de Descuento
 
 La plataforma Udemy me deja crear cupones de descuento para mis cursos. Aquí los publicare de forma regular.
-* [100 preguntas de examen Fundamentos de Azure - Gratuito para las primeras 10 personas en noviembre](https://www.udemy.com/course/examenes-de-practica-az-900-fundamentos-de-azure/?couponCode=F1DB8D30DB6C87F66A35)
-* [El mejor precio disponible](https://www.udemy.com/course/examenes-de-practica-az-900-fundamentos-de-azure/?couponCode=DC293952E62DD5FF8843)
+
+* [+100 preguntas de examen Fundamentos de Azure - Gratuito para las primeras 10 personas en diciembre](https://www.udemy.com/course/examenes-de-practica-az-900-fundamentos-de-azure/?couponCode=DEA8CCB1531B614EE0DA)
+* [El mejor precio disponible](https://www.udemy.com/course/examenes-de-practica-az-900-fundamentos-de-azure/?couponCode=4556601AEBC2A7D0AAD9)

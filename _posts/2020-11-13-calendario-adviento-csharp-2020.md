@@ -50,7 +50,7 @@ El tema de los artículos es decisión de los autores unicamente se pide que sea
 | 20  |  [Eduardo Barrios](https://twitter.com/ebarriosdev){:target="_blank" rel="noopener"} |[Píldoras de C#: Task Parallel Library (TPL) Procesamiento Multihilo y asíncrono](https://dev.to/ebarrioscode/pildoras-de-c-task-parallel-library-tpl-procesamiento-multihilo-y-asincrono-18mp)|
 | 21  |  [Gabriel Acosta](https://twitter.com/GacostaDev){:target="_blank" rel="noopener"} |Pattern CQRS with Entity Framework Core|
 | 22  |  [Leonardo Vargas](https://twitter.com/lvbernal){:target="_blank" rel="noopener"} |[Adviento C# 2020: Diario de ASP.NET](https://blog.lvbernal.com/2020/12/diario-aspnet.html)|
-| 23  |  [Jorge Serrano](https://twitter.com/J0rgeSerran0){:target="_blank" rel="noopener"} |JSON Patch en ASP.NET Core 5 Web API|
+| 23  |  [Jorge Serrano](https://twitter.com/J0rgeSerran0){:target="_blank" rel="noopener"} |[JSON Patch en ASP.NET Core 5 Web API](https://geeks.ms/jorge/2020/12/23/json-patch-en-asp-net-core-5-web-api/)|
 | 24  |  [Leslie Ramirez](https://twitter.com/iLessRG){:target="_blank" rel="noopener"} ||
 | 25  |  [Daniel Monettelli L.](https://twitter.com/DanielMonetelli){:target="_blank" rel="noopener"} ||
 | 27  |  [Luis Matos](https://twitter.com/luismatosluna){:target="_blank" rel="noopener"} ||

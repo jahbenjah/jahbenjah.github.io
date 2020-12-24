@@ -4,13 +4,12 @@
     {%- seo -%}
     {%- feed_meta -%}
     {%- if jekyll.environment == 'production' and site.google_analytics -%}
-    {%- include google-analytics.html -%}
-    {%- include google-addsense.html -%}
+        {%- include google-analytics.html -%}
     {%- endif -%}
     {%- include facebookopengraph.html -%}
     {%- include favicon.html -%}
   
     <link href="assets/css/custom.min.css" rel="stylesheet">
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link rel="preload" href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link rel="preload" href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
 </head>

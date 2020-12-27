@@ -61,7 +61,7 @@ El Select Tag Helper se encuentra en el espacio de nombres `Microsoft.AspNetCore
 
 Comenzaremos a ver algunos casos más simples de usar el SelectTagHelper 
 
-a) Usando un `select` con valores predefinidos en el HTML.
+### Usando un `select` con valores predefinidos en el HTML.
 
 Para generar este `select` usando Razor necesitamos crear un modelo que incluya una propiedad del tipo de dato para asignarla al control. Como las opciones solo son dos y no requerimos guardar esto en base de datos podemos usar la opciones predefinidas la vista. Como generamos la colección con C# solo necesitamos usar el _tag helper_ `asp-for` especificando la propiedad del modelo.
 
@@ -92,9 +92,9 @@ La sección del la vista del formulario de registro responsable de crear el `sel
 
 <img src="/img/simple-select.webp" loading="lazy" alt="SelectTagHelper en el formulario de registro">
 
-b) Llenar un `select` con los valores de una enumeración
+### Llenar un `select` con los valores de una enumeración
 
-Otro escenario en que podemos necesitar un `select` es cuando tenenos una enumeración de los valores posibles para un campo determinado. Por ejemplo los estados de una pedido en una aplicación de ventas. Para}esto necesitamos el método estático Html.GetEnumSelectList<T>() donde T es un Enum
+Otro escenario en que podemos necesitar un `select` es cuando tenenos una enumeración de los valores posibles para un campo determinado. Por ejemplo los estados de una pedido en una aplicación de ventas. Para esto necesitamos el método estático `Html.GetEnumSelectList<T>()` donde T es un Enum
 
 ```cs
 public enum EstadosPedido
@@ -114,6 +114,142 @@ public enum EstadosPedido
 <option value="2">Cancelado</option>
 <option value="3">Entregado</option>
 </select>
+```
+
+### LLenar un select desde el controlador
+
+Para este caso necesitamos que el modelo tenga una propiedad del tipo `List<SelectListItem>` que llenaremos en el controlador cuando se ejecuta la acción. Por ejemplo si tenemos una aplicación que vende servicios para autos para la cual se requiere especificar el año del vehículo necesitamos el siguiente código:
+
+Para la vista requerimos especifcar el modelo en el tag helper asp-items:
+
+```cs
+@model  TouristAuto.ViewModels.VehiculoViewModel
+<form asp-action="View">
+    <div class="form-group">
+        <label asp-for="Year" class="control-label"></label>
+        <select asp-for="Year" asp-items="@Model.Years" class="form-control"></select>
+        <span asp-validation-for="Year" class="text-danger"></span>
+    </div>
+</form>
+   
+ ```
+
+ El modelo tiene la propiedad del tipo `List<SelectListItem>` 
+
+```cs
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc.Rendering;
+
+public class VehiculoViewModel
+{
+    public int Year { get; set; }
+    public List<SelectListItem> Years { get; set; }
+}
+```
+
+Por ultimo en el controlador necesitamos llenar esta propiedad aquí mostramos como hacer construyendo el objeto de forma manual. Idealmente esta sera la responsabilidad de un servicio inyectado en el controlador. Para generar la lista usamos una consulta LINQ para proyectar los años en una list de objectos del tipo `SelectListItem` asignando las propiedades `Value` y `Text`.
+
+````cs
+public IActionResult Vehiculo()
+{
+    VehiculoViewModel model = new VehiculoViewModel();
+    model.Years = Enumerable.Range(1900, DateTime.Now.Year + 2 - 1900)
+        .Select(year => new SelectListItem() { Value = year.ToString(), Text = year.ToString() })
+        .Reverse()
+        .ToList();
+    return View(model);
+}
+```
+
+### Llenar un Select en cascada
+
+Para este caso necesitamos usar Javascript particularmente en este ejemplo usamos jQuery. Para el ejemplo suponemos que una empresa tiene operaciones es tres ciudades diferentes y cada estado tiene diferentes unidades de negocio. Nuestra aplicación requiere que se muestre un combo con las ciudades y un segundo combo se llenara con las unidades de negocio correspondientes a la primera ciudad seleccionada.
+
+La vista incluíra los dos select el primero lo llenamos con datos duros y el segundo se llenara con los datos que devuelve una consulta que usa como base el id de la ciudada seleccionada.
+
+```cs
+@model TouristAuto.ViewModels.CiudadViewModel
+<form asp-action="View">
+    <div class="form-group">
+        <label asp-for="CiudadId" class="control-label"></label>
+        <select asp-for="CiudadId" class="form-control">
+            <option value="0">Seleccione una ciudad</option>
+            <option value="1">México</option>
+            <option value="2">Guadalajara</option>
+            <option value="3">Monterrey</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label asp-for="UnidadId" class="control-label"></label>
+        <select asp-for="UnidadId" class="form-control"></select>
+    </div>
+</form>
+```
+
+En el controlado necesitamos una acción que reciba el id del la ciudad seleccionada y realice una consulta para regresar los datos de las unidades de negocio en formato JSON. Una vez mas por cuestiones de simplicidad ejecutamos la lógica dentro del controlador pero seria ideal que estuviera en un servicio.
+```cs
+public JsonResult UnidadesNegocio(int id)
+{
+    List<Unidad> unidades = new List<Unidad>();
+    switch (id)
+    {
+        case 1:
+            unidades.Add(new Unidad() {Id =  1, Nombre = "Unidad 1 "});
+            unidades.Add(new Unidad() { Id = 2, Nombre = "Unidad 2 " });
+            unidades.Add(new Unidad() { Id = 3, Nombre = "Unidad 3 " });
+        break;
+        
+        case 2:
+            unidades.Add(new Unidad() { Id = 4, Nombre = "Unidad 4 " });
+            unidades.Add(new Unidad() { Id = 5, Nombre = "Unidad 5 " });
+        break;
+
+        case 3:
+            unidades.Add(new Unidad() { Id = 6, Nombre = "Unidad 6 " });
+        break;
+        
+        default:
+        break;
+    }
+    return Json(unidades);
+}
+```
+
+El código de jQuery requiere los Ids de los select que asigna ASP.NET Core en este caso son `CiudadId` y  `UnidadId` para el primer select se agregar un manejador de eventos en el evento `change` que obtendra el Id de la ciudad seleccionada , limpiará el select de unidades, realizara una llamada al controlador para  traer los nuevas unidades y finalmente llenara nuevamente el select de unidades.
+
+
+```html
+@section Scripts {
+    <script type="text/javascript">
+        $(function () {
+            $('#CiudadId').on('change', function () {
+                var ciudaId = $(this).val();  //Extra el evento seleccionado
+                let select = $('#UnidadId');  
+                select.empty();  // Limpia el combo de unidades
+                $.ajax({
+                    type: "GET",
+                    url: '/Home/UnidadesNegocio/' + ciudaId,
+                    success: function (data) {
+                        // Itera sobre el arreglo de datos json que regresa el controlador
+
+                        $.each(data, function (k, v) {
+                            // crea un elemento option e inicializa las propiedades con el json de respuesta
+                            select.append(
+                                $('<option>', {
+                                    value: v.id,
+                                    text: v.nombre,
+                                    selected: v.selected,
+                                    disabled: v.disabled
+                                })
+                            );
+                        });
+                    },
+                    dataType: "JSON"
+                });
+            });
+        });
+    </script>
+}
 ```
 
 ## Conclusiones

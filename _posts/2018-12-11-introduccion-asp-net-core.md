@@ -2,8 +2,8 @@
 layout: post
 title:  "Introducción a ASP.NET Core"
 categories: asp.net core mvc dotnet aspnetcore
-description: Breve descripción de que es ASP.NET Core y cuales son sus características principales
-last_modified_at: 2019-06-06 15:06:33 +0000
+description: Qué es ASP.NET Core y cuales son sus características principales
+last_modified_at: 2020-12-27 15:32:33 +0000
 ---
 
 **ASP.NET Core** es un *<span lang="en">framework</span>* para desarrollo web de código abierto, ligero, modular y multiplataforma creado por Microsoft con aportes de la comunidad.
@@ -27,6 +27,9 @@ Aquí la lista de repositorios relevantes para ASP.NET Core:
 
 **Modular**: ASP.NET Core esta compuesto por más de 95 paquetes _Nuget_ independientes que permiten usar solo las funciones deseadas sin estar obligado a usar todas las características del framework. Al estar compuesto por demasiados paquetes es posible que hayas pensado que es necesario aprenderse cada uno de los paquetes pero te comento que a partir de la version 2.0 no es necesario ya que existen los [metapaquetes](https://docs.microsoft.com/dotnet/core/packages#metapackages) que se encargan de referenciar todos los paquetes necesarios para una aplicación web.
 
+<div class="video-responsive">
+<iframe  src="https://www.youtube.com/embed/OfLd-Un92kY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Versiones
 
 La última versión al momento de escribir este artículo es la 2.2.
@@ -35,6 +38,9 @@ Actualmente hay 2 versiones principales con varias versiones menores y -estimo q
 
 Versión | Fecha de lanzamiento|  Detalles
 --------| --------------------|-----------
+5.0| 10 Noviembre 2020   |[Announcing ASP.NET Core in .NET 5](https://devblogs.microsoft.com/aspnet/announcing-asp-net-core-in-net-5/)
+3.1| 03 Diciembre 2019   |[ASP.NET Core updates in .NET Core 3.1](https://devblogs.microsoft.com/aspnet/asp-net-core-updates-in-net-core-3-1/)
+3.0| 04 Diciembre 2018   |[ASP.NET Core and Blazor updates in .NET Core 3.0](https://devblogs.microsoft.com/aspnet/asp-net-core-and-blazor-updates-in-net-core-3-0/)
 2.2| 04 Diciembre 2018   |[Announcing ASP.NET Core 2.2](https://blogs.msdn.microsoft.com/webdev/2018/12/04/asp-net-core-2-2-available-today/)
 2.1| 30 Mayo 2018   |[ASP.NET Core 2.1.0 now available](https://blogs.msdn.microsoft.com/webdev/2018/05/30/asp-net-core-2-1-0-now-available/)
 2.0|14 Agosto 2017  |[Announcing ASP.NET Core 2.0](https://blogs.msdn.microsoft.com/webdev/2017/08/14/announcing-asp-net-core-2-0/)
@@ -47,7 +53,7 @@ Para desarrollar aplicaciones con ASP.NET Core necesitas el [SDK de .NET Core](h
 
 Aunque es posible  crear aplicaciones con la linea de comandos y un editor de textos sencillos como NotePad++ o Vim es probable que prefieras usar el entorno de desarrollo integrado. Puedes usar las siguientes opciones:
 
-1. El IDE estrella de Microsoft : [Visual Studio 2017](https://visualstudio.microsoft.com/es/) disponible para Windows y Mac La ultima versión de Visual Studio es la 2017 y esta en previo la version 2019. Este IDE es de paga en las ediciones Profesional y Enterprise pero la edición Community es gratuita para desarrolladores de software libre y estudiantes.
+1. El IDE estrella de Microsoft : [Visual Studio 2019](https://visualstudio.microsoft.com/es/) disponible para Windows y Mac La ultima versión de Visual Studio es la 2019. Este IDE es de paga en las ediciones Profesional y Enterprise pero la edición Community es gratuita para desarrolladores de software libre y estudiantes.
 
 1. El editor de código multiplataforma  [Visual Studio Code](https://code.visualstudio.com/). Es gratuito de código abierto y con soporte para muchos lenguajes mediante extensiones.
 

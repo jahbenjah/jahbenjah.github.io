@@ -33,15 +33,15 @@ Aquí la lista de repositorios relevantes para ASP.NET Core:
 
 ## Versiones
 
-La última versión al momento de escribir este artículo es la 2.2.
+La última versión al momento de escribir este artículo es la 5.0.
 
-Actualmente hay 2 versiones principales con varias versiones menores y -estimo que a mediados- del 2019 este disponible la versión 3.0. Puedes revisar los detalles y características nuevas de cada version en el anuncio de la liberación realizado por algún miembro el equipo de desarrollo de ASP\.NET Core.
+Actualmente hay 2 versiones con soporte a largo plazo las versiones 2.1 y 3.1 más otras varias versiones que están fuera de soporte,. Puedes revisar los detalles y características nuevas de cada version en el anuncio de la liberación realizado por algún miembro el equipo de desarrollo de ASP\.NET Core.
 
 Versión | Fecha de lanzamiento|  Detalles
 --------| --------------------|-----------
 5.0| 10 Noviembre 2020   |[Announcing ASP.NET Core in .NET 5](https://devblogs.microsoft.com/aspnet/announcing-asp-net-core-in-net-5/)
 3.1| 03 Diciembre 2019   |[ASP.NET Core updates in .NET Core 3.1](https://devblogs.microsoft.com/aspnet/asp-net-core-updates-in-net-core-3-1/)
-3.0| 04 Diciembre 2018   |[ASP.NET Core and Blazor updates in .NET Core 3.0](https://devblogs.microsoft.com/aspnet/asp-net-core-and-blazor-updates-in-net-core-3-0/)
+3.0| 23 Septiembre 2019   |[ASP.NET Core and Blazor updates in .NET Core 3.0](https://devblogs.microsoft.com/aspnet/asp-net-core-and-blazor-updates-in-net-core-3-0/)
 2.2| 04 Diciembre 2018   |[Announcing ASP.NET Core 2.2](https://blogs.msdn.microsoft.com/webdev/2018/12/04/asp-net-core-2-2-available-today/)
 2.1| 30 Mayo 2018   |[ASP.NET Core 2.1.0 now available](https://blogs.msdn.microsoft.com/webdev/2018/05/30/asp-net-core-2-1-0-now-available/)
 2.0|14 Agosto 2017  |[Announcing ASP.NET Core 2.0](https://blogs.msdn.microsoft.com/webdev/2017/08/14/announcing-asp-net-core-2-0/)

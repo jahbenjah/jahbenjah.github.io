@@ -29,6 +29,7 @@ Aquí la lista de repositorios relevantes para ASP.NET Core:
 
 <div class="video-responsive">
 <iframe  src="https://www.youtube.com/embed/OfLd-Un92kY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## Versiones
 

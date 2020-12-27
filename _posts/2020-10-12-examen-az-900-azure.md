@@ -5,7 +5,7 @@ date:   2020-10-12 10:10:55 +0000
 categories: azure
 permalink: /:categories/:title:output_ext
 image:
-  path: /img/og-az900.jpg
+  path: /img/og-az900.webp
   height: 623
   width: 1190
 ---
@@ -43,7 +43,7 @@ Yo elegí presentar el examen de forma presencial en un centro autorizado para e
 
 Al momento de terminar tu examen la aplicación inmediatamente te da el resultado. La calificación mínima aprobatoria es de 700 de un máximo de 1000 puntos. Este resultado me fue entregado impreso por los responsables del centro a la salida.
 
-<img src="/img/az900-results.png" loading="lazy"  alt="Pantalla de resultados del Examen AZ900 Azure Fundamentals">
+<img src="/img/az900-results.webp" loading="lazy"  alt="Pantalla de resultados del Examen AZ900 Azure Fundamentals">
 
 En seguida puedes descargar el "__*Badge*__" de certificación desde el panel de certificación
 

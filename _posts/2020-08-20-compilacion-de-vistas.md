@@ -5,7 +5,7 @@ date:   2020-08-20 22:22:47 +0000
 categories: aspnetcore
 permalink: /:categories/:title:output_ext
 image:
-  path: /img/og-runtime-compilation.jpg
+  path: /img/og-runtime-compilation.webp
   height: 503
   width: 961
 description: Aprende que es la compilación de vistas en tiempo de ejecución ASP.NET Core y como habiliarlo en un proyecto.
@@ -19,7 +19,7 @@ Una vista en ASP.NET Core es un archivo con extensión _.cshtml_ que combina HTM
 
 Para los nuevos proyectos creados desde Visual Studio 2019 existe un cuadro de selección que permite habilitar y hace su magia negra y configura todo por nosotros.
 
-<img src="/img/og-runtime-compilation.jpg" loading="lazy"  alt="Pantalla de Visual Studio">
+<img src="/img/og-runtime-compilation.webp" loading="lazy"  alt="Pantalla de Visual Studio">
 
 Cuando usas la linea de comandos con el comando *dotnet* es necesario usar la opción **-rrc** o *--razor-runtime-compilation* por ejemplo en un proyecto mvc
 

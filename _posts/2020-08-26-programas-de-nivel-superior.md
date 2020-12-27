@@ -5,7 +5,7 @@ date:   2020-08-26 22:22:47 +0000
 categories: csharp
 permalink: /:categories/:title:output_ext
 image:
-  path: /img/og-top-level-programs.jpg
+  path: /img/og-top-level-programs.webp
   height: 715
   width: 1366
 description: "Los Top Level Programs en C# 9.0 permiten eliminar la necesidad del método Main en las aplicaciones de .NET sin perder ninguna característica."

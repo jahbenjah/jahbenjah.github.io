@@ -5,7 +5,7 @@ date:   2020-09-03 09:22:47 +0000
 categories: aspnetcore
 permalink: /:categories/:title:output_ext
 image:
-  path: /img/og-runtime-compilation.jpg
+  path: /img/og-runtime-compilation.webp
   height: 503
   width: 961
 description: Publica tu aplicación ASP.NET Core como un solo archivo en Linux.

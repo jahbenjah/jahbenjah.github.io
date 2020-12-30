@@ -8,7 +8,7 @@ permalink: /:categories/:title:output_ext
 
 Estoy trabajando en un nuevo curso para la plataforma Udemy sobre Razor Pages con el proposito de compartir mi experiencia con otros programadores.
 
-El dia 29 de diciembre libero la primera version del curso de forma gratuita con el fin de obtener retroalimentación del mismo. Si accediste al curso por favor dejame un comentario detallado de lo que te gusto, lo que no te gusto y lo que te gustaría que se incluyera.
+El dia 30 de diciembre libero la primera version incompleta y de forma gratuita del curso de forma gratuita con el fin de obtener retroalimentación del mismo. Si accediste al curso por favor dejame un comentario detallado de lo que te gusto, lo que no te gusto y lo que te gustaría que se incluyera.
 
 Algunos de los temas que agregare al curso son:
 
@@ -16,4 +16,8 @@ Algunos de los temas que agregare al curso son:
 * Tag Helpers
 * Validación de datos
 * Manejo de librerias del lado del cliente
-* Publicacion en IIS, Azure, Hosting de terceros
+* Publicacion en IIS, Azure, Hosting de terceros.
+
+Utiliza este cupón para inscribirte al curso
+
+[Curso de Razor Pages ¡Gratuito por tiempo limitado!](https://www.udemy.com/course/tutorial-de-aspnet-core-razor-pages-desde-cero-en-espanol/?couponCode=04324A61D9354F251123)

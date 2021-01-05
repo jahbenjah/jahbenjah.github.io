@@ -1,22 +1,24 @@
 <!DOCTYPE HTML>
-<html lang="es" >
-    <head>
-        <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Desplegando en Azure ✅ El pequeño libro de ASP.NET Core</title>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.3">
-        <meta name="author" content="Nate Barbettini">
-        <meta name="identifier" content="978-1-387-75615-5" scheme="ISBN">
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <title>Desplegando en Azure ✅ El pequeño libro de ASP.NET Core</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="">
+    <meta name="generator" content="GitBook 3.2.3">
+    <meta name="author" content="Nate Barbettini">
+    <meta name="identifier" content="978-1-387-75615-5" scheme="ISBN">
     <link rel="stylesheet" href="/assets/gitbook/style.css">
-                <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
-                <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-anchors/plugin.css">
-                <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-forkmegithub/plugin.css">
-                <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-highlight/website.css">
-                <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-search/search.css">
-                <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-fontsettings/website.css">
-    <meta name="HandheldFriendly" content="true"/>
+    <link rel="stylesheet"
+        href="/assets/gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+    <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-anchors/plugin.css">
+    <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-forkmegithub/plugin.css">
+    <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-highlight/website.css">
+    <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-search/search.css">
+    <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-fontsettings/website.css">
+    <meta name="HandheldFriendly" content="true" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -37,314 +39,392 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130293099-1"></script>
     <script>
         window['ga-disable-UA-130293099-1'] = window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1";
-  window.dataLayer = window.dataLayer || [];
+        window.dataLayer = window.dataLayer || [];
         function gtag() {
             dataLayer.push(arguments);
         }
         gtag('js', new Date());
         gtag('config', 'UA-130293099-1');
     </script>
-    <script data-ad-client="ca-pub-4952787000309783" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    </head>
-    <body>
-<div class="book">
-    <div class="book-summary">
-<div id="book-search-input" role="search">
-    <input type="text" placeholder="Escribe para buscar" aria-label="Buscar"/>
-</div>
-                <nav role="navigation">
-<ul class="summary">
-        <li class="chapter " data-level="1.1" data-path="../../">
-                <a href="../../">
-                    Introducción
-                </a>
-        </li>
-        <li class="chapter " data-level="1.2" data-path="../your-first-application/">
-                <a href="../your-first-application/">
-                    Tú primera aplicación
-                </a>
-            <ul class="articles">
-        <li class="chapter " data-level="1.2.1" data-path="../your-first-application/get-the-sdk.html">
-                <a href="../your-first-application/get-the-sdk.html">
-                    Consigue el SDK
-                </a>
-        </li>
-        <li class="chapter " data-level="1.2.2" data-path="../your-first-application/hello-world-in-csharp.html">
-                <a href="../your-first-application/hello-world-in-csharp.html">
-                    Hola Mundo en C#
-                </a>
-        </li>
-        <li class="chapter " data-level="1.2.3" data-path="../your-first-application/create-aspnetcore-project.html">
-                <a href="../your-first-application/create-aspnetcore-project.html">
-                    Crear un proyecto de ASP.NET Core
-                </a>
-        </li>
-            </ul>
-        </li>
-        <li class="chapter " data-level="1.3" data-path="../mvc-basics/">
-                <a href="../mvc-basics/">
-                    Fundamentos de MVC
-                </a>
-            <ul class="articles">
-        <li class="chapter " data-level="1.3.1" data-path="../mvc-basics/create-controller.html">
-                <a href="../mvc-basics/create-controller.html">
-                    Crear un controlador
-                </a>
-        </li>
-        <li class="chapter " data-level="1.3.2" data-path="../mvc-basics/create-models.html">
-                <a href="../mvc-basics/create-models.html">
-                    Crear modelos
-                </a>
-        </li>
-        <li class="chapter " data-level="1.3.3" data-path="../mvc-basics/create-view.html">
-                <a href="../mvc-basics/create-view.html">
-                    Crear una vista
-                </a>
-        </li>
-        <li class="chapter " data-level="1.3.4" data-path="../mvc-basics/add-service-class.html">
-                <a href="../mvc-basics/add-service-class.html">
-                    Agregar una clase de servicio
-                </a>
-        </li>
-        <li class="chapter " data-level="1.3.5" data-path="../mvc-basics/use-dependency-injection.html">
-                <a href="../mvc-basics/use-dependency-injection.html">
-                    Usar inyección de dependencias
-                </a>
-        </li>
-        <li class="chapter " data-level="1.3.6" data-path="../mvc-basics/finish-controller.html">
-                <a href="../mvc-basics/finish-controller.html">
-                    Terminando el controlador
-                </a>
-        </li>
-        <li class="chapter " data-level="1.3.7" data-path="../mvc-basics/update-the-layout.html">
-                <a href="../mvc-basics/update-the-layout.html">
-                    Actualizar la plantilla
-                </a>
-        </li>
-            </ul>
-        </li>
-        <li class="chapter " data-level="1.4" data-path="../add-external-packages/">
-                <a href="../add-external-packages/">
-                    Agregando paquetes externos
-                </a>
-        </li>
-        <li class="chapter " data-level="1.5" data-path="../use-a-database/">
-                <a href="../use-a-database/">
-                    Usando una base de datos
-                </a>
-            <ul class="articles">
-        <li class="chapter " data-level="1.5.1" data-path="../use-a-database/connect-to-a-database.html">
-                <a href="../use-a-database/connect-to-a-database.html">
-                    Conectarse a una base de datos
-                </a>
-        </li>
-        <li class="chapter " data-level="1.5.2" data-path="../use-a-database/update-context.html">
-                <a href="../use-a-database/update-context.html">
-                    Actualizando el contexto
-                </a>
-        </li>
-        <li class="chapter " data-level="1.5.3" data-path="../use-a-database/create-migration.html">
-                <a href="../use-a-database/create-migration.html">
-                    Crear una migración
-                </a>
-        </li>
-        <li class="chapter " data-level="1.5.4" data-path="../use-a-database/create-service-class.html">
-                <a href="../use-a-database/create-service-class.html">
-                    Crear una nueva clase de servicio
-                </a>
-        </li>
-            </ul>
-        </li>
-        <li class="chapter " data-level="1.6" data-path="../add-more-features/">
-                <a href="../add-more-features/">
-                    Agregando más características
-                </a>
-            <ul class="articles">
-        <li class="chapter " data-level="1.6.1" data-path="../add-more-features/add-todo-items.html">
-                <a href="../add-more-features/add-todo-items.html">
-                    Agregar nuevas tareas
-                </a>
-        </li>
-        <li class="chapter " data-level="1.6.2" data-path="../add-more-features/complete-with-checkbox.html">
-                <a href="../add-more-features/complete-with-checkbox.html">
-                    Completar las tareas con una casilla de verificación
-                </a>
-        </li>
-            </ul>
-        </li>
-        <li class="chapter " data-level="1.7" data-path="../security-and-identity/">
-                <a href="../security-and-identity/">
-                    Seguridad e Identidad
-                </a>
-            <ul class="articles">
-        <li class="chapter " data-level="1.7.1" data-path="../security-and-identity/require-authentication.html">
-                <a href="../security-and-identity/require-authentication.html">
-                    Requerir autenticación
-                </a>
-        </li>
-        <li class="chapter " data-level="1.7.2" data-path="../security-and-identity/using-identity-in-the-application.html">
-                <a href="../security-and-identity/using-identity-in-the-application.html">
-                    Usando identidad en la aplicación
-                </a>
-        </li>
-        <li class="chapter " data-level="1.7.3" data-path="../security-and-identity/authorization-with-roles.html">
-                <a href="../security-and-identity/authorization-with-roles.html">
-                    Autorización con roles
-                </a>
-        </li>
-        <li class="chapter " data-level="1.7.4" data-path="../security-and-identity/more-resources.html">
-                <a href="../security-and-identity/more-resources.html">
-                    Más recursos
-                </a>
-        </li>
-            </ul>
-        </li>
-        <li class="chapter " data-level="1.8" data-path="../automated-testing/">
-                <a href="../automated-testing/">
-                    Pruebas automáticas
-                </a>
-            <ul class="articles">
-        <li class="chapter " data-level="1.8.1" data-path="../automated-testing/unit-testing.html">
-                <a href="../automated-testing/unit-testing.html">
-                    Pruebas unitarias
-                </a>
-        </li>
-        <li class="chapter " data-level="1.8.2" data-path="../automated-testing/integration-testing.html">
-                <a href="../automated-testing/integration-testing.html">
-                    Pruebas de integración
-                </a>
-        </li>
-            </ul>
-        </li>
-        <li class="chapter " data-level="1.9" data-path="./">
-                <a href="./">
-                    Desplegando la aplicación
-                </a>
-            <ul class="articles">
-        <li class="chapter active" data-level="1.9.1" data-path="deploy-to-azure.html">
-                <a href="deploy-to-azure.html">
-                    Desplegando en Azure
-                </a>
-        </li>
-        <li class="chapter " data-level="1.9.2" data-path="deploy-with-docker.html">
-                <a href="deploy-with-docker.html">
-                    Desplegando con Docker
-                </a>
-        </li>
-            </ul>
-        </li>
-        <li class="chapter " data-level="1.10" data-path="../conclusion/">
-                <a href="../conclusion/">
-                    Conclusión
-                </a>
-        </li>
-    <li class="divider"></li>
-    <li>
-        <a href="/" class="gitbook-link">
-            ASP.NET Core Master
-        </a>
-    </li>
-</ul>
-                </nav>
-    </div>
-    <div class="book-body">
+</head>
+
+<body>
+    <div class="book">
+        <div class="book-summary">
+            <div id="book-search-input" role="search">
+                <input type="text" placeholder="Escribe para buscar" aria-label="Buscar" />
+            </div>
+            <nav role="navigation">
+                <ul class="summary">
+                    <li class="chapter " data-level="1.1" data-path="../../">
+                        <a href="../../">
+                            Introducción
+                        </a>
+                    </li>
+                    <li class="chapter " data-level="1.2" data-path="../your-first-application/">
+                        <a href="../your-first-application/">
+                            Tú primera aplicación
+                        </a>
+                        <ul class="articles">
+                            <li class="chapter " data-level="1.2.1"
+                                data-path="../your-first-application/get-the-sdk.html">
+                                <a href="../your-first-application/get-the-sdk.html">
+                                    Consigue el SDK
+                                </a>
+                            </li>
+                            <li class="chapter " data-level="1.2.2"
+                                data-path="../your-first-application/hello-world-in-csharp.html">
+                                <a href="../your-first-application/hello-world-in-csharp.html">
+                                    Hola Mundo en C#
+                                </a>
+                            </li>
+                            <li class="chapter " data-level="1.2.3"
+                                data-path="../your-first-application/create-aspnetcore-project.html">
+                                <a href="../your-first-application/create-aspnetcore-project.html">
+                                    Crear un proyecto de ASP.NET Core
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="chapter " data-level="1.3" data-path="../mvc-basics/">
+                        <a href="../mvc-basics/">
+                            Fundamentos de MVC
+                        </a>
+                        <ul class="articles">
+                            <li class="chapter " data-level="1.3.1" data-path="../mvc-basics/create-controller.html">
+                                <a href="../mvc-basics/create-controller.html">
+                                    Crear un controlador
+                                </a>
+                            </li>
+                            <li class="chapter " data-level="1.3.2" data-path="../mvc-basics/create-models.html">
+                                <a href="../mvc-basics/create-models.html">
+                                    Crear modelos
+                                </a>
+                            </li>
+                            <li class="chapter " data-level="1.3.3" data-path="../mvc-basics/create-view.html">
+                                <a href="../mvc-basics/create-view.html">
+                                    Crear una vista
+                                </a>
+                            </li>
+                            <li class="chapter " data-level="1.3.4" data-path="../mvc-basics/add-service-class.html">
+                                <a href="../mvc-basics/add-service-class.html">
+                                    Agregar una clase de servicio
+                                </a>
+                            </li>
+                            <li class="chapter " data-level="1.3.5"
+                                data-path="../mvc-basics/use-dependency-injection.html">
+                                <a href="../mvc-basics/use-dependency-injection.html">
+                                    Usar inyección de dependencias
+                                </a>
+                            </li>
+                            <li class="chapter " data-level="1.3.6" data-path="../mvc-basics/finish-controller.html">
+                                <a href="../mvc-basics/finish-controller.html">
+                                    Terminando el controlador
+                                </a>
+                            </li>
+                            <li class="chapter " data-level="1.3.7" data-path="../mvc-basics/update-the-layout.html">
+                                <a href="../mvc-basics/update-the-layout.html">
+                                    Actualizar la plantilla
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="chapter " data-level="1.4" data-path="../add-external-packages/">
+                        <a href="../add-external-packages/">
+                            Agregando paquetes externos
+                        </a>
+                    </li>
+                    <li class="chapter " data-level="1.5" data-path="../use-a-database/">
+                        <a href="../use-a-database/">
+                            Usando una base de datos
+                        </a>
+                        <ul class="articles">
+                            <li class="chapter " data-level="1.5.1"
+                                data-path="../use-a-database/connect-to-a-database.html">
+                                <a href="../use-a-database/connect-to-a-database.html">
+                                    Conectarse a una base de datos
+                                </a>
+                            </li>
+                            <li class="chapter " data-level="1.5.2" data-path="../use-a-database/update-context.html">
+                                <a href="../use-a-database/update-context.html">
+                                    Actualizando el contexto
+                                </a>
+                            </li>
+                            <li class="chapter " data-level="1.5.3" data-path="../use-a-database/create-migration.html">
+                                <a href="../use-a-database/create-migration.html">
+                                    Crear una migración
+                                </a>
+                            </li>
+                            <li class="chapter " data-level="1.5.4"
+                                data-path="../use-a-database/create-service-class.html">
+                                <a href="../use-a-database/create-service-class.html">
+                                    Crear una nueva clase de servicio
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="chapter " data-level="1.6" data-path="../add-more-features/">
+                        <a href="../add-more-features/">
+                            Agregando más características
+                        </a>
+                        <ul class="articles">
+                            <li class="chapter " data-level="1.6.1"
+                                data-path="../add-more-features/add-todo-items.html">
+                                <a href="../add-more-features/add-todo-items.html">
+                                    Agregar nuevas tareas
+                                </a>
+                            </li>
+                            <li class="chapter " data-level="1.6.2"
+                                data-path="../add-more-features/complete-with-checkbox.html">
+                                <a href="../add-more-features/complete-with-checkbox.html">
+                                    Completar las tareas con una casilla de verificación
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="chapter " data-level="1.7" data-path="../security-and-identity/">
+                        <a href="../security-and-identity/">
+                            Seguridad e Identidad
+                        </a>
+                        <ul class="articles">
+                            <li class="chapter " data-level="1.7.1"
+                                data-path="../security-and-identity/require-authentication.html">
+                                <a href="../security-and-identity/require-authentication.html">
+                                    Requerir autenticación
+                                </a>
+                            </li>
+                            <li class="chapter " data-level="1.7.2"
+                                data-path="../security-and-identity/using-identity-in-the-application.html">
+                                <a href="../security-and-identity/using-identity-in-the-application.html">
+                                    Usando identidad en la aplicación
+                                </a>
+                            </li>
+                            <li class="chapter " data-level="1.7.3"
+                                data-path="../security-and-identity/authorization-with-roles.html">
+                                <a href="../security-and-identity/authorization-with-roles.html">
+                                    Autorización con roles
+                                </a>
+                            </li>
+                            <li class="chapter " data-level="1.7.4"
+                                data-path="../security-and-identity/more-resources.html">
+                                <a href="../security-and-identity/more-resources.html">
+                                    Más recursos
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="chapter " data-level="1.8" data-path="../automated-testing/">
+                        <a href="../automated-testing/">
+                            Pruebas automáticas
+                        </a>
+                        <ul class="articles">
+                            <li class="chapter " data-level="1.8.1" data-path="../automated-testing/unit-testing.html">
+                                <a href="../automated-testing/unit-testing.html">
+                                    Pruebas unitarias
+                                </a>
+                            </li>
+                            <li class="chapter " data-level="1.8.2"
+                                data-path="../automated-testing/integration-testing.html">
+                                <a href="../automated-testing/integration-testing.html">
+                                    Pruebas de integración
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="chapter " data-level="1.9" data-path="./">
+                        <a href="./">
+                            Desplegando la aplicación
+                        </a>
+                        <ul class="articles">
+                            <li class="chapter active" data-level="1.9.1" data-path="deploy-to-azure.html">
+                                <a href="deploy-to-azure.html">
+                                    Desplegando en Azure
+                                </a>
+                            </li>
+                            <li class="chapter " data-level="1.9.2" data-path="deploy-with-docker.html">
+                                <a href="deploy-with-docker.html">
+                                    Desplegando con Docker
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="chapter " data-level="1.10" data-path="../conclusion/">
+                        <a href="../conclusion/">
+                            Conclusión
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="/" class="gitbook-link">
+                            ASP.NET Core Master
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="book-body">
             <div class="body-inner">
-<div class="book-header" role="navigation">
-    <!-- Title -->
-    <h1>
-        <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Desplegando en Azure</a>
-    </h1>
-</div>
-                    <div class="page-wrapper" tabindex="-1" role="main">
-                        <div class="page-inner">
-<div id="book-search-results">
-    <div class="search-noresults">
+                <div class="book-header" role="navigation">
+                    <!-- Title -->
+                    <h1>
+                        <i class="fa fa-circle-o-notch fa-spin"></i>
+                        <a href="../..">Desplegando en Azure</a>
+                    </h1>
+                </div>
+                <div class="page-wrapper" tabindex="-1" role="main">
+                    <div class="page-inner">
+                        <div id="book-search-results">
+                            <div class="search-noresults">
                                 <section class="normal markdown-section">
-                                <h2 id="desplegar-en-azure"><a name="desplegar-en-azure" class="plugin-anchor" href="#desplegar-en-azure"><i class="fa fa-link" aria-hidden="true"></i></a>Desplegar en Azure</h2>
-<p>La implementaci&#xF3;n de la aplicaci&#xF3;n de ASP.NET Core en Azure solo lleva unos pocos pasos. Puede hacerlo a trav&#xE9;s del portal web de Azure o en la l&#xED;nea de comandos utilizando la CLI de Azure. Voy a cubrir este &#xFA;ltimo.</p>
-<h3 id="lo-que-necesitar&#xE1;s"><a name="lo-que-necesitar&#xE1;s" class="plugin-anchor" href="#lo-que-necesitar&#xE1;s"><i class="fa fa-link" aria-hidden="true"></i></a>Lo que necesitar&#xE1;s</h3>
-<ul>
-<li>Git (usa <code>git --version</code> para asegurarte de que est&#xE9; instalado)</li>
-<li>El CLI de Azure (siga las instrucciones de instalaci&#xF3;n en <a href="https://github.com/Azure/azure-cli" target="_blank" rel="noopener">https://github.com/Azure/azure-cli</a>)</li>
-<li>Una suscripci&#xF3;n de Azure (la suscripci&#xF3;n gratuita es suficiente)</li>
-<li>Un archivo de configuraci&#xF3;n de implementaci&#xF3;n en la ra&#xED;z de su proyecto.</li>
-</ul>
-<h3 id="crear-un-archivo-de-configuraci&#xF3;n-de-implementaci&#xF3;n"><a name="crear-un-archivo-de-configuraci&#xF3;n-de-implementaci&#xF3;n" class="plugin-anchor" href="#crear-un-archivo-de-configuraci&#xF3;n-de-implementaci&#xF3;n"><i class="fa fa-link" aria-hidden="true"></i></a>Crear un archivo de configuraci&#xF3;n de implementaci&#xF3;n</h3>
-<p>Como hay m&#xFA;ltiples proyectos en la estructura de su directorio (la aplicaci&#xF3;n web y dos proyectos de prueba), Azure no sabr&#xE1; cu&#xE1;l publicar. Para solucionar este problema, cree un archivo llamado <code>.deployment</code> en la parte superior de la estructura de su directorio:</p>
-<p><strong>.deployment</strong></p>
-<pre><code class="lang-ini"><span class="hljs-section">[config]</span>
+                                    <h2 id="desplegar-en-azure"><a name="desplegar-en-azure" class="plugin-anchor"
+                                            href="#desplegar-en-azure"><i class="fa fa-link"
+                                                aria-hidden="true"></i></a>Desplegar en Azure</h2>
+                                    <p>La implementaci&#xF3;n de la aplicaci&#xF3;n de ASP.NET Core en Azure solo lleva
+                                        unos pocos pasos. Puede hacerlo a trav&#xE9;s del portal web de Azure o en la
+                                        l&#xED;nea de comandos utilizando la CLI de Azure. Voy a cubrir este
+                                        &#xFA;ltimo.</p>
+                                    <h3 id="lo-que-necesitar&#xE1;s"><a name="lo-que-necesitar&#xE1;s"
+                                            class="plugin-anchor" href="#lo-que-necesitar&#xE1;s"><i class="fa fa-link"
+                                                aria-hidden="true"></i></a>Lo que necesitar&#xE1;s</h3>
+                                    <ul>
+                                        <li>Git (usa <code>git --version</code> para asegurarte de que est&#xE9;
+                                            instalado)</li>
+                                        <li>El CLI de Azure (siga las instrucciones de instalaci&#xF3;n en <a
+                                                href="https://github.com/Azure/azure-cli" target="_blank"
+                                                rel="noopener">https://github.com/Azure/azure-cli</a>)</li>
+                                        <li>Una suscripci&#xF3;n de Azure (la suscripci&#xF3;n gratuita es suficiente)
+                                        </li>
+                                        <li>Un archivo de configuraci&#xF3;n de implementaci&#xF3;n en la ra&#xED;z de
+                                            su proyecto.</li>
+                                    </ul>
+                                    <h3 id="crear-un-archivo-de-configuraci&#xF3;n-de-implementaci&#xF3;n"><a
+                                            name="crear-un-archivo-de-configuraci&#xF3;n-de-implementaci&#xF3;n"
+                                            class="plugin-anchor"
+                                            href="#crear-un-archivo-de-configuraci&#xF3;n-de-implementaci&#xF3;n"><i
+                                                class="fa fa-link" aria-hidden="true"></i></a>Crear un archivo de
+                                        configuraci&#xF3;n de implementaci&#xF3;n</h3>
+                                    <p>Como hay m&#xFA;ltiples proyectos en la estructura de su directorio (la
+                                        aplicaci&#xF3;n web y dos proyectos de prueba), Azure no sabr&#xE1; cu&#xE1;l
+                                        publicar. Para solucionar este problema, cree un archivo llamado
+                                        <code>.deployment</code> en la parte superior de la estructura de su directorio:
+                                    </p>
+                                    <p><strong>.deployment</strong></p>
+                                    <pre><code class="lang-ini"><span class="hljs-section">[config]</span>
 <span class="hljs-attr">project</span> = AspNetCoreTodo/AspNetCoreTodo.csproj
 </code></pre>
-<p>Aseg&#xFA;rese de guardar el archivo como <code>.deployment</code> sin otras partes en el nombre. (En Windows, puede que tenga que poner comillas alrededor del nombre del archivo, como <code>&quot;.deployment&quot;</code>, para evitar que se agregue una extensi&#xF3;n <code>.txt</code>.)</p>
-<p>Si ejecuta el comando <code>ls</code> o <code>dir</code> en su directorio principal del proyecto, deber&#xED;a ver estos elementos:</p>
-<pre><code>.deployment
+                                    <p>Aseg&#xFA;rese de guardar el archivo como <code>.deployment</code> sin otras
+                                        partes en el nombre. (En Windows, puede que tenga que poner comillas alrededor
+                                        del nombre del archivo, como <code>&quot;.deployment&quot;</code>, para evitar
+                                        que se agregue una extensi&#xF3;n <code>.txt</code>.)</p>
+                                    <p>Si ejecuta el comando <code>ls</code> o <code>dir</code> en su directorio
+                                        principal del proyecto, deber&#xED;a ver estos elementos:</p>
+                                    <pre><code>.deployment
 AspNetCoreTodo
 AspNetCoreTodo.IntegrationTests
 AspNetCoreTodo.UnitTests
-</code></pre><h3 id="configurar-los-recursos-de-azure"><a name="configurar-los-recursos-de-azure" class="plugin-anchor" href="#configurar-los-recursos-de-azure"><i class="fa fa-link" aria-hidden="true"></i></a>Configurar los recursos de Azure</h3>
-<p>Si acaba de instalar la CLI de Azure por primera vez, ejecute</p>
-<pre><code>az login
-</code></pre><p>y siga las instrucciones para iniciar sesi&#xF3;n en su m&#xE1;quina. Luego, crea un nuevo grupo de recursos para esta aplicaci&#xF3;n:</p>
-<pre><code>az group create -l westus -n AspNetCoreTodoGroup
-</code></pre><p>Esto crea un grupo de recursos en la regi&#xF3;n oeste de los Estados Unidos. Si est&#xE1; ubicado lejos del oeste de los EE. UU., Use <code>az account list-locations</code> para obtener una lista de ubicaciones y encontrar una m&#xE1;s cercana a usted.</p>
-<p>A continuaci&#xF3;n, cree un plan de Servicio de aplicaciones en el grupo que acaba de crear:</p>
-<pre><code>az appservice plan create -g AspNetCoreTodoGroup -n AspNetCoreTodoPlan --sku F1
-</code></pre><blockquote>
-<p>F1 es el plan de aplicaci&#xF3;n gratuita. Si desea usar un nombre de dominio personalizado con su aplicaci&#xF3;n, use el plan D1 ($ 10 / mes) o superior.</p>
-</blockquote>
-<p>Ahora cree una aplicaci&#xF3;n web en el plan del servicio de aplicaciones:</p>
-<pre><code>az webapp create -g AspNetCoreTodoGroup -p AspNetCoreTodoPlan -n MyTodoApp
-</code></pre><p>El nombre de la aplicaci&#xF3;n (<code>MyTodoApp</code> arriba) debe ser globalmente &#xFA;nico en Azure. Una vez que se crea la aplicaci&#xF3;n, tendr&#xE1; una URL predeterminada en el formato: <a href="http://mytodoapp.azurewebsites.net" target="_blank" rel="noopener">http://mytodoapp.azurewebsites.net</a></p>
-<h3 id="implementa-tus-archivos-de-proyecto-en-azure"><a name="implementa-tus-archivos-de-proyecto-en-azure" class="plugin-anchor" href="#implementa-tus-archivos-de-proyecto-en-azure"><i class="fa fa-link" aria-hidden="true"></i></a>Implementa tus archivos de proyecto en Azure</h3>
-<p>Puede usar Git para enviar sus archivos de aplicaci&#xF3;n a la aplicaci&#xF3;n web de Azure. Si su directorio local no ha sido rastreado como un repositorio de Git, ejecute estos comandos para configurarlo:</p>
-<pre><code>git init
+</code></pre>
+                                    <h3 id="configurar-los-recursos-de-azure"><a name="configurar-los-recursos-de-azure"
+                                            class="plugin-anchor" href="#configurar-los-recursos-de-azure"><i
+                                                class="fa fa-link" aria-hidden="true"></i></a>Configurar los recursos de
+                                        Azure</h3>
+                                    <p>Si acaba de instalar la CLI de Azure por primera vez, ejecute</p>
+                                    <pre><code>az login
+</code></pre>
+                                    <p>y siga las instrucciones para iniciar sesi&#xF3;n en su m&#xE1;quina. Luego, crea
+                                        un nuevo grupo de recursos para esta aplicaci&#xF3;n:</p>
+                                    <pre><code>az group create -l westus -n AspNetCoreTodoGroup
+</code></pre>
+                                    <p>Esto crea un grupo de recursos en la regi&#xF3;n oeste de los Estados Unidos. Si
+                                        est&#xE1; ubicado lejos del oeste de los EE. UU., Use
+                                        <code>az account list-locations</code> para obtener una lista de ubicaciones y
+                                        encontrar una m&#xE1;s cercana a usted.</p>
+                                    <p>A continuaci&#xF3;n, cree un plan de Servicio de aplicaciones en el grupo que
+                                        acaba de crear:</p>
+                                    <pre><code>az appservice plan create -g AspNetCoreTodoGroup -n AspNetCoreTodoPlan --sku F1
+</code></pre>
+                                    <blockquote>
+                                        <p>F1 es el plan de aplicaci&#xF3;n gratuita. Si desea usar un nombre de dominio
+                                            personalizado con su aplicaci&#xF3;n, use el plan D1 ($ 10 / mes) o
+                                            superior.</p>
+                                    </blockquote>
+                                    <p>Ahora cree una aplicaci&#xF3;n web en el plan del servicio de aplicaciones:</p>
+                                    <pre><code>az webapp create -g AspNetCoreTodoGroup -p AspNetCoreTodoPlan -n MyTodoApp
+</code></pre>
+                                    <p>El nombre de la aplicaci&#xF3;n (<code>MyTodoApp</code> arriba) debe ser
+                                        globalmente &#xFA;nico en Azure. Una vez que se crea la aplicaci&#xF3;n,
+                                        tendr&#xE1; una URL predeterminada en el formato: <a
+                                            href="http://mytodoapp.azurewebsites.net" target="_blank"
+                                            rel="noopener">http://mytodoapp.azurewebsites.net</a></p>
+                                    <h3 id="implementa-tus-archivos-de-proyecto-en-azure"><a
+                                            name="implementa-tus-archivos-de-proyecto-en-azure" class="plugin-anchor"
+                                            href="#implementa-tus-archivos-de-proyecto-en-azure"><i class="fa fa-link"
+                                                aria-hidden="true"></i></a>Implementa tus archivos de proyecto en Azure
+                                    </h3>
+                                    <p>Puede usar Git para enviar sus archivos de aplicaci&#xF3;n a la aplicaci&#xF3;n
+                                        web de Azure. Si su directorio local no ha sido rastreado como un repositorio de
+                                        Git, ejecute estos comandos para configurarlo:</p>
+                                    <pre><code>git init
 git add .
 git commit -m &quot;First commit!&quot;
-</code></pre><p>A continuaci&#xF3;n, cree un nombre de usuario y contrase&#xF1;a de Azure para la implementaci&#xF3;n:</p>
-<pre><code>az webapp deployment user set --user-name nate
-</code></pre><p>Siga las instrucciones para crear una contrase&#xF1;a. Luego usa <code>config-local-git</code> para generar una URL de Git:</p>
-<pre><code>az webapp deployment source config-local-git -g AspNetCoreTodoGroup -n MyTodoApp --out tsv
+</code></pre>
+                                    <p>A continuaci&#xF3;n, cree un nombre de usuario y contrase&#xF1;a de Azure para la
+                                        implementaci&#xF3;n:</p>
+                                    <pre><code>az webapp deployment user set --user-name nate
+</code></pre>
+                                    <p>Siga las instrucciones para crear una contrase&#xF1;a. Luego usa
+                                        <code>config-local-git</code> para generar una URL de Git:</p>
+                                    <pre><code>az webapp deployment source config-local-git -g AspNetCoreTodoGroup -n MyTodoApp --out tsv
 https://nate@mytodoapp.scm.azurewebsites.net/MyTodoApp.git
-</code></pre><p>Copie la URL en el portapapeles y util&#xED;cela para agregar un control remoto Git a su repositorio local:</p>
-<pre><code>git remoto add azure &lt;paste&gt;
-</code></pre><p>Solo necesitas hacer estos pasos una vez. Ahora, cuando quiera enviar sus archivos de aplicaciones a Azure, verif&#xED;quelos con Git y ejecute</p>
-<pre><code>git push azure master
-</code></pre><p>Ver una secuencia de mensajes de registro a medida que la aplicaci&#xF3;n se implementa en Azure.</p>
-<p>Cuando est&#xE9; completo, vaya a <a href="http://yourappname.azurewebsites.net" target="_blank" rel="noopener">http://yourappname.azurewebsites.net</a> para ver la aplicaci&#xF3;n.</p>
+</code></pre>
+                                    <p>Copie la URL en el portapapeles y util&#xED;cela para agregar un control remoto
+                                        Git a su repositorio local:</p>
+                                    <pre><code>git remoto add azure &lt;paste&gt;
+</code></pre>
+                                    <p>Solo necesitas hacer estos pasos una vez. Ahora, cuando quiera enviar sus
+                                        archivos de aplicaciones a Azure, verif&#xED;quelos con Git y ejecute</p>
+                                    <pre><code>git push azure master
+</code></pre>
+                                    <p>Ver una secuencia de mensajes de registro a medida que la aplicaci&#xF3;n se
+                                        implementa en Azure.</p>
+                                    <p>Cuando est&#xE9; completo, vaya a <a href="http://yourappname.azurewebsites.net"
+                                            target="_blank" rel="noopener">http://yourappname.azurewebsites.net</a> para
+                                        ver la aplicaci&#xF3;n.</p>
                                 </section>
 
                                 <a href="https://www.SmarterASP.NET/index?r=benjamincamacho">
                                     <img src="https://www.SmarterASP.NET/affiliate/728X90.gif" border="0">
-                                    </a>
-    </div>
-    <div class="search-results">
-        <div class="has-results">
-            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
-            <ul class="search-results-list"></ul>
-        </div>
-        <div class="no-results">
-            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
-        </div>
-    </div>
-</div>
+                                </a>
+                            </div>
+                            <div class="search-results">
+                                <div class="has-results">
+                                    <h1 class="search-results-title"><span class='search-results-count'></span> results
+                                        matching "<span class='search-query'></span>"</h1>
+                                    <ul class="search-results-list"></ul>
+                                </div>
+                                <div class="no-results">
+                                    <h1 class="search-results-title">No results matching "<span
+                                            class='search-query'></span>"</h1>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                </div>
             </div>
-                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Desplegando la aplicación">
-                    <i class="fa fa-angle-left"></i>
-                </a>
-                <a href="deploy-with-docker.html" class="navigation navigation-next " aria-label="Next page: Desplegando con Docker">
-                    <i class="fa fa-angle-right"></i>
-                </a>
+            <a href="./" class="navigation navigation-prev " aria-label="Previous page: Desplegando la aplicación">
+                <i class="fa fa-angle-left"></i>
+            </a>
+            <a href="deploy-with-docker.html" class="navigation navigation-next "
+                aria-label="Next page: Desplegando con Docker">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        </div>
+        <script>
+            var gitbook = gitbook || [];
+            gitbook.push(function () {
+                gitbook.page.hasChanged({ "page": { "title": "Desplegando en Azure", "level": "1.9.1", "depth": 2, "next": { "title": "Desplegando con Docker", "level": "1.9.2", "depth": 2, "path": "chapters/deploy-the-application/deploy-with-docker.md", "ref": "chapters/deploy-the-application/deploy-with-docker.md", "articles": [] }, "previous": { "title": "Desplegando la aplicación", "level": "1.9", "depth": 1, "path": "chapters/deploy-the-application/README.md", "ref": "chapters/deploy-the-application/README.md", "articles": [{ "title": "Desplegando en Azure", "level": "1.9.1", "depth": 2, "path": "chapters/deploy-the-application/deploy-to-azure.md", "ref": "chapters/deploy-the-application/deploy-to-azure.md", "articles": [] }, { "title": "Desplegando con Docker", "level": "1.9.2", "depth": 2, "path": "chapters/deploy-the-application/deploy-with-docker.md", "ref": "chapters/deploy-the-application/deploy-with-docker.md", "articles": [] }] }, "dir": "ltr" }, "config": { "plugins": ["expandable-chapters-small", "anchors", "forkmegithub", "analytics"], "styles": { "website": "styles/website.css", "pdf": "styles/pdf.css", "epub": "styles/epub.css", "mobi": "styles/mobi.css", "ebook": "styles/ebook.css", "print": "styles/print.css" }, "pluginsConfig": { "analytics": { "google": "UA-130293099-1" }, "search": {}, "lunr": { "maxIndexSize": 1000000, "ignoreSpecialCharacters": false }, "fontsettings": { "theme": "white", "family": "sans", "size": 2 }, "highlight": {}, "expandable-chapters-small": {}, "sharing": { "facebook": true, "twitter": true, "google": false, "weibo": false, "instapaper": false, "vk": false, "all": ["facebook", "google", "twitter", "weibo", "instapaper"] }, "forkmegithub": { "color": "green", "url": "https://github.com/jahbenjah/little-aspnetcore-book" }, "theme-default": { "styles": { "website": "styles/website.css", "pdf": "styles/pdf.css", "epub": "styles/epub.css", "mobi": "styles/mobi.css", "ebook": "styles/ebook.css", "print": "styles/print.css" }, "showLevel": false }, "anchors": {} }, "theme": "default", "author": "Nate Barbettini", "pdf": { "pageNumbers": true, "fontSize": 12, "fontFamily": "Lato", "paperSize": "a5", "chapterMark": "pagebreak", "pageBreaksBefore": "/", "margin": { "right": 62, "left": 62, "top": 56, "bottom": 56 } }, "structure": { "langs": "LANGS.md", "readme": "README.md", "glossary": "GLOSSARY.md", "summary": "SUMMARY.md" }, "isbn": "978-1-387-75615-5", "variables": {}, "title": "El pequeño libro de ASP.NET Core", "language": "es", "gitbook": "*", "description": "Una introducción amigable para construir aplicaciones web con el framework ASP.NET Core." }, "file": { "path": "chapters/deploy-the-application/deploy-to-azure.md", "mtime": "2019-03-18T02:21:27.361Z", "type": "markdown" }, "gitbook": { "version": "3.2.3", "time": "2019-03-22T16:25:31.396Z" }, "basePath": "../..", "book": { "language": "" } });
+            });
+        </script>
     </div>
-    <script>
-        var gitbook = gitbook || [];
-        gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Desplegando en Azure","level":"1.9.1","depth":2,"next":{"title":"Desplegando con Docker","level":"1.9.2","depth":2,"path":"chapters/deploy-the-application/deploy-with-docker.md","ref":"chapters/deploy-the-application/deploy-with-docker.md","articles":[]},"previous":{"title":"Desplegando la aplicación","level":"1.9","depth":1,"path":"chapters/deploy-the-application/README.md","ref":"chapters/deploy-the-application/README.md","articles":[{"title":"Desplegando en Azure","level":"1.9.1","depth":2,"path":"chapters/deploy-the-application/deploy-to-azure.md","ref":"chapters/deploy-the-application/deploy-to-azure.md","articles":[]},{"title":"Desplegando con Docker","level":"1.9.2","depth":2,"path":"chapters/deploy-the-application/deploy-with-docker.md","ref":"chapters/deploy-the-application/deploy-with-docker.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["expandable-chapters-small","anchors","forkmegithub","analytics"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"analytics":{"google":"UA-130293099-1"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"forkmegithub":{"color":"green","url":"https://github.com/jahbenjah/little-aspnetcore-book"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Nate Barbettini","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Lato","paperSize":"a5","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"978-1-387-75615-5","variables":{},"title":"El pequeño libro de ASP.NET Core","language":"es","gitbook":"*","description":"Una introducción amigable para construir aplicaciones web con el framework ASP.NET Core."},"file":{"path":"chapters/deploy-the-application/deploy-to-azure.md","mtime":"2019-03-18T02:21:27.361Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-22T16:25:31.396Z"},"basePath":"../..","book":{"language":""}});
-        });
-    </script>
-</div>
     <!-- <script src="/assets/js/site.js" async></script> -->
     <script src="/assets/gitbook/gitbook.js" async></script>
     <script src="/assets/gitbook/theme.js" async></script>
@@ -356,5 +436,6 @@ https://nate@mytodoapp.scm.azurewebsites.net/MyTodoApp.git
     <script src="/assets/gitbook/gitbook-plugin-lunr/search-lunr.js" async></script>
     <script src="/assets/gitbook/gitbook-plugin-sharing/buttons.js" async></script>
     <script src="/assets/gitbook/gitbook-plugin-fontsettings/fontsettings.js" async></script>
-    </body>
+</body>
+
 </html>

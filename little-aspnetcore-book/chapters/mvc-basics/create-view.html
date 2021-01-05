@@ -1,22 +1,24 @@
 <!DOCTYPE HTML>
-<html lang="es" >
-    <head>
-        <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Crear una vista✅ El pequeño libro de ASP.NET Core</title>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.3">
-        <meta name="author" content="Nate Barbettini">
-        <meta name="identifier" content="978-1-387-75615-5" scheme="ISBN">
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <title>Crear una vista✅ El pequeño libro de ASP.NET Core</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="">
+    <meta name="generator" content="GitBook 3.2.3">
+    <meta name="author" content="Nate Barbettini">
+    <meta name="identifier" content="978-1-387-75615-5" scheme="ISBN">
     <link rel="stylesheet" href="/assets/gitbook/style.css">
-                <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
-                <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-anchors/plugin.css">
-                <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-forkmegithub/plugin.css">
-                <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-highlight/website.css">
-                <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-search/search.css">
-                <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-fontsettings/website.css">
-    <meta name="HandheldFriendly" content="true"/>
+    <link rel="stylesheet"
+        href="/assets/gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+    <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-anchors/plugin.css">
+    <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-forkmegithub/plugin.css">
+    <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-highlight/website.css">
+    <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-search/search.css">
+    <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-fontsettings/website.css">
+    <meta name="HandheldFriendly" content="true" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -37,237 +39,267 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130293099-1"></script>
     <script>
         window['ga-disable-UA-130293099-1'] = window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1";
-  window.dataLayer = window.dataLayer || [];
+        window.dataLayer = window.dataLayer || [];
         function gtag() {
             dataLayer.push(arguments);
         }
         gtag('js', new Date());
         gtag('config', 'UA-130293099-1');
     </script>
-    <script data-ad-client="ca-pub-4952787000309783" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script data-ad-client="ca-pub-4952787000309783" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    </head>
-    <body>
-<div class="book">
-    <div class="book-summary">
-<div id="book-search-input" role="search">
-    <input type="text" placeholder="Escribe para buscar" aria-label="Buscar"/>
-</div>
-                <nav role="navigation">
-<ul class="summary">
-        <li class="chapter " data-level="1.1" data-path="../../">
-                <a href="../../">
-                    Introducción
-                </a>
-        </li>
-        <li class="chapter " data-level="1.2" data-path="../your-first-application/">
-                <a href="../your-first-application/">
-                    Tú primera aplicación
-                </a>
-            <ul class="articles">
-        <li class="chapter " data-level="1.2.1" data-path="../your-first-application/get-the-sdk.html">
-                <a href="../your-first-application/get-the-sdk.html">
-                    Consigue el SDK
-                </a>
-        </li>
-        <li class="chapter " data-level="1.2.2" data-path="../your-first-application/hello-world-in-csharp.html">
-                <a href="../your-first-application/hello-world-in-csharp.html">
-                    Hola Mundo en C#
-                </a>
-        </li>
-        <li class="chapter " data-level="1.2.3" data-path="../your-first-application/create-aspnetcore-project.html">
-                <a href="../your-first-application/create-aspnetcore-project.html">
-                    Crear un proyecto de ASP.NET Core
-                </a>
-        </li>
-            </ul>
-        </li>
-        <li class="chapter " data-level="1.3" data-path="./">
-                <a href="./">
-                    Fundamentos de MVC
-                </a>
-            <ul class="articles">
-        <li class="chapter " data-level="1.3.1" data-path="create-controller.html">
-                <a href="create-controller.html">
-                    Crear un controlador
-                </a>
-        </li>
-        <li class="chapter " data-level="1.3.2" data-path="create-models.html">
-                <a href="create-models.html">
-                    Crear modelos
-                </a>
-        </li>
-        <li class="chapter active" data-level="1.3.3" data-path="create-view.html">
-                <a href="create-view.html">
-                    Crear una vista
-                </a>
-        </li>
-        <li class="chapter " data-level="1.3.4" data-path="add-service-class.html">
-                <a href="add-service-class.html">
-                    Agregar una clase de servicio
-                </a>
-        </li>
-        <li class="chapter " data-level="1.3.5" data-path="use-dependency-injection.html">
-                <a href="use-dependency-injection.html">
-                    Usar inyección de dependencias
-                </a>
-        </li>
-        <li class="chapter " data-level="1.3.6" data-path="finish-controller.html">
-                <a href="finish-controller.html">
-                    Terminando el controlador
-                </a>
-        </li>
-        <li class="chapter " data-level="1.3.7" data-path="update-the-layout.html">
-                <a href="update-the-layout.html">
-                    Actualizar la plantilla
-                </a>
-        </li>
-            </ul>
-        </li>
-        <li class="chapter " data-level="1.4" data-path="../add-external-packages/">
-                <a href="../add-external-packages/">
-                    Agregando paquetes externos
-                </a>
-        </li>
-        <li class="chapter " data-level="1.5" data-path="../use-a-database/">
-                <a href="../use-a-database/">
-                    Usando una base de datos
-                </a>
-            <ul class="articles">
-        <li class="chapter " data-level="1.5.1" data-path="../use-a-database/connect-to-a-database.html">
-                <a href="../use-a-database/connect-to-a-database.html">
-                    Conectarse a una base de datos
-                </a>
-        </li>
-        <li class="chapter " data-level="1.5.2" data-path="../use-a-database/update-context.html">
-                <a href="../use-a-database/update-context.html">
-                    Actualizando el contexto
-                </a>
-        </li>
-        <li class="chapter " data-level="1.5.3" data-path="../use-a-database/create-migration.html">
-                <a href="../use-a-database/create-migration.html">
-                    Crear una migración
-                </a>
-        </li>
-        <li class="chapter " data-level="1.5.4" data-path="../use-a-database/create-service-class.html">
-                <a href="../use-a-database/create-service-class.html">
-                    Crear una nueva clase de servicio
-                </a>
-        </li>
-            </ul>
-        </li>
-        <li class="chapter " data-level="1.6" data-path="../add-more-features/">
-                <a href="../add-more-features/">
-                    Agregando más características
-                </a>
-            <ul class="articles">
-        <li class="chapter " data-level="1.6.1" data-path="../add-more-features/add-todo-items.html">
-                <a href="../add-more-features/add-todo-items.html">
-                    Agregar nuevas tareas
-                </a>
-        </li>
-        <li class="chapter " data-level="1.6.2" data-path="../add-more-features/complete-with-checkbox.html">
-                <a href="../add-more-features/complete-with-checkbox.html">
-                    Completar las tareas con una casilla de verificación
-                </a>
-        </li>
-            </ul>
-        </li>
-        <li class="chapter " data-level="1.7" data-path="../security-and-identity/">
-                <a href="../security-and-identity/">
-                    Seguridad e Identidad
-                </a>
-            <ul class="articles">
-        <li class="chapter " data-level="1.7.1" data-path="../security-and-identity/require-authentication.html">
-                <a href="../security-and-identity/require-authentication.html">
-                    Requerir autenticación
-                </a>
-        </li>
-        <li class="chapter " data-level="1.7.2" data-path="../security-and-identity/using-identity-in-the-application.html">
-                <a href="../security-and-identity/using-identity-in-the-application.html">
-                    Usando identidad en la aplicación
-                </a>
-        </li>
-        <li class="chapter " data-level="1.7.3" data-path="../security-and-identity/authorization-with-roles.html">
-                <a href="../security-and-identity/authorization-with-roles.html">
-                    Autorización con roles
-                </a>
-        </li>
-        <li class="chapter " data-level="1.7.4" data-path="../security-and-identity/more-resources.html">
-                <a href="../security-and-identity/more-resources.html">
-                    Más recursos
-                </a>
-        </li>
-            </ul>
-        </li>
-        <li class="chapter " data-level="1.8" data-path="../automated-testing/">
-                <a href="../automated-testing/">
-                    Pruebas automáticas
-                </a>
-            <ul class="articles">
-        <li class="chapter " data-level="1.8.1" data-path="../automated-testing/unit-testing.html">
-                <a href="../automated-testing/unit-testing.html">
-                    Pruebas unitarias
-                </a>
-        </li>
-        <li class="chapter " data-level="1.8.2" data-path="../automated-testing/integration-testing.html">
-                <a href="../automated-testing/integration-testing.html">
-                    Pruebas de integración
-                </a>
-        </li>
-            </ul>
-        </li>
-        <li class="chapter " data-level="1.9" data-path="../deploy-the-application/">
-                <a href="../deploy-the-application/">
-                    Desplegando la aplicación
-                </a>
-            <ul class="articles">
-        <li class="chapter " data-level="1.9.1" data-path="../deploy-the-application/deploy-to-azure.html">
-                <a href="../deploy-the-application/deploy-to-azure.html">
-                    Desplegando en Azure
-                </a>
-        </li>
-        <li class="chapter " data-level="1.9.2" data-path="../deploy-the-application/deploy-with-docker.html">
-                <a href="../deploy-the-application/deploy-with-docker.html">
-                    Desplegando con Docker
-                </a>
-        </li>
-            </ul>
-        </li>
-        <li class="chapter " data-level="1.10" data-path="../conclusion/">
-                <a href="../conclusion/">
-                    Conclusión
-                </a>
-        </li>
-    <li class="divider"></li>
-    <li>
-        <a href="/" class="gitbook-link">
-            ASP.NET Core Master
-        </a>
-    </li>
-</ul>
-                </nav>
-    </div>
-    <div class="book-body">
+</head>
+
+<body>
+    <div class="book">
+        <div class="book-summary">
+            <div id="book-search-input" role="search">
+                <input type="text" placeholder="Escribe para buscar" aria-label="Buscar" />
+            </div>
+            <nav role="navigation">
+                <ul class="summary">
+                    <li class="chapter " data-level="1.1" data-path="../../">
+                        <a href="../../">
+                            Introducción
+                        </a>
+                    </li>
+                    <li class="chapter " data-level="1.2" data-path="../your-first-application/">
+                        <a href="../your-first-application/">
+                            Tú primera aplicación
+                        </a>
+                        <ul class="articles">
+                            <li class="chapter " data-level="1.2.1"
+                                data-path="../your-first-application/get-the-sdk.html">
+                                <a href="../your-first-application/get-the-sdk.html">
+                                    Consigue el SDK
+                                </a>
+                            </li>
+                            <li class="chapter " data-level="1.2.2"
+                                data-path="../your-first-application/hello-world-in-csharp.html">
+                                <a href="../your-first-application/hello-world-in-csharp.html">
+                                    Hola Mundo en C#
+                                </a>
+                            </li>
+                            <li class="chapter " data-level="1.2.3"
+                                data-path="../your-first-application/create-aspnetcore-project.html">
+                                <a href="../your-first-application/create-aspnetcore-project.html">
+                                    Crear un proyecto de ASP.NET Core
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="chapter " data-level="1.3" data-path="./">
+                        <a href="./">
+                            Fundamentos de MVC
+                        </a>
+                        <ul class="articles">
+                            <li class="chapter " data-level="1.3.1" data-path="create-controller.html">
+                                <a href="create-controller.html">
+                                    Crear un controlador
+                                </a>
+                            </li>
+                            <li class="chapter " data-level="1.3.2" data-path="create-models.html">
+                                <a href="create-models.html">
+                                    Crear modelos
+                                </a>
+                            </li>
+                            <li class="chapter active" data-level="1.3.3" data-path="create-view.html">
+                                <a href="create-view.html">
+                                    Crear una vista
+                                </a>
+                            </li>
+                            <li class="chapter " data-level="1.3.4" data-path="add-service-class.html">
+                                <a href="add-service-class.html">
+                                    Agregar una clase de servicio
+                                </a>
+                            </li>
+                            <li class="chapter " data-level="1.3.5" data-path="use-dependency-injection.html">
+                                <a href="use-dependency-injection.html">
+                                    Usar inyección de dependencias
+                                </a>
+                            </li>
+                            <li class="chapter " data-level="1.3.6" data-path="finish-controller.html">
+                                <a href="finish-controller.html">
+                                    Terminando el controlador
+                                </a>
+                            </li>
+                            <li class="chapter " data-level="1.3.7" data-path="update-the-layout.html">
+                                <a href="update-the-layout.html">
+                                    Actualizar la plantilla
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="chapter " data-level="1.4" data-path="../add-external-packages/">
+                        <a href="../add-external-packages/">
+                            Agregando paquetes externos
+                        </a>
+                    </li>
+                    <li class="chapter " data-level="1.5" data-path="../use-a-database/">
+                        <a href="../use-a-database/">
+                            Usando una base de datos
+                        </a>
+                        <ul class="articles">
+                            <li class="chapter " data-level="1.5.1"
+                                data-path="../use-a-database/connect-to-a-database.html">
+                                <a href="../use-a-database/connect-to-a-database.html">
+                                    Conectarse a una base de datos
+                                </a>
+                            </li>
+                            <li class="chapter " data-level="1.5.2" data-path="../use-a-database/update-context.html">
+                                <a href="../use-a-database/update-context.html">
+                                    Actualizando el contexto
+                                </a>
+                            </li>
+                            <li class="chapter " data-level="1.5.3" data-path="../use-a-database/create-migration.html">
+                                <a href="../use-a-database/create-migration.html">
+                                    Crear una migración
+                                </a>
+                            </li>
+                            <li class="chapter " data-level="1.5.4"
+                                data-path="../use-a-database/create-service-class.html">
+                                <a href="../use-a-database/create-service-class.html">
+                                    Crear una nueva clase de servicio
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="chapter " data-level="1.6" data-path="../add-more-features/">
+                        <a href="../add-more-features/">
+                            Agregando más características
+                        </a>
+                        <ul class="articles">
+                            <li class="chapter " data-level="1.6.1"
+                                data-path="../add-more-features/add-todo-items.html">
+                                <a href="../add-more-features/add-todo-items.html">
+                                    Agregar nuevas tareas
+                                </a>
+                            </li>
+                            <li class="chapter " data-level="1.6.2"
+                                data-path="../add-more-features/complete-with-checkbox.html">
+                                <a href="../add-more-features/complete-with-checkbox.html">
+                                    Completar las tareas con una casilla de verificación
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="chapter " data-level="1.7" data-path="../security-and-identity/">
+                        <a href="../security-and-identity/">
+                            Seguridad e Identidad
+                        </a>
+                        <ul class="articles">
+                            <li class="chapter " data-level="1.7.1"
+                                data-path="../security-and-identity/require-authentication.html">
+                                <a href="../security-and-identity/require-authentication.html">
+                                    Requerir autenticación
+                                </a>
+                            </li>
+                            <li class="chapter " data-level="1.7.2"
+                                data-path="../security-and-identity/using-identity-in-the-application.html">
+                                <a href="../security-and-identity/using-identity-in-the-application.html">
+                                    Usando identidad en la aplicación
+                                </a>
+                            </li>
+                            <li class="chapter " data-level="1.7.3"
+                                data-path="../security-and-identity/authorization-with-roles.html">
+                                <a href="../security-and-identity/authorization-with-roles.html">
+                                    Autorización con roles
+                                </a>
+                            </li>
+                            <li class="chapter " data-level="1.7.4"
+                                data-path="../security-and-identity/more-resources.html">
+                                <a href="../security-and-identity/more-resources.html">
+                                    Más recursos
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="chapter " data-level="1.8" data-path="../automated-testing/">
+                        <a href="../automated-testing/">
+                            Pruebas automáticas
+                        </a>
+                        <ul class="articles">
+                            <li class="chapter " data-level="1.8.1" data-path="../automated-testing/unit-testing.html">
+                                <a href="../automated-testing/unit-testing.html">
+                                    Pruebas unitarias
+                                </a>
+                            </li>
+                            <li class="chapter " data-level="1.8.2"
+                                data-path="../automated-testing/integration-testing.html">
+                                <a href="../automated-testing/integration-testing.html">
+                                    Pruebas de integración
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="chapter " data-level="1.9" data-path="../deploy-the-application/">
+                        <a href="../deploy-the-application/">
+                            Desplegando la aplicación
+                        </a>
+                        <ul class="articles">
+                            <li class="chapter " data-level="1.9.1"
+                                data-path="../deploy-the-application/deploy-to-azure.html">
+                                <a href="../deploy-the-application/deploy-to-azure.html">
+                                    Desplegando en Azure
+                                </a>
+                            </li>
+                            <li class="chapter " data-level="1.9.2"
+                                data-path="../deploy-the-application/deploy-with-docker.html">
+                                <a href="../deploy-the-application/deploy-with-docker.html">
+                                    Desplegando con Docker
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="chapter " data-level="1.10" data-path="../conclusion/">
+                        <a href="../conclusion/">
+                            Conclusión
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="/" class="gitbook-link">
+                            ASP.NET Core Master
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="book-body">
             <div class="body-inner">
-<div class="book-header" role="navigation">
-    <!-- Title -->
-    <h1>
-        <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Crear una vista</a>
-    </h1>
-</div>
-                    <div class="page-wrapper" tabindex="-1" role="main">
-                        <div class="page-inner">
-<div id="book-search-results">
-    <div class="search-noresults">
+                <div class="book-header" role="navigation">
+                    <!-- Title -->
+                    <h1>
+                        <i class="fa fa-circle-o-notch fa-spin"></i>
+                        <a href="../..">Crear una vista</a>
+                    </h1>
+                </div>
+                <div class="page-wrapper" tabindex="-1" role="main">
+                    <div class="page-inner">
+                        <div id="book-search-results">
+                            <div class="search-noresults">
                                 <section class="normal markdown-section">
-                                <h1 id="crear-una-vista"><a name="crear-una-vista" class="plugin-anchor" href="#crear-una-vista"><i class="fa fa-link" aria-hidden="true"></i></a>Crear una vista</h1>
-<p>Las vistas en ASP.NET Core se construyen usando el lenguaje de plantillas Razor, el cual combina HTML y c&#xF3;digo C#. Si haz escrito p&#xE1;ginas usan Handlebars Mustache, ERM en Ruby On Rails o Thymeleaf en Java, ya tienes la idea b&#xE1;sica)</p>
-<p>La mayor&#xED;a del c&#xF3;digo de las vistas es solo HTML, con ocasionales enunciados de C# necesarios para extraer datos del modelo de la vista y convertirlos a texto o a HTML. Los enunciados C# tienen como prefijo el s&#xED;mbolo <code>@</code></p>
-<p>La vista generada por la acci&#xF3;n <code>Index</code> del controlador <code>TodoController</code> necesita obtener los datos de la vista modelo, (una colecci&#xF3;n de tareas pendientes) y mostrarlas en un tabla atractiva para el usuario. Por convenci&#xF3;n, las vistas van colocadas en la carpeta <em>Views</em> en una subcarpeta correspondiente al nombre del controlador. El nombre del archivo es el nombre de la acci&#xF3;n con un una extensi&#xF3;n <code>.cshtml</code>.</p>
-<p>Crea una carpeta llamada <code>Todo</code> dentro la carpeta <code>Views</code>, y agrega este archivo:
-<strong>Views/Todo/Index.cshtml</strong></p>
-<pre><code class="lang-html">@model TodoViewModel
+                                    <h1 id="crear-una-vista"><a name="crear-una-vista" class="plugin-anchor"
+                                            href="#crear-una-vista"><i class="fa fa-link"
+                                                aria-hidden="true"></i></a>Crear una vista</h1>
+                                    <p>Las vistas en ASP.NET Core se construyen usando el lenguaje de plantillas Razor,
+                                        el cual combina HTML y c&#xF3;digo C#. Si haz escrito p&#xE1;ginas usan
+                                        Handlebars Mustache, ERM en Ruby On Rails o Thymeleaf en Java, ya tienes la idea
+                                        b&#xE1;sica)</p>
+                                    <p>La mayor&#xED;a del c&#xF3;digo de las vistas es solo HTML, con ocasionales
+                                        enunciados de C# necesarios para extraer datos del modelo de la vista y
+                                        convertirlos a texto o a HTML. Los enunciados C# tienen como prefijo el
+                                        s&#xED;mbolo <code>@</code></p>
+                                    <p>La vista generada por la acci&#xF3;n <code>Index</code> del controlador
+                                        <code>TodoController</code> necesita obtener los datos de la vista modelo, (una
+                                        colecci&#xF3;n de tareas pendientes) y mostrarlas en un tabla atractiva para el
+                                        usuario. Por convenci&#xF3;n, las vistas van colocadas en la carpeta
+                                        <em>Views</em> en una subcarpeta correspondiente al nombre del controlador. El
+                                        nombre del archivo es el nombre de la acci&#xF3;n con un una extensi&#xF3;n
+                                        <code>.cshtml</code>.</p>
+                                    <p>Crea una carpeta llamada <code>Todo</code> dentro la carpeta <code>Views</code>,
+                                        y agrega este archivo:
+                                        <strong>Views/Todo/Index.cshtml</strong>
+                                    </p>
+                                    <pre><code class="lang-html">@model TodoViewModel
 @{
     ViewData[&quot;Title&quot;] = &quot;Manage your todo list&quot;;
 }
@@ -297,15 +329,38 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 </code></pre>
-<p>En la parte superior del archivo, la directiva <code>@model</code> le dice a Razor a qu&#xE9; modelo espera que se vincule esta vista. Se accede al modelo a trav&#xE9;s de la propiedad <code>Model</code>.</p>
-<p>Suponiendo que hay elementos de tareas pendientes en <code>Model.Items</code>, la instrucci&#xF3;n<code>foreach</code> se desplazar&#xE1; sobre cada tarea pendiente y mostrar&#xE1; una fila de la tabla (elemento <code>&lt;tr&gt;</code> ) que contiene el nombre y la fecha de vencimiento de la tarea . Tambi&#xE9;n se representa una casilla de verificaci&#xF3;n que permitir&#xE1; al usuario marcar la tarea como completa.</p>
-<h2 id="el-archivo-de-dise&#xF1;o"><a name="el-archivo-de-dise&#xF1;o" class="plugin-anchor" href="#el-archivo-de-dise&#xF1;o"><i class="fa fa-link" aria-hidden="true"></i></a>El archivo de dise&#xF1;o</h2>
-<p>Quiz&#xE1;s se pregunte d&#xF3;nde est&#xE1; el resto del HTML: &#xBF;qu&#xE9; pasa con la etiqueta <code>&lt;body&gt;</code> o el encabezado y pie de p&#xE1;gina de la p&#xE1;gina? ASP.NET Core utiliza una vista de dise&#xF1;o que define la estructura base en la que se procesan todas las dem&#xE1;s vistas. Esta almacenado en <code>Views/Shared/_Layout.cshtml</code>.</p>
-<p>La plantilla predeterminada de ASP.NET Core incluye Bootstarp y JQuery en su archivo de Layout. Puedes crear r&#xE1;pidamente una aplicaci&#xF3;n web, Por supuesto que puedes usar tus propias librer&#xED;as CSS y Javascript si asi lo deseas.</p>
-<h2 id="personalizando-la-hoja-de-estilos"><a name="personalizando-la-hoja-de-estilos" class="plugin-anchor" href="#personalizando-la-hoja-de-estilos"><i class="fa fa-link" aria-hidden="true"></i></a>Personalizando la hoja de estilos</h2>
-<p>La plantilla predefinida tambi&#xE9;n incluye un hoja de estilos con algunas reglas CSS b&#xE1;sicas. La hoja de estilos es almacenada en el directorio <code>wwwroot/css</code>,Agrega unas cuantas nuevas reglas CSS al final del, archivo <code>site.css</code>:</p>
-<p><strong>wwwroot/css/site.css</strong></p>
-<pre><code class="lang-css"><span class="hljs-selector-tag">div</span><span class="hljs-selector-class">.todo-panel</span> {
+                                    <p>En la parte superior del archivo, la directiva <code>@model</code> le dice a
+                                        Razor a qu&#xE9; modelo espera que se vincule esta vista. Se accede al modelo a
+                                        trav&#xE9;s de la propiedad <code>Model</code>.</p>
+                                    <p>Suponiendo que hay elementos de tareas pendientes en <code>Model.Items</code>, la
+                                        instrucci&#xF3;n<code>foreach</code> se desplazar&#xE1; sobre cada tarea
+                                        pendiente y mostrar&#xE1; una fila de la tabla (elemento <code>&lt;tr&gt;</code>
+                                        ) que contiene el nombre y la fecha de vencimiento de la tarea . Tambi&#xE9;n se
+                                        representa una casilla de verificaci&#xF3;n que permitir&#xE1; al usuario marcar
+                                        la tarea como completa.</p>
+                                    <h2 id="el-archivo-de-dise&#xF1;o"><a name="el-archivo-de-dise&#xF1;o"
+                                            class="plugin-anchor" href="#el-archivo-de-dise&#xF1;o"><i
+                                                class="fa fa-link" aria-hidden="true"></i></a>El archivo de dise&#xF1;o
+                                    </h2>
+                                    <p>Quiz&#xE1;s se pregunte d&#xF3;nde est&#xE1; el resto del HTML: &#xBF;qu&#xE9;
+                                        pasa con la etiqueta <code>&lt;body&gt;</code> o el encabezado y pie de
+                                        p&#xE1;gina de la p&#xE1;gina? ASP.NET Core utiliza una vista de dise&#xF1;o que
+                                        define la estructura base en la que se procesan todas las dem&#xE1;s vistas.
+                                        Esta almacenado en <code>Views/Shared/_Layout.cshtml</code>.</p>
+                                    <p>La plantilla predeterminada de ASP.NET Core incluye Bootstarp y JQuery en su
+                                        archivo de Layout. Puedes crear r&#xE1;pidamente una aplicaci&#xF3;n web, Por
+                                        supuesto que puedes usar tus propias librer&#xED;as CSS y Javascript si asi lo
+                                        deseas.</p>
+                                    <h2 id="personalizando-la-hoja-de-estilos"><a
+                                            name="personalizando-la-hoja-de-estilos" class="plugin-anchor"
+                                            href="#personalizando-la-hoja-de-estilos"><i class="fa fa-link"
+                                                aria-hidden="true"></i></a>Personalizando la hoja de estilos</h2>
+                                    <p>La plantilla predefinida tambi&#xE9;n incluye un hoja de estilos con algunas
+                                        reglas CSS b&#xE1;sicas. La hoja de estilos es almacenada en el directorio
+                                        <code>wwwroot/css</code>,Agrega unas cuantas nuevas reglas CSS al final del,
+                                        archivo <code>site.css</code>:</p>
+                                    <p><strong>wwwroot/css/site.css</strong></p>
+                                    <pre><code class="lang-css"><span class="hljs-selector-tag">div</span><span class="hljs-selector-class">.todo-panel</span> {
   <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">15px</span>;
 }
 <span class="hljs-selector-tag">table</span> <span class="hljs-selector-tag">tr</span><span class="hljs-selector-class">.done</span> {
@@ -313,37 +368,46 @@
   <span class="hljs-attribute">color</span>: <span class="hljs-number">#888</span>;
 }
 </code></pre>
-<p>Puedes usar reglas CSS como estas para personalizar como se visualizan y lucen tus p&#xE1;ginas.</p>
-<p>ASP.NET Core y Razor pueden hacer mucho m&#xE1;s, como vistas parciales y vistas generadas en el servidor componentes, pero un simple Layout y una vista es todo lo que necesitaras por ahora. La documentaci&#xF3;n oficial(en <a href="https://docs.asp.net" target="_blank" rel="noopener">https://docs.asp.net</a> de ASP.NET Core contiene muchos ejemplos si deseas aprender m&#xE1;s.</p>
+                                    <p>Puedes usar reglas CSS como estas para personalizar como se visualizan y lucen
+                                        tus p&#xE1;ginas.</p>
+                                    <p>ASP.NET Core y Razor pueden hacer mucho m&#xE1;s, como vistas parciales y vistas
+                                        generadas en el servidor componentes, pero un simple Layout y una vista es todo
+                                        lo que necesitaras por ahora. La documentaci&#xF3;n oficial(en <a
+                                            href="https://docs.asp.net" target="_blank"
+                                            rel="noopener">https://docs.asp.net</a> de ASP.NET Core contiene muchos
+                                        ejemplos si deseas aprender m&#xE1;s.</p>
                                 </section>
-    </div>
-    <div class="search-results">
-        <div class="has-results">
-            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
-            <ul class="search-results-list"></ul>
-        </div>
-        <div class="no-results">
-            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
-        </div>
-    </div>
-</div>
+                            </div>
+                            <div class="search-results">
+                                <div class="has-results">
+                                    <h1 class="search-results-title"><span class='search-results-count'></span> results
+                                        matching "<span class='search-query'></span>"</h1>
+                                    <ul class="search-results-list"></ul>
+                                </div>
+                                <div class="no-results">
+                                    <h1 class="search-results-title">No results matching "<span
+                                            class='search-query'></span>"</h1>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                </div>
             </div>
-                <a href="create-models.html" class="navigation navigation-prev " aria-label="Previous page: Crear modelos">
-                    <i class="fa fa-angle-left"></i>
-                </a>
-                <a href="add-service-class.html" class="navigation navigation-next " aria-label="Next page: Agregar una clase de servicio">
-                    <i class="fa fa-angle-right"></i>
-                </a>
+            <a href="create-models.html" class="navigation navigation-prev " aria-label="Previous page: Crear modelos">
+                <i class="fa fa-angle-left"></i>
+            </a>
+            <a href="add-service-class.html" class="navigation navigation-next "
+                aria-label="Next page: Agregar una clase de servicio">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        </div>
+        <script>
+            var gitbook = gitbook || [];
+            gitbook.push(function () {
+                gitbook.page.hasChanged({ "page": { "title": "Crear una vista", "level": "1.3.3", "depth": 2, "next": { "title": "Agregar una clase de servicio", "level": "1.3.4", "depth": 2, "path": "chapters/mvc-basics/add-service-class.md", "ref": "chapters/mvc-basics/add-service-class.md", "articles": [] }, "previous": { "title": "Crear modelos", "level": "1.3.2", "depth": 2, "path": "chapters/mvc-basics/create-models.md", "ref": "chapters/mvc-basics/create-models.md", "articles": [] }, "dir": "ltr" }, "config": { "plugins": ["expandable-chapters-small", "anchors", "forkmegithub", "analytics"], "styles": { "website": "styles/website.css", "pdf": "styles/pdf.css", "epub": "styles/epub.css", "mobi": "styles/mobi.css", "ebook": "styles/ebook.css", "print": "styles/print.css" }, "pluginsConfig": { "analytics": { "google": "UA-130293099-1" }, "search": {}, "lunr": { "maxIndexSize": 1000000, "ignoreSpecialCharacters": false }, "fontsettings": { "theme": "white", "family": "sans", "size": 2 }, "highlight": {}, "expandable-chapters-small": {}, "sharing": { "facebook": true, "twitter": true, "google": false, "weibo": false, "instapaper": false, "vk": false, "all": ["facebook", "google", "twitter", "weibo", "instapaper"] }, "forkmegithub": { "color": "green", "url": "https://github.com/jahbenjah/little-aspnetcore-book" }, "theme-default": { "styles": { "website": "styles/website.css", "pdf": "styles/pdf.css", "epub": "styles/epub.css", "mobi": "styles/mobi.css", "ebook": "styles/ebook.css", "print": "styles/print.css" }, "showLevel": false }, "anchors": {} }, "theme": "default", "author": "Nate Barbettini", "pdf": { "pageNumbers": true, "fontSize": 12, "fontFamily": "Lato", "paperSize": "a5", "chapterMark": "pagebreak", "pageBreaksBefore": "/", "margin": { "right": 62, "left": 62, "top": 56, "bottom": 56 } }, "structure": { "langs": "LANGS.md", "readme": "README.md", "glossary": "GLOSSARY.md", "summary": "SUMMARY.md" }, "isbn": "978-1-387-75615-5", "variables": {}, "title": "El pequeño libro de ASP.NET Core", "language": "es", "gitbook": "*", "description": "Una introducción amigable para construir aplicaciones web con el framework ASP.NET Core." }, "file": { "path": "chapters/mvc-basics/create-view.md", "mtime": "2019-03-18T02:21:27.375Z", "type": "markdown" }, "gitbook": { "version": "3.2.3", "time": "2019-03-22T16:25:31.396Z" }, "basePath": "../..", "book": { "language": "" } });
+            });
+        </script>
     </div>
-    <script>
-        var gitbook = gitbook || [];
-        gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Crear una vista","level":"1.3.3","depth":2,"next":{"title":"Agregar una clase de servicio","level":"1.3.4","depth":2,"path":"chapters/mvc-basics/add-service-class.md","ref":"chapters/mvc-basics/add-service-class.md","articles":[]},"previous":{"title":"Crear modelos","level":"1.3.2","depth":2,"path":"chapters/mvc-basics/create-models.md","ref":"chapters/mvc-basics/create-models.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters-small","anchors","forkmegithub","analytics"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"analytics":{"google":"UA-130293099-1"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"forkmegithub":{"color":"green","url":"https://github.com/jahbenjah/little-aspnetcore-book"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Nate Barbettini","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Lato","paperSize":"a5","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"978-1-387-75615-5","variables":{},"title":"El pequeño libro de ASP.NET Core","language":"es","gitbook":"*","description":"Una introducción amigable para construir aplicaciones web con el framework ASP.NET Core."},"file":{"path":"chapters/mvc-basics/create-view.md","mtime":"2019-03-18T02:21:27.375Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-22T16:25:31.396Z"},"basePath":"../..","book":{"language":""}});
-        });
-    </script>
-</div>
     <!-- <script src="/assets/js/site.js" async></script> -->
     <script src="/assets/gitbook/gitbook.js" async></script>
     <script src="/assets/gitbook/theme.js" async></script>
@@ -355,5 +419,6 @@
     <script src="/assets/gitbook/gitbook-plugin-lunr/search-lunr.js" async></script>
     <script src="/assets/gitbook/gitbook-plugin-sharing/buttons.js" async></script>
     <script src="/assets/gitbook/gitbook-plugin-fontsettings/fontsettings.js" async></script>
-    </body>
+</body>
+
 </html>

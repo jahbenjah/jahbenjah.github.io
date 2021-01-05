@@ -1,22 +1,24 @@
 <!DOCTYPE HTML>
-<html lang="es" >
-    <head>
-        <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Usar inyección de dependencias✅ El pequeño libro de ASP.NET Core</title>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.3">
-        <meta name="author" content="Nate Barbettini">
-        <meta name="identifier" content="978-1-387-75615-5" scheme="ISBN">
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <title>Usar inyección de dependencias✅ El pequeño libro de ASP.NET Core</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="">
+    <meta name="generator" content="GitBook 3.2.3">
+    <meta name="author" content="Nate Barbettini">
+    <meta name="identifier" content="978-1-387-75615-5" scheme="ISBN">
     <link rel="stylesheet" href="/assets/gitbook/style.css">
-                <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
-                <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-anchors/plugin.css">
-                <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-forkmegithub/plugin.css">
-                <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-highlight/website.css">
-                <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-search/search.css">
-                <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-fontsettings/website.css">
-    <meta name="HandheldFriendly" content="true"/>
+    <link rel="stylesheet"
+        href="/assets/gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+    <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-anchors/plugin.css">
+    <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-forkmegithub/plugin.css">
+    <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-highlight/website.css">
+    <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-search/search.css">
+    <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-fontsettings/website.css">
+    <meta name="HandheldFriendly" content="true" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -37,233 +39,250 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130293099-1"></script>
     <script>
         window['ga-disable-UA-130293099-1'] = window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1";
-  window.dataLayer = window.dataLayer || [];
+        window.dataLayer = window.dataLayer || [];
         function gtag() {
             dataLayer.push(arguments);
         }
         gtag('js', new Date());
         gtag('config', 'UA-130293099-1');
     </script>
-    <script data-ad-client="ca-pub-4952787000309783" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script data-ad-client="ca-pub-4952787000309783" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    </head>
-    <body>
-<div class="book">
-    <div class="book-summary">
-<div id="book-search-input" role="search">
-    <input type="text" placeholder="Escribe para buscar" aria-label="Buscar"/>
-</div>
-                <nav role="navigation">
-<ul class="summary">
-        <li class="chapter " data-level="1.1" data-path="../../">
-                <a href="../../">
-                    Introducción
-                </a>
-        </li>
-        <li class="chapter " data-level="1.2" data-path="../your-first-application/">
-                <a href="../your-first-application/">
-                    Tú primera aplicación
-                </a>
-            <ul class="articles">
-        <li class="chapter " data-level="1.2.1" data-path="../your-first-application/get-the-sdk.html">
-                <a href="../your-first-application/get-the-sdk.html">
-                    Consigue el SDK
-                </a>
-        </li>
-        <li class="chapter " data-level="1.2.2" data-path="../your-first-application/hello-world-in-csharp.html">
-                <a href="../your-first-application/hello-world-in-csharp.html">
-                    Hola Mundo en C#
-                </a>
-        </li>
-        <li class="chapter " data-level="1.2.3" data-path="../your-first-application/create-aspnetcore-project.html">
-                <a href="../your-first-application/create-aspnetcore-project.html">
-                    Crear un proyecto de ASP.NET Core
-                </a>
-        </li>
-            </ul>
-        </li>
-        <li class="chapter " data-level="1.3" data-path="./">
-                <a href="./">
-                    Fundamentos de MVC
-                </a>
-            <ul class="articles">
-        <li class="chapter " data-level="1.3.1" data-path="create-controller.html">
-                <a href="create-controller.html">
-                    Crear un controlador
-                </a>
-        </li>
-        <li class="chapter " data-level="1.3.2" data-path="create-models.html">
-                <a href="create-models.html">
-                    Crear modelos
-                </a>
-        </li>
-        <li class="chapter " data-level="1.3.3" data-path="create-view.html">
-                <a href="create-view.html">
-                    Crear una vista
-                </a>
-        </li>
-        <li class="chapter " data-level="1.3.4" data-path="add-service-class.html">
-                <a href="add-service-class.html">
-                    Agregar una clase de servicio
-                </a>
-        </li>
-        <li class="chapter active" data-level="1.3.5" data-path="use-dependency-injection.html">
-                <a href="use-dependency-injection.html">
-                    Usar inyección de dependencias
-                </a>
-        </li>
-        <li class="chapter " data-level="1.3.6" data-path="finish-controller.html">
-                <a href="finish-controller.html">
-                    Terminando el controlador
-                </a>
-        </li>
-        <li class="chapter " data-level="1.3.7" data-path="update-the-layout.html">
-                <a href="update-the-layout.html">
-                    Actualizar la plantilla
-                </a>
-        </li>
-            </ul>
-        </li>
-        <li class="chapter " data-level="1.4" data-path="../add-external-packages/">
-                <a href="../add-external-packages/">
-                    Agregando paquetes externos
-                </a>
-        </li>
-        <li class="chapter " data-level="1.5" data-path="../use-a-database/">
-                <a href="../use-a-database/">
-                    Usando una base de datos
-                </a>
-            <ul class="articles">
-        <li class="chapter " data-level="1.5.1" data-path="../use-a-database/connect-to-a-database.html">
-                <a href="../use-a-database/connect-to-a-database.html">
-                    Conectarse a una base de datos
-                </a>
-        </li>
-        <li class="chapter " data-level="1.5.2" data-path="../use-a-database/update-context.html">
-                <a href="../use-a-database/update-context.html">
-                    Actualizando el contexto
-                </a>
-        </li>
-        <li class="chapter " data-level="1.5.3" data-path="../use-a-database/create-migration.html">
-                <a href="../use-a-database/create-migration.html">
-                    Crear una migración
-                </a>
-        </li>
-        <li class="chapter " data-level="1.5.4" data-path="../use-a-database/create-service-class.html">
-                <a href="../use-a-database/create-service-class.html">
-                    Crear una nueva clase de servicio
-                </a>
-        </li>
-            </ul>
-        </li>
-        <li class="chapter " data-level="1.6" data-path="../add-more-features/">
-                <a href="../add-more-features/">
-                    Agregando más características
-                </a>
-            <ul class="articles">
-        <li class="chapter " data-level="1.6.1" data-path="../add-more-features/add-todo-items.html">
-                <a href="../add-more-features/add-todo-items.html">
-                    Agregar nuevas tareas
-                </a>
-        </li>
-        <li class="chapter " data-level="1.6.2" data-path="../add-more-features/complete-with-checkbox.html">
-                <a href="../add-more-features/complete-with-checkbox.html">
-                    Completar las tareas con una casilla de verificación
-                </a>
-        </li>
-            </ul>
-        </li>
-        <li class="chapter " data-level="1.7" data-path="../security-and-identity/">
-                <a href="../security-and-identity/">
-                    Seguridad e Identidad
-                </a>
-            <ul class="articles">
-        <li class="chapter " data-level="1.7.1" data-path="../security-and-identity/require-authentication.html">
-                <a href="../security-and-identity/require-authentication.html">
-                    Requerir autenticación
-                </a>
-        </li>
-        <li class="chapter " data-level="1.7.2" data-path="../security-and-identity/using-identity-in-the-application.html">
-                <a href="../security-and-identity/using-identity-in-the-application.html">
-                    Usando identidad en la aplicación
-                </a>
-        </li>
-        <li class="chapter " data-level="1.7.3" data-path="../security-and-identity/authorization-with-roles.html">
-                <a href="../security-and-identity/authorization-with-roles.html">
-                    Autorización con roles
-                </a>
-        </li>
-        <li class="chapter " data-level="1.7.4" data-path="../security-and-identity/more-resources.html">
-                <a href="../security-and-identity/more-resources.html">
-                    Más recursos
-                </a>
-        </li>
-            </ul>
-        </li>
-        <li class="chapter " data-level="1.8" data-path="../automated-testing/">
-                <a href="../automated-testing/">
-                    Pruebas automáticas
-                </a>
-            <ul class="articles">
-        <li class="chapter " data-level="1.8.1" data-path="../automated-testing/unit-testing.html">
-                <a href="../automated-testing/unit-testing.html">
-                    Pruebas unitarias
-                </a>
-        </li>
-        <li class="chapter " data-level="1.8.2" data-path="../automated-testing/integration-testing.html">
-                <a href="../automated-testing/integration-testing.html">
-                    Pruebas de integración
-                </a>
-        </li>
-            </ul>
-        </li>
-        <li class="chapter " data-level="1.9" data-path="../deploy-the-application/">
-                <a href="../deploy-the-application/">
-                    Desplegando la aplicación
-                </a>
-            <ul class="articles">
-        <li class="chapter " data-level="1.9.1" data-path="../deploy-the-application/deploy-to-azure.html">
-                <a href="../deploy-the-application/deploy-to-azure.html">
-                    Desplegando en Azure
-                </a>
-        </li>
-        <li class="chapter " data-level="1.9.2" data-path="../deploy-the-application/deploy-with-docker.html">
-                <a href="../deploy-the-application/deploy-with-docker.html">
-                    Desplegando con Docker
-                </a>
-        </li>
-            </ul>
-        </li>
-        <li class="chapter " data-level="1.10" data-path="../conclusion/">
-                <a href="../conclusion/">
-                    Conclusión
-                </a>
-        </li>
-    <li class="divider"></li>
-    <li>
-        <a href="/" class="gitbook-link">
-            ASP.NET Core Master
-        </a>
-    </li>
-</ul>
-                </nav>
-    </div>
-    <div class="book-body">
+</head>
+<body>
+    <div class="book">
+        <div class="book-summary">
+            <div id="book-search-input" role="search">
+                <input type="text" placeholder="Escribe para buscar" aria-label="Buscar" />
+            </div>
+            <nav role="navigation">
+                <ul class="summary">
+                    <li class="chapter " data-level="1.1" data-path="../../">
+                        <a href="../../">
+                            Introducción
+                        </a>
+                    </li>
+                    <li class="chapter " data-level="1.2" data-path="../your-first-application/">
+                        <a href="../your-first-application/">
+                            Tú primera aplicación
+                        </a>
+                        <ul class="articles">
+                            <li class="chapter " data-level="1.2.1"
+                                data-path="../your-first-application/get-the-sdk.html">
+                                <a href="../your-first-application/get-the-sdk.html">
+                                    Consigue el SDK
+                                </a>
+                            </li>
+                            <li class="chapter " data-level="1.2.2"
+                                data-path="../your-first-application/hello-world-in-csharp.html">
+                                <a href="../your-first-application/hello-world-in-csharp.html">
+                                    Hola Mundo en C#
+                                </a>
+                            </li>
+                            <li class="chapter " data-level="1.2.3"
+                                data-path="../your-first-application/create-aspnetcore-project.html">
+                                <a href="../your-first-application/create-aspnetcore-project.html">
+                                    Crear un proyecto de ASP.NET Core
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="chapter " data-level="1.3" data-path="./">
+                        <a href="./">
+                            Fundamentos de MVC
+                        </a>
+                        <ul class="articles">
+                            <li class="chapter " data-level="1.3.1" data-path="create-controller.html">
+                                <a href="create-controller.html">
+                                    Crear un controlador
+                                </a>
+                            </li>
+                            <li class="chapter " data-level="1.3.2" data-path="create-models.html">
+                                <a href="create-models.html">
+                                    Crear modelos
+                                </a>
+                            </li>
+                            <li class="chapter " data-level="1.3.3" data-path="create-view.html">
+                                <a href="create-view.html">
+                                    Crear una vista
+                                </a>
+                            </li>
+                            <li class="chapter " data-level="1.3.4" data-path="add-service-class.html">
+                                <a href="add-service-class.html">
+                                    Agregar una clase de servicio
+                                </a>
+                            </li>
+                            <li class="chapter active" data-level="1.3.5" data-path="use-dependency-injection.html">
+                                <a href="use-dependency-injection.html">
+                                    Usar inyección de dependencias
+                                </a>
+                            </li>
+                            <li class="chapter " data-level="1.3.6" data-path="finish-controller.html">
+                                <a href="finish-controller.html">
+                                    Terminando el controlador
+                                </a>
+                            </li>
+                            <li class="chapter " data-level="1.3.7" data-path="update-the-layout.html">
+                                <a href="update-the-layout.html">
+                                    Actualizar la plantilla
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="chapter " data-level="1.4" data-path="../add-external-packages/">
+                        <a href="../add-external-packages/">
+                            Agregando paquetes externos
+                        </a>
+                    </li>
+                    <li class="chapter " data-level="1.5" data-path="../use-a-database/">
+                        <a href="../use-a-database/">
+                            Usando una base de datos
+                        </a>
+                        <ul class="articles">
+                            <li class="chapter " data-level="1.5.1"
+                                data-path="../use-a-database/connect-to-a-database.html">
+                                <a href="../use-a-database/connect-to-a-database.html">
+                                    Conectarse a una base de datos
+                                </a>
+                            </li>
+                            <li class="chapter " data-level="1.5.2" data-path="../use-a-database/update-context.html">
+                                <a href="../use-a-database/update-context.html">
+                                    Actualizando el contexto
+                                </a>
+                            </li>
+                            <li class="chapter " data-level="1.5.3" data-path="../use-a-database/create-migration.html">
+                                <a href="../use-a-database/create-migration.html">
+                                    Crear una migración
+                                </a>
+                            </li>
+                            <li class="chapter " data-level="1.5.4"
+                                data-path="../use-a-database/create-service-class.html">
+                                <a href="../use-a-database/create-service-class.html">
+                                    Crear una nueva clase de servicio
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="chapter " data-level="1.6" data-path="../add-more-features/">
+                        <a href="../add-more-features/">
+                            Agregando más características
+                        </a>
+                        <ul class="articles">
+                            <li class="chapter " data-level="1.6.1"
+                                data-path="../add-more-features/add-todo-items.html">
+                                <a href="../add-more-features/add-todo-items.html">
+                                    Agregar nuevas tareas
+                                </a>
+                            </li>
+                            <li class="chapter " data-level="1.6.2"
+                                data-path="../add-more-features/complete-with-checkbox.html">
+                                <a href="../add-more-features/complete-with-checkbox.html">
+                                    Completar las tareas con una casilla de verificación
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="chapter " data-level="1.7" data-path="../security-and-identity/">
+                        <a href="../security-and-identity/">
+                            Seguridad e Identidad
+                        </a>
+                        <ul class="articles">
+                            <li class="chapter " data-level="1.7.1"
+                                data-path="../security-and-identity/require-authentication.html">
+                                <a href="../security-and-identity/require-authentication.html">
+                                    Requerir autenticación
+                                </a>
+                            </li>
+                            <li class="chapter " data-level="1.7.2"
+                                data-path="../security-and-identity/using-identity-in-the-application.html">
+                                <a href="../security-and-identity/using-identity-in-the-application.html">
+                                    Usando identidad en la aplicación
+                                </a>
+                            </li>
+                            <li class="chapter " data-level="1.7.3"
+                                data-path="../security-and-identity/authorization-with-roles.html">
+                                <a href="../security-and-identity/authorization-with-roles.html">
+                                    Autorización con roles
+                                </a>
+                            </li>
+                            <li class="chapter " data-level="1.7.4"
+                                data-path="../security-and-identity/more-resources.html">
+                                <a href="../security-and-identity/more-resources.html">
+                                    Más recursos
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="chapter " data-level="1.8" data-path="../automated-testing/">
+                        <a href="../automated-testing/">
+                            Pruebas automáticas
+                        </a>
+                        <ul class="articles">
+                            <li class="chapter " data-level="1.8.1" data-path="../automated-testing/unit-testing.html">
+                                <a href="../automated-testing/unit-testing.html">
+                                    Pruebas unitarias
+                                </a>
+                            </li>
+                            <li class="chapter " data-level="1.8.2"
+                                data-path="../automated-testing/integration-testing.html">
+                                <a href="../automated-testing/integration-testing.html">
+                                    Pruebas de integración
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="chapter " data-level="1.9" data-path="../deploy-the-application/">
+                        <a href="../deploy-the-application/">
+                            Desplegando la aplicación
+                        </a>
+                        <ul class="articles">
+                            <li class="chapter " data-level="1.9.1"
+                                data-path="../deploy-the-application/deploy-to-azure.html">
+                                <a href="../deploy-the-application/deploy-to-azure.html">
+                                    Desplegando en Azure
+                                </a>
+                            </li>
+                            <li class="chapter " data-level="1.9.2"
+                                data-path="../deploy-the-application/deploy-with-docker.html">
+                                <a href="../deploy-the-application/deploy-with-docker.html">
+                                    Desplegando con Docker
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="chapter " data-level="1.10" data-path="../conclusion/">
+                        <a href="../conclusion/">
+                            Conclusión
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="/" class="gitbook-link">
+                            ASP.NET Core Master
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="book-body">
             <div class="body-inner">
-<div class="book-header" role="navigation">
-    <!-- Title -->
-    <h1>
-        <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Usar inyección de dependencias</a>
-    </h1>
-</div>
-                    <div class="page-wrapper" tabindex="-1" role="main">
-                        <div class="page-inner">
-<div id="book-search-results">
-    <div class="search-noresults">
+                <div class="book-header" role="navigation">
+                    <!-- Title -->
+                    <h1>
+                        <i class="fa fa-circle-o-notch fa-spin"></i>
+                        <a href="../..">Usar inyección de dependencias</a>
+                    </h1>
+                </div>
+                <div class="page-wrapper" tabindex="-1" role="main">
+                    <div class="page-inner">
+                        <div id="book-search-results">
+                            <div class="search-noresults">
                                 <section class="normal markdown-section">
-                                <h1 id="usar-inyecci&#xF3;n-de-dependencias"><a name="usar-inyecci&#xF3;n-de-dependencias" class="plugin-anchor" href="#usar-inyecci&#xF3;n-de-dependencias"><i class="fa fa-link" aria-hidden="true"></i></a>Usar inyecci&#xF3;n de dependencias</h1>
-<p>Regresa al controlador <code>TodoController</code>, a&#xF1;ade algo de c&#xF3;digo para trabajar con el servicio <code>ITodoItemService</code>:</p>
-<pre><code class="lang-csharp"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">TodoController</span> : <span class="hljs-title">Controller</span>
+                                    <h1 id="usar-inyecci&#xF3;n-de-dependencias"><a
+                                            name="usar-inyecci&#xF3;n-de-dependencias" class="plugin-anchor"
+                                            href="#usar-inyecci&#xF3;n-de-dependencias"><i class="fa fa-link"
+                                                aria-hidden="true"></i></a>Usar inyecci&#xF3;n de dependencias</h1>
+                                    <p>Regresa al controlador <code>TodoController</code>, a&#xF1;ade algo de
+                                        c&#xF3;digo para trabajar con el servicio <code>ITodoItemService</code>:</p>
+                                    <pre><code class="lang-csharp"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">TodoController</span> : <span class="hljs-title">Controller</span>
 {
     <span class="hljs-keyword">private</span> <span class="hljs-keyword">readonly</span> ITodoItemService _todoItemService;
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">TodoController</span>(<span class="hljs-params">ITodoItemService todoItemService</span>)
@@ -278,81 +297,158 @@
     }
 }
 </code></pre>
-<p>Debido a que <code>ITodoItemService</code> esta el el espacio de nombres &quot;Services&quot;, necesitaras agregar la instrucci&#xF3;n using al principio del archivo:</p>
-<pre><code class="lang-csharp"><span class="hljs-keyword">using</span> AspNetCoreTodo.Services;
+                                    <p>Debido a que <code>ITodoItemService</code> esta el el espacio de nombres
+                                        &quot;Services&quot;, necesitaras agregar la instrucci&#xF3;n using al principio
+                                        del archivo:</p>
+                                    <pre><code class="lang-csharp"><span class="hljs-keyword">using</span> AspNetCoreTodo.Services;
 </code></pre>
-<p>La primera linea de la clase declara un campo privado para tener una referencia al <code>ITodoItemService</code>. Esta variable te deja usar el servicio desde el m&#xE9;todo de acci&#xF3;n Index despu&#xE9;s (ver&#xE1;s como hacerlo en un minuto).</p>
-<p>La l&#xED;nea <code>public TodoController(ITodoItemService todoItemService)</code> define un constructor para la clase. El constructor es un m&#xE9;todo especial que es invocado cada que deseas crear una nueva instancia de la clase (en este caso la clase <code>TodoController</code>). Por haber agregado un par&#xE1;metro <code>ITodoItemService</code> al constructor, haz declarado que para crear <code>TodoController</code> necesitar proveer un objeto que implementa la interfaz <code>ITodoItemService</code>.</p>
-<blockquote>
-<p>Las interfaces son incre&#xED;bles ya que ayudan a desacoplar (separar) la l&#xF3;gica de tu aplicaci&#xF3;n. Debido a que el controlador depende de la interfaz <code>ITodoItemService</code>, y no de una clase especifica este no conoce o le importa cual clase es actualmente dada. Esto har&#xE1; realmente f&#xE1;cil probar parte de la aplicaci&#xF3;n separadamente, Cubrir&#xE9; la pruebas en detalle en el cap&#xED;tulo <em>Pruebas autom&#xE1;ticas</em>.</p>
-</blockquote>
-<p>Finalmente ahora puedes usar el <code>ITodoItemService</code> (a trav&#xE9;s de la variable privada que declaraste) en tu m&#xE9;todos de acci&#xF3;n para obtener los elemento desde la capa de servicio:</p>
-<pre><code class="lang-csharp"><span class="hljs-function"><span class="hljs-keyword">public</span> IActionResult <span class="hljs-title">Index</span>(<span class="hljs-params"></span>)
+                                    <p>La primera linea de la clase declara un campo privado para tener una referencia
+                                        al <code>ITodoItemService</code>. Esta variable te deja usar el servicio desde
+                                        el m&#xE9;todo de acci&#xF3;n Index despu&#xE9;s (ver&#xE1;s como hacerlo en un
+                                        minuto).</p>
+                                    <p>La l&#xED;nea
+                                        <code>public TodoController(ITodoItemService todoItemService)</code> define un
+                                        constructor para la clase. El constructor es un m&#xE9;todo especial que es
+                                        invocado cada que deseas crear una nueva instancia de la clase (en este caso la
+                                        clase <code>TodoController</code>). Por haber agregado un par&#xE1;metro
+                                        <code>ITodoItemService</code> al constructor, haz declarado que para crear
+                                        <code>TodoController</code> necesitar proveer un objeto que implementa la
+                                        interfaz <code>ITodoItemService</code>.</p>
+                                    <blockquote>
+                                        <p>Las interfaces son incre&#xED;bles ya que ayudan a desacoplar (separar) la
+                                            l&#xF3;gica de tu aplicaci&#xF3;n. Debido a que el controlador depende de la
+                                            interfaz <code>ITodoItemService</code>, y no de una clase especifica este no
+                                            conoce o le importa cual clase es actualmente dada. Esto har&#xE1; realmente
+                                            f&#xE1;cil probar parte de la aplicaci&#xF3;n separadamente, Cubrir&#xE9; la
+                                            pruebas en detalle en el cap&#xED;tulo <em>Pruebas autom&#xE1;ticas</em>.
+                                        </p>
+                                    </blockquote>
+                                    <p>Finalmente ahora puedes usar el <code>ITodoItemService</code> (a trav&#xE9;s de
+                                        la variable privada que declaraste) en tu m&#xE9;todos de acci&#xF3;n para
+                                        obtener los elemento desde la capa de servicio:</p>
+                                    <pre><code class="lang-csharp"><span class="hljs-function"><span class="hljs-keyword">public</span> IActionResult <span class="hljs-title">Index</span>(<span class="hljs-params"></span>)
 </span>{
     <span class="hljs-keyword">var</span> items = <span class="hljs-keyword">await</span> _todoItemService.GetIncompleteItemsAsync();
     <span class="hljs-comment">// ...</span>
 }
 </code></pre>
-<p>&#xBF; Recuerdas que el m&#xE9;todo <code>GetIncompleteItemsAsync</code> regresa un <code>Task&lt;TodoItem[]&gt;</code>? Regresar un <code>Task</code> significa que el m&#xE9;todo no necesariamente tendr&#xE1; un resultado, pero puedes usar la palabra clave <code>await</code> para asegurarte que tu c&#xF3;digo espera hasta que el resultado esta listo antes de continuar. </p>
-<p>El patr&#xF3;n de <code>Task</code> es com&#xFA;n cuando tu c&#xF3;digo realiza peticiones a la base de datos o una API de servicio, porque no ser&#xE1; capaz de regresar un resultado real hasta que la base de datos (o red) responda.Si haz usado promesas o callbacks en Javascript u otro lenguaje, <code>Task</code>es la misma idea: la promesa que habr&#xE1; un resultado - en alg&#xFA;n tiempo futuro.</p>
-<blockquote>
-<p>Si haz tenido que tratar con el &quot;infierno callback&quot; en el c&#xF3;digo heredado de Javascript, estas de suerte.
-Si has tenido que lidiar con el &quot;infierno de devoluci&#xF3;n de llamada&quot; en un c&#xF3;digo JavaScript m&#xE1;s antiguo, est&#xE1;s de suerte. Tratar con el c&#xF3;digo as&#xED;ncrono en .NET es mucho m&#xE1;s f&#xE1;cil gracias a la magia de la palabra clave &quot;esperar&quot;. <code>await</code> permite que su c&#xF3;digo se detenga en una operaci&#xF3;n as&#xED;ncrona, y luego retome lo que dej&#xF3; cuando la base de datos subyacente o la solicitud de red finaliza. Mientras tanto, su aplicaci&#xF3;n no est&#xE1; bloqueada, ya que puede procesar otras solicitudes seg&#xFA;n sea necesario. Este patr&#xF3;n es simple pero requiere un poco de tiempo para acostumbrarse, as&#xED; que no se preocupe si esto no tiene sentido de inmediato. &#xA1;Sigue sigui&#xE9;ndolo!</p>
-</blockquote>
-<p>El &#xFA;nico problema es que necesitas actualizar la firma del m&#xE9;todo <code>Index</code> para devolver un <code>Task&lt;IActionResult&gt;</code>en lugar de <code>IActionResult</code>, y marcarlo como <code>async</code>:
-El &#xFA;nico no tiene que actualizar la firma del m&#xE9;todo <code>Index</code> para regresar a <code>Task&lt;IActionResult&gt;</code> en place of sol un <code>IActionResult</code>, y marcarlo con <code>async</code>:</p>
-<pre><code class="lang-csharp"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">async</span> Task&lt;IActionResult&gt; <span class="hljs-title">Index</span>(<span class="hljs-params"></span>)
+                                    <p>&#xBF; Recuerdas que el m&#xE9;todo <code>GetIncompleteItemsAsync</code> regresa
+                                        un <code>Task&lt;TodoItem[]&gt;</code>? Regresar un <code>Task</code> significa
+                                        que el m&#xE9;todo no necesariamente tendr&#xE1; un resultado, pero puedes usar
+                                        la palabra clave <code>await</code> para asegurarte que tu c&#xF3;digo espera
+                                        hasta que el resultado esta listo antes de continuar. </p>
+                                    <p>El patr&#xF3;n de <code>Task</code> es com&#xFA;n cuando tu c&#xF3;digo realiza
+                                        peticiones a la base de datos o una API de servicio, porque no ser&#xE1; capaz
+                                        de regresar un resultado real hasta que la base de datos (o red) responda.Si haz
+                                        usado promesas o callbacks en Javascript u otro lenguaje, <code>Task</code>es la
+                                        misma idea: la promesa que habr&#xE1; un resultado - en alg&#xFA;n tiempo
+                                        futuro.</p>
+                                    <blockquote>
+                                        <p>Si haz tenido que tratar con el &quot;infierno callback&quot; en el
+                                            c&#xF3;digo heredado de Javascript, estas de suerte.
+                                            Si has tenido que lidiar con el &quot;infierno de devoluci&#xF3;n de
+                                            llamada&quot; en un c&#xF3;digo JavaScript m&#xE1;s antiguo, est&#xE1;s de
+                                            suerte. Tratar con el c&#xF3;digo as&#xED;ncrono en .NET es mucho m&#xE1;s
+                                            f&#xE1;cil gracias a la magia de la palabra clave &quot;esperar&quot;.
+                                            <code>await</code> permite que su c&#xF3;digo se detenga en una
+                                            operaci&#xF3;n as&#xED;ncrona, y luego retome lo que dej&#xF3; cuando la
+                                            base de datos subyacente o la solicitud de red finaliza. Mientras tanto, su
+                                            aplicaci&#xF3;n no est&#xE1; bloqueada, ya que puede procesar otras
+                                            solicitudes seg&#xFA;n sea necesario. Este patr&#xF3;n es simple pero
+                                            requiere un poco de tiempo para acostumbrarse, as&#xED; que no se preocupe
+                                            si esto no tiene sentido de inmediato. &#xA1;Sigue sigui&#xE9;ndolo!</p>
+                                    </blockquote>
+                                    <p>El &#xFA;nico problema es que necesitas actualizar la firma del m&#xE9;todo
+                                        <code>Index</code> para devolver un <code>Task&lt;IActionResult&gt;</code>en
+                                        lugar de <code>IActionResult</code>, y marcarlo como <code>async</code>:
+                                        El &#xFA;nico no tiene que actualizar la firma del m&#xE9;todo
+                                        <code>Index</code> para regresar a <code>Task&lt;IActionResult&gt;</code> en
+                                        place of sol un <code>IActionResult</code>, y marcarlo con <code>async</code>:
+                                    </p>
+                                    <pre><code class="lang-csharp"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">async</span> Task&lt;IActionResult&gt; <span class="hljs-title">Index</span>(<span class="hljs-params"></span>)
 </span>{
     <span class="hljs-keyword">var</span> items = <span class="hljs-keyword">await</span> _todoItemService.GetIncompleteItemsAsync();
     <span class="hljs-comment">// Coloca las tareas en un modelo</span>
     <span class="hljs-comment">// Pasa la vista al modelo y la genera</span>
 }
 </code></pre>
-<p>Ya casi terminamos. Has hecho que el <code>TodoController</code> dependa de la interface <code>ITodoItemService</code>, pero aun no le has dicho a ASP.NET Core que tu deseas el <code>FakeTodoItemService</code> sea el servicio actual que use debajo del capo. Parecer&#xE1; obvio ahora debido a que solo existe una clase que implementa la interfaz <code>ITodoItemService</code>, pero despu&#xE9;s tendr&#xE1;s m&#xFA;ltiples clases que implementan la misma interface, asi que ser explicito es necesario.</p>
-<p>Declarando (o conectando) cual clase concreta para usar para cada interface se hace en el m&#xE9;todo <code>ConfigureServices</code> de la clase <code>Startup</code>. Ahora mismo algo como esto:</p>
-<p><strong>Startup.cs</strong></p>
-<pre><code class="lang-csharp"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">ConfigureServices</span>(<span class="hljs-params">IServiceCollection services</span>)
+                                    <p>Ya casi terminamos. Has hecho que el <code>TodoController</code> dependa de la
+                                        interface <code>ITodoItemService</code>, pero aun no le has dicho a ASP.NET Core
+                                        que tu deseas el <code>FakeTodoItemService</code> sea el servicio actual que use
+                                        debajo del capo. Parecer&#xE1; obvio ahora debido a que solo existe una clase
+                                        que implementa la interfaz <code>ITodoItemService</code>, pero despu&#xE9;s
+                                        tendr&#xE1;s m&#xFA;ltiples clases que implementan la misma interface, asi que
+                                        ser explicito es necesario.</p>
+                                    <p>Declarando (o conectando) cual clase concreta para usar para cada interface se
+                                        hace en el m&#xE9;todo <code>ConfigureServices</code> de la clase
+                                        <code>Startup</code>. Ahora mismo algo como esto:</p>
+                                    <p><strong>Startup.cs</strong></p>
+                                    <pre><code class="lang-csharp"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">ConfigureServices</span>(<span class="hljs-params">IServiceCollection services</span>)
 </span>{
     <span class="hljs-comment">// (... some code)</span>
     services.AddMvc();
 }
 </code></pre>
-<p>El trabajo del m&#xE9;todo <code>ConfigureServices</code> es agregar cosas al contenedor de servicios, o a la colecci&#xF3;n de servicios que ASP.NET Core conocer&#xE1;. La linea <code>services.AddMvc</code> agregue el servicio que el sistema interno de ASP.NET Core, necesita (como un experimento, intenta comentar esta l&#xED;nea). Cualquier otro servicio que desees usar en tu aplicaci&#xF3;n debe ser agregado al contenedor de servicios en el m&#xE9;todo <code>ConfigureServices</code>.</p>
-<p>Agrega la siguiente linea en cualquier lugar dentro del m&#xE9;todo <code>ConfigureServices</code>,</p>
-<pre><code class="lang-csharp">services.AddSingleton&lt;ITodoItemService, FakeTodoItemService&gt;();
+                                    <p>El trabajo del m&#xE9;todo <code>ConfigureServices</code> es agregar cosas al
+                                        contenedor de servicios, o a la colecci&#xF3;n de servicios que ASP.NET Core
+                                        conocer&#xE1;. La linea <code>services.AddMvc</code> agregue el servicio que el
+                                        sistema interno de ASP.NET Core, necesita (como un experimento, intenta comentar
+                                        esta l&#xED;nea). Cualquier otro servicio que desees usar en tu aplicaci&#xF3;n
+                                        debe ser agregado al contenedor de servicios en el m&#xE9;todo
+                                        <code>ConfigureServices</code>.</p>
+                                    <p>Agrega la siguiente linea en cualquier lugar dentro del m&#xE9;todo
+                                        <code>ConfigureServices</code>,</p>
+                                    <pre><code class="lang-csharp">services.AddSingleton&lt;ITodoItemService, FakeTodoItemService&gt;();
 </code></pre>
-<p>Esta linea le especifica a ASP.NET Core que cada que se solicite <code>ITodoItemService</code> en un constructor deber&#xE1; usar la clase <code>FakeTodoItemService</code>.</p>
-<p><code>AddSingleton</code> agrega un servicio al contenedor de servicios como un <strong>singleton</strong>. Esto significa que se crear&#xE1; una sola instancia del <code>FakeTodoItemService</code> y se reutilizara dondequiera que el servicio es solicitado. Despu&#xE9;s, cuando escribas una clase de servicio diferente, una que interactu&#xE1; con la base de datos usaras una aproximaci&#xF3;n diferente llamada (<strong>scoped</strong>), Te explicar&#xE9; porque en el cap&#xED;tulo <em>Usando una base de datos</em>.</p>
-<p>!Esto es todo! Cuando una petici&#xF3;n llega y es dirigida al <code>TodoController</code>, ASP.NET Core buscar&#xE1; en los servicios disponibles y autom&#xE1;ticamente regresara el <code>FakeTodoItemService</code> cuando el controlador requiere por un <code>ITodoItemService</code>. Debido a que los servicios son &quot;inyectados&quot; desde el contenedor de servicios, este patr&#xF3;n es llamado <strong>inyecci&#xF3;n de dependencias</strong>.</p>
+                                    <p>Esta linea le especifica a ASP.NET Core que cada que se solicite
+                                        <code>ITodoItemService</code> en un constructor deber&#xE1; usar la clase
+                                        <code>FakeTodoItemService</code>.</p>
+                                    <p><code>AddSingleton</code> agrega un servicio al contenedor de servicios como un
+                                        <strong>singleton</strong>. Esto significa que se crear&#xE1; una sola instancia
+                                        del <code>FakeTodoItemService</code> y se reutilizara dondequiera que el
+                                        servicio es solicitado. Despu&#xE9;s, cuando escribas una clase de servicio
+                                        diferente, una que interactu&#xE1; con la base de datos usaras una
+                                        aproximaci&#xF3;n diferente llamada (<strong>scoped</strong>), Te explicar&#xE9;
+                                        porque en el cap&#xED;tulo <em>Usando una base de datos</em>.</p>
+                                    <p>!Esto es todo! Cuando una petici&#xF3;n llega y es dirigida al
+                                        <code>TodoController</code>, ASP.NET Core buscar&#xE1; en los servicios
+                                        disponibles y autom&#xE1;ticamente regresara el <code>FakeTodoItemService</code>
+                                        cuando el controlador requiere por un <code>ITodoItemService</code>. Debido a
+                                        que los servicios son &quot;inyectados&quot; desde el contenedor de servicios,
+                                        este patr&#xF3;n es llamado <strong>inyecci&#xF3;n de dependencias</strong>.</p>
                                 </section>
-    </div>
-    <div class="search-results">
-        <div class="has-results">
-            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
-            <ul class="search-results-list"></ul>
-        </div>
-        <div class="no-results">
-            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
-        </div>
-    </div>
-</div>
+                            </div>
+                            <div class="search-results">
+                                <div class="has-results">
+                                    <h1 class="search-results-title"><span class='search-results-count'></span> results
+                                        matching "<span class='search-query'></span>"</h1>
+                                    <ul class="search-results-list"></ul>
+                                </div>
+                                <div class="no-results">
+                                    <h1 class="search-results-title">No results matching "<span
+                                            class='search-query'></span>"</h1>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                </div>
             </div>
-                <a href="add-service-class.html" class="navigation navigation-prev " aria-label="Previous page: Agregar una clase de servicio">
-                    <i class="fa fa-angle-left"></i>
-                </a>
-                <a href="finish-controller.html" class="navigation navigation-next " aria-label="Next page: Terminando el controlador">
-                    <i class="fa fa-angle-right"></i>
-                </a>
+            <a href="add-service-class.html" class="navigation navigation-prev "
+                aria-label="Previous page: Agregar una clase de servicio">
+                <i class="fa fa-angle-left"></i>
+            </a>
+            <a href="finish-controller.html" class="navigation navigation-next "
+                aria-label="Next page: Terminando el controlador">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        </div>
+        <script>
+            var gitbook = gitbook || [];
+            gitbook.push(function () {
+                gitbook.page.hasChanged({ "page": { "title": "Usar inyección de dependencias", "level": "1.3.5", "depth": 2, "next": { "title": "Terminando el controlador", "level": "1.3.6", "depth": 2, "path": "chapters/mvc-basics/finish-controller.md", "ref": "chapters/mvc-basics/finish-controller.md", "articles": [] }, "previous": { "title": "Agregar una clase de servicio", "level": "1.3.4", "depth": 2, "path": "chapters/mvc-basics/add-service-class.md", "ref": "chapters/mvc-basics/add-service-class.md", "articles": [] }, "dir": "ltr" }, "config": { "plugins": ["expandable-chapters-small", "anchors", "forkmegithub", "analytics"], "styles": { "website": "styles/website.css", "pdf": "styles/pdf.css", "epub": "styles/epub.css", "mobi": "styles/mobi.css", "ebook": "styles/ebook.css", "print": "styles/print.css" }, "pluginsConfig": { "analytics": { "google": "UA-130293099-1" }, "search": {}, "lunr": { "maxIndexSize": 1000000, "ignoreSpecialCharacters": false }, "fontsettings": { "theme": "white", "family": "sans", "size": 2 }, "highlight": {}, "expandable-chapters-small": {}, "sharing": { "facebook": true, "twitter": true, "google": false, "weibo": false, "instapaper": false, "vk": false, "all": ["facebook", "google", "twitter", "weibo", "instapaper"] }, "forkmegithub": { "color": "green", "url": "https://github.com/jahbenjah/little-aspnetcore-book" }, "theme-default": { "styles": { "website": "styles/website.css", "pdf": "styles/pdf.css", "epub": "styles/epub.css", "mobi": "styles/mobi.css", "ebook": "styles/ebook.css", "print": "styles/print.css" }, "showLevel": false }, "anchors": {} }, "theme": "default", "author": "Nate Barbettini", "pdf": { "pageNumbers": true, "fontSize": 12, "fontFamily": "Lato", "paperSize": "a5", "chapterMark": "pagebreak", "pageBreaksBefore": "/", "margin": { "right": 62, "left": 62, "top": 56, "bottom": 56 } }, "structure": { "langs": "LANGS.md", "readme": "README.md", "glossary": "GLOSSARY.md", "summary": "SUMMARY.md" }, "isbn": "978-1-387-75615-5", "variables": {}, "title": "El pequeño libro de ASP.NET Core", "language": "es", "gitbook": "*", "description": "Una introducción amigable para construir aplicaciones web con el framework ASP.NET Core." }, "file": { "path": "chapters/mvc-basics/use-dependency-injection.md", "mtime": "2019-03-18T02:21:27.382Z", "type": "markdown" }, "gitbook": { "version": "3.2.3", "time": "2019-03-22T16:25:31.396Z" }, "basePath": "../..", "book": { "language": "" } });
+            });
+        </script>
     </div>
-    <script>
-        var gitbook = gitbook || [];
-        gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Usar inyección de dependencias","level":"1.3.5","depth":2,"next":{"title":"Terminando el controlador","level":"1.3.6","depth":2,"path":"chapters/mvc-basics/finish-controller.md","ref":"chapters/mvc-basics/finish-controller.md","articles":[]},"previous":{"title":"Agregar una clase de servicio","level":"1.3.4","depth":2,"path":"chapters/mvc-basics/add-service-class.md","ref":"chapters/mvc-basics/add-service-class.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters-small","anchors","forkmegithub","analytics"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"analytics":{"google":"UA-130293099-1"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"forkmegithub":{"color":"green","url":"https://github.com/jahbenjah/little-aspnetcore-book"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Nate Barbettini","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Lato","paperSize":"a5","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"978-1-387-75615-5","variables":{},"title":"El pequeño libro de ASP.NET Core","language":"es","gitbook":"*","description":"Una introducción amigable para construir aplicaciones web con el framework ASP.NET Core."},"file":{"path":"chapters/mvc-basics/use-dependency-injection.md","mtime":"2019-03-18T02:21:27.382Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-22T16:25:31.396Z"},"basePath":"../..","book":{"language":""}});
-        });
-    </script>
-</div>
     <!-- <script src="/assets/js/site.js" async></script> -->
     <script src="/assets/gitbook/gitbook.js" async></script>
     <script src="/assets/gitbook/theme.js" async></script>
@@ -364,5 +460,6 @@ El &#xFA;nico no tiene que actualizar la firma del m&#xE9;todo <code>Index</code
     <script src="/assets/gitbook/gitbook-plugin-lunr/search-lunr.js" async></script>
     <script src="/assets/gitbook/gitbook-plugin-sharing/buttons.js" async></script>
     <script src="/assets/gitbook/gitbook-plugin-fontsettings/fontsettings.js" async></script>
-    </body>
+</body>
+
 </html>

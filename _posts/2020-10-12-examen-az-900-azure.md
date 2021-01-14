@@ -49,9 +49,22 @@ En seguida puedes descargar el "__*Badge*__" de certificación desde el panel de
 
 <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="44cc0f5b-9da4-40d2-8ab0-487e503c6db3" data-share-badge-host="https://www.youracclaim.com"></div><script type="text/javascript" async src="//cdn.youracclaim.com/assets/utilities/embed.js"></script>
 
-## Cupones de Descuento
+## Eventos de Microsoft
+
+Microsoft constantemente realiza eventos de capacitación gratuitos y algunos de ellos incluyen  pases gratuitos para realizar el examen sin costo. Aquí los colocare cuando me entere de uno:
+
+| Evento         | Fecha     | Incluye vale        |
+| -------------- | ----------| -------------|
+| [Microsoft Azure Virtual Training Day: Conceptos básicos](https://mktoevents.com/Microsoft+Event/226229/157-GQE-382)  | 19/01/2021 y  20/01/2021  11:00 AM - 2:00 PM |SI|
+
+También se realizan retos de aprendizaje con modulos de Microsoft Learn que incluyen
+
+## Examenes de practica y Cupones de Descuento
+
+Como parte de mi proceso de aprendizaje cree un conjunto de preguntas con los temas del examen y los o puse disponible en Udemy en forma de curso.
 
 La plataforma Udemy me deja crear cupones de descuento para mis cursos. Aquí los publicare de forma regular.
 
-* [+100 preguntas de examen Fundamentos de Azure - Gratuito para las primeras 10 personas en diciembre](https://www.udemy.com/course/examenes-de-practica-az-900-fundamentos-de-azure/?couponCode=DEA8CCB1531B614EE0DA)
-* [El mejor precio disponible](https://www.udemy.com/course/examenes-de-practica-az-900-fundamentos-de-azure/?couponCode=4556601AEBC2A7D0AAD9)
+* [Usa este link si piensas comprar el curso](https://www.udemy.com/course/examenes-de-practica-az-900-fundamentos-de-azure/?referralCode=5153FB06B9BAED1707EB)
+* [+100 preguntas de examen Fundamentos de Azure - Gratuito para las primeras 10 personas en enero](https://www.udemy.com/course/examenes-de-practica-az-900-fundamentos-de-azure/?couponCode=AZ900CUPONGRATUITO)
+* [El mejor precio disponible valido por 5 días](https://www.udemy.com/course/examenes-de-practica-az-900-fundamentos-de-azure/?couponCode=EXAMENAZ900)

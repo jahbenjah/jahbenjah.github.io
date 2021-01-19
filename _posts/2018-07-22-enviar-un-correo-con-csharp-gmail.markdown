@@ -5,18 +5,18 @@ categories: .net smtp SmptClient dotnet
 last_modified_at: 2019-12-11 14:45:55 +0000
 ---
 
-En el desarrollo de software empresarial enviar correos electrónicos con documentos adjuntos o con un diseño personalizados es un requerimiento muy frecuente, en este tutorial te mostramos enviar correos usando  C# y .NET Core Usaremos Visual Studio Code como nuestro editor de código pero si así lo prefieres puedes usar Visual Studio.
-Actualmente existen varias [paquetes de Nuget]({% post_url 2019-07-27-controlando-paquetes-nuget %}) para enviar correos como [SendGrid](https://www.nuget.org/packages/SendGrid/) o [MailKit](https://www.nuget.org/packages/MailKit/), sin embargo en este tutorial se utiliza la clase [SmtpClient](https://docs.microsoft.com/en-us/dotnet/api/system.net.mail.smtpclient?view=netcore-3.1) parte de .NET Standard 2.0.
+En el desarrollo de software empresarial enviar correos electrónicos con documentos adjuntos o con un diseño personalizados es un requerimiento muy frecuente, en este tutorial te mostramos enviar correos usando C# y .NET Core. Usaremos Visual Studio Code como nuestro editor de código pero si así lo prefieres puedes usar Visual Studio.
+Actualmente existen varias [paquetes de Nuget]({% post_url 2019-07-27-controlando-paquetes-nuget %}) para enviar correos como [SendGrid](https://www.nuget.org/packages/SendGrid/) o [MailKit](https://www.nuget.org/packages/MailKit/), sin embargo en este tutorial se utiliza la clase [SmtpClient](https://docs.microsoft.com/dotnet/api/system.net.mail.smtpclient?view=netcore-3.1) parte de .NET Standard 2.0.
 
 <img src="/img/adult-business-businessman-1061588.webp" loading="lazy"  alt="Revisando el correo electrónico">
 
 Este artículo representa una guía paso a paso para enviar un correo electrónico usando C# y una cuenta de Gmail. El cuerpo del correo puede estar formateado como texto plano o HTML e incluir archivos adjuntos.
-Se asume que tienes instalado el SDK de [.NET Core](https://www.microsoft.com/net/download) y el editor de código [Visual Studio Code](https://code.visualstudio.com/). Adicionalmente se creará una solución para poder abrir el proyecto con Visual Studio.
+Se asume que tienes instalado el SDK de [.NET Core](https://www.microsoft.com/net/download) y el editor de código [Visual Studio Code](https://code.visualstudio.com/). Adicionalmente se creará una solución para poder abrir el proyecto con Visual Studio 2019.
 
-Se creará una biblioteca de clases que tiene como única función enviar correos. Después se usa esta clase en un proyecto de consola. Esta clase se puede usar en cualquier otro tipo de proyectos que soporte .NET Standard.
+Se creará una biblioteca de clases que tiene como única función enviar correos. Después se usa esta clase en un proyecto de  consola. Esta clase se puede usar en cualquier otro tipo de proyectos que soporte .NET Standard.
 El caso de uso cubre está clase es : Una aplicación tiene asignada una cuenta de correo con la cuál envía todos los correos al destinatario especificado.
 
-> **Advertencia** El equipo de .NET ha marcado la clase `SmtpClient` como obsoleta. En su lugar recomiendan **MailKit**
+> **Advertencia** El equipo de .NET ha marcado la clase `SmtpClient` como obsoleta. En su lugar recomiendan usar **MailKit**.
 
 ## Configuración de Gmail
 
@@ -58,7 +58,7 @@ Esta configuración se almacenará un archivo XML que la aplicación leerá al m
 
 ## Cliente SMTP para .NET Framework
 
-Si requieres enviar un correo en usando el .NET Framework en lugar de .NET Core puedes ver mi articulo [Enviar un correo con C# y Gmail: Windows Forms]({% post_url 2019-03-11-enviar-un-correo-con-csharp-gmail-winforms %}). Aquí se utiliza el archivo de configuración *App.config* para guardar los datos de la cuenta de gmail
+Si requieres enviar un correo en usando el .NET Framework en lugar de .NET Core puedes ver mi articulo [Enviar un correo con C# y Gmail: Windows Forms]({% post_url 2019-03-11-enviar-un-correo-con-csharp-gmail-winforms %}). Aquí se utiliza el archivo de configuración *App.config* para guardar los datos de la cuenta de gmail.
 Si usas un proyecto web puedes usar lo mismo en el *Web.config*.
 
 ## Preparando el proyecto con dotnet y Visual Studio Code
@@ -242,9 +242,6 @@ Agregar la configuración del correo en el archivo _appsettings.json_
     "Host": "smtp.gmail.com"
   }
 ```
-<a href="https://www.SmarterASP.NET/index?r=benjamincamacho">
-<img src="https://www.SmarterASP.NET/affiliate/728X90.gif" border="0">
-</a>
 
 Posteriormente creamos una clase en la carpeta _Services_ llamada `EmailSenderOptions`. Esta clase nos ayudara a leer los datos de configuración del archivo _json_
 
@@ -346,6 +343,15 @@ public async Task<IActionResult> Index()
     return View();
 }
 ```
+
+## Clonar el repositorio usando Visual Studio 2019 Community Edition
+
+Si estas apurado y necesitas revisar rápidamente el código te dejo una guia de como clonarlo usando Visual Studio 2019.
+
+1. En la ventana de inicio de Visual Studio seleccionar la opción **Clonar un repositorio**.
+2. Ingresar la URL [https://github.com/jahbenjah/CodigoBlog](https://github.com/jahbenjah/CodigoBlog) en el cuadro de texto _Ubicación del repositorio_.
+3. Elegir la ruta donde se desea copiar el repositorio. En este caso es _C:\Users\benjaminc\Source\Repos_
+4. Abrir la solucion **EnviarCorreo**.
 
 ## Conclusión
 

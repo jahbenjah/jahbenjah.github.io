@@ -351,7 +351,7 @@ Si estas apurado y necesitas revisar rápidamente el código te dejo una guia de
 1. En la ventana de inicio de Visual Studio seleccionar la opción **Clonar un repositorio**.
 2. Ingresar la URL [https://github.com/jahbenjah/CodigoBlog](https://github.com/jahbenjah/CodigoBlog) en el cuadro de texto _Ubicación del repositorio_.
 3. Elegir la ruta donde se desea copiar el repositorio. En este caso es _C:\Users\benjaminc\Source\Repos_
-4. Abrir la solucion **EnviarCorreo**.
+4. Abrir la solución **EnviarCorreo**.
 
 ## Conclusión
 

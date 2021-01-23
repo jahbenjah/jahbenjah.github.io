@@ -139,6 +139,16 @@ Microsoft SQL Server 2016 (SP2) (KB4052908) - 13.0.5026.0 (X64)
         Enterprise Evaluation Edition (64-bit) on Windows 10 Pro N 10.0 <X64> (Build 18362: ) (Hypervisor)
 ```
 
+# Cadena de conexión para Azure  SQL Database
+
+Colocamos un ejemplo de como luce una cadena de conexión para una base de datos en Azure. Esta la puedes obtener desde el portal de Azure en la sección _Settings > Connections strings _ del recurso de SQL Database si tienes acceso al portal y unicamente es necesario sustituir la contraseña. En este ejemplo se muestran entre llaves {} los que deben remplazarse.
+
+> **Nota** Observa que para las bases en Azure llevan un subdominio de _database.windows.net_ y es necesario especificar el protocolo  y puerto.
+
+```cs
+Server=tcp:{midbseserverenazure}.database.windows.net,1433;Initial Catalog=MyDbAzure;Persist Security Info=False;User ID={benjamin};Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
+```
+
 # Cadena de conexión MySQL
 
 1. Ejemplo de cadena de conexión para MySQL

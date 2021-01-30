@@ -1,12 +1,12 @@
 ---
 layout: post
 title:  "Curso de Razor Pages en Español"
-categories: programacion
+categories: curso
 date:   2020-12-29 01:07:01 +0000
 permalink: /:categories/:title:output_ext
 ---
 
-Estoy trabajando en un nuevo curso para la plataforma Udemy sobre Razor Pages con el proposito de compartir mi experiencia con otros programadores.
+Estoy trabajando en un nuevo curso para la plataforma Udemy sobre Razor Pages con el propósito de compartir mi experiencia con otros programadores.
 
 El dia 30 de diciembre libero la primera version incompleta y de forma gratuita del curso de forma gratuita con el fin de obtener retroalimentación del mismo. Si accediste al curso por favor dejame un comentario detallado de lo que te gusto, lo que no te gusto y lo que te gustaría que se incluyera.
 
@@ -15,9 +15,9 @@ Algunos de los temas que agregare al curso son:
 * Formularios en Razor Pages con ASP.NET Core
 * Tag Helpers
 * Validación de datos
-* Manejo de librerias del lado del cliente
-* Publicacion en IIS, Azure, Hosting de terceros.
+* Manejo de librerías del lado del cliente
+* Publicación en IIS, Azure, Hosting de terceros.
 
 Utiliza este cupón para inscribirte al curso
 
-[Curso de Razor Pages ¡Gratuito por tiempo limitado!](https://www.udemy.com/course/tutorial-de-aspnet-core-razor-pages-desde-cero-en-espanol/?couponCode=04324A61D9354F251123)
+[Curso de Razor Pages ¡Gratuito por tiempo limitado!](https://www.udemy.com/course/tutorial-de-aspnet-core-razor-pages-desde-cero-en-espanol/?couponCode=E6F1A3256B1FC7EE5F7D)

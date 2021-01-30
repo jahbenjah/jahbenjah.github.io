@@ -4,6 +4,7 @@ title:  "Tips para aprobar el examen AZ-900 Fundamentos de Azure"
 date:   2020-10-12 10:10:55 +0000
 categories: azure
 permalink: /:categories/:title:output_ext
+descripcion: El examen AZ-900 es un examen que valida tus conocimiento en las plataforma de nube de Microsoft.
 image:
   path: /img/og-az900.webp
   height: 623
@@ -74,5 +75,18 @@ Como parte de mi proceso de aprendizaje cree un conjunto de preguntas con los te
 La plataforma Udemy me deja crear cupones de descuento para mis cursos. Aquí los publicare de forma regular.
 
 * [Usa este link si piensas comprar el curso y no alcanzaste un cupón](https://www.udemy.com/course/examenes-de-practica-az-900-fundamentos-de-azure/?referralCode=5153FB06B9BAED1707EB)
-* [+100 preguntas de examen Fundamentos de Azure - Gratuito para las primeras 10 personas en enero](https://www.udemy.com/course/examenes-de-practica-az-900-fundamentos-de-azure/?couponCode=AZ900CUPONGRATUITO)
+* [+100 preguntas de examen Fundamentos de Azure - Gratuito por tres días](https://www.udemy.com/course/examenes-de-practica-az-900-fundamentos-de-azure/?couponCode=FC001016C75911B85B32)
 * [El mejor precio disponible valido por 5 días](https://www.udemy.com/course/examenes-de-practica-az-900-fundamentos-de-azure/?couponCode=EXAMENAZ900)
+
+
+## Preguntas Frecuentes
+
+<div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+    <h3 itemprop="name">¿Qué es Azure AZ 900?</h3>
+    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <div itemprop="text">
+            
+            <p>Es un examen de pago realizado por Microsoft que evaluá los conocimientos básicos de computación en la nube y el funcionamiento de los servicios en la nube en Azure. El examen esta disponible en Español ,Ingles,Japonés, Chino , Coreano, Alemán y Francés</p>
+        </div>
+    </div>
+</div>

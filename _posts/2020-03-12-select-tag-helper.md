@@ -149,7 +149,7 @@ public class VehiculoViewModel
 
 Por ultimo en el controlador necesitamos llenar esta propiedad aquí mostramos como hacer construyendo el objeto de forma manual. Idealmente esta sera la responsabilidad de un servicio inyectado en el controlador. Para generar la lista usamos una consulta LINQ para proyectar los años en una list de objectos del tipo `SelectListItem` asignando las propiedades `Value` y `Text`.
 
-````cs
+```cs
 public IActionResult Vehiculo()
 {
     VehiculoViewModel model = new VehiculoViewModel();
@@ -165,7 +165,7 @@ public IActionResult Vehiculo()
 
 Para este caso necesitamos usar Javascript particularmente en este ejemplo usamos jQuery. Para el ejemplo suponemos que una empresa tiene operaciones es tres ciudades diferentes y cada estado tiene diferentes unidades de negocio. Nuestra aplicación requiere que se muestre un combo con las ciudades y un segundo combo se llenara con las unidades de negocio correspondientes a la primera ciudad seleccionada.
 
-La vista incluíra los dos select el primero lo llenamos con datos duros y el segundo se llenara con los datos que devuelve una consulta que usa como base el id de la ciudada seleccionada.
+La vista incluíra los dos select el primero lo llenamos con datos duros y el segundo se llenara con los datos que devuelve una consulta que usa como base el id de la ciudad seleccionada.
 
 ```cs
 @model TouristAuto.ViewModels.CiudadViewModel
@@ -187,6 +187,7 @@ La vista incluíra los dos select el primero lo llenamos con datos duros y el se
 ```
 
 En el controlado necesitamos una acción que reciba el id del la ciudad seleccionada y realice una consulta para regresar los datos de las unidades de negocio en formato JSON. Una vez mas por cuestiones de simplicidad ejecutamos la lógica dentro del controlador pero seria ideal que estuviera en un servicio.
+
 ```cs
 public JsonResult UnidadesNegocio(int id)
 {
@@ -215,7 +216,7 @@ public JsonResult UnidadesNegocio(int id)
 }
 ```
 
-El código de jQuery requiere los Ids de los select que asigna ASP.NET Core en este caso son `CiudadId` y  `UnidadId` para el primer select se agregar un manejador de eventos en el evento `change` que obtendra el Id de la ciudad seleccionada , limpiará el select de unidades, realizara una llamada al controlador para  traer los nuevas unidades y finalmente llenara nuevamente el select de unidades.
+El código de jQuery requiere los Ids de los select que asigna ASP.NET Core en este caso son `CiudadId` y  `UnidadId` para el primer select se agregar un manejador de eventos en el evento `change` que obtendrá el Id de la ciudad seleccionada , limpiará el select de unidades, realizara una llamada al controlador para  traer los nuevas unidades y finalmente llenara nuevamente el select de unidades.
 
 
 ```html

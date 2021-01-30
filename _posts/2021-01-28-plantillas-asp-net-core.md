@@ -12,7 +12,7 @@ Próximamente contaremos con plantillas disponibles en [Nuget.org](https://www.n
 1. Para instalar ejecuta el siguiente comando
 
 ```
-dotnet new --install BenjaminCamacho.Templates.Admin::0.0.3
+dotnet new --install BenjaminCamacho.Templates.Admin::0.0.4
 ```
 
 2. Para crear un proyecto con esta plantilla

@@ -28,6 +28,6 @@ Una practica frecuente entre los lenguajes de programación conocida como  "dog 
 
 El proceso de compilación tiene un proceso inverso que permite generar el código fuente a partir de ensamblados.
 
-Existen herramientas que te pueden ayudar a realizar el proeceso de descompilacion como son:
+Existen herramientas que te pueden ayudar a realizar el proceso de decompilación como son:
 
 * [Just Decompile](https://www.telerik.com/products/decompiler.aspx)

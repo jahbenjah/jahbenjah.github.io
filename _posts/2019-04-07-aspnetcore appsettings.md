@@ -13,19 +13,15 @@ Uno de los [12 factores](https://12factor.net/es/config) de aplicaciones nativas
 
 Generalmente se coloca en este archivo valores que pueden cambiar entre desarrollo y producción como son cadenas de conexión, configuración del nivel de Log, contraseñas de correos, clave para usar una API , licencias o algún otro valor necesario para controlar el comportamiento de la aplicación o una regla de negocio. Tener la configuración de tu aplicación en archivos externos te da la posibilidad de hacer cambios sin necesidad de volver a compilar la aplicación.
 
-Si tienes experiencia con alguna versión anterior de ASP.NET es importante mencionar que anteriormente se usaba el archivo _WebConfig.xml_ por lo que si estas en el proceso de migración a .NET Core tus parámetros en este archivo deberán colocarse en el _appsettings_.json_. La configuración en las aplicaciones ASP.NET sobre el .NET Framework, estaba basada unicamente en un archivo XML de gran tamaño pero en  ASP.NET Core esto ha cambiado y tienes la posibilidad de agregar más fuentes de configuración.
+Si tienes experiencia con alguna versión anterior de ASP.NET es importante mencionar que anteriormente se usaba el archivo _WebConfig.xml_ por lo que si estas en el proceso de migración a .NET Core tus parámetros en este archivo deberán colocarse en el _appsettings_.json_. La configuración en las aplicaciones ASP.NET sobre el .NET Framework, estaba basada unicamente en un archivo XML de gran tamaño pero en ASP.NET Core esto ha cambiado y tienes la posibilidad de agregar más fuentes de configuración.
 
 > **Nota de seguridad** Generalmente es considerado una mala practica incluir información sensible como contraseñas en el archivo de configuración y colocarlas bajo control de código fuente. Se sugiere usar variables de entorno o un administrador de secretos.
 
 El sistema de configuración de ASP.NET Core es un sistema de capas en el que puedes agregar diferentes fuentes de configuración en el cual el orden importa ya que si dos fuentes contienen la misma clave esta sera tomada de la ultima fuente agregada.
 
-<a href="https://www.SmarterASP.NET/index?r=benjamincamacho">
-<img src="https://www.SmarterASP.NET/affiliate/728X90.gif" border="0">
-</a>
-
 ## Configuración en una aplicación .NET Core
 
-Para agregar un archivo de configuración a un aplicación .NET Core es necesario agregar unos paquetes de Nuget adicionales. El primer paquete necesario es `Microsoft.Extensions.Configuration`. Este paquete contiene los tipos `IConfiguration` y `ConfigurationBuilder` necesarios para manejar configurar y leer la configuración. El primero es una interfaz que se usa para  leer la configuración basada en claves y valores cuenta con Index que regresa unicamente cadenas de texto. El segundo es una clase que implementa el **patrón de diseño Builder** con tiene un método `Add` para agregar proveedores de configuración y un método `Build` para generar el objeto con todas las opciones. 
+Para agregar un archivo de configuración a un aplicación .NET Core es necesario agregar unos paquetes de Nuget adicionales. El primer paquete necesario es `Microsoft.Extensions.Configuration`. Este paquete contiene los tipos `IConfiguration` y `ConfigurationBuilder` necesarios para manejar configurar y leer la configuración. El primero es una interfaz que se usa para  leer la configuración basada en claves y valores cuenta con Index que regresa unicamente cadenas de texto. El segundo es una clase que implementa el **patrón de diseño Builder** con tiene un método `Add` para agregar proveedores de configuración y un método `Build` para generar el objeto con todas las opciones.
 
 Para el caso particular configuración basada en archivos <abbr lang="en" title="Javascript Object Notation">JSON</abbr> se requiere el paquete `Microsoft.Extensions.Configuration.Json` que incluye los métodos de extensión de la clase `ConfigurationBuilder` : `AddJsonFile` y `AddJsonStream` para agregar archivos JSON a la configuración al _ConfigurationBuilder_.
 
@@ -39,7 +35,7 @@ dotnet add package Microsoft.Extensions.Configuration
 dotnet add package Microsoft.Extensions.Configuration.Json
 ``
 
-1. Crea un archivo JSON para contener tu configuración puede contener cualquier nombre pero por simplicidad lo llamamos _appsetting.json_.
+3. Crea un archivo JSON para contener tu configuración puede contener cualquier nombre pero por simplicidad lo llamamos _appsetting.json_.
 
 ```json
 {
@@ -51,7 +47,7 @@ dotnet add package Microsoft.Extensions.Configuration.Json
 }
 ```
 
-1. Edita el archivo del proyecto para que al compilar el proyecto _LeerConfiguracion.xml_ para especificar que el archivo json debe copiarse al al directorio de salida.
+4. Edita el archivo del proyecto para que al compilar el proyecto _LeerConfiguracion.xml_ para especificar que el archivo json debe copiarse al al directorio de salida.
 
 ```xml
 <ItemGroup>
@@ -133,10 +129,10 @@ public Startup(IConfiguration configuration)
 }
 ```
 
-Con este código el contenedor de dependencias de ASP.NET Core se encargara de construir e inyectar un objeto de tipo `IConfiguration` cada que se utilice la clase `Startup`. Esto nos libera de tener que crear una instancia de este objeto . Solo con esto ya podemos leer el contenido del archivo `appsetting.json`. 
+Con este código el contenedor de dependencias de ASP.NET Core se encargara de construir e inyectar un objeto de tipo `IConfiguration` cada que se utilice la clase `Startup`. Esto nos libera de tener que crear una instancia de este objeto . Solo con esto ya podemos leer el contenido del archivo `appsetting.json`.
 
-Es muy comun que las cadenas de conexión se guarden en el archivo _appsettings.json_ ,dentro de un objeto JSON llamado **ConnectionStrings** puede contener más de una cadena de conexión.
-En el método `ConfigureServices` nos brinda nuestro primer ejemplo como leer una cadena de conexión Configuration.GetConnectionString("DefaultConnection")`: desde el archivo _appsettings.json_. [Para más detalle de como crear cadenas de conexión con C# revisa este artículo]({% post_url 2019-02-27-cadenas-de-conexion-csharp %}).
+Es muy común que las cadenas de conexión se guarden en el archivo _appsettings.json_ ,dentro de un objeto JSON llamado **ConnectionStrings** puede contener más de una cadena de conexión.
+En el método `ConfigureServices` nos brinda nuestro primer ejemplo como leer una cadena de conexión Configuration.`GetConnectionString("DefaultConnection")`: desde el archivo _appsettings.json_. [Para más detalle de como crear cadenas de conexión con C# revisa este artículo]({% post_url 2019-02-27-cadenas-de-conexion-csharp %}).
 
 ```cs
 services.AddDbContext<ApplicationDbContext>(options =>
@@ -242,4 +238,4 @@ Finalmente regresaremos la vista debe tener el siguiente código para mostrar es
 
 ## Conclusión
 
-Como hemos visto se pueden agregar múltiples archivos de configuración a una aplicación. El equipo de ASP.NET Core decidió llamar a est archivo appsetings pero en la puede tomar cualquier otro nombre. Otra cosa que no he encontrado has ahora es algún método para editar de forma programática el archivo appsetting. Por el momento creo que esta pensado para ser de solo lectura. Por lo que si requiere cambios constantes para tus valores de configuración deberías pensar en otra opción.
+Como hemos visto se pueden agregar múltiples archivos de configuración a una aplicación. El equipo de ASP.NET Core decidió llamar a est archivo **appsetings** pero en la puede tomar cualquier otro nombre. Otra cosa que no he encontrado hasta ahora es algún método para editar de forma programática el archivo appsetting. Por el momento creo que esta pensado para ser de solo lectura. Por lo que si requiere cambios constantes para tus valores de configuración deberías pensar en otra opción.

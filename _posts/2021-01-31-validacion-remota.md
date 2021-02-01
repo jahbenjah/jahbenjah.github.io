@@ -1,14 +1,14 @@
 ---
 layout: post
 title:  "Validación remota ASP.NET Core"
-date:   2019-02-27 12:00:01 +0000
-categories: connectionstring
+date:   2021-01-31 12:00:01 +0000
+categories: aspnetcore
 image:
   path: /img/og-connectionstring.webp
   height: 358
   width: 683
 last_modified_at: 2021-01-31 22:24:25 +0000
-description: 
+description: La validación remota permite invocar un método en el backend para realizar las validaciones del lado de servidor.
 ---
 
 El proceso de validación de los datos de entrada del cliente en ASP.NET Core se realiza con apoyo de las librerías jQuery Validate, jQuery Validate Unobtrusive. Del lado del Backend se utilizan atributos de C# sobre las propiedades del modelo o también conocidas como anotaciones de datos. La mayoria de estas clases para anotar los modelos se encuentran en el espacio de nombres `System.ComponentModel.DataAnnotations` pero existe un atributo que permite invocar un método en el backend para realizar las validaciones del lado de servidor que no esta en este espacio de nombres.

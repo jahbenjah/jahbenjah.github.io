@@ -4,7 +4,7 @@ title:  "Curso de Razor Pages en Español"
 categories: curso
 date:   2020-12-29 01:07:01 +0000
 image:
-  path: /img/curso-razor.jpg
+  path: /img/curso-razor.webp
   height: 358
   width: 683
 permalink: /:categories/:title:output_ext

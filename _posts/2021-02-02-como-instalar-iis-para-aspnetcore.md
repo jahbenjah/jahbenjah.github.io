@@ -4,7 +4,7 @@ title:  "Instalación de IIS para ASP.NET Core"
 date:   2021-02-02 12:00:01 +0000
 categories: aspnetcore
 image:
-  path: /img/IIS-manager.JPG
+  path: /img/IIS-manager.webp
   height: 358
   width: 683
 last_modified_at: 2021-02-02 22:24:25 +0000
@@ -21,19 +21,19 @@ Para instalar IIS en Window 10 ejecuta el siguiente procedimiento.
 1. Abrir la aplicación **Panel de Control** y seleccionar la opción **Programas**.
 2. Dar clic en la opción **Activar o desactivar las características de Windows**
 
-> **Atajo** Puedes buscar la palabra _activar_ en la barra de búsqueda de Windows 10 para acceder rápidamente a **Activar o desactivar las características de Windows** <img src="/img/busqueda-activar.JGP" loading="lazy"  alt="Barra de busqueda Windows 10">
+> **Atajo** Puedes buscar la palabra _activar_ en la barra de búsqueda de Windows 10 para acceder rápidamente a **Activar o desactivar las características de Windows** <img src="/img/busqueda-activar.webp" loading="lazy"  alt="Barra de busqueda Windows 10">
 
 3. Selecciona la opción **Internet Information Services** y presiona aceptar.
 
-<img src="/img/instalacion-IIS.JPG" loading="lazy"  alt="Internet Information Services">
+<img src="/img/instalacion-IIS.webp" loading="lazy"  alt="Internet Information Services">
 
 Observa que estamos dejando las opciones por Default de IIS y si requieres alojar proyectos de la versión clásica de ASP.NET tienes que agregar características de _ASP.NET 4.8_ dentro del nodo **Application Development Features**.
 
-<img src="/img/instalacion-opciones-default-IIS.JPG" loading="lazy"  alt="Opciones de instalación por default de Internet Information Services">
+<img src="/img/instalacion-opciones-default-IIS.webp" loading="lazy"  alt="Opciones de instalación por default de Internet Information Services">
 
 4. Después de completar la instalación abre la aplicación **Administrador de Internet Information Services (IIS)** . Esta se encuentra en _Panel de control\Sistema y seguridad\Herramientas administrativas._ Adicionalmente puedes visitar la dirección [http://localhost/](http://localhost/) en el navegador web para ver el sitio por default de IIS que se encuentra en la carpeta _C:\inetpub\wwwroot_.
 
-<img src="/img/IIS-manager.JPG" loading="lazy"  alt="Captura del Administrador de Internet Information Services">
+<img src="/img/IIS-manager.webp" loading="lazy"  alt="Captura del Administrador de Internet Information Services">
 
 Para instalar el Hosting Bundle de ASP.NET Core ejecuta el siguiente procedimiento:
 
@@ -41,10 +41,10 @@ Para instalar el Hosting Bundle de ASP.NET Core ejecuta el siguiente procedimien
 
 2. Ejecuta la aplicación  _dotnet-hosting-5.0.2-win.exe_ y acepta los términos y condiciones para  iniciar la instalación: 
 
-<img src="/img/hosting-bundle-terminos.JPG" loading="lazy"  alt="terminos y condiciones del Hosting Bundle de ASP.NET Core">
+<img src="/img/hosting-bundle-terminos.webp" loading="lazy"  alt="terminos y condiciones del Hosting Bundle de ASP.NET Core">
 
 3. Cuando termine puedes verificar el modulo de **ASPNETCoreModuleV2** en el _Administrador de Internet Information Services (IIS)> Modulos_
 
-<img src="/img/ASPNETCoreModuleV2.JPG" loading="lazy"  alt="ASPNETCoreModuleV2">
+<img src="/img/ASPNETCoreModuleV2.webp" loading="lazy"  alt="ASPNETCoreModuleV2">
 
 Con esto ya tienes todo disponible para instlar aplicaciones ASP.NET Core en IIS con Windows espeara mas detalles en otra entrada.

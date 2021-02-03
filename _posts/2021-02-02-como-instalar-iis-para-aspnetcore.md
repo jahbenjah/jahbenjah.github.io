@@ -3,6 +3,10 @@ layout: post
 title:  "Instalación de IIS para ASP.NET Core"
 date:   2021-02-02 12:00:01 +0000
 categories: aspnetcore
+image:
+  path: /img/IIS-manager.JPG
+  height: 358
+  width: 683
 last_modified_at: 2021-02-02 22:24:25 +0000
 description: Aprende COMO instalar IIS para ASP.NET Core paso a paso y desde CERO totalmente en ESPAÑOL.
 ---

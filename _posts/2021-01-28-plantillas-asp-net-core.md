@@ -4,6 +4,10 @@ title:  "Panel de administación :SB Admin para ASP.NET Core MVC"
 categories: plantillas
 date:   2021-01-28 14:00:01 +0000
 permalink: /:categories/:title:output_ext
+image:
+  path: /img/admin.webp
+  height: 358
+  width: 683
 description: Plantilla GRATIS para ASP.NET Core MVC con Bootstrap 4 , datatable y HTML5
 ---
 

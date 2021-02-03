@@ -76,7 +76,7 @@ En este ejemplo unicamente se verifica la longitud del texto pero se puede compa
 @section Scripts { <partial name="_ValidationScriptsPartial" /> }
 ```
 
-El HTML generado incluye atributos adicionales que son utilizados por la librerua jQuery Validate para realizar automaticamente cada que el usuario ingrese datos en el control.
+El HTML generado incluye atributos adicionales como `data-val`, `data-val-remote` y `data-val-remote-url que son utilizados` que son utilizados por la librería jQuery Validate para realizar la invocación del método remoto cada que el usuario ingrese datos en el control.
 
 ```html
 <form action="/" method="post" novalidate="novalidate">

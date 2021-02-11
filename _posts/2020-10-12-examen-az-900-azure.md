@@ -66,7 +66,11 @@ Microsoft constantemente realiza eventos de capacitación gratuitos y algunos de
 | -------------- | ----------| -------------|
 | [Microsoft Azure Virtual Training Day: Conceptos básicos](https://mktoevents.com/Microsoft+Event/226229/157-GQE-382)  | 19/01/2021 y  20/01/2021  11:00 AM - 2:00 PM |SI|
 
-También se realizan retos de aprendizaje con modulos de Microsoft Learn que incluyen un pase gratuito para el examen.
+También se realizan retos de aprendizaje con modulos de Microsoft Learn que incluyen un pase gratuito para el examen. Ve el siguiente video que explica como puedes conseguir un pase para presentar un examen de certificación totalmente gratis.
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/l6luKSYa2iU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## Examenes de practica y Cupones de Descuento
 

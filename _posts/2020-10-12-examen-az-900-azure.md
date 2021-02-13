@@ -4,7 +4,7 @@ title:  "Tips para aprobar el examen AZ-900 Fundamentos de Azure"
 date:   2020-10-12 10:10:55 +0000
 categories: azure
 permalink: /:categories/:title:output_ext
-descripcion: El examen AZ-900 es un examen que valida tus conocimiento en las plataforma de nube de Microsoft.
+description: El examen AZ-900 es un examen que valida tus conocimiento en las plataforma de nube de Microsoft.
 image:
   path: /img/og-az900.webp
   height: 623

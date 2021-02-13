@@ -2,12 +2,12 @@
 layout: post
 title:  "Preguntas de entrevista desarrollador .NET"
 date:   2020-02-11 10:10:55 +0000
-categories: net
+categories: aspnetcore
 permalink: /:categories/:title:output_ext
 description: Preguntas frecuentes en entrevistas de trabajo para desarrollador .NET
 ---
 
-En este articulo busco reunir las preguntas que me han hecho en entrevistas de trabajo inicialmente no tienen respuesta pero se las pienso agregar en forma de artículos separados con el fin de profundiza un poco en las respuestas.
+En este articulo busco reunir las preguntas que me han hecho en entrevistas de trabajo inicialmente no tienen respuesta pero se las pienso agregar en forma de artículos separados con el fin de profundizar un poco en las respuestas.
 
 Por ahora no están organizadas por nivel,ni puesto, pero las he encontrado que se utilizan frecuentemente como un filtro inicial dentro del proceso de reclutamiento. Adicionalmente ten en cuenta que en ocasiones también se incluye una prueba practica donde se debe resolver un problema.
 

@@ -1,10 +1,10 @@
 ---
 layout: post
 title:  "Preguntas de entrevista desarrollador .NET"
-date:   2020-10-12 10:10:55 +0000
-categories: azure
+date:   2020-02-11 10:10:55 +0000
+categories: net
 permalink: /:categories/:title:output_ext
-description: Encuentra preguntas frecuentes en entrevistas de trabajo para desarrollador .NET
+description: Preguntas frecuentes en entrevistas de trabajo para desarrollador .NET
 ---
 
 En este articulo busco reunir las preguntas que me han hecho en entrevistas de trabajo inicialmente no tienen respuesta pero se las pienso agregar en forma de artículos separados con el fin de profundiza un poco en las respuestas.

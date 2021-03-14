@@ -79,8 +79,8 @@ Como parte de mi proceso de aprendizaje cree un conjunto de preguntas con los te
 La plataforma Udemy me deja crear cupones de descuento para mis cursos. Aquí los publicare de forma regular.
 
 * [Usa este link si piensas comprar el curso y no alcanzaste un cupón](https://www.udemy.com/course/examenes-de-practica-az-900-fundamentos-de-azure/?referralCode=5153FB06B9BAED1707EB)
-* [+100 preguntas de examen Fundamentos de Azure - Gratuito por tres días](https://www.udemy.com/course/examenes-de-practica-az-900-fundamentos-de-azure/?couponCode=FC001016C75911B85B32)
-* [El mejor precio disponible valido por 5 días](https://www.udemy.com/course/examenes-de-practica-az-900-fundamentos-de-azure/?couponCode=EXAMENAZ900)
+* [+100 preguntas de examen Fundamentos de Azure - 10 Cupones Gratis](https://www.udemy.com/course/examenes-de-practica-az-900-fundamentos-de-azure/?couponCode=A629165463A5744A59C1)
+* [El mejor precio disponible valido por 5 días](https://www.udemy.com/course/examenes-de-practica-az-900-fundamentos-de-azure/?couponCode=E6B67903636F97CA8038)
 
 
 ## Preguntas Frecuentes

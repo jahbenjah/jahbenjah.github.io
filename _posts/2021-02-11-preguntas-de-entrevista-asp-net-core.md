@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Preguntas de entrevista desarrollador .NET"
-date:   2020-02-11 10:10:55 +0000
+date:   2021-02-11 10:10:55 +0000
 categories: aspnetcore
 permalink: /:categories/:title:output_ext
 description: Preguntas frecuentes en entrevistas de trabajo para desarrollador .NET

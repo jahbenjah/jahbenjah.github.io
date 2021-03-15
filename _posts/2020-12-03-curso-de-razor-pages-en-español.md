@@ -8,6 +8,7 @@ image:
   height: 358
   width: 683
 permalink: /:categories/:title:output_ext
+tags: curso
 ---
 
 Estoy trabajando en un nuevo curso para la plataforma Udemy sobre Razor Pages con el propósito de compartir mi experiencia con otros programadores.
@@ -24,4 +25,3 @@ Algunos de los temas que agregare al curso son:
 
 Utiliza este cupón para inscribirte al curso
 
-[Curso de Razor Pages ¡Gratuito por tiempo limitado!](https://www.udemy.com/course/tutorial-de-aspnet-core-razor-pages-desde-cero-en-espanol/?couponCode=BENJAMIN)

@@ -9,6 +9,7 @@ image:
   path: /img/og-az900.webp
   height: 623
   width: 1190
+tags: curso
 ---
 
 El pasado 7 de octubre aprobé el examen _AZ-900 Azure Fundamentals_ y en este articulo te contare los recursos utilizados para prepararme, porque decidí hacer este examen, algunos tips y que planes tengo con la certificaciones en Azure.

@@ -1,19 +1,22 @@
 ---
 layout: defaultbs
+title : cursos
+description:  Cursos
 ---
 
 <div class="breadcrumbs">
     <div class="container">
         <h2>{{ page.title }}</h2>
-        <p>{{site.description}} </p>
+        <p>{{page.description}} </p>
     </div>
 </div>
 
 <section id="courses" class="courses">
     <div class="container">
         <div class="row">
-            {%- if site.posts.size > 0 -%}
-            {%- for post in site.categories.curso -%}
+            {% assign cursos_posts = site.posts | where_exp: "post", "post.tags contains 'curso'" %}
+            {%- if cursos_posts.size > 0 -%}
+             {% for post in cursos_posts %}
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                 <div class="course-item">
                     <img src="{{ post.image.path | escape}}" loading="lazy" class="img-fluid"

@@ -1,5 +1,4 @@
-<!-- ======= Header ======= -->
-<header id="header" class="fixed-top">
+<!-- <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
         <h1 class="logo mr-auto"><a href="{{ "/" | relative_url }}">.NET Master</a></h1>
         {%- assign default_paths = site.pages | map: "path" -%}
@@ -10,7 +9,32 @@
                 <li><a href="https://www.youtube.com/channel/{{ site.youtube_channel| cgi_escape | escape }}" target="_blank">YouTube</a></li>
                 {%- endif -%}
             </ul>
-        </nav><!-- .nav-menu -->
+        </nav>
         <a class="get-started-btn" href="/little-aspnetcore-book/index.html">Libro</a>
     </div>
-</header><!-- End Header -->
+</header> -->
+<header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+        <h1 class="logo me-auto"><a href="index.html">Core Master</a></h1>
+        <nav id="navbar" class="navbar order-last order-lg-0">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="aspnetcore.html">ASP.NET Core</a></li>
+                <li><a href="csharp.html">C#</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="azure.html">Azure</a></li>
+                <li class="dropdown"><a href="#"><span>Más Temas</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="sqlserver.html">SQL Server</a></li>
+                        <li><a href="selenium.html">Selenium</a></li> 
+                        <li><a href="entityframeworkcore.html">EF Core</a></li>
+                        <li><a href="plantillas.html">Plantillas</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+        <a href="https://www.youtube.com/channel/{{ site.youtube_channel| cgi_escape | escape }}" target="_blank" class="get-started-btn">Youtube</a>
+        <a href="/little-aspnetcore-book/index.html" class="get-started-btn">Libro</a>
+    </div>
+</header>

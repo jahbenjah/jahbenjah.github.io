@@ -3,6 +3,10 @@ layout: post
 title:  "Control de versiones: Sql Server y git"
 categories: slqserver
 permalink: /:categories/:title:output_ext
+image:
+  path: /img/sqlservergit.webp
+  height: 623
+  width: 1190
 ---
 
 En este artículo te mostramos como agregar el control de código fuente a una base de datos en SQL Server.Para ello utilizamos [SQL Server Data Tools 2019 (SSDT)](https://docs.microsoft.com/es-es/sql/ssdt/download-sql-server-data-tools-ssdt?view=sql-server-2017).

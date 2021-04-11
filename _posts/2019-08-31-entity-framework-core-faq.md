@@ -3,6 +3,10 @@ layout: faq
 title:  "Preguntas frecuentes Entity Framework Core"
 categories: entityframeworkcore
 permalink: /:categories/:title:output_ext
+image:
+  path: /img/efcoretools.webp
+  height: 623
+  width: 1190
 ---
 
 A continuación un serie de preguntas y respuestas que pueden servir como introducción para conocer este framework.

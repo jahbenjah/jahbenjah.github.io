@@ -3,6 +3,10 @@ layout: post
 title:  "Web scraping con C#"
 categories: Web scraping C# advientocsharp dotnet selenium
 last_modified_at: 2019-04-18 12:30:55 +0000
+image:
+  path: /img/webscraping.webp
+  height: 623
+  width: 1190
 ---
 
 Actualmente hay datos a montones y día con dia la información disponible en internet aumenta de forma considerable por ello cuando se requiere extraer gran cantidad de información de un sitio web es preciso ayudarse de técnicas automatizadas como el: _Web Scraping_.

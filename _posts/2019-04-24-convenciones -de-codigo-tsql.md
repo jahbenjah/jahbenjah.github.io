@@ -5,6 +5,10 @@ date:   2019-04-24 21:18:55 +0000
 categories: slqserver
 permalink: /:categories/:title:output_ext
 last_modified_at: 2019-04-26 11:04:25 +0000
+image:
+  path: /img/sqlservermarco.webp
+  height: 623
+  width: 1190
 ---
 
 Programar es una acto de comunicación entre humanos y computadoras. Si bien las maquinas solo requieren que el código fuente cumpla con las reglas de sintaxis del lenguaje, nosotros los programadores requerimos un poco más para poder entender el código, este debe estar formateado de forma que permita ser legible a primera vista, el estilo de código debe ser consistente, los identificadores deben ser entendibles y pronunciables.

@@ -4,6 +4,10 @@ title:  "Errores en SQL Server"
 date:   2019-05-09 21:46:55 +0000
 categories: slqserver
 permalink: /:categories/:title:output_ext
+image:
+  path: /img/sqlservermarco.webp
+  height: 623
+  width: 1190
 ---
 
 Los errores cuando ejecutamos código T-SQL pueden ocurrir por distintos motivos. SQL Server clasifica los errores en errores sistema y errores definidos por el usuario. Los errores en SQL Server son almacenados en la tabla `sys.messages` 

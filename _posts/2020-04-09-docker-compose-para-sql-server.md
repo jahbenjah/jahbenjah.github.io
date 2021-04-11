@@ -3,7 +3,11 @@ layout: post
 title: "Docker Compose para SQL Server en Linux"
 categories: slqserver
 permalink: /:categories/:title:output_ext
-description: Archivo docker-compose.yml para SQL Server en Linux 
+description: Archivo docker-compose.yml para SQL Server en Linux
+image:
+  path: /img/sqlserverdocker.webp
+  height: 623
+  width: 1190
 ---
 
 Hola qué tal en este articulo les voy a mostrar cómo ejecutar un contenedor de Docker para SQL Server usando Docker Compose básicamente esta forma de ejecutar SQL Server es de utilidad en en entornos de pruebas de desarrollo. La idea surgió después de ver un vídeo del Pelado Nerd en el qué crea un archivo Docker Compose para una instancia de Wordpress con MySQL mientras estaba viendo y me dije bueno yo puedo hacer algo similar con SQL Server y ASP.NET Core me ayudará para mis pruebas personales.

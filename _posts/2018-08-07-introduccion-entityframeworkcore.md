@@ -3,6 +3,10 @@ layout: post
 title:  "Introdución a Entity Framework Core"
 categories: C# EntityFrameworkCore dotnet ef
 last_modified_at: 2020-01-01 11:03:55 +0000
+image:
+  path: /img/efcoretools.webp
+  height: 623
+  width: 1190
 ---
 
 *Entity Framework Core* es una tecnología de acceso a datos para .NET Core y .NET Framework. Es multiplataforma y de código abierto desarrollado por Microsoft con aportes de la comunidad.

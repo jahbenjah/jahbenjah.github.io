@@ -127,12 +127,13 @@ File.WriteAllLines("file.html",html);
 
 ## Ver esto en video
 
-Esto realizando un curso de Seleniun con C# en [mi canal de YouTube](https://www.youtube.com/channel/UCFz5TO8oRcws22p96jrBeqQ?view_as=subscriber). En este [lista de reproducción](https://www.youtube.com/playlist?list=PLnk7QzMh6N-JTtgHoPKVOJkIcH3RQuu96) veras como usar Selenium con C# y .NET Core en Ubuntu. Todo lo que se muestra aqui multiplataforma y  es compatible con Windows o Mac OS si tienes una duda en particular escribeme,
-<div class="video-responsive">
-<iframe src="https://www.youtube.com/embed/Kg-l8qb3-FE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+Esto realizando un curso de Seleniun con C# en [mi canal de YouTube](https://www.youtube.com/channel/UCFz5TO8oRcws22p96jrBeqQ?view_as=subscriber). En este [lista de reproducción](https://www.youtube.com/playlist?list=PLnk7QzMh6N-JTtgHoPKVOJkIcH3RQuu96) veras como usar Selenium con C# y .NET Core en Ubuntu. Todo lo que se muestra aquí multiplataforma y  es compatible con Windows o Mac OS si tienes una duda en particular escríbeme,
 
 <div class="video-responsive">
-<iframe src="https://www.youtube.com/embed/6AhYUKzFd44" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/Kg-l8qb3-FE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
+<div class="video-responsive">
+<iframe src="https://www.youtube.com/embed/6AhYUKzFd44" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
 <div class="video-responsive">
 <iframe src="https://www.youtube.com/embed/c4C95oi-v6E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -154,6 +155,7 @@ Esto realizando un curso de Seleniun con C# en [mi canal de YouTube](https://www
 <div class="video-responsive">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/SVDDgChE-vg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+
 ## Automatizando un inicio de sesión con Selenium y C#
 
 Para realizar la automatización de un inicio de sesión ejecuta en la terminal o consola los siguientes comandos. Ejecuta línea por línea ya que se colocaron más de un comando por descripción.

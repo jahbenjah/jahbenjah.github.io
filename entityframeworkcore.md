@@ -1,11 +1,12 @@
 ---
 layout: defaultbs
+description: Ef CORE
 ---
 
 <div class="breadcrumbs">
     <div class="container">
         <h2>{{ page.title }}</h2>
-        <p>{{site.description}} </p>
+        <p>{{page.description}} </p>
     </div>
 </div>
 

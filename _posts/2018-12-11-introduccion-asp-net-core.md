@@ -28,7 +28,7 @@ Aquí la lista de repositorios relevantes para ASP.NET Core:
 **Modular**: ASP.NET Core esta compuesto por más de 95 paquetes _Nuget_ independientes que permiten usar solo las funciones deseadas sin estar obligado a usar todas las características del framework. Al estar compuesto por demasiados paquetes es posible que hayas pensado que es necesario aprenderse cada uno de los paquetes pero te comento que a partir de la version 2.0 no es necesario ya que existen los [metapaquetes](https://docs.microsoft.com/dotnet/core/packages#metapackages) que se encargan de referenciar todos los paquetes necesarios para una aplicación web.
 
 <div class="video-responsive">
-<iframe  src="https://www.youtube.com/embed/OfLd-Un92kY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe loading="lazy" src="https://www.youtube.com/embed/OfLd-Un92kY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 ## Versiones

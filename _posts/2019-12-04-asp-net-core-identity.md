@@ -90,19 +90,19 @@ Estoy preparando una lista de reproducción dedicada al tema de ASP.NET Core Ide
 * Introducción a ASP.NET Core Identity. Muestra las diferencias entre crear un proyecto con autenticación de cuentas indivduales y uno sin autenticación. 
    
 <div class="video-responsive">
-<iframe src="https://www.youtube.com/embed/TQK9Y3jviZw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe loading="lazy" src="https://www.youtube.com/embed/TQK9Y3jviZw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 *  Personalizar la tabla AspNetUsers
 
 <div class="video-responsive">
-   <iframe src="https://www.youtube.com/embed/ckkvuA6epY0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+   <iframe loading="lazy" src="https://www.youtube.com/embed/ckkvuA6epY0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 * Scaffolding ASP.NET Core
 
 <div class="video-responsive">
-<iframe src="https://www.youtube.com/embed/MqcLBewsNUE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe loading="lazy" src="https://www.youtube.com/embed/MqcLBewsNUE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 4. Cambiar de base de datos
@@ -152,5 +152,5 @@ dotnet ef database update
 Puedes ver el video con estos pasos aqui
 
 <div class="video-responsive">
-<iframe src="https://www.youtube.com/embed/X4Y9JwVC8QQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe loading="lazy" src="https://www.youtube.com/embed/X4Y9JwVC8QQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>

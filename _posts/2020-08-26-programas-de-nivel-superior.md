@@ -179,4 +179,4 @@ Si declaras un tipo (clase , estructura, enumeración) tiene que ser al final.
 Actualmente todavía no hay documentación en el sitio de Microsoft toda la propuesta de diseño y las motivaciones de esta característica se encuentra en el repositorio de Github dedicado al diseño del Lenguaje C# [csharplang](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-9.0/top-level-statements.md)
 
 <div class="video-responsive">
-<iframe  src="https://www.youtube.com/embed/UfTLcYudsWQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe loading="lazy" src="https://www.youtube.com/embed/UfTLcYudsWQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

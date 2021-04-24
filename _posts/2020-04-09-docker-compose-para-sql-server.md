@@ -147,4 +147,4 @@ Esta forma de usar SQL Server sirve para probar el concepto de Servicio en Docke
 Este artículo es una transcripción con algunos ajustes del video. Si prefieres ver el video aquí lo tienes. Hay material nuevo que no esta incluido en el blog.
 
 <div class="video-responsive">
-<iframe  src="https://www.youtube.com/embed/j-aBeIY0Js8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe loading="lazy" src="https://www.youtube.com/embed/j-aBeIY0Js8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

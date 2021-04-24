@@ -75,7 +75,7 @@ Otra opción que te permite agregar de forma selectiva en cada vista el css es a
 ```
 
 <div class="video-responsive">
-<iframe  src="https://www.youtube.com/embed/Gj5YM9TlXN8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe loading="lazy" src="https://www.youtube.com/embed/Gj5YM9TlXN8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 ### Cómo cambiar el tamaño de los iconos de Font Awesome

@@ -47,11 +47,11 @@ Para instalar el SDK de .NET Core en el sistema operativo Windos necesitas segui
 1. Descarga el SKD de .NET Core desde la [página oficial](https://dotnet.microsoft.com/download)
 2. Ejecuta el instalador __dotnet-sdk-5.0.202-win-x64.exe__ y presiona instalar.
 
-<img src="/img/instalacion-net5-1.png" loading="lazy" alt="Captura de pantalla del Instalador de .  NET 5 en Windows 10.">
+<img src="/img/instalacion-net5-1.png" loading="lazy" alt="Captura de pantalla del Instalador de .NET 5 en Windows 10.">
 
 3. Te saldrá una pantalla solicitando autorizar la ejecución del instalador. Acepta y espera que finalice.
 
-<img src="/img/instalacion-net5-2.png" loading="lazy" alt="Captura de pantalla del Instalador de .  NET 5 en Windows 10.">
+<img src="/img/intalacion-net5-2.png" loading="lazy" alt="Captura de pantalla del Instalador de .NET 5 en Windows 10.">
 
 Después de que el SDK ha finalizado de instalarse, abre una "Símbolo de Sistema o Powershell" y usa la herramienta de linea de comando `dotnet` para asegurarte que todo está funcionando:
 

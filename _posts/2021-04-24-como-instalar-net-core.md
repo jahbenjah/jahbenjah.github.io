@@ -109,5 +109,5 @@ To install additional .NET runtimes or SDKs:
 Puedes ver la version en video de este tutorial aquí:
 
 <div class="video-responsive">
-<iframe loading="lazy" src="https://youtu.be/PODqaqpgS2I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe loading="lazy" src="https://www.youtube.com/embed/PODqaqpgS2I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>

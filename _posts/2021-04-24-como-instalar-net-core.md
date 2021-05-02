@@ -3,6 +3,7 @@ layout: post
 title:  "Como instalar .NET Core"
 date:   2021-05-01 12:00:01 +0000
 categories: aspnetcore
+permalink: /:categories/:title:output_ext
 image:
   path: /img/instalacion-net5-1.png
   height: 358

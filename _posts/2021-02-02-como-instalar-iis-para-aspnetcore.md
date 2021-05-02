@@ -3,6 +3,7 @@ layout: post
 title:  "Instalación de IIS para ASP.NET Core"
 date:   2021-02-02 12:00:01 +0000
 categories: aspnetcore
+permalink: /:categories/:title:output_ext
 image:
   path: /img/IIS-manager.webp
   height: 358

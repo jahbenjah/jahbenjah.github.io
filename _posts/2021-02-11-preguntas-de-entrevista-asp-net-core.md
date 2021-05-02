@@ -17,7 +17,7 @@ Por ahora no están organizadas por nivel,ni puesto, pero las he encontrado que 
 
 ## Preguntas sobre el lenguaje del programacion C\#
 
-¿Cuál es la diferencia entre `readonly` y `const`
+¿Cuál es la diferencia entre `readonly` y `const`?
 
 ¿Qué es un delegado?
 
@@ -31,9 +31,9 @@ Por ahora no están organizadas por nivel,ni puesto, pero las he encontrado que 
 
 ¿Qué es LINQ ?
 
-¿Qué es un metodo de extension ?
+¿Qué es un método de extension ?
 
-¿Que es un evento ?
+¿Qué es un evento ?
 
 ## Patrones de diseño
 
@@ -60,7 +60,7 @@ Explica el principio de Abierto para extension Cerrado para modificación
 
 ## SQL Server
 
-¿Que tipos de `JOIN` conoces ?
+¿Qué tipos de `JOIN` conoces ?
 
 ¿Cuál es la diferencia entre un indice agrupado y uno no agrupado ?
 

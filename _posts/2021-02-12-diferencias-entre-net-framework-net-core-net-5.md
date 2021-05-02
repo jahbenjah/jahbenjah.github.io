@@ -11,5 +11,15 @@ image:
   width: 1190
 ---
 
-Multiplataforma
-Open Source
+
+Característica    | .NET Framework      |  .NET Core
+------------------| --------------------|-----------
+Sistema Operativo |   Windows           |  Linux ,MacOS, Windows
+Linea de comandos|    |
+|    |
+|    |
+|    |
+|    |
+|    |
+|    |
+|    |

@@ -23,5 +23,4 @@ Algunos de los temas que agregare al curso son:
 * Manejo de librerías del lado del cliente
 * Publicación en IIS, Azure, Hosting de terceros.
 
-Utiliza este cupón para inscribirte al curso
-
+Utiliza este cupón para inscribirte al curso.

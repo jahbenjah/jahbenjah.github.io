@@ -39,7 +39,7 @@ Para instalar el Hosting Bundle de ASP.NET Core ejecuta el siguiente procedimien
 
 1. Descarga la versión de Hosting Bundle  correspondiente a la version que usa tu aplicación. En este caso utilizo la version 5.0.2 y descargue la aplicación _dotnet-hosting-5.0.2-win.exe_
 
-2. Ejecuta la aplicación  _dotnet-hosting-5.0.2-win.exe_ y acepta los términos y condiciones para  iniciar la instalación: 
+2. Ejecuta la aplicación  _dotnet-hosting-5.0.2-win.exe_ y acepta los términos y condiciones para  iniciar la instalación:
 
 <img src="/img/hosting-bundle-terminos.webp" loading="lazy"  alt="terminos y condiciones del Hosting Bundle de ASP.NET Core">
 
@@ -47,4 +47,4 @@ Para instalar el Hosting Bundle de ASP.NET Core ejecuta el siguiente procedimien
 
 <img src="/img/ASPNETCoreModuleV2.webp" loading="lazy"  alt="ASPNETCoreModuleV2">
 
-Con esto ya tienes todo disponible para instlar aplicaciones ASP.NET Core en IIS con Windows espeara mas detalles en otra entrada.
+Con esto ya tienes todo disponible para instalar aplicaciones ASP.NET Core en IIS con Windows espera mas detalles en otra entrada.

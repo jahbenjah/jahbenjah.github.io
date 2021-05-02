@@ -48,19 +48,18 @@ Versión | Fecha de lanzamiento|  Detalles
 1.1|16 Noviembre 2016|[Announcing the Fastest ASP.NET Yet, ASP.NET Core 1.1 RTM](https://blogs.msdn.microsoft.com/webdev/2016/11/16/announcing-asp-net-core-1-1/)
 1.0|27 Junio 2016|[Announcing ASP.NET Core 1.0](https://blogs.msdn.microsoft.com/webdev/2016/06/27/announcing-asp-net-core-1-0/)
 
-# Entornos de desarrollo
+## Entornos de desarrollo
 
 Para desarrollar aplicaciones con ASP.NET Core necesitas el [SDK de .NET Core](https://dotnet.microsoft.com/download) que puedes descargar gratuitamente ya se para Linux, Mac o Windows.Para comprobar que tienes instalado puedes ejecutar el comando `dotnet --version` en una terminal o consola.
 
 Aunque es posible  crear aplicaciones con la linea de comandos y un editor de textos sencillos como NotePad++ o Vim es probable que prefieras usar el entorno de desarrollo integrado. Puedes usar las siguientes opciones:
 
 1. El IDE estrella de Microsoft : [Visual Studio 2019](https://visualstudio.microsoft.com/es/) disponible para Windows y Mac La ultima versión de Visual Studio es la 2019. Este IDE es de paga en las ediciones Profesional y Enterprise pero la edición Community es gratuita para desarrolladores de software libre y estudiantes.
-
-1. El editor de código multiplataforma  [Visual Studio Code](https://code.visualstudio.com/). Es gratuito de código abierto y con soporte para muchos lenguajes mediante extensiones.
+2. El editor de código multiplataforma  [Visual Studio Code](https://code.visualstudio.com/). Es gratuito de código abierto y con soporte para muchos lenguajes mediante extensiones.
 
 3. [Rider de JetBrains](https://www.jetbrains.com/rider/): Es un IDE de paga multiplataforma de los creadores de  ReSharper, DataGrip e IntelliJ. Tienen una edición gratuita para estudiantes, profesores y proyectos de software libre.
 
-# Para llevar
+## Para llevar
 
 Unos artículos que te pueden ayudar a entender el como Microsoft comenzó a apoyar el código abierto:
 

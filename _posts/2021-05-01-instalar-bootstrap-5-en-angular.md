@@ -57,6 +57,10 @@ Para utilizar Bootstrap con Angular es necesario agregar al arreglo la url donde
  "src/styles.css"
 ]
 ```
+
 > Nota: Estamos usando la versión no minificada porque en el momento de compilar la aplicación para producción la cli de angular minifica.
 
-Con esto ya tenemos todas las clases de Bootstrap en nuestra aplicación de Angular pero faltan los archivos de Javascript que son necesarios par algunos componentes de Bootstrap como¿son las alertas, el carrusel y los drop down, los modales ,las barras de navegación pero lo dejare,os para otra ocasión.
+Con esto ya tenemos todas las clases de Bootstrap en nuestra aplicación de Angular pero faltan los archivos de Javascript que son necesarios par algunos componentes de Bootstrap.
+## Usando 
+
+como son las alertas, el carrusel y los drop down, los modales ,las barras de navegación pero lo dejare,os para otra ocasión.

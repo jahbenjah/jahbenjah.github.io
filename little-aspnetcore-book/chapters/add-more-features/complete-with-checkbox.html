@@ -1,401 +1,361 @@
 <!DOCTYPE HTML>
-<html lang="es" >
+<html lang="es" class="sidebar-visible no-js light">
     <head>
+        <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
+        <title>Completar las tareas con una casilla de verificación - El pequeño libro de ASP.NET Core</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Completar las tareas con una casilla de verificación ✅ El pequeño libro de ASP.NET Core</title>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="description" content="Se crea un formulario usando vistas parciales de razor pages">
-        <meta name="generator" content="GitBook 3.2.3">
-        <meta name="author" content="Nate Barbettini">
-        <meta name="identifier" content="978-1-387-75615-5" scheme="ISBN">
-    <link rel="stylesheet" href="/assets/gitbook/style.css">
-                <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
-                <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-anchors/plugin.css">
-                <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-forkmegithub/plugin.css">
-                <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-highlight/website.css">
-                <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-search/search.css">
-                <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-fontsettings/website.css">
-    <meta name="HandheldFriendly" content="true"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/apple-touch-icon.webp">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="next" href="../security-and-identity/" />
-    <link rel="prev" href="add-todo-items.html" />
-    <meta property="fb:pages" content="1282476685124585" />
-    <meta property="og:type" content="website" />
-    <meta property="fb:app_id" content="561661137677920" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.webp">
-    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.webp">
-    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.webp">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130293099-1"></script>
-    <script>
-        window['ga-disable-UA-130293099-1'] = window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1";
-  window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'UA-130293099-1');
-    </script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4952787000309783" crossorigin="anonymous"></script>
+        <meta name="description" content="Una introducción amigable para construir aplicaciones web con el framework ASP.NET Core.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="../../favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="../../favicon.png">
+        
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
     </head>
     <body>
-<div class="book">
-    <div class="book-summary">
-<div id="book-search-input" role="search">
-    <input type="text" placeholder="Escribe para buscar" aria-label="Buscar"/>
-</div>
-                <nav role="navigation">
-<ul class="summary">
-        <li class="chapter " data-level="1.1" data-path="../../">
-                <a href="../../">
-                    Introducción
-                </a>
-        </li>
-        <li class="chapter " data-level="1.2" data-path="../your-first-application/">
-                <a href="../your-first-application/">
-                    Tú primera aplicación
-                </a>
-            <ul class="articles">
-        <li class="chapter " data-level="1.2.1" data-path="../your-first-application/get-the-sdk.html">
-                <a href="../your-first-application/get-the-sdk.html">
-                    Consigue el SDK
-                </a>
-        </li>
-        <li class="chapter " data-level="1.2.2" data-path="../your-first-application/hello-world-in-csharp.html">
-                <a href="../your-first-application/hello-world-in-csharp.html">
-                    Hola Mundo en C#
-                </a>
-        </li>
-        <li class="chapter " data-level="1.2.3" data-path="../your-first-application/create-aspnetcore-project.html">
-                <a href="../your-first-application/create-aspnetcore-project.html">
-                    Crear un proyecto de ASP.NET Core
-                </a>
-        </li>
-            </ul>
-        </li>
-        <li class="chapter " data-level="1.3" data-path="../mvc-basics/">
-                <a href="../mvc-basics/">
-                    Fundamentos de MVC
-                </a>
-            <ul class="articles">
-        <li class="chapter " data-level="1.3.1" data-path="../mvc-basics/create-controller.html">
-                <a href="../mvc-basics/create-controller.html">
-                    Crear un controlador
-                </a>
-        </li>
-        <li class="chapter " data-level="1.3.2" data-path="../mvc-basics/create-models.html">
-                <a href="../mvc-basics/create-models.html">
-                    Crear modelos
-                </a>
-        </li>
-        <li class="chapter " data-level="1.3.3" data-path="../mvc-basics/create-view.html">
-                <a href="../mvc-basics/create-view.html">
-                    Crear una vista
-                </a>
-        </li>
-        <li class="chapter " data-level="1.3.4" data-path="../mvc-basics/add-service-class.html">
-                <a href="../mvc-basics/add-service-class.html">
-                    Agregar una clase de servicio
-                </a>
-        </li>
-        <li class="chapter " data-level="1.3.5" data-path="../mvc-basics/use-dependency-injection.html">
-                <a href="../mvc-basics/use-dependency-injection.html">
-                    Usar inyección de dependencias
-                </a>
-        </li>
-        <li class="chapter " data-level="1.3.6" data-path="../mvc-basics/finish-controller.html">
-                <a href="../mvc-basics/finish-controller.html">
-                    Terminando el controlador
-                </a>
-        </li>
-        <li class="chapter " data-level="1.3.7" data-path="../mvc-basics/update-the-layout.html">
-                <a href="../mvc-basics/update-the-layout.html">
-                    Actualizar la plantilla
-                </a>
-        </li>
-            </ul>
-        </li>
-        <li class="chapter " data-level="1.4" data-path="../add-external-packages/">
-                <a href="../add-external-packages/">
-                    Agregando paquetes externos
-                </a>
-        </li>
-        <li class="chapter " data-level="1.5" data-path="../use-a-database/">
-                <a href="../use-a-database/">
-                    Usando una base de datos
-                </a>
-            <ul class="articles">
-        <li class="chapter " data-level="1.5.1" data-path="../use-a-database/connect-to-a-database.html">
-                <a href="../use-a-database/connect-to-a-database.html">
-                    Conectarse a una base de datos
-                </a>
-        </li>
-        <li class="chapter " data-level="1.5.2" data-path="../use-a-database/update-context.html">
-                <a href="../use-a-database/update-context.html">
-                    Actualizando el contexto
-                </a>
-        </li>
-        <li class="chapter " data-level="1.5.3" data-path="../use-a-database/create-migration.html">
-                <a href="../use-a-database/create-migration.html">
-                    Crear una migración
-                </a>
-        </li>
-        <li class="chapter " data-level="1.5.4" data-path="../use-a-database/create-service-class.html">
-                <a href="../use-a-database/create-service-class.html">
-                    Crear una nueva clase de servicio
-                </a>
-        </li>
-            </ul>
-        </li>
-        <li class="chapter " data-level="1.6" data-path="./">
-                <a href="./">
-                    Agregando más características
-                </a>
-            <ul class="articles">
-        <li class="chapter " data-level="1.6.1" data-path="add-todo-items.html">
-                <a href="add-todo-items.html">
-                    Agregar nuevas tareas
-                </a>
-        </li>
-        <li class="chapter active" data-level="1.6.2" data-path="complete-with-checkbox.html">
-                <a href="complete-with-checkbox.html">
-                    Completar las tareas con una casilla de verificación
-                </a>
-        </li>
-            </ul>
-        </li>
-        <li class="chapter " data-level="1.7" data-path="../security-and-identity/">
-                <a href="../security-and-identity/">
-                    Seguridad e Identidad
-                </a>
-            <ul class="articles">
-        <li class="chapter " data-level="1.7.1" data-path="../security-and-identity/require-authentication.html">
-                <a href="../security-and-identity/require-authentication.html">
-                    Requerir autenticación
-                </a>
-        </li>
-        <li class="chapter " data-level="1.7.2" data-path="../security-and-identity/using-identity-in-the-application.html">
-                <a href="../security-and-identity/using-identity-in-the-application.html">
-                    Usando identidad en la aplicación
-                </a>
-        </li>
-        <li class="chapter " data-level="1.7.3" data-path="../security-and-identity/authorization-with-roles.html">
-                <a href="../security-and-identity/authorization-with-roles.html">
-                    Autorización con roles
-                </a>
-        </li>
-        <li class="chapter " data-level="1.7.4" data-path="../security-and-identity/more-resources.html">
-                <a href="../security-and-identity/more-resources.html">
-                    Más recursos
-                </a>
-        </li>
-            </ul>
-        </li>
-        <li class="chapter " data-level="1.8" data-path="../automated-testing/">
-                <a href="../automated-testing/">
-                    Pruebas automáticas
-                </a>
-            <ul class="articles">
-        <li class="chapter " data-level="1.8.1" data-path="../automated-testing/unit-testing.html">
-                <a href="../automated-testing/unit-testing.html">
-                    Pruebas unitarias
-                </a>
-        </li>
-        <li class="chapter " data-level="1.8.2" data-path="../automated-testing/integration-testing.html">
-                <a href="../automated-testing/integration-testing.html">
-                    Pruebas de integración
-                </a>
-        </li>
-            </ul>
-        </li>
-        <li class="chapter " data-level="1.9" data-path="../deploy-the-application/">
-                <a href="../deploy-the-application/">
-                    Desplegando la aplicación
-                </a>
-            <ul class="articles">
-        <li class="chapter " data-level="1.9.1" data-path="../deploy-the-application/deploy-to-azure.html">
-                <a href="../deploy-the-application/deploy-to-azure.html">
-                    Desplegando en Azure
-                </a>
-        </li>
-        <li class="chapter " data-level="1.9.2" data-path="../deploy-the-application/deploy-with-docker.html">
-                <a href="../deploy-the-application/deploy-with-docker.html">
-                    Desplegando con Docker
-                </a>
-        </li>
-            </ul>
-        </li>
-        <li class="chapter " data-level="1.10" data-path="../conclusion/">
-                <a href="../conclusion/">
-                    Conclusión
-                </a>
-        </li>
-    <li class="divider"></li>
-    <li>
-        <a href="/" class="gitbook-link">
-            ASP.NET Core Master
-        </a>
-    </li>
-</ul>
-                </nav>
-    </div>
-    <div class="book-body">
-            <div class="body-inner">
-<div class="book-header" role="navigation">
-    <!-- Title -->
-    <h1>
-        <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Completar las tareas con una casilla de verificación</a>
-    </h1>
-</div>
-                    <div class="page-wrapper" tabindex="-1" role="main">
-                        <div class="page-inner">
-<div id="book-search-results">
-    <div class="search-noresults">
-                                <section class="normal markdown-section">
-                                <h2 id="completa-los-elementos-con-una-casilla-de-verificaci&#xF3;n"><a name="completa-los-elementos-con-una-casilla-de-verificaci&#xF3;n" class="plugin-anchor" href="#completa-los-elementos-con-una-casilla-de-verificaci&#xF3;n"><i class="fa fa-link" aria-hidden="true"></i></a>Completa los elementos con una casilla de verificaci&#xF3;n</h2>
-<p>Agregar tareas a t&#xFA; lista de tareas es genial, pero eventualmente necesitaras tambi&#xE9;n completar las cosas. En la vista <code>Views/Todo/Index.cshtml</code>, una casilla de verificaci&#xF3;n es, mostrada para cada tarea:</p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;checkbox&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;done-checkbox&quot;</span>&gt;</span>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../../chapters/your-first-application/index.html"><strong aria-hidden="true">1.</strong> Tú primera aplicación</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../chapters/your-first-application/get-the-sdk.html"><strong aria-hidden="true">1.1.</strong> Consigue el SDK</a></li><li class="chapter-item expanded "><a href="../../chapters/your-first-application/hello-world-in-csharp.html"><strong aria-hidden="true">1.2.</strong> Hola Mundo en C#</a></li><li class="chapter-item expanded "><a href="../../chapters/your-first-application/create-aspnetcore-project.html"><strong aria-hidden="true">1.3.</strong> Crear un proyecto de ASP.NET Core</a></li></ol></li><li class="chapter-item expanded "><a href="../../chapters/mvc-basics/index.html"><strong aria-hidden="true">2.</strong> Fundamentos de MVC</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../chapters/mvc-basics/create-controller.html"><strong aria-hidden="true">2.1.</strong> Crear un controlador</a></li><li class="chapter-item expanded "><a href="../../chapters/mvc-basics/create-models.html"><strong aria-hidden="true">2.2.</strong> Crear modelos</a></li><li class="chapter-item expanded "><a href="../../chapters/mvc-basics/create-view.html"><strong aria-hidden="true">2.3.</strong> Crear una vista</a></li><li class="chapter-item expanded "><a href="../../chapters/mvc-basics/add-service-class.html"><strong aria-hidden="true">2.4.</strong> Agregar una clase de servicio</a></li><li class="chapter-item expanded "><a href="../../chapters/mvc-basics/use-dependency-injection.html"><strong aria-hidden="true">2.5.</strong> Usar inyección de dependencias</a></li><li class="chapter-item expanded "><a href="../../chapters/mvc-basics/finish-controller.html"><strong aria-hidden="true">2.6.</strong> Terminando el controlador</a></li><li class="chapter-item expanded "><a href="../../chapters/mvc-basics/update-the-layout.html"><strong aria-hidden="true">2.7.</strong> Actualizar la plantilla</a></li></ol></li><li class="chapter-item expanded "><a href="../../chapters/add-external-packages/index.html"><strong aria-hidden="true">3.</strong> Agregando paquetes externos</a></li><li class="chapter-item expanded "><a href="../../chapters/use-a-database/index.html"><strong aria-hidden="true">4.</strong> Usando una base de datos</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../chapters/use-a-database/connect-to-a-database.html"><strong aria-hidden="true">4.1.</strong> Conectarse a una base de datos</a></li><li class="chapter-item expanded "><a href="../../chapters/use-a-database/update-context.html"><strong aria-hidden="true">4.2.</strong> Actualizando el contexto</a></li><li class="chapter-item expanded "><a href="../../chapters/use-a-database/create-migration.html"><strong aria-hidden="true">4.3.</strong> Crear una migración</a></li><li class="chapter-item expanded "><a href="../../chapters/use-a-database/create-service-class.html"><strong aria-hidden="true">4.4.</strong> Crear una nueva clase de servicio</a></li></ol></li><li class="chapter-item expanded "><a href="../../chapters/add-more-features/index.html"><strong aria-hidden="true">5.</strong> Agregando más características</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../chapters/add-more-features/add-todo-items.html"><strong aria-hidden="true">5.1.</strong> Agregar nuevas tareas</a></li><li class="chapter-item expanded "><a href="../../chapters/add-more-features/complete-with-checkbox.html" class="active"><strong aria-hidden="true">5.2.</strong> Completar las tareas con una casilla de verificación</a></li></ol></li><li class="chapter-item expanded "><a href="../../chapters/security-and-identity/index.html"><strong aria-hidden="true">6.</strong> Seguridad e Identidad</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../chapters/security-and-identity/require-authentication.html"><strong aria-hidden="true">6.1.</strong> Requerir autenticación</a></li><li class="chapter-item expanded "><a href="../../chapters/security-and-identity/using-identity-in-the-application.html"><strong aria-hidden="true">6.2.</strong> Usando identidad en la aplicación</a></li><li class="chapter-item expanded "><a href="../../chapters/security-and-identity/authorization-with-roles.html"><strong aria-hidden="true">6.3.</strong> Autorización con roles</a></li><li class="chapter-item expanded "><a href="../../chapters/security-and-identity/more-resources.html"><strong aria-hidden="true">6.4.</strong> Más recursos</a></li></ol></li><li class="chapter-item expanded "><a href="../../chapters/automated-testing/index.html"><strong aria-hidden="true">7.</strong> Pruebas automáticas</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../chapters/automated-testing/unit-testing.html"><strong aria-hidden="true">7.1.</strong> Pruebas unitarias</a></li><li class="chapter-item expanded "><a href="../../chapters/automated-testing/integration-testing.html"><strong aria-hidden="true">7.2.</strong> Pruebas de integración</a></li></ol></li><li class="chapter-item expanded "><a href="../../chapters/deploy-the-application/index.html"><strong aria-hidden="true">8.</strong> Desplegando la aplicación</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../chapters/deploy-the-application/deploy-to-azure.html"><strong aria-hidden="true">8.1.</strong> Desplegando en Azure</a></li><li class="chapter-item expanded "><a href="../../chapters/deploy-the-application/deploy-with-docker.html"><strong aria-hidden="true">8.2.</strong> Desplegando con Docker</a></li></ol></li><li class="chapter-item expanded "><a href="../../chapters/conclusion/index.html"><strong aria-hidden="true">9.</strong> Conclusión</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">El pequeño libro de ASP.NET Core</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                        <a href="https://github.com/jahbenjah/little-aspnetcore-book" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#completa-los-elementos-con-una-casilla-de-verificación" id="completa-los-elementos-con-una-casilla-de-verificación">Completa los elementos con una casilla de verificación</a></h1>
+<p>Agregar tareas a tú lista de tareas es genial, pero eventualmente necesitaras también completar las cosas. En la vista <code>Views/Todo/Index.cshtml</code>, una casilla de verificación es, mostrada para cada tarea:</p>
+<pre><code class="language-html">&lt;input type=&quot;checkbox&quot; class=&quot;done-checkbox&quot;&gt;
 </code></pre>
-<p>Presionando la casilla de verificaci&#xF3;n no hace nada aun. Al igual que en el cap&#xED;tulo anterior, agregaras este comportamiento usando formularios y acciones. En este caso necesitaras un peque&#xF1;o c&#xF3;digo en Javascript.</p>
-<h3 id="agregar-elementos-al-formulario-de-la-vista"><a name="agregar-elementos-al-formulario-de-la-vista" class="plugin-anchor" href="#agregar-elementos-al-formulario-de-la-vista"><i class="fa fa-link" aria-hidden="true"></i></a>Agregar elementos al formulario de la vista</h3>
-<p>Primero, actualiza la vista y encierra cada casilla de verificaci&#xF3;n con un elemento <code>&lt;form&gt;</code>. Despu&#xE9;s, agregar un elemento oculto que contenga el ID de la tarea:</p>
+<p>Presionando la casilla de verificación no hace nada aun. Al igual que en el capítulo anterior, agregaras este comportamiento usando formularios y acciones. En este caso necesitaras un pequeño código en Javascript.</p>
+<h2><a class="header" href="#agregar-elementos-al-formulario-de-la-vista" id="agregar-elementos-al-formulario-de-la-vista">Agregar elementos al formulario de la vista</a></h2>
+<p>Primero, actualiza la vista y encierra cada casilla de verificación con un elemento <code>&lt;form&gt;</code>. Después, agregar un elemento oculto que contenga el ID de la tarea:</p>
 <p><strong>Views/Todo/Index.cshtml</strong></p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">asp-action</span>=<span class="hljs-string">&quot;MarkDone&quot;</span> <span class="hljs-attr">method</span>=<span class="hljs-string">&quot;POST&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;checkbox&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;done-checkbox&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;hidden&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;id&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;@item.Id&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+<pre><code class="language-html">&lt;td&gt;
+    &lt;form asp-action=&quot;MarkDone&quot; method=&quot;POST&quot;&gt;
+        &lt;input type=&quot;checkbox&quot; class=&quot;done-checkbox&quot;&gt;
+        &lt;input type=&quot;hidden&quot; name=&quot;id&quot; value=&quot;@item.Id&quot;&gt;
+    &lt;/form&gt;
+&lt;/td&gt;
 </code></pre>
-<p>Cuando el bucle <code>foreach</code> se ejecuta en la vista e imprime una fila para cada tarea pendiente, existir&#xE1; una copia de este formulario en cada fila. La entrada oculta que contiene el ID de la tarea a realizar permite que el c&#xF3;digo de su controlador indique qu&#xE9; casilla se marc&#xF3;. (Sin &#xE9;l, podr&#xED;a indicar que se marc&#xF3; <em>alguna</em> casilla, pero no cu&#xE1;l.)</p>
-<p>Si ejecutas la aplicaci&#xF3;n ahora mismo, las casillas de verificaci&#xF3;n aun no hacen nada, porque no hay un bot&#xF3;n para submit para decir al navegador para crear una solicitud POST con los datos del formulario. Puedes agregar un bot&#xF3;n de submit bajo cada casilla de verificaci&#xF3;n pero esto seria una mala experiencia de usuario. Idealmente dando clic en una casilla de verificaci&#xF3;n deber&#xED;a env&#xED;a el formulario. Puedes lograrlo agregando algo de c&#xF3;digo de JavaScript.</p>
-<h3 id="agregar-c&#xF3;digo-javascript"><a name="agregar-c&#xF3;digo-javascript" class="plugin-anchor" href="#agregar-c&#xF3;digo-javascript"><i class="fa fa-link" aria-hidden="true"></i></a>Agregar c&#xF3;digo Javascript</h3>
-<p>Busca el archivo <code>site.js</code> en el directorio <code>wwwroot/js</code> y agrega este c&#xF3;digo: </p>
+<p>Cuando el bucle <code>foreach</code> se ejecuta en la vista e imprime una fila para cada tarea pendiente, existirá una copia de este formulario en cada fila. La entrada oculta que contiene el ID de la tarea a realizar permite que el código de su controlador indique qué casilla se marcó. (Sin él, podría indicar que se marcó <em>alguna</em> casilla, pero no cuál.)</p>
+<p>Si ejecutas la aplicación ahora mismo, las casillas de verificación aun no hacen nada, porque no hay un botón para submit para decir al navegador para crear una solicitud POST con los datos del formulario. Puedes agregar un botón de submit bajo cada casilla de verificación pero esto seria una mala experiencia de usuario. Idealmente dando clic en una casilla de verificación debería envía el formulario. Puedes lograrlo agregando algo de código de JavaScript.</p>
+<h2><a class="header" href="#agregar-código-javascript" id="agregar-código-javascript">Agregar código Javascript</a></h2>
+<p>Busca el archivo <code>site.js</code> en el directorio <code>wwwroot/js</code> y agrega este código: </p>
 <p><strong>wwwroot/js/site.js</strong></p>
-<pre><code class="lang-javascript">$(<span class="hljs-built_in">document</span>).ready(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
-    <span class="hljs-comment">// Wire up all of the checkboxes to run markCompleted()</span>
-    $(<span class="hljs-string">&apos;.done-checkbox&apos;</span>).on(<span class="hljs-string">&apos;click&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+<pre><code class="language-javascript">$(document).ready(function() {
+
+    // Wire up all of the checkboxes to run markCompleted()
+    $('.done-checkbox').on('click', function(e) {
         markCompleted(e.target);
     });
 });
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">markCompleted</span>(<span class="hljs-params">checkbox</span>) </span>{
-    checkbox.disabled = <span class="hljs-literal">true</span>;
-    <span class="hljs-keyword">var</span> row = checkbox.closest(<span class="hljs-string">&apos;tr&apos;</span>);
-    $(row).addClass(<span class="hljs-string">&apos;done&apos;</span>);
-    <span class="hljs-keyword">var</span> form = checkbox.closest(<span class="hljs-string">&apos;form&apos;</span>);
+
+function markCompleted(checkbox) {
+    checkbox.disabled = true;
+
+    var row = checkbox.closest('tr');
+    $(row).addClass('done');
+
+    var form = checkbox.closest('form');
     form.submit();
 }
 </code></pre>
-<p>Este c&#xF3;digo primero usa jQuery (a una librer&#xED;a de apoyo en JavaScript) para adjuntar algo de c&#xF3;digo al evento <code>click</code> de todos las casillas de verificaci&#xF3;n sobre la p&#xE1;gina con la clase CSS <code>done-checkbox</code>. Cuando una casilla de verificaci&#xF3;n es presionada, la funci&#xF3;n <code>markCompleted()</code> es ejecutada.</p>
-<p>La funci&#xF3;n <code>markCompleted()</code> hace algunas cosas:</p>
+<p>Este código primero usa jQuery (a una librería de apoyo en JavaScript) para adjuntar algo de código al evento <code>click</code> de todos las casillas de verificación sobre la página con la clase CSS <code>done-checkbox</code>. Cuando una casilla de verificación es presionada, la función <code>markCompleted()</code> es ejecutada.</p>
+<p>La función <code>markCompleted()</code> hace algunas cosas:</p>
 <ul>
-<li>Agrega el atributo <code>disabled</code> a las casillas de verificaci&#xF3;n as&#xED; estas no pueden ser selecionadas otra vez</li>
-<li>Agrega la clase CSS <code>done</code> a la fila padre que contiene la casilla de verificaci&#xF3;n, la cual cambia la forma que la final luce basada en las reglas CSS en el archivo <code>style.css</code></li>
+<li>Agrega el atributo <code>disabled</code> a las casillas de verificación así estas no pueden ser selecionadas otra vez</li>
+<li>Agrega la clase CSS <code>done</code> a la fila padre que contiene la casilla de verificación, la cual cambia la forma que la final luce basada en las reglas CSS en el archivo <code>style.css</code></li>
 <li>Enviar el formulario</li>
 </ul>
-<p>Esto toma responsabilidad del la vista y el c&#xF3;digo del lado del cliente. Ahora es tiempo de agregar una nueva acci&#xF3;n</p>
-<h3 id="agregar-una-acci&#xF3;n-al-controlador"><a name="agregar-una-acci&#xF3;n-al-controlador" class="plugin-anchor" href="#agregar-una-acci&#xF3;n-al-controlador"><i class="fa fa-link" aria-hidden="true"></i></a>Agregar una acci&#xF3;n al controlador</h3>
-<p>Como haz probablemente adivinado, necesitas agregar una acci&#xF3;n llamada <code>MarkDone</code> en el controlador <code>TodoController</code>:</p>
-<pre><code class="lang-csharp">[ValidateAntiForgeryToken]
-<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">async</span> Task&lt;IActionResult&gt; <span class="hljs-title">MarkDone</span>(<span class="hljs-params">Guid id</span>)
-</span>{
-    <span class="hljs-keyword">if</span> (id == Guid.Empty)
-    {
-        <span class="hljs-keyword">return</span> RedirectToAction(<span class="hljs-string">&quot;Index&quot;</span>);
-    }
-    <span class="hljs-keyword">var</span> successful = <span class="hljs-keyword">await</span> _todoItemService.MarkDoneAsync(id);
-    <span class="hljs-keyword">if</span> (!successful)
-    {
-        <span class="hljs-keyword">return</span> BadRequest(<span class="hljs-string">&quot;Could not mark item as done.&quot;</span>);
-    }
-    <span class="hljs-keyword">return</span> RedirectToAction(<span class="hljs-string">&quot;Index&quot;</span>);
-}
-</code></pre>
-<p>Vayamos a trav&#xE9;s de cada l&#xED;nea de este m&#xE9;todo de acci&#xF3;n. Primero, el m&#xE9;todo acepta un par&#xE1;metro <code>Guid</code> llamado<code>id</code> en la firma del m&#xE9;todo. A diferencia de la acci&#xF3;n <code>AddItem</code>, que utiliza un modelo y un modelo de enlace / validaci&#xF3;n, el par&#xE1;metro <code>id</code> es muy simple. Si los datos de la solicitud entrante incluyen un campo llamado <code>id</code>, ASP.NET Core intentar&#xE1; analizarlo como una gu&#xED;a. Esto funciona porque el elemento oculto que agreg&#xF3; al formulario de casilla de verificaci&#xF3;n se llama <code>id</code>.</p>
-<p>Como no est&#xE1; utilizando el enlace de modelo, no hay un <code>ModelState</code> para verificar la validez. En su lugar, puede verificar el valor GUID directamente para asegurarse de que sea v&#xE1;lido. Si, por alg&#xFA;n motivo, el par&#xE1;metro <code>id</code> en la solicitud faltaba o no pod&#xED;a analizarse como guid, <code>id</code> tendr&#xE1; un valor de <code>Guid.Empty</code>. Si ese es el caso, la acci&#xF3;n le dice al navegador que redirija a <code>/Todo/Index</code> y actualice la p&#xE1;gina.</p>
-<p>A continuaci&#xF3;n, el controlador debe llamar a la capa de servicio para actualizar la base de datos. Esto ser&#xE1; manejado por un nuevo m&#xE9;todo llamado <code>MarkDoneAsync</code> en la interfaz <code>ITodoItemService</code>, que devolver&#xE1; verdadero o falso dependiendo de si la actualizaci&#xF3;n tuvo &#xE9;xito:</p>
-<pre><code class="lang-csharp"><span class="hljs-keyword">var</span> successful = <span class="hljs-keyword">await</span> _todoItemService.MarkDoneAsync(id);
-<span class="hljs-keyword">if</span> (!successful)
+<p>Esto toma responsabilidad del la vista y el código del lado del cliente. Ahora es tiempo de agregar una nueva acción</p>
+<h2><a class="header" href="#agregar-una-acción-al-controlador" id="agregar-una-acción-al-controlador">Agregar una acción al controlador</a></h2>
+<p>Como haz probablemente adivinado, necesitas agregar una acción llamada <code>MarkDone</code> en el controlador <code>TodoController</code>:</p>
+<pre><code class="language-csharp">[ValidateAntiForgeryToken]
+public async Task&lt;IActionResult&gt; MarkDone(Guid id)
 {
-    <span class="hljs-keyword">return</span> BadRequest(<span class="hljs-string">&quot;Could not mark item as done.&quot;</span>);
+    if (id == Guid.Empty)
+    {
+        return RedirectToAction(&quot;Index&quot;);
+    }
+
+    var successful = await _todoItemService.MarkDoneAsync(id);
+    if (!successful)
+    {
+        return BadRequest(&quot;Could not mark item as done.&quot;);
+    }
+
+    return RedirectToAction(&quot;Index&quot;);
 }
 </code></pre>
-<p>Finalmente, si todo se ve bien, el navegador se redirige a la acci&#xF3;n <code>/Todo/Index</code> y la p&#xE1;gina se actualiza.</p>
-<p>Con la vista y el controlador actualizados, todo lo que queda es agregar el m&#xE9;todo de servicio faltante.</p>
-<h3 id="agregar-un-m&#xE9;todo-de-servicio"><a name="agregar-un-m&#xE9;todo-de-servicio" class="plugin-anchor" href="#agregar-un-m&#xE9;todo-de-servicio"><i class="fa fa-link" aria-hidden="true"></i></a>Agregar un m&#xE9;todo de servicio</h3>
-<p>Primero, agregar <code>MarkDoneAsync</code> a la definici&#xF3;n de la interface:</p>
-<p><strong>Services/ITodoItemService.cs</strong></p>
-<pre><code class="lang-csharp"><span class="hljs-function">Task&lt;<span class="hljs-keyword">bool</span>&gt; <span class="hljs-title">MarkDoneAsync</span>(<span class="hljs-params">Guid id</span>)</span>;
+<p>Vayamos a través de cada línea de este método de acción. Primero, el método acepta un parámetro <code>Guid</code> llamado <code>id</code> en la firma del método. A diferencia de la acción <code>AddItem</code>, que utiliza un modelo y un modelo de enlace / validación, el parámetro <code>id</code> es muy simple. Si los datos de la solicitud entrante incluyen un campo llamado <code>id</code>, ASP.NET Core intentará analizarlo como una guía. Esto funciona porque el elemento oculto que agregó al formulario de casilla de verificación se llama <code>id</code>.</p>
+<p>Como no está utilizando el enlace de modelo, no hay un <code>ModelState</code> para verificar la validez. En su lugar, puede verificar el valor GUID directamente para asegurarse de que sea válido. Si, por algún motivo, el parámetro <code>id</code> en la solicitud faltaba o no podía analizarse como guid, <code>id</code> tendrá un valor de <code>Guid.Empty</code>. Si ese es el caso, la acción le dice al navegador que redirija a <code>/Todo/Index</code> y actualice la página.</p>
+<p>A continuación, el controlador debe llamar a la capa de servicio para actualizar la base de datos. Esto será manejado por un nuevo método llamado <code>MarkDoneAsync</code> en la interfaz <code>ITodoItemService</code>, que devolverá verdadero o falso dependiendo de si la actualización tuvo éxito:</p>
+<pre><code class="language-csharp">var successful = await _todoItemService.MarkDoneAsync(id);
+if (!successful)
+{
+    return BadRequest(&quot;Could not mark item as done.&quot;);
+}
 </code></pre>
-<p>Despu&#xE9;s, agrega la implementaci&#xF3;n concreta al servicio <code>TodoItemService</code>: </p>
+<p>Finalmente, si todo se ve bien, el navegador se redirige a la acción <code>/Todo/Index</code> y la página se actualiza.</p>
+<p>Con la vista y el controlador actualizados, todo lo que queda es agregar el método de servicio faltante.</p>
+<h2><a class="header" href="#agregar-un-método-de-servicio" id="agregar-un-método-de-servicio">Agregar un método de servicio</a></h2>
+<p>Primero, agregar <code>MarkDoneAsync</code> a la definición de la interface:</p>
+<p><strong>Services/ITodoItemService.cs</strong></p>
+<pre><code class="language-csharp">Task&lt;bool&gt; MarkDoneAsync(Guid id);
+</code></pre>
+<p>Después, agrega la implementación concreta al servicio <code>TodoItemService</code>:</p>
 <p><strong>Services/TodoItemService.cs</strong></p>
-<pre><code class="lang-csharp"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">async</span> Task&lt;<span class="hljs-keyword">bool</span>&gt; <span class="hljs-title">MarkDoneAsync</span>(<span class="hljs-params">Guid id</span>)
-</span>{
-    <span class="hljs-keyword">var</span> item = <span class="hljs-keyword">await</span> _context.Items
+<pre><code class="language-csharp">public async Task&lt;bool&gt; MarkDoneAsync(Guid id)
+{
+    var item = await _context.Items
         .Where(x =&gt; x.Id == id)
         .SingleOrDefaultAsync();
-    <span class="hljs-keyword">if</span> (item == <span class="hljs-keyword">null</span>) <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
-    item.IsDone = <span class="hljs-keyword">true</span>;
-    <span class="hljs-keyword">var</span> saveResult = <span class="hljs-keyword">await</span> _context.SaveChangesAsync();
-    <span class="hljs-keyword">return</span> saveResult == <span class="hljs-number">1</span>; <span class="hljs-comment">// One entity should have been updated</span>
+
+    if (item == null) return false;
+
+    item.IsDone = true;
+
+    var saveResult = await _context.SaveChangesAsync();
+    return saveResult == 1; // One entity should have been updated
 }
 </code></pre>
-<p>Este m&#xE9;todo usa Entity Framework Core y <code>Where()</code> para encontrar una tarea por ID en la base de datos. El m&#xE9;todo <code>SingleOrDefaultAsync()</code> regresara una tarea o <code>null</code> si esta no es encontrada.</p>
-<p>Una vez que estas seguro que el <code>item</code> no es nulo, es una simple cuesti&#xF3;n de configurar la propiedad <code>IsDone</code>:</p>
-<pre><code class="lang-csharp">item.IsDone = <span class="hljs-keyword">true</span>;
+<p>Este método usa Entity Framework Core y <code>Where()</code> para encontrar una tarea por ID en la base de datos. El método <code>SingleOrDefaultAsync()</code> regresara una tarea o <code>null</code> si esta no es encontrada.</p>
+<p>Una vez que estas seguro que el <code>item</code> no es nulo, es una simple cuestión de configurar la propiedad <code>IsDone</code>:</p>
+<pre><code class="language-csharp">item.IsDone = true;
 </code></pre>
-<p>Cambiando la propiedad solo afecta a la copia local de la tarea hasta que el m&#xE9;todo <code>SaveChangesAsync()</code> es llamada para guardar el cambio en la base de datos. <code>SaveChangesAsync()</code> regresa un numero que indica cu&#xE1;ntas entidades fueron actualizas durante la operaci&#xF3;n de guardar. En este caso, sera o 1 (la tarea fue actualizada) o (algo malo sucedi&#xF3;).</p>
-<h3 id="probando"><a name="probando" class="plugin-anchor" href="#probando"><i class="fa fa-link" aria-hidden="true"></i></a>Probando</h3>
-<p>Ejecuta la aplicaci&#xF3;n y checa algunas tareas de la lista. Refrescar la p&#xE1;gina y ellas desaparecer&#xE1;n completamente, porque el filtro <code>Where()</code> aplicado en el m&#xE9;todo <code>GetIncompleteItemsAsync()</code>.
-Ahora mismo, la aplicaci&#xF3;n contiene una sola, lista de tareas compartida. Seria mucho m&#xE1;s util si mantuviera registros de una lista de tareas individual para cada usuario. En el siguiente cap&#xED;tulo, agregar&#xE1;s inicio de sesi&#xF3;n y caracter&#xED;sticas de seguridad al proyecto.</p>
-                                </section>
-    </div>
-    <div class="search-results">
-        <div class="has-results">
-            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
-            <ul class="search-results-list"></ul>
-        </div>
-        <div class="no-results">
-            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
-        </div>
-    </div>
-</div>
-                        </div>
-                    </div>
+<p>Cambiando la propiedad solo afecta a la copia local de la tarea hasta que el método <code>SaveChangesAsync()</code> es llamada para guardar el cambio en la base de datos. <code>SaveChangesAsync()</code> regresa un numero que indica cuántas entidades fueron actualizas durante la operación de guardar. En este caso, sera o 1 (la tarea fue actualizada) o (algo malo sucedió).</p>
+<h2><a class="header" href="#probando" id="probando">Probando</a></h2>
+<p>Ejecuta la aplicación y checa algunas tareas de la lista. Refrescar la página y ellas desaparecerán completamente, porque el filtro <code>Where()</code> aplicado en el método <code>GetIncompleteItemsAsync()</code>.
+Ahora mismo, la aplicación contiene una sola, lista de tareas compartida. Seria mucho más util si mantuviera registros de una lista de tareas individual para cada usuario. En el siguiente capítulo, agregarás inicio de sesión y características de seguridad al proyecto.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../../chapters/add-more-features/add-todo-items.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../../chapters/security-and-identity/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
             </div>
-                <a href="add-todo-items.html" class="navigation navigation-prev " aria-label="Previous page: Agregar nuevas tareas">
-                    <i class="fa fa-angle-left"></i>
-                </a>
-                <a href="../security-and-identity/" class="navigation navigation-next " aria-label="Next page: Seguridad e Identidad">
-                    <i class="fa fa-angle-right"></i>
-                </a>
-    </div>
-    <script>
-        var gitbook = gitbook || [];
-        gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Completar las tareas con una casilla de verificación","level":"1.6.2","depth":2,"next":{"title":"Seguridad e Identidad","level":"1.7","depth":1,"path":"chapters/security-and-identity/README.md","ref":"chapters/security-and-identity/README.md","articles":[{"title":"Requerir autenticación","level":"1.7.1","depth":2,"path":"chapters/security-and-identity/require-authentication.md","ref":"chapters/security-and-identity/require-authentication.md","articles":[]},{"title":"Usando identidad en la aplicación","level":"1.7.2","depth":2,"path":"chapters/security-and-identity/using-identity-in-the-application.md","ref":"chapters/security-and-identity/using-identity-in-the-application.md","articles":[]},{"title":"Autorización con roles","level":"1.7.3","depth":2,"path":"chapters/security-and-identity/authorization-with-roles.md","ref":"chapters/security-and-identity/authorization-with-roles.md","articles":[]},{"title":"Más recursos","level":"1.7.4","depth":2,"path":"chapters/security-and-identity/more-resources.md","ref":"chapters/security-and-identity/more-resources.md","articles":[]}]},"previous":{"title":"Agregar nuevas tareas","level":"1.6.1","depth":2,"path":"chapters/add-more-features/add-todo-items.md","ref":"chapters/add-more-features/add-todo-items.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters-small","anchors","forkmegithub","analytics"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"analytics":{"google":"UA-130293099-1"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"forkmegithub":{"color":"green","url":"https://github.com/jahbenjah/little-aspnetcore-book"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Nate Barbettini","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Lato","paperSize":"a5","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"978-1-387-75615-5","variables":{},"title":"El pequeño libro de ASP.NET Core","language":"es","gitbook":"*","description":"Una introducción amigable para construir aplicaciones web con el framework ASP.NET Core."},"file":{"path":"chapters/add-more-features/complete-with-checkbox.md","mtime":"2019-03-18T02:21:27.345Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-22T16:25:31.396Z"},"basePath":"../..","book":{"language":""}});
-        });
-    </script>
-</div>
-    <!-- <script src="/assets/js/site.js" async></script> -->
-    <script src="/assets/gitbook/gitbook.js" async></script>
-    <script src="/assets/gitbook/theme.js" async></script>
-    <script src="/assets/gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js" async></script>
-    <script src="/assets/gitbook/gitbook-plugin-forkmegithub/plugin.js" async></script>
-    <script src="/assets/gitbook/gitbook-plugin-search/search-engine.js" async></script>
-    <script src="/assets/gitbook/gitbook-plugin-search/search.js" async></script>
-    <script src="/assets/gitbook/gitbook-plugin-lunr/lunr.min.js" async></script>
-    <script src="/assets/gitbook/gitbook-plugin-lunr/search-lunr.js" async></script>
-    <script src="/assets/gitbook/gitbook-plugin-sharing/buttons.js" async></script>
-    <script src="/assets/gitbook/gitbook-plugin-fontsettings/fontsettings.js" async></script>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../../chapters/add-more-features/add-todo-items.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../../chapters/security-and-identity/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+        <!-- Google Analytics Tag -->
+        <script type="text/javascript">
+            var localAddrs = ["localhost", "127.0.0.1", ""];
+
+            // make sure we don't activate google analytics if the developer is
+            // inspecting the book locally...
+            if (localAddrs.indexOf(document.location.hostname) === -1) {
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                ga('create', 'UA-130293099-1', 'auto');
+                ga('send', 'pageview');
+            }
+        </script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4952787000309783" crossorigin="anonymous"></script>
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
     </body>
 </html>

@@ -1,557 +1,403 @@
 <!DOCTYPE HTML>
-<html lang="es">
+<html lang="es" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Pruebas unitarias - El pequeño libro de ASP.NET Core</title>
+        
+        
 
-<head>
-    <meta charset="UTF-8">
-    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-    <title>Pruebas unitarias ✅ El pequeño libro de ASP.NET Core</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="description" content="">
-    <meta name="generator" content="GitBook 3.2.3">
-    <meta name="author" content="Nate Barbettini">
-    <meta name="identifier" content="978-1-387-75615-5" scheme="ISBN">
-    <link rel="stylesheet" href="/assets/gitbook/style.css">
-    <link rel="stylesheet"
-        href="/assets/gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
-    <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-anchors/plugin.css">
-    <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-forkmegithub/plugin.css">
-    <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-highlight/website.css">
-    <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-search/search.css">
-    <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-fontsettings/website.css">
-    <meta name="HandheldFriendly" content="true" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/apple-touch-icon.webp">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="next" href="integration-testing.html" />
-    <link rel="prev" href="./" />
-    <meta property="fb:pages" content="1282476685124585" />
-    <meta property="og:type" content="website" />
-    <meta property="fb:app_id" content="561661137677920" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.webp">
-    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.webp">
-    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.webp">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130293099-1"></script>
-    <script>
-        window['ga-disable-UA-130293099-1'] = window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1";
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'UA-130293099-1');
-    </script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4952787000309783" crossorigin="anonymous"></script>
-</head>
 
-<body>
-    <div class="book">
-        <div class="book-summary">
-            <div id="book-search-input" role="search">
-                <input type="text" placeholder="Escribe para buscar" aria-label="Buscar" />
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="Una introducción amigable para construir aplicaciones web con el framework ASP.NET Core.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="../../favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="../../favicon.png">
+        
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../../chapters/your-first-application/index.html"><strong aria-hidden="true">1.</strong> Tú primera aplicación</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../chapters/your-first-application/get-the-sdk.html"><strong aria-hidden="true">1.1.</strong> Consigue el SDK</a></li><li class="chapter-item expanded "><a href="../../chapters/your-first-application/hello-world-in-csharp.html"><strong aria-hidden="true">1.2.</strong> Hola Mundo en C#</a></li><li class="chapter-item expanded "><a href="../../chapters/your-first-application/create-aspnetcore-project.html"><strong aria-hidden="true">1.3.</strong> Crear un proyecto de ASP.NET Core</a></li></ol></li><li class="chapter-item expanded "><a href="../../chapters/mvc-basics/index.html"><strong aria-hidden="true">2.</strong> Fundamentos de MVC</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../chapters/mvc-basics/create-controller.html"><strong aria-hidden="true">2.1.</strong> Crear un controlador</a></li><li class="chapter-item expanded "><a href="../../chapters/mvc-basics/create-models.html"><strong aria-hidden="true">2.2.</strong> Crear modelos</a></li><li class="chapter-item expanded "><a href="../../chapters/mvc-basics/create-view.html"><strong aria-hidden="true">2.3.</strong> Crear una vista</a></li><li class="chapter-item expanded "><a href="../../chapters/mvc-basics/add-service-class.html"><strong aria-hidden="true">2.4.</strong> Agregar una clase de servicio</a></li><li class="chapter-item expanded "><a href="../../chapters/mvc-basics/use-dependency-injection.html"><strong aria-hidden="true">2.5.</strong> Usar inyección de dependencias</a></li><li class="chapter-item expanded "><a href="../../chapters/mvc-basics/finish-controller.html"><strong aria-hidden="true">2.6.</strong> Terminando el controlador</a></li><li class="chapter-item expanded "><a href="../../chapters/mvc-basics/update-the-layout.html"><strong aria-hidden="true">2.7.</strong> Actualizar la plantilla</a></li></ol></li><li class="chapter-item expanded "><a href="../../chapters/add-external-packages/index.html"><strong aria-hidden="true">3.</strong> Agregando paquetes externos</a></li><li class="chapter-item expanded "><a href="../../chapters/use-a-database/index.html"><strong aria-hidden="true">4.</strong> Usando una base de datos</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../chapters/use-a-database/connect-to-a-database.html"><strong aria-hidden="true">4.1.</strong> Conectarse a una base de datos</a></li><li class="chapter-item expanded "><a href="../../chapters/use-a-database/update-context.html"><strong aria-hidden="true">4.2.</strong> Actualizando el contexto</a></li><li class="chapter-item expanded "><a href="../../chapters/use-a-database/create-migration.html"><strong aria-hidden="true">4.3.</strong> Crear una migración</a></li><li class="chapter-item expanded "><a href="../../chapters/use-a-database/create-service-class.html"><strong aria-hidden="true">4.4.</strong> Crear una nueva clase de servicio</a></li></ol></li><li class="chapter-item expanded "><a href="../../chapters/add-more-features/index.html"><strong aria-hidden="true">5.</strong> Agregando más características</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../chapters/add-more-features/add-todo-items.html"><strong aria-hidden="true">5.1.</strong> Agregar nuevas tareas</a></li><li class="chapter-item expanded "><a href="../../chapters/add-more-features/complete-with-checkbox.html"><strong aria-hidden="true">5.2.</strong> Completar las tareas con una casilla de verificación</a></li></ol></li><li class="chapter-item expanded "><a href="../../chapters/security-and-identity/index.html"><strong aria-hidden="true">6.</strong> Seguridad e Identidad</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../chapters/security-and-identity/require-authentication.html"><strong aria-hidden="true">6.1.</strong> Requerir autenticación</a></li><li class="chapter-item expanded "><a href="../../chapters/security-and-identity/using-identity-in-the-application.html"><strong aria-hidden="true">6.2.</strong> Usando identidad en la aplicación</a></li><li class="chapter-item expanded "><a href="../../chapters/security-and-identity/authorization-with-roles.html"><strong aria-hidden="true">6.3.</strong> Autorización con roles</a></li><li class="chapter-item expanded "><a href="../../chapters/security-and-identity/more-resources.html"><strong aria-hidden="true">6.4.</strong> Más recursos</a></li></ol></li><li class="chapter-item expanded "><a href="../../chapters/automated-testing/index.html"><strong aria-hidden="true">7.</strong> Pruebas automáticas</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../chapters/automated-testing/unit-testing.html" class="active"><strong aria-hidden="true">7.1.</strong> Pruebas unitarias</a></li><li class="chapter-item expanded "><a href="../../chapters/automated-testing/integration-testing.html"><strong aria-hidden="true">7.2.</strong> Pruebas de integración</a></li></ol></li><li class="chapter-item expanded "><a href="../../chapters/deploy-the-application/index.html"><strong aria-hidden="true">8.</strong> Desplegando la aplicación</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../chapters/deploy-the-application/deploy-to-azure.html"><strong aria-hidden="true">8.1.</strong> Desplegando en Azure</a></li><li class="chapter-item expanded "><a href="../../chapters/deploy-the-application/deploy-with-docker.html"><strong aria-hidden="true">8.2.</strong> Desplegando con Docker</a></li></ol></li><li class="chapter-item expanded "><a href="../../chapters/conclusion/index.html"><strong aria-hidden="true">9.</strong> Conclusión</a></li></ol>
             </div>
-            <nav role="navigation">
-                <ul class="summary">
-                    <li class="chapter " data-level="1.1" data-path="../../">
-                        <a href="../../">
-                            Introducción
-                        </a>
-                    </li>
-                    <li class="chapter " data-level="1.2" data-path="../your-first-application/">
-                        <a href="../your-first-application/">
-                            Tú primera aplicación
-                        </a>
-                        <ul class="articles">
-                            <li class="chapter " data-level="1.2.1"
-                                data-path="../your-first-application/get-the-sdk.html">
-                                <a href="../your-first-application/get-the-sdk.html">
-                                    Consigue el SDK
-                                </a>
-                            </li>
-                            <li class="chapter " data-level="1.2.2"
-                                data-path="../your-first-application/hello-world-in-csharp.html">
-                                <a href="../your-first-application/hello-world-in-csharp.html">
-                                    Hola Mundo en C#
-                                </a>
-                            </li>
-                            <li class="chapter " data-level="1.2.3"
-                                data-path="../your-first-application/create-aspnetcore-project.html">
-                                <a href="../your-first-application/create-aspnetcore-project.html">
-                                    Crear un proyecto de ASP.NET Core
-                                </a>
-                            </li>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
                         </ul>
-                    </li>
-                    <li class="chapter " data-level="1.3" data-path="../mvc-basics/">
-                        <a href="../mvc-basics/">
-                            Fundamentos de MVC
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">El pequeño libro de ASP.NET Core</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
                         </a>
-                        <ul class="articles">
-                            <li class="chapter " data-level="1.3.1" data-path="../mvc-basics/create-controller.html">
-                                <a href="../mvc-basics/create-controller.html">
-                                    Crear un controlador
-                                </a>
-                            </li>
-                            <li class="chapter " data-level="1.3.2" data-path="../mvc-basics/create-models.html">
-                                <a href="../mvc-basics/create-models.html">
-                                    Crear modelos
-                                </a>
-                            </li>
-                            <li class="chapter " data-level="1.3.3" data-path="../mvc-basics/create-view.html">
-                                <a href="../mvc-basics/create-view.html">
-                                    Crear una vista
-                                </a>
-                            </li>
-                            <li class="chapter " data-level="1.3.4" data-path="../mvc-basics/add-service-class.html">
-                                <a href="../mvc-basics/add-service-class.html">
-                                    Agregar una clase de servicio
-                                </a>
-                            </li>
-                            <li class="chapter " data-level="1.3.5"
-                                data-path="../mvc-basics/use-dependency-injection.html">
-                                <a href="../mvc-basics/use-dependency-injection.html">
-                                    Usar inyección de dependencias
-                                </a>
-                            </li>
-                            <li class="chapter " data-level="1.3.6" data-path="../mvc-basics/finish-controller.html">
-                                <a href="../mvc-basics/finish-controller.html">
-                                    Terminando el controlador
-                                </a>
-                            </li>
-                            <li class="chapter " data-level="1.3.7" data-path="../mvc-basics/update-the-layout.html">
-                                <a href="../mvc-basics/update-the-layout.html">
-                                    Actualizar la plantilla
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="chapter " data-level="1.4" data-path="../add-external-packages/">
-                        <a href="../add-external-packages/">
-                            Agregando paquetes externos
+                        
+                        
+                        <a href="https://github.com/jahbenjah/little-aspnetcore-book" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
-                    </li>
-                    <li class="chapter " data-level="1.5" data-path="../use-a-database/">
-                        <a href="../use-a-database/">
-                            Usando una base de datos
-                        </a>
-                        <ul class="articles">
-                            <li class="chapter " data-level="1.5.1"
-                                data-path="../use-a-database/connect-to-a-database.html">
-                                <a href="../use-a-database/connect-to-a-database.html">
-                                    Conectarse a una base de datos
-                                </a>
-                            </li>
-                            <li class="chapter " data-level="1.5.2" data-path="../use-a-database/update-context.html">
-                                <a href="../use-a-database/update-context.html">
-                                    Actualizando el contexto
-                                </a>
-                            </li>
-                            <li class="chapter " data-level="1.5.3" data-path="../use-a-database/create-migration.html">
-                                <a href="../use-a-database/create-migration.html">
-                                    Crear una migración
-                                </a>
-                            </li>
-                            <li class="chapter " data-level="1.5.4"
-                                data-path="../use-a-database/create-service-class.html">
-                                <a href="../use-a-database/create-service-class.html">
-                                    Crear una nueva clase de servicio
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="chapter " data-level="1.6" data-path="../add-more-features/">
-                        <a href="../add-more-features/">
-                            Agregando más características
-                        </a>
-                        <ul class="articles">
-                            <li class="chapter " data-level="1.6.1"
-                                data-path="../add-more-features/add-todo-items.html">
-                                <a href="../add-more-features/add-todo-items.html">
-                                    Agregar nuevas tareas
-                                </a>
-                            </li>
-                            <li class="chapter " data-level="1.6.2"
-                                data-path="../add-more-features/complete-with-checkbox.html">
-                                <a href="../add-more-features/complete-with-checkbox.html">
-                                    Completar las tareas con una casilla de verificación
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="chapter " data-level="1.7" data-path="../security-and-identity/">
-                        <a href="../security-and-identity/">
-                            Seguridad e Identidad
-                        </a>
-                        <ul class="articles">
-                            <li class="chapter " data-level="1.7.1"
-                                data-path="../security-and-identity/require-authentication.html">
-                                <a href="../security-and-identity/require-authentication.html">
-                                    Requerir autenticación
-                                </a>
-                            </li>
-                            <li class="chapter " data-level="1.7.2"
-                                data-path="../security-and-identity/using-identity-in-the-application.html">
-                                <a href="../security-and-identity/using-identity-in-the-application.html">
-                                    Usando identidad en la aplicación
-                                </a>
-                            </li>
-                            <li class="chapter " data-level="1.7.3"
-                                data-path="../security-and-identity/authorization-with-roles.html">
-                                <a href="../security-and-identity/authorization-with-roles.html">
-                                    Autorización con roles
-                                </a>
-                            </li>
-                            <li class="chapter " data-level="1.7.4"
-                                data-path="../security-and-identity/more-resources.html">
-                                <a href="../security-and-identity/more-resources.html">
-                                    Más recursos
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="chapter " data-level="1.8" data-path="./">
-                        <a href="./">
-                            Pruebas automáticas
-                        </a>
-                        <ul class="articles">
-                            <li class="chapter active" data-level="1.8.1" data-path="unit-testing.html">
-                                <a href="unit-testing.html">
-                                    Pruebas unitarias
-                                </a>
-                            </li>
-                            <li class="chapter " data-level="1.8.2" data-path="integration-testing.html">
-                                <a href="integration-testing.html">
-                                    Pruebas de integración
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="chapter " data-level="1.9" data-path="../deploy-the-application/">
-                        <a href="../deploy-the-application/">
-                            Desplegando la aplicación
-                        </a>
-                        <ul class="articles">
-                            <li class="chapter " data-level="1.9.1"
-                                data-path="../deploy-the-application/deploy-to-azure.html">
-                                <a href="../deploy-the-application/deploy-to-azure.html">
-                                    Desplegando en Azure
-                                </a>
-                            </li>
-                            <li class="chapter " data-level="1.9.2"
-                                data-path="../deploy-the-application/deploy-with-docker.html">
-                                <a href="../deploy-the-application/deploy-with-docker.html">
-                                    Desplegando con Docker
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="chapter " data-level="1.10" data-path="../conclusion/">
-                        <a href="../conclusion/">
-                            Conclusión
-                        </a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a href="/" class="gitbook-link">
-                            ASP.NET Core Master
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-        <div class="book-body">
-            <div class="body-inner">
-                <div class="book-header" role="navigation">
-                    <!-- Title -->
-                    <h1>
-                        <i class="fa fa-circle-o-notch fa-spin"></i>
-                        <a href="../..">Pruebas unitarias</a>
-                    </h1>
+                        
+                    </div>
                 </div>
-                <div class="page-wrapper" tabindex="-1" role="main">
-                    <div class="page-inner">
-                        <div id="book-search-results">
-                            <div class="search-noresults">
-                                <section class="normal markdown-section">
-                                    <h2 id="pruebas-unitarias"><a name="pruebas-unitarias" class="plugin-anchor"
-                                            href="#pruebas-unitarias"><i class="fa fa-link"
-                                                aria-hidden="true"></i></a>Pruebas unitarias</h2>
-                                    <p>Las pruebas unitarias son pruebas peque&#xF1;as y cortas que verifican el
-                                        comportamiento de un solo m&#xE9;todo o clase. Cuando el c&#xF3;digo que
-                                        est&#xE1; probando se basa en otros m&#xE9;todos o clases, las pruebas unitarias
-                                        se basan en <strong>simulardores</strong> de esas otras clases para que la
-                                        prueba solo se enfoque en una cosa a la vez.</p>
-                                    <p>Por ejemplo, la clase <code>TodoController</code> tiene dos dependencias: un
-                                        <code>ITodoItemService</code> y el <code>UserManager</code>. El
-                                        <code>TodoItemService</code>, a su vez, depende del
-                                        <code>ApplicationDbContext</code>. (La idea de que puede dibujar una l&#xED;nea
-                                        desde
-                                        <code>TodoController</code>&gt;<code>TodoItemService</code>&gt;<code>ApplicationDbContext</code>
-                                        se llama <strong>gr&#xE1;fico de dependencia</strong>).</p>
-                                    <p>Cuando la aplicaci&#xF3;n se ejecuta normalmente, el sistema de inyecci&#xF3;n de
-                                        dependencias y el contenedor de servicios de ASP.NET Core inyecta cada uno de
-                                        esos objetos en el gr&#xE1;fico de dependencia cuando se crea el
-                                        <code>TodoController</code> o el <code>TodoItemService</code>.</p>
-                                    <p>Cuando escribe una prueba de unitaria, por otro lado, tiene que manejar usted
-                                        mismo el gr&#xE1;fico de dependencia. Es t&#xED;pico proporcionar versiones solo
-                                        de prueba o &quot;simuladas&quot; de esas dependencias. Esto significa que puede
-                                        aislar solo la l&#xF3;gica en la clase o el m&#xE9;todo que est&#xE1; probando.
-                                        (&#xA1;Esto es importante! Si est&#xE1; probando un servicio, no quiere
-                                        <strong>tambi&#xE9;n</strong> estar escribiendo accidentalmente en su base de
-                                        datos).</p>
-                                    <h3 id="crear-un-proyecto-de-prueba"><a name="crear-un-proyecto-de-prueba"
-                                            class="plugin-anchor" href="#crear-un-proyecto-de-prueba"><i
-                                                class="fa fa-link" aria-hidden="true"></i></a>Crear un proyecto de
-                                        prueba</h3>
-                                    <p>Es una buena pr&#xE1;ctica crear un proyecto separado para sus pruebas, para que
-                                        se mantengan separados del c&#xF3;digo de su aplicaci&#xF3;n. El nuevo proyecto
-                                        de prueba debe vivir en un directorio que est&#xE9; al lado (no dentro) del
-                                        directorio de su proyecto principal.</p>
-                                    <p>Si actualmente se encuentra en el directorio de su proyecto, <code>cd</code> sube
-                                        un nivel. (Este directorio ra&#xED;z tambi&#xE9;n se llamar&#xE1;
-                                        <code>AspNetCoreTodo</code>). Luego use este comando para crear un nuevo
-                                        proyecto de prueba:</p>
-                                    <pre><code>dotnet new xunit -o AspNetCoreTodo.UnitTests
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2><a class="header" href="#pruebas-unitarias" id="pruebas-unitarias">Pruebas unitarias</a></h2>
+<p>Las pruebas unitarias son pruebas pequeñas y cortas que verifican el comportamiento de un solo método o clase. Cuando el código que está probando se basa en otros métodos o clases, las pruebas unitarias se basan en <strong>simulardores</strong> de esas otras clases para que la prueba solo se enfoque en una cosa a la vez.</p>
+<p>Por ejemplo, la clase <code>TodoController</code> tiene dos dependencias: un <code>ITodoItemService</code> y el <code>UserManager</code>. El <code>TodoItemService</code>, a su vez, depende del <code>ApplicationDbContext</code>. (La idea de que puede dibujar una línea desde <code>TodoController</code>&gt;<code>TodoItemService</code>&gt;<code>ApplicationDbContext</code> se llama <strong>gráfico de dependencia</strong>).</p>
+<p>Cuando la aplicación se ejecuta normalmente, el sistema de inyección de dependencias y el contenedor de servicios de ASP.NET Core inyecta cada uno de esos objetos en el gráfico de dependencia cuando se crea el <code>TodoController</code> o el <code>TodoItemService</code>.</p>
+<p>Cuando escribe una prueba de unitaria, por otro lado, tiene que manejar usted mismo el gráfico de dependencia. Es típico proporcionar versiones solo de prueba o &quot;simuladas&quot; de esas dependencias. Esto significa que puede aislar solo la lógica en la clase o el método que está probando. (¡Esto es importante! Si está probando un servicio, no quiere <strong>también</strong> estar escribiendo accidentalmente en su base de datos).</p>
+<h3><a class="header" href="#crear-un-proyecto-de-prueba" id="crear-un-proyecto-de-prueba">Crear un proyecto de prueba</a></h3>
+<p>Es una buena práctica crear un proyecto separado para sus pruebas, para que se mantengan separados del código de su aplicación. El nuevo proyecto de prueba debe vivir en un directorio que esté al lado (no dentro) del directorio de su proyecto principal.</p>
+<p>Si actualmente se encuentra en el directorio de su proyecto, <code>cd</code> sube un nivel. (Este directorio raíz también se llamará <code>AspNetCoreTodo</code>). Luego use este comando para crear un nuevo proyecto de prueba:</p>
+<pre><code>dotnet new xunit -o AspNetCoreTodo.UnitTests
 </code></pre>
-                                    <p>xUnit.NET es un marco de prueba popular para el c&#xF3;digo .NET que se puede
-                                        usar para escribir pruebas de unitarias y de integraci&#xF3;n. Como todo lo
-                                        dem&#xE1;s, es un conjunto de paquetes NuGet que se pueden instalar en cualquier
-                                        proyecto. La plantilla <code>dotnet new xunit</code> ya incluye todo lo que
-                                        necesitas.</p>
-                                    <p>Su estructura de directorio ahora deber&#xED;a verse as&#xED;:</p>
-                                    <pre><code>AspNetCoreTodo/
+<p>xUnit.NET es un marco de prueba popular para el código .NET que se puede usar para escribir pruebas de unitarias y de integración. Como todo lo demás, es un conjunto de paquetes NuGet que se pueden instalar en cualquier proyecto. La plantilla <code>dotnet new xunit</code> ya incluye todo lo que necesitas.</p>
+<p>Su estructura de directorio ahora debería verse así:</p>
+<pre><code>AspNetCoreTodo/
     AspNetCoreTodo/
         AspNetCoreTodo.csproj
         Controllers/
         (etc...)
+
     AspNetCoreTodo.UnitTests/
         AspNetCoreTodo.UnitTests.csproj
 </code></pre>
-                                    <p>Como el proyecto de prueba utilizar&#xE1; las clases definidas en su proyecto
-                                        principal, deber&#xE1; agregar una referencia al proyecto
-                                        <code>AspNetCoreTodo</code>:</p>
-                                    <pre><code>dotnet agregar referencia ../AspNetCoreTodo/AspNetCoreTodo.csproj
+<p>Como el proyecto de prueba utilizará las clases definidas en su proyecto principal, deberá agregar una referencia al proyecto <code>AspNetCoreTodo</code>:</p>
+<pre><code>dotnet agregar referencia ../AspNetCoreTodo/AspNetCoreTodo.csproj
 </code></pre>
-                                    <p>Elimine el archivo <code>UnitTest1.cs</code> que se crea autom&#xE1;ticamente.
-                                        Est&#xE1;s listo para escribir tu primera prueba.</p>
-                                    <blockquote>
-                                        <p>Si est&#xE1; utilizando Visual Studio Code, es posible que deba cerrar y
-                                            volver a abrir la ventana de Visual Studio Code para la compleci&#xF3;n del
-                                            c&#xF3;digo funcione en el nuevo proyecto.</p>
-                                    </blockquote>
-                                    <h3 id="escribe-una-prueba-de-servicio"><a name="escribe-una-prueba-de-servicio"
-                                            class="plugin-anchor" href="#escribe-una-prueba-de-servicio"><i
-                                                class="fa fa-link" aria-hidden="true"></i></a>Escribe una prueba de
-                                        servicio</h3>
-                                    <p>Eche un vistazo a la l&#xF3;gica en el m&#xE9;todo <code>AddItemAsync()</code>
-                                        del <code>TodoItemService</code>:</p>
-                                    <pre><code class="lang-csharp"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">async</span> Task&lt;<span class="hljs-keyword">bool</span>&gt; <span class="hljs-title">AddItemAsync</span>(<span class="hljs-params">
-    TodoItem newItem, ApplicationUser user</span>)
-</span>{
+<p>Elimine el archivo <code>UnitTest1.cs</code> que se crea automáticamente. Estás listo para escribir tu primera prueba.</p>
+<blockquote>
+<p>Si está utilizando Visual Studio Code, es posible que deba cerrar y volver a abrir la ventana de Visual Studio Code para la compleción del código funcione en el nuevo proyecto.</p>
+</blockquote>
+<h3><a class="header" href="#escribe-una-prueba-de-servicio" id="escribe-una-prueba-de-servicio">Escribe una prueba de servicio</a></h3>
+<p>Eche un vistazo a la lógica en el método <code>AddItemAsync()</code> del <code>TodoItemService</code>:</p>
+<pre><code class="language-csharp">public async Task&lt;bool&gt; AddItemAsync(
+    TodoItem newItem, ApplicationUser user)
+{
     newItem.Id = Guid.NewGuid();
-    newItem.IsDone = <span class="hljs-keyword">false</span>;
-    newItem.DueAt = DateTimeOffset.Now.AddDays(<span class="hljs-number">3</span>);
+    newItem.IsDone = false;
+    newItem.DueAt = DateTimeOffset.Now.AddDays(3);
     newItem.UserId = user.Id;
+
     _context.Items.Add(newItem);
-    <span class="hljs-keyword">var</span> saveResult = <span class="hljs-keyword">await</span> _context.SaveChangesAsync();
-    <span class="hljs-keyword">return</span> saveResult == <span class="hljs-number">1</span>;
+
+    var saveResult = await _context.SaveChangesAsync();
+    return saveResult == 1;
 }
 </code></pre>
-                                    <p>Este m&#xE9;todo toma una serie de decisiones o suposiciones sobre el nuevo
-                                        elemento (en otras palabras, realiza la l&#xF3;gica de negocios en el nuevo
-                                        elemento) antes de que realmente lo guarde en la base de datos:</p>
-                                    <ul>
-                                        <li>La propiedad <code>UserId</code> debe establecerse a la ID del usuario</li>
-                                        <li>Los nuevos elementos siempre deben estar incompletos
-                                            (<code>IsDone = false</code>)</li>
-                                        <li>El t&#xED;tulo del nuevo elemento debe copiarse de
-                                            <code>newItem.Title</code></li>
-                                        <li>Las nuevos tareas siempre deben vencer dentro de 3 d&#xED;as</li>
-                                    </ul>
-                                    <p>Imag&#xED;nese si usted o alguien m&#xE1;s reformul&#xF3; el m&#xE9;todo
-                                        <code>AddItemAsync()</code> y se olvid&#xF3; de parte de esta l&#xF3;gica de
-                                        negocios. &#xA1;El comportamiento de su aplicaci&#xF3;n podr&#xED;a cambiar sin
-                                        que usted se d&#xE9; cuenta! Puede evitar esto escribiendo una prueba que
-                                        verifique que esta l&#xF3;gica de negocios no haya cambiado (incluso si la
-                                        implementaci&#xF3;n interna del m&#xE9;todo cambia).</p>
-                                    <blockquote>
-                                        <p>Puede parecer poco probable ahora que pueda introducir un cambio en la
-                                            l&#xF3;gica empresarial sin darse cuenta, pero es mucho m&#xE1;s
-                                            dif&#xED;cil hacer un seguimiento de las decisiones y suposiciones en un
-                                            proyecto grande y complejo. Cuanto m&#xE1;s grande sea su proyecto, m&#xE1;s
-                                            importante es tener controles autom&#xE1;ticos que aseguren que nada haya
-                                            cambiado.</p>
-                                    </blockquote>
-                                    <p>Para escribir una prueba unitaria que verifique la l&#xF3;gica en
-                                        <code>TodoItemService</code>, cree una nueva clase en su proyecto de prueba:</p>
-                                    <p><strong>AspNetCoreTodo.UnitTests/TodoItemServiceShould.cs</strong></p>
-                                    <pre><code class="lang-csharp"><span class="hljs-keyword">using</span> System;
-<span class="hljs-keyword">using</span> System.Threading.Tasks;
-<span class="hljs-keyword">using</span> AspNetCoreTodo.Data;
-<span class="hljs-keyword">using</span> AspNetCoreTodo.Models;
-<span class="hljs-keyword">using</span> AspNetCoreTodo.Services;
-<span class="hljs-keyword">using</span> Microsoft.EntityFrameworkCore;
-<span class="hljs-keyword">using</span> Xunit;
-<span class="hljs-keyword">namespace</span> <span class="hljs-title">AspNetCoreTodo.UnitTests</span>
+<p>Este método toma una serie de decisiones o suposiciones sobre el nuevo elemento (en otras palabras, realiza la lógica de negocios en el nuevo elemento) antes de que realmente lo guarde en la base de datos:</p>
+<ul>
+<li>La propiedad <code>UserId</code> debe establecerse a la ID del usuario</li>
+<li>Los nuevos elementos siempre deben estar incompletos (<code>IsDone = false</code>)</li>
+<li>El título del nuevo elemento debe copiarse de <code>newItem.Title</code></li>
+<li>Las nuevos tareas siempre deben vencer dentro de 3 días</li>
+</ul>
+<p>Imagínese si usted o alguien más reformuló el método <code>AddItemAsync()</code> y se olvidó de parte de esta lógica de negocios. ¡El comportamiento de su aplicación podría cambiar sin que usted se dé cuenta! Puede evitar esto escribiendo una prueba que verifique que esta lógica de negocios no haya cambiado (incluso si la implementación interna del método cambia).</p>
+<blockquote>
+<p>Puede parecer poco probable ahora que pueda introducir un cambio en la lógica empresarial sin darse cuenta, pero es mucho más difícil hacer un seguimiento de las decisiones y suposiciones en un proyecto grande y complejo. Cuanto más grande sea su proyecto, más importante es tener controles automáticos que aseguren que nada haya cambiado.</p>
+</blockquote>
+<p>Para escribir una prueba unitaria que verifique la lógica en <code>TodoItemService</code>, cree una nueva clase en su proyecto de prueba:</p>
+<p><strong>AspNetCoreTodo.UnitTests/TodoItemServiceShould.cs</strong></p>
+<pre><code class="language-csharp">using System;
+using System.Threading.Tasks;
+using AspNetCoreTodo.Data;
+using AspNetCoreTodo.Models;
+using AspNetCoreTodo.Services;
+using Microsoft.EntityFrameworkCore;
+using Xunit;
+
+namespace AspNetCoreTodo.UnitTests
 {
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">TodoItemServiceShould</span>
+    public class TodoItemServiceShould
     {
         [Fact]
-        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">async</span> Task <span class="hljs-title">AddNewItemAsIncompleteWithDueDate</span>(<span class="hljs-params"></span>)
-        </span>{
-            <span class="hljs-comment">// ...</span>
+        public async Task AddNewItemAsIncompleteWithDueDate()
+        {
+            // ...
         }
     }
 }
 </code></pre>
-                                    <blockquote>
-                                        <p>Hay muchas maneras diferentes de nombrar y organizar pruebas, todas con
-                                            diferentes pros y contras. Me gusta despu&#xE9;s de fijar mis clases de
-                                            prueba con <code>Deber&#xED;a</code> para crear una oraci&#xF3;n legible con
-                                            el nombre del m&#xE9;todo de prueba, &#xA1;pero puede usar su propio estilo!
-                                        </p>
-                                    </blockquote>
-                                    <p>El atributo <code>[Fact]</code> proviene del paquete xUnit.NET, y marca este
-                                        m&#xE9;todo como un m&#xE9;todo de prueba.</p>
-                                    <p>El <code>TodoItemService</code> requiere un <code>ApplicationDbContext</code>,
-                                        que normalmente est&#xE1; conectado a su base de datos. No querr&#xE1;s usar eso
-                                        para las pruebas. En su lugar, puede usar el proveedor de base de datos en
-                                        memoria de Entity Framework Core en su c&#xF3;digo de prueba. Como toda la base
-                                        de datos existe en la memoria, se borra cada vez que se reinicia la prueba. Y,
-                                        dado que es un proveedor adecuado de Entity Framework Core,
-                                        &#xA1;TodoItemService no notar&#xE1; la diferencia!</p>
-                                    <p>Use un <code>DbContextOptionsBuilder</code> para configurar el proveedor de la
-                                        base de datos en memoria, y luego haga una llamada a
-                                        <code>AddItemAsync ()</code>:</p>
-                                    <pre><code class="lang-csharp"><span class="hljs-keyword">var</span> options = <span class="hljs-keyword">new</span> DbContextOptionsBuilder&lt;ApplicationDbContext&gt;()
-    .UseInMemoryDatabase(databaseName: <span class="hljs-string">&quot;Test_AddNewItem&quot;</span>).Options;
-<span class="hljs-comment">// Set up a context (connection to the &quot;DB&quot;) for writing</span>
-<span class="hljs-keyword">using</span> (<span class="hljs-keyword">var</span> context = <span class="hljs-keyword">new</span> ApplicationDbContext(options))
+<blockquote>
+<p>Hay muchas maneras diferentes de nombrar y organizar pruebas, todas con diferentes pros y contras. Me gusta después de fijar mis clases de prueba con <code>Debería</code> para crear una oración legible con el nombre del método de prueba, ¡pero puede usar su propio estilo!</p>
+</blockquote>
+<p>El atributo <code>[Fact]</code> proviene del paquete xUnit.NET, y marca este método como un método de prueba.</p>
+<p>El <code>TodoItemService</code> requiere un <code>ApplicationDbContext</code>, que normalmente está conectado a su base de datos. No querrás usar eso para las pruebas. En su lugar, puede usar el proveedor de base de datos en memoria de Entity Framework Core en su código de prueba. Como toda la base de datos existe en la memoria, se borra cada vez que se reinicia la prueba. Y, dado que es un proveedor adecuado de Entity Framework Core, ¡TodoItemService no notará la diferencia!</p>
+<p>Use un <code>DbContextOptionsBuilder</code> para configurar el proveedor de la base de datos en memoria, y luego haga una llamada a <code>AddItemAsync () </code>:</p>
+<pre><code class="language-csharp">var options = new DbContextOptionsBuilder&lt;ApplicationDbContext&gt;()
+    .UseInMemoryDatabase(databaseName: &quot;Test_AddNewItem&quot;).Options;
+
+// Set up a context (connection to the &quot;DB&quot;) for writing
+using (var context = new ApplicationDbContext(options))
 {
-    <span class="hljs-keyword">var</span> service = <span class="hljs-keyword">new</span> TodoItemService(context);
-    <span class="hljs-keyword">var</span> fakeUser = <span class="hljs-keyword">new</span> ApplicationUser
+    var service = new TodoItemService(context);
+
+    var fakeUser = new ApplicationUser
     {
-        Id = <span class="hljs-string">&quot;fake-000&quot;</span>,
-        UserName = <span class="hljs-string">&quot;fake@example.com&quot;</span>
+        Id = &quot;fake-000&quot;,
+        UserName = &quot;fake@example.com&quot;
     };
-    <span class="hljs-keyword">await</span> service.AddItemAsync(<span class="hljs-keyword">new</span> TodoItem
+
+    await service.AddItemAsync(new TodoItem
     {
-        Title = <span class="hljs-string">&quot;Testing?&quot;</span>
+        Title = &quot;Testing?&quot;
     }, fakeUser);
 }
 </code></pre>
-                                    <p>La &#xFA;ltima l&#xED;nea crea un tarea llamado &quot;&#xBF;Pruebas?&quot;, Y le
-                                        dice al servicio que lo guarde en la base de datos (en memoria).</p>
-                                    <p>Para verificar que la l&#xF3;gica de negocio funcion&#xF3; correctamente, escriba
-                                        un c&#xF3;digo m&#xE1;s debajo del bloque <code>using</code> existente:</p>
-                                    <pre><code class="lang-csharp"><span class="hljs-comment">// Use a separate context to read data back from the &quot;DB&quot;</span>
-<span class="hljs-keyword">using</span> (<span class="hljs-keyword">var</span> context = <span class="hljs-keyword">new</span> ApplicationDbContext(options))
+<p>La última línea crea un tarea llamado &quot;¿Pruebas?&quot;, Y le dice al servicio que lo guarde en la base de datos (en memoria).</p>
+<p>Para verificar que la lógica de negocio funcionó correctamente, escriba un código más debajo del bloque <code>using</code> existente:</p>
+<pre><code class="language-csharp">// Use a separate context to read data back from the &quot;DB&quot;
+using (var context = new ApplicationDbContext(options))
 {
-    <span class="hljs-keyword">var</span> itemsInDatabase = <span class="hljs-keyword">await</span> context
+    var itemsInDatabase = await context
         .Items.CountAsync();
-    Assert.Equal(<span class="hljs-number">1</span>, itemsInDatabase);
-    <span class="hljs-keyword">var</span> item = <span class="hljs-keyword">await</span> context.Items.FirstAsync();
-    Assert.Equal(<span class="hljs-string">&quot;Testing?&quot;</span>, item.Title);
-    Assert.Equal(<span class="hljs-keyword">false</span>, item.IsDone);
-    <span class="hljs-comment">// Item should be due 3 days from now (give or take a second)</span>
-    <span class="hljs-keyword">var</span> difference = DateTimeOffset.Now.AddDays(<span class="hljs-number">3</span>) - item.DueAt;
-    Assert.True(difference &lt; TimeSpan.FromSeconds(<span class="hljs-number">1</span>));
+    Assert.Equal(1, itemsInDatabase);
+    
+    var item = await context.Items.FirstAsync();
+    Assert.Equal(&quot;Testing?&quot;, item.Title);
+    Assert.Equal(false, item.IsDone);
+
+    // Item should be due 3 days from now (give or take a second)
+    var difference = DateTimeOffset.Now.AddDays(3) - item.DueAt;
+    Assert.True(difference &lt; TimeSpan.FromSeconds(1));
 }
 </code></pre>
-                                    <p>La primera afirmaci&#xF3;n es una comprobaci&#xF3;n de validez: nunca debe haber
-                                        m&#xE1;s de un elemento guardado en la base de datos en memoria. Suponiendo que
-                                        eso sea cierto, la prueba recupera el elemento guardado con
-                                        <code>FirstAsync</code> y luego afirma que las propiedades est&#xE1;n
-                                        establecidas en los valores esperados.</p>
-                                    <blockquote>
-                                        <p>Tanto las pruebas de unitarias como las de integraci&#xF3;n generalmente
-                                            siguen el patr&#xF3;n AAA (Arrange-Act-Assert): los objetos y los datos se
-                                            configuran primero, luego se realiza alguna acci&#xF3;n y, finalmente, la
-                                            prueba verifica (Assert) que ocurri&#xF3; el comportamiento esperado.</p>
-                                    </blockquote>
-                                    <p>Confirmar un valor de fecha y hora es un poco complicado, ya que la
-                                        comparaci&#xF3;n de dos fechas para la igualdad fallar&#xE1; incluso si los
-                                        componentes de milisegundos son diferentes. En su lugar, la prueba verifica que
-                                        el valor <code>DueAt</code> est&#xE9; a menos de un segundo del valor esperado.
-                                    </p>
-                                    <h3 id="ejecutar-la-prueba"><a name="ejecutar-la-prueba" class="plugin-anchor"
-                                            href="#ejecutar-la-prueba"><i class="fa fa-link"
-                                                aria-hidden="true"></i></a>Ejecutar la prueba</h3>
-                                    <p>En la terminal, ejecute este comando (aseg&#xFA;rese de que todav&#xED;a
-                                        est&#xE9; en el directorio <code>AspNetCoreTodo.UnitTests</code>):</p>
-                                    <pre><code>dotnet test
+<p>La primera afirmación es una comprobación de validez: nunca debe haber más de un elemento guardado en la base de datos en memoria. Suponiendo que eso sea cierto, la prueba recupera el elemento guardado con <code>FirstAsync</code> y luego afirma que las propiedades están establecidas en los valores esperados.</p>
+<blockquote>
+<p>Tanto las pruebas de unitarias como las de integración generalmente siguen el patrón AAA (Arrange-Act-Assert): los objetos y los datos se configuran primero, luego se realiza alguna acción y, finalmente, la prueba verifica (Assert) que ocurrió el comportamiento esperado.</p>
+</blockquote>
+<p>Confirmar un valor de fecha y hora es un poco complicado, ya que la comparación de dos fechas para la igualdad fallará incluso si los componentes de milisegundos son diferentes. En su lugar, la prueba verifica que el valor <code>DueAt</code> esté a menos de un segundo del valor esperado.</p>
+<h3><a class="header" href="#ejecutar-la-prueba" id="ejecutar-la-prueba">Ejecutar la prueba</a></h3>
+<p>En la terminal, ejecute este comando (asegúrese de que todavía esté en el directorio <code>AspNetCoreTodo.UnitTests</code>):</p>
+<pre><code>dotnet test
 </code></pre>
-                                    <p>El comando <code>test</code> escanea el proyecto actual en busca de pruebas (en
-                                        este caso marcadas con los atributos <code>[Fact]</code>), y ejecuta todas las
-                                        pruebas que encuentra. Ver&#xE1;s una salida similar a:</p>
-                                    <pre><code>Starting test execution, please wait...
+<p>El comando <code>test</code> escanea el proyecto actual en busca de pruebas (en este caso marcadas con los atributos <code>[Fact]</code>), y ejecuta todas las pruebas que encuentra. Verás una salida similar a:</p>
+<pre><code>Starting test execution, please wait...
  Discovering: AspNetCoreTodo.UnitTests
  Discovered:  AspNetCoreTodo.UnitTests
  Starting:    AspNetCoreTodo.UnitTests
  Finished:    AspNetCoreTodo.UnitTests
+
 Total tests: 1. Passed: 1. Failed: 0. Skipped: 0.
 Test Run Successful.
 Test execution time: 1.9074 Seconds
 </code></pre>
-                                    <p>Ahora tiene una prueba que proporciona cobertura de prueba del
-                                        <code>TodoItemService</code>. Como desaf&#xED;o adicional, intente escribir
-                                        pruebas unitarias que aseguren:</p>
-                                    <ul>
-                                        <li>El m&#xE9;todo <code>MarkDoneAsync()</code> devuelve falso si se pasa un ID
-                                            que no existe</li>
-                                        <li>El m&#xE9;todo <code>MarkDoneAsync()</code> devuelve true cuando se marca
-                                            una tarea como completa.</li>
-                                        <li>El m&#xE9;todo <code>GetIncompleteItemsAsync()</code> devuelve solo las
-                                            tareas que pertenecen a un usuario en particular</li>
-                                    </ul>
-                                </section>
-                            </div>
-                            <div class="search-results">
-                                <div class="has-results">
-                                    <h1 class="search-results-title"><span class='search-results-count'></span> results
-                                        matching "<span class='search-query'></span>"</h1>
-                                    <ul class="search-results-list"></ul>
-                                </div>
-                                <div class="no-results">
-                                    <h1 class="search-results-title">No results matching "<span
-                                            class='search-query'></span>"</h1>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+<p>Ahora tiene una prueba que proporciona cobertura de prueba del <code>TodoItemService</code>. Como desafío adicional, intente escribir pruebas unitarias que aseguren:</p>
+<ul>
+<li>El método <code>MarkDoneAsync()</code> devuelve falso si se pasa un ID que no existe</li>
+<li>El método <code>MarkDoneAsync()</code> devuelve true cuando se marca una tarea como completa.</li>
+<li>El método <code>GetIncompleteItemsAsync()</code> devuelve solo las tareas que pertenecen a un usuario en particular</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../../chapters/automated-testing/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../../chapters/automated-testing/integration-testing.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
                 </div>
             </div>
-            <a href="./" class="navigation navigation-prev " aria-label="Previous page: Pruebas automáticas">
-                <i class="fa fa-angle-left"></i>
-            </a>
-            <a href="integration-testing.html" class="navigation navigation-next "
-                aria-label="Next page: Pruebas de integración">
-                <i class="fa fa-angle-right"></i>
-            </a>
-        </div>
-        <script>
-            var gitbook = gitbook || [];
-            gitbook.push(function () {
-                gitbook.page.hasChanged({ "page": { "title": "Pruebas unitarias", "level": "1.8.1", "depth": 2, "next": { "title": "Pruebas de integración", "level": "1.8.2", "depth": 2, "path": "chapters/automated-testing/integration-testing.md", "ref": "chapters/automated-testing/integration-testing.md", "articles": [] }, "previous": { "title": "Pruebas automáticas", "level": "1.8", "depth": 1, "path": "chapters/automated-testing/README.md", "ref": "chapters/automated-testing/README.md", "articles": [{ "title": "Pruebas unitarias", "level": "1.8.1", "depth": 2, "path": "chapters/automated-testing/unit-testing.md", "ref": "chapters/automated-testing/unit-testing.md", "articles": [] }, { "title": "Pruebas de integración", "level": "1.8.2", "depth": 2, "path": "chapters/automated-testing/integration-testing.md", "ref": "chapters/automated-testing/integration-testing.md", "articles": [] }] }, "dir": "ltr" }, "config": { "plugins": ["expandable-chapters-small", "anchors", "forkmegithub", "analytics"], "styles": { "website": "styles/website.css", "pdf": "styles/pdf.css", "epub": "styles/epub.css", "mobi": "styles/mobi.css", "ebook": "styles/ebook.css", "print": "styles/print.css" }, "pluginsConfig": { "analytics": { "google": "UA-130293099-1" }, "search": {}, "lunr": { "maxIndexSize": 1000000, "ignoreSpecialCharacters": false }, "fontsettings": { "theme": "white", "family": "sans", "size": 2 }, "highlight": {}, "expandable-chapters-small": {}, "sharing": { "facebook": true, "twitter": true, "google": false, "weibo": false, "instapaper": false, "vk": false, "all": ["facebook", "google", "twitter", "weibo", "instapaper"] }, "forkmegithub": { "color": "green", "url": "https://github.com/jahbenjah/little-aspnetcore-book" }, "theme-default": { "styles": { "website": "styles/website.css", "pdf": "styles/pdf.css", "epub": "styles/epub.css", "mobi": "styles/mobi.css", "ebook": "styles/ebook.css", "print": "styles/print.css" }, "showLevel": false }, "anchors": {} }, "theme": "default", "author": "Nate Barbettini", "pdf": { "pageNumbers": true, "fontSize": 12, "fontFamily": "Lato", "paperSize": "a5", "chapterMark": "pagebreak", "pageBreaksBefore": "/", "margin": { "right": 62, "left": 62, "top": 56, "bottom": 56 } }, "structure": { "langs": "LANGS.md", "readme": "README.md", "glossary": "GLOSSARY.md", "summary": "SUMMARY.md" }, "isbn": "978-1-387-75615-5", "variables": {}, "title": "El pequeño libro de ASP.NET Core", "language": "es", "gitbook": "*", "description": "Una introducción amigable para construir aplicaciones web con el framework ASP.NET Core." }, "file": { "path": "chapters/automated-testing/unit-testing.md", "mtime": "2019-03-18T02:21:27.355Z", "type": "markdown" }, "gitbook": { "version": "3.2.3", "time": "2019-03-22T16:25:31.396Z" }, "basePath": "../..", "book": { "language": "" } });
-            });
-        </script>
-    </div>
-    <!-- <script src="/assets/js/site.js" async></script> -->
-    <script src="/assets/gitbook/gitbook.js" async></script>
-    <script src="/assets/gitbook/theme.js" async></script>
-    <script src="/assets/gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js" async></script>
-    <script src="/assets/gitbook/gitbook-plugin-forkmegithub/plugin.js" async></script>
-    <script src="/assets/gitbook/gitbook-plugin-search/search-engine.js" async></script>
-    <script src="/assets/gitbook/gitbook-plugin-search/search.js" async></script>
-    <script src="/assets/gitbook/gitbook-plugin-lunr/lunr.min.js" async></script>
-    <script src="/assets/gitbook/gitbook-plugin-lunr/search-lunr.js" async></script>
-    <script src="/assets/gitbook/gitbook-plugin-sharing/buttons.js" async></script>
-    <script src="/assets/gitbook/gitbook-plugin-fontsettings/fontsettings.js" async></script>
-</body>
 
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../../chapters/automated-testing/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../../chapters/automated-testing/integration-testing.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+        <!-- Google Analytics Tag -->
+        <script type="text/javascript">
+            var localAddrs = ["localhost", "127.0.0.1", ""];
+
+            // make sure we don't activate google analytics if the developer is
+            // inspecting the book locally...
+            if (localAddrs.indexOf(document.location.hostname) === -1) {
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                ga('create', 'UA-130293099-1', 'auto');
+                ga('send', 'pageview');
+            }
+        </script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4952787000309783" crossorigin="anonymous"></script>
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
 </html>

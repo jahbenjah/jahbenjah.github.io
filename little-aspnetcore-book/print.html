@@ -1,0 +1,2296 @@
+<!DOCTYPE HTML>
+<html lang="es" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>El pequeño libro de ASP.NET Core</title>
+        
+        <meta name="robots" content="noindex" />
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="Una introducción amigable para construir aplicaciones web con el framework ASP.NET Core.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="favicon.png">
+        
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        
+        <link rel="stylesheet" href="css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="chapters/your-first-application/index.html"><strong aria-hidden="true">1.</strong> Tú primera aplicación</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="chapters/your-first-application/get-the-sdk.html"><strong aria-hidden="true">1.1.</strong> Consigue el SDK</a></li><li class="chapter-item expanded "><a href="chapters/your-first-application/hello-world-in-csharp.html"><strong aria-hidden="true">1.2.</strong> Hola Mundo en C#</a></li><li class="chapter-item expanded "><a href="chapters/your-first-application/create-aspnetcore-project.html"><strong aria-hidden="true">1.3.</strong> Crear un proyecto de ASP.NET Core</a></li></ol></li><li class="chapter-item expanded "><a href="chapters/mvc-basics/index.html"><strong aria-hidden="true">2.</strong> Fundamentos de MVC</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="chapters/mvc-basics/create-controller.html"><strong aria-hidden="true">2.1.</strong> Crear un controlador</a></li><li class="chapter-item expanded "><a href="chapters/mvc-basics/create-models.html"><strong aria-hidden="true">2.2.</strong> Crear modelos</a></li><li class="chapter-item expanded "><a href="chapters/mvc-basics/create-view.html"><strong aria-hidden="true">2.3.</strong> Crear una vista</a></li><li class="chapter-item expanded "><a href="chapters/mvc-basics/add-service-class.html"><strong aria-hidden="true">2.4.</strong> Agregar una clase de servicio</a></li><li class="chapter-item expanded "><a href="chapters/mvc-basics/use-dependency-injection.html"><strong aria-hidden="true">2.5.</strong> Usar inyección de dependencias</a></li><li class="chapter-item expanded "><a href="chapters/mvc-basics/finish-controller.html"><strong aria-hidden="true">2.6.</strong> Terminando el controlador</a></li><li class="chapter-item expanded "><a href="chapters/mvc-basics/update-the-layout.html"><strong aria-hidden="true">2.7.</strong> Actualizar la plantilla</a></li></ol></li><li class="chapter-item expanded "><a href="chapters/add-external-packages/index.html"><strong aria-hidden="true">3.</strong> Agregando paquetes externos</a></li><li class="chapter-item expanded "><a href="chapters/use-a-database/index.html"><strong aria-hidden="true">4.</strong> Usando una base de datos</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="chapters/use-a-database/connect-to-a-database.html"><strong aria-hidden="true">4.1.</strong> Conectarse a una base de datos</a></li><li class="chapter-item expanded "><a href="chapters/use-a-database/update-context.html"><strong aria-hidden="true">4.2.</strong> Actualizando el contexto</a></li><li class="chapter-item expanded "><a href="chapters/use-a-database/create-migration.html"><strong aria-hidden="true">4.3.</strong> Crear una migración</a></li><li class="chapter-item expanded "><a href="chapters/use-a-database/create-service-class.html"><strong aria-hidden="true">4.4.</strong> Crear una nueva clase de servicio</a></li></ol></li><li class="chapter-item expanded "><a href="chapters/add-more-features/index.html"><strong aria-hidden="true">5.</strong> Agregando más características</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="chapters/add-more-features/add-todo-items.html"><strong aria-hidden="true">5.1.</strong> Agregar nuevas tareas</a></li><li class="chapter-item expanded "><a href="chapters/add-more-features/complete-with-checkbox.html"><strong aria-hidden="true">5.2.</strong> Completar las tareas con una casilla de verificación</a></li></ol></li><li class="chapter-item expanded "><a href="chapters/security-and-identity/index.html"><strong aria-hidden="true">6.</strong> Seguridad e Identidad</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="chapters/security-and-identity/require-authentication.html"><strong aria-hidden="true">6.1.</strong> Requerir autenticación</a></li><li class="chapter-item expanded "><a href="chapters/security-and-identity/using-identity-in-the-application.html"><strong aria-hidden="true">6.2.</strong> Usando identidad en la aplicación</a></li><li class="chapter-item expanded "><a href="chapters/security-and-identity/authorization-with-roles.html"><strong aria-hidden="true">6.3.</strong> Autorización con roles</a></li><li class="chapter-item expanded "><a href="chapters/security-and-identity/more-resources.html"><strong aria-hidden="true">6.4.</strong> Más recursos</a></li></ol></li><li class="chapter-item expanded "><a href="chapters/automated-testing/index.html"><strong aria-hidden="true">7.</strong> Pruebas automáticas</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="chapters/automated-testing/unit-testing.html"><strong aria-hidden="true">7.1.</strong> Pruebas unitarias</a></li><li class="chapter-item expanded "><a href="chapters/automated-testing/integration-testing.html"><strong aria-hidden="true">7.2.</strong> Pruebas de integración</a></li></ol></li><li class="chapter-item expanded "><a href="chapters/deploy-the-application/index.html"><strong aria-hidden="true">8.</strong> Desplegando la aplicación</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="chapters/deploy-the-application/deploy-to-azure.html"><strong aria-hidden="true">8.1.</strong> Desplegando en Azure</a></li><li class="chapter-item expanded "><a href="chapters/deploy-the-application/deploy-with-docker.html"><strong aria-hidden="true">8.2.</strong> Desplegando con Docker</a></li></ol></li><li class="chapter-item expanded "><a href="chapters/conclusion/index.html"><strong aria-hidden="true">9.</strong> Conclusión</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">El pequeño libro de ASP.NET Core</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                        <a href="https://github.com/jahbenjah/little-aspnetcore-book" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#tú-primera-aplicación" id="tú-primera-aplicación">Tú primera aplicación</a></h1>
+<p>¿Estas listo para crear tú primera aplicación web con ASP.NET Core? Primero, tendrás que conseguir los programas básicos que necesitas para iniciar es el kit de desarollador de software o SDK de .NET Core y un editor de textos. Aunque con estas herramientas puedes crear aplicaciones completamente funcionales tengo que aclarar que en el mundo real existen programas especializados conocidos como Entornos de Desarollo Integrado o IDE por sus siglas en inglés. Ejemplos de IDEs son <a href="https://visualstudio.microsoft.com/">Visual Studio de Microsoft</a> o <a href="https://www.jetbrains.com/es-es/rider/">Rider de JetBrains</a>.</p>
+<p>El SDK puede ser instalado en Windows, Mac o Linux.
+Independiente de la plataforma o editor que estas usando, necesitaras instalar el SDK</p>
+<p><strong>El SDK de .NET Core:</strong> este es un conjunto de programas crear aplicaciones ASP.NET Core, el motor de tiempo de ejecución, las librerías base y la línea de comandos .</p>
+<p><strong>Tú editor de código favorito.</strong> Puedes usar Atom, Sublime, Notepad o cualquier otro editor de código en el que prefieras escribir código. Si no tienes un editor de código favorito, dale una oportunidad a Visual Studio Code. Es un editor de código gratuito, multiplataforma que tiene gran soporte para escribir código en C#, Javascript, HTML y más. </p>
+<p>Si trabajas en Windows, también puedes usar Visual Studio para construir aplicaciones ASP.NET Core. Necesitaras Visual Studio 2019. (La versión gratuita Community está bien). Visual Studio tiene soporte fantástico en el completado del código y refactorización, a pesar Visual Studio Code está muy cercano.</p>
+<p>Una vez que haz elegido un editor, necesitaras obtener el SDK.</p>
+<h2><a class="header" href="#instalación-de-net-core-sdk" id="instalación-de-net-core-sdk">Instalación de .NET Core SDK</a></h2>
+<p>Sólo busca por &quot;Visual Studio Code&quot; sigue las instrucciones para instalarlo.</p>
+<h2><a class="header" href="#instalación-de-visual-studio-code" id="instalación-de-visual-studio-code">Instalación de Visual Studio Code</a></h2>
+<h1><a class="header" href="#consigue-el-sdk" id="consigue-el-sdk">Consigue el SDK</a></h1>
+<p>El Kit de Desarrollo de Software para .NET Core o SDK por sus siglas en ingles (Software Development Kit) es un conjunto de programas que permiten desarollar y ejecutar aplicaciones con la plataforma .NET e incluyen compiladores,gestor de paquetes, plantillas de proyectos y más.</p>
+<p>Para instalar el SDK de .NET Core necesitas seguir las instrucciones especificas para el sistema operativo que usas por lo que te recomendamos seguir la documentación oficial: <a href="https://docs.microsoft.com/es-es/dotnet/core/install/sdk">Instalación del SDK de .NET Core</a>.</p>
+<p>De manera ilustrativa te mostramos el proceso detallado para el sistema operativo Windows</p>
+<ol>
+<li>Descarga el SKD de .NET Core desde la <a href="https://dotnet.microsoft.com/download">página oficial</a></li>
+<li>Ejecuta el instalador dotnet-sdk-3.1.102-win-x64</li>
+</ol>
+<p><img src="chapters/your-first-application/instalador-sdk.PNG" alt="Pantalla del instalador del SDK de .NET Core" /></p>
+<blockquote>
+<p><strong>Nota sobre la telemetría</strong> El equipo de .NET ha decidido activar la recopilación de datos de uso y problemas con el las herramientas de linea de comandos de .NET Core esto ha causado plemica . Para más detalles ve <a href="https://docs.microsoft.com/en-us/dotnet/core/tools/telemetry"></a></p>
+</blockquote>
+<p>Después de que el SDK ha finalizado de instalarse, abre una Terminal (o PowerShell en Windows) y usa la herramienta de linea de comando <code>dotnet</code> (también conocida como <strong>CLI</strong>) para asegurarte que todo está funcionando:</p>
+<pre><code class="language-text">dotnet --version
+
+3.1.101
+</code></pre>
+<p>Puedes obtener más información acerca de tú plataforma con la opción <code>--info</code>:</p>
+<pre><code class="language-text">dotnet --info
+
+SDK de .NET Core (reflejando cualquier global.json):
+ Version:   3.1.101
+ Commit:    b377529961
+
+Entorno de tiempo de ejecución:
+ OS Name:     Windows
+ OS Version:  10.0.18363
+ OS Platform: Windows
+ RID:         win10-x64
+ Base Path:   C:\Program Files\dotnet\sdk\3.1.101\
+
+Host (useful for support):
+  Version: 3.1.1
+  Commit:  a1388f194c
+
+.NET Core SDKs installed:
+  3.1.101 [C:\Program Files\dotnet\sdk]
+
+.NET Core runtimes installed:
+  Microsoft.AspNetCore.App 3.1.1 [C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App]
+  Microsoft.NETCore.App 3.1.1 [C:\Program Files\dotnet\shared\Microsoft.NETCore.App]
+  Microsoft.WindowsDesktop.App 3.1.1 [C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App]
+
+To install additional .NET Core runtimes or SDKs:
+  https://aka.ms/dotnet-download
+</code></pre>
+<p>Si ves una salida similar a la de anterior, estas listo para comenzar.</p>
+<h1><a class="header" href="#hola-mundo-en-c" id="hola-mundo-en-c">Hola Mundo en C#</a></h1>
+<p>Antes de comenzar con ASP.NET Core, prueba creando y ejecutando una aplicación de consola con C# simple.</p>
+<p>Puedes hacer todo esto desde la línea de comandos. Primero, abre una Terminal (o PowerShell en Windows). Navega a la ubicación donde deseas guardar tus proyectos, tal cómo la carpeta de mis Documentos:</p>
+<pre><code class="language-bash">cd Documentos
+</code></pre>
+<p>Usa el comando <code>dotnet</code> para crear un nuevo proyecto:</p>
+<pre><code class="language-bash">dotnet new console -o HolaMundo
+</code></pre>
+<p>El comando <code>dotnet new</code> sirve para crear un nuevo proyecto de .NET Core. El parámetro <code>console</code> selecciona una plantilla para una aplicación de consola ( un programa que emite texto en la pantalla). El parámetro <code>-o HolaMundo</code> especifica que el comando <code>dotnet new</code> debe crear una carpeta llamada <code>HolaMundo</code> y colocar en ella los archivos del proyecto. Cambiate a esta carpeta asi:</p>
+<pre><code class="language-bash">cd HolaMundo
+</code></pre>
+<p><code>dotnet new console</code> crea un programa de C# básico que escribe el texto <code>¡Hola Mundo!</code> en la pantalla. El programa esta compuesto por dos archivos: un archivo con extensión <code>.csproj</code> y un archivo con extensión <code>.cs</code>. El primero es conocido como el archivo del proyecto y usa XML para definir algunos metadatos sobre el proyecto como que paquetes requiere, que versión del framework se usa. El segunfo es el código fuente del programa</p>
+<p>Después, cuando agregues otros paquetes, estos serán listados aquí (de forma similar a un un archivo <code>package.json</code> para npm). No necesitarás editar esté archivo de forma manual muy seguido.Si abres el primer archivo en un editor de texto, veras esto :</p>
+<p><strong>HolaMundo.csproj</strong></p>
+<pre><code class="language-xml">&lt;Project Sdk=&quot;Microsoft.NET.Sdk&quot;&gt;
+
+  &lt;PropertyGroup&gt;
+    &lt;OutputType&gt;Exe&lt;/OutputType&gt;
+    &lt;TargetFramework&gt;netcoreapp3.1&lt;/TargetFramework&gt;
+  &lt;/PropertyGroup&gt;
+
+&lt;/Project&gt;
+</code></pre>
+<p>El archivo Program.cs incluye el código fuente de programa y usa el lenguaje de programación C#</p>
+<p><strong>Program.cs</strong></p>
+<pre><code class="language-csharp">using System;
+
+namespace HolaMundo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine(&quot;Hola Mundo!&quot;);
+        }
+    }
+}
+</code></pre>
+<p>El método <code>static void Main</code> es el punto de entrada de un programa de C#, y por convención esta colocado dentro de una clase (un tipo de estructura de código o modulo) llamado <code>Program</code>. El enunciado <code>using</code> al inicio importa las clases incluidas en espacio de nombres <code>System</code> desde .NET y las hace disponibles en el código en tú clase.</p>
+<p>Dentro de la carpeta del proyecto, usa <code>dotnet run</code> para ejecutar el programa. Veras que la salida se escribe en la consola después que el código compila:</p>
+<pre><code class="language-text">dotnet run
+
+Hello World!
+</code></pre>
+<p>¡Esto es todo lo necesario para crear y ejecutar un programa en .NET! Enseguida, harás lo mismo para una aplicación de ASP.NET Core.</p>
+<h1><a class="header" href="#crear-un-proyecto-de-aspnet-core" id="crear-un-proyecto-de-aspnet-core">Crear un proyecto de ASP.NET Core</a></h1>
+<p>Si todavía estas en el directorio creado para la aplicación Hola Mundo, muévete a tu directorio Documentos o directorio inicial:</p>
+<pre><code class="language-text">cd ..
+</code></pre>
+<p>A continuación, crea un nueva carpeta para almacenar el proyecto completo y navega hacia el.</p>
+<pre><code class="language-text">mkdir AspNetCoreTodo
+cd AspNetCoreTodo
+</code></pre>
+<p>A continuación, crea un nuevo proyecto con el comando <code>dotnet new</code>, esta vez utilizaras opciones adicionales:</p>
+<pre><code class="language-text">dotnet new mvc --auth Individual -o AspNetCoreTodo
+cd AspNetCoreTodo 
+</code></pre>
+<p>Esto crea un nuevo proyecto usando la plantilla <code>mvc</code> y agrega al proyecto código adicional para la autenticación y seguridad (Cubrieré la seguridad en el capítulo <em>Seguridad e identidad</em>).</p>
+<blockquote>
+<p>Te preguntaras porque tener un directorio llamado <code>AspNetCoreTodo</code> dentro de otro directorio con el mismo nombre. El directorio principal o directorio raíz puede contener uno o más directorios de proyecto. El directorio raíz es a veces llamado el directorio de la solución. Después, agregaras más directorios de proyecto junto al directorio de proyecto AspNetCoreTodo. Todos en una solo directorio de la solución.</p>
+</blockquote>
+<p>Verás unos pocos archivos en la carpeta del nuevo proyecto, Una vez que abres el nuevo directorio, todo lo que tienes que hacer para ejecutar el proyecto es:</p>
+<pre><code class="language-text">dotnet run
+
+info: Microsoft.Hosting.Lifetime[0]
+      Now listening on: https://localhost:5001
+info: Microsoft.Hosting.Lifetime[0]
+      Now listening on: http://localhost:5000
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Users\benjaminc\Desktop\AspNetCoreTodo
+info: Microsoft.Hosting.Lifetime[0]
+
+Now listening on: http://localhost:5000
+Application started. Press Ctrl+C to shut down.
+</code></pre>
+<p>En lugar de imprimir en la consola y salir, este programa inicia un servidor web y espera peticiones en el puerto 5000.</p>
+<p>Abre tu navegador web y navega a la dirección <code>http://localhost:5000</code>. Verás la pantalla de inicio predeterterminada de ASP.NET Core, lo cual significa que tu proyecto esta funcionando. Cuando termines presiona Contol-C en la terminal para detener el servidor.</p>
+<h2><a class="header" href="#las-partes-de-un-proyecto-aspnet-core" id="las-partes-de-un-proyecto-aspnet-core">Las partes de un proyecto ASP.NET Core</a></h2>
+<p>La plantilla <code>dotnet new mvc</code> genera un gran número de archivos y directorio por ti. Aquí están las cosas más importantes que obtienes fuera de la caja:</p>
+<ul>
+<li>
+<p>Los archivos <strong>Program.cs</strong> y <strong>Startup.cs</strong> configuraran el servidor web y la canalización de ASP.NET Core. La clase <code>Startup</code> es donde agregas el middleware que manipula y modifica los solicitudes de entrada y brindar cosas como archivos estáticos o páginas de errores. También en donde agregas tus propios servicios al contenedor de inyección de dependencias (posteriormente habrá más sobre esto).</p>
+</li>
+<li>
+<p>Los directorios <strong>Models</strong>, <strong>Views</strong> y <strong>Controllers</strong> contienen los componentes de la arquitectura Modelo Vista Controlador. Explorarás los tres en el siguiente capítulo.</p>
+</li>
+<li>
+<p>El directorio <strong>wwwroot</strong> contiene assets como archivos estáticos como CSS, Javascript e imágenes. Los archivos en <code>wwwroot</code> serán despachados como contenido estático y pueden ser empaquetados y minificados automáticamente.</p>
+</li>
+<li>
+<p>El archivo <strong>appsettings.json</strong> contiene los parámetros de configuración que la aplicación ASP.NET Core carga al inicio. Puedes almacenar aquí las cadenas de conexión u otras datos que no quieres que estén predefinidas en el código.</p>
+</li>
+</ul>
+<h2><a class="header" href="#tips-para-visual-studio-code" id="tips-para-visual-studio-code">Tips para Visual Studio Code</a></h2>
+<p>Si estas usando Visual Studio Code por primera vez, aquí tienes un par de tips de ayuda para iniciar:</p>
+<ul>
+<li>
+<p><strong>Abrir el directorio raíz del proyecto</strong>: En Visual Studio Code, selecciona <em>Archivo&gt;Abrir carpeta</em>. Si Visual Studio Code te solicita instalar los archivos pendientes, presionar clic en <strong>Si</strong> para agregarlos.</p>
+</li>
+<li>
+<p><strong>F5 para ejecutar (y puntos de interrupción de depuración)</strong>: Con tu proyecto abierto, presiona <strong>F5</strong> pra ejecutar el proyecto en el modo de depuración. Esto es lo mismo que ejecutar <code>dotnet run</code> en la linea de comandos, pero tienes el beneficio de configurar puntos de interrupción en tu código dando doble clic en el margen izquierdo:</p>
+</li>
+</ul>
+<p><img src="chapters/your-first-application/breakpoint.png" alt="Punto de interrupción en Visual Studio Code" /></p>
+<ul>
+<li><strong>Foco para corregir problemas</strong>: Si tu código contiene lineas rojos (errores del compilador, coloca el cursor sobre el código que esta en rojo y mirar el icono del foco encendido en el margen izquierdo. el foco te sugerirá reparaciones comunes, como agregar enunciados <code>using</code> faltantes en tu código:</li>
+</ul>
+<p><img src="chapters/your-first-application/lightbulb.png" alt="Foco de Sugerencias " /></p>
+<ul>
+<li><strong>Compila rápidamente</strong>: Usa el atajo <code>Command-Shift-B</code> o <code>Control-Shift-B</code> para ejecutar la tarea de Build run la cual realiza lo mismo que <code>dotnet build</code>.</li>
+</ul>
+<blockquote>
+<p>Estos tips también aplican para Visual Studio 2019 para Windows. Si estas usando Visual Studio, necesitaras abrir el archivo de proyecto directamente. Visual Studio te solicitara guardar el archivo de la solución, el cuál debes guardar en el directorio raíz de la solución (la primera carpeta llamado <code>AspNetCoreTodo</code>). También puedes crear un proyecto ASP.NET Core directamente o en Visual Studio usando la plantillas disponibles en <em>Archivo&gt;Nuevo Proyecto</em>.</p>
+</blockquote>
+<h2><a class="header" href="#control-de-código-fuente--git" id="control-de-código-fuente--git">Control de código fuente : GIT</a></h2>
+<p>Si usas Git o Github para manejar el control de código fuente, ahora es buen momento para hacer un <code>git init</code> e iniciar el repositorio en el directorio raíz del proyecto:</p>
+<pre><code class="language-text">cd ..
+git init
+</code></pre>
+<p>Asegúrate que agregues un archivo <code>.gitignore</code> que ignora las carpeta <code>bin</code> y <code>obj</code>. La plantilla de .gitignore para Visual Studio en el repositorio de Github funciona genial. Desde la versión 3.0 el comando <code>dotnet new</code> incluye una plantilla para crear un archivo gitignore</p>
+<pre><code class="language-text">dotnet new gitignore
+</code></pre>
+<p>Hay mucho más que explorar, así que profundicemos e iniciemos a desarrollar una aplicación.</p>
+<pre><code>git commit -m &quot;Versión inicial del proyecto&quot;
+</code></pre>
+<h1><a class="header" href="#fundamentos-de-mvc" id="fundamentos-de-mvc">Fundamentos de MVC</a></h1>
+<p>En este capítulo, explorarás el patrón MVC en ASP.NET Core. <strong>MVC</strong> (Modelo-Vista-Controlador) es un patrón de diseño ampliamente utilizado para crear aplicaciones web y es usado en casi todos los marcos de desarollo web (ejemplos populares son Ruby on Rails y Expres), adicionalmente marcos de trabajo del lado de cliente con Javascript como Angular. Las aplicaciones móviles sobre iOS y Android también usan una variante de MVC.</p>
+<p>Como el nombre sugiere MVC tiene tres componentes: modelos, vistas y controladores. Los <strong>Controladores</strong> gestionan las solicitudes de entrada desde un cliente o un navegador web y deciden acerca de que código ejecutar. Las <strong>Vistas</strong> son plantillas (usualmente HTML más un lenguaje de plantillas como Handlebars, Pug o Razor) que contienen datos añadidos a el que luego son mostrados a los usuario. Los <strong>Modelos</strong> mantienen los datos que son agregado a las vistas, o los datos que son ingresados por los usuarios.</p>
+<p>Un patrón común para el código MVC es:</p>
+<ul>
+<li>El controlador recibe una petición y busca alguna información en una base de datos.</li>
+<li>El controlador crea un modelo con la información y la adjunta a la vista.</li>
+<li>La vista es generada y mostrada en el navegador del usuario.</li>
+<li>El usuario presiona un botón o envía un formulario, lo que enviá una nueva solicitud al controlador y el ciclo se repite.</li>
+</ul>
+<p>Si has trabajado con MVC en otros lenguajes, te sentirás como en casa en ASP.NET Core MVC. Si eres nuevo en MVC, este capítulo te enseñara lo básico y te ayudará a iniciar.</p>
+<h2><a class="header" href="#lo-que-vas-a-programar" id="lo-que-vas-a-programar">Lo que vas a programar</a></h2>
+<p>El ejercicio de &quot;Hola Mundo&quot; de MVC es construir una aplicación de lista de tareas. Es un proyecto genial ya que es pequeño y simple en alcance, pero trata cada una de las partes de MVC y cubre muchos conceptos que usaras en un aplicación más grande.</p>
+<p>En este libro, desarrollaras una aplicación de gestión de tareas pendientes que dejara al usuario agregar elementos a su lista de tareas y una vez que la tarea se ha completado. Más específicamente estarás creando:</p>
+<ul>
+<li>Una aplicación web de servidor (a veces llamada Back-End) usando a ASP.NET Core, C# y el patrón MVC.</li>
+<li>Una base de datos para almacenar la lista de tareas del usuario usando el motor de base de datos SQLite y un sistema llamado Entity Framework Core.</li>
+<li>Las páginas web y la interfaz con la que el usuario interacturá vía el navegador. Usando HTML, CSS y Javascript (llamado el FrontEnd).</li>
+<li>Un formulario de inicio de sesión y verificación de seguridad así cada usuario mantendrá su lista de tareas privada.</li>
+</ul>
+<p>¿Suena bien? ¡Vamos a construirla! si no haz creado una aplicación nueva en ASP.NET Core proyecto usando <code>dotnet new mvc</code>, sigue los pasos en el capítulo anterior, debes ser capaz de construir y ejecutar el proyecto y ver la pantalla de bienvenida,</p>
+<h1><a class="header" href="#crear-un-controlador" id="crear-un-controlador">Crear un controlador</a></h1>
+<p>Actualmente ya hay algunos controladores en la carpeta Controllers, incluyendo <code>HomeController</code> que generá la pantalla de bienvenida por defautl cuando visitas <code>http://localhost:5000</code>. Puedes ignorar estos controladores por ahora.</p>
+<p>Crea un nuevo controlador para la funcionalidad de la lista de tareas y agrega el siguiente código:</p>
+<p><strong>Controllers/TodoController.cs</strong></p>
+<pre><code class="language-csharp">using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+
+namespace AspNetCoreTodo.Controllers
+{
+    public class TodoController : Controller
+    {
+        // Las acciones van aquí
+    }
+}
+</code></pre>
+<p>Las rutas que son manejadas por el controlador son llamadas <strong>acciones</strong>, y son representadas por métodos en la clase controlador. Por ejemplo, el <code>HomeController</code> incluye tres métodos de acción (<code>Index</code>, <code>About</code>, y <code>Contact</code>) las cuales son mapeadas por ASP.NET Core a estas rutas URLs:</p>
+<pre><code>localhost:5000/Home         -&gt; Index()
+localhost:5000/Home/About   -&gt; About()
+localhost:5000/Home/Contact -&gt; Contact()
+</code></pre>
+<p>Hay un gran número de convenciones usados por ASP.NET Core, tales como patrón que <code>FooController</code> se convierte en <code>/Foo</code>, y la acción <code>Index</code> puede ser omitida de la URL. Puedes personalizar este comportamiento si así lo deseas, pero por ahora, usaremos las convenciones predefinidas.</p>
+<p>Agrega un nueva acción llamada <code>Index</code> al <code>TodoController</code>, remplazando el comentario <code>// Las acciones van aquí</code>;</p>
+<pre><code class="language-csharp">public class TodoController : Controller
+{
+    public IActionResult Index()
+    {
+        // Obtener las tareas desde la base de datos
+
+        // Colocar los tareas en un modelo
+
+        // Genera la vista usando el modelo
+    }
+}
+</code></pre>
+<p>Los métodos de acción pueden regresar vistas, datos JSON, o códigos de estatus HTTP como <code>200 OK</code> y <code>404 Not Found</code>.</p>
+<p>El tipo de retorno <code>IActionResult</code> te da la flexibilidad de regresar cualquiera de estos desde una acción. Es una buena práctica mantener los controladores tan ligeros como sea posible. En este caso, el controlador será responsable de obtener la lista de tareas desde la base de datos, poniendo estas tareas en un modelo que la vista pueda entender, y enviara la vista de regreso al navegador del usuario.</p>
+<p>Antes de que puedas escribir el resto del código del controlador, necesitas crear un modelo y una vista.</p>
+<h1><a class="header" href="#crear-modelos" id="crear-modelos">Crear modelos</a></h1>
+<p>Hay dos clases modelo diferentes que necesitan ser creadas: un modelo que representa las tareas almacenadas en la base de datos (a veces llamadas <strong>entidades</strong>) y el modelo que será combinado con la vista (<strong>MV</strong> en MVC) y sera enviado al navegador del usuario. Debido a que ambos son referidos como modelos, prefiero referirme al último como <strong>View Model</strong>.</p>
+<p>Primero, crea un clase llamada <code>TodoItem</code> en la carpeta Models:</p>
+<p><strong>Models/TodoItem.cs</strong></p>
+<pre><code class="language-csharp">using System;
+using System.ComponentModel.DataAnnotations;
+
+namespace AspNetCoreTodo.Models
+{
+    public class TodoItem
+    {
+        public Guid Id { get; set; }
+
+        public bool IsDone { get; set; }
+
+        [Required]
+        public string Title { get; set; }
+
+        public DateTimeOffset? DueAt { get; set; }
+    }
+}
+</code></pre>
+<p>Esta clase define lo que base de datos necesitara para almacenar cada tarea :Un ID, un titulo o nombre, si la tarea esta completada y la fecha de termino. Cada linea define una propiedad de la clase:</p>
+<ul>
+<li>
+<p>La propiedad <strong>Id</strong> es un GUID o un Identificador Global Único. Los Guid son cadenas largas de letras y números como por ejemplo, <code>43ec09f2-7f70-4f4b-9559-65011d5781bb</code>. Debido a que los GUIDs son aleatorios y extremadamente improbables que sean repitan, son utilizados frecuentemente con identificadores únicos. También puede usar un número (entero) como un identificador pero tienes que configurar tú base de datos para que siempre incremente el número cuando un nuevas filas son añadidas a la base de datos. Los Id son generados de forma aleatoria, así que no tienes que preocuparte de generarlos.</p>
+</li>
+<li>
+<p>La propiedad <strong>IsDone</strong> es un booleano ( valores true/false ), De forma predeterminada, sera falso para todos los nuevos elementos. Después escribirás código para cambiar esta propiedad a true cuando el usuario presiona una casilla de verificación en la vista.</p>
+</li>
+<li>
+<p>La propiedad <strong>Title</strong> es una cadena (valor texto). Esta mantendrá el nombre o descripción de la tarea pendiente. El atributo <code>[Required]</code> le dice ASP.NET Core que esta cadena no puede ser nula o vaciá.</p>
+</li>
+<li>
+<p>La propiedad <strong>DueAt</strong> es un <code>DateTimeOffset</code>, el cual es un tipo de C# que almacena un fecha/hora con la diferencia de horario con el UTC. Guardar la fecha, la hora y la zona horaria juntas hace fácil visualizar las fechas precisamente en sistemas en diferentes zonas horarios.</p>
+</li>
+</ul>
+<p>Nota que el símbolo de interrogación <code>?</code> después del tipo <code>DateTimeOffset?</code> este marca que la propiedad DueAt es nullable u opcional. Si el <code>?</code> no se incluye, todos los las tareas pendientes necesitarían una fecha de entrega. Las propiedad ID y IsDone no son marcadas como nullables, asi que ellas son requeridas y siempre tendrá un valor (o valor por omisión).</p>
+<blockquote>
+<p>La cadenas en C# son siempre nullables, así que no es necesario marcar el titulo como nullable: Las cadenas de C# pueden ser nulas, vacíos o contener texto.</p>
+</blockquote>
+<p>Cada propiedad es seguida por <code>get; set;</code>, las cuales es una forma corta de decir que la propiedad es de lectura/escritura (más técnicamente que tiene métodos modificadores.)</p>
+<p>En este punto, no importa a cual es la base de datos utilizada. Podría ser SQL Server, MySQL, Mongo Db, Redis o algo más exótico. Este modelo define como lucirá en C# una fila o entrada en la base de datos así no tienes que preocuparte acerca de los detalles sobre la base de datos en el código de tú aplicación. Este simple estilo de modelo es algunas veces llamado a POCO (Plain Old C# Object por sus siglas en ingles).</p>
+<h2><a class="header" href="#la-vista-modelo" id="la-vista-modelo">La vista modelo</a></h2>
+<p>Frecuentemente, el modelo que almacenas en la base de datos es similar pero no exactamente el mismo que deseas usar en la MVC (la vista modelo). En este caso, el modelo <code>TodoItem</code> representa a un único elemento de la base de datos. Pero la vista puede necesitar mostrar dos o cientos tareas pendientes (dependiendo que tal malamente el usuario esta procrastinando).</p>
+<p>Debido a esto, la vista modelo puede ser una clase separada que mantienen un arreglo de <code>TodoItem</code></p>
+<p><strong>Models/TodoViewModel.cs</strong></p>
+<pre><code class="language-csharp">namespace AspNetCoreTodo.Models
+{
+    public class TodoViewModel
+    {
+        public TodoItem[] Items { get; set; }
+    }
+}
+</code></pre>
+<p>Ahora que tienes algunos modelos, es tiempo de crear una vista que usa un <code>TodoViewModel</code> y generará el HTML correcto para mostrar al usuario su lista de tareas pendientes.</p>
+<h1><a class="header" href="#crear-una-vista" id="crear-una-vista">Crear una vista</a></h1>
+<p>Las vistas en ASP.NET Core se construyen usando el lenguaje de plantillas Razor, el cual combina HTML y código C#. Si haz escrito páginas usando Handlebars Mustache, ERM en Ruby On Rails o Thymeleaf  en Java, ya tienes la idea básica)</p>
+<p>La mayoría del código de las vistas es solo HTML, con ocasionales enunciados de C# necesarios para extraer datos del modelo de la vista y convertirlos a texto o a HTML. Los enunciados C# tienen como prefijo el símbolo <code>@</code></p>
+<p>La vista generada por la acción <code>Index</code> del controlador <code>TodoController</code> necesita obtener los datos de la vista modelo, (una colección de tareas pendientes) y mostrarlas en un tabla atractiva para el usuario. Por convención, las vistas van colocadas en la carpeta <em>Views</em> en una subcarpeta correspondiente al nombre del controlador. El nombre del archivo es el nombre de la acción con un una extensión <code>.cshtml</code>.</p>
+<p>Crea una carpeta llamada <code>Todo</code> dentro la carpeta <code>Views</code>, y agrega este archivo:
+<strong>Views/Todo/Index.cshtml</strong></p>
+<pre><code class="language-html">@model TodoViewModel
+
+@{
+    ViewData[&quot;Title&quot;] = &quot;Manage your todo list&quot;;
+}
+
+&lt;div class=&quot;panel panel-default todo-panel&quot;&gt;
+  &lt;div class=&quot;panel-heading&quot;&gt;@ViewData[&quot;Title&quot;]&lt;/div&gt;
+
+  &lt;table class=&quot;table table-hover&quot;&gt;
+      &lt;thead&gt;
+          &lt;tr&gt;
+              &lt;td&gt;&amp;#x2714;&lt;/td&gt;
+              &lt;td&gt;Item&lt;/td&gt;
+              &lt;td&gt;Due&lt;/td&gt;
+          &lt;/tr&gt;
+      &lt;/thead&gt;
+
+      @foreach (var item in Model.Items)
+      {
+          &lt;tr&gt;
+              &lt;td&gt;
+                &lt;input type=&quot;checkbox&quot; class=&quot;done-checkbox&quot;&gt;
+              &lt;/td&gt;
+              &lt;td&gt;@item.Title&lt;/td&gt;
+              &lt;td&gt;@item.DueAt&lt;/td&gt;
+          &lt;/tr&gt;
+      }
+  &lt;/table&gt;
+
+  &lt;div class=&quot;panel-footer add-item-form&quot;&gt;
+    &lt;!-- TODO: Add item form --&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>En la parte superior del archivo, la directiva <code>@model</code> le dice a Razor a qué modelo espera que se vincule esta vista. Se accede al modelo a través de la propiedad <code>Model</code>.</p>
+<p>Suponiendo que hay elementos de tareas pendientes en <code>Model.Items</code>, la instrucción <code>foreach</code> se desplazará sobre cada tarea pendiente y mostrará una fila de la tabla (elemento <code>&lt;tr&gt;</code> ) que contiene el nombre y la fecha de vencimiento de la tarea . También se representa una casilla de verificación que permitirá al usuario marcar la tarea como completa.</p>
+<h2><a class="header" href="#el-archivo-de-diseño" id="el-archivo-de-diseño">El archivo de diseño</a></h2>
+<p>Quizás se pregunte dónde está el resto del HTML: ¿qué pasa con la etiqueta <code>&lt;body&gt;</code> o el encabezado y pie de página de la página? ASP.NET Core utiliza una vista de diseño que define la estructura base en la que se procesan todas las demás vistas. Esta almacenado en <code>Views/Shared/_Layout.cshtml</code>.</p>
+<p>La plantilla predeterminada de ASP.NET Core incluye Bootstarp y JQuery en su archivo de Layout. Puedes crear rápidamente una aplicación web, Por supuesto que puedes usar tus propias librerías CSS y Javascript si asi lo deseas.</p>
+<h2><a class="header" href="#personalizando-la-hoja-de-estilos" id="personalizando-la-hoja-de-estilos">Personalizando la hoja de estilos</a></h2>
+<p>La plantilla predefinida también incluye un hoja de estilos con algunas reglas CSS básicas. La hoja de estilos es almacenada en el directorio <code>wwwroot/css</code>,Agrega unas cuantas nuevas reglas CSS al final del, archivo <code>site.css</code>:</p>
+<p><strong>wwwroot/css/site.css</strong></p>
+<pre><code class="language-css">div.todo-panel {
+  margin-top: 15px;
+}
+
+table tr.done {
+  text-decoration: line-through;
+  color: #888;
+}
+</code></pre>
+<p>Puedes usar reglas CSS como estas para personalizar como se visualizan y lucen tus páginas.</p>
+<p>ASP.NET Core y Razor pueden hacer mucho más, como vistas parciales y componentes de vistas generadas en el servidor , pero un simple Layout y una vista es todo lo que necesitaras por ahora. La documentación oficial de ASP.NET Core(en <a href="https://docs.asp.net">https://docs.asp.net</a>contiene muchos ejemplos si deseas aprender más.</p>
+<h1><a class="header" href="#agregar-una-clase-de-servicio" id="agregar-una-clase-de-servicio">Agregar una clase de servicio</a></h1>
+<p>Haz creado un modelo, una vista y un controlador. Antes de usar el modelo y la vista en el controlador, también necesitas escribir código que obtendrá la lista de tareas de los usuarios desde la base de datos.</p>
+<p>Puedes escribir este código directamente en el controlador, pero es una mejor práctica mantener tu código separado. ¿Por qué? en una aplicación real grande, tendrás que hacer malabares con muchos asuntos:</p>
+<ul>
+<li><strong>Generar la Vista</strong> y manipular datos de entrada: esto actualmente es realzado por el controlador.</li>
+<li><strong>Ejecutar las reglas de negocio</strong>, o código que esta relacionado con el propósito y negocio de tu aplicación, en una aplicación de lista de tareas, reglas de negocio significa decisiones como configurar la fecha por omisión para la entrega o solo mostrar tareas que están incompletas. Otros ejemplo de lógica de negocio incluyen calcular el costo total con base en el precio, de los productos, razón de impuesto o verificar si algún jugador tiene puntos suficiente para subir de nivel en un juego.</li>
+<li><strong>Obtener y guardar</strong> tareas desde la base de datos.</li>
+</ul>
+<p>Una vez más es posible hacer todas estas cosas en un solo y enorme controlador, que rápidamente se convertiría en difícil de manejar y probar. En lugar es común ver aplicaciones dividen en dos o tres o más capas y tiers de tal forma que cada una maneja uno (y solo una) aspecto de la aplicación. Esto ayuda a mantener el controlador tan simple como sea posible, y hace más fácil probar y cambiar la lógica de negocio y el código de acceso a base de datos después.</p>
+<p>Separado tu aplicación en esta forma es a veces llamada <strong>mult-tier</strong> o <strong>n-tier arquitectura</strong>. En algunos casos los tiers o capas son proyectos completamente separados. Pero otras veces i solo se referencia a como las clases son organizadas y utilizadas. Lo más importante es pensar a cerca de como dividir tu aplicación en piezas manejables y evitar tener controladores o clases enormes que intentan hacer todo.</p>
+<p>Para este proyecto, usaras dos capa de aplicación: una <strong>capa de presentación</strong> compuesta de controladores y vistas que interactúan con el usuario, y una capa de servicio que combina las reglas del negocio con el código de accesos a base de datos. La capa de presentación ya existe asi que el siguiente paso es crear un servicio que maneja las reglas de negocio para las tareas y las guarda en una base da datos.</p>
+<blockquote>
+<p>La mayoría de los proyectos grandes usan una arquitectura 3-tier: una capa de presentación, una capa lógica de servicios y una capa de repositorio de datos. Un repositorio es una clase que que solo esta enfocada en código de acceso a base de datos (no lógica de negocios). En esta aplicación, por simplicidad, código combinaras estas en un sola capa de servicio pero siéntete libre de experimentar con diferentes formas de estructurar el código.</p>
+</blockquote>
+<h2><a class="header" href="#crear-una-interfaz" id="crear-una-interfaz">Crear una interfaz</a></h2>
+<p>El lenguaje de programación C# incluye el concepto de <strong>interfaces</strong>, donde la definición de los métodos y propiedades de un objeto es separada de la clase que actualmente contiene el código de aquellos métodos y propiedades. Las interfaces hace fácil mantener tus clases desacopladas y fáciles de probar, como veras aquí (y después en el capítulo <em>Pruebas Automáticas</em>) Usaras una interfaces para represente el servicio que puede interactuá con los elementos en la base de datos.</p>
+<p>Por convención, el nombre de las interfaces tiene el prefijo &quot;I&quot;. Crea un nuevo archivo en el directorio Services:</p>
+<p><strong>Services/ITodoItemService.cs</strong></p>
+<pre><code class="language-csharp">using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using AspNetCoreTodo.Models;
+
+namespace AspNetCoreTodo.Services
+{
+    public interface ITodoItemService
+    {
+        Task&lt;TodoItem[]&gt; GetIncompleteItemsAsync();
+    }
+}
+</code></pre>
+<p>Nota que el espacio de nombres de este archivo es <code>AspNetCoreTodo.Services</code>. Los espacios de nombres son una forma de organizar los archivos de código .NET. y se acostumbra nombrar el espacio de nombres siguiendo el directorio en que esta almacenado del archivo (<code>AspNetCoreTodo.Services</code> para archivos en el directorio  <code>Services</code> y asi sucesivamente).</p>
+<p>Debido a que este archivo (en el espacio de nombres <code>AspNetCoreTodo.Services</code>) hace referencia a la clase <code>TodoItem</code> (en el espacio de nombres <code>AspNetCoreTodo.Models</code>), debe incluir una declaración <code>using</code> en la parte superior del archivo para importar ese espacio de nombres. Sin la instrucción <code>using</code>, verás un error como:</p>
+<pre><code>The type or namespace name 'TodoItem' could not be found (are you missing a using directive or an assembly reference?)
+</code></pre>
+<p>Debido a que esta es una interfaces, no hay ningún código aquí, solo la definición (o la firma del método) <code>GetIncompleteItemsAsync</code>. Este método no requiere parámetros y regresa un objeto del tipo  <code>Task&lt;TodoItem[]&gt;</code>.</p>
+<blockquote>
+<p>Si la sintaxis parece confusa, recuerda &quot;una Tarea(Task) que contiene un arreglo de TodoItems&quot;</p>
+</blockquote>
+<p>El tipo <code>Task</code> es similar un futuro o promesa, y se usa aquí porque este método sera asíncrono. En otras palabras es posible que el método no pueda ser capaz de regresar la lista de tareas pendientes de forma inmediata porque necesita primero interactuar con la base de datos primero. (Más sobre esto después).</p>
+<h2><a class="header" href="#crear-la-clase-de-servicio" id="crear-la-clase-de-servicio">Crear la clase de servicio</a></h2>
+<p>Ahora que la interfaz esta definida, estas listo para crear la clase del servicio actual. Cubriré el código de acceso a base de datos a detalle en el capítulo <em>Usar una base de datos</em>, así que por ahora solo usaras datos falsos y siempre regresara 2 tareas definidas de forma estática;</p>
+<p><strong>Services/FakeTodoItemService.cs</strong></p>
+<pre><code class="language-csharp">using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using AspNetCoreTodo.Models;
+
+namespace AspNetCoreTodo.Services
+{
+    public class FakeTodoItemService : ITodoItemService
+    {
+        public Task&lt;TodoItem[]&gt; GetIncompleteItemsAsync()
+        {
+            var item1 = new TodoItem
+            {
+                Title = &quot;Learn ASP.NET Core&quot;,
+                DueAt = DateTimeOffset.Now.AddDays(1)
+            };
+
+            var item2 = new TodoItem
+            {
+                Title = &quot;Build awesome apps&quot;,
+                DueAt = DateTimeOffset.Now.AddDays(2)
+            };
+
+            return Task.FromResult(new[] { item1, item2 });
+        }
+    }
+}
+</code></pre>
+<p>La clase <code>FakeTodoItemService</code> implementa la interfaz <code>ITodoItemService</code> pero siempre regresa el mismo arreglo de dos <code>TodoItem</code>. Usaras esta para poblar el controlador y la vista y después agregaras código de bases de datos real en <em>Usando una base de datos</em>.</p>
+<h1><a class="header" href="#usar-inyección-de-dependencias" id="usar-inyección-de-dependencias">Usar inyección de dependencias</a></h1>
+<p>Regresa al controlador <code>TodoController</code>, añade algo de código para trabajar con el servicio <code>ITodoItemService</code>:</p>
+<pre><code class="language-csharp">public class TodoController : Controller
+{
+    private readonly ITodoItemService _todoItemService;
+
+    public TodoController(ITodoItemService todoItemService)
+    {
+        _todoItemService = todoItemService;
+    }
+
+    public IActionResult Index()
+    {
+        // Obtener las tareas desde la base de datos
+
+        // Coloca los elemento dentro de un modelo
+
+        // Pasa la vista al model y visualiza
+    }
+}
+</code></pre>
+<p>Debido a que <code>ITodoItemService</code> esta el el espacio de nombres &quot;Services&quot;, necesitaras agregar la instrucción using al principio del archivo:</p>
+<pre><code class="language-csharp">using AspNetCoreTodo.Services;
+</code></pre>
+<p>La primera linea de la clase declara un campo privado para tener una referencia al <code>ITodoItemService</code>. Esta variable te deja usar el servicio desde el método de acción Index después (verás como hacerlo en un minuto).</p>
+<p>La línea <code>public TodoController(ITodoItemService todoItemService)</code> define un constructor para la clase. El constructor es un método especial que es invocado cada que deseas crear una nueva instancia de la clase (en este caso la clase <code>TodoController</code>). Por haber agregado un parámetro <code>ITodoItemService</code> al constructor, haz declarado que para crear <code>TodoController</code> necesitar proveer un objeto que implementa la interfaz <code>ITodoItemService</code>.</p>
+<blockquote>
+<p>Las interfaces son increíbles ya que ayudan a desacoplar (separar) la lógica de tu aplicación. Debido a que el controlador depende de la interfaz <code>ITodoItemService</code>, y no de una clase especifica este no conoce o le importa cual clase es actualmente dada. Esto hará realmente fácil probar parte de la aplicación separadamente, Cubriré la pruebas en detalle en el capítulo <em>Pruebas automáticas</em>.</p>
+</blockquote>
+<p>Finalmente ahora puedes usar el <code>ITodoItemService</code> (a través de la variable privada que declaraste) en tu métodos de acción para obtener los elemento desde la capa de servicio:</p>
+<pre><code class="language-csharp">public IActionResult Index()
+{
+    var items = await _todoItemService.GetIncompleteItemsAsync();
+
+    // ...
+}
+</code></pre>
+<p>¿ Recuerdas que el método <code>GetIncompleteItemsAsync</code> regresa un <code>Task&lt;TodoItem[]&gt;</code>? Regresar un <code>Task</code> significa que el método no necesariamente tendrá un resultado, pero puedes usar la palabra clave <code>await</code> para asegurarte que tu código espera hasta que el resultado esta listo antes de continuar. </p>
+<p>El patrón de <code>Task</code> es común cuando tu código realiza peticiones a la base de datos o una API de servicio, porque no será capaz de regresar un resultado real hasta que la base de datos (o red) responda.Si haz usado promesas o callbacks en Javascript u otro lenguaje, <code>Task</code>es la misma idea: la promesa que habrá un resultado - en algún tiempo futuro.</p>
+<blockquote>
+<p>Si haz tenido que tratar con el &quot;infierno callback&quot; en el código heredado de Javascript, estas de suerte.
+Si has tenido que lidiar con el &quot;infierno de devolución de llamada&quot; en un código JavaScript más antiguo, estás de suerte. Tratar con el código asíncrono en .NET es mucho más fácil gracias a la magia de la palabra clave &quot;esperar&quot;. <code>await</code> permite que su código se detenga en una operación asíncrona, y luego retome lo que dejó cuando la base de datos subyacente o la solicitud de red finaliza. Mientras tanto, su aplicación no está bloqueada, ya que puede procesar otras solicitudes según sea necesario. Este patrón es simple pero requiere un poco de tiempo para acostumbrarse, así que no se preocupe si esto no tiene sentido de inmediato. ¡Sigue siguiéndolo!</p>
+</blockquote>
+<p>El único problema es que necesitas actualizar la firma del método <code>Index</code> para devolver un <code>Task&lt;IActionResult&gt;</code>en lugar de <code>IActionResult</code>, y marcarlo como <code>async</code>:
+El único no tiene que actualizar la firma del método <code>Index</code> para regresar a <code>Task&lt;IActionResult&gt;</code> en place of sol un <code>IActionResult</code>, y marcarlo con <code>async</code>:</p>
+<pre><code class="language-csharp">public async Task&lt;IActionResult&gt; Index()
+{
+    var items = await _todoItemService.GetIncompleteItemsAsync();
+
+    // Coloca las tareas en un modelo
+
+    // Pasa la vista al modelo y la genera
+}
+</code></pre>
+<p>Ya casi terminamos. Has hecho que el <code>TodoController</code> dependa de la interfaz <code>ITodoItemService</code>, pero aun no le has dicho a ASP.NET Core que tu deseas el <code>FakeTodoItemService</code> sea el servicio actual que use debajo del capo. Parecerá obvio ahora debido a que solo existe una clase que implementa la interfaz <code>ITodoItemService</code>, pero después tendrás múltiples clases que implementan la misma interfaz, asi que ser explicito es necesario.</p>
+<p>Declarando (o conectando) cual clase concreta para usar para cada interfaz se hace en el método <code>ConfigureServices</code> de la clase <code>Startup</code>. Ahora mismo algo como esto:</p>
+<p><strong>Startup.cs</strong></p>
+<pre><code class="language-csharp">public void ConfigureServices(IServiceCollection services)
+{
+    // (... some code)
+
+    services.AddMvc();
+}
+</code></pre>
+<p>El trabajo del método <code>ConfigureServices</code> es agregar cosas al contenedor de servicios, o a la colección de servicios que ASP.NET Core conocerá. La linea <code>services.AddMvc</code> agregue el servicio que el sistema interno de ASP.NET Core, necesita (como un experimento, intenta comentar esta línea). Cualquier otro servicio que desees usar en tu aplicación debe ser agregado al contenedor de servicios en el método <code>ConfigureServices</code>.</p>
+<p>Agrega la siguiente linea en cualquier lugar dentro del método <code>ConfigureServices</code>,</p>
+<pre><code class="language-csharp">services.AddSingleton&lt;ITodoItemService, FakeTodoItemService&gt;();
+</code></pre>
+<p>Esta linea le especifica a ASP.NET Core que cada que se solicite <code>ITodoItemService</code> en un constructor deberá usar la clase <code>FakeTodoItemService</code>.</p>
+<p><code>AddSingleton</code> agrega un servicio al contenedor de servicios como un <strong>singleton</strong>. Esto significa que se creará una sola instancia del <code>FakeTodoItemService</code> y se reutilizara dondequiera que el servicio es solicitado. Después, cuando escribas una clase de servicio diferente, una que interactuá con la base de datos usaras una aproximación diferente llamada (<strong>scoped</strong>), Te explicaré porque en el capítulo <em>Usando una base de datos</em>.</p>
+<p>!Esto es todo! Cuando una petición llega y es dirigida al <code>TodoController</code>, ASP.NET Core buscará en los servicios disponibles y automáticamente regresara el <code>FakeTodoItemService</code> cuando el controlador requiere por un <code>ITodoItemService</code>. Debido a que los servicios son &quot;inyectados&quot; desde el contenedor de servicios, este patrón es llamado <strong>inyección de dependencias</strong>.</p>
+<h2><a class="header" href="#finalizando-el-controlador" id="finalizando-el-controlador">Finalizando el controlador</a></h2>
+<p>El último paso es finalizar el código del controlador . El controlador ahora tiene un lista de tareas de la capa de servicio, y necesita poner que los items dentro de un <code>TodoViewModel</code> y enlazar este modelo a la vista creada anteriormente:</p>
+<p><strong>Controllers/TodoController.cs</strong></p>
+<pre><code class="language-csharp">public async Task&lt;IActionResult&gt; Index()
+{
+    var items = await _todoItemService.GetIncompleteItemsAsync();
+
+    var model = new TodoViewModel()
+    {
+        Items = items
+    };
+
+    return View(model);
+}
+</code></pre>
+<p>Si no lo haz hecho ya, asegúrate que los siguientes enunciados <code>using</code> estén en la parte superior del archivo:</p>
+<pre><code class="language-csharp">using AspNetCoreTodo.Services;
+using AspNetCoreTodo.Models;
+</code></pre>
+<p>Si estas usando Visual Studio o Visual Studio Code, el editor te sugerirá estos enunciados <code>using</code> cuando colocas el cursor en las lineas rojas.</p>
+<h2><a class="header" href="#probando" id="probando">Probando</a></h2>
+<p>Para iniciar la aplicación presiona F5 (si estas usando Visual Studio o Visual Studio Code), o solo teclea <code>dotnet run</code> en la terminal. Si el código compila sin errores, el servidor empezara escuchando en el puerto 5000 de forma predeterminada.
+Si tu navegador navegador no se abre de forma automática, ábrelo y navega a la dirección <a href="http://localhost:5000/todo">http://localhost:5000/todo</a>. Verás la vista que creaste, con los datos ficticios (por ahora) obtenidos de la base de datos .</p>
+<p>A pesar de que es posible navegar directamente hasta <code>http://localhost:5000/todo</code>, será más conveniente agregar una liga llamada <strong>My to-dos</strong> a la barra de navegación. Para hacer esto, debes editar el archivo de layout.</p>
+<h1><a class="header" href="#actualizar-el-layout" id="actualizar-el-layout">Actualizar el layout</a></h1>
+<p>El archivo de layout en <code>Views/Shared/_Layout.cshtml</code> contiene el código HTML base para cada vista. Este incluye la barra de navegación, la cual es generada en la parte superior de cada página.</p>
+<p>Para agregar un nuevo elemento la barra de navegación, encuentra el código HTML para los elementos existentes de la barra de navegación.</p>
+<p><strong>Views/Shared/_Layout.cshtml</strong></p>
+<pre><code class="language-html">&lt;ul class=&quot;nav navbar-nav&quot;&gt;
+    &lt;li&gt;&lt;a asp-area=&quot;&quot; asp-controller=&quot;Home&quot; asp-action=&quot;Index&quot;&gt;
+        Home
+    &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a asp-area=&quot;&quot; asp-controller=&quot;Home&quot; asp-action=&quot;About&quot;&gt;
+        About
+    &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a asp-area=&quot;&quot; asp-controller=&quot;Home&quot; asp-action=&quot;Contact&quot;&gt;
+        Contact
+    &lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<p>Agrega tu propio elemento que apunta hacia el controlador <code>Todo</code> en lugar de <code>Home</code>:</p>
+<pre><code class="language-html">&lt;li&gt;
+    &lt;a asp-controller=&quot;Todo&quot; asp-action=&quot;Index&quot;&gt;My to-dos&lt;/a&gt;
+&lt;/li&gt;
+</code></pre>
+<p>Los atributos <code>asp-controller</code> y <code>asp-action</code> del elemento <code>&lt;a&gt;</code> se llaman <strong>tag helpers</strong>. Antes de generar la vista, ASP.NET Core reemplaza los <em>tag helpers</em> por atributos HTML reales. En este caso, se genera una URL para la ruta <code>/Todo/Index</code> y se agrega al elemento <a> como un atributo href. Esto significa que no tiene que codificar la ruta manualmente al controlador <code>TodoController</code>. En su lugar, ASP.NET Core lo genera automáticamente.</p>
+<blockquote>
+<p>Si haz utilizado Razor en ASP.NET 4.X, notarás algunos cambios de sintaxis. En lugar de usar <code>@Html.ActionLink()</code> para generar un liga hacia un acción, tag helpers son ahora la forma recomendada de crear link en tus vistas. Tag helpers son útiles para los formularios, también (verás porque un el siguiente capítulo). Puedes aprender más hacer de otros tag helpers en la documentación en <a href="https://docs.asp.net">https://docs.asp.net</a>.</p>
+</blockquote>
+<h1><a class="header" href="#agregar-paquetes-externos-con-nuget" id="agregar-paquetes-externos-con-nuget">Agregar paquetes externos con NuGet</a></h1>
+<p>Una de las grandes ventajas de usar un ecosistema maduro como .NET Core es que el número de paquetes y librerias de terceros es enorme. Al igual que otros manejadores de paquetes, puedes descargar e instalar paquetes para .NET que te ayudaran con casi cualquier tarea o problema que puedas imaginar.</p>
+<p>NuGet esta compuesto por tres componentes el gestor de paquetes, el cliente de NuGet y la galería de NuGet https://www.nuget.org . Puedes buscar paquetes en la web, e instalarlos desde tu máquina local a través de la terminal (o Interfaz gráfica, si estas usando Visual Studio).</p>
+<h2><a class="header" href="#instalar-el-paquete-humanizer" id="instalar-el-paquete-humanizer">Instalar el paquete Humanizer</a></h2>
+<p>El final del último capítulo, la aplicación de tareas mostraba las tareas de la siguiente manera:</p>
+<p><img src="chapters/add-external-packages/iso8601.png" alt="Fechas en formato ISO 8601" /></p>
+<p>La columna fecha está mostrando fechas en un formato que es bueno para las máquinas (llamado IS0 8601), pero ambiguo para humanos. ¿No sería mejor si simplemente leemos “X días a partir de hoy”?</p>
+<p>Puedes escribir código por ti mismo para convertir una fecha en formato ISO 8601 en una cadena amigable para humanos, pero afortunadamente, hay una manera mucho más rápida.</p>
+<p>El paquete Humanizer en NuGet soluciona este problema proporcionado métodos que pueden &quot;humanizar&quot; o reescribir casi cualquier cosa: fechas, horas, duraciones, números y así sucesivamente. Es un proyecto open source fantástico y útil que es publicado bajo la licencia permisiva MIT.</p>
+<p>Para agregarlo a tu proyecto, ejecuta este comando en la terminal;</p>
+<pre><code class="language-bash">dotnet add package Humanizer
+</code></pre>
+<p>Si das una ojeada en el archivo del proyecto <code>AspNetCoreTodo.csproj</code> veras una nueva línea <code>PackageReference</code> que hace referencia a <code>Humanizer</code>.</p>
+<h3><a class="header" href="#usar-humanizer-en-la-vista" id="usar-humanizer-en-la-vista">Usar Humanizer en la vista</a></h3>
+<p>Para usar un paquete en tu código, usualmente tienes que agregar un enunciado <code>using</code> que importa el paquete al principio del archivo</p>
+<p>Debido a que Humanizar será usado para reescribir las fechas mostradas en la vista, puedes usarlo directamente en las vistas misma. Primero añade la directiva <code>@using</code> al principio de la vista.</p>
+<p><strong>Views/Todo/Index.cshtml</strong></p>
+<pre><code class="language-html">@model TodoViewModel
+@using Humanizer
+
+// ...
+</code></pre>
+<p>Después actualiza la línea que escribe la propiedad <code>DueAt</code> para usar el método <code>Humanize</code> del paquete Humanizer:</p>
+<pre><code class="language-html">&lt;td&gt;@item.DueAt.Humanize()&lt;/td&gt;
+</code></pre>
+<p>Ahora las fechas son mucho más legibles.</p>
+<p><img src="chapters/add-external-packages/friendly-dates.png" alt="Fechas legibles para humanos" /></p>
+<p>Hay paquetes disponibles en NuGet para todo desde parsear un XML hasta aprendizaje automático para postear en Twitter. ASP.NET Core mismo, bajo el capo, no es más que una colección de paquetes de NuGet que son agregados a tu proyecto.</p>
+<blockquote>
+<p>El archivo de proyecto creado por <code>dotnet new mvc</code> incluye una sola referencia al paquete <code>Microsoft.AspNetCore.All</code> que es un &quot;metapaquete&quot; conveniente que hace referencia a todos los otros paquetes de ASP.NET Core que necesitas para un proyecto típico. De esta forma no tienes que tener cientos de referencias a paquetes en tu archivo de proyecto.</p>
+</blockquote>
+<p>En el siguiente capítulo, usaras otro conjunto de paquetes de NuGet (un sistema llamado Entity Framework Core) para escribir código que interactúa con una base de datos.</p>
+<h1><a class="header" href="#usar-una-base-de-datos" id="usar-una-base-de-datos">Usar una base de datos</a></h1>
+<p>Escribir código de acceso a base de datos puede ser complicado. Es una mala idea pegar consultas de SQL en el código de su aplicación, a menos que realmente sepa lo que está haciendo. Un <strong>mapeador de objetos relacional</strong> (ORM) facilita la escritura de código que interactúa con una base de datos agregando una capa de abstracción entre su código y la base de datos en sí. Hibernate para Java y ActiveRecord para Ruby son dos ORM bien conocidos.</p>
+<p>Existen varios ORM para .NET, incluido uno creado por Microsoft e incluido en ASP.NET Core de forma predeterminada: Entity Framework Core. Entity Framework Core facilita la conexión a varios tipos de bases de datos diferentes y le permite utilizar el código C# para crear consultas de base de datos que se asignan nuevamente a los modelos C# (POCO Plain Old CLR Objects).</p>
+<blockquote>
+<p>¿Recuerda cómo crear una interfaz de servicio desacopla el código del controlador de la clase de servicio real? Entity Framework Core es como una gran interfaz sobre su base de datos. Su código de C# puede permanecer independiente de la base de datos, y puede intercambiar diferentes proveedores dependiendo de la tecnología de base de datos subyacente.</p>
+</blockquote>
+<p>Entity Framework Core puede conectarse a bases de datos relacionales como SQL Server, PostgreSQL y MySQL también funciona con bases de datos NoSQL (documentos) como Mongo. Durante el desarrollo, usarás SQLite en este proyecto para facilitar la configuración</p>
+<h2><a class="header" href="#conectarse-a-una-base-de-datos" id="conectarse-a-una-base-de-datos">Conectarse a una base de datos</a></h2>
+<p>Hay algunas cosas que necesita para usar Entity Framework Core para conectarse a una base de datos. Ya que usó <code>dotnet new</code> y la plantilla MVC + Individual Auth para configurar su proyecto, ya los tiene:</p>
+<ul>
+<li>
+<p><strong>Los paquetes de Entity Framework Core</strong>. Estos se incluyen de forma predeterminada en todos los proyectos de ASP.NET Core.</p>
+</li>
+<li>
+<p><strong>Una base de datos</strong> (naturalmente). El archivo <code>app.db</code> en el directorio raíz del proyecto es una pequeña base de datos SQLite creada para usted por <code>dotnet new</code>. SQLite es un motor de base de datos ligero que puede ejecutarse sin necesidad de instalar herramientas adicionales en su máquina, por lo que es fácil y rápido de usar en el desarrollo.</p>
+</li>
+<li>
+<p><strong>Una clase de contexto de base de datos</strong>. El contexto de la base de datos es una clase de C# que proporciona un punto de entrada a la base de datos. Es la forma en que su código interactuará con la base de datos para leer y guardar elementos. Ya existe una clase de contexto básico en el archivo <code>Data/ApplicationDbContext.cs</code>.</p>
+</li>
+<li>
+<p><strong>Una cadena de conexión</strong>. Ya sea que se conecte a una base de datos de archivos local (como SQLite) o una base de datos alojada en otro lugar, definirá una cadena que contenga el nombre o la dirección de la base de datos a la que se conectará. Esto ya está configurado para usted en el archivo <code>appsettings.json</code>: la cadena de conexión para la base de datos SQLite es <code>DataSource = app.db</code>.</p>
+</li>
+</ul>
+<p>Entity Framework Core usa el contexto de la base de datos, junto con la cadena de conexión, para establecer una conexión con la base de datos. Debe indicar a Entity Framework Core qué contexto, cadena de conexión y proveedor de base de datos deben utilizar en el método <code>ConfigureServices</code> de la clase <code>Startup</code>. Esto es lo que está definido para ti, gracias a la plantilla:</p>
+<pre><code class="language-csharp">services.AddDbContext&lt;ApplicationDbContext&gt;(options =&gt;
+    options.UseSqlite(
+        Configuration.GetConnectionString(&quot;DefaultConnection&quot;)));
+</code></pre>
+<p>Este código agrega el <code>ApplicationDbContext</code> al contenedor de servicio, y le dice a Entity Framework Core que use el proveedor de base de datos SQLite, con la cadena de conexión de la configuración (<code>appsettings.json</code>).</p>
+<p>Como puedes ver, <code>dotnet new</code> ¡crea muchas cosas por ti! La base de datos está configurada y lista para ser utilizada. Sin embargo, no tiene tablas para almacenar elementos de tareas pendientes. Para almacenar sus entidades <code>TodoItem</code>, necesitará actualizar el contexto y migrar la base de datos.</p>
+<h2><a class="header" href="#actualizar-el-contexto" id="actualizar-el-contexto">Actualizar el contexto</a></h2>
+<p>Todavía no hay mucho que hacer en el contexto de la base de datos:</p>
+<p><strong>Data/ApplicationDbContext.cs</strong></p>
+<pre><code class="language-csharp">public class ApplicationDbContext 
+             : IdentityDbContext&lt;ApplicationUser&gt;
+{
+    public ApplicationDbContext(
+        DbContextOptions&lt;ApplicationDbContext&gt; options)
+        : base(options)
+    {
+    }
+
+    protected override void OnModelCreating(ModelBuilder builder)
+    {
+        base.OnModelCreating(builder);
+        // ...
+    }
+}
+</code></pre>
+<p>Agregue una propiedad <code>DbSet</code> al <code>ApplicationDbContext</code>, justo debajo del constructor:</p>
+<pre><code class="language-csharp">public ApplicationDbContext(
+    DbContextOptions&lt;ApplicationDbContext&gt; options)
+    : base(options)
+{
+}
+
+public DbSet&lt;TodoItem&gt; Items { get; set; }
+
+// ...
+</code></pre>
+<p>Un <code>DbSet</code> representa una tabla o colección en la base de datos. Al crear una propiedad <code>DbSet&lt;TodoItem&gt;</code> llamada <code>Items</code>, le está diciendo a Entity Framework Core que desea almacenar las entidades <code>TodoItem</code> en una tabla llamada <code>Items</code>.</p>
+<p>Has actualizado la clase de contexto, pero ahora hay un pequeño problema: el contexto y la base de datos ahora no están sincronizados, porque en realidad no hay una tabla <code>Items</code> en la base de datos. (Solo actualizar el código de la clase de contexto no cambia la base de datos en sí).</p>
+<p>Para actualizar la base de datos para reflejar el cambio que acaba de realizar en el contexto, debe crear una <strong>migración</strong>.</p>
+<blockquote>
+<p>Si ya tiene una base de datos existente, busque en la web &quot;scaffold-dbcontext database&quot; y lea la documentación de Microsoft sobre el uso de la herramienta <code>Scaffold-DbContext</code> para realizar una ingeniería inversa de la estructura de la base de datos en el <code>DbContext</code> correspondiente y las clases de modelos automáticamente .</p>
+</blockquote>
+<h2><a class="header" href="#crear-una-migración" id="crear-una-migración">Crear una migración</a></h2>
+<p>Las migraciones hacen un seguimiento de los cambios en la estructura de la base de datos a lo largo del tiempo. Permiten deshacer (revertir) un conjunto de cambios o crear una segunda base de datos con la misma estructura que la primera. Con las migraciones, tiene un historial completo de modificaciones, como agregar o eliminar columnas (y tablas completas).</p>
+<p>En el capítulo anterior, agregaste un conjunto de <code>Tareas</code> al contexto. Dado que el contexto ahora incluye un conjunto (o tabla) que no existe en la base de datos, debe crear una migración para actualizar la base de datos:</p>
+<pre><code>dotnet ef migrations add AddItems
+</code></pre>
+<p>Esto crea una nueva migración llamada <code>AddItems</code> al examinar cualquier cambio que hayas realizado en el contexto.</p>
+<blockquote>
+<p>Si recibe un error como <code>No se ha encontrado el ejecutable que coincida con el comando&quot; dotnet-ef &quot;</code>, asegúrese de estar en el directorio correcto. Estos comandos deben ejecutarse desde el directorio raíz del proyecto (donde se encuentra el archivo <code>Program.cs</code>).</p>
+</blockquote>
+<p>Si abres el directorio <code>Data/Migrations</code>, verás algunos archivos:</p>
+<p><img src="chapters/use-a-database/migrations.png" alt="Migraciones múltiples" /></p>
+<p>El primer archivo de migración (con un nombre como <code>00_CreateIdentitySchema.cs</code>) se creó y se aplicó hace mucho cuando ejecutó <code>dotnet new</code>. La nueva migración de <code>AddItem</code> tiene el prefijo de una marca de tiempo cuando la creas.</p>
+<blockquote>
+<p>Puede ver una lista de migraciones con <code>dotnet ef migrations list</code>.</p>
+</blockquote>
+<p>Si abre su archivo de migración, verá dos métodos llamados <code>Up</code> y <code>Down</code>:</p>
+<p><strong>Data/Migrations/<date>_AddItems.cs</strong></p>
+<pre><code class="language-csharp">protected override void Up(MigrationBuilder migrationBuilder)
+{
+    // (... some code)
+
+    migrationBuilder.CreateTable(
+        name: &quot;Items&quot;,
+        columns: table =&gt; new
+        {
+            Id = table.Column&lt;Guid&gt;(nullable: false),
+            DueAt = table.Column&lt;DateTimeOffset&gt;(nullable: true),
+            IsDone = table.Column&lt;bool&gt;(nullable: false),
+            Title = table.Column&lt;string&gt;(nullable: true)
+        },
+        constraints: table =&gt;
+        {
+            table.PrimaryKey(&quot;PK_Items&quot;, x =&gt; x.Id);
+        });
+
+    // (some code...)
+}
+
+protected override void Down(MigrationBuilder migrationBuilder)
+{
+    // (... some code)
+
+    migrationBuilder.DropTable(
+        name: &quot;Items&quot;);
+
+    // (some code...)
+}
+</code></pre>
+<p>El método <code>Up</code> se ejecuta cuando aplica la migración a la base de datos. Dado que agregó un <code>DbSet&lt;TodoItem&gt;</code> al contexto de la base de datos, Entity Framework Core creará una tabla <code>Items</code> (con columnas que coinciden con un <code>TodoItem</code>) cuando aplique la migración.</p>
+<p>El método <code>Down</code> hace lo contrario: si necesita deshacer (roll back) la migración, la tabla <code>Elementos</code> se eliminará.</p>
+<h3><a class="header" href="#solución-para-las-limitaciones-de-sqlite" id="solución-para-las-limitaciones-de-sqlite">Solución para las limitaciones de SQLite</a></h3>
+<p>Existen algunas limitaciones de SQLite que se interponen si intenta ejecutar la migración como está. Hasta que se solucione este problema, use esta solución:</p>
+<ul>
+<li>Comente o elimine las líneas <code>migrationBuilder.AddForeignKey</code> en el método <code>Up</code>.</li>
+<li>Comente o elimine cualquier línea <code>migrationBuilder.DropForeignKey</code> en el método <code>Down</code>.</li>
+</ul>
+<p>Si usa una base de datos SQL completa, como SQL Server o MySQL, esto no será un problema y no tendrá que hacer esta solución (la cual es ciertamente hacker).</p>
+<h3><a class="header" href="#aplicar-la-migración" id="aplicar-la-migración">Aplicar la migración</a></h3>
+<p>El último paso después de crear una (o más) migraciones es aplicarlas realmente a la base de datos:</p>
+<pre><code>dotnet ef database update
+</code></pre>
+<p>Este comando hará que Entity Framework Core cree la tabla <code>Items</code> en la base de datos.</p>
+<blockquote>
+<p>Si desea revertir la base de datos, puede proporcionar el nombre de la migración <em>anterior</em>:
+<code>dotnet ef database update CreateIdentitySchema</code>
+Esto ejecutará los métodos <code>Down</code> de cualquier migración más reciente que la migración que especifique.</p>
+</blockquote>
+<blockquote>
+<p>Si necesita borrar por completo la base de datos y comenzar de nuevo, ejecute <code>dotnet ef database database</code> seguido de <code>dotnet ef database update</code> para volver a armar la base de datos y llevarla a la migración actual.</p>
+</blockquote>
+<p>¡Eso es! Tanto la base de datos como el contexto están listos para funcionar. A continuación, utilizará el contexto en su capa de servicio.</p>
+<h2><a class="header" href="#crear-una-nueva-clase-de-servicio" id="crear-una-nueva-clase-de-servicio">Crear una nueva clase de servicio</a></h2>
+<p>Anteriormente en el capítulo de <strong>conceptos básicos de MVC</strong>, creaste un <code>FakeTodoItemService</code> que contenía elementos de tareas pendientes codificados. Ahora que tiene un contexto de base de datos, puede crear una nueva clase de servicio que usará Entity Framework Core para obtener los tareas reales de la base de datos.</p>
+<p>Elimine el archivo <code>FakeTodoItemService.cs</code> y cree un nuevo archivo:</p>
+<p><strong>Services/TodoItemService.cs</strong></p>
+<pre><code class="language-csharp">using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using AspNetCoreTodo.Data;
+using AspNetCoreTodo.Models;
+using Microsoft.EntityFrameworkCore;
+
+namespace AspNetCoreTodo.Services
+{
+    public class TodoItemService : ITodoItemService
+    {
+        private readonly ApplicationDbContext _context;
+
+        public TodoItemService(ApplicationDbContext context)
+        {
+            _context = context;
+        }
+
+        public async Task&lt;TodoItem[]&gt; GetIncompleteItemsAsync()
+        {
+            var items = await _context.Items
+                .Where(x =&gt; x.IsDone == false)
+                .ToArrayAsync();
+            return items;
+        }
+    }
+}
+</code></pre>
+<p>Notará el mismo patrón de inyección de dependencia aquí que vio en el capítulo <em>Fundamentos de MVC</em>, excepto que esta vez se está inyectando el <code>ApplicationDbContext</code>. El <code>ApplicationDbContext</code> ya se está agregando al contenedor de servicios en el método <code>ConfigureServices</code>, por lo que está disponible para inyección aquí.</p>
+<p>Echemos un vistazo más de cerca al código del método <code>GetIncompleteItemsAsync</code>. Primero, usa la propiedad <code>Items</code> del contexto para acceder a todos los elementos de la tarea en el <code>DbSet</code>:</p>
+<pre><code class="language-csharp">var items = await _context.Items
+</code></pre>
+<p>Luego, el método <code>Where</code> se usa para filtrar solo las tareas que no están completas:</p>
+<pre><code class="language-csharp">.Where(x =&gt; x.IsDone == false)
+</code></pre>
+<p>El método <code>Where</code> es una característica de C # llamada LINQ (<strong>L</strong>enguaje <strong>IN</strong>tegrated <strong>Q</strong>uery), que se inspira en la programación funcional y facilita la expresión de consultas de base de datos en código. Bajo el capó, Entity Framework Core traduce el método <code>Where</code> en una declaración como <code>SELECT * FROM Items WHERE IsDone = 0</code>, o un documento de consulta equivalente en una base de datos NoSQL.</p>
+<p>Finalmente, el método <code>ToArrayAsync</code> le dice a Entity Framework Core que obtenga todas las entidades que coincidan con el filtro y las devuelva como una matriz. El método <code>ToArrayAsync</code> es asíncrono (devuelve un <code>Task</code>), por lo que debe estar esperando <code>await</code> para obtener su valor.</p>
+<p>Para que el método sea un poco más corto, puedes eliminar la variable intermedia <code>items</code> y simplemente devolver el resultado de la consulta directamente (que hace lo mismo):</p>
+<pre><code class="language-csharp">public async Task&lt;TodoItem[]&gt; GetIncompleteItemsAsync()
+{
+    return await _context.Items
+        .Where(x =&gt; x.IsDone == false)
+        .ToArrayAsync();
+}
+</code></pre>
+<h3><a class="header" href="#actualizar-el-contenedor-de-servicios" id="actualizar-el-contenedor-de-servicios">Actualizar el contenedor de servicios</a></h3>
+<p>Debido a que eliminó la clase <code>FakeTodoItemService</code>, deberá actualizar la línea en <code>ConfigureServices</code> que está cableando la interfaz <code>ITodoItemService</code>:</p>
+<pre><code class="language-csharp">services.AddScoped&lt;ITodoItemService, TodoItemService&gt;();
+</code></pre>
+<p><code>AddScoped</code> agrega su servicio al contenedor de servicio utilizando el ciclo de vida <strong>de ámbito</strong>. Esto significa que se creará una nueva instancia de la clase <code>TodoItemService</code> durante cada solicitud web. Esto es necesario para las clases de servicio que interactúan con una base de datos.</p>
+<blockquote>
+<p>Agregar una clase de servicio que interactúa con Entity Framework Core (y su base de datos) con el ciclo de vida de singleton (u otros ciclos de vida) puede causar problemas, debido a cómo Entity Framework Core administra las conexiones de base de datos por solicitud bajo el capó. Para evitarlo, utilice siempre el ciclo de vida con ámbito para los servicios que interactúan con Entity Framework Core.</p>
+</blockquote>
+<p>¡El <code>TodoController</code> que depende de un <code>ITodoItemService</code> inyectado será maravillosamente inconsciente del cambio en las clases de servicios, pero bajo el capó estará usando Entity Framework Core y¡hablando con una base de datos real!</p>
+<h3><a class="header" href="#pruébalo" id="pruébalo">Pruébalo</a></h3>
+<p>Inicie la aplicación y navegue a <code>http://localhost:5000/todo</code>. Los tareas falsos se han ido y su aplicación está realizando consultas reales a la base de datos. No sucede que haya tareas pendientes guardados, por lo que está en blanco por ahora.</p>
+<p>En el siguiente capítulo, agregará más funciones a la aplicación, comenzando con la capacidad de crear nuevos tareas pendientes.</p>
+<h1><a class="header" href="#agregar-más-características" id="agregar-más-características">Agregar más características</a></h1>
+<p>Ahora que te has conectado a la base de datos usando Entity Framework Core, estás listo para agregar más características a la aplicación. Primero, harás posible agregar nuevas tareas usando un formulario.</p>
+<h1><a class="header" href="#agregar-nuevas-tareas" id="agregar-nuevas-tareas">Agregar nuevas tareas</a></h1>
+<p>El usuario agregará nuevas tareas con un simple formulario abajo de la lista</p>
+<p><img src="chapters/add-more-features/final-form.png" alt="Formulario final" /></p>
+<p>Para agregar esta característica requieres algunos pasos:</p>
+<ul>
+<li>Agregar un formulario a la vista</li>
+<li>Crear una nueva acción en el controlador para manipular el formulario.</li>
+<li>Agregar código a la capa de servicio para actualizar la base de datos.</li>
+</ul>
+<h2><a class="header" href="#agregar-un-formulario" id="agregar-un-formulario">Agregar un formulario</a></h2>
+<p>La vista <code>Views/Todo/Index.cshtml</code> tiene un lugar asignado para el formulario para agregar elementos:</p>
+<pre><code class="language-html">&lt;div class=&quot;panel-footer add-item-form&quot;&gt;
+  &lt;!-- TODO: Add item form --&gt;
+&lt;/div&gt;
+</code></pre>
+<p>Para mantener las cosas separadas y organizadas, crearas un formulario como una <strong>vista parcial</strong>. Una vista parcial es una pequeña pieza de una vista más grande que vive en un archivo separado.</p>
+<p>Crea una vista llamada <code>AddItemPartial.cshtml</code>:</p>
+<p><strong>Views/Todo/AddItemPartial.cshtml</strong></p>
+<pre><code class="language-html">@model TodoItem
+
+&lt;form asp-action=&quot;AddItem&quot; method=&quot;POST&quot;&gt;
+    &lt;label asp-for=&quot;Title&quot;&gt;Add a new item:&lt;/label&gt;
+    &lt;input asp-for=&quot;Title&quot;&gt;
+    &lt;button type=&quot;submit&quot;&gt;Add&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+<p>El tag helper <code>asp-action</code> puede generar una URL para el formulario, de forma similar cuando la usas en un elemento <code>&lt;a&gt;</code>. En este caso, el <code>asp-action</code> es remplazado con una ruta real hacia la acción <code>AddItem</code> que crearas:</p>
+<pre><code class="language-html">&lt;form action=&quot;/Todo/AddItem&quot; method=&quot;POST&quot;&gt;
+</code></pre>
+<p>Agregar un tag-helper <code>asp-</code> al elemento <code>&lt;form&gt;</code> también agrega un campo oculto al formulario que contiene un código de verificación. Este código de verificación puede se usado para prevenir ataques solicitud de sitio cruzada. Verificarás el código cuando escribas la acción.</p>
+<p>Esto toma responsabilidad de crear la vista parcial. Ahora, haz una referencia a esta desde la vista principal Todo:</p>
+<p><strong>Views/Todo/Index.cshtml</strong></p>
+<pre><code class="language-html">&lt;div class=&quot;panel-footer add-item-form&quot;&gt;
+  @await Html.PartialAsync(&quot;AddItemPartial&quot;, new TodoItem())
+&lt;/div&gt;
+</code></pre>
+<h2><a class="header" href="#agregar-una-acción" id="agregar-una-acción">Agregar una acción</a></h2>
+<p>Cuando un usuario presiona el botón Add sobre el formulario que creaste, su navegador construirá un solicitud POST hacia <code>/Todo/AddItem</code> en tu aplicación. Que por el momento no funcionara, porque no hay una acción que pueda manejar la ruta <code>/Todo/AddItem</code>. Si intentas ahora, ASP.NET Core regresara un error <code>404 Not Found</code></p>
+<p>Necesitaras crear una nueva acción llamada <code>AddItem</code> en el <code>TodoController</code>:</p>
+<pre><code class="language-csharp">[ValidateAntiForgeryToken]
+public async Task&lt;IActionResult&gt; AddItem(TodoItem newItem)
+{
+    if (!ModelState.IsValid)
+    {
+        return RedirectToAction(&quot;Index&quot;);
+    }
+
+    var successful = await _todoItemService.AddItemAsync(newItem);
+    if (!successful)
+    {
+        return BadRequest(&quot;Could not add item.&quot;);
+    }
+
+    return RedirectToAction(&quot;Index&quot;);
+}
+</code></pre>
+<p>¿Notas como la nueva acción <code>AddItem</code> acepta un parámetro <code>TodoItem</code>? Es es el mismo modelo <code>TodoItem</code> que creaste en el capítulo <em>Fundamentos de MVC</em> para guardar la información acerca de la tarea. Cuando es usado aque como un parámetro de acción, ASP.NET Core automáticamente ejecuta un proceso llamado <strong>model binding</strong>.</p>
+<p>Model binding busca en los datos de la solicitud e intente inteligentemente coincidir los datos con las propiedad del modelo. En otras palabras, cuando el usuario envía el formulario y su navegador POST hacia esta acción, ASP.NET Core obtendrá esta información desde el formulario y la colocara en la variable <code>newItem</code>.</p>
+<p>El atributo <code>[ValidateAntiForgeryToken]</code> antes de la acción le dice a ASP.NET Core que est debe buscar (y verificar) el código oculto de verificación qu fue agregado al formulario por el tag helper <code>asp-action</code>. Este es una importante medida de seguridad para prevenir falsificación de petición en sitios cruzados. donde tus usuario no puedes ser engañados enviando los datos del formulario a sitios maliciosos. El código de verificación se asegura que la aplicación es actualmente la única que muestra el formulario y recibe los datos del formulario.</p>
+<p>Echa un vistazo <code>AddItemPartial.cshtml</code> a la vista una vez más. La linea <code>@model TodoItem</code> al principio del archivo le dice a ASP.NET Core que la vista debe esperar ser pareada con el modelo <code>TodoItem</code>. Esto hace posible usar <code>asp-for=&quot;Title&quot;</code> en la etiqueta <code>&lt;input&gt;</code> para dejar ASP.NET Core conozca que esta elemento input es para la propiedad <code>Title</code>.</p>
+<p>Porque la línea <code>@model</code>, la vista parcial espeta recibir un objecto <code>TodoItem</code> cuando es generada. Pasando a esta un <code>new TodoItem</code> a través <code>Html.PartialAsync</code> inicializa el formulario con una tarea en blanco.(Intenta añadir <code>{ Title = &quot;hello&quot; }</code> y ve que pasa!)</p>
+<p>Durante el model binding, cualquier propiedad del model que no pueden se coincidente con los campos en la solicitud. Desde que el formulario solo incluye un elemento input <code>Title</code>, puede espera que las otras propiedades en <code>TodoItem</code> (la bandera <code>IsDone</code>, la fecha de <code>DueAt</code>) serán vacías o contienes valores predefinidos.</p>
+<blockquote>
+<p>En lugar de reutilizar el modelo <code>TodoItem</code>, otra aproximación seria crear un modelo separado (como <code>NewTodoItem</code> ) que solo es usado para esta acción y solo tiene las propiedades específicas (Titulo) que necesitas para agregar una nueva tarea. Enlazamiento de modelo es aun usar, pero de esta forma haz separado el modelo que es usado para guardar una tarea en la base de datos desde el modelo que es usado para enlazar la solicitud de entrada. Es a veces llamado un <strong>binding model</strong> or a <strong>data transfer object</strong></p>
+</blockquote>
+<p>Después de enlazar los dato de la solicitud al modelo, ASP.NET Core también ejecuta <strong>validación del modelo</strong>. La validación verifica si los datos en el modelo desde la solicitud de entrada hacen sentidos o es validad. Tu puedes agregar atributos a el modelo para decirle ASP.NET Core como debe ser validado.</p>
+<p>El atributo <code>[Required]</code> en el titulo le dice al validador del modelo de ASP.NET Core considera el titulo invalido si no esta o esta en blanco. Dale un vistazo al código de la acción <code>AddItem</code>: el primer bloque checa si el <code>ModelState</code>es valido.(el resultado de la validación del modelo). Es opcional hacer esta verificación de validación justo en el principio de la acción:</p>
+<pre><code class="language-csharp">if (!ModelState.IsValid)
+{
+    return RedirectToAction(&quot;Index&quot;);
+}
+</code></pre>
+<p>Si el <code>ModelState</code> es invalido por cualquier razón, el navegador será redireccionado a la ruta <code>/Todo/Index</code>, la cual refresca la página.</p>
+<p>Después, el controlador llama a la capa de servicio para realizar la operación de base de datos actual de guardar la nueva tarea:</p>
+<pre><code class="language-csharp">var successful = await _todoItemService.AddItemAsync(newItem);
+if (!successful)
+{
+    return BadRequest(new { error = &quot;Could not add item.&quot; });
+}
+</code></pre>
+<p>El método <code>AddItemAsync</code> regresa <code>true</code> or <code>false</code> dependiendo el clic, a es item fue agregado satisfactoriamente a la base. Si este falla por alguna razón, la acción regresará un error HTTP <code>400 Bad Request</code> junto con el objeto que contiene un mensaje de error.</p>
+<p>Finalmente, si todo es completado sin errores, la acción redirige el navegador a la ruta <code>/Todo/Index</code>, la cual refresca la página y muestra la nueva, actualizar la listas de tareas de cada usuario.</p>
+<h3><a class="header" href="#agregar-un-método-de-servicio" id="agregar-un-método-de-servicio">Agregar un método de servicio</a></h3>
+<p>Si estas usando un editor de código que entiende C#, veras unas líneas en rojas bajo <code>AddItemAsync</code> debido a que el método no existe aun.</p>
+<p>Como ultimo paso, necesitas agregar un método a la capa de servicio. Primero agregalo a la definición de la interfaz en <code>ITodoItemService</code>:</p>
+<pre><code class="language-csharp">public interface ITodoItemService
+{
+    Task&lt;TodoItem[]&gt; GetIncompleteItemsAsync();
+
+    Task&lt;bool&gt; AddItemAsync(TodoItem newItem);
+}
+</code></pre>
+<p>Despues, la implementación actual en <code>TodoItemService</code>:</p>
+<pre><code class="language-csharp">public async Task&lt;bool&gt; AddItemAsync(TodoItem newItem)
+{
+    newItem.Id = Guid.NewGuid();
+    newItem.IsDone = false;
+    newItem.DueAt = DateTimeOffset.Now.AddDays(3);
+
+    _context.Items.Add(newItem);
+
+    var saveResult = await _context.SaveChangesAsync();
+    return saveResult == 1;
+}
+</code></pre>
+<p>La propiedad <code>newItem.Title</code> ya ha sido configurada por el enlazador de modelos de ASP.NET Core, asi este método solo necesita asignar un Id y confiar el valor por omisión para las otras propiedades. Entonces, la nueva tarea es agregadas al contacto de base de datos. Esta no se guarda hasta que llamas al método <code>SaveChangesAsync()</code>. Si el operación de guardar fue satisfactorio <code>SaveChangesAsync()</code> regresará 1.</p>
+<h3><a class="header" href="#pruebaló" id="pruebaló">Pruebaló</a></h3>
+<p>Ejecuta la aplicación y agrega algunas tareas a tu lista mediante el formulario. Debido a que las tareas son almacenadas en la base de datos, estas estarán ahí incluso después de detener e iniciar la aplicación otra vez.</p>
+<blockquote>
+<p>Como un reto extra, intenta agregar un date picker usando HTML y Javascript y deja que el usuario elija una fecha (opcional) para la propiedad <code>DueAt</code>. Entonces usa, esa fecha en lugar de siempre hacer que una nueva tarea tenga fecha de entrega en 3 días.</p>
+</blockquote>
+<h1><a class="header" href="#completa-los-elementos-con-una-casilla-de-verificación" id="completa-los-elementos-con-una-casilla-de-verificación">Completa los elementos con una casilla de verificación</a></h1>
+<p>Agregar tareas a tú lista de tareas es genial, pero eventualmente necesitaras también completar las cosas. En la vista <code>Views/Todo/Index.cshtml</code>, una casilla de verificación es, mostrada para cada tarea:</p>
+<pre><code class="language-html">&lt;input type=&quot;checkbox&quot; class=&quot;done-checkbox&quot;&gt;
+</code></pre>
+<p>Presionando la casilla de verificación no hace nada aun. Al igual que en el capítulo anterior, agregaras este comportamiento usando formularios y acciones. En este caso necesitaras un pequeño código en Javascript.</p>
+<h2><a class="header" href="#agregar-elementos-al-formulario-de-la-vista" id="agregar-elementos-al-formulario-de-la-vista">Agregar elementos al formulario de la vista</a></h2>
+<p>Primero, actualiza la vista y encierra cada casilla de verificación con un elemento <code>&lt;form&gt;</code>. Después, agregar un elemento oculto que contenga el ID de la tarea:</p>
+<p><strong>Views/Todo/Index.cshtml</strong></p>
+<pre><code class="language-html">&lt;td&gt;
+    &lt;form asp-action=&quot;MarkDone&quot; method=&quot;POST&quot;&gt;
+        &lt;input type=&quot;checkbox&quot; class=&quot;done-checkbox&quot;&gt;
+        &lt;input type=&quot;hidden&quot; name=&quot;id&quot; value=&quot;@item.Id&quot;&gt;
+    &lt;/form&gt;
+&lt;/td&gt;
+</code></pre>
+<p>Cuando el bucle <code>foreach</code> se ejecuta en la vista e imprime una fila para cada tarea pendiente, existirá una copia de este formulario en cada fila. La entrada oculta que contiene el ID de la tarea a realizar permite que el código de su controlador indique qué casilla se marcó. (Sin él, podría indicar que se marcó <em>alguna</em> casilla, pero no cuál.)</p>
+<p>Si ejecutas la aplicación ahora mismo, las casillas de verificación aun no hacen nada, porque no hay un botón para submit para decir al navegador para crear una solicitud POST con los datos del formulario. Puedes agregar un botón de submit bajo cada casilla de verificación pero esto seria una mala experiencia de usuario. Idealmente dando clic en una casilla de verificación debería envía el formulario. Puedes lograrlo agregando algo de código de JavaScript.</p>
+<h2><a class="header" href="#agregar-código-javascript" id="agregar-código-javascript">Agregar código Javascript</a></h2>
+<p>Busca el archivo <code>site.js</code> en el directorio <code>wwwroot/js</code> y agrega este código: </p>
+<p><strong>wwwroot/js/site.js</strong></p>
+<pre><code class="language-javascript">$(document).ready(function() {
+
+    // Wire up all of the checkboxes to run markCompleted()
+    $('.done-checkbox').on('click', function(e) {
+        markCompleted(e.target);
+    });
+});
+
+function markCompleted(checkbox) {
+    checkbox.disabled = true;
+
+    var row = checkbox.closest('tr');
+    $(row).addClass('done');
+
+    var form = checkbox.closest('form');
+    form.submit();
+}
+</code></pre>
+<p>Este código primero usa jQuery (a una librería de apoyo en JavaScript) para adjuntar algo de código al evento <code>click</code> de todos las casillas de verificación sobre la página con la clase CSS <code>done-checkbox</code>. Cuando una casilla de verificación es presionada, la función <code>markCompleted()</code> es ejecutada.</p>
+<p>La función <code>markCompleted()</code> hace algunas cosas:</p>
+<ul>
+<li>Agrega el atributo <code>disabled</code> a las casillas de verificación así estas no pueden ser selecionadas otra vez</li>
+<li>Agrega la clase CSS <code>done</code> a la fila padre que contiene la casilla de verificación, la cual cambia la forma que la final luce basada en las reglas CSS en el archivo <code>style.css</code></li>
+<li>Enviar el formulario</li>
+</ul>
+<p>Esto toma responsabilidad del la vista y el código del lado del cliente. Ahora es tiempo de agregar una nueva acción</p>
+<h2><a class="header" href="#agregar-una-acción-al-controlador" id="agregar-una-acción-al-controlador">Agregar una acción al controlador</a></h2>
+<p>Como haz probablemente adivinado, necesitas agregar una acción llamada <code>MarkDone</code> en el controlador <code>TodoController</code>:</p>
+<pre><code class="language-csharp">[ValidateAntiForgeryToken]
+public async Task&lt;IActionResult&gt; MarkDone(Guid id)
+{
+    if (id == Guid.Empty)
+    {
+        return RedirectToAction(&quot;Index&quot;);
+    }
+
+    var successful = await _todoItemService.MarkDoneAsync(id);
+    if (!successful)
+    {
+        return BadRequest(&quot;Could not mark item as done.&quot;);
+    }
+
+    return RedirectToAction(&quot;Index&quot;);
+}
+</code></pre>
+<p>Vayamos a través de cada línea de este método de acción. Primero, el método acepta un parámetro <code>Guid</code> llamado <code>id</code> en la firma del método. A diferencia de la acción <code>AddItem</code>, que utiliza un modelo y un modelo de enlace / validación, el parámetro <code>id</code> es muy simple. Si los datos de la solicitud entrante incluyen un campo llamado <code>id</code>, ASP.NET Core intentará analizarlo como una guía. Esto funciona porque el elemento oculto que agregó al formulario de casilla de verificación se llama <code>id</code>.</p>
+<p>Como no está utilizando el enlace de modelo, no hay un <code>ModelState</code> para verificar la validez. En su lugar, puede verificar el valor GUID directamente para asegurarse de que sea válido. Si, por algún motivo, el parámetro <code>id</code> en la solicitud faltaba o no podía analizarse como guid, <code>id</code> tendrá un valor de <code>Guid.Empty</code>. Si ese es el caso, la acción le dice al navegador que redirija a <code>/Todo/Index</code> y actualice la página.</p>
+<p>A continuación, el controlador debe llamar a la capa de servicio para actualizar la base de datos. Esto será manejado por un nuevo método llamado <code>MarkDoneAsync</code> en la interfaz <code>ITodoItemService</code>, que devolverá verdadero o falso dependiendo de si la actualización tuvo éxito:</p>
+<pre><code class="language-csharp">var successful = await _todoItemService.MarkDoneAsync(id);
+if (!successful)
+{
+    return BadRequest(&quot;Could not mark item as done.&quot;);
+}
+</code></pre>
+<p>Finalmente, si todo se ve bien, el navegador se redirige a la acción <code>/Todo/Index</code> y la página se actualiza.</p>
+<p>Con la vista y el controlador actualizados, todo lo que queda es agregar el método de servicio faltante.</p>
+<h2><a class="header" href="#agregar-un-método-de-servicio-1" id="agregar-un-método-de-servicio-1">Agregar un método de servicio</a></h2>
+<p>Primero, agregar <code>MarkDoneAsync</code> a la definición de la interface:</p>
+<p><strong>Services/ITodoItemService.cs</strong></p>
+<pre><code class="language-csharp">Task&lt;bool&gt; MarkDoneAsync(Guid id);
+</code></pre>
+<p>Después, agrega la implementación concreta al servicio <code>TodoItemService</code>:</p>
+<p><strong>Services/TodoItemService.cs</strong></p>
+<pre><code class="language-csharp">public async Task&lt;bool&gt; MarkDoneAsync(Guid id)
+{
+    var item = await _context.Items
+        .Where(x =&gt; x.Id == id)
+        .SingleOrDefaultAsync();
+
+    if (item == null) return false;
+
+    item.IsDone = true;
+
+    var saveResult = await _context.SaveChangesAsync();
+    return saveResult == 1; // One entity should have been updated
+}
+</code></pre>
+<p>Este método usa Entity Framework Core y <code>Where()</code> para encontrar una tarea por ID en la base de datos. El método <code>SingleOrDefaultAsync()</code> regresara una tarea o <code>null</code> si esta no es encontrada.</p>
+<p>Una vez que estas seguro que el <code>item</code> no es nulo, es una simple cuestión de configurar la propiedad <code>IsDone</code>:</p>
+<pre><code class="language-csharp">item.IsDone = true;
+</code></pre>
+<p>Cambiando la propiedad solo afecta a la copia local de la tarea hasta que el método <code>SaveChangesAsync()</code> es llamada para guardar el cambio en la base de datos. <code>SaveChangesAsync()</code> regresa un numero que indica cuántas entidades fueron actualizas durante la operación de guardar. En este caso, sera o 1 (la tarea fue actualizada) o (algo malo sucedió).</p>
+<h2><a class="header" href="#probando-1" id="probando-1">Probando</a></h2>
+<p>Ejecuta la aplicación y checa algunas tareas de la lista. Refrescar la página y ellas desaparecerán completamente, porque el filtro <code>Where()</code> aplicado en el método <code>GetIncompleteItemsAsync()</code>.
+Ahora mismo, la aplicación contiene una sola, lista de tareas compartida. Seria mucho más util si mantuviera registros de una lista de tareas individual para cada usuario. En el siguiente capítulo, agregarás inicio de sesión y características de seguridad al proyecto.</p>
+<h1><a class="header" href="#seguridad-e-identidad" id="seguridad-e-identidad">Seguridad e identidad</a></h1>
+<p>La seguridad es una de las principales preocupaciones de cualquier aplicación web moderna o API. Es importante mantener seguros los datos de sus usuarios o usuarios y fuera del alcance de los atacantes. Este es un tema muy amplio, que involucra cosas como:</p>
+<ul>
+<li>Desinfección de entrada de datos para evitar ataques de inyección de SQL.</li>
+<li>Prevención de ataques de falsificación de petición en sitios cruzados(CSRF) en formularios</li>
+<li>Utilizando HTTPS (cifrado de conexión) para que los datos no puedan ser interceptados mientras viaja a través de Internet</li>
+<li>Proporcionar a los usuarios una forma segura de iniciar sesión con una contraseña u otras credenciales</li>
+<li>Diseño de restablecimiento de contraseñas, recuperación de cuentas y flujos de autenticación multifactor</li>
+</ul>
+<p>ASP.NET Core puede ayudar a que todo esto sea más fácil de implementar. Los dos primeros (protección contra inyección de SQL y ataques de falsificación de petición en sitios cruzados) ya están incorporados, y puede agregar algunas líneas de código para habilitar el soporte de HTTPS. Este capítulo se centrará principalmente en los aspectos de identidad** de seguridad: manejo de cuentas de usuario, autenticación (inicio de sesión) de sus usuarios de forma segura y toma de decisiones de autorización una vez que se autentiquen.</p>
+<blockquote>
+<p>La autenticación y la autorización son ideas distintas que a menudo se confunden. <strong>La autenticación</strong> se ocupa de si un usuario está conectado, mientras que <strong>la autorización</strong> se ocupa de lo que está autorizado a hacer <em>después de</em> que inicie sesión. Se puede pensar en la autenticación como una pregunta: &quot;¿Sé quién? este usuario es? &quot; Mientras que la autorización pregunta: &quot;¿Tiene este usuario permiso para hacer <em>X</em>?&quot;</p>
+</blockquote>
+<p>La plantilla de autenticación individual de MVC + que usó para organizar el proyecto incluye varias clases creadas sobre ASP.NET Core Identity, un sistema de autenticación e identidad que forma parte de ASP.NET Core. Fuera de la caja, esto agrega la capacidad de iniciar sesión con un correo electrónico y una contraseña.</p>
+<h2><a class="header" href="#qué-es-aspnet-core-identity" id="qué-es-aspnet-core-identity">¿Qué es ASP.NET Core Identity?</a></h2>
+<p>ASP.NET Core Identity es el sistema de identidad que se incluye con ASP.NET Core. Como todo lo demás en el ecosistema de ASP.NET Core, es un conjunto de paquetes de NuGet que se pueden instalar en cualquier proyecto (y ya están incluidos si usa la plantilla predeterminada).</p>
+<p>ASP.NET Core Identity se encarga de almacenar las cuentas de usuario, el hash y el almacenamiento de las contraseñas y la administración de roles para los usuarios. Es compatible con el inicio de sesión de correo electrónico / contraseña, autenticación multifactorial, inicio de sesión social con proveedores como Google y Facebook, así como la conexión a otros servicios mediante protocolos como OAuth 2.0 y OpenID Connect.</p>
+<p>Las vistas de registro e inicio de sesión que se suministran con la plantilla de MVC + autenticación individual ya aprovechan la identidad central de ASP.NET, ¡y ya funcionan! Intenta registrarte para obtener una cuenta e iniciar sesión.</p>
+<h2><a class="header" href="#requerir-autenticación" id="requerir-autenticación">Requerir autenticación</a></h2>
+<p>A menudo, deseará que el usuario inicie sesión antes de poder acceder a ciertas partes de su aplicación. Por ejemplo, tiene sentido mostrar la página de inicio a todos (ya sea que haya iniciado sesión o no), pero solo mostrar su lista de tareas después de haber iniciado sesión.</p>
+<p>Puede usar el atributo <code>[Authorize]</code> en ASP.NET Core para requerir que un usuario que haya iniciado sesión para una acción particular, o un controlador completo. Para requerir autenticación para todas las acciones del <code>TodoController</code>, agregue el atributo encima de la primera línea del controlador:</p>
+<p><strong>Controllers/TodoController.cs</strong></p>
+<pre><code class="language-csharp">[Authorize]
+public class TodoController : Controller
+{
+    // ...
+}
+</code></pre>
+<p>Agregue esta declaración <code>using</code> en la parte superior del archivo:</p>
+<pre><code class="language-csharp">using Microsoft.AspNetCore.Authorization;
+</code></pre>
+<p>Intenta ejecutar la aplicación y acceder a <code>/todo</code> sin iniciar sesión. Serás redirigido a la página de inicio de sesión automáticamente.</p>
+<blockquote>
+<p>El atributo <code>[Authorize]</code> en realidad está haciendo una verificación de autenticación aquí, no una verificación de autorización (a pesar del nombre del atributo). Más adelante, utilizará el atributo para verificar <strong>tanto</strong> la autenticación como la autorización.</p>
+</blockquote>
+<h2><a class="header" href="#usando-la-identidad-en-la-aplicación" id="usando-la-identidad-en-la-aplicación">Usando la identidad en la aplicación</a></h2>
+<p>Los elementos de la lista de tareas pendientes todavía se comparten entre todos los usuarios, porque las entidades de tareas pendientes almacenadas no están vinculadas a un usuario en particular. Ahora que el atributo <code>[Authorize]</code> asegura que debe iniciar sesión para ver la vista de tareas, puede filtrar la consulta de la base de datos según quién haya iniciado sesión.</p>
+<p>Primero, inyecte un <code>UserManager&lt;ApplicationUser&gt;</code> en el <code>TodoController</code>:</p>
+<p><strong>Controllers/TodoController.cs</strong></p>
+<pre><code class="language-csharp">[Authorize]
+public class TodoController : Controller
+{
+    private readonly ITodoItemService _todoItemService;
+    private readonly UserManager&lt;ApplicationUser&gt; _userManager;
+
+    public TodoController(ITodoItemService todoItemService,
+        UserManager&lt;ApplicationUser&gt; userManager)
+    {
+        _todoItemService = todoItemService;
+        _userManager = userManager;
+    }
+
+    // ...
+}
+</code></pre>
+<p>Deberá agregar una nueva declaración <code>using</code> en la parte superior:</p>
+<pre><code class="language-csharp">using Microsoft.AspNetCore.Identity;
+</code></pre>
+<p>La clase <code>UserManager</code> es parte de ASP.NET Core Identity. Puedes usarlo para obtener al usuario actual en la acción <code>Index</code>:</p>
+<pre><code class="language-csharp">public async Task&lt;IActionResult&gt; Index()
+{
+    var currentUser = await _userManager.GetUserAsync(User);
+    if (currentUser == null) return Challenge();
+
+    var items = await _todoItemService
+        .GetIncompleteItemsAsync(currentUser);
+
+    var model = new TodoViewModel()
+    {
+        Items = items
+    };
+
+    return View(model);
+}
+</code></pre>
+<p>El nuevo código en la parte superior del método de acción utiliza el <code>UserManager</code> para buscar al usuario actual en la propiedad<code> Usuario</code> disponible en la acción:</p>
+<pre><code class="language-csharp">var currentUser = await _userManager.GetUserAsync(User);
+</code></pre>
+<p>Si hay un usuario que ha iniciado sesión, la propiedad <code>User</code> contiene un objeto ligero con algo (pero no toda) la información del usuario. El <code>UserManager</code> usa esto para buscar los detalles completos del usuario en la base de datos a través del método <code>GetUserAsync() </code>.</p>
+<p>El valor de <code>currentUser</code> nunca debe ser nulo, porque el atributo <code>[Authorize]</code> está presente en el controlador. Sin embargo, es una buena idea hacer un control de cordura, por si acaso. Puede usar el método <code>Challenge()</code> para forzar al usuario a iniciar sesión nuevamente si falta su información:</p>
+<pre><code class="language-csharp">if (currentUser == null) return Challenge();
+</code></pre>
+<p>Como ahora estás pasando un parámetro <code>ApplicationUser</code> a <code>GetIncompleteItemsAsync()</code>, deberás actualizar la interfaz <code>ITodoItemService</code>:</p>
+<p><strong>Services/ITodoItemService.cs</strong></p>
+<pre><code class="language-csharp">public interface ITodoItemService
+{
+    Task&lt;TodoItem[]&gt; GetIncompleteItemsAsync(
+        ApplicationUser user);
+    
+    // ...
+}
+</code></pre>
+<p>Ya que cambió la interfaz <code>ITodoItemService</code>, también necesita actualizar la firma del método <code>GetIncompleteItemsAsync()</code> en el <code>TodoItemService</code>:</p>
+<p><strong>Services/TodoItemService</strong></p>
+<pre><code class="language-csharp">public async Task&lt;TodoItem[]&gt; GetIncompleteItemsAsync(
+    ApplicationUser user)
+</code></pre>
+<p>El siguiente paso es actualizar la consulta de la base de datos y agregar un filtro para mostrar solo los elementos creados por el usuario actual. Antes de que pueda hacer eso, debe agregar una nueva propiedad a la base de datos.</p>
+<h3><a class="header" href="#actualizar-la-base-de-datos" id="actualizar-la-base-de-datos">Actualizar la base de datos</a></h3>
+<p>Deberá agregar una nueva propiedad al modelo de entidad <code>TodoItem</code> para que cada elemento pueda &quot;recordar&quot; al usuario que lo posee:</p>
+<p><strong>Models/TodoItem.cs</strong></p>
+<pre><code class="language-csharp">public string UserId { get; set; }
+</code></pre>
+<p>Dado que ha actualizado el modelo de entidad utilizado por el contexto de la base de datos, también debe migrar la base de datos. Crea una nueva migración usando <code>dotnet ef</code> en el terminal:</p>
+<pre><code>dotnet ef migrations add AddItemUserId
+</code></pre>
+<p>Esto crea una nueva migración llamada <code>AddItemUserId</code> que agregará una nueva columna a la tabla <code>Items</code>, reflejando el cambio realizado en el modelo <code>TodoItem</code>.</p>
+<p>Utilice <code>dotnet ef</code> de nuevo para aplicarlo a la base de datos:</p>
+<pre><code>dotnet ef database update
+</code></pre>
+<h3><a class="header" href="#actualizar-la-clase-de-servicio" id="actualizar-la-clase-de-servicio">Actualizar la clase de servicio</a></h3>
+<p>Con la base de datos y el contexto de la base de datos actualizados, ahora puede actualizar el método <code>GetIncompleteItemsAsync()</code> en el <code>TodoItemService</code> y agregar otra cláusula a la declaración <code>Where</code>:</p>
+<p><strong>Services/TodoItemService.cs</strong></p>
+<pre><code class="language-csharp">public async Task&lt;TodoItem[]&gt; GetIncompleteItemsAsync(
+    ApplicationUser user)
+{
+    return await _context.Items
+        .Where(x =&gt; x.IsDone == false &amp;&amp; x.UserId == user.Id)
+        .ToArrayAsync();
+}
+</code></pre>
+<p>Si ejecuta la aplicación y se registra o inicia sesión, verá una lista de tareas vacía una vez más. Desafortunadamente, cualquier tarea que intentes agregar desaparece en el éter, porque aún no has actualizado la acción <code>AddItem</code> para que el usuario la tenga en cuenta.</p>
+<h3><a class="header" href="#actualizar-las-acciones-additem-y-markdone" id="actualizar-las-acciones-additem-y-markdone">Actualizar las acciones AddItem y MarkDone</a></h3>
+<p>Deberá usar el <code>UserManager</code> para obtener el usuario actual en los métodos de acción <code>AddItem</code> y <code>MarkDone</code>, tal como lo hizo en <code>Index</code>.</p>
+<p>Aquí están los dos métodos actualizados:</p>
+<p><strong>Controllers/TodoController.cs</strong></p>
+<pre><code class="language-csharp">[ValidateAntiForgeryToken]
+public async Task&lt;IActionResult&gt; AddItem(TodoItem newItem)
+{
+    if (!ModelState.IsValid)
+    {
+        return RedirectToAction(&quot;Index&quot;);
+    }
+
+    var currentUser = await _userManager.GetUserAsync(User);
+    if (currentUser == null) return Challenge();
+
+    var successful = await _todoItemService
+        .AddItemAsync(newItem, currentUser);
+
+    if (!successful)
+    {
+        return BadRequest(&quot;Could not add item.&quot;);
+    }
+
+    return RedirectToAction(&quot;Index&quot;);
+}
+
+[ValidateAntiForgeryToken]
+public async Task&lt;IActionResult&gt; MarkDone(Guid id)
+{
+    if (id == Guid.Empty)
+    {
+        return RedirectToAction(&quot;Index&quot;);
+    }
+
+    var currentUser = await _userManager.GetUserAsync(User);
+    if (currentUser == null) return Challenge();
+
+    var successful = await _todoItemService
+        .MarkDoneAsync(id, currentUser);
+    
+    if (!successful)
+    {
+        return BadRequest(&quot;Could not mark item as done.&quot;);
+    }
+
+    return RedirectToAction(&quot;Index&quot;);
+}
+</code></pre>
+<p>Ambos métodos de servicio ahora deben aceptar un parámetro <code>ApplicationUser</code>. Actualice la definición de la interfaz en <code>ITodoItemService</code>:</p>
+<pre><code class="language-csharp">Task&lt;bool&gt; AddItemAsync(TodoItem newItem, ApplicationUser user);
+
+Task&lt;bool&gt; MarkDoneAsync(Guid id, ApplicationUser user);
+</code></pre>
+<p>Y por último, actualice la implementación del método del servicio en <code>TodoItemService</code>. En el método <code>AddItemAsync</code>, establece la propiedad <code>UserId</code> cuando construyas un <code>nuevo TodoItem</code>:</p>
+<pre><code class="language-csharp">public async Task&lt;bool&gt; AddItemAsync(
+    TodoItem newItem, ApplicationUser user)
+{
+    newItem.Id = Guid.NewGuid();
+    newItem.IsDone = false;
+    newItem.DueAt = DateTimeOffset.Now.AddDays(3);
+    newItem.UserId = user.Id;
+
+    // ...
+}
+</code></pre>
+<p>La cláusula <code>Where</code> en el método <code>MarkDoneAsync</code> también debe verificar la ID del usuario, por lo que un usuario deshonesto no puede completar las tareas de otra persona adivinando sus ID:</p>
+<pre><code class="language-csharp">public async Task&lt;bool&gt; MarkDoneAsync(
+    Guid id, ApplicationUser user)
+{
+    var item = await _context.Items
+        .Where(x =&gt; x.Id == id &amp;&amp; x.UserId == user.Id)
+        .SingleOrDefaultAsync();
+
+    // ...
+}
+</code></pre>
+<p>¡Todo listo! Intenta usar la aplicación con dos cuentas de usuario diferentes. Las tareas pendientes se mantienen privadas para cada cuenta.</p>
+<h2><a class="header" href="#autorización-con-roles" id="autorización-con-roles">Autorización con roles</a></h2>
+<p>Los roles son un enfoque común para el manejo de permisos y autorizaciones en una aplicación web. Por ejemplo, es común crear una rol de administrador que otorgue a los usuarios administradores más permisos o poder que los usuarios normales.</p>
+<p>En este proyecto, agregará una página para Administrar usuarios que solo los administradores pueden ver. Si los usuarios normales intentan acceder a él, verán un error.</p>
+<h3><a class="header" href="#agregar-una-página-administrar-usuarios" id="agregar-una-página-administrar-usuarios">Agregar una página Administrar usuarios</a></h3>
+<p>Primero, crea un nuevo controlador:</p>
+<p><strong>Controllers/ManageUsersController.cs</strong></p>
+<pre><code class="language-csharp">using System;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using AspNetCoreTodo.Models;
+using Microsoft.EntityFrameworkCore;
+
+namespace AspNetCoreTodo.Controllers
+{
+    [Authorize(Roles = &quot;Administrator&quot;)]
+    public class ManageUsersController : Controller
+    {
+        private readonly UserManager&lt;ApplicationUser&gt;
+            _userManager;
+        
+        public ManageUsersController(
+            UserManager&lt;ApplicationUser&gt; userManager)
+        {
+            _userManager = userManager;
+        }
+
+        public async Task&lt;IActionResult&gt; Index()
+        {
+            var admins = (await _userManager
+                .GetUsersInRoleAsync(&quot;Administrator&quot;))
+                .ToArray();
+
+            var everyone = await _userManager.Users
+                .ToArrayAsync();
+
+            var model = new ManageUsersViewModel
+            {
+                Administrators = admins,
+                Everyone = everyone
+            };
+
+            return View(model);
+        }
+    }
+}
+</code></pre>
+<p>La configuración de la propiedad <code>Roles</code> en el atributo <code>[Authorize]</code>garantizará que el usuario tenga que iniciar sesión <strong>y</strong> se le asigne el rol de Administrador para poder ver la página.</p>
+<p>A continuación, crea un modelo para la vista:</p>
+<p><strong>Models/ManageUsersViewModel.cs</strong></p>
+<pre><code class="language-csharp">using System.Collections.Generic;
+
+namespace AspNetCoreTodo.Models
+{
+    public class ManageUsersViewModel
+    {
+        public ApplicationUser[] Administrators { get; set; }
+
+        public ApplicationUser[] Everyone { get; set;}
+    }
+}
+</code></pre>
+<p>Finalmente, cree una carpeta <code>Views/ManageUsers</code> y una vista para la acción <code>Index</code>:</p>
+<p><strong>Views/ManageUsers/Index.cshtml</strong></p>
+<pre><code class="language-html">@model ManageUsersViewModel
+
+@{
+    ViewData[&quot;Title&quot;] = &quot;Manage users&quot;;
+}
+
+&lt;h2&gt;@ViewData[&quot;Title&quot;]&lt;/h2&gt;
+
+&lt;h3&gt;Administrators&lt;/h3&gt;
+
+&lt;table class=&quot;table&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Id&lt;/td&gt;
+            &lt;td&gt;Email&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    
+    @foreach (var user in Model.Administrators)
+    {
+        &lt;tr&gt;
+            &lt;td&gt;@user.Id&lt;/td&gt;
+            &lt;td&gt;@user.Email&lt;/td&gt;
+        &lt;/tr&gt;
+    }
+&lt;/table&gt;
+
+&lt;h3&gt;Everyone&lt;/h3&gt;
+
+&lt;table class=&quot;table&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Id&lt;/td&gt;
+            &lt;td&gt;Email&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    
+    @foreach (var user in Model.Everyone)
+    {
+        &lt;tr&gt;
+            &lt;td&gt;@user.Id&lt;/td&gt;
+            &lt;td&gt;@user.Email&lt;/td&gt;
+        &lt;/tr&gt;
+    }
+&lt;/table&gt;
+</code></pre>
+<p>Inicie la aplicación e intente acceder a la ruta <code>/ManageUsers</code> mientras esté conectado como un usuario normal. Verás esta página de acceso denegado:</p>
+<p><img src="chapters/security-and-identity/access-denied.png" alt="Error de acceso denegado" /></p>
+<p>Eso es porque a los usuarios no se les asigna automáticamente el rol de Administrador.</p>
+<h3><a class="header" href="#crear-una-cuenta-de-administrador-de-prueba" id="crear-una-cuenta-de-administrador-de-prueba">Crear una cuenta de administrador de prueba</a></h3>
+<p>Por razones obvias de seguridad, no es posible que nadie registre una nueva cuenta de administrador. De hecho, el rol de administrador ni siquiera existe en la base de datos todavía.</p>
+<p>Puede agregar el rol de administrador más una cuenta de administrador de prueba a la base de datos la primera vez que se inicie la aplicación. Agregar datos por primera vez a la base de datos se llama inicializar o <strong>sembrar</strong> la base de datos.</p>
+<p>Crea una nueva clase en la raíz del proyecto llamada <code>SeedData</code>:</p>
+<p><strong>SeedData.cs</strong></p>
+<pre><code class="language-csharp">using System;
+using System.Linq;
+using System.Threading.Tasks;
+using AspNetCoreTodo.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+
+namespace AspNetCoreTodo
+{
+    public static class SeedData
+    {
+        public static async Task InitializeAsync(
+            IServiceProvider services)
+        {
+            var roleManager = services
+                .GetRequiredService&lt;RoleManager&lt;IdentityRole&gt;&gt;();
+            await EnsureRolesAsync(roleManager);
+
+            var userManager = services
+                .GetRequiredService&lt;UserManager&lt;ApplicationUser&gt;&gt;();
+            await EnsureTestAdminAsync(userManager);
+        }
+    }
+}
+</code></pre>
+<p>El método <code>InitializeAsync()</code> utiliza un <code>IServiceProvider</code> (la colección de servicios que se configura en el método <code>Startup.ConfigureServices()</code>) para obtener el <code>RoleManager</code> y el <code>UserManager</code> de ASP.NET Core Identity.</p>
+<p>Agregue dos métodos más debajo del método <code>InitializeAsync()</code>. Primero, el método <code>VerifyRolesAsync()</code>:</p>
+<pre><code class="language-csharp">private static async Task EnsureRolesAsync(
+    RoleManager&lt;IdentityRole&gt; roleManager)
+{
+    var alreadyExists = await roleManager
+        .RoleExistsAsync(Constants.AdministratorRole);
+    
+    if (alreadyExists) return;
+
+    await roleManager.CreateAsync(
+        new IdentityRole(Constants.AdministratorRole));
+}
+</code></pre>
+<p>Este método verifica si existe un rol de <code>Administrador</code> en la base de datos. Si no, crea uno. En lugar de escribir repetidamente la cadena <code>&quot;Administrador&quot;</code>, cree una pequeña clase llamada <code>Constants</code> para mantener el valor:</p>
+<p><strong>Constants.cs</strong></p>
+<pre><code class="language-csharp">namespace AspNetCoreTodo
+{
+    public static class Constants
+    {
+        public const string AdministratorRole = &quot;Administrator&quot;;
+    }
+}
+</code></pre>
+<blockquote>
+<p>Si lo desea, puede actualizar el <code>ManageUsersController</code> para usar este valor constante también.</p>
+</blockquote>
+<p>A continuación, escriba el método <code>EnsureTestAdminAsync()</code>:</p>
+<p><strong>SeedData.cs</strong></p>
+<pre><code class="language-csharp">private static async Task EnsureTestAdminAsync(
+    UserManager&lt;ApplicationUser&gt; userManager)
+{
+    var testAdmin = await userManager.Users
+        .Where(x =&gt; x.UserName == &quot;admin@todo.local&quot;)
+        .SingleOrDefaultAsync();
+
+    if (testAdmin != null) return;
+
+    testAdmin = new ApplicationUser
+    {
+        UserName = &quot;admin@todo.local&quot;,
+        Email = &quot;admin@todo.local&quot;
+    };
+    await userManager.CreateAsync(
+        testAdmin, &quot;NotSecure123!!&quot;);
+    await userManager.AddToRoleAsync(
+        testAdmin, Constants.AdministratorRole);
+}
+</code></pre>
+<p>Si no hay un usuario con el nombre de usuario <code>admin@todo.local</code> en la base de datos, este método creará uno y le asignará una contraseña temporal. Después de iniciar sesión por primera vez, ¡debe cambiar la contraseña de la cuenta a algo seguro!</p>
+<p>A continuación, debe indicar a su aplicación que ejecute esta lógica cuando se inicie. Modifique <code>Program.cs</code> y actualice <code>Main()</code>para llamar a un nuevo método, <code>InitializeDatabase()</code>:</p>
+<p><strong>Program.cs</strong></p>
+<pre><code class="language-csharp">public static void Main(string[] args)
+{
+    var host = BuildWebHost(args);
+    InitializeDatabase(host);
+    host.Run();
+}
+</code></pre>
+<p>Luego, agregue el nuevo método a la clase debajo de <code>Main()</code>:</p>
+<pre><code class="language-csharp">private static void InitializeDatabase(IWebHost host)
+{
+    using (var scope = host.Services.CreateScope())
+    {
+        var services = scope.ServiceProvider;
+
+        try
+        {
+            SeedData.InitializeAsync(services).Wait();
+        }
+        catch (Exception ex)
+        {
+            var logger = services
+                .GetRequiredService&lt;ILogger&lt;Program&gt;&gt;();
+            logger.LogError(ex, &quot;Error occurred seeding the DB.&quot;);
+        }
+    }
+}
+</code></pre>
+<p>Agregue esta declaración <code>using</code> al principio del archivo:</p>
+<pre><code class="language-csharp">using Microsoft.Extensions.DependencyInjection;
+</code></pre>
+<p>Este método obtiene la colección de servicios que necesita <code>SeedData.InitializeAsync()</code> y luego ejecuta el método para inicializar la base de datos. Si algo sale mal, se registra un error.</p>
+<blockquote>
+<p>Como <code>InitializeAsync()</code> devuelve un <code>Task</code>, el método <code>Wait()</code>debe usarse para asegurarse de que finaliza antes de que la aplicación se inicie. Normalmente utilizarías &quot;esperar&quot; para esto, pero por razones técnicas no puedes usar &quot;esperar&quot; en la clase &quot;Programa&quot;. Esta es una rara excepción. ¡Debes usar <code>await</code> en cualquier otro lugar!</p>
+</blockquote>
+<p>Cuando inicie la aplicación a continuación, la cuenta <code>admin@todo.local</code> se creará y se le asignará el rol de Administrador. Intente iniciar sesión con esta cuenta y navegue a <code>http://localhost:5000/ManageUsers</code>. Verás una lista de todos los usuarios registrados para la aplicación.</p>
+<blockquote>
+<p>Como desafío adicional, intente agregar más funciones de administración a esta página. Por ejemplo, podría agregar un botón que le dé a un administrador la posibilidad de eliminar una cuenta de usuario.</p>
+</blockquote>
+<h3><a class="header" href="#verificar-la-autorización-en-una-vista" id="verificar-la-autorización-en-una-vista">Verificar la autorización en una vista</a></h3>
+<p>El atributo <code>[Authorize]</code> facilita la verificación de autorización en un controlador o método de acción, pero ¿qué sucede si necesita verificar la autorización en una vista? Por ejemplo, sería bueno mostrar un enlace &quot;Administrar usuarios&quot; en la barra de navegación si el usuario que ha iniciado sesión es un administrador.</p>
+<p>Puede inyectar el <code>UserManager</code> directamente en una vista para realizar estos tipos de comprobaciones de autorización. Para mantener sus vistas limpias y organizadas, cree una nueva vista parcial que agregará un elemento a la barra de navegación en el diseño:</p>
+<p><strong>Views/Shared/_AdminActionsPartial.cshtml</strong></p>
+<pre><code class="language-html">@using Microsoft.AspNetCore.Identity
+@using AspNetCoreTodo.Models
+
+@inject SignInManager&lt;ApplicationUser&gt; signInManager
+@inject UserManager&lt;ApplicationUser&gt; userManager
+
+@if (signInManager.IsSignedIn(User))
+{
+    var currentUser = await userManager.GetUserAsync(User);
+
+    var isAdmin = currentUser != null
+        &amp;&amp; await userManager.IsInRoleAsync(
+            currentUser,
+            Constants.AdministratorRole);
+
+    if (isAdmin)
+    {
+        &lt;ul class=&quot;nav navbar-nav navbar-right&quot;&gt;
+            &lt;li&gt;
+                &lt;a asp-controller=&quot;ManageUsers&quot; 
+                   asp-action=&quot;Index&quot;&gt;
+                   Manage Users
+                &lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    }
+}
+</code></pre>
+<blockquote>
+<p>Es una convención nombrar vistas parciales compartidas que comienzan con un guión bajo <code>_</code>, pero no es obligatorio.</p>
+</blockquote>
+<p>Esta vista parcial primero utiliza el <code>SignInManager</code> para determinar rápidamente si el usuario está conectado. Si no lo está, el resto del código de vista se puede omitir. Si hay <strong>hay</strong> un usuario conectado, el <code>UserManager</code> se utiliza para buscar sus detalles y realizar una verificación de autorización con <code>IsInRoleAsync()</code>. Si todas las comprobaciones son correctas y el usuario es un administrador, se agrega un enlace <strong>Administrar usuarios</strong> a la barra de navegación.</p>
+<p>Para incluir este parcial en el diseño principal, edite <code>_Layout.cshtml</code> y agréguelo a la sección de la barra de navegación:</p>
+<p><strong>Views/Shared/_Layout.cshtml</strong></p>
+<pre><code class="language-html">&lt;div class=&quot;navbar-collapse collapse&quot;&gt;
+    &lt;ul class=&quot;nav navbar-nav&quot;&gt;
+        &lt;!-- existing code here --&gt;
+    &lt;/ul&gt;
+    @await Html.PartialAsync(&quot;_LoginPartial&quot;)
+    @await Html.PartialAsync(&quot;_AdminActionsPartial&quot;)
+&lt;/div&gt;
+</code></pre>
+<p>Cuando inicie sesión con una cuenta de administrador, ahora verá un nuevo elemento en la parte superior derecha:</p>
+<p><img src="chapters/security-and-identity/manage-users.png" alt="Liga para administrar usuarios" /></p>
+<h2><a class="header" href="#más-recursos" id="más-recursos">Más recursos</a></h2>
+<p>ASP.NET Core Identity le ayuda a agregar las características de seguridad e identidad como inicio de sesión y registro a su aplicación. Las plantillas <code>dotnet new</code> le brindan vistas y controladores predefinidos que manejan estos escenarios comunes para que pueda comenzar a trabajar rápidamente.</p>
+<p>Hay mucho más que puede hacer ASP.NET Core Identity, como restablecer la contraseña y el inicio de sesión social. La documentación disponible en http://docs.asp.net es un recurso fantástico para aprender a agregar estas funciones.</p>
+<h3><a class="header" href="#alternativas-a-la-identidad-central-de-aspnet" id="alternativas-a-la-identidad-central-de-aspnet">Alternativas a la identidad central de ASP.NET</a></h3>
+<p>ASP.NET Core Identity no es la única forma de agregar funcionalidad de identidad. Otro enfoque es utilizar un servicio de identidad alojado en la nube como Azure Active Directory B2C u Okta para manejar la identidad de su aplicación. Puedes pensar en estas opciones como parte de una progresión:</p>
+<ul>
+<li><strong>Seguridad haz la tu mismo</strong>: no se recomienda, a menos que sea un experto en seguridad.</li>
+<li><strong>ASP.NET Core Identity</strong>: Con las plantillas se obtiene una gran cantidad de código de forma inmediata, lo que hace que sea bastante fácil comenzar. Aún así deberá escribir algo de código para escenarios más avanzados y mantener una base de datos para almacenar información del usuario.</li>
+<li><strong>Servicios de identidad alojados en la nube</strong>. El servicio maneja escenarios simples y avanzados (autenticación multifactor, recuperación de cuenta, federación) y reduce significativamente la cantidad de código que necesita escribir y mantener en su aplicación. Además, los datos confidenciales del usuario no se almacenan en su propia base de datos.</li>
+</ul>
+<p>Para este proyecto, ASP.NET Core Identity es una excelente opción. Para proyectos más complejos, recomiendo investigar un poco y experimentar con ambas opciones para comprender cuál es la mejor para su caso de uso.</p>
+<h1><a class="header" href="#pruebas-automatizadas" id="pruebas-automatizadas">Pruebas automatizadas</a></h1>
+<p>Escribir pruebas es una parte importante del desarrollo de cualquier aplicación. Probar su código lo ayuda a encontrar y evitar errores, y posteriormente facilita la refactorización de su código sin descomponer la funcionalidad o introducir nuevos problemas.</p>
+<p>En este capítulo, aprenderá cómo escribir dos tipos de pruebas: <strong>pruebas de unitarias</strong> y <strong>pruebas de integración</strong> que utilizan su aplicación de ASP.NET Core. Las pruebas unitarias son pruebas pequeñas que prueban que un solo método o parte de la lógica funcione correctamente. Las pruebas de integración (a veces llamadas pruebas <strong>funcionales</strong>) son pruebas más grandes que simulan escenarios reales y prueban múltiples capas o partes de su aplicación.</p>
+<h2><a class="header" href="#pruebas-unitarias" id="pruebas-unitarias">Pruebas unitarias</a></h2>
+<p>Las pruebas unitarias son pruebas pequeñas y cortas que verifican el comportamiento de un solo método o clase. Cuando el código que está probando se basa en otros métodos o clases, las pruebas unitarias se basan en <strong>simulardores</strong> de esas otras clases para que la prueba solo se enfoque en una cosa a la vez.</p>
+<p>Por ejemplo, la clase <code>TodoController</code> tiene dos dependencias: un <code>ITodoItemService</code> y el <code>UserManager</code>. El <code>TodoItemService</code>, a su vez, depende del <code>ApplicationDbContext</code>. (La idea de que puede dibujar una línea desde <code>TodoController</code>&gt;<code>TodoItemService</code>&gt;<code>ApplicationDbContext</code> se llama <strong>gráfico de dependencia</strong>).</p>
+<p>Cuando la aplicación se ejecuta normalmente, el sistema de inyección de dependencias y el contenedor de servicios de ASP.NET Core inyecta cada uno de esos objetos en el gráfico de dependencia cuando se crea el <code>TodoController</code> o el <code>TodoItemService</code>.</p>
+<p>Cuando escribe una prueba de unitaria, por otro lado, tiene que manejar usted mismo el gráfico de dependencia. Es típico proporcionar versiones solo de prueba o &quot;simuladas&quot; de esas dependencias. Esto significa que puede aislar solo la lógica en la clase o el método que está probando. (¡Esto es importante! Si está probando un servicio, no quiere <strong>también</strong> estar escribiendo accidentalmente en su base de datos).</p>
+<h3><a class="header" href="#crear-un-proyecto-de-prueba" id="crear-un-proyecto-de-prueba">Crear un proyecto de prueba</a></h3>
+<p>Es una buena práctica crear un proyecto separado para sus pruebas, para que se mantengan separados del código de su aplicación. El nuevo proyecto de prueba debe vivir en un directorio que esté al lado (no dentro) del directorio de su proyecto principal.</p>
+<p>Si actualmente se encuentra en el directorio de su proyecto, <code>cd</code> sube un nivel. (Este directorio raíz también se llamará <code>AspNetCoreTodo</code>). Luego use este comando para crear un nuevo proyecto de prueba:</p>
+<pre><code>dotnet new xunit -o AspNetCoreTodo.UnitTests
+</code></pre>
+<p>xUnit.NET es un marco de prueba popular para el código .NET que se puede usar para escribir pruebas de unitarias y de integración. Como todo lo demás, es un conjunto de paquetes NuGet que se pueden instalar en cualquier proyecto. La plantilla <code>dotnet new xunit</code> ya incluye todo lo que necesitas.</p>
+<p>Su estructura de directorio ahora debería verse así:</p>
+<pre><code>AspNetCoreTodo/
+    AspNetCoreTodo/
+        AspNetCoreTodo.csproj
+        Controllers/
+        (etc...)
+
+    AspNetCoreTodo.UnitTests/
+        AspNetCoreTodo.UnitTests.csproj
+</code></pre>
+<p>Como el proyecto de prueba utilizará las clases definidas en su proyecto principal, deberá agregar una referencia al proyecto <code>AspNetCoreTodo</code>:</p>
+<pre><code>dotnet agregar referencia ../AspNetCoreTodo/AspNetCoreTodo.csproj
+</code></pre>
+<p>Elimine el archivo <code>UnitTest1.cs</code> que se crea automáticamente. Estás listo para escribir tu primera prueba.</p>
+<blockquote>
+<p>Si está utilizando Visual Studio Code, es posible que deba cerrar y volver a abrir la ventana de Visual Studio Code para la compleción del código funcione en el nuevo proyecto.</p>
+</blockquote>
+<h3><a class="header" href="#escribe-una-prueba-de-servicio" id="escribe-una-prueba-de-servicio">Escribe una prueba de servicio</a></h3>
+<p>Eche un vistazo a la lógica en el método <code>AddItemAsync()</code> del <code>TodoItemService</code>:</p>
+<pre><code class="language-csharp">public async Task&lt;bool&gt; AddItemAsync(
+    TodoItem newItem, ApplicationUser user)
+{
+    newItem.Id = Guid.NewGuid();
+    newItem.IsDone = false;
+    newItem.DueAt = DateTimeOffset.Now.AddDays(3);
+    newItem.UserId = user.Id;
+
+    _context.Items.Add(newItem);
+
+    var saveResult = await _context.SaveChangesAsync();
+    return saveResult == 1;
+}
+</code></pre>
+<p>Este método toma una serie de decisiones o suposiciones sobre el nuevo elemento (en otras palabras, realiza la lógica de negocios en el nuevo elemento) antes de que realmente lo guarde en la base de datos:</p>
+<ul>
+<li>La propiedad <code>UserId</code> debe establecerse a la ID del usuario</li>
+<li>Los nuevos elementos siempre deben estar incompletos (<code>IsDone = false</code>)</li>
+<li>El título del nuevo elemento debe copiarse de <code>newItem.Title</code></li>
+<li>Las nuevos tareas siempre deben vencer dentro de 3 días</li>
+</ul>
+<p>Imagínese si usted o alguien más reformuló el método <code>AddItemAsync()</code> y se olvidó de parte de esta lógica de negocios. ¡El comportamiento de su aplicación podría cambiar sin que usted se dé cuenta! Puede evitar esto escribiendo una prueba que verifique que esta lógica de negocios no haya cambiado (incluso si la implementación interna del método cambia).</p>
+<blockquote>
+<p>Puede parecer poco probable ahora que pueda introducir un cambio en la lógica empresarial sin darse cuenta, pero es mucho más difícil hacer un seguimiento de las decisiones y suposiciones en un proyecto grande y complejo. Cuanto más grande sea su proyecto, más importante es tener controles automáticos que aseguren que nada haya cambiado.</p>
+</blockquote>
+<p>Para escribir una prueba unitaria que verifique la lógica en <code>TodoItemService</code>, cree una nueva clase en su proyecto de prueba:</p>
+<p><strong>AspNetCoreTodo.UnitTests/TodoItemServiceShould.cs</strong></p>
+<pre><code class="language-csharp">using System;
+using System.Threading.Tasks;
+using AspNetCoreTodo.Data;
+using AspNetCoreTodo.Models;
+using AspNetCoreTodo.Services;
+using Microsoft.EntityFrameworkCore;
+using Xunit;
+
+namespace AspNetCoreTodo.UnitTests
+{
+    public class TodoItemServiceShould
+    {
+        [Fact]
+        public async Task AddNewItemAsIncompleteWithDueDate()
+        {
+            // ...
+        }
+    }
+}
+</code></pre>
+<blockquote>
+<p>Hay muchas maneras diferentes de nombrar y organizar pruebas, todas con diferentes pros y contras. Me gusta después de fijar mis clases de prueba con <code>Debería</code> para crear una oración legible con el nombre del método de prueba, ¡pero puede usar su propio estilo!</p>
+</blockquote>
+<p>El atributo <code>[Fact]</code> proviene del paquete xUnit.NET, y marca este método como un método de prueba.</p>
+<p>El <code>TodoItemService</code> requiere un <code>ApplicationDbContext</code>, que normalmente está conectado a su base de datos. No querrás usar eso para las pruebas. En su lugar, puede usar el proveedor de base de datos en memoria de Entity Framework Core en su código de prueba. Como toda la base de datos existe en la memoria, se borra cada vez que se reinicia la prueba. Y, dado que es un proveedor adecuado de Entity Framework Core, ¡TodoItemService no notará la diferencia!</p>
+<p>Use un <code>DbContextOptionsBuilder</code> para configurar el proveedor de la base de datos en memoria, y luego haga una llamada a <code>AddItemAsync () </code>:</p>
+<pre><code class="language-csharp">var options = new DbContextOptionsBuilder&lt;ApplicationDbContext&gt;()
+    .UseInMemoryDatabase(databaseName: &quot;Test_AddNewItem&quot;).Options;
+
+// Set up a context (connection to the &quot;DB&quot;) for writing
+using (var context = new ApplicationDbContext(options))
+{
+    var service = new TodoItemService(context);
+
+    var fakeUser = new ApplicationUser
+    {
+        Id = &quot;fake-000&quot;,
+        UserName = &quot;fake@example.com&quot;
+    };
+
+    await service.AddItemAsync(new TodoItem
+    {
+        Title = &quot;Testing?&quot;
+    }, fakeUser);
+}
+</code></pre>
+<p>La última línea crea un tarea llamado &quot;¿Pruebas?&quot;, Y le dice al servicio que lo guarde en la base de datos (en memoria).</p>
+<p>Para verificar que la lógica de negocio funcionó correctamente, escriba un código más debajo del bloque <code>using</code> existente:</p>
+<pre><code class="language-csharp">// Use a separate context to read data back from the &quot;DB&quot;
+using (var context = new ApplicationDbContext(options))
+{
+    var itemsInDatabase = await context
+        .Items.CountAsync();
+    Assert.Equal(1, itemsInDatabase);
+    
+    var item = await context.Items.FirstAsync();
+    Assert.Equal(&quot;Testing?&quot;, item.Title);
+    Assert.Equal(false, item.IsDone);
+
+    // Item should be due 3 days from now (give or take a second)
+    var difference = DateTimeOffset.Now.AddDays(3) - item.DueAt;
+    Assert.True(difference &lt; TimeSpan.FromSeconds(1));
+}
+</code></pre>
+<p>La primera afirmación es una comprobación de validez: nunca debe haber más de un elemento guardado en la base de datos en memoria. Suponiendo que eso sea cierto, la prueba recupera el elemento guardado con <code>FirstAsync</code> y luego afirma que las propiedades están establecidas en los valores esperados.</p>
+<blockquote>
+<p>Tanto las pruebas de unitarias como las de integración generalmente siguen el patrón AAA (Arrange-Act-Assert): los objetos y los datos se configuran primero, luego se realiza alguna acción y, finalmente, la prueba verifica (Assert) que ocurrió el comportamiento esperado.</p>
+</blockquote>
+<p>Confirmar un valor de fecha y hora es un poco complicado, ya que la comparación de dos fechas para la igualdad fallará incluso si los componentes de milisegundos son diferentes. En su lugar, la prueba verifica que el valor <code>DueAt</code> esté a menos de un segundo del valor esperado.</p>
+<h3><a class="header" href="#ejecutar-la-prueba" id="ejecutar-la-prueba">Ejecutar la prueba</a></h3>
+<p>En la terminal, ejecute este comando (asegúrese de que todavía esté en el directorio <code>AspNetCoreTodo.UnitTests</code>):</p>
+<pre><code>dotnet test
+</code></pre>
+<p>El comando <code>test</code> escanea el proyecto actual en busca de pruebas (en este caso marcadas con los atributos <code>[Fact]</code>), y ejecuta todas las pruebas que encuentra. Verás una salida similar a:</p>
+<pre><code>Starting test execution, please wait...
+ Discovering: AspNetCoreTodo.UnitTests
+ Discovered:  AspNetCoreTodo.UnitTests
+ Starting:    AspNetCoreTodo.UnitTests
+ Finished:    AspNetCoreTodo.UnitTests
+
+Total tests: 1. Passed: 1. Failed: 0. Skipped: 0.
+Test Run Successful.
+Test execution time: 1.9074 Seconds
+</code></pre>
+<p>Ahora tiene una prueba que proporciona cobertura de prueba del <code>TodoItemService</code>. Como desafío adicional, intente escribir pruebas unitarias que aseguren:</p>
+<ul>
+<li>El método <code>MarkDoneAsync()</code> devuelve falso si se pasa un ID que no existe</li>
+<li>El método <code>MarkDoneAsync()</code> devuelve true cuando se marca una tarea como completa.</li>
+<li>El método <code>GetIncompleteItemsAsync()</code> devuelve solo las tareas que pertenecen a un usuario en particular</li>
+</ul>
+<h2><a class="header" href="#pruebas-de-integración" id="pruebas-de-integración">Pruebas de integración</a></h2>
+<p>En comparación con las pruebas unitarias, las pruebas de integración tienen un alcance mucho mayor. Prueba toda la pila de aplicaciones. En lugar de aislar una clase o método, las pruebas de integración aseguran que todos los componentes de su aplicación estén funcionando juntos correctamente: enrutamiento, controladores, servicios, código de base de datos, etc.</p>
+<p>Las pruebas de integración son más lentas y más complejas que las pruebas de unitarias, por lo que es común que un proyecto tenga muchas pruebas de unitarias pequeñas pero solo un puñado de pruebas de integración.</p>
+<p>Para probar toda la pila (incluido el enrutamiento del controlador), las pruebas de integración normalmente hacen llamadas HTTP a su aplicación como lo haría un navegador web.</p>
+<p>Para realizar una prueba de integración, puede iniciar su aplicación y realizar solicitudes manualmente a http://localhost:5000. Sin embargo, ASP.NET Core ofrece una mejor alternativa: la clase <code>TestServer</code>. Esta clase puede alojar su aplicación durante la duración de la prueba, y luego detenerla automáticamente cuando se completa la prueba.</p>
+<h3><a class="header" href="#crear-un-proyecto-de-prueba-1" id="crear-un-proyecto-de-prueba-1">Crear un proyecto de prueba</a></h3>
+<p>Si actualmente se encuentra en el directorio de su proyecto, <code>cd</code> sube un nivel al directorio raíz <code>AspNetCoreTodo</code>. Use este comando para crear un nuevo proyecto de prueba:</p>
+<pre><code>dotnet new xunit -o AspNetCoreTodo.IntegrationTests
+</code></pre>
+<p>Su estructura de directorio ahora debería verse así:</p>
+<pre><code>AspNetCoreTodo/
+    AspNetCoreTodo/
+        AspNetCoreTodo.csproj
+        Controllers/
+        (etc...)
+
+    AspNetCoreTodo.UnitTests/
+        AspNetCoreTodo.UnitTests.csproj
+
+    AspNetCoreTodo.IntegrationTests/
+        AspNetCoreTodo.IntegrationTests.csproj
+</code></pre>
+<blockquote>
+<p>Si lo prefiere, puede mantener sus pruebas unitarias y pruebas de integración en el mismo proyecto. Para proyectos grandes, es común dividirlos para que sea fácil ejecutarlos por separado.</p>
+</blockquote>
+<p>Dado que el proyecto de prueba utilizará las clases definidas en su proyecto principal, deberá agregar una referencia al proyecto principal:</p>
+<pre><code>dotnet add reference ../AspNetCoreTodo/AspNetCoreTodo.csproj
+</code></pre>
+<p>También deberá agregar el paquete NuGet <code>Microsoft.AspNetCore.TestHost</code>:</p>
+<pre><code>dotnet add package Microsoft.AspNetCore.TestHost
+</code></pre>
+<p>Elimine el archivo <code>UnitTest1.cs</code> creado por <code>dotnet new</code>. Estás listo para escribir una prueba de integración.</p>
+<h3><a class="header" href="#escribir-una-prueba-de-integración" id="escribir-una-prueba-de-integración">Escribir una prueba de integración.</a></h3>
+<p>Hay algunas cosas que deben configurarse en el servidor de prueba antes de cada prueba. En lugar de abarrotar la prueba con este código de configuración, puede mantener esta configuración en una clase separada. Crea una nueva clase llamada <code>TestFixture</code>:</p>
+<p><strong>AspNetCoreTodo.IntegrationTests/TestFixture.cs</strong></p>
+<pre><code class="language-csharp">using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Net.Http;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.TestHost;
+using Microsoft.Extensions.Configuration;
+
+namespace AspNetCoreTodo.IntegrationTests
+{
+    public class TestFixture : IDisposable  
+    {
+        private readonly TestServer _server;
+
+        public HttpClient Client { get; }
+
+        public TestFixture()
+        {
+            var builder = new WebHostBuilder()
+                .UseStartup&lt;AspNetCoreTodo.Startup&gt;()
+                .ConfigureAppConfiguration((context, config) =&gt;
+                {
+                    config.SetBasePath(Path.Combine(
+                        Directory.GetCurrentDirectory(),
+                        &quot;..\\..\\..\\..\\AspNetCoreTodo&quot;));
+                    
+                    config.AddJsonFile(&quot;appsettings.json&quot;);
+                });
+
+            _server = new TestServer(builder);
+
+            Client = _server.CreateClient();
+            Client.BaseAddress = new Uri(&quot;http://localhost:8888&quot;);
+        }
+
+        public void Dispose()
+        {
+            Client.Dispose();
+            _server.Dispose();
+        }
+    }
+}
+</code></pre>
+<p>Esta clase se encarga de configurar un <code>TestServer</code>, y ayudará a mantener las pruebas limpias y ordenadas.</p>
+<p>Ahora estás (realmente) listo para escribir una prueba de integración. Crea una nueva clase llamada <code>TodoRouteShould</code>:</p>
+<p><strong>AspNetCoreTodo.IntegrationTests/TodoRouteShould.cs</strong></p>
+<pre><code class="language-csharp">using System.Net;
+using System.Net.Http;
+using System.Threading.Tasks;
+using Xunit;
+
+namespace AspNetCoreTodo.IntegrationTests
+{
+    public class TodoRouteShould : IClassFixture&lt;TestFixture&gt;
+    {
+        private readonly HttpClient _client;
+
+        public TodoRouteShould(TestFixture fixture)
+        {
+            _client = fixture.Client;
+        }
+
+        [Fact]
+        public async Task ChallengeAnonymousUser()
+        {
+            // Arrange
+            var request = new HttpRequestMessage(
+                HttpMethod.Get, &quot;/todo&quot;);
+
+            // Act: request the /todo route
+            var response = await _client.SendAsync(request);
+
+            // Assert: the user is sent to the login page
+            Assert.Equal(
+                HttpStatusCode.Redirect,
+                response.StatusCode);
+
+            Assert.Equal(
+                &quot;http://localhost:8888/Account&quot; +
+                &quot;/Login?ReturnUrl=%2Ftodo&quot;,
+                response.Headers.Location.ToString());
+        }
+    }
+}
+</code></pre>
+<p>Esta prueba realiza una solicitud anónima (sin iniciar sesión) a la ruta <code>/todo</code> y verifica que el navegador se redirige a la página de inicio de sesión.</p>
+<p>Este escenario es un buen candidato para una prueba de integración, ya que involucra múltiples componentes de la aplicación: el sistema de enrutamiento, el controlador, el hecho de que el controlador está marcado con <code>[Authorize]</code>, y así sucesivamente. También es una buena prueba porque garantiza que nunca quitará accidentalmente el atributo <code>[Authorize]</code> y hará que la vista de tareas sea accesible para todos.</p>
+<h2><a class="header" href="#ejecutar-la-prueba-1" id="ejecutar-la-prueba-1">Ejecutar la prueba</a></h2>
+<p>Ejecute la prueba en el terminal con <code>dotnet test</code>. Si todo funciona bien, verás un mensaje de éxito:</p>
+<pre><code>Starting test execution, please wait...
+ Discovering: AspNetCoreTodo.IntegrationTests
+ Discovered:  AspNetCoreTodo.IntegrationTests
+ Starting:    AspNetCoreTodo.IntegrationTests
+ Finished:    AspNetCoreTodo.IntegrationTests
+
+Total tests: 1. Passed: 1. Failed: 0. Skipped: 0.
+Test Run Successful.
+Test execution time: 2.0588 Seconds
+</code></pre>
+<h2><a class="header" href="#resumiendo" id="resumiendo">Resumiendo</a></h2>
+<p>Las pruebas son un tema amplio y hay mucho más que aprender. Este capítulo no toca el código de prueba de interfaz de usuario (UI) ni el código de prueba (JavaScript), que probablemente merecen libros completos por su cuenta. Sin embargo, debe tener las habilidades y el conocimiento básico que necesita para aprender más sobre las pruebas y practicar la escritura de pruebas para sus propias aplicaciones.</p>
+<p>La documentación de ASP.NET Core (https://docs.asp.net) y Stack Overflow son excelentes recursos para aprender más y encontrar respuestas cuando te quedas atascado.</p>
+<h1><a class="header" href="#desplegar-la-aplicación" id="desplegar-la-aplicación">Desplegar la aplicación</a></h1>
+<p>Has recorrido un largo camino, pero aún no has terminado. Una vez que has creado una gran aplicación, ¡debes compartirla con el mundo!</p>
+<p>Debido a que las aplicaciones ASP.NET Core pueden ejecutarse en Windows, Mac o Linux, existen varias formas diferentes de implementar su aplicación. En este capítulo, te mostraré las formas más comunes (y más fáciles) de estar en línea.</p>
+<h2><a class="header" href="#opciones-de-implementación" id="opciones-de-implementación">Opciones de implementación</a></h2>
+<p>Las aplicaciones de ASP.NET Core se implementan normalmente en uno de estos entornos:</p>
+<ul>
+<li>
+<p><strong>Un host Docker</strong>. Cualquier máquina capaz de albergar contenedores Docker puede usarse para alojar una aplicación ASP.NET Core. Crear una imagen de Docker es una forma muy rápida de implementar su aplicación, especialmente si está familiarizado con Docker. (Si no lo esta, ¡no te preocupes! Cubriré los pasos más adelante).</p>
+</li>
+<li>
+<p><strong>Azure</strong>. Microsoft Azure tiene soporte nativo para las aplicaciones de ASP.NET Core. Si tiene una suscripción a Azure, solo necesita crear una aplicación web y cargar los archivos de su proyecto. Cubriré cómo hacer esto con el CLI de Azure en la siguiente sección.</p>
+</li>
+<li>
+<p><strong>Linux (con Nginx)</strong>. Si no implementar en Docker, aún puede alojar su aplicación en cualquier servidor Linux (esto incluye las máquinas virtuales Amazon EC2 y DigitalOcean). Es típico emparejar ASP.NET Core con el proxy inverso Nginx. (Más sobre Nginx a continuación.)</p>
+</li>
+<li>
+<p><strong>Windows</strong>. Puede usar el servidor web IIS en Windows para alojar aplicaciones ASP.NET Core. Por lo general, es más fácil (y más barato) implementarlo en Azure, pero si prefiere administrar los servidores de Windows usted mismo, funcionará bien.</p>
+</li>
+</ul>
+<h2><a class="header" href="#kestrel-y-proxies-inversos" id="kestrel-y-proxies-inversos">Kestrel y proxies inversos</a></h2>
+<blockquote>
+<p>Si no le importan los detalles de como hospedar aplicaciones ASP.NET Core y solo desea las instrucciones paso a paso, siéntase libre de saltar a una de las siguientes dos secciones.</p>
+</blockquote>
+<p>ASP.NET Core incluye un servidor web rápido y ligero llamado Kestrel. Es el servidor que ha estado usando cada vez que ejecuta <code>dotnet run</code> y navega a <code>http://localhost:5000</code>. Cuando implementas tu aplicación en un entorno de producción, aún utilizará Kestrel detrás de escena. Sin embargo, se recomienda que coloque un proxy inverso delante de Kestrel, porque Kestrel aún no tiene balance de carga y otras características que tienen los servidores web más maduros.</p>
+<p>En Linux (y en los contenedores Docker), puede usar Nginx o el servidor web Apache para recibir solicitudes entrantes de Internet y enrutarlas a su aplicación alojada con Kestrel. Si estás en Windows, IIS hace lo mismo.</p>
+<p>Si está utilizando Azure para alojar su aplicación, todo esto se hace automáticamente. Cubriré la configuración de Nginx como un proxy inverso en la sección de Docker.</p>
+<h1><a class="header" href="#desplegar-en-azure" id="desplegar-en-azure">Desplegar en Azure</a></h1>
+<p>La implementación de la aplicación de ASP.NET Core en Azure solo lleva unos pocos pasos. Puede hacerlo a través del portal web de Azure o en la línea de comandos utilizando la CLI de Azure. Voy a cubrir este último.</p>
+<h3><a class="header" href="#lo-que-necesitarás" id="lo-que-necesitarás">Lo que necesitarás</a></h3>
+<ul>
+<li>Git (usa <code>git --version</code> para asegurarte de que esté instalado)</li>
+<li>El CLI de Azure (siga las instrucciones de instalación en https://github.com/Azure/azure-cli)</li>
+<li>Una suscripción de Azure (con la suscripción gratuita es suficiente)</li>
+<li>Un archivo de configuración de implementación en la raíz de su proyecto.</li>
+</ul>
+<h3><a class="header" href="#crear-un-archivo-de-configuración-de-implementación" id="crear-un-archivo-de-configuración-de-implementación">Crear un archivo de configuración de implementación</a></h3>
+<p>Como hay múltiples proyectos en la estructura de su directorio (la aplicación web y dos proyectos de prueba), Azure no sabrá cuál publicar. Para solucionar este problema, cree un archivo llamado <code>.deployment</code> en la parte superior de la estructura de su directorio:</p>
+<p><strong>.deployment</strong></p>
+<pre><code class="language-ini">[config]
+project = AspNetCoreTodo/AspNetCoreTodo.csproj
+</code></pre>
+<p>Asegúrese de guardar el archivo como <code>.deployment</code> sin otras partes en el nombre. (En Windows, puede que tenga que poner comillas alrededor del nombre del archivo, como <code>&quot;.deployment&quot;</code>, para evitar que se agregue una extensión <code>.txt</code>.)</p>
+<p>Si ejecuta el comando <code>ls</code> o <code>dir</code> en su directorio principal del proyecto, debería ver estos elementos:</p>
+<pre><code>.deployment
+AspNetCoreTodo
+AspNetCoreTodo.IntegrationTests
+AspNetCoreTodo.UnitTests
+</code></pre>
+<h3><a class="header" href="#configurar-los-recursos-de-azure" id="configurar-los-recursos-de-azure">Configurar los recursos de Azure</a></h3>
+<p>Si acaba de instalar la CLI de Azure por primera vez, ejecute</p>
+<pre><code>az login
+</code></pre>
+<p>y siga las instrucciones para iniciar sesión en su máquina. Luego, crea un nuevo grupo de recursos para esta aplicación:</p>
+<pre><code>az group create -l westus -n AspNetCoreTodoGroup
+</code></pre>
+<p>Esto crea un grupo de recursos en la región oeste de los Estados Unidos. Si está ubicado lejos del oeste de los Estados Unidos, use <code>az account list-locations</code> para obtener una lista de ubicaciones y encontrar una más cercana a usted.</p>
+<p>A continuación, cree un plan de Servicio de aplicaciones en el grupo que acaba de crear:</p>
+<pre><code>az appservice plan create -g AspNetCoreTodoGroup -n AspNetCoreTodoPlan --sku F1
+</code></pre>
+<blockquote>
+<p>F1 es el plan de aplicación gratuita. Si desea usar un nombre de dominio personalizado con su aplicación, use el plan D1 ($ 10/mes) o superior.</p>
+</blockquote>
+<p>Ahora cree una aplicación web en el plan del servicio de aplicaciones:</p>
+<pre><code>az webapp create -g AspNetCoreTodoGroup -p AspNetCoreTodoPlan -n MyTodoApp
+</code></pre>
+<p>El nombre de la aplicación (<code>MyTodoApp</code> arriba) debe ser globalmente único en Azure. Una vez que se crea la aplicación, tendrá una URL predeterminada en el formato: http://mytodoapp.azurewebsites.net</p>
+<h2><a class="header" href="#implementa-tus-archivos-de-proyecto-en-azure" id="implementa-tus-archivos-de-proyecto-en-azure">Implementa tus archivos de proyecto en Azure</a></h2>
+<p>Puede usar Git para enviar sus archivos de aplicación a la aplicación web de Azure. Si su directorio local no ha sido inicializado como un repositorio de Git, ejecute estos comandos para configurarlo:</p>
+<pre><code>git init
+git add .
+git commit -m &quot;Versión&quot;
+</code></pre>
+<p>A continuación, cree un nombre de usuario y contraseña de Azure para la implementación:</p>
+<pre><code>az webapp deployment user set --user-name nate
+</code></pre>
+<p>Siga las instrucciones para crear una contraseña. Luego usa <code>config-local-git</code> para generar una URL de Git:</p>
+<pre><code class="language-bash">az webapp deployment source config-local-git -g AspNetCoreTodoGroup -n MyTodoApp --out tsv
+
+https://nate@mytodoapp.scm.azurewebsites.net/MyTodoApp.git
+</code></pre>
+<p>Copie la URL en el portapapeles y utilícela para agregar un control remoto Git a su repositorio local:</p>
+<pre><code class="language-bash">git remoto add azure &lt;paste&gt;
+</code></pre>
+<p>Solo necesitas hacer estos pasos una vez. Ahora, cuando quiera enviar sus archivos de aplicaciones a Azure, verifíquelos con Git y ejecute</p>
+<pre><code class="language-bash">git push azure master
+</code></pre>
+<p>Ver una secuencia de mensajes de registro a medida que la aplicación se implementa en Azure.</p>
+<p>Cuando esté completo, vaya a http://yourappname.azurewebsites.net para ver la aplicación.</p>
+<h2><a class="header" href="#desplegando-con-docker" id="desplegando-con-docker">Desplegando con Docker</a></h2>
+<p>Si no está utilizando una plataforma como Azure, las tecnologías de contenedores como Docker pueden facilitar la implementación de aplicaciones web en sus propios servidores. En lugar de dedicar tiempo a configurar un servidor con las dependencias que necesita para ejecutar su aplicación, copiar archivos y reiniciar procesos, simplemente puede crear una imagen de Docker que describa todo lo que su aplicación necesita para ejecutar y distribuirla como un contenedor en cualquier host Docker.</p>
+<p>Docker también puede hacer que escalar su aplicación en múltiples servidores sea más fácil. Una vez que tenga una imagen, usarla para crear 1 contenedor es el mismo proceso que crear 100 contenedores.</p>
+<p>Antes de comenzar, necesita tener instalada la CLI de Docker en su máquina de desarrollo. Busque &quot;instalar docker para (mac/windows/linux)&quot; y siga las instrucciones en el sitio web oficial de Docker. Puedes verificar que está instalado correctamente con</p>
+<pre><code>docker version
+</code></pre>
+<h3><a class="header" href="#añadir-un-archivo-dockerfile" id="añadir-un-archivo-dockerfile">Añadir un archivo Dockerfile</a></h3>
+<p>Lo primero que necesitará es un Dockerfile, que es como una receta que le dice a Docker lo que su aplicación necesita para compilar y ejecutar.</p>
+<p>Cree un archivo llamado <code>Dockerfile</code> (sin extensión) en la carpeta raíz, nivel superior de <code>AspNetCoreTodo</code>. Ábrelo en tu editor favorito. Escribe la siguiente línea:</p>
+<pre><code class="language-dockerfile">FROM microsoft/dotnet:2.0-sdk AS build
+</code></pre>
+<p>Esto le dice a Docker que use la imagen <code>microsoft/dotnet:2.0-sdk</code> como punto de partida. Esta imagen es publicada por Microsoft y contiene las herramientas y dependencias que necesita para ejecutar <code>dotnet build</code> y compilar su aplicación. Al utilizar esta imagen preconstruida como punto de partida, Docker puede optimizar la imagen producida para su aplicación y mantenerla pequeña.</p>
+<p>A continuación, agregue esta línea:</p>
+<pre><code class="language-dockerfile">COPY AspNetCoreTodo/*.csproj ./app/AspNetCoreTodo/
+</code></pre>
+<p>El comando <code>COPY</code> copia el archivo de proyecto <code>.csproj</code> en la imagen en la ruta <code>/app/AspNetCoreTodo/</code>. Tenga en cuenta que todavía no se ha copiado en la imagen ninguno del código real (archivos <code>.cs</code>). Verás por qué en un minuto.</p>
+<pre><code class="language-dockerfile">WORKDIR /app/AspNetCoreTodo
+RUN dotnet restore
+</code></pre>
+<p><code>WORKDIR</code> es el equivalente de Docker de <code>cd</code>. Esto significa que cualquier comando ejecutado a continuación se ejecutará desde el directorio <code>/app/AspNetCoreTodo</code> que el comando <code>COPY</code> creó en el último paso.</p>
+<p>Ejecutar el comando <code>dotnet restore</code> restaura los paquetes NuGet que necesita la aplicación, definidos en el archivo <code>.csproj</code>. Al restaurar los paquetes dentro de la imagen <strong>antes</strong> agregando el resto del código, Docker puede almacenar en caché los paquetes restaurados. Luego, si realiza cambios de código (pero no cambia los paquetes definidos en el archivo de proyecto), la reconstrucción de la imagen de Docker será súper rápida.</p>
+<p>Ahora es el momento de copiar el resto del código y compilar la aplicación:</p>
+<pre><code class="language-dockerfile">COPY AspNetCoreTodo/. ./AspNetCoreTodo/
+RUN dotnet publish -o out /p:PublishWithAspNetCoreTargetManifest=&quot;false&quot;
+</code></pre>
+<p>El comando <code>dotnet publish</code> compila el proyecto, y el indicador <code>-o out</code> coloca los archivos compilados en un directorio llamado <code>out</code>.</p>
+<p>Estos archivos compilados se utilizarán para ejecutar la aplicación con los últimos comandos:</p>
+<pre><code class="language-dockerfile">FROM microsoft/dotnet:2.0-runtime AS runtime
+ENV ASPNETCORE_URLS http://+:80
+WORKDIR /app
+COPY --from=build /app/AspNetCoreTodo/out ./
+ENTRYPOINT [&quot;dotnet&quot;, &quot;AspNetCoreTodo.dll&quot;]
+</code></pre>
+<p>El comando <code>FROM</code> se usa nuevamente para seleccionar una imagen más pequeña que solo tiene las dependencias necesarias para ejecutar la aplicación. El comando <code>ENV</code> se usa para establecer variables de entorno en el contenedor, y la variable de entorno <code>ASPNETCORE_URLS</code> le dice a ASP.NET Core a qué interfaz de red y puerto debe enlazarse (en este caso, el puerto 80).</p>
+<p>El comando <code>ENTRYPOINT</code> permite a Docker saber que el contenedor debe iniciarse como un ejecutable ejecutando <code>dotnet AspNetCoreTodo.dll</code>. Esto le dice a <code>dotnet</code> que inicie su aplicación desde el archivo compilado creado por <code>dotnet publish</code> anteriormente. (Cuando haces <code>dotnet run</code> durante el desarrollo, estás logrando lo mismo en un solo paso).</p>
+<p>El Dockerfile completo se ve así:</p>
+<p><strong>Dockerfile</strong></p>
+<pre><code class="language-dockerfile">FROM microsoft/dotnet:2.0-sdk AS build
+COPY AspNetCoreTodo/*.csproj ./app/AspNetCoreTodo/
+WORKDIR /app/AspNetCoreTodo
+RUN dotnet restore
+
+COPY AspNetCoreTodo/. ./
+RUN dotnet publish -o out /p:PublishWithAspNetCoreTargetManifest=&quot;false&quot;
+
+FROM microsoft/dotnet:2.0-runtime AS runtime
+ENV ASPNETCORE_URLS http://+:80
+WORKDIR /app
+COPY --from=build /app/AspNetCoreTodo/out ./
+ENTRYPOINT [&quot;dotnet&quot;, &quot;AspNetCoreTodo.dll&quot;]
+</code></pre>
+<h3><a class="header" href="#crear-una-imagen" id="crear-una-imagen">Crear una imagen</a></h3>
+<p>Asegúrese de que Dockerfile esté guardado y luego use <code>docker build</code> para crear una imagen:</p>
+<pre><code>docker build -t aspnetcoretodo .
+</code></pre>
+<p>¡No te olvides el punto al final! Eso le dice a Docker que busque un archivo Dockerfile en el directorio actual.</p>
+<p>Una vez creada la imagen, puede ejecutar <code>docker images</code> para listar todas las imágenes disponibles en su máquina local. Para probarlo en un contenedor, ejecute</p>
+<pre><code>docker run --name aspnetcoretodo_sample --rm -it -p 8080:80 aspnetcoretodo
+</code></pre>
+<p>El indicador <code>-it</code> le dice a Docker que ejecute el contenedor en modo interactivo (dando salida al terminal, en lugar de ejecutarse en segundo plano). Cuando quieras detener el contenedor, presiona Control-C.</p>
+<p>¿Recuerda la variable <code>ASPNETCORE_URLS</code> que le dijo a ASP.NET Core que escuche en el puerto 80? La opción <code>-p 8080: 80</code> le dice a Docker que asigne el puerto 8080 en <em>su</em> máquina al <em>puerto</em> 80 del contenedor. Abra su navegador y navegue a http://localhost:8080 para ver la aplicación que se ¡ejecuta en el contenedor!</p>
+<h3><a class="header" href="#configurar-nginx" id="configurar-nginx">Configurar Nginx</a></h3>
+<p>Al principio de este capítulo, mencioné que debería usar un proxy inverso como Nginx para enviar las solicitudes a Kestrel. También puedes usar Docker para esto.</p>
+<p>La arquitectura general constará de dos contenedores: un contenedor Nginx que escucha en el puerto 80 y reenvía las solicitudes al contenedor que acaba de construir y aloja su aplicación con Kestrel.</p>
+<p>El contenedor Nginx necesita su propio archivo Docker. Para evitar que entre en conflicto con el Dockerfile que acaba de crear, cree un nuevo directorio en la raíz de la aplicación web:</p>
+<pre><code>mkdir nginx
+</code></pre>
+<p>Crea un nuevo archivo Dockerfile y agrega estas líneas</p>
+<p><strong>nginx/Dockerfile</strong></p>
+<pre><code class="language-dockerfile">FROM nginx
+COPY nginx.conf /etc/nginx/nginx.conf
+</code></pre>
+<p>Next, create an <code>nginx.conf</code> file:</p>
+<p><strong>nginx/nginx.conf</strong></p>
+<pre><code>events { worker_connections 1024; }
+
+http {
+    server {
+        listen 80;
+        location / {
+          proxy_pass http://kestrel:80;
+          proxy_http_version 1.1;
+          proxy_set_header Upgrade $http_upgrade;
+          proxy_set_header Connection 'keep-alive';
+          proxy_set_header Host $host;
+          proxy_cache_bypass $http_upgrade;
+        }
+    }
+}
+</code></pre>
+<p>Este archivo de configuración le dice a Nginx que haga proxy de las solicitudes entrantes a <code>http://kestrel:80</code>. (Verás por qué <code>kestrel</code> funciona como nombre de host en un momento).</p>
+<blockquote>
+<p>Cuando implementa su aplicación en un entorno de producción, debe agregar la directiva <code>server_name</code> y validar y restringir el encabezado del host a valores buenos conocidos. Para más información, ver:</p>
+</blockquote>
+<blockquote>
+<p>https://github.com/aspnet/Announcements/issues/295</p>
+</blockquote>
+<h3><a class="header" href="#set-up-docker-compose" id="set-up-docker-compose">Set up Docker Compose</a></h3>
+<p>Aquí hay un archivo más para crear. Arriba en el directorio raíz, crea <code>docker-compose.yml</code>:</p>
+<p><strong>docker-compose.yml</strong></p>
+<pre><code class="language-yaml">nginx:
+    build: ./nginx
+    links:
+        - kestrel:kestrel
+    ports:
+        - &quot;80:80&quot;
+kestrel:
+    build: .
+    ports:
+        - &quot;80&quot;
+</code></pre>
+<p>Docker Compose es una herramienta que te ayuda a crear y ejecutar aplicaciones de múltiples contenedores. Este archivo de configuración define dos contenedores: <code>nginx</code> de la receta <code>./Nginx/Dockerfile</code>, y <code>kestrel</code> de la receta <code>./Dockerfile</code>. Los contenedores están explícitamente vinculados entre sí para que puedan comunicarse.</p>
+<p>Puede intentar girar toda la aplicación multi-contenedor ejecutando:</p>
+<pre><code>docker-compose up
+</code></pre>
+<p>Intente abrir un navegador y navegue a http://localhost (puerto 80, no 8080). Nginx escucha en el puerto 80 (el puerto HTTP predeterminado) y envía solicitudes a su aplicación ASP.NET Core alojada por Kestrel.</p>
+<h3><a class="header" href="#configurar-un-servidor-docker" id="configurar-un-servidor-docker">Configurar un servidor Docker</a></h3>
+<p>Las instrucciones de configuración específicas están fuera del alcance de este libro, pero se puede usar cualquier versión moderna de Linux (como Ubuntu) para configurar un host Docker. Por ejemplo, podría crear una máquina virtual con Amazon EC2 e instalar el servicio Docker. Puede buscar (por ejemplo) &quot;configurar docker amazon ec2&quot; para obtener instrucciones.</p>
+<p>Me gusta usar DigitalOcean porque han hecho que sea muy fácil comenzar. DigitalOcean tiene una máquina virtual Docker pre-construida y tutoriales detallados para que Docker esté en funcionamiento (busque &quot;docker digitalocean&quot;).</p>
+<h1><a class="header" href="#conclusión" id="conclusión">Conclusión</a></h1>
+<p>Gracias por llegar hasta el final de El pequeño libro de ASP.NET Core!. Si este fue útil (o no) me encantaría escuchar tus comentarios. Enviame tus comentarios vía Twitter:<a href="https://twitter.com/jbenjamincc">https://twitter.com/jbenjamincc</a></p>
+<h2><a class="header" href="#cómo-aprender-más" id="cómo-aprender-más">¿Cómo aprender más?</a></h2>
+<p>Hay muchos más que ASP.NET Core puede hacer que no pude incluir en este corto libro, incluyendo</p>
+<ul>
+<li>Construir APIs RESTful y microservicios</li>
+<li>Usar ASP.NET Core con aplicaciones de una sola páginas SPA con Angular o React</li>
+<li>Páginas Razor</li>
+<li>Construir y minificar recursos estáticos</li>
+<li>WebSockets y SignalR</li>
+</ul>
+<p>Hay un numero de formas en las que puedes aprender más:</p>
+<ul>
+<li>
+<p><strong>La documentación de ASP.NET Core</strong> La documentación oficial de ASP.NET Core en <a href="http://docs.asp.net">http://docs.asp.net</a> contiene un numero de tutoriales a detalle cubriendo muchos temas. La recomiendo ampliamente.</p>
+</li>
+<li>
+<p><strong>ASP.NET Core in Action.</strong> Este libro por Andrew Lock es un zambullida profunda y completa en ASP.NET Core. Puedes comprarlo en Amazon o en un librería.</p>
+</li>
+<li>
+<p><strong>Cursos de LinkedIn Learning y Pluralsight.</strong> Si aprendes mejor en video, hay cursos fantásticos disponibles en Pluralsight y LinkedIn Learning ( incluyendo algunos míos). Si no tienes una cuenta disponible y necesitas un cupón, enviame un correo electrónico a nate@barbettini.com.</p>
+</li>
+<li>
+<p><strong>Blog de Nate.</strong> También escribo acerca de ASP.NET Core y más en mi blog en <a href="https://www.recaffeinate.co">https://www.recaffeinate.co</a>.</p>
+</li>
+</ul>
+<p>Happy coding!</p>
+<h2><a class="header" href="#acerca-del-autor" id="acerca-del-autor">Acerca del autor</a></h2>
+<p>Hey, Soy Nate! escribí El pequeño libro en un largo y lleno de cafeína fin de semana porque amo a la comunidad de .NET Y desea regresar un poc de alguna forma. Espero te haya ayudada a prender algo nuevo.</p>
+<p>Puedes esta en contacto conmigo en Twitter (<a href="https://twitter.com/nbarbettini">@nbarbettini</a>) o en mi blog (<a href="https://www.recaffeinate.co">https://www.recaffeinate.co</a>). También puedes contactarme vía correo electrónico en nate@barbettini.com.</p>
+<h2><a class="header" href="#agradecimiento-especiales" id="agradecimiento-especiales">Agradecimiento especiales</a></h2>
+<p>Para Jennifer, quien siempre apoya mis locas ideas.</p>
+<p>A los siguientes contribuidores quienes mejoraron El pequeño libro de ASP.NET Core:</p>
+<ul>
+<li>0xNF</li>
+<li>Matt Welke [welkie]</li>
+<li>Raman Zhylich [zhilich]</li>
+</ul>
+<p>A estos increíbles programadores políglotas quines tradujeron el pequeño libro de ASP.NET Core:</p>
+<ul>
+<li>sahinyanlik (Turco)</li>
+<li>windsing, yuyi (Chino simplificado)</li>
+</ul>
+<h2><a class="header" href="#registro-de-cambios" id="registro-de-cambios">Registro de cambios</a></h2>
+<p>El registro completo y detallado esta siempre disponible aquí:</p>
+<p><a href="https://github.com/nbarbettini/little-aspnetcore-book/releases">https://github.com/nbarbettini/little-aspnetcore-book/releases</a></p>
+<p><strong>1.1.1</strong> (2018-06-11): Corrección de errores tipográficos encontrados por los lectores.</p>
+<p><strong>1.1.0</strong> (2018-05-03): Se reelaboró ​​significativamente el capítulo <em>Agregar más características</em> para usar MVC en toda la pila y eliminar el patrón AJAX. Se eliminó el inicio de sesión de Facebook para simplificar el capítulo de seguridad y agilizar las pruebas y la implementación. Se actualizaron las instrucciones de Docker para reflejar las últimas prácticas recomendadas. Se corrigieron errores tipográficos y se agregaron sugerencias de los lectores. ¡El libro también luce un nuevo diseño mejorado de portada!</p>
+<p><strong>1.0.4</strong> (2018-01-15): Se agregó una explicación de los ciclos de vida del contenedor de servicios, se aclararon los puertos del servidor y el indicador -o, y se eliminaron los puntos y coma después de las directivas Razor. Crédito de autor corregido de la traducción china. Corrección de otros errores tipográficos y fallas encontrados por los lectores.</p>
+<p><strong>1.0.3</strong> (2017-11-13): Corrección de errores tipográficos y pequeñas mejoras sugeridas por los lectores.</p>
+<p><strong>1.0.2</strong> (2017-10-20): Corrección de errores y pequeñas mejoras. Se agrega la liga a las traducciones.</p>
+<p><strong>1.0.1</strong> (2017-09-23): Corrección de errores y pequeñas mejoras.</p>
+<p><strong>1.0.0</strong> (2017-09-18): Liberación inicial.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+        <!-- Google Analytics Tag -->
+        <script type="text/javascript">
+            var localAddrs = ["localhost", "127.0.0.1", ""];
+
+            // make sure we don't activate google analytics if the developer is
+            // inspecting the book locally...
+            if (localAddrs.indexOf(document.location.hostname) === -1) {
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                ga('create', 'UA-130293099-1', 'auto');
+                ga('send', 'pageview');
+            }
+        </script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4952787000309783" crossorigin="anonymous"></script>
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+        
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+        
+        
+
+    </body>
+</html>

@@ -1,0 +1,18 @@
+[book]
+authors = ["Nate Barbettini","Benjamin Camacho"]
+language = "es"
+multilingual = false
+src = "."
+title = "El pequeño libro de ASP.NET Core"
+description = "Una introducción amigable para construir aplicaciones web con el framework ASP.NET Core."
+isbn = "978-1-387-75615-5"
+
+
+[output.html]
+default-theme = "light"
+preferred-dark-theme = "navy"
+google-analytics = "UA-130293099-1"
+git-repository-url = "https://github.com/jahbenjah/little-aspnetcore-book"
+git-repository-icon = "fa-github"
+site-url = "/little-aspnetcore-book/"
+cname = "aspnetcoremaster.com"

@@ -1,663 +1,540 @@
 <!DOCTYPE HTML>
-<html lang="es">
+<html lang="es" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Autorización con roles - El pequeño libro de ASP.NET Core</title>
+        
+        
 
-<head>
-    <meta charset="UTF-8">
-    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-    <title>Autorización con roles✅ El pequeño libro de ASP.NET Core</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="description" content="">
-    <meta name="generator" content="GitBook 3.2.3">
-    <meta name="author" content="Nate Barbettini">
-    <meta name="identifier" content="978-1-387-75615-5" scheme="ISBN">
-    <link rel="stylesheet" href="/assets/gitbook/style.css">
-    <link rel="stylesheet"
-        href="/assets/gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
-    <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-anchors/plugin.css">
-    <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-forkmegithub/plugin.css">
-    <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-highlight/website.css">
-    <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-search/search.css">
-    <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-fontsettings/website.css">
-    <meta name="HandheldFriendly" content="true" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/apple-touch-icon.webp">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="next" href="more-resources.html" />
-    <link rel="prev" href="using-identity-in-the-application.html" />
-    <meta property="fb:pages" content="1282476685124585" />
-    <meta property="og:type" content="website" />
-    <meta property="fb:app_id" content="561661137677920" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.webp">
-    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.webp">
-    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.webp">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130293099-1"></script>
-    <script>
-        window['ga-disable-UA-130293099-1'] = window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1";
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'UA-130293099-1');
-    </script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4952787000309783" crossorigin="anonymous"></script>
-</head>
-<body>
-    <div class="book">
-        <div class="book-summary">
-            <div id="book-search-input" role="search">
-                <input type="text" placeholder="Escribe para buscar" aria-label="Buscar" />
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="Una introducción amigable para construir aplicaciones web con el framework ASP.NET Core.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="../../favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="../../favicon.png">
+        
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../../chapters/your-first-application/index.html"><strong aria-hidden="true">1.</strong> Tú primera aplicación</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../chapters/your-first-application/get-the-sdk.html"><strong aria-hidden="true">1.1.</strong> Consigue el SDK</a></li><li class="chapter-item expanded "><a href="../../chapters/your-first-application/hello-world-in-csharp.html"><strong aria-hidden="true">1.2.</strong> Hola Mundo en C#</a></li><li class="chapter-item expanded "><a href="../../chapters/your-first-application/create-aspnetcore-project.html"><strong aria-hidden="true">1.3.</strong> Crear un proyecto de ASP.NET Core</a></li></ol></li><li class="chapter-item expanded "><a href="../../chapters/mvc-basics/index.html"><strong aria-hidden="true">2.</strong> Fundamentos de MVC</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../chapters/mvc-basics/create-controller.html"><strong aria-hidden="true">2.1.</strong> Crear un controlador</a></li><li class="chapter-item expanded "><a href="../../chapters/mvc-basics/create-models.html"><strong aria-hidden="true">2.2.</strong> Crear modelos</a></li><li class="chapter-item expanded "><a href="../../chapters/mvc-basics/create-view.html"><strong aria-hidden="true">2.3.</strong> Crear una vista</a></li><li class="chapter-item expanded "><a href="../../chapters/mvc-basics/add-service-class.html"><strong aria-hidden="true">2.4.</strong> Agregar una clase de servicio</a></li><li class="chapter-item expanded "><a href="../../chapters/mvc-basics/use-dependency-injection.html"><strong aria-hidden="true">2.5.</strong> Usar inyección de dependencias</a></li><li class="chapter-item expanded "><a href="../../chapters/mvc-basics/finish-controller.html"><strong aria-hidden="true">2.6.</strong> Terminando el controlador</a></li><li class="chapter-item expanded "><a href="../../chapters/mvc-basics/update-the-layout.html"><strong aria-hidden="true">2.7.</strong> Actualizar la plantilla</a></li></ol></li><li class="chapter-item expanded "><a href="../../chapters/add-external-packages/index.html"><strong aria-hidden="true">3.</strong> Agregando paquetes externos</a></li><li class="chapter-item expanded "><a href="../../chapters/use-a-database/index.html"><strong aria-hidden="true">4.</strong> Usando una base de datos</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../chapters/use-a-database/connect-to-a-database.html"><strong aria-hidden="true">4.1.</strong> Conectarse a una base de datos</a></li><li class="chapter-item expanded "><a href="../../chapters/use-a-database/update-context.html"><strong aria-hidden="true">4.2.</strong> Actualizando el contexto</a></li><li class="chapter-item expanded "><a href="../../chapters/use-a-database/create-migration.html"><strong aria-hidden="true">4.3.</strong> Crear una migración</a></li><li class="chapter-item expanded "><a href="../../chapters/use-a-database/create-service-class.html"><strong aria-hidden="true">4.4.</strong> Crear una nueva clase de servicio</a></li></ol></li><li class="chapter-item expanded "><a href="../../chapters/add-more-features/index.html"><strong aria-hidden="true">5.</strong> Agregando más características</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../chapters/add-more-features/add-todo-items.html"><strong aria-hidden="true">5.1.</strong> Agregar nuevas tareas</a></li><li class="chapter-item expanded "><a href="../../chapters/add-more-features/complete-with-checkbox.html"><strong aria-hidden="true">5.2.</strong> Completar las tareas con una casilla de verificación</a></li></ol></li><li class="chapter-item expanded "><a href="../../chapters/security-and-identity/index.html"><strong aria-hidden="true">6.</strong> Seguridad e Identidad</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../chapters/security-and-identity/require-authentication.html"><strong aria-hidden="true">6.1.</strong> Requerir autenticación</a></li><li class="chapter-item expanded "><a href="../../chapters/security-and-identity/using-identity-in-the-application.html"><strong aria-hidden="true">6.2.</strong> Usando identidad en la aplicación</a></li><li class="chapter-item expanded "><a href="../../chapters/security-and-identity/authorization-with-roles.html" class="active"><strong aria-hidden="true">6.3.</strong> Autorización con roles</a></li><li class="chapter-item expanded "><a href="../../chapters/security-and-identity/more-resources.html"><strong aria-hidden="true">6.4.</strong> Más recursos</a></li></ol></li><li class="chapter-item expanded "><a href="../../chapters/automated-testing/index.html"><strong aria-hidden="true">7.</strong> Pruebas automáticas</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../chapters/automated-testing/unit-testing.html"><strong aria-hidden="true">7.1.</strong> Pruebas unitarias</a></li><li class="chapter-item expanded "><a href="../../chapters/automated-testing/integration-testing.html"><strong aria-hidden="true">7.2.</strong> Pruebas de integración</a></li></ol></li><li class="chapter-item expanded "><a href="../../chapters/deploy-the-application/index.html"><strong aria-hidden="true">8.</strong> Desplegando la aplicación</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../chapters/deploy-the-application/deploy-to-azure.html"><strong aria-hidden="true">8.1.</strong> Desplegando en Azure</a></li><li class="chapter-item expanded "><a href="../../chapters/deploy-the-application/deploy-with-docker.html"><strong aria-hidden="true">8.2.</strong> Desplegando con Docker</a></li></ol></li><li class="chapter-item expanded "><a href="../../chapters/conclusion/index.html"><strong aria-hidden="true">9.</strong> Conclusión</a></li></ol>
             </div>
-            <nav role="navigation">
-                <ul class="summary">
-                    <li class="chapter " data-level="1.1" data-path="../../">
-                        <a href="../../">
-                            Introducción
-                        </a>
-                    </li>
-                    <li class="chapter " data-level="1.2" data-path="../your-first-application/">
-                        <a href="../your-first-application/">
-                            Tú primera aplicación
-                        </a>
-                        <ul class="articles">
-                            <li class="chapter " data-level="1.2.1"
-                                data-path="../your-first-application/get-the-sdk.html">
-                                <a href="../your-first-application/get-the-sdk.html">
-                                    Consigue el SDK
-                                </a>
-                            </li>
-                            <li class="chapter " data-level="1.2.2"
-                                data-path="../your-first-application/hello-world-in-csharp.html">
-                                <a href="../your-first-application/hello-world-in-csharp.html">
-                                    Hola Mundo en C#
-                                </a>
-                            </li>
-                            <li class="chapter " data-level="1.2.3"
-                                data-path="../your-first-application/create-aspnetcore-project.html">
-                                <a href="../your-first-application/create-aspnetcore-project.html">
-                                    Crear un proyecto de ASP.NET Core
-                                </a>
-                            </li>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
                         </ul>
-                    </li>
-                    <li class="chapter " data-level="1.3" data-path="../mvc-basics/">
-                        <a href="../mvc-basics/">
-                            Fundamentos de MVC
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">El pequeño libro de ASP.NET Core</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
                         </a>
-                        <ul class="articles">
-                            <li class="chapter " data-level="1.3.1" data-path="../mvc-basics/create-controller.html">
-                                <a href="../mvc-basics/create-controller.html">
-                                    Crear un controlador
-                                </a>
-                            </li>
-                            <li class="chapter " data-level="1.3.2" data-path="../mvc-basics/create-models.html">
-                                <a href="../mvc-basics/create-models.html">
-                                    Crear modelos
-                                </a>
-                            </li>
-                            <li class="chapter " data-level="1.3.3" data-path="../mvc-basics/create-view.html">
-                                <a href="../mvc-basics/create-view.html">
-                                    Crear una vista
-                                </a>
-                            </li>
-                            <li class="chapter " data-level="1.3.4" data-path="../mvc-basics/add-service-class.html">
-                                <a href="../mvc-basics/add-service-class.html">
-                                    Agregar una clase de servicio
-                                </a>
-                            </li>
-                            <li class="chapter " data-level="1.3.5"
-                                data-path="../mvc-basics/use-dependency-injection.html">
-                                <a href="../mvc-basics/use-dependency-injection.html">
-                                    Usar inyección de dependencias
-                                </a>
-                            </li>
-                            <li class="chapter " data-level="1.3.6" data-path="../mvc-basics/finish-controller.html">
-                                <a href="../mvc-basics/finish-controller.html">
-                                    Terminando el controlador
-                                </a>
-                            </li>
-                            <li class="chapter " data-level="1.3.7" data-path="../mvc-basics/update-the-layout.html">
-                                <a href="../mvc-basics/update-the-layout.html">
-                                    Actualizar la plantilla
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="chapter " data-level="1.4" data-path="../add-external-packages/">
-                        <a href="../add-external-packages/">
-                            Agregando paquetes externos
+                        
+                        
+                        <a href="https://github.com/jahbenjah/little-aspnetcore-book" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
-                    </li>
-                    <li class="chapter " data-level="1.5" data-path="../use-a-database/">
-                        <a href="../use-a-database/">
-                            Usando una base de datos
-                        </a>
-                        <ul class="articles">
-                            <li class="chapter " data-level="1.5.1"
-                                data-path="../use-a-database/connect-to-a-database.html">
-                                <a href="../use-a-database/connect-to-a-database.html">
-                                    Conectarse a una base de datos
-                                </a>
-                            </li>
-                            <li class="chapter " data-level="1.5.2" data-path="../use-a-database/update-context.html">
-                                <a href="../use-a-database/update-context.html">
-                                    Actualizando el contexto
-                                </a>
-                            </li>
-                            <li class="chapter " data-level="1.5.3" data-path="../use-a-database/create-migration.html">
-                                <a href="../use-a-database/create-migration.html">
-                                    Crear una migración
-                                </a>
-                            </li>
-                            <li class="chapter " data-level="1.5.4"
-                                data-path="../use-a-database/create-service-class.html">
-                                <a href="../use-a-database/create-service-class.html">
-                                    Crear una nueva clase de servicio
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="chapter " data-level="1.6" data-path="../add-more-features/">
-                        <a href="../add-more-features/">
-                            Agregando más características
-                        </a>
-                        <ul class="articles">
-                            <li class="chapter " data-level="1.6.1"
-                                data-path="../add-more-features/add-todo-items.html">
-                                <a href="../add-more-features/add-todo-items.html">
-                                    Agregar nuevas tareas
-                                </a>
-                            </li>
-                            <li class="chapter " data-level="1.6.2"
-                                data-path="../add-more-features/complete-with-checkbox.html">
-                                <a href="../add-more-features/complete-with-checkbox.html">
-                                    Completar las tareas con una casilla de verificación
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="chapter " data-level="1.7" data-path="./">
-                        <a href="./">
-                            Seguridad e Identidad
-                        </a>
-                        <ul class="articles">
-                            <li class="chapter " data-level="1.7.1" data-path="require-authentication.html">
-                                <a href="require-authentication.html">
-                                    Requerir autenticación
-                                </a>
-                            </li>
-                            <li class="chapter " data-level="1.7.2" data-path="using-identity-in-the-application.html">
-                                <a href="using-identity-in-the-application.html">
-                                    Usando identidad en la aplicación
-                                </a>
-                            </li>
-                            <li class="chapter active" data-level="1.7.3" data-path="authorization-with-roles.html">
-                                <a href="authorization-with-roles.html">
-                                    Autorización con roles
-                                </a>
-                            </li>
-                            <li class="chapter " data-level="1.7.4" data-path="more-resources.html">
-                                <a href="more-resources.html">
-                                    Más recursos
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="chapter " data-level="1.8" data-path="../automated-testing/">
-                        <a href="../automated-testing/">
-                            Pruebas automáticas
-                        </a>
-                        <ul class="articles">
-                            <li class="chapter " data-level="1.8.1" data-path="../automated-testing/unit-testing.html">
-                                <a href="../automated-testing/unit-testing.html">
-                                    Pruebas unitarias
-                                </a>
-                            </li>
-                            <li class="chapter " data-level="1.8.2"
-                                data-path="../automated-testing/integration-testing.html">
-                                <a href="../automated-testing/integration-testing.html">
-                                    Pruebas de integración
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="chapter " data-level="1.9" data-path="../deploy-the-application/">
-                        <a href="../deploy-the-application/">
-                            Desplegando la aplicación
-                        </a>
-                        <ul class="articles">
-                            <li class="chapter " data-level="1.9.1"
-                                data-path="../deploy-the-application/deploy-to-azure.html">
-                                <a href="../deploy-the-application/deploy-to-azure.html">
-                                    Desplegando en Azure
-                                </a>
-                            </li>
-                            <li class="chapter " data-level="1.9.2"
-                                data-path="../deploy-the-application/deploy-with-docker.html">
-                                <a href="../deploy-the-application/deploy-with-docker.html">
-                                    Desplegando con Docker
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="chapter " data-level="1.10" data-path="../conclusion/">
-                        <a href="../conclusion/">
-                            Conclusión
-                        </a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a href="/" class="gitbook-link">
-                            ASP.NET Core Master
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-        <div class="book-body">
-            <div class="body-inner">
-                <div class="book-header" role="navigation">
-                    <!-- Title -->
-                    <h1>
-                        <i class="fa fa-circle-o-notch fa-spin"></i>
-                        <a href="../..">Autorización con roles</a>
-                    </h1>
+                        
+                    </div>
                 </div>
-                <div class="page-wrapper" tabindex="-1" role="main">
-                    <div class="page-inner">
-                        <div id="book-search-results">
-                            <div class="search-noresults">
-                                <section class="normal markdown-section">
-                                    <h2 id="autorizaci&#xF3;n-con-roles"><a name="autorizaci&#xF3;n-con-roles"
-                                            class="plugin-anchor" href="#autorizaci&#xF3;n-con-roles"><i
-                                                class="fa fa-link" aria-hidden="true"></i></a>Autorizaci&#xF3;n con
-                                        roles</h2>
-                                    <p>Los roles son un enfoque com&#xFA;n para el manejo de permisos y autorizaciones
-                                        en una aplicaci&#xF3;n web. Por ejemplo, es com&#xFA;n crear una rol de
-                                        administrador que otorgue a los usuarios administradores m&#xE1;s permisos o
-                                        poder que los usuarios normales.</p>
-                                    <p>En este proyecto, agregar&#xE1; una p&#xE1;gina para Administrar usuarios que
-                                        solo los administradores pueden ver. Si los usuarios normales intentan acceder a
-                                        &#xE9;l, ver&#xE1;n un error.</p>
-                                    <h3 id="agregar-una-p&#xE1;gina-administrar-usuarios"><a
-                                            name="agregar-una-p&#xE1;gina-administrar-usuarios" class="plugin-anchor"
-                                            href="#agregar-una-p&#xE1;gina-administrar-usuarios"><i class="fa fa-link"
-                                                aria-hidden="true"></i></a>Agregar una p&#xE1;gina Administrar usuarios
-                                    </h3>
-                                    <p>Primero, crea un nuevo controlador:</p>
-                                    <p><strong>Controllers/ManageUsersController.cs</strong></p>
-                                    <pre><code class="lang-csharp"><span class="hljs-keyword">using</span> System;
-<span class="hljs-keyword">using</span> System.Linq;
-<span class="hljs-keyword">using</span> System.Threading.Tasks;
-<span class="hljs-keyword">using</span> Microsoft.AspNetCore.Mvc;
-<span class="hljs-keyword">using</span> Microsoft.AspNetCore.Authorization;
-<span class="hljs-keyword">using</span> Microsoft.AspNetCore.Identity;
-<span class="hljs-keyword">using</span> AspNetCoreTodo.Models;
-<span class="hljs-keyword">using</span> Microsoft.EntityFrameworkCore;
-<span class="hljs-keyword">namespace</span> <span class="hljs-title">AspNetCoreTodo.Controllers</span>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2><a class="header" href="#autorización-con-roles" id="autorización-con-roles">Autorización con roles</a></h2>
+<p>Los roles son un enfoque común para el manejo de permisos y autorizaciones en una aplicación web. Por ejemplo, es común crear una rol de administrador que otorgue a los usuarios administradores más permisos o poder que los usuarios normales.</p>
+<p>En este proyecto, agregará una página para Administrar usuarios que solo los administradores pueden ver. Si los usuarios normales intentan acceder a él, verán un error.</p>
+<h3><a class="header" href="#agregar-una-página-administrar-usuarios" id="agregar-una-página-administrar-usuarios">Agregar una página Administrar usuarios</a></h3>
+<p>Primero, crea un nuevo controlador:</p>
+<p><strong>Controllers/ManageUsersController.cs</strong></p>
+<pre><code class="language-csharp">using System;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using AspNetCoreTodo.Models;
+using Microsoft.EntityFrameworkCore;
+
+namespace AspNetCoreTodo.Controllers
 {
-    [Authorize(Roles = <span class="hljs-string">&quot;Administrator&quot;</span>)]
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">ManageUsersController</span> : <span class="hljs-title">Controller</span>
+    [Authorize(Roles = &quot;Administrator&quot;)]
+    public class ManageUsersController : Controller
     {
-        <span class="hljs-keyword">private</span> <span class="hljs-keyword">readonly</span> UserManager&lt;ApplicationUser&gt;
+        private readonly UserManager&lt;ApplicationUser&gt;
             _userManager;
-        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">ManageUsersController</span>(<span class="hljs-params">
-            UserManager&lt;ApplicationUser&gt; userManager</span>)
-        </span>{
+        
+        public ManageUsersController(
+            UserManager&lt;ApplicationUser&gt; userManager)
+        {
             _userManager = userManager;
         }
-        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">async</span> Task&lt;IActionResult&gt; <span class="hljs-title">Index</span>(<span class="hljs-params"></span>)
-        </span>{
-            <span class="hljs-keyword">var</span> admins = (<span class="hljs-keyword">await</span> _userManager
-                .GetUsersInRoleAsync(<span class="hljs-string">&quot;Administrator&quot;</span>))
+
+        public async Task&lt;IActionResult&gt; Index()
+        {
+            var admins = (await _userManager
+                .GetUsersInRoleAsync(&quot;Administrator&quot;))
                 .ToArray();
-            <span class="hljs-keyword">var</span> everyone = <span class="hljs-keyword">await</span> _userManager.Users
+
+            var everyone = await _userManager.Users
                 .ToArrayAsync();
-            <span class="hljs-keyword">var</span> model = <span class="hljs-keyword">new</span> ManageUsersViewModel
+
+            var model = new ManageUsersViewModel
             {
                 Administrators = admins,
                 Everyone = everyone
             };
-            <span class="hljs-keyword">return</span> View(model);
+
+            return View(model);
         }
     }
 }
 </code></pre>
-                                    <p>La configuraci&#xF3;n de la propiedad <code>Roles</code> en el atributo
-                                        <code>[Authorize]</code>garantizar&#xE1; que el usuario tenga que iniciar
-                                        sesi&#xF3;n <strong>y</strong> se le asigne el rol de Administrador para poder
-                                        ver la p&#xE1;gina.</p>
-                                    <p>A continuaci&#xF3;n, crea un modelo para la vista:</p>
-                                    <p><strong>Models/ManageUsersViewModel.cs</strong></p>
-                                    <pre><code class="lang-csharp"><span class="hljs-keyword">using</span> System.Collections.Generic;
-<span class="hljs-keyword">namespace</span> <span class="hljs-title">AspNetCoreTodo.Models</span>
+<p>La configuración de la propiedad <code>Roles</code> en el atributo <code>[Authorize]</code>garantizará que el usuario tenga que iniciar sesión <strong>y</strong> se le asigne el rol de Administrador para poder ver la página.</p>
+<p>A continuación, crea un modelo para la vista:</p>
+<p><strong>Models/ManageUsersViewModel.cs</strong></p>
+<pre><code class="language-csharp">using System.Collections.Generic;
+
+namespace AspNetCoreTodo.Models
 {
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">ManageUsersViewModel</span>
+    public class ManageUsersViewModel
     {
-        <span class="hljs-keyword">public</span> ApplicationUser[] Administrators { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; }
-        <span class="hljs-keyword">public</span> ApplicationUser[] Everyone { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>;}
+        public ApplicationUser[] Administrators { get; set; }
+
+        public ApplicationUser[] Everyone { get; set;}
     }
 }
 </code></pre>
-                                    <p>Finalmente, cree una carpeta <code>Views/ManageUsers</code> y una vista para la
-                                        acci&#xF3;n <code>Index</code>:</p>
-                                    <p><strong>Views/ManageUsers/Index.cshtml</strong></p>
-                                    <pre><code class="lang-html">@model ManageUsersViewModel
+<p>Finalmente, cree una carpeta <code>Views/ManageUsers</code> y una vista para la acción <code>Index</code>:</p>
+<p><strong>Views/ManageUsers/Index.cshtml</strong></p>
+<pre><code class="language-html">@model ManageUsersViewModel
+
 @{
     ViewData[&quot;Title&quot;] = &quot;Manage users&quot;;
 }
-<span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>@ViewData[&quot;Title&quot;]<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>Administrators<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;table&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">thead</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Id<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Email<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">thead</span>&gt;</span>
+
+&lt;h2&gt;@ViewData[&quot;Title&quot;]&lt;/h2&gt;
+
+&lt;h3&gt;Administrators&lt;/h3&gt;
+
+&lt;table class=&quot;table&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Id&lt;/td&gt;
+            &lt;td&gt;Email&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    
     @foreach (var user in Model.Administrators)
     {
-        <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>@user.Id<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>@user.Email<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+        &lt;tr&gt;
+            &lt;td&gt;@user.Id&lt;/td&gt;
+            &lt;td&gt;@user.Email&lt;/td&gt;
+        &lt;/tr&gt;
     }
-<span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>Everyone<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;table&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">thead</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Id<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Email<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">thead</span>&gt;</span>
+&lt;/table&gt;
+
+&lt;h3&gt;Everyone&lt;/h3&gt;
+
+&lt;table class=&quot;table&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Id&lt;/td&gt;
+            &lt;td&gt;Email&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    
     @foreach (var user in Model.Everyone)
     {
-        <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>@user.Id<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>@user.Email<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+        &lt;tr&gt;
+            &lt;td&gt;@user.Id&lt;/td&gt;
+            &lt;td&gt;@user.Email&lt;/td&gt;
+        &lt;/tr&gt;
     }
-<span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
+&lt;/table&gt;
 </code></pre>
-                                    <p>Inicie la aplicaci&#xF3;n e intente acceder a la ruta <code>/ManageUsers</code>
-                                        mientras est&#xE9; conectado como un usuario normal. Ver&#xE1;s esta p&#xE1;gina
-                                        de acceso denegado:</p>
-                                    <p><img src="access-denied.webp" alt="Error de acceso denegado"></p>
-                                    <p>Eso es porque a los usuarios no se les asigna autom&#xE1;ticamente el rol de
-                                        Administrador.</p>
-                                    <h3 id="crear-una-cuenta-de-administrador-de-prueba"><a
-                                            name="crear-una-cuenta-de-administrador-de-prueba" class="plugin-anchor"
-                                            href="#crear-una-cuenta-de-administrador-de-prueba"><i class="fa fa-link"
-                                                aria-hidden="true"></i></a>Crear una cuenta de administrador de prueba
-                                    </h3>
-                                    <p>Por razones obvias de seguridad, no es posible que nadie registre una nueva
-                                        cuenta de administrador. De hecho, el rol de administrador ni siquiera existe en
-                                        la base de datos todav&#xED;a.</p>
-                                    <p>Puede agregar el rol de administrador m&#xE1;s una cuenta de administrador de
-                                        prueba a la base de datos la primera vez que se inicie la aplicaci&#xF3;n.
-                                        Agregar datos por primera vez a la base de datos se llama inicializar o
-                                        <strong>sembrar</strong> la base de datos.</p>
-                                    <p>Crea una nueva clase en la ra&#xED;z del proyecto llamada <code>SeedData</code>:
-                                    </p>
-                                    <p><strong>SeedData.cs</strong></p>
-                                    <pre><code class="lang-csharp"><span class="hljs-keyword">using</span> System;
-<span class="hljs-keyword">using</span> System.Linq;
-<span class="hljs-keyword">using</span> System.Threading.Tasks;
-<span class="hljs-keyword">using</span> AspNetCoreTodo.Models;
-<span class="hljs-keyword">using</span> Microsoft.AspNetCore.Identity;
-<span class="hljs-keyword">using</span> Microsoft.EntityFrameworkCore;
-<span class="hljs-keyword">using</span> Microsoft.Extensions.DependencyInjection;
-<span class="hljs-keyword">namespace</span> <span class="hljs-title">AspNetCoreTodo</span>
+<p>Inicie la aplicación e intente acceder a la ruta <code>/ManageUsers</code> mientras esté conectado como un usuario normal. Verás esta página de acceso denegado:</p>
+<p><img src="access-denied.png" alt="Error de acceso denegado" /></p>
+<p>Eso es porque a los usuarios no se les asigna automáticamente el rol de Administrador.</p>
+<h3><a class="header" href="#crear-una-cuenta-de-administrador-de-prueba" id="crear-una-cuenta-de-administrador-de-prueba">Crear una cuenta de administrador de prueba</a></h3>
+<p>Por razones obvias de seguridad, no es posible que nadie registre una nueva cuenta de administrador. De hecho, el rol de administrador ni siquiera existe en la base de datos todavía.</p>
+<p>Puede agregar el rol de administrador más una cuenta de administrador de prueba a la base de datos la primera vez que se inicie la aplicación. Agregar datos por primera vez a la base de datos se llama inicializar o <strong>sembrar</strong> la base de datos.</p>
+<p>Crea una nueva clase en la raíz del proyecto llamada <code>SeedData</code>:</p>
+<p><strong>SeedData.cs</strong></p>
+<pre><code class="language-csharp">using System;
+using System.Linq;
+using System.Threading.Tasks;
+using AspNetCoreTodo.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+
+namespace AspNetCoreTodo
 {
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">class</span> <span class="hljs-title">SeedData</span>
+    public static class SeedData
     {
-        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">async</span> Task <span class="hljs-title">InitializeAsync</span>(<span class="hljs-params">
-            IServiceProvider services</span>)
-        </span>{
-            <span class="hljs-keyword">var</span> roleManager = services
+        public static async Task InitializeAsync(
+            IServiceProvider services)
+        {
+            var roleManager = services
                 .GetRequiredService&lt;RoleManager&lt;IdentityRole&gt;&gt;();
-            <span class="hljs-keyword">await</span> EnsureRolesAsync(roleManager);
-            <span class="hljs-keyword">var</span> userManager = services
+            await EnsureRolesAsync(roleManager);
+
+            var userManager = services
                 .GetRequiredService&lt;UserManager&lt;ApplicationUser&gt;&gt;();
-            <span class="hljs-keyword">await</span> EnsureTestAdminAsync(userManager);
+            await EnsureTestAdminAsync(userManager);
         }
     }
 }
 </code></pre>
-                                    <p>El m&#xE9;todo <code>InitializeAsync()</code> utiliza un
-                                        <code>IServiceProvider</code> (la colecci&#xF3;n de servicios que se configura
-                                        en el m&#xE9;todo <code>Startup.ConfigureServices()</code>) para obtener el
-                                        <code>RoleManager</code> y el <code>UserManager</code> de ASP.NET Core Identity.
-                                    </p>
-                                    <p>Agregue dos m&#xE9;todos m&#xE1;s debajo del m&#xE9;todo
-                                        <code>InitializeAsync()</code>. Primero, el m&#xE9;todo
-                                        <code>VerifyRolesAsync()</code>:</p>
-                                    <pre><code class="lang-csharp"><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">async</span> Task <span class="hljs-title">EnsureRolesAsync</span>(<span class="hljs-params">
-    RoleManager&lt;IdentityRole&gt; roleManager</span>)
-</span>{
-    <span class="hljs-keyword">var</span> alreadyExists = <span class="hljs-keyword">await</span> roleManager
+<p>El método <code>InitializeAsync()</code> utiliza un <code>IServiceProvider</code> (la colección de servicios que se configura en el método <code>Startup.ConfigureServices()</code>) para obtener el <code>RoleManager</code> y el <code>UserManager</code> de ASP.NET Core Identity.</p>
+<p>Agregue dos métodos más debajo del método <code>InitializeAsync()</code>. Primero, el método <code>VerifyRolesAsync()</code>:</p>
+<pre><code class="language-csharp">private static async Task EnsureRolesAsync(
+    RoleManager&lt;IdentityRole&gt; roleManager)
+{
+    var alreadyExists = await roleManager
         .RoleExistsAsync(Constants.AdministratorRole);
-    <span class="hljs-keyword">if</span> (alreadyExists) <span class="hljs-keyword">return</span>;
-    <span class="hljs-keyword">await</span> roleManager.CreateAsync(
-        <span class="hljs-keyword">new</span> IdentityRole(Constants.AdministratorRole));
+    
+    if (alreadyExists) return;
+
+    await roleManager.CreateAsync(
+        new IdentityRole(Constants.AdministratorRole));
 }
 </code></pre>
-                                    <p>Este m&#xE9;todo verifica si existe un rol de <code>Administrador</code> en la
-                                        base de datos. Si no, crea uno. En lugar de escribir repetidamente la cadena
-                                        <code>&quot;Administrador&quot;</code>, cree una peque&#xF1;a clase llamada
-                                        <code>Constants</code> para mantener el valor:</p>
-                                    <p><strong>Constants.cs</strong></p>
-                                    <pre><code class="lang-csharp"><span class="hljs-keyword">namespace</span> <span class="hljs-title">AspNetCoreTodo</span>
+<p>Este método verifica si existe un rol de <code>Administrador</code> en la base de datos. Si no, crea uno. En lugar de escribir repetidamente la cadena <code>&quot;Administrador&quot;</code>, cree una pequeña clase llamada <code>Constants</code> para mantener el valor:</p>
+<p><strong>Constants.cs</strong></p>
+<pre><code class="language-csharp">namespace AspNetCoreTodo
 {
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Constants</span>
+    public static class Constants
     {
-        <span class="hljs-keyword">public</span> <span class="hljs-keyword">const</span> <span class="hljs-keyword">string</span> AdministratorRole = <span class="hljs-string">&quot;Administrator&quot;</span>;
+        public const string AdministratorRole = &quot;Administrator&quot;;
     }
 }
 </code></pre>
-                                    <blockquote>
-                                        <p>Si lo desea, puede actualizar el <code>ManageUsersController</code> para usar
-                                            este valor constante tambi&#xE9;n.</p>
-                                    </blockquote>
-                                    <p>A continuaci&#xF3;n, escriba el m&#xE9;todo <code>EnsureTestAdminAsync()</code>:
-                                    </p>
-                                    <p><strong>SeedData.cs</strong></p>
-                                    <pre><code class="lang-csharp"><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">async</span> Task <span class="hljs-title">EnsureTestAdminAsync</span>(<span class="hljs-params">
-    UserManager&lt;ApplicationUser&gt; userManager</span>)
-</span>{
-    <span class="hljs-keyword">var</span> testAdmin = <span class="hljs-keyword">await</span> userManager.Users
-        .Where(x =&gt; x.UserName == <span class="hljs-string">&quot;admin@todo.local&quot;</span>)
+<blockquote>
+<p>Si lo desea, puede actualizar el <code>ManageUsersController</code> para usar este valor constante también.</p>
+</blockquote>
+<p>A continuación, escriba el método <code>EnsureTestAdminAsync()</code>:</p>
+<p><strong>SeedData.cs</strong></p>
+<pre><code class="language-csharp">private static async Task EnsureTestAdminAsync(
+    UserManager&lt;ApplicationUser&gt; userManager)
+{
+    var testAdmin = await userManager.Users
+        .Where(x =&gt; x.UserName == &quot;admin@todo.local&quot;)
         .SingleOrDefaultAsync();
-    <span class="hljs-keyword">if</span> (testAdmin != <span class="hljs-keyword">null</span>) <span class="hljs-keyword">return</span>;
-    testAdmin = <span class="hljs-keyword">new</span> ApplicationUser
+
+    if (testAdmin != null) return;
+
+    testAdmin = new ApplicationUser
     {
-        UserName = <span class="hljs-string">&quot;admin@todo.local&quot;</span>,
-        Email = <span class="hljs-string">&quot;admin@todo.local&quot;</span>
+        UserName = &quot;admin@todo.local&quot;,
+        Email = &quot;admin@todo.local&quot;
     };
-    <span class="hljs-keyword">await</span> userManager.CreateAsync(
-        testAdmin, <span class="hljs-string">&quot;NotSecure123!!&quot;</span>);
-    <span class="hljs-keyword">await</span> userManager.AddToRoleAsync(
+    await userManager.CreateAsync(
+        testAdmin, &quot;NotSecure123!!&quot;);
+    await userManager.AddToRoleAsync(
         testAdmin, Constants.AdministratorRole);
 }
 </code></pre>
-                                    <p>Si no hay un usuario con el nombre de usuario <code>admin@todo.local</code> en la
-                                        base de datos, este m&#xE9;todo crear&#xE1; uno y le asignar&#xE1; una
-                                        contrase&#xF1;a temporal. Despu&#xE9;s de iniciar sesi&#xF3;n por primera vez,
-                                        &#xA1;debe cambiar la contrase&#xF1;a de la cuenta a algo seguro!</p>
-                                    <p>A continuaci&#xF3;n, debe indicar a su aplicaci&#xF3;n que ejecute esta
-                                        l&#xF3;gica cuando se inicie. Modifique <code>Program.cs</code> y actualice
-                                        <code>Main()</code>para llamar a un nuevo m&#xE9;todo,
-                                        <code>InitializeDatabase()</code>:</p>
-                                    <p><strong>Program.cs</strong></p>
-                                    <pre><code class="lang-csharp"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"><span class="hljs-keyword">string</span>[] args</span>)
-</span>{
-    <span class="hljs-keyword">var</span> host = BuildWebHost(args);
+<p>Si no hay un usuario con el nombre de usuario <code>admin@todo.local</code> en la base de datos, este método creará uno y le asignará una contraseña temporal. Después de iniciar sesión por primera vez, ¡debe cambiar la contraseña de la cuenta a algo seguro!</p>
+<p>A continuación, debe indicar a su aplicación que ejecute esta lógica cuando se inicie. Modifique <code>Program.cs</code> y actualice <code>Main()</code>para llamar a un nuevo método, <code>InitializeDatabase()</code>:</p>
+<p><strong>Program.cs</strong></p>
+<pre><code class="language-csharp">public static void Main(string[] args)
+{
+    var host = BuildWebHost(args);
     InitializeDatabase(host);
     host.Run();
 }
 </code></pre>
-                                    <p>Luego, agregue el nuevo m&#xE9;todo a la clase debajo de <code>Main()</code>:</p>
-                                    <pre><code class="lang-csharp"><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">InitializeDatabase</span>(<span class="hljs-params">IWebHost host</span>)
-</span>{
-    <span class="hljs-keyword">using</span> (<span class="hljs-keyword">var</span> scope = host.Services.CreateScope())
+<p>Luego, agregue el nuevo método a la clase debajo de <code>Main()</code>:</p>
+<pre><code class="language-csharp">private static void InitializeDatabase(IWebHost host)
+{
+    using (var scope = host.Services.CreateScope())
     {
-        <span class="hljs-keyword">var</span> services = scope.ServiceProvider;
-        <span class="hljs-keyword">try</span>
+        var services = scope.ServiceProvider;
+
+        try
         {
             SeedData.InitializeAsync(services).Wait();
         }
-        <span class="hljs-keyword">catch</span> (Exception ex)
+        catch (Exception ex)
         {
-            <span class="hljs-keyword">var</span> logger = services
+            var logger = services
                 .GetRequiredService&lt;ILogger&lt;Program&gt;&gt;();
-            logger.LogError(ex, <span class="hljs-string">&quot;Error occurred seeding the DB.&quot;</span>);
+            logger.LogError(ex, &quot;Error occurred seeding the DB.&quot;);
         }
     }
 }
 </code></pre>
-                                    <p>Agregue esta declaraci&#xF3;n <code>using</code> al principio del archivo:</p>
-                                    <pre><code class="lang-csharp"><span class="hljs-keyword">using</span> Microsoft.Extensions.DependencyInjection;
+<p>Agregue esta declaración <code>using</code> al principio del archivo:</p>
+<pre><code class="language-csharp">using Microsoft.Extensions.DependencyInjection;
 </code></pre>
-                                    <p>Este m&#xE9;todo obtiene la colecci&#xF3;n de servicios que necesita
-                                        <code>SeedData.InitializeAsync()</code> y luego ejecuta el m&#xE9;todo para
-                                        inicializar la base de datos. Si algo sale mal, se registra un error.</p>
-                                    <blockquote>
-                                        <p>Como <code>InitializeAsync()</code> devuelve un <code>Task</code>, el
-                                            m&#xE9;todo <code>Wait()</code>debe usarse para asegurarse de que finaliza
-                                            antes de que la aplicaci&#xF3;n se inicie. Normalmente utilizar&#xED;as
-                                            &quot;esperar&quot; para esto, pero por razones t&#xE9;cnicas no puedes usar
-                                            &quot;esperar&quot; en la clase &quot;Programa&quot;. Esta es una rara
-                                            excepci&#xF3;n. &#xA1;Debes usar <code>await</code> en cualquier otro lugar!
-                                        </p>
-                                    </blockquote>
-                                    <p>Cuando inicie la aplicaci&#xF3;n a continuaci&#xF3;n, la cuenta
-                                        <code>admin@todo.local</code> se crear&#xE1; y se le asignar&#xE1; el rol de
-                                        Administrador. Intente iniciar sesi&#xF3;n con esta cuenta y navegue a
-                                        <code>http://localhost:5000/ManageUsers</code>. Ver&#xE1;s una lista de todos
-                                        los usuarios registrados para la aplicaci&#xF3;n.</p>
-                                    <blockquote>
-                                        <p>Como desaf&#xED;o adicional, intente agregar m&#xE1;s funciones de
-                                            administraci&#xF3;n a esta p&#xE1;gina. Por ejemplo, podr&#xED;a agregar un
-                                            bot&#xF3;n que le d&#xE9; a un administrador la posibilidad de eliminar una
-                                            cuenta de usuario.</p>
-                                    </blockquote>
-                                    <h3 id="verificar-la-autorizaci&#xF3;n-en-una-vista"><a
-                                            name="verificar-la-autorizaci&#xF3;n-en-una-vista" class="plugin-anchor"
-                                            href="#verificar-la-autorizaci&#xF3;n-en-una-vista"><i class="fa fa-link"
-                                                aria-hidden="true"></i></a>Verificar la autorizaci&#xF3;n en una vista
-                                    </h3>
-                                    <p>El atributo <code>[Authorize]</code> facilita la verificaci&#xF3;n de
-                                        autorizaci&#xF3;n en un controlador o m&#xE9;todo de acci&#xF3;n, pero
-                                        &#xBF;qu&#xE9; sucede si necesita verificar la autorizaci&#xF3;n en una vista?
-                                        Por ejemplo, ser&#xED;a bueno mostrar un enlace &quot;Administrar usuarios&quot;
-                                        en la barra de navegaci&#xF3;n si el usuario que ha iniciado sesi&#xF3;n es un
-                                        administrador.</p>
-                                    <p>Puede inyectar el <code>UserManager</code> directamente en una vista para
-                                        realizar estos tipos de comprobaciones de autorizaci&#xF3;n. Para mantener sus
-                                        vistas limpias y organizadas, cree una nueva vista parcial que agregar&#xE1; un
-                                        elemento a la barra de navegaci&#xF3;n en el dise&#xF1;o:</p>
-                                    <p><strong>Views/Shared/_AdminActionsPartial.cshtml</strong></p>
-                                    <pre><code class="lang-html">@using Microsoft.AspNetCore.Identity
+<p>Este método obtiene la colección de servicios que necesita <code>SeedData.InitializeAsync()</code> y luego ejecuta el método para inicializar la base de datos. Si algo sale mal, se registra un error.</p>
+<blockquote>
+<p>Como <code>InitializeAsync()</code> devuelve un <code>Task</code>, el método <code>Wait()</code>debe usarse para asegurarse de que finaliza antes de que la aplicación se inicie. Normalmente utilizarías &quot;esperar&quot; para esto, pero por razones técnicas no puedes usar &quot;esperar&quot; en la clase &quot;Programa&quot;. Esta es una rara excepción. ¡Debes usar <code>await</code> en cualquier otro lugar!</p>
+</blockquote>
+<p>Cuando inicie la aplicación a continuación, la cuenta <code>admin@todo.local</code> se creará y se le asignará el rol de Administrador. Intente iniciar sesión con esta cuenta y navegue a <code>http://localhost:5000/ManageUsers</code>. Verás una lista de todos los usuarios registrados para la aplicación.</p>
+<blockquote>
+<p>Como desafío adicional, intente agregar más funciones de administración a esta página. Por ejemplo, podría agregar un botón que le dé a un administrador la posibilidad de eliminar una cuenta de usuario.</p>
+</blockquote>
+<h3><a class="header" href="#verificar-la-autorización-en-una-vista" id="verificar-la-autorización-en-una-vista">Verificar la autorización en una vista</a></h3>
+<p>El atributo <code>[Authorize]</code> facilita la verificación de autorización en un controlador o método de acción, pero ¿qué sucede si necesita verificar la autorización en una vista? Por ejemplo, sería bueno mostrar un enlace &quot;Administrar usuarios&quot; en la barra de navegación si el usuario que ha iniciado sesión es un administrador.</p>
+<p>Puede inyectar el <code>UserManager</code> directamente en una vista para realizar estos tipos de comprobaciones de autorización. Para mantener sus vistas limpias y organizadas, cree una nueva vista parcial que agregará un elemento a la barra de navegación en el diseño:</p>
+<p><strong>Views/Shared/_AdminActionsPartial.cshtml</strong></p>
+<pre><code class="language-html">@using Microsoft.AspNetCore.Identity
 @using AspNetCoreTodo.Models
-@inject SignInManager<span class="hljs-tag">&lt;<span class="hljs-name">ApplicationUser</span>&gt;</span> signInManager
-@inject UserManager<span class="hljs-tag">&lt;<span class="hljs-name">ApplicationUser</span>&gt;</span> userManager
+
+@inject SignInManager&lt;ApplicationUser&gt; signInManager
+@inject UserManager&lt;ApplicationUser&gt; userManager
+
 @if (signInManager.IsSignedIn(User))
 {
     var currentUser = await userManager.GetUserAsync(User);
+
     var isAdmin = currentUser != null
         &amp;&amp; await userManager.IsInRoleAsync(
             currentUser,
             Constants.AdministratorRole);
+
     if (isAdmin)
     {
-        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;nav navbar-nav navbar-right&quot;</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">asp-controller</span>=<span class="hljs-string">&quot;ManageUsers&quot;</span> 
-                   <span class="hljs-attr">asp-action</span>=<span class="hljs-string">&quot;Index&quot;</span>&gt;</span>
+        &lt;ul class=&quot;nav navbar-nav navbar-right&quot;&gt;
+            &lt;li&gt;
+                &lt;a asp-controller=&quot;ManageUsers&quot; 
+                   asp-action=&quot;Index&quot;&gt;
                    Manage Users
-                <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+                &lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
     }
 }
 </code></pre>
-                                    <blockquote>
-                                        <p>Es una convenci&#xF3;n nombrar vistas parciales compartidas que comienzan con
-                                            un gui&#xF3;n bajo <code>_</code>, pero no es obligatorio.</p>
-                                    </blockquote>
-                                    <p>Esta vista parcial primero utiliza el <code>SignInManager</code> para determinar
-                                        r&#xE1;pidamente si el usuario est&#xE1; conectado. Si no lo est&#xE1;, el resto
-                                        del c&#xF3;digo de vista se puede omitir. Si hay <strong>hay</strong> un usuario
-                                        conectado, el <code>UserManager</code> se utiliza para buscar sus detalles y
-                                        realizar una verificaci&#xF3;n de autorizaci&#xF3;n con
-                                        <code>IsInRoleAsync()</code>. Si todas las comprobaciones son correctas y el
-                                        usuario es un administrador, se agrega un enlace <strong>Administrar
-                                            usuarios</strong> a la barra de navegaci&#xF3;n.</p>
-                                    <p>Para incluir este parcial en el dise&#xF1;o principal, edite
-                                        <code>_Layout.cshtml</code> y agr&#xE9;guelo a la secci&#xF3;n de la barra de
-                                        navegaci&#xF3;n:</p>
-                                    <p><strong>Views/Shared/_Layout.cshtml</strong></p>
-                                    <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;navbar-collapse collapse&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;nav navbar-nav&quot;</span>&gt;</span>
-        <span class="hljs-comment">&lt;!-- existing code here --&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<blockquote>
+<p>Es una convención nombrar vistas parciales compartidas que comienzan con un guión bajo <code>_</code>, pero no es obligatorio.</p>
+</blockquote>
+<p>Esta vista parcial primero utiliza el <code>SignInManager</code> para determinar rápidamente si el usuario está conectado. Si no lo está, el resto del código de vista se puede omitir. Si hay <strong>hay</strong> un usuario conectado, el <code>UserManager</code> se utiliza para buscar sus detalles y realizar una verificación de autorización con <code>IsInRoleAsync()</code>. Si todas las comprobaciones son correctas y el usuario es un administrador, se agrega un enlace <strong>Administrar usuarios</strong> a la barra de navegación.</p>
+<p>Para incluir este parcial en el diseño principal, edite <code>_Layout.cshtml</code> y agréguelo a la sección de la barra de navegación:</p>
+<p><strong>Views/Shared/_Layout.cshtml</strong></p>
+<pre><code class="language-html">&lt;div class=&quot;navbar-collapse collapse&quot;&gt;
+    &lt;ul class=&quot;nav navbar-nav&quot;&gt;
+        &lt;!-- existing code here --&gt;
+    &lt;/ul&gt;
     @await Html.PartialAsync(&quot;_LoginPartial&quot;)
     @await Html.PartialAsync(&quot;_AdminActionsPartial&quot;)
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+&lt;/div&gt;
 </code></pre>
-                                    <p>Cuando inicie sesi&#xF3;n con una cuenta de administrador, ahora ver&#xE1; un
-                                        nuevo elemento en la parte superior derecha:</p>
-                                    <p><img src="manage-users.webp" alt="Liga para administrar usuarios"></p>
-                                </section>
-                            </div>
-                            <div class="search-results">
-                                <div class="has-results">
-                                    <h1 class="search-results-title"><span class='search-results-count'></span> results
-                                        matching "<span class='search-query'></span>"</h1>
-                                    <ul class="search-results-list"></ul>
-                                </div>
-                                <div class="no-results">
-                                    <h1 class="search-results-title">No results matching "<span
-                                            class='search-query'></span>"</h1>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+<p>Cuando inicie sesión con una cuenta de administrador, ahora verá un nuevo elemento en la parte superior derecha:</p>
+<p><img src="manage-users.png" alt="Liga para administrar usuarios" /></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../../chapters/security-and-identity/using-identity-in-the-application.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../../chapters/security-and-identity/more-resources.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
                 </div>
             </div>
-            <a href="using-identity-in-the-application.html" class="navigation navigation-prev "
-                aria-label="Previous page: Usando identidad en la aplicación">
-                <i class="fa fa-angle-left"></i>
-            </a>
-            <a href="more-resources.html" class="navigation navigation-next " aria-label="Next page: Más recursos">
-                <i class="fa fa-angle-right"></i>
-            </a>
-        </div>
-        <script>
-            var gitbook = gitbook || [];
-            gitbook.push(function () {
-                gitbook.page.hasChanged({ "page": { "title": "Autorización con roles", "level": "1.7.3", "depth": 2, "next": { "title": "Más recursos", "level": "1.7.4", "depth": 2, "path": "chapters/security-and-identity/more-resources.md", "ref": "chapters/security-and-identity/more-resources.md", "articles": [] }, "previous": { "title": "Usando identidad en la aplicación", "level": "1.7.2", "depth": 2, "path": "chapters/security-and-identity/using-identity-in-the-application.md", "ref": "chapters/security-and-identity/using-identity-in-the-application.md", "articles": [] }, "dir": "ltr" }, "config": { "plugins": ["expandable-chapters-small", "anchors", "forkmegithub", "analytics"], "styles": { "website": "styles/website.css", "pdf": "styles/pdf.css", "epub": "styles/epub.css", "mobi": "styles/mobi.css", "ebook": "styles/ebook.css", "print": "styles/print.css" }, "pluginsConfig": { "analytics": { "google": "UA-130293099-1" }, "search": {}, "lunr": { "maxIndexSize": 1000000, "ignoreSpecialCharacters": false }, "fontsettings": { "theme": "white", "family": "sans", "size": 2 }, "highlight": {}, "expandable-chapters-small": {}, "sharing": { "facebook": true, "twitter": true, "google": false, "weibo": false, "instapaper": false, "vk": false, "all": ["facebook", "google", "twitter", "weibo", "instapaper"] }, "forkmegithub": { "color": "green", "url": "https://github.com/jahbenjah/little-aspnetcore-book" }, "theme-default": { "styles": { "website": "styles/website.css", "pdf": "styles/pdf.css", "epub": "styles/epub.css", "mobi": "styles/mobi.css", "ebook": "styles/ebook.css", "print": "styles/print.css" }, "showLevel": false }, "anchors": {} }, "theme": "default", "author": "Nate Barbettini", "pdf": { "pageNumbers": true, "fontSize": 12, "fontFamily": "Lato", "paperSize": "a5", "chapterMark": "pagebreak", "pageBreaksBefore": "/", "margin": { "right": 62, "left": 62, "top": 56, "bottom": 56 } }, "structure": { "langs": "LANGS.md", "readme": "README.md", "glossary": "GLOSSARY.md", "summary": "SUMMARY.md" }, "isbn": "978-1-387-75615-5", "variables": {}, "title": "El pequeño libro de ASP.NET Core", "language": "es", "gitbook": "*", "description": "Una introducción amigable para construir aplicaciones web con el framework ASP.NET Core." }, "file": { "path": "chapters/security-and-identity/authorization-with-roles.md", "mtime": "2019-03-18T02:21:27.390Z", "type": "markdown" }, "gitbook": { "version": "3.2.3", "time": "2019-03-22T16:25:31.396Z" }, "basePath": "../..", "book": { "language": "" } });
-            });
-        </script>
-    </div>
-    <!-- <script src="/assets/js/site.js" async></script> -->
-    <script src="/assets/gitbook/gitbook.js" async></script>
-    <script src="/assets/gitbook/theme.js" async></script>
-    <script src="/assets/gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js" async></script>
-    <script src="/assets/gitbook/gitbook-plugin-forkmegithub/plugin.js" async></script>
-    <script src="/assets/gitbook/gitbook-plugin-search/search-engine.js" async></script>
-    <script src="/assets/gitbook/gitbook-plugin-search/search.js" async></script>
-    <script src="/assets/gitbook/gitbook-plugin-lunr/lunr.min.js" async></script>
-    <script src="/assets/gitbook/gitbook-plugin-lunr/search-lunr.js" async></script>
-    <script src="/assets/gitbook/gitbook-plugin-sharing/buttons.js" async></script>
-    <script src="/assets/gitbook/gitbook-plugin-fontsettings/fontsettings.js" async></script>
-</body>
 
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../../chapters/security-and-identity/using-identity-in-the-application.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../../chapters/security-and-identity/more-resources.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+        <!-- Google Analytics Tag -->
+        <script type="text/javascript">
+            var localAddrs = ["localhost", "127.0.0.1", ""];
+
+            // make sure we don't activate google analytics if the developer is
+            // inspecting the book locally...
+            if (localAddrs.indexOf(document.location.hostname) === -1) {
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                ga('create', 'UA-130293099-1', 'auto');
+                ga('send', 'pageview');
+            }
+        </script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4952787000309783" crossorigin="anonymous"></script>
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
 </html>

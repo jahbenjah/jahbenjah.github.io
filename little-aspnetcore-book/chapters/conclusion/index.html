@@ -1,435 +1,301 @@
 <!DOCTYPE HTML>
-<html lang="es">
+<html lang="es" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Conclusión - El pequeño libro de ASP.NET Core</title>
+        
+        
 
-<head>
-    <meta charset="UTF-8">
-    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-    <title>Conclusión ✅ El pequeño libro de ASP.NET Core</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="description" content="">
-    <meta name="generator" content="GitBook 3.2.3">
-    <meta name="author" content="Nate Barbettini">
-    <meta name="identifier" content="978-1-387-75615-5" scheme="ISBN">
-    <link rel="stylesheet" href="/assets/gitbook/style.css">
-    <link rel="stylesheet"
-        href="/assets/gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
-    <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-anchors/plugin.css">
-    <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-forkmegithub/plugin.css">
-    <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-highlight/website.css">
-    <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-search/search.css">
-    <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-fontsettings/website.css">
-    <meta name="HandheldFriendly" content="true" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/apple-touch-icon.webp">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="prev" href="../deploy-the-application/deploy-with-docker.html" />
-    <meta property="fb:pages" content="1282476685124585" />
-    <meta property="og:type" content="website" />
-    <meta property="fb:app_id" content="561661137677920" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.webp">
-    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.webp">
-    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.webp">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130293099-1"></script>
-    <script>
-        window['ga-disable-UA-130293099-1'] = window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1";
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'UA-130293099-1');
-    </script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4952787000309783" crossorigin="anonymous"></script>
-</head>
 
-<body>
-    <div class="book">
-        <div class="book-summary">
-            <div id="book-search-input" role="search">
-                <input type="text" placeholder="Escribe para buscar" aria-label="Buscar" />
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="Una introducción amigable para construir aplicaciones web con el framework ASP.NET Core.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="../../favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="../../favicon.png">
+        
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../../chapters/your-first-application/index.html"><strong aria-hidden="true">1.</strong> Tú primera aplicación</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../chapters/your-first-application/get-the-sdk.html"><strong aria-hidden="true">1.1.</strong> Consigue el SDK</a></li><li class="chapter-item expanded "><a href="../../chapters/your-first-application/hello-world-in-csharp.html"><strong aria-hidden="true">1.2.</strong> Hola Mundo en C#</a></li><li class="chapter-item expanded "><a href="../../chapters/your-first-application/create-aspnetcore-project.html"><strong aria-hidden="true">1.3.</strong> Crear un proyecto de ASP.NET Core</a></li></ol></li><li class="chapter-item expanded "><a href="../../chapters/mvc-basics/index.html"><strong aria-hidden="true">2.</strong> Fundamentos de MVC</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../chapters/mvc-basics/create-controller.html"><strong aria-hidden="true">2.1.</strong> Crear un controlador</a></li><li class="chapter-item expanded "><a href="../../chapters/mvc-basics/create-models.html"><strong aria-hidden="true">2.2.</strong> Crear modelos</a></li><li class="chapter-item expanded "><a href="../../chapters/mvc-basics/create-view.html"><strong aria-hidden="true">2.3.</strong> Crear una vista</a></li><li class="chapter-item expanded "><a href="../../chapters/mvc-basics/add-service-class.html"><strong aria-hidden="true">2.4.</strong> Agregar una clase de servicio</a></li><li class="chapter-item expanded "><a href="../../chapters/mvc-basics/use-dependency-injection.html"><strong aria-hidden="true">2.5.</strong> Usar inyección de dependencias</a></li><li class="chapter-item expanded "><a href="../../chapters/mvc-basics/finish-controller.html"><strong aria-hidden="true">2.6.</strong> Terminando el controlador</a></li><li class="chapter-item expanded "><a href="../../chapters/mvc-basics/update-the-layout.html"><strong aria-hidden="true">2.7.</strong> Actualizar la plantilla</a></li></ol></li><li class="chapter-item expanded "><a href="../../chapters/add-external-packages/index.html"><strong aria-hidden="true">3.</strong> Agregando paquetes externos</a></li><li class="chapter-item expanded "><a href="../../chapters/use-a-database/index.html"><strong aria-hidden="true">4.</strong> Usando una base de datos</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../chapters/use-a-database/connect-to-a-database.html"><strong aria-hidden="true">4.1.</strong> Conectarse a una base de datos</a></li><li class="chapter-item expanded "><a href="../../chapters/use-a-database/update-context.html"><strong aria-hidden="true">4.2.</strong> Actualizando el contexto</a></li><li class="chapter-item expanded "><a href="../../chapters/use-a-database/create-migration.html"><strong aria-hidden="true">4.3.</strong> Crear una migración</a></li><li class="chapter-item expanded "><a href="../../chapters/use-a-database/create-service-class.html"><strong aria-hidden="true">4.4.</strong> Crear una nueva clase de servicio</a></li></ol></li><li class="chapter-item expanded "><a href="../../chapters/add-more-features/index.html"><strong aria-hidden="true">5.</strong> Agregando más características</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../chapters/add-more-features/add-todo-items.html"><strong aria-hidden="true">5.1.</strong> Agregar nuevas tareas</a></li><li class="chapter-item expanded "><a href="../../chapters/add-more-features/complete-with-checkbox.html"><strong aria-hidden="true">5.2.</strong> Completar las tareas con una casilla de verificación</a></li></ol></li><li class="chapter-item expanded "><a href="../../chapters/security-and-identity/index.html"><strong aria-hidden="true">6.</strong> Seguridad e Identidad</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../chapters/security-and-identity/require-authentication.html"><strong aria-hidden="true">6.1.</strong> Requerir autenticación</a></li><li class="chapter-item expanded "><a href="../../chapters/security-and-identity/using-identity-in-the-application.html"><strong aria-hidden="true">6.2.</strong> Usando identidad en la aplicación</a></li><li class="chapter-item expanded "><a href="../../chapters/security-and-identity/authorization-with-roles.html"><strong aria-hidden="true">6.3.</strong> Autorización con roles</a></li><li class="chapter-item expanded "><a href="../../chapters/security-and-identity/more-resources.html"><strong aria-hidden="true">6.4.</strong> Más recursos</a></li></ol></li><li class="chapter-item expanded "><a href="../../chapters/automated-testing/index.html"><strong aria-hidden="true">7.</strong> Pruebas automáticas</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../chapters/automated-testing/unit-testing.html"><strong aria-hidden="true">7.1.</strong> Pruebas unitarias</a></li><li class="chapter-item expanded "><a href="../../chapters/automated-testing/integration-testing.html"><strong aria-hidden="true">7.2.</strong> Pruebas de integración</a></li></ol></li><li class="chapter-item expanded "><a href="../../chapters/deploy-the-application/index.html"><strong aria-hidden="true">8.</strong> Desplegando la aplicación</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../chapters/deploy-the-application/deploy-to-azure.html"><strong aria-hidden="true">8.1.</strong> Desplegando en Azure</a></li><li class="chapter-item expanded "><a href="../../chapters/deploy-the-application/deploy-with-docker.html"><strong aria-hidden="true">8.2.</strong> Desplegando con Docker</a></li></ol></li><li class="chapter-item expanded "><a href="../../chapters/conclusion/index.html" class="active"><strong aria-hidden="true">9.</strong> Conclusión</a></li></ol>
             </div>
-            <nav role="navigation">
-                <ul class="summary">
-                    <li class="chapter " data-level="1.1" data-path="../../">
-                        <a href="../../">
-                            Introducción
-                        </a>
-                    </li>
-                    <li class="chapter " data-level="1.2" data-path="../your-first-application/">
-                        <a href="../your-first-application/">
-                            Tú primera aplicación
-                        </a>
-                        <ul class="articles">
-                            <li class="chapter " data-level="1.2.1"
-                                data-path="../your-first-application/get-the-sdk.html">
-                                <a href="../your-first-application/get-the-sdk.html">
-                                    Consigue el SDK
-                                </a>
-                            </li>
-                            <li class="chapter " data-level="1.2.2"
-                                data-path="../your-first-application/hello-world-in-csharp.html">
-                                <a href="../your-first-application/hello-world-in-csharp.html">
-                                    Hola Mundo en C#
-                                </a>
-                            </li>
-                            <li class="chapter " data-level="1.2.3"
-                                data-path="../your-first-application/create-aspnetcore-project.html">
-                                <a href="../your-first-application/create-aspnetcore-project.html">
-                                    Crear un proyecto de ASP.NET Core
-                                </a>
-                            </li>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
                         </ul>
-                    </li>
-                    <li class="chapter " data-level="1.3" data-path="../mvc-basics/">
-                        <a href="../mvc-basics/">
-                            Fundamentos de MVC
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">El pequeño libro de ASP.NET Core</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
                         </a>
-                        <ul class="articles">
-                            <li class="chapter " data-level="1.3.1" data-path="../mvc-basics/create-controller.html">
-                                <a href="../mvc-basics/create-controller.html">
-                                    Crear un controlador
-                                </a>
-                            </li>
-                            <li class="chapter " data-level="1.3.2" data-path="../mvc-basics/create-models.html">
-                                <a href="../mvc-basics/create-models.html">
-                                    Crear modelos
-                                </a>
-                            </li>
-                            <li class="chapter " data-level="1.3.3" data-path="../mvc-basics/create-view.html">
-                                <a href="../mvc-basics/create-view.html">
-                                    Crear una vista
-                                </a>
-                            </li>
-                            <li class="chapter " data-level="1.3.4" data-path="../mvc-basics/add-service-class.html">
-                                <a href="../mvc-basics/add-service-class.html">
-                                    Agregar una clase de servicio
-                                </a>
-                            </li>
-                            <li class="chapter " data-level="1.3.5"
-                                data-path="../mvc-basics/use-dependency-injection.html">
-                                <a href="../mvc-basics/use-dependency-injection.html">
-                                    Usar inyección de dependencias
-                                </a>
-                            </li>
-                            <li class="chapter " data-level="1.3.6" data-path="../mvc-basics/finish-controller.html">
-                                <a href="../mvc-basics/finish-controller.html">
-                                    Terminando el controlador
-                                </a>
-                            </li>
-                            <li class="chapter " data-level="1.3.7" data-path="../mvc-basics/update-the-layout.html">
-                                <a href="../mvc-basics/update-the-layout.html">
-                                    Actualizar la plantilla
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="chapter " data-level="1.4" data-path="../add-external-packages/">
-                        <a href="../add-external-packages/">
-                            Agregando paquetes externos
+                        
+                        
+                        <a href="https://github.com/jahbenjah/little-aspnetcore-book" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
-                    </li>
-                    <li class="chapter " data-level="1.5" data-path="../use-a-database/">
-                        <a href="../use-a-database/">
-                            Usando una base de datos
-                        </a>
-                        <ul class="articles">
-                            <li class="chapter " data-level="1.5.1"
-                                data-path="../use-a-database/connect-to-a-database.html">
-                                <a href="../use-a-database/connect-to-a-database.html">
-                                    Conectarse a una base de datos
-                                </a>
-                            </li>
-                            <li class="chapter " data-level="1.5.2" data-path="../use-a-database/update-context.html">
-                                <a href="../use-a-database/update-context.html">
-                                    Actualizando el contexto
-                                </a>
-                            </li>
-                            <li class="chapter " data-level="1.5.3" data-path="../use-a-database/create-migration.html">
-                                <a href="../use-a-database/create-migration.html">
-                                    Crear una migración
-                                </a>
-                            </li>
-                            <li class="chapter " data-level="1.5.4"
-                                data-path="../use-a-database/create-service-class.html">
-                                <a href="../use-a-database/create-service-class.html">
-                                    Crear una nueva clase de servicio
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="chapter " data-level="1.6" data-path="../add-more-features/">
-                        <a href="../add-more-features/">
-                            Agregando más características
-                        </a>
-                        <ul class="articles">
-                            <li class="chapter " data-level="1.6.1"
-                                data-path="../add-more-features/add-todo-items.html">
-                                <a href="../add-more-features/add-todo-items.html">
-                                    Agregar nuevas tareas
-                                </a>
-                            </li>
-                            <li class="chapter " data-level="1.6.2"
-                                data-path="../add-more-features/complete-with-checkbox.html">
-                                <a href="../add-more-features/complete-with-checkbox.html">
-                                    Completar las tareas con una casilla de verificación
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="chapter " data-level="1.7" data-path="../security-and-identity/">
-                        <a href="../security-and-identity/">
-                            Seguridad e Identidad
-                        </a>
-                        <ul class="articles">
-                            <li class="chapter " data-level="1.7.1"
-                                data-path="../security-and-identity/require-authentication.html">
-                                <a href="../security-and-identity/require-authentication.html">
-                                    Requerir autenticación
-                                </a>
-                            </li>
-                            <li class="chapter " data-level="1.7.2"
-                                data-path="../security-and-identity/using-identity-in-the-application.html">
-                                <a href="../security-and-identity/using-identity-in-the-application.html">
-                                    Usando identidad en la aplicación
-                                </a>
-                            </li>
-                            <li class="chapter " data-level="1.7.3"
-                                data-path="../security-and-identity/authorization-with-roles.html">
-                                <a href="../security-and-identity/authorization-with-roles.html">
-                                    Autorización con roles
-                                </a>
-                            </li>
-                            <li class="chapter " data-level="1.7.4"
-                                data-path="../security-and-identity/more-resources.html">
-                                <a href="../security-and-identity/more-resources.html">
-                                    Más recursos
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="chapter " data-level="1.8" data-path="../automated-testing/">
-                        <a href="../automated-testing/">
-                            Pruebas automáticas
-                        </a>
-                        <ul class="articles">
-                            <li class="chapter " data-level="1.8.1" data-path="../automated-testing/unit-testing.html">
-                                <a href="../automated-testing/unit-testing.html">
-                                    Pruebas unitarias
-                                </a>
-                            </li>
-                            <li class="chapter " data-level="1.8.2"
-                                data-path="../automated-testing/integration-testing.html">
-                                <a href="../automated-testing/integration-testing.html">
-                                    Pruebas de integración
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="chapter " data-level="1.9" data-path="../deploy-the-application/">
-                        <a href="../deploy-the-application/">
-                            Desplegando la aplicación
-                        </a>
-                        <ul class="articles">
-                            <li class="chapter " data-level="1.9.1"
-                                data-path="../deploy-the-application/deploy-to-azure.html">
-                                <a href="../deploy-the-application/deploy-to-azure.html">
-                                    Desplegando en Azure
-                                </a>
-                            </li>
-                            <li class="chapter " data-level="1.9.2"
-                                data-path="../deploy-the-application/deploy-with-docker.html">
-                                <a href="../deploy-the-application/deploy-with-docker.html">
-                                    Desplegando con Docker
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="chapter active" data-level="1.10" data-path="./">
-                        <a href="./">
-                            Conclusión
-                        </a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a href="/" class="gitbook-link">
-                            ASP.NET Core Master
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-        <div class="book-body">
-            <div class="body-inner">
-                <div class="book-header" role="navigation">
-                    <!-- Title -->
-                    <h1>
-                        <i class="fa fa-circle-o-notch fa-spin"></i>
-                        <a href="../..">Conclusión</a>
-                    </h1>
-                </div>
-                <div class="page-wrapper" tabindex="-1" role="main">
-                    <div class="page-inner">
-                        <div id="book-search-results">
-                            <div class="search-noresults">
-                                <section class="normal markdown-section">
-                                    <h1 id="conclusi&#xF3;n"><a name="conclusi&#xF3;n" class="plugin-anchor"
-                                            href="#conclusi&#xF3;n"><i class="fa fa-link"
-                                                aria-hidden="true"></i></a>Conclusi&#xF3;n</h1>
-                                    <p>Gracias por llegar hasta el final de El peque&#xF1;o libro de ASP.NET Core!. Si
-                                        este fue &#xFA;til (o no) me encantar&#xED;a escuchar tus comentarios. Enviame
-                                        tus comentarios v&#xED;a Twitter:<a href="https://twitter.com/nbarbettini"
-                                            target="_blank" rel="noopener">https://twitter.com/nbarbettini</a></p>
-                                    <h2 id="&#xBF;c&#xF3;mo-aprender-m&#xE1;s"><a
-                                            name="&#xBF;c&#xF3;mo-aprender-m&#xE1;s" class="plugin-anchor"
-                                            href="#&#xBF;c&#xF3;mo-aprender-m&#xE1;s"><i class="fa fa-link"
-                                                aria-hidden="true"></i></a>&#xBF;C&#xF3;mo aprender m&#xE1;s?</h2>
-                                    <p>Hay muchos m&#xE1;s que ASP.NET Core puede hacer que no pude incluir en este
-                                        corto libro, incluyendo</p>
-                                    <ul>
-                                        <li>Construir APIs RESTful y microservicios</li>
-                                        <li>Usar ASP.NET Core con aplicaciones de una sola p&#xE1;ginas SPA) como
-                                            angular y React</li>
-                                        <li>P&#xE1;ginas Razor</li>
-                                        <li>Construir y minificar recursos est&#xE1;ticos</li>
-                                        <li>WebSockets y SignalR</li>
-                                    </ul>
-                                    <p>Hay un numero de formas en las que puedes aprender m&#xE1;s:</p>
-                                    <ul>
-                                        <li>
-                                            <p><strong>La documentaci&#xF3;n de ASP.NET Core</strong> La
-                                                documentaci&#xF3;n oficial de ASP.NET Core en <a
-                                                    href="http://docs.asp.net" target="_blank"
-                                                    rel="noopener">http://docs.asp.net</a> contiene un numero de
-                                                tutoriales a detalle cubriendo muchos temas. La recomiendo ampliamente.
-                                            </p>
-                                        </li>
-                                        <li>
-                                            <p><strong>ASP.NET Core in Action.</strong> Este libro por Andrew Lock es un
-                                                zambullida profunda y completa en ASP.NET Core. Puedes comprarlo en
-                                                Amazon o en un librer&#xED;a.</p>
-                                        </li>
-                                        <li>
-                                            <p><strong>Cursos de LinkedIn Learning y Pluralsight.</strong> Si aprendes
-                                                mejor en video, hay cursos fant&#xE1;sticos disponibles en Pluralsight y
-                                                LinkedIn Learning ( incluyendo algunos m&#xED;os). Si no tienes una
-                                                cuenta disponible y necesitas un cup&#xF3;n, enviame un correo
-                                                electr&#xF3;nico a nate@barbettini.com.</p>
-                                        </li>
-                                        <li>
-                                            <p><strong>Blog de Nate.</strong> Tambi&#xE9;n escribo acerca de ASP.NET
-                                                Core y m&#xE1;s en mi blog en <a href="https://www.recaffeinate.co"
-                                                    target="_blank" rel="noopener">https://www.recaffeinate.co</a>.</p>
-                                        </li>
-                                    </ul>
-                                    <p>Happy coding!</p>
-                                    <h2 id="acerca-del-autor"><a name="acerca-del-autor" class="plugin-anchor"
-                                            href="#acerca-del-autor"><i class="fa fa-link"
-                                                aria-hidden="true"></i></a>Acerca del autor</h2>
-                                    <p>Hey, Soy Nate! escrib&#xED; El peque&#xF1;o libro en un largo y lleno de
-                                        cafe&#xED;na fin de semana porque amo a la comunidad de .NET Y desea regresar un
-                                        poc de alguna forma. Espero te haya ayudada a prender algo nuevo.</p>
-                                    <p>Puedes esta en contacto conmigo en Twitter (<a
-                                            href="https://twitter.com/nbarbettini" target="_blank"
-                                            rel="noopener">@nbarbettini</a>) o en mi blog (<a
-                                            href="https://www.recaffeinate.co" target="_blank"
-                                            rel="noopener">https://www.recaffeinate.co</a>). Tambi&#xE9;n puedes
-                                        contactarme v&#xED;a correo electr&#xF3;nico en nate@barbettini.com.</p>
-                                    <h2 id="agradecimiento-especiales"><a name="agradecimiento-especiales"
-                                            class="plugin-anchor" href="#agradecimiento-especiales"><i
-                                                class="fa fa-link" aria-hidden="true"></i></a>Agradecimiento especiales
-                                    </h2>
-                                    <p>Para Jennifer, quien siempre apoya mis locas ideas.</p>
-                                    <p>A los siguientes contribuidores quienes mejoraron El peque&#xF1;o libro de
-                                        ASP.NET Core:</p>
-                                    <ul>
-                                        <li>0xNF</li>
-                                        <li>Matt Welke [welkie]</li>
-                                        <li>Raman Zhylich [zhilich]</li>
-                                    </ul>
-                                    <p>A estos incre&#xED;bles programadores pol&#xED;glotas quines tradujeron el
-                                        peque&#xF1;o libro de ASP.NET Core:</p>
-                                    <ul>
-                                        <li>sahinyanlik (Turco)</li>
-                                        <li>windsing, yuyi (Chino simplificado)</li>
-                                    </ul>
-                                    <h2 id="registro-de-cambios"><a name="registro-de-cambios" class="plugin-anchor"
-                                            href="#registro-de-cambios"><i class="fa fa-link"
-                                                aria-hidden="true"></i></a>Registro de cambios</h2>
-                                    <p>El registro completo y detallado esta siempre disponible aqu&#xED;:</p>
-                                    <p><a href="https://github.com/nbarbettini/little-aspnetcore-book/releases"
-                                            target="_blank"
-                                            rel="noopener">https://github.com/nbarbettini/little-aspnetcore-book/releases</a>
-                                    </p>
-                                    <p><strong>1.1.1</strong> (2018-06-11): Correcci&#xF3;n de errores tipogr&#xE1;ficos
-                                        encontrados por los lectores.</p>
-                                    <p><strong>1.1.0</strong> (2018-05-03): Se reelabor&#xF3;
-                                        &#x200B;&#x200B;significativamente el cap&#xED;tulo <em>Agregar m&#xE1;s
-                                            caracter&#xED;sticas</em> para usar MVC en toda la pila y eliminar el
-                                        patr&#xF3;n AJAX. Se elimin&#xF3; el inicio de sesi&#xF3;n de Facebook para
-                                        simplificar el cap&#xED;tulo de seguridad y agilizar las pruebas y la
-                                        implementaci&#xF3;n. Se actualizaron las instrucciones de Docker para reflejar
-                                        las &#xFA;ltimas pr&#xE1;cticas recomendadas. Se corrigieron errores
-                                        tipogr&#xE1;ficos y se agregaron sugerencias de los lectores. &#xA1;El libro
-                                        tambi&#xE9;n luce un nuevo dise&#xF1;o mejorado de portada!</p>
-                                    <p><strong>1.0.4</strong> (2018-01-15): Se agreg&#xF3; una explicaci&#xF3;n de los
-                                        ciclos de vida del contenedor de servicios, se aclararon los puertos del
-                                        servidor y el indicador -o, y se eliminaron los puntos y coma despu&#xE9;s de
-                                        las directivas Razor. Cr&#xE9;dito de autor corregido de la traducci&#xF3;n
-                                        china. Correcci&#xF3;n de otros errores tipogr&#xE1;ficos y fallas encontrados
-                                        por los lectores.</p>
-                                    <p><strong>1.0.3</strong> (2017-11-13): Correcci&#xF3;n de errores tipogr&#xE1;ficos
-                                        y peque&#xF1;as mejoras sugeridas por los lectores.</p>
-                                    <p><strong>1.0.2</strong> (2017-10-20): Correcci&#xF3;n de errores y peque&#xF1;as
-                                        mejoras. Se agrega la liga a las traducciones.</p>
-                                    <p><strong>1.0.1</strong> (2017-09-23): Correcci&#xF3;n de errores y peque&#xF1;as
-                                        mejoras.</p>
-                                    <p><strong>1.0.0</strong> (2017-09-18): Liberaci&#xF3;n inicial.</p>
-                                </section>
-                            </div>
-                            <div class="search-results">
-                                <div class="has-results">
-                                    <h1 class="search-results-title"><span class='search-results-count'></span> results
-                                        matching "<span class='search-query'></span>"</h1>
-                                    <ul class="search-results-list"></ul>
-                                </div>
-                                <div class="no-results">
-                                    <h1 class="search-results-title">No results matching "<span
-                                            class='search-query'></span>"</h1>
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
-            </div>
-            <a href="../deploy-the-application/deploy-with-docker.html"
-                class="navigation navigation-prev navigation-unique" aria-label="Previous page: Desplegando con Docker">
-                <i class="fa fa-angle-left"></i>
-            </a>
-        </div>
-        <script>
-            var gitbook = gitbook || [];
-            gitbook.push(function () {
-                gitbook.page.hasChanged({ "page": { "title": "Conclusión", "level": "1.10", "depth": 1, "previous": { "title": "Desplegando con Docker", "level": "1.9.2", "depth": 2, "path": "chapters/deploy-the-application/deploy-with-docker.md", "ref": "chapters/deploy-the-application/deploy-with-docker.md", "articles": [] }, "dir": "ltr" }, "config": { "plugins": ["expandable-chapters-small", "anchors", "forkmegithub", "analytics"], "styles": { "website": "styles/website.css", "pdf": "styles/pdf.css", "epub": "styles/epub.css", "mobi": "styles/mobi.css", "ebook": "styles/ebook.css", "print": "styles/print.css" }, "pluginsConfig": { "analytics": { "google": "UA-130293099-1" }, "search": {}, "lunr": { "maxIndexSize": 1000000, "ignoreSpecialCharacters": false }, "fontsettings": { "theme": "white", "family": "sans", "size": 2 }, "highlight": {}, "expandable-chapters-small": {}, "sharing": { "facebook": true, "twitter": true, "google": false, "weibo": false, "instapaper": false, "vk": false, "all": ["facebook", "google", "twitter", "weibo", "instapaper"] }, "forkmegithub": { "color": "green", "url": "https://github.com/jahbenjah/little-aspnetcore-book" }, "theme-default": { "styles": { "website": "styles/website.css", "pdf": "styles/pdf.css", "epub": "styles/epub.css", "mobi": "styles/mobi.css", "ebook": "styles/ebook.css", "print": "styles/print.css" }, "showLevel": false }, "anchors": {} }, "theme": "default", "author": "Nate Barbettini", "pdf": { "pageNumbers": true, "fontSize": 12, "fontFamily": "Lato", "paperSize": "a5", "chapterMark": "pagebreak", "pageBreaksBefore": "/", "margin": { "right": 62, "left": 62, "top": 56, "bottom": 56 } }, "structure": { "langs": "LANGS.md", "readme": "README.md", "glossary": "GLOSSARY.md", "summary": "SUMMARY.md" }, "isbn": "978-1-387-75615-5", "variables": {}, "title": "El pequeño libro de ASP.NET Core", "language": "es", "gitbook": "*", "description": "Una introducción amigable para construir aplicaciones web con el framework ASP.NET Core." }, "file": { "path": "chapters/conclusion/README.md", "mtime": "2019-03-18T02:21:27.357Z", "type": "markdown" }, "gitbook": { "version": "3.2.3", "time": "2019-03-22T16:25:31.396Z" }, "basePath": "../..", "book": { "language": "" } });
-            });
-        </script>
-    </div>
-    <!-- <script src="/assets/js/site.js" async></script> -->
-    <script src="/assets/gitbook/gitbook.js" async></script>
-    <script src="/assets/gitbook/theme.js" async></script>
-    <script src="/assets/gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js" async></script>
-    <script src="/assets/gitbook/gitbook-plugin-forkmegithub/plugin.js" async></script>
-    <script src="/assets/gitbook/gitbook-plugin-search/search-engine.js" async></script>
-    <script src="/assets/gitbook/gitbook-plugin-search/search.js" async></script>
-    <script src="/assets/gitbook/gitbook-plugin-lunr/lunr.min.js" async></script>
-    <script src="/assets/gitbook/gitbook-plugin-lunr/search-lunr.js" async></script>
-    <script src="/assets/gitbook/gitbook-plugin-sharing/buttons.js" async></script>
-    <script src="/assets/gitbook/gitbook-plugin-fontsettings/fontsettings.js" async></script>
-</body>
 
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#conclusión" id="conclusión">Conclusión</a></h1>
+<p>Gracias por llegar hasta el final de El pequeño libro de ASP.NET Core!. Si este fue útil (o no) me encantaría escuchar tus comentarios. Enviame tus comentarios vía Twitter:<a href="https://twitter.com/jbenjamincc">https://twitter.com/jbenjamincc</a></p>
+<h2><a class="header" href="#cómo-aprender-más" id="cómo-aprender-más">¿Cómo aprender más?</a></h2>
+<p>Hay muchos más que ASP.NET Core puede hacer que no pude incluir en este corto libro, incluyendo</p>
+<ul>
+<li>Construir APIs RESTful y microservicios</li>
+<li>Usar ASP.NET Core con aplicaciones de una sola páginas SPA con Angular o React</li>
+<li>Páginas Razor</li>
+<li>Construir y minificar recursos estáticos</li>
+<li>WebSockets y SignalR</li>
+</ul>
+<p>Hay un numero de formas en las que puedes aprender más:</p>
+<ul>
+<li>
+<p><strong>La documentación de ASP.NET Core</strong> La documentación oficial de ASP.NET Core en <a href="http://docs.asp.net">http://docs.asp.net</a> contiene un numero de tutoriales a detalle cubriendo muchos temas. La recomiendo ampliamente.</p>
+</li>
+<li>
+<p><strong>ASP.NET Core in Action.</strong> Este libro por Andrew Lock es un zambullida profunda y completa en ASP.NET Core. Puedes comprarlo en Amazon o en un librería.</p>
+</li>
+<li>
+<p><strong>Cursos de LinkedIn Learning y Pluralsight.</strong> Si aprendes mejor en video, hay cursos fantásticos disponibles en Pluralsight y LinkedIn Learning ( incluyendo algunos míos). Si no tienes una cuenta disponible y necesitas un cupón, enviame un correo electrónico a nate@barbettini.com.</p>
+</li>
+<li>
+<p><strong>Blog de Nate.</strong> También escribo acerca de ASP.NET Core y más en mi blog en <a href="https://www.recaffeinate.co">https://www.recaffeinate.co</a>.</p>
+</li>
+</ul>
+<p>Happy coding!</p>
+<h2><a class="header" href="#acerca-del-autor" id="acerca-del-autor">Acerca del autor</a></h2>
+<p>Hey, Soy Nate! escribí El pequeño libro en un largo y lleno de cafeína fin de semana porque amo a la comunidad de .NET Y desea regresar un poc de alguna forma. Espero te haya ayudada a prender algo nuevo.</p>
+<p>Puedes esta en contacto conmigo en Twitter (<a href="https://twitter.com/nbarbettini">@nbarbettini</a>) o en mi blog (<a href="https://www.recaffeinate.co">https://www.recaffeinate.co</a>). También puedes contactarme vía correo electrónico en nate@barbettini.com.</p>
+<h2><a class="header" href="#agradecimiento-especiales" id="agradecimiento-especiales">Agradecimiento especiales</a></h2>
+<p>Para Jennifer, quien siempre apoya mis locas ideas.</p>
+<p>A los siguientes contribuidores quienes mejoraron El pequeño libro de ASP.NET Core:</p>
+<ul>
+<li>0xNF</li>
+<li>Matt Welke [welkie]</li>
+<li>Raman Zhylich [zhilich]</li>
+</ul>
+<p>A estos increíbles programadores políglotas quines tradujeron el pequeño libro de ASP.NET Core:</p>
+<ul>
+<li>sahinyanlik (Turco)</li>
+<li>windsing, yuyi (Chino simplificado)</li>
+</ul>
+<h2><a class="header" href="#registro-de-cambios" id="registro-de-cambios">Registro de cambios</a></h2>
+<p>El registro completo y detallado esta siempre disponible aquí:</p>
+<p><a href="https://github.com/nbarbettini/little-aspnetcore-book/releases">https://github.com/nbarbettini/little-aspnetcore-book/releases</a></p>
+<p><strong>1.1.1</strong> (2018-06-11): Corrección de errores tipográficos encontrados por los lectores.</p>
+<p><strong>1.1.0</strong> (2018-05-03): Se reelaboró ​​significativamente el capítulo <em>Agregar más características</em> para usar MVC en toda la pila y eliminar el patrón AJAX. Se eliminó el inicio de sesión de Facebook para simplificar el capítulo de seguridad y agilizar las pruebas y la implementación. Se actualizaron las instrucciones de Docker para reflejar las últimas prácticas recomendadas. Se corrigieron errores tipográficos y se agregaron sugerencias de los lectores. ¡El libro también luce un nuevo diseño mejorado de portada!</p>
+<p><strong>1.0.4</strong> (2018-01-15): Se agregó una explicación de los ciclos de vida del contenedor de servicios, se aclararon los puertos del servidor y el indicador -o, y se eliminaron los puntos y coma después de las directivas Razor. Crédito de autor corregido de la traducción china. Corrección de otros errores tipográficos y fallas encontrados por los lectores.</p>
+<p><strong>1.0.3</strong> (2017-11-13): Corrección de errores tipográficos y pequeñas mejoras sugeridas por los lectores.</p>
+<p><strong>1.0.2</strong> (2017-10-20): Corrección de errores y pequeñas mejoras. Se agrega la liga a las traducciones.</p>
+<p><strong>1.0.1</strong> (2017-09-23): Corrección de errores y pequeñas mejoras.</p>
+<p><strong>1.0.0</strong> (2017-09-18): Liberación inicial.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../../chapters/deploy-the-application/deploy-with-docker.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../../chapters/deploy-the-application/deploy-with-docker.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+        <!-- Google Analytics Tag -->
+        <script type="text/javascript">
+            var localAddrs = ["localhost", "127.0.0.1", ""];
+
+            // make sure we don't activate google analytics if the developer is
+            // inspecting the book locally...
+            if (localAddrs.indexOf(document.location.hostname) === -1) {
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                ga('create', 'UA-130293099-1', 'auto');
+                ga('send', 'pageview');
+            }
+        </script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4952787000309783" crossorigin="anonymous"></script>
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
 </html>

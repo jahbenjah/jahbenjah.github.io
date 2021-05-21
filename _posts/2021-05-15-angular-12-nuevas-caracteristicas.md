@@ -5,7 +5,7 @@ date:   2021-05-15 12:00:01 +0000
 categories: angular
 permalink: /:categories/:title:output_ext
 image:
-  path: /img/Angular-vista.png
+  path: /img/angular-12.png
   height: 358
   width: 683
 last_modified_at: 2021-05-15 12:00:01 +0000
@@ -40,7 +40,7 @@ Con la versión 12 se convierte en:
 
 ## Angular 12 : actualizaciones de las herramientas
 
-* __`ng build` lista para producción por default__ :que sirve para para generar tu aplicación por por defaul ya la ya la usan producción esto pues el equipo de Angular ha detectado que en ocasiones aplicaciones se van con él con una construcción que es como para the box por ejemplo yo caí en eso cuando construye una aplicación me tocó desplegar no le agregue el menos menos brote como para indicar que quise esa construcción de esa aplicación de un excel en producción y tú lo veías en en el servidor desplegada entonces por default cuando tú ya le das en gi bill te genera aún los archivos listas como si fueran para producción.
+* __`ng build` lista para producción por default__ :que sirve para para generar tu aplicación por default ya la ya la usan producción esto pues el equipo de Angular ha detectado que en ocasiones aplicaciones se van con él con una construcción que es como para the box por ejemplo yo caí en eso cuando construye una aplicación me tocó desplegar no le agregue el menos menos brote como para indicar que quise esa construcción de esa aplicación de un excel en producción y tú lo veías en en el servidor desplegada entonces por default cuando tú ya le das en `ng build` te genera aún los archivos listas como si fueran para producción.
 
 * __Modo estricto de Typescript habilitado por default__ anteriormente cuando creabas un nuevo proyecto con `ng new` te preguntaba si querías habilitar el modo estricto ahora por default vendra activo. El modo estricto sirve para para mejorarla mantenibilidad del código y te ayuda a detectar errores en tiempo de compilación.
 
@@ -66,4 +66,13 @@ npm install -g @angular/cli
 
 si me tocó actualizarlo como administrador entonces una vez que ya lo admin que ya que lo actualice como administrador ya no marco errores si lo pude administrar bueno ya aquí mismo hice la misma de comprobar que ya se había actualizado y aquí les decía que cuando tú creas un nuevo proyecto con en guinea anteriormente te preguntaba si quería si quieres usar el modo estructurada como la segunda pregunta ortega por de saulo activa me imagino que si tú quieres desactivarlo debe haber una opción pero yo creo que sería bueno esto lo hizo el equipo de Angular porque detectó que la mayoría de los proyectos siempre estaban habilitados entonces era como un paso menos que tenías que ejecutar otra de las cosas que también creo que no mencioné en las en las diapositivas es que ya no incluye el protector en el este las plantillas y básicamente como pareciera que es el fin porque recomiendan como opciones del terceros no entonces la aplicación de ejemplo que creas con engine you es a no cambio básicamente sigue siendo como la misma que teníamos con Angular 12 entonces pues hasta quisieran como las características de esta nueva versión de Angular.
 
-Si deseas ver cuántas personas han descargado el Angular CLI con la versión 12 se publicó el 13 de mayo puedes verlo en https://www.npmjs.com/package/@angular/cli ya le han descargado un millón seiscientos mil descargas 679 mil descargas el blog inaugural lo fue publicado el 12 de mayo y aquí es donde se describen como las características como básicamente te ponen que básicamente las nuevas versiones de angulas todo se va a basar en ibi y te va a cómo detallando los nuevos y las nuevas características y las ventajas no también a otro vídeo que puedes ver es el Release Party de Angular
+Si deseas ver cuántas personas han descargado el Angular CLI puedes verlo [NPM](https://www.npmjs.com/package/@angular/cli).
+Pa leer la visión del equipo de Angular lee el [blog inaugural](https://blog.angular.io/angular-v12-is-now-available-32ed51fbfd49)de liberación de Angular 12 que fue publicado el 12 de mayo del 2021 donde exponen que es una version basada en Ivy. Otro vídeo que puedes ver es el [Release Party de Angular](https://www.youtube.com/watch?v=iQUE02TWVlY)
+
+## Ver un video
+
+Puedes ver la version en video de este tutorial aquí:
+
+<div class="video-responsive">
+<iframe loading="lazy" src="https://www.youtube.com/embed/cFqFdLRcUV4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>

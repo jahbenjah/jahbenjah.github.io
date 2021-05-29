@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Angular 12 : nuevas características"
+title:  "Angular 12 : nuevas caracteristicas"
 date:   2021-05-15 12:00:01 +0000
 categories: angular
 permalink: /:categories/:title:output_ext
@@ -20,15 +20,9 @@ Las nuevas características de Angular 12 las dividimos en dos partes actualizac
 
 * __Soporta el operador _null coalesing_ `??` de Typescript en las plantillas__ este operador te permite es tener un código más limpio. Por ejemplo supongamos que necesitas hacer un calculo siempre que un propiedad de tu modelo de Typescript no se nula, ante de la versión 11 antes tenías que usar un código similar al siguiente:
 
-```ts
-{{propiedad !== null && propiedad !== undefined ? propiedad : calcularAlgo() }}
-```
 
 Con la versión 12 se convierte en:
 
-```ts
-{{ propiedad ?? calcularAlgo() }}
-```
 
 > Este operador con dos signos de interrogación  ?? o otras variantes como ?. a veces se conocen como el _operador de Elvis_ porque si se dan cuenta parEcen dos ojitos y el cabello de Elvis Presley.
 

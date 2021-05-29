@@ -39,7 +39,6 @@ header_pages:
  - computadoras.md
  
 plugins:
-  - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-feed
 

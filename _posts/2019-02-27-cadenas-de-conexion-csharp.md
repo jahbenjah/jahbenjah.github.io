@@ -11,13 +11,13 @@ last_modified_at: 2020-04-09 22:24:25 +0000
 description: Cadena de conexión SQL Server, MySQL, Oracle, PostgreSQL, Firebird y SQLite usando la clase ConnectionStringBuilder de .NET Core usando C# . 
 ---
 
-Una cadena de conexión es un conjunto de claves y valores separados por punto y coma *;* . El conjunto de claves y valores esta conectado por el signo de igual por ejemplo `clave1=valor1;clave2=valor2`. El conjunto de claves y valores disponibles están definidos por el fabricante de la base de datos y muchas veces hay inconsistencias entre las claves de deferentes proveedores de base de datos.
+Una cadena de conexión es un conjunto de claves y valores separados por punto y coma *;* . El conjunto de claves y valores esta conectado por el signo de igual por ejemplo `clave1=valor1;clave2=valor2`. El conjunto de claves y valores disponibles están definidos por el fabricante de la base de datos y muchas veces hay inconsistencias entre las claves de diferentes proveedores de base de datos.
 
 En este tutorial te muestro como crear, manipular y validar la cadena de conexión para SQL Server, MYSQL, Oracle, Firebird, PostgreSQL y Sqlite usando C# y .NET Core. Para ello utilizamos la clase `ConnectionStringBuilder` que implementan los proveedores de **ADO.NET**. Para cada proveedor de ADO.NET es necesario instalar el paquete de Nuget correspondiente e importar el espacio de nombres con la instrucción [using]({% post_url 2019-01-03-cuatro-formas-de-usar-la-palabra-clave-using-de-csharp %}).
 
 <img src="/img/connectionstring.webp" loading="lazy"  alt="Pantalla de Visual Studio que muestra la definicion de la clase SqlConnectionStringBuilder">
 
-En el caso más simple puedes crear la cadena de conexión forma manual y hacerlo de forma programática seria un desperdicio de tiempo (ver el caso para SQLite) pero en ocasiones puede ser un verdadero martirio por el número de claves necesarios  y como ejemplo una cadena de conexión para SQL Server con 9 claves.
+En el caso más simple puedes crear la cadena de conexión forma manual y hacerlo de forma programática seria un desperdicio de tiempo (ver el caso para SQLite) pero en ocasiones puede ser un verdadero martirio por el número de claves necesarios y como ejemplo una cadena de conexión para SQL Server con 9 claves.
 
 ```
 Data Source=.;Initial Catalog=master;User ID=sa;Password=PasswordO1.;MultipleActiveResultSets=True;Connect Timeout=100;Encrypt=False;Application Name=MyApp;Current Language=spanish
@@ -38,11 +38,11 @@ En el caso de que uses la autenticación de Windows puedes usar el siguiente eje
 Data Source=.;Initial Catalog=master;Integrated Security=True
 ```
  
- Es importante asegurate que el parámetro `Integrated Security` no lo uses en combinación con con un usuario y contraseña SQL Server toma utiliza la autenticación de Windows en lugar de la de SQL Server.
+Es importante asegurate que el parámetro `Integrated Security` no lo uses en combinación con con un usuario y contraseña SQL Server toma utiliza la autenticación de Windows en lugar de la de SQL Server.
 
 ## Cadena de conexión SQL Server con usuario y contraseña
 
-Para el caso de SQL Server podemos especificar la dirección IP del servidor donde se encuentra la instancia de SQL Server pero también puedes utilizar un punto `.` o `localhost` en caso de que el servidor se encuentre en nuestra máquina de desarollo o el nombre de la instancia de SQL Server en caso de que esta sea diferente a la default por ejemplo `SqlServer\NombreInstancia`.
+Para el caso de SQL Server podemos especificar la dirección IP del servidor donde se encuentra la instancia de SQL Server pero también puedes utilizar un punto `.` o `localhost` en caso de que el servidor se encuentre en nuestra máquina de desarrollo o el nombre de la instancia de SQL Server en caso de que esta sea diferente a la default por ejemplo `SqlServer\NombreInstancia`.
 
 ```clean
 
@@ -63,7 +63,7 @@ En el caso de que uses una instancia con nombre de SQL Server debes especificar 
 Server=(localdb)\mssqllocaldb;Database=Blogging;Trusted_Connection=True;Application Name=MyApp
 ```
 
-## Parámetros adicionales  
+## Parámetros adicionales 
 
 Es importante notar la presencia del parámetro **Application Name** este campo se puede utilizar para identificar que acciones ejecuta una aplicación y es muy util en el diagnostico de problemas de desempeño en [SQL Server Profiler](https://docs.microsoft.com/sql/tools/sql-server-profiler/sql-server-profiler?view=sql-server-2017) . Es recomendable siempre incluirlo.
 
@@ -90,7 +90,7 @@ Una forma de validar que una cadena de conexión es abriendo la comunicación co
 ```csharp
 using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
 {
-    try
+   try
     {
         connection.Open();
         Console.WriteLine("Conexión válida");
@@ -143,7 +143,7 @@ Microsoft SQL Server 2016 (SP2) (KB4052908) - 13.0.5026.0 (X64)
 
 Colocamos un ejemplo de como luce una cadena de conexión para una base de datos en Azure. Esta la puedes obtener desde el portal de Azure en la sección _Settings > Connections strings _ del recurso de SQL Database si tienes acceso al portal y unicamente es necesario sustituir la contraseña. En este ejemplo se muestran entre llaves {} los que deben remplazarse.
 
-> **Nota** Observa que para las bases en Azure llevan un subdominio de _database.windows.net_ y es necesario especificar el protocolo  y puerto.
+> **Nota** Observa que para las bases en Azure llevan un subdominio de _database.windows.net_ y es necesario especificar el protocolo y puerto.
 
 ```cs
 Server=tcp:{midbseserverenazure}.database.windows.net,1433;Initial Catalog=MyDbAzure;Persist Security Info=False;User ID={benjamin};Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
@@ -300,4 +300,4 @@ Console.WriteLine(builder.ConnectionString);
 
 # Conclusión
 
-Es importante mencionar que para cada base de datos hay una gran cantidad de parámetros que se pueden agregar a una cadena de conexión y estos cambian de dependiendo con cada proveedor. Muchos de ellos tienes un nombre que permite deternminar su función pero de otros es necesario que veas la documentación del proveedor. En Visual Studio o Visual Studio Code puedes ver los parámetros que contiene cada base de datos usando Intellisense o Presionando F12 para ir a la definición del tipo.
+Es importante mencionar que para cada base de datos hay una gran cantidad de parámetros que se pueden agregar a una cadena de conexión y estos cambian de dependiendo con cada proveedor. Muchos de ellos tienes un nombre que permite determinar su función pero de otros es necesario que veas la documentación del proveedor. En Visual Studio o Visual Studio Code puedes ver los parámetros que contiene cada base de datos usando Intellisense o Presionando F12 para ir a la definición del tipo.

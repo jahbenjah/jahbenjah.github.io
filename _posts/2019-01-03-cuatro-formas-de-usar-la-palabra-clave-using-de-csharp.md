@@ -3,7 +3,7 @@ layout: post
 title:  "Cuatro formas de usar la palabra clave using de C#"
 categories: C# dotnet using 
 description: ▷ Como usar using en C# using para importar espacios de nombres y miembros estáticos, alias, liberar recursos no administrados y declaraciones using. 
-last_modified_at: 2019-11-20 11:33:26 +0000
+last_modified_at: 2021-06-30 11:33:26 +0000
 
 ---
 Cada lenguaje de programación cuenta con un conjunto de palabras claves que son utilizadas por el compilador. En este articulo te mostramos 4 formas de usar la palabra reservada **using** de C# con el clásico hola mundo.
@@ -74,9 +74,9 @@ namespace Using
 
 En este caso permite usar un método estático `WriteLine` sin escribir el espacio de nombres de la clase `Console`.
 
-# **using** para importar miembros estáticos
+# **using static** de C# 6.0 para importar miembros estáticos
 
-Este es especialmente util cuando nuestro programa hace un gran uso de miembros estáticos (métodos ,campos y propiedades). Como una aplicación que use varias funciones matemáticas:
+En la versión 6.0 de C#, liberada en 2015, agregaron esta nueva caracteristica que es especialmente útil cuando nuestro programa hace un gran uso de miembros estáticos (métodos ,campos y propiedades) ya sea del framework o codigo escrito por nosotros. Ejemplos de aplicaciones que usan miembros estaticos pueden ser aplicaciones de consola que hace uso de funciones matemáticas o procesamiento de archivos con la clase `File`:
 
  Ejemplos de clases estáticas son:
 
@@ -100,6 +100,8 @@ namespace Using
 ```
 
 Como nota la característica `using static` también funciona con **enumeraciones**. [Ver ejemplo](https://twitter.com/STeplyakov/status/1075277979603722240) en Twitter de @STeplyakov
+
+<iframe loading="lazy" src="https://www.youtube.com/embed/2ZXGQdchjao" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 # **using** para crear un alias
 

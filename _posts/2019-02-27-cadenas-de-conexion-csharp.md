@@ -149,6 +149,10 @@ Colocamos un ejemplo de como luce una cadena de conexión para una base de datos
 Server=tcp:{midbseserverenazure}.database.windows.net,1433;Initial Catalog=MyDbAzure;Persist Security Info=False;User ID={benjamin};Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
 ```
 
+<div class="video-responsive">
+<iframe loading="lazy" src="https://www.youtube.com/embed/PoyiVF_Xt_c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 # Cadena de conexión MySQL
 
 1. Ejemplo de cadena de conexión para MySQL

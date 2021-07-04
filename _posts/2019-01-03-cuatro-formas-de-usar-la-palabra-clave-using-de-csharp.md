@@ -101,7 +101,9 @@ namespace Using
 
 Como nota la característica `using static` también funciona con **enumeraciones**. [Ver ejemplo](https://twitter.com/STeplyakov/status/1075277979603722240) en Twitter de @STeplyakov
 
+<div class="video-responsive">
 <iframe loading="lazy" src="https://www.youtube.com/embed/2ZXGQdchjao" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 # **using** para crear un alias
 

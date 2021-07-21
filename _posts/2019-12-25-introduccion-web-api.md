@@ -6,7 +6,7 @@ categories: aspnetcore
 permalink: /:categories/:title:output_ext
 ---
 
-La historia de este post es más o menos así :en el trabajo realizábamos una reescritura de una aplicación con ASP.NET WebForms a ASP.NET Core 2.2 MVC y nos dimos cuenta que muchos de nuestros controladores regresaban unicamente Json o algunas vistas solo regresaban un fragmento HTML con un `div` donde pintaríamos la interfaz gráfica con Javascript.  Por lo que tener una web API hacia mucho mas sentido. De aquí surgió mi interés por las Web API.
+La historia de este post es más o menos así :en el trabajo realizábamos una reescritura de una aplicación realizada originalmente con ASP.NET WebForms a ASP.NET Core 2.2 MVC y nos dimos cuenta que muchos de nuestros controladores regresaban unicamente JSON o algunas vistas solo regresaban un fragmento HTML con un `div` donde pintaríamos la interfaz gráfica con Javascript.  Por lo que tener una web API hacia mucho más sentido. De aquí surgió mi interés por las Web API.
 
 Cuando era un neófito en ASP.NET Core decidí aprender MVC e ignorar todo lo demás (Web APIs, Razor Pages y Blazor) esto simplemente por la falta de tiempo y considerando el patrón MVC esta por demás bien establecido lleva bastante tiempo funcionando bien. Asi que este articulo sera donde coloque todo lo que considere pertinente para mi aprendizaje.
 
@@ -14,7 +14,7 @@ Cuando era un neófito en ASP.NET Core decidí aprender MVC e ignorar todo lo de
 
 ## Como consumir una web API desde ASP.NET Core
 
-Lo primero que vamos a hacer mostrarte como consumir un web API desde una aplicación ASP.NET Core MVC. Para consumir servicios web en .NET Core existen la clase `HttpClient` que puede utilizarse casi desde cualquier tipo de proyecto en .NET.
+Lo primero que vamos a hacer mostrarte como consumir un web API desde una aplicación ASP.NET Core MVC. Para consumir servicios web en .NET Core existe la clase `HttpClient` que puede utilizarse casi desde cualquier tipo de proyecto en .NET.
 
 La clase `HttpClient` se ha usado principalmente con dos patrones : dentro de un bloque `using` y como miembro estático de una clase pero es importante recalcar que hay dos problemas conocidos con esta clase : []()  y []() por lo que usaremos los métodos que agregan esta clase usando inyección de dependencias.
 
@@ -26,12 +26,12 @@ En un proyecto MVC coloca el siguiente código en el método `ConfigureServices`
 
 ```cs
 services.AddHttpClient("Github", client => {
-                client.BaseAddress = new Uri("https://api.github.com");
-                client.DefaultRequestHeaders.Add("User-Agent", "aspnetcoremaster.com");
-            });
+    client.BaseAddress = new Uri("https://api.github.com");
+    client.DefaultRequestHeaders.Add("User-Agent", "aspnetcoremaster.com");
+});
 ```
 
-Con esto ya tenemos disponible el `HttpClientFactory` en el contenedor de dependencias lo que nos permite instanciar nuestro client HTTP.
+Con esto ya tenemos disponible el `HttpClientFactory` en el contenedor de dependencias lo que nos permite instanciar nuestro cliente HTTP.
 
 ```cs
 using System;

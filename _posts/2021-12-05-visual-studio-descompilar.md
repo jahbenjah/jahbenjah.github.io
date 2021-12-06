@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Visual Studio 2022 | Habilitar la navegación a origenes descompilados "
-date:   2021-02-05 12:00:01 +0000
+date:   2021-12-05 12:00:01 +0000
 categories: visual-studio
 permalink: /:categories/:title:output_ext
 ---

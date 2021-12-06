@@ -22,11 +22,12 @@ Al implementar métodos de extension sobre `IDbConnection` le permite funcionar 
 Los métodos de extension sobre IDbConnection que proporciona Dapper son 3
 
 * Query
+* Query dinamico
 * Execute
 
 ## Instalación de Dapper
 
-Dapper es un paquete de Nuget por lo que puede ser instalado de multiples formas. Para instalar Dapper en un proyecto con .NET Core o .NET 5 puedes usar la linea de comandos dotnet, Visual Studio y su interfaz gráfica para intalar paquetes. El siguiente comando instala la ultima versión de Dapper:
+Dapper es un paquete de Nuget por lo que puede ser instalado de multiples formas. Para instalar Dapper en un proyecto con .NET Core o .NET 6 puedes usar la linea de comandos dotnet, Visual Studio y su interfaz gráfica para instalar paquetes. El siguiente comando instala la ultima versión de Dapper:
 
 ```cmd
 dotnet add package Dapper
@@ -48,9 +49,14 @@ var clientes = connection.Query<Cliente>(sql).ToList();
 
 ## Dapper vs Entity Framework
 
-Una de las ventajas de Dapper sobre Entity Framework Cores es la velocidad pero con el detalle que tienes que escribir codigo SQL. A pesar de realizar la misma funcion los puedes usar en conjunto.
+Una de las ventajas de Dapper sobre Entity Framework Core es la velocidad pero con el detalle que tienes que escribir codigo SQL. A pesar de realizar la misma funcion los puedes usar en conjunto.
+
+## CRUD Con Dapper
 
 ## Como ejecutar un store procedure con Dapper
 
 Para ejecutar un procedimiento almacenado con Dapper puedes usar el siguiente codigo:
-s
+
+```cs
+
+```

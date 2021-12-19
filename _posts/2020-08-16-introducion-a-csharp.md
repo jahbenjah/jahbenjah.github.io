@@ -5,7 +5,7 @@ date:   2020-08-16 20:30:55 +0000
 categories: csharp
 ---
 
-El lenguaje de programación C# tiene ya casi 20 años. Su diseñador principal es Anders Hejlsberg un ingeniero danes lider de Turbo Pascal , Turbo Delphi y Typescript.
+El lenguaje de programación C# tiene ya casi 20 años. Su diseñador principal es Anders Hejlsberg un ingeniero danes lider de Turbo Pascal, Turbo Delphi y Typescript.
 
 Esta estandarizado por ECMA con el estándar [Ecma-334](http://www.ecma-international.org/publications/standards/Ecma-334.htm). Es un lenguaje que usa principalmente el paradigma de programación orientada a objetos pero puedes encontrar mucha influencia de programación funcional
 

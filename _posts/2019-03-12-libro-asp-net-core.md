@@ -73,7 +73,7 @@ Si prefieres una explicación en video aca te dejo una donde uso Ubuntu 19.10 pa
 
 ## Como obtener el libro
 
-Puedes leer en línea desde el sitio [aspnetcoremaster.com](https://aspnetcoremaster.com/little-aspnetcore-book/) o descargar la version en [pdf](https://github.com/jahbenjah/little-aspnetcore-book/blob/spanish/ElPeque%C3%B1oLibroDeASPNETCore.pdf) desde aquí
+Puedes leer en línea desde el sitio [aspnetcoremaster.com](https://aspnetcoremaster.com/little-aspnetcore-book/) o descargar la version en [pdf](https://github.com/jahbenjah/little-aspnetcore-book/blob/spanish/ElPequenoLibroDeASPNETCore.pdf) desde aquí
 
 Para obtener la versión más reciente de la edición en español de _El pequeño libro de ASP .NET Core_ puedes visitar regularmente este sitio ya que este sera actualizado constantemente.
 

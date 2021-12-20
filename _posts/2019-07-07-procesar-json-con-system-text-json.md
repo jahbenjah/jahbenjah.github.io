@@ -11,11 +11,11 @@ Sin lugar a dudas el formato <abbr lang="en" title="Javascript Object Notation">
 
 Esta biblioteca ha permeado tanto el entorno de .NET que fue incluida como dependencia en el <span lang="en">[shared framework](https://natemcmaster.com/blog/2018/08/29/netcore-primitives-2/)</span> **Microsoft.AspNetCore.App** de ASP.NET Core desde un inicio y es el paquete más descargado de [Nuget.org](https://www.nuget.org/stats).
 
-El reinado de Json.NET puede estar en riesgo la reciente liberación de la versión 3.1 .NET Core el pasado 3 de diciembre del 2019 y la inclusión <abbr lang="en" title="Application Programming Interface">API</abbr> nativa de alto desempeño [`System.Text.Json`](https://www.nuget.org/packages/System.Text.Json). Basicamente te permite serializar y deserialziar JSON sin la necesidad de instalar un paquete adicional. Ya se anuncio que no sera incluida como dependencia en ASP.NET Core 3.1.
+El reinado de Json.NET puede estar en riesgo la liberación de la versión 3.1 .NET Core el pasado 3 de diciembre del 2019 y la inclusión <abbr lang="en" title="Application Programming Interface">API</abbr> nativa de alto desempeño [`System.Text.Json`](https://www.nuget.org/packages/System.Text.Json). Basicamente te permite serializar y deserialziar JSON sin la necesidad de instalar un paquete adicional. Ya se anuncio que no sera incluida como dependencia en ASP.NET Core 3.1.
 
-> **Nota:** este articulo ha sido actualizado para funcionar con la versión más actual de .NET Core 3.1 y que ha sido marcada como una versión con soporte a largo plazo, es decir, 3 años a partir de la fecha de liberación.
+> **Nota:** este articulo ha sido actualizado para funcionar con la versión más actual de .NET 6 y que ha sido marcada como una versión con soporte a largo plazo, es decir, 3 años a partir de la fecha de liberación.
 
-Si tienes un proyecto con .NET Core 3.1 solo es necesario [importar los espacios de nombres con la instrucción `using`]({% post_url 2019-01-03-cuatro-formas-de-usar-la-palabra-clave-using-de-csharp %})) correspondientes para hacer uso de esta API:
+Si tienes un proyecto con .NET 6 solo es necesario [importar los espacios de nombres con la instrucción `using`]({% post_url 2019-01-03-cuatro-formas-de-usar-la-palabra-clave-using-de-csharp %})) correspondientes para hacer uso de esta API:
 
 ```csharp
 using System.Text.Json;
@@ -73,7 +73,7 @@ Aunque en la vida real estos objetos se pueden obtener de una base de datos, un 
 
 ## Serialización con *System.Text.Json*
 
-El proceso de convertir un objeto de C# en una cadena JSON se conoce como serialización. Esta tarea se realiza utilizando la clase `` el método estatico de `Serialize` y sus sobrecargas. Existen versiones sincronas y asincronas
+El proceso de convertir un objeto de C# en una cadena JSON se conoce como serialización. Esta tarea se realiza utilizando la clase `JsonSerializer` el método estatico de `Serialize` o alguna de sus sobrecargas. Existen versiones sincronas y asincronas
 
 <img src="/img/json.webp" loading="lazy"  alt="Metadatos de la la clase JsonSerializer de System.Text.Json"> 
 
@@ -104,6 +104,7 @@ var json2 = JsonSerializer.Serialize<Producto>(producto,options);
 Console.WriteLine(json2);
 ```
 
+> **Nota** La propiedad IgnoreNullValues ha sido marcada como obsoleta.
 ## Deserializar un objecto con *System.Text.Json*
 
 Para deserializar se usa el método `Deserialize` y sus sobrecargas. Igualmente este método acepta un objeto `JsonSerializerOptions` para cambiar el comportamiento de la serialización.
@@ -163,12 +164,10 @@ Finalmente configuramos un cliente HTTP para poder comunicarnos con la API de Gi
 static async Task Main(string[] args)
 {
     HttpClient cliente = new HttpClient();
-    cliente.DefaultRequestHeaders.Add("User-Agent""aspnetcoremaster.com");
+    cliente.DefaultRequestHeaders.Add("User-Agent","aspnetcoremaster.com");
     cliente.BaseAddress = new Uri("https://api.github.com");
-    var jsonUser = await cliente.GetStringAsync("/users/jahbenjah")
-    
-    GithubUser jahbenjah = JsonSerializer.Deserialize<GithubUse(jsonUser);
-    
+    var jsonUser = await cliente.GetStringAsync("/users/jahbenjah");
+    GithubUser jahbenjah = JsonSerializer.Deserialize<GithubUser>(jsonUser);
     Console.WriteLine("**************Datos deusuario**********************");
     Console.WriteLine($"Nombre: {jahbenjah.name}");
     Console.WriteLine($"Blog: {jahbenjah.blog}");
@@ -176,6 +175,10 @@ static async Task Main(string[] args)
 }
 ```
 
+
+# El atributo JsonPropertyName
+
+El atributo JsonPropertyName se utiliza para cambiar el nombre de las propiedades en el proceso de serialización.
 # Para llevar
 
 Es interesante ver la discusión entorno a al futuro de JSON en el entorno .NET y como puede cambiar la API de `System.Text.Json` de acuerdo a los estudios de usabilidad realizados.

@@ -160,6 +160,6 @@ La aplicacion de angular es similar a la que se puede crear con `ng new` sin el 
     "zone.js": "0.9.1"
   }
 ```
-* Tienen tres componentes web implementados Home , Counter y feach-data.
+* Tienen tres componentes web implementados Home, Counter y feach-data.
 
 * Viene con la versión 3.5 de Typescript.

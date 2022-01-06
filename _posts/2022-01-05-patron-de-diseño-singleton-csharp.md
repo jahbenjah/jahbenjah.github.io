@@ -3,6 +3,7 @@ layout: post
 title:  "Patrón de diseño Singleton con C#"
 date:   2022-01-05 08:00:01 +0000
 categories: csharp
+permalink: /:categories/:title:output_ext
 description: Implementaciones de ejemplo del patrón de diseño Singleton usando el lenguage de programacíon C#.
 ---
 

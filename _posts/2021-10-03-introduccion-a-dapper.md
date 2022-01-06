@@ -3,6 +3,7 @@ layout: post
 title:  "Introduccion a Dapper con C#"
 date:   2021-05-31 10:00:01 +0000
 categories: dotnet
+permalink: /:categories/:title:output_ext
 image:
   path: /img/og-connectionstring.webp
   height: 358

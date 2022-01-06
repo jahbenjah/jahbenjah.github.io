@@ -4,6 +4,7 @@ title:  "C# Records"
 date:   2021-12-26 10:00:01 +0000
 categories: csharp
 last_modified_at: 2021-12-26 10:00:01 +0000
+permalink: /:categories/:title:output_ext
 description: Un record es como una clase pero con algunos comportaminetos similarea a los tipos de valor.
 ---
 

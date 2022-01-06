@@ -3,6 +3,7 @@ layout: post
 title:  "Como crear una minimal API con .NET 6"
 date:   2021-12-05 12:00:01 +0000
 categories: aspnetcore
+permalink: /:categories/:title:output_ext
 image:
   path: /img/og-connectionstring.webp
   height: 358

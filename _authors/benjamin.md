@@ -1,6 +1,6 @@
 ---
 short_name: benjamin
-name: Benjamín Camacho
+name: Benjamin Camacho
 position: Programador C#
 ---
 

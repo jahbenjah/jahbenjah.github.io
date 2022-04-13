@@ -41,7 +41,8 @@ header_pages:
 plugins:
   - jekyll-seo-tag
   - jekyll-feed
-
+  - jekyll-sitemap
+  
 collections:
   authors:
     output: true
@@ -66,3 +67,16 @@ defaults:
       type: "authors"
     values:
       layout: "author"
+
+exclude:
+  - gulpfile.js
+#  - little-aspnetcore-book/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/

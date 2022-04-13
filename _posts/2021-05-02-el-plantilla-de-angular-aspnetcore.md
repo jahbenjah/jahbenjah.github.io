@@ -20,14 +20,13 @@ Con la instalación del SDK de .NET Core vienen incluidas plantillas para React,
 
 ## Plantilla de ASP .NET Core con Angular
 
-Esta plantilla pertenece la categoría de _aplicaciones de una sola página_ o en ingles SPA Single Page Application que usan alguno de los _frameworks_ de Javascript. En la tabla siguiente se pueden ver las plantillas para crear aplicaciones de una sola página con `dotnet new`:
+Esta plantilla pertenece la categoría de _aplicaciones de una sola página_ o en ingles SPA Single Page Application que usan alguno de los _frameworks_ de Javascript. En la tabla siguiente se pueden ver las plantillas para crear aplicaciones de una sola página con `dotnet new --list`:
 
 ```txt
 Templates                                     Short Name           Language    Tags                  
 --------------------------------------------  -------------------  ----------  ----------------------  
-ASP.NET Core with Angular                     angular              [C#]        Web/MVC/SPA           
-ASP.NET Core with React.js                    react                [C#]        Web/MVC/SPA           
-ASP.NET Core with React.js and Redux          reactredux           [C#]        Web/MVC/SPA               
+ASP.NET Core with Angular                      angular              [C#]        Web/MVC/SPA
+ASP.NET Core with React.js                     react                [C#]        Web/MVC/SPA          
 ```
 
 Para crear un nuevo proyecto con la plantilla de Angular se usa el comando `dotnet new angular` pero es recomendable agregarle parametros adicionales para especificar el nombre del proyecto y la carpeta de salida, por ejemplo:
@@ -127,7 +126,7 @@ public void Configure(IApplicationBuilder aIWebHostEnvironment env)
 
 ### Aplicacion de Angular
 
-La aplicacion de angular es similar a la que se puede crear con `ng new` sin el control de código fuente y con mas algunas opciones adicionales.
+La aplicacion de angular es similar a la que se puede crear con `ng new` sin el control de código fuente y con algunas opciones adicionales.
 
 * Usa Angular 8 que ya está fuera de soporte. Por esta razón el primer pasa que se debería considerar es la actualización.
 
@@ -160,6 +159,6 @@ La aplicacion de angular es similar a la que se puede crear con `ng new` sin el 
     "zone.js": "0.9.1"
   }
 ```
-* Tienen tres componentes web implementados Home , Counter y feach-data.
+* Tienen tres componentes web implementados Home, Counter y feach-data.
 
 * Viene con la versión 3.5 de Typescript.

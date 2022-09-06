@@ -7,7 +7,7 @@ image:
   path: /img/og-connectionstring.webp
   height: 358
   width: 683
-last_modified_at: 2020-04-09 22:24:25 +0000
+last_modified_at: 2022-09-06 08:50:25 +0000
 description: Cadena de conexión SQL Server, MySQL, Oracle, PostgreSQL, Firebird y SQLite usando la clase ConnectionStringBuilder de .NET Core usando C# . 
 ---
 
@@ -285,7 +285,7 @@ Console.WriteLine(builder.ConnectionString);
 1. Ejemplo de cadena de conexión para PostgreSQl
 
 ```clean
-Host=192.168.102.145;Database=my_db;Username=user;Password=password
+Host=localhost:49153;Username=postgres;Password=postgrespw;Database=pagila
 ```
 
 2. Paquete de Nuget es : [Npgsql](https://www.nuget.org/packages/Npgsql/) y el espacio de nombres `Npgsql`.
@@ -293,14 +293,46 @@ Host=192.168.102.145;Database=my_db;Username=user;Password=password
 3. Para poder crear esta cadena de conexión se uso el código
 
 ```csharp
-NpgsqlConnectionStringBuilder builder = new NpgsqlConnectionStringBuilder();
-builder.Host = "192.168.102.145";
-builder.Database = "my_db";
-builder.Username = "user";
-builder.Password = "password";
+var builder = new NpgsqlConnectionStringBuilder();
+builder.Host = "localhost:49153";
+builder.Username = "postgres";
+builder.Password = "postgrespw";
+builder.Database = "pagila";
 builder.ApplicationName = "";
 Console.WriteLine(builder.ConnectionString);
 ```
+## Version de PostgtrsSQL
+
+Para validar la conexion y verificar la versión de PostgreSQL puedes usar el siguiente codigo de ejemplo:
+
+```cs
+using NpgsqlConnection connection = new NpgsqlConnection(builder.ConnectionString);
+try
+{
+    connection.Open();
+    Console.WriteLine("Conexión válida");
+    NpgsqlCommand command = new NpgsqlCommand("SELECT VERSION();", connection);
+    NpgsqlDataReader reader = command.ExecuteReader();
+    if (reader.HasRows)
+    {
+        while (reader.Read())
+        {
+            Console.WriteLine(reader.GetString(0));
+        }
+    }
+    reader.Close();
+}
+catch (Exception exception)
+{
+    Console.WriteLine(exception.Message);
+}
+```
+
+Si guestas ver una video de como crear la cadena de conexión con PostgresSQL 
+
+<div class="video-responsive">
+<iframe loading="lazy" src="https://www.youtube.com/embed/jUgUD_IqGjc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 # Conclusión
 

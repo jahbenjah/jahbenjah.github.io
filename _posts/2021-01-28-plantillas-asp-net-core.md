@@ -8,7 +8,7 @@ image:
   path: /img/admin.webp
   height: 358
   width: 683
-description: Plantilla GRATIS para ASP.NET Core MVC con Bootstrap 4 , datatable y HTML5
+description: Plantilla GRATIS para ASP.NET Core MVC con Bootstrap 5 , datatable y HTML5
 ---
 
 Próximamente contaremos con plantillas disponibles en [Nuget.org](https://www.nuget.org/packages/BenjaminCamacho.Templates.Admin/) para usar en tu aplicación ASP.NET Core. Puedes revisar la primera plantilla en que estamos trabajando

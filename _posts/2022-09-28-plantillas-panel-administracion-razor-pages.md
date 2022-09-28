@@ -21,7 +21,7 @@ Próximamente contaremos con plantillas disponibles en [Nuget.org](https://www.n
 
 SB Admin is a free, open source, MIT licensed Bootstrap admin template. Esta plantilla usa los estilos por default de Bootstrap5 con una variedad de plugins para crear un framework para la creacion de paneles de administración,aplicaciones web 
 
-# CaracteristiAS
+# Caracteristicas
 
 Localizacion en español e ingles
 Gráficas interactivas con el plugin Chart.js
@@ -39,7 +39,7 @@ dotnet new --install BenjaminCamacho.Templates.Admin.RazorPages::0.0.1
 2. Para crear un proyecto con esta plantilla
 
 ```
-dotnet new admin -n MiProyecto
+dotnet new adminrazor -n MiProyecto
 ```
 
 3. Abre la carpeta _MiProyecto_ revisa los detalles de la plantilla

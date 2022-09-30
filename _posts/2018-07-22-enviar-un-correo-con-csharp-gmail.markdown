@@ -353,6 +353,14 @@ Si estas apurado y necesitas revisar rápidamente el código te dejo una guia de
 3. Elegir la ruta donde se desea copiar el repositorio. En este caso es _C:\Users\benjaminc\Source\Repos_
 4. Abrir la solución **EnviarCorreo**.
 
+## Versión en video
+
+Si prefiere ver un video que usa .NET 6 y una aplicación de consola puedes ver:
+
+<div class="video-responsive">
+<iframe  loading="lazy" src="https://youtu.be/n7JwJDm4uVU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 ## Conclusión
 
 Puedes encontrar el código fuente el el repositorio de [Github](https://github.com/jahbenjah/CodigoBlog).

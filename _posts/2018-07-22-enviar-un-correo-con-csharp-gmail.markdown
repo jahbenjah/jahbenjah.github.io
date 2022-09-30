@@ -358,7 +358,7 @@ Si estas apurado y necesitas revisar rápidamente el código te dejo una guia de
 Si prefiere ver un video que usa .NET 6 y una aplicación de consola puedes ver:
 
 <div class="video-responsive">
-<iframe  loading="lazy" src="https://youtu.be/n7JwJDm4uVU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe  loading="lazy" src="https://www.youtube.com/embed/n7JwJDm4uVU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 ## Conclusión

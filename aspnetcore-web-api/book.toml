@@ -1,0 +1,7 @@
+[book]
+title = "ASP.NET Core Web API"
+description = "ASP.NET Core Web API es un framework de código abierto para crear Web APIs"
+authors = ["Benjamin Camacho"]
+language = "es"
+multilingual = false
+src = "src"

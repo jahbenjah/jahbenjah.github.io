@@ -70,6 +70,7 @@ defaults:
 
 exclude:
   - gulpfile.js
+  - aspnetcore-web-api
 #  - little-aspnetcore-book/
 #   - .jekyll-cache/
 #   - gemfiles/

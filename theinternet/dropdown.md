@@ -1,5 +1,5 @@
 ---
-layout: defaultbs
+layout: post
 description: Como seleccionar un select con selenium
 ---
 

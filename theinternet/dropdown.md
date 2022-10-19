@@ -6,9 +6,7 @@ description: Como seleccionar un select con selenium
 <div class="example">
   <h3>Lista en un select</h3>
   <select id="dropdown">
-    <option value="" disabled="disabled" selected="selected"
-      >Por favor selecciona una opción</option
-    >
+    <option value="" disabled="disabled" selected="selected">Por favor selecciona una opción</option>
     <option value="1">Opción 1</option>
     <option value="2">Opción 2</option>
   </select>

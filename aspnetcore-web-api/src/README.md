@@ -5,13 +5,16 @@
 
 # El proyecto de WEB API
 
-La línea de comandos `dotnet` tiene incluido un proyecto para crear Web API con varias opciones. Para crear un proyecto de Web el se usa el siguiente comando
+La línea de comandos `dotnet` tiene incluido una plantilla para crear proyectos de Web API. Para crear un proyecto de Web API con C# se usa el siguiente comando
 
 ```bash
 dotnet new webapi
 ```
 
-Este comando tiene varias opciones para personalizarse y las puedes obtener con el comando `dotnet new webapi --help`. En la tabla 1 se muestran las opciones disponibles
+Este comando por defualt creará los archivos del proyecto en la carpeta actual y asignara el mismo nombre de la carpeta al archivo de proyecto con extension `.csproj`.
+
+
+tiene varias opciones para personalizarse y las puedes obtener con el comando `dotnet new webapi --help`. En la tabla 1 se muestran las opciones disponibles
 
 |Opcion    | Descripcion|
 |-----     |-----|

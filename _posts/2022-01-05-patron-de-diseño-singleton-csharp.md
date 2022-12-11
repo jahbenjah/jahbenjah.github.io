@@ -42,6 +42,17 @@ Aunque la discusión original fue de este libro yo estoy usando principalmente l
 
 # Implementación del patrón Singleton en C#
 
+Para implementar el patrón Singleton en una clase, se deben seguir los siguientes pasos:
+
+Declarar el constructor de la clase como privado para evitar que se pueda crear una instancia desde otra parte del código.
+
+Declarar un método estático que se encargue de crear y devolver la única instancia de la clase. Este método utilizará una variable estática para almacenar la instancia y solo creará una nueva instancia si aún no existe una.
+
+Proporcionar un método público estático que permita acceder a la única instancia de la clase desde cualquier parte del código. 
+ Este método simplemente llamará al método privado que se encarga de crear y devolver la única instancia de la clase.
+
+De esta manera, se asegura que solo exista una única instancia de la clase en toda la aplicación y se proporciona un punto de acceso global a ella.
+
 A continuación te muestro dos ejemplos de implementación del patrón Singleton en C# 10 y .NET 6 sería como esto:
 
 > **Nota:** Estas implementación no son Thread Safe. Esta implementación del Singleton no tiene ninguna funcionalidad. La funcionalidad adicional que tú le requieras la deberías de adicionar a la clase.

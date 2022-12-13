@@ -16,7 +16,13 @@ Dapper es una librería _Open Source_ responsable del acceso a datos compuesta p
 
 Al implementar métodos de extension sobre `IDbConnection` le permite funcionar con cualquier proveedor de ADO.NET. En este articulo se muestran ejemplos con Sql Server pero el mismo concepto serviría para MySQL,PostgreSql y para cualquier otra base de datos.
 
-Dapper es reconocido por su _alto desempeño_ en ocasiones superior a las propias librerías provistas por Microsoft como por ejemplo Entity Framework Core. Aunque realizan la misma función una no es el remplazo de la otra. Dapper no cuenta con todas las caracteristicas de un ORM con EF Core y por esta misma razón se autonombra un micro ORM.
+Dapper es reconocido por su _alto desempeño_ en ocasiones superior a las propias librerías provistas por Microsoft como por ejemplo Entity Framework Core. Aunque realizan la misma función una no es el remplazo de la otra. Dapper no cuenta con todas las caracteristicas de un ORM con EF Core y por esta misma razón se autonombra como un micro ORM.
+
+Entre las principales características de Dapper se encuentran:
+
+* Soporte para diferentes motores de base de datos: Dapper es compatible con una amplia variedad de motores de base de datos, como SQL Server, MySQL, PostgreSQL, Oracle, etc.
+* Mapeo automático de resultados: Dapper permite mapear automáticamente los resultados de las consultas a objetos de C#, lo que facilita el manejo de datos en la aplicación.
+* Ejecución de consultas y procedimientos almacenados: Dapper permite ejecutar consultas SQL y procedimientos almacenados de manera sencilla y eficiente.
 
 ## Métodos de extensión
 

@@ -1,10 +1,10 @@
 ---
 layout: post
 title:  "Archivo appsettings.json ASP.NET Core"
-date:   2019-04-07 12:00:01 +0000
+date:   2022-12-13 12:00:01 +0000
 categories: asp.net core
 last_modified_at: 2020-06-15 10:55:52 +0000
-description: "El archivo de configuración de .NET Core es donde se deben colocar los valores que pueden cambiar en una aplicación."
+description: "El archivo de configuración appsettings.json es donde se deben colocar los valores que pueden cambiar en una aplicación."
 ---
 
 En este post te mostrare como leer el archivo de configuración _appsettings.json_ en una aplicación de consola usando .NET Core y una aplicación web ASP.NET Core. El archivo _appsetting.json_ se incluye por default en los proyectos web pero puede ser agregado fácilmente en los proyectos de bibliotecas de clases y aplicaciones de consola por lo que también te mostrare a agregar los paquetes de Nuget necesarios para esto.

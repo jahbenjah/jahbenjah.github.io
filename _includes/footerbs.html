@@ -14,21 +14,64 @@
                         {%- endif -%}
 
                         {%- if site.email -%}
-                        <strong>Email:</strong><a class="u-email"
-                            href="mailto:{{ site.email }}">{{ site.email }}</a><br>
+                        <strong>Email:</strong><a class="u-email" href="mailto:{{ site.email }}">{{ site.email
+                            }}</a><br>
                         {%- endif -%}
                     </p>
                 </div>
 
                 <div class="col-lg-6 col-md-6 footer-newsletter">
-                    <h4>Unete a nuestra lista de correo</h4>
-                    <p>{{- site.description | escape -}}</p>
-                    <form method="POST" 
-                        action="https://6314e2a0.sibforms.com/serve/MUIEAB0LnakvY41ca8X78CXG8a7T9IbMmd_91eTCHhV5EnC1v_DJ0iWgxxh2cQNqlYm-EaO3WuDSKHWC4Oz9hBiYPYAyA-G5iHr2C_OreVfcVKTpyZiaB4rs15KHCOxBMsMkq54KrXLTSbMOAyeLpl9hH5_klGTjM_sL-n0fw4l6L1DkXt1xHJ-ZIHG8qc4JjPo0lcGYAujEcYlK"
-                        data-type="subscription">
-                        <input type="email" name="email">
-                        <input type="submit" value="Subscribete">
-                    </form>
+         
+                    <!-- Begin Mailchimp Signup Form -->
+                    <link href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" rel="stylesheet" type="text/css">
+                    <style type="text/css">
+                        #mc_embed_signup {
+                            background: #fff;
+                            clear: left;
+                            font: 14px Helvetica, Arial, sans-serif;
+                            width: 600px;
+                        }
+                    </style>
+                    <div id="mc_embed_signup">
+                        <form
+                            action="https://aspnetcoremaster.us19.list-manage.com/subscribe/post?u=42b2f6f2e572d8c8e80741a46&amp;id=382d884b15&amp;f_id=00d2bee4f0"
+                            method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
+                            class="validate" target="_blank" novalidate>
+                            <div id="mc_embed_signup_scroll">
+                                <h2>Unete a nuestra lista de correo</h2>
+                                <div class="indicates-required"><span class="asterisk">*</span> indica que el campo es requerido</div>
+                                <div class="mc-field-group">
+                                    <label for="mce-EMAIL">Correo Electrónico <span class="asterisk">*</span>
+                                    </label>
+                                    <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL"
+                                        required>
+                                    <span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
+                                </div>
+                                <div id="mce-responses" class="clear foot">
+                                    <div class="response" id="mce-error-response" style="display:none"></div>
+                                    <div class="response" id="mce-success-response" style="display:none"></div>
+                                </div>
+                                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+                                        name="b_42b2f6f2e572d8c8e80741a46_382d884b15" tabindex="-1" value=""></div>
+                                <div class="optionalParent">
+                                    <div class="clear foot">
+                                        <input type="submit" value="Subscribe" name="subscribe"
+                                            id="mc-embedded-subscribe" class="button">
+                                        <p class="brandingLogo"><a href="http://eepurl.com/ihpsUf"
+                                                title="Mailchimp - email marketing made easy and fun"><img
+                                                    src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"></a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <script type='text/javascript'
+                        src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+                    <script
+                        type='text/javascript'>(function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[0] = 'EMAIL'; ftypes[0] = 'email'; fnames[1] = 'FNAME'; ftypes[1] = 'text'; fnames[2] = 'LNAME'; ftypes[2] = 'text'; fnames[3] = 'ADDRESS'; ftypes[3] = 'address'; fnames[4] = 'PHONE'; ftypes[4] = 'phone'; fnames[5] = 'BIRTHDAY'; ftypes[5] = 'birthday'; }(jQuery)); var $mcj = jQuery.noConflict(true);</script>
+                    <!--End mc_embed_signup-->
                 </div>
 
             </div>
@@ -46,7 +89,7 @@
             </div>
         </div>
         <div class="social-links text-center text-md-right pt-3 pt-md-0">
-           
+
             {%- if site.facebook_username -%}
             <a class="facebook" href="https://www.facebook.com/{{ site.facebook_username| cgi_escape | escape }}">
                 <i class="bx bxl-facebook"></i>
@@ -54,23 +97,28 @@
             {%- endif -%}
 
             {%- if site.github_username -%}
-                <a class="github" href="https://github.com/{{ site.github_username| cgi_escape | escape }}"><i class="bx bxl-github"></i></a>
+            <a class="github" href="https://github.com/{{ site.github_username| cgi_escape | escape }}"><i
+                    class="bx bxl-github"></i></a>
             {%- endif -%}
 
             {%- if site.linkedin_username -%}
-            <a class="linkedin" href="https://www.linkedin.com/in/{{ site.linkedin_username| cgi_escape | escape }}"><i class="bx bxl-linkedin"></i></a>
+            <a class="linkedin" href="https://www.linkedin.com/in/{{ site.linkedin_username| cgi_escape | escape }}"><i
+                    class="bx bxl-linkedin"></i></a>
             {%- endif -%}
 
             {%- if site.twitter_username -%}
-            <a class="twitter" href="https://twitter.com/{{ site.twitter_username| cgi_escape | escape }}"><i class="bx bxl-twitter"></i></a>
+            <a class="twitter" href="https://twitter.com/{{ site.twitter_username| cgi_escape | escape }}"><i
+                    class="bx bxl-twitter"></i></a>
             {%- endif -%}
 
             {%- if site.youtube_username -%}
-            <a class="youtube" href="https://www.youtube.com/{{ site.youtube_username| cgi_escape | escape }}"><i class="bx bxl-youtube"></i></a>
+            <a class="youtube" href="https://www.youtube.com/{{ site.youtube_username| cgi_escape | escape }}"><i
+                    class="bx bxl-youtube"></i></a>
             {%- endif -%}
 
             {%- if site.youtube_channel -%}
-            <a class="youtube" href="https://www.youtube.com/channel/{{ site.youtube_channel| cgi_escape | escape }}"><i class="bx bxl-youtube"></i></a>
+            <a class="youtube" href="https://www.youtube.com/channel/{{ site.youtube_channel| cgi_escape | escape }}"><i
+                    class="bx bxl-youtube"></i></a>
             {%- endif -%}
 
             {%- if site.rss -%}

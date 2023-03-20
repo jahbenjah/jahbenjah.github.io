@@ -7,13 +7,13 @@ last_modified_at: 2022-09-06 08:50:25 +0000
 description: En C#, los delegados son un tipo de datos especiales que permiten la creación de funciones que pueden ser tratadas como variables. 
 ---
 
-Introducción
+## Introducción
 
 En C#, los delegados son un tipo de datos especiales que permiten la creación de funciones que pueden ser tratadas como variables. Se utilizan para permitir que un método pueda ser pasado como parámetro a otro método. Los delegados son una característica importante de la programación orientada a objetos (POO) y son esenciales para el desarrollo de aplicaciones robustas y flexibles.
 
 En este artículo, explicaremos qué son los delegados y cómo pueden ser utilizados en C#. También discutiremos algunos tipos de delegados y proporcionaremos ejemplos de cómo se pueden utilizar en diferentes situaciones.
 
-Qué son los delegados
+## Qué son los delegados
 
 Un delegado es un tipo de datos que hace referencia a un método en particular. En otras palabras, un delegado es una variable que almacena un método en lugar de un valor. Los delegados se utilizan para pasar métodos como parámetros a otros métodos, lo que permite una mayor flexibilidad y modularidad en el código.
 
@@ -74,7 +74,7 @@ miDelegado += metodo2;
 
 En este ejemplo, se asignan dos métodos `metodo1` y `metodo2` al delegado `miDelegado`. Cuando se llama al delegado, se llamarán ambos métodos.
 
-Ejemplos de uso de delegados en C#
+## Ejemplos de uso de delegados en C#
 
 A continuación se presentan algunos ejemplos de cómo se pueden utilizar los delegados en C#.
 

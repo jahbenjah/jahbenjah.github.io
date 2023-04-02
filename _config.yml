@@ -19,13 +19,15 @@ social:
   name: aspnetcoremaster
   links:
     - https://www.facebook.com/aspnetcoremaster/
+    - https://www.tiktok.com/@aspnetcoremaster
+
 markdown: kramdown
 theme: minima
 show_excerpts: false
 
 # disqus:
 #  shortname: https-jahbenjah-github-io
-
+paginate: 6
 google_analytics: UA-130293099-1
 
 collections:
@@ -42,6 +44,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-paginate
   
 collections:
   authors:

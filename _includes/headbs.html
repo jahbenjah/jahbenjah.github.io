@@ -5,7 +5,9 @@
     {%- feed_meta -%}
     {%- if jekyll.environment == 'production' and site.google_analytics -%}
         {%- include google-analytics.html -%}
-        {%- include google-addsense.html -%}
+        {%- if page.title != "Bienvenido" -%"}
+            {%- include google-addsense.html -%}
+        {%- endif -%}
     {%- endif -%}
     {%- include facebookopengraph.html -%}
     {%- include favicon.html -%}

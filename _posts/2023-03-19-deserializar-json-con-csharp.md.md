@@ -2,7 +2,7 @@
 layout: post
 title:  "Enviar un correo con C# y Gmail."
 categories: .net smtp SmptClient dotnet 
-last_modified_at: 2019 - 12 - 11 14:45:55 + 0000
+last_modified_at: 2019-12-11 14:45:55 + 0000
 ---
 
 En la actualidad, las aplicaciones web y móviles están diseñadas para ser altamente interactivas y responsivas. Una de las formas más comunes de transferir datos en estas aplicaciones es mediante el formato JSON (JavaScript Object Notation). JSON es un formato de intercambio de datos ligero y fácil de leer, que ha ganado popularidad en los últimos años.

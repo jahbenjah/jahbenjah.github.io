@@ -214,7 +214,7 @@ GEM
       jekyll-feed (~> 0.9)
       jekyll-seo-tag (~> 2.1)
     minitest (5.18.0)
-    nokogiri (1.14.2)
+    nokogiri (1.14.3)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     octokit (4.25.1)
@@ -258,7 +258,6 @@ GEM
       unf_ext
     unf_ext (0.0.8.2)
     unicode-display_width (1.8.0)
-    wdm (0.1.1)
     webrick (1.8.1)
 
 PLATFORMS
@@ -273,7 +272,6 @@ DEPENDENCIES
   minima (~> 2.0)
   sprockets (~> 3.7)
   tzinfo-data
-  wdm (~> 0.1.0)
   webrick
 
 BUNDLED WITH

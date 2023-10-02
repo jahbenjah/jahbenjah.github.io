@@ -33,12 +33,15 @@ Aquí la lista de repositorios relevantes para ASP.NET Core:
 
 ## Versiones
 
-La última versión al momento de escribir este artículo es la 5.0.
+La última versión al momento de escribir este artículo es la 7.0 y esta por lanzarse la version 8.0 en noviembre del 2023.
 
 Actualmente hay 2 versiones con soporte a largo plazo las versiones 2.1 y 3.1 más otras varias versiones que están fuera de soporte,. Puedes revisar los detalles y características nuevas de cada version en el anuncio de la liberación realizado por algún miembro el equipo de desarrollo de ASP\.NET Core.
 
 Versión | Fecha de lanzamiento|  Detalles
 --------| --------------------|-----------
+8.0||
+7.0||
+6.0||
 5.0| 10 Noviembre 2020   |[Announcing ASP.NET Core in .NET 5](https://devblogs.microsoft.com/aspnet/announcing-asp-net-core-in-net-5/)
 3.1| 03 Diciembre 2019   |[ASP.NET Core updates in .NET Core 3.1](https://devblogs.microsoft.com/aspnet/asp-net-core-updates-in-net-core-3-1/)
 3.0| 23 Septiembre 2019   |[ASP.NET Core and Blazor updates in .NET Core 3.0](https://devblogs.microsoft.com/aspnet/asp-net-core-and-blazor-updates-in-net-core-3-0/)
@@ -55,6 +58,7 @@ Para desarrollar aplicaciones con ASP.NET Core necesitas el [SDK de .NET Core](h
 Aunque es posible  crear aplicaciones con la linea de comandos y un editor de textos sencillos como NotePad++ o Vim es probable que prefieras usar el entorno de desarrollo integrado. Puedes usar las siguientes opciones:
 
 1. El IDE estrella de Microsoft : [Visual Studio 2019](https://visualstudio.microsoft.com/es/) disponible para Windows y Mac La ultima versión de Visual Studio es la 2019. Este IDE es de paga en las ediciones Profesional y Enterprise pero la edición Community es gratuita para desarrolladores de software libre y estudiantes.
+
 2. El editor de código multiplataforma  [Visual Studio Code](https://code.visualstudio.com/). Es gratuito de código abierto y con soporte para muchos lenguajes mediante extensiones.
 
 3. [Rider de JetBrains](https://www.jetbrains.com/rider/): Es un IDE de paga multiplataforma de los creadores de  ReSharper, DataGrip e IntelliJ. Tienen una edición gratuita para estudiantes, profesores y proyectos de software libre.
@@ -64,5 +68,7 @@ Aunque es posible  crear aplicaciones con la linea de comandos y un editor de te
 Unos artículos que te pueden ayudar a entender el como Microsoft comenzó a apoyar el código abierto:
 
 1. Mads Torgersen, [How Microsoft rewrote its C# compiler in C# and made it open source](https://medium.com/microsoft-open-source-stories/how-microsoft-rewrote-its-c-compiler-in-c-and-made-it-open-source-4ebed5646f98)
+
 2. Beth Massi, [Building an Open Source .NET Foundation](https://medium.com/microsoft-open-source-stories/building-an-open-source-net-foundation-2fa0fb117584)
+
 3. Scott Hunter ,[Starting the .NET Open Source Revolution](https://medium.com/microsoft-open-source-stories/starting-the-net-open-source-revolution-e0268b02ac8a)

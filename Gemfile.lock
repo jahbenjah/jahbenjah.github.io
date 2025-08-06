@@ -258,8 +258,7 @@ GEM
       unf_ext
     unf_ext (0.0.8.2)
     unicode-display_width (1.8.0)
-    wdm (0.1.1)
-    webrick (1.8.1)
+    webrick (1.8.2)
 
 PLATFORMS
   ruby
@@ -273,7 +272,6 @@ DEPENDENCIES
   minima (~> 2.0)
   sprockets (~> 3.7)
   tzinfo-data
-  wdm (~> 0.1.0)
   webrick
 
 BUNDLED WITH
